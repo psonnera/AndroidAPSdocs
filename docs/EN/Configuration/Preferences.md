@@ -473,7 +473,7 @@ Options in advanced settings are self-explanatory.
 
 - Use the credentials you defined when creating your Tidepool [reporting server](../Installing-AndroidAPS/setting-up-the-reporting-server.md#tidepool).
 - Test them with Test Tidepool Login.
-- Connections settings are identical to, and shared with NSClient.
+- [Connections settings](#connection-settings) are identical to, and shared with NSClient.
 
 ### Synchronization
 
