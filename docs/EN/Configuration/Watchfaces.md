@@ -226,7 +226,7 @@ Depending on your Wear OS version, brand and smartphone there are two ways of en
    - In the click on the section "Tiles", followed by "+ Add" button
    - Find the AAPS tile you like to add by selecting it.
     ![Wear phone add tile](../images/wear_companion_app_add_tile.png)
-The order of the tiles can be changed by dragging and dropping
+     The order of the tiles can be changed by dragging and dropping
 
 The content of the tiles can be customized by long-pressing a tile and clicking the "Edit" or "gear icon" button.
 
@@ -334,8 +334,9 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 *  If Complications does not update data - check first if AAPS watchfaces work at all.
 
 ## Garmin
-Therer are a couple of watch faces for Garmin that integrate with xDrip or Nightscout on the [Garmin ConnectIQ store](https://apps.garmin.com/en-US/search?keyword=glucose&device=&deviceLimit=&appType=&sort=&start=0&count=30). 
-AAPS Glucose Watch integrates directly with AAPS. It shows loop status data (insulin on board, temporary basal) in addition to glucose readings and sends heart rate readings to AAPS. It's not available in the ConnectIQ store yet, since the necessary AAPS plugin is only available from AAPS 3.2. Please contact robert.b on [discord](https://discord.com/invite/4fQUWHZ4Mw) if you want to try it. 
+There are a couple of watch faces for Garmin that integrate with xDrip or Nightscout on the [Garmin ConnectIQ store](https://apps.garmin.com/en-US/search?keyword=glucose&device=&deviceLimit=&appType=&sort=&start=0&count=30).
+
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) integrates directly with AAPS. It shows loop status data (insulin on board, temporary basal) in addition to glucose readings and sends heart rate readings to AAPS. It is available in the ConnectIQ store, the necessary AAPS plugin is only available from AAPS 3.2.
 
 ![Screenshot](../images/Garmin_WF.png)
 ![Screenshot](../images/Garmin_WF-annotated.png)

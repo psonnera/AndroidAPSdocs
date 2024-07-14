@@ -227,7 +227,7 @@ You should [export your settings](../Usage/ExportImportSettings.md) (including p
 See [Objectives](../Usage/Objectives.md) page for more information.
 
 ## Treatments
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout.  Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](Screenshots-carb-correction).
+If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to Nightscout.  Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](Screenshots-carb-correction).
 
 ## General
 
