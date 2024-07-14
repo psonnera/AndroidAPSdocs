@@ -1,16 +1,48 @@
-# Jelly Pro
-## Advantage/Disadvantage
-### Advantages Jelly
+# Jelly
+
+## Jelly 2
+
+Do not confuse with Jelly Star.
+
+**Advantages**
+
+* It's really small.
+* Android 11.
+* Even if you tell people, they might not consider it as a normal smartphone and will except it easier as a exception when phones are normally not allowed.
+
+**Disadvantages**
+
+* Recommended only for experienced loopers (some settings are not recognizable, you have to know from experience with a big Android AAPS phone, how and where what is located. Some AAPS buttons are hard to touch with a lot of feeling, but not with stubby fingers.)
+* Can only be used as LooperPhone. It's better to have a normal smartphone in your pocket. 
+
+### Battery life optimization
+
+The Jelly 2 comes with strong optimization features that **must** be disabled for AAPS (and other DIY apps like BYODA, xDrip+, OOP2, Juggluco, etc...).
+
+![](../images/Jelly_Settings1.png)
+
+You can leave Intelligent assistance enabled, but it **must be disabled for DIY apps**.
+
+![](../images/Jelly_Settings2.png)
+
+You can enable NFC for Libre sensors.
+
+![](../images/Jelly_Settings3.png)
+
+## Jelly Pro
+**Advantages**
 
 * It's really small.
 * Even if you tell people, they might not consider it as a normal smartphone and will except it easier as a exception when phones are normally not allowed.
 
-### Disadvantages Jelly 
+**Disadvantages**
+
+* **Android 8.1 means you cannot run AAPS above version 2.8**.
 * Recommended only for experienced loopers (some settings are not recognizable, you have to know from experience with a big Android AAPS phone, how and where what is located. Some AAPS buttons are hard to touch with a lot of feeling, but not with stubby fingers.)
 * Can only be used as LooperPhone. It's better to have a normal smartphone in your pocket. 
 * If you don't treat Jelly like a diva (Always (!) carry it with you!) Jelly shows its bitchy side, disconnects all Bluetooth and sulks until you restart. 
 
-## Jelly Pro - battery life optimization
+### Battery life optimization
 
 The following settings and handling advice (use watch for daily operations instead of Jelly smartphone) lead to approx. 35 hours of battery life. An additional battery saving mode is not necessary, rather counterproductive, therefore turn off.
 
@@ -44,7 +76,7 @@ Follow these rules to stay with Android 7.0:
 * The daily operations only via the watch. Other settings and display use only during charging. 
 * Jelly, just like the pump, remains untouched under clothing all day long.
 
-## Tips
+### Tips
 
 * The Jelly is a not always intuitive to use and sometimes acts like a baby diva. A restart (button on the right) every now and then might be a good idea.
 * In portrait view not all buttons might be displayed. So it is worth turning Jelly by 90 degrees.
@@ -56,4 +88,6 @@ Follow these rules to stay with Android 7.0:
 * A screenshot can be taken by pressing the quiet button (bottom left) + the an button (right) simultaneously. 
 
 ![Jelly headline](../images/jelly_03.png)
+
+
 
