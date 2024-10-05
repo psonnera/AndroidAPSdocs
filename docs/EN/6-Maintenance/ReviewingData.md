@@ -18,7 +18,7 @@ Display options are available like in the Overview [main graph](../Getting-Start
 
 History browser menu allows the selection of the time scale to be displayed. 6, 12, 18 or 24 hours.
 
-![History Browser Timescale](../images/Maintenance/HistoryBrowser_Timescale.png)
+![History Browser Timescale](../images/Maintenance/HistoryBrowser_TimeScale.png)
 
 History browser forward and backwards arrows display the history prior or after the current time frame, shifting it by the amount selected in the time scale.
 
