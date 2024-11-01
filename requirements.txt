@@ -1,4 +1,4 @@
-sphinx==6
+sphinx==5.3
 sphinx_rtd_theme==1.2.0
 sphinx-togglebutton
 myst_parser==1
