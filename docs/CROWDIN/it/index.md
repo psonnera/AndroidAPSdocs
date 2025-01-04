@@ -1,187 +1,187 @@
-# Welcome to the AAPS documentation
+# Benvenuto nella documentazione di AAPS
 
 ![image](./images/basic-outline-of-AAPS.png)
 
 ```{admonition} Version 3.3
 :class: note
 
-29/12/2024 : Version 3.3 is out. Check the [Release Notes](#version3300) to see what's new and get update instructions.
+29/12/2024 : La versione 3.3 è uscita. Controlla le [Release Notes](#version3300) per vedere cosa c'è di nuovo e ottenere le istruzioni per l'aggiornamento.
 
 ```
 
-Android APS (**AAPS**) is an open source app for people living with insulin-dependent diabetes. It is an artificial pancreas system (APS) which runs on Android smartphones. **AAPS** uses an OpenAPS software algorithm and aims to do what a real pancreas does: keep blood sugar levels within healthy limits by using automated insulin dosing. To use **AAPS** you need **three** compatible devices: **(1)** an Android phone, **(2)** a continuous glucose monitor (CGM), and **(3)** a FDA/CE approved insulin pump. Optionally you will need cloud services **(4)** to remote control **AAPS**, share your data and store them in a reporting server, then also **(5)** a smartwatch.
+Android APS (**AAPS**) è un'applicazione open source per le persone che vivono con il diabete insulino-dipendente. Si tratta di un sistema pancreas artificiale (APS) che funziona su smartphone Android. **AAPS** utilizza un algoritmo software OpenAPS e mira a fare ciò che fa un vero pancreas: mantenere i livelli di zucchero nel sangue entro limiti sani utilizzando il dosaggio automatico dell'insulina. Per utilizzare **AAPS** hai bisogno di **tre** dispositivi compatibili: **(1)** un telefono Android, **(2)** un sistema di monitoraggio continuo del glucosio (CGM), e **(3)** un microinfusore per insulina approvato FDA/CE. Opzionalmente avrai bisogno di servizi cloud **(4)** per il controllo remoto **AAPS**, condividere i tuoi dati e memorizzarli in un server di rendicontazione, quindi anche **(5)** uno smartwatch.
 
-This documentation explains how to setup and use **AAPS**. You can navigate through the **AAPS** documentation either through the menu on the left (and the handy "**Search docs**" function), or by using the [index](#index-aaps-documentation-index) at the bottom of this page.
+Questa documentazione spiega come configurare e utilizzare **AAPS**. Puoi navigare attraverso la documentazione **AAPS** sia attraverso il menu a sinistra (e la comoda funzione "**Cerca documenti**"), o usando l'indice [](#index-aaps-documentation-index) in fondo a questa pagina.
 
-## Overview of the AAPS documentation ("The docs")
+## Panoramica della documentazione AAPS ("The docs")
 
-Section **2) Getting Started**, the [Introduction](Getting-Started/Introduction.md) explains the general concept of what an artificial pancreas system (APS) is designed to do. It outlines the background of looping in general, why **AAPS** was developed, compares **AAPS** to other systems, and addresses safety. It gives suggestions about how to talk to your clinical team about **AAPS**, explains why you need to build the **AAPS** app yourself rather than just downloading it, and gives an overview of the typical connectivity of an **AAPS** system. It also addresses accessibility, and who is likely to benefit from **AAPS**.
+Sezione **2) Per Iniziare**, l' [Introduzione](Getting-Started/Introduction.md) spiega il concetto generale di ciò che un sistema pancreas artificiale (APS) è progettato per fare. Descrive lo sfondo del loop in generale, perché è stato sviluppato **AAPS**, confronta **AAPS** con altri sistemi e affronta la sicurezza. Fornisce suggerimenti su come parlare con il tuo team clinico di **AAPS**, spiega perché devi costruire tu stesso l'app **AAPS** piuttosto che semplicemente scaricarla, e fornisce una panoramica della connettività tipica di un sistema **AAPS**. Riguarda anche l'accessibilità e chi potrebbe beneficiare di **AAPS**.
 
-[Preparing for AAPS](./Getting-Started/PreparingForAaps.md) gives more detail about safety considerations, and the phones, CGMs (Continuous Glucose Monitors) and insulin pumps which are compatible with **AAPS**. It gives an overview of the process you will go through, and provides an approximate timeline for gaining full functionality of **AAPS**. This section gets you technically prepared to assemble your **AAPS** setup as quickly and efficiently as possible. The subsection [CGM Configuration](./Getting-Started/CompatiblesCgms.md) explains how to optimse CGM setup and what smoothing options are best.
+[Preparazione per AAPS](./Getting-Started/PreparingForAaps.md) fornisce maggiori dettagli sulle considerazioni di sicurezza e sui telefonini, CGM (sistemi di monitoraggio continuo del glucosio) e microinfusori per insulina compatibili con **AAPS**. Fornisce una panoramica del processo che seguirai, e una linea temporale approssimativa per ottenere la piena funzionalità di **AAPS**. Questa sezione ti prepara tecnicamente a assemblare la tua configurazione **AAPS** nel modo più rapido ed efficiente possibile. La sottosezione [Configurazione CGM](./Getting-Started/CompatiblesCgms.md) spiega come ottimizzare le impostazioni del tuo CGM e quali opzioni di lisciatura sono migliori.
 
-Now that you have a solid understanding of the process, you can start assembling your **AAPS** loop.
+Ora che hai una solida comprensione del processo, puoi iniziare a assemblare il tuo loop **AAPS**.
 
-Section **3) Setting up AAPS** contains step-by-step instructions to do this. It covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data, getting your computer ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone. It also covers setting up the **AAPS** app using the setup Wizard, linking it with your CGM app, and either a real or virtual insulin pump, as well as linking **AAPS** to your reporting server. You are then slowly introduced to the full usage of what **AAPS** has to offer via a safe and carefully calibrated step-by-step process designed to make sure that you/your child are thoroughly familiar and comfortable navigating all the different levels and menu configurations before graduating on the next phase, commonly referred to as the next "Objective", until you are have enough experience to begin using the more advanced options available within the app. These Objectives are specially designed in such a way that will gradually unlock more possibilities of **AAPS** and switch from Open Loop to Closed Loop.
+Sezione **3) Impostare AAPS** contiene le istruzioni passo-passo per farlo. Copre la scelta e [l'impostazione del tuo server di rendicontazione](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout o Tidepool) in modo da poter rivedere e condividere i tuoi dati, preparare il tuo computer per creare l'app AAPS, costruire l'app AAPS e trasferire l'app AAPS sul tuo telefono. Copre anche la configurazione dell'app **AAPS** utilizzando la procedura guidata di configurazione, collegarla con la tua app CGM, e un microinfusore reale o virtuale, oltre a collegare **AAPS** al tuo server di rendicontazione. Sei quindi lentamente introdotto al pieno utilizzo di ciò che **AAPS** ha da offrire tramite un processo passo dopo passo sicuro e accuratamente calibrato, progettato per assicurarsi che te/il tuo bambino siate completamente familiari e confortevoli navigando tutti i diversi livelli e configurazioni del menu prima di "diplomarti" nella fase successiva, comunemente indicato come il prossimo "Obiettivo", fino a quando non avrai esperienza sufficiente per iniziare a utilizzare le opzioni più avanzate disponibili all'interno dell'app. Questi Obiettivi sono appositamente progettati in modo tale da sbloccare gradualmente più possibilità di **AAPS** e passare dal circuito aperto al circuito chiuso.
 
-Section **4) Daily life with AAPS** covers key **AAPS** features, to help you use (and customise)  **AAPS**. This including understanding the screens, carbs-on-board, sensitivity, profile switching, temp targets, extended carbs (or eCarbs), automations, and DynamicISF. It also covers frequent topics like how to manage different types of meals, how to deal with cannula and sensor changes, smartphone updates, daylight saving changes, and [travelling with AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) and sports. Common questions and answers are located within the troubleshooting section.
+Sezione **4) Vita quotidiana con AAPS** copre le funzionalità chiavi di **AAPS**, per aiutarti a utilizzare (e personalizzare) **AAPS**. Include la comprensione degli schermi, CHO a bordo, sensibilità, cambio del profilo, target temporanei, CHO estesi (eCarbs), automazioni e sensibilità insulinica dinamica. Copre anche argomenti frequenti come: gestire diversi tipi di pasti, cambiare la cannula e il sensore, aggiornamenti dello smartphone, cambio dell'ora, [viaggiare con AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) e lo sport. Domande e risposte comuni si trovano nella sezione risoluzione dei problemi.
 
-Section **5) [Remote AAPS features](./RemoteFeatures/RemoteControl.md)** highlights a real strength of **AAPS**. There are a wide range of possibilities for remotely sending commands to, or simply following the data from **AAPS**. This is equally useful for carers who want to use **AAPS** for minors, and for adults with diabetes who either want to monitor their sugars (and other metrics) more conveniently than just on their phone (on a watch, in the car _etc._), or wish to have significant others to also monitor the data. This section also provides guidance for using Android Auto so you can view glucose levels in the car.
+Sezione **5) [Le funzioni AAPS remote](./RemoteFeatures/RemoteControl.md)** evidenziano un punto di forza di **AAPS**. C'è una vasta gamma di possibilità per inviare comandi in remoto verso, o semplicemente seguire i dati da **AAPS**. Questo è altrettanto utile per chi si prende cura di un minore con il quale vuole utilizzare **AAPS**, e per gli adulti con diabete che vogliono monitorare la loro glicemia (e altri dati) più comodamente che solo sul loro telefono (su un orologio, nell'auto _ecc._), o desiderano avere altre persone che monitorano i loro dati. Questa sezione fornisce anche indicazioni per l'utilizzo di Android Auto in modo da poter visualizzare la glicemia in auto.
 
-Section **6) Wear OS smartwatches** gives information and procedures to use an Android **Wear OS** smartwatch with the dedicated **AAPS** watchfaces or custom watchfaces, either as a remote control of your phone or just a display indicator.
-
-
-Section **7) Maintenance of AAPS** covers how to export and backup your settings (which is very important in case you lose/break your phone), gives the latest version notes and details how to update **AAPS**. You can expect that there will be one new version and 2-3 required updates per year. You are required to do these updates as with all software, as any minor bugs are ironed out, and improvements to **AAPS** are made. There is a dedicated "updating" troubleshooting section with the common queries.
-
-Section **8) [Getting Help](GettingHelp/WhereCanIGetHelp.md)** should help direct you to the best places to go to find general help with **AAPS**. This is very important so that you can get in touch with others as quickly as possible, clarify questions and solve the usual pitfalls. A lot of people are already using **AAPS** successfully, but everyone has a question at some point that they couldn't solve on their own. Due to the large number of users, the response times to questions are usually very quick, typically only a few hours. Don’t worry about asking for help, there is no such thing as a dumb question! We encourage users of any/all levels of experience to ask as many questions as they feel is necessary to help get them up and running safely. This section includes general troubleshooting for **AAPS** and **AAPSClient** (a companion following app) as well as explaining how to send your **AAPS** data (logfiles) to the developers for investigation, if you think a technical issue with **AAPS** needs looking at.
-
-Section **9)** covers **Advanced AAPS options** such as how to progress from using **AAPS** for hybrid-closed looping (bolusing for meals _etc._) to full closed looping (no bolusing), and details development and engineering modes. Most users get on just fine with the main or "Master" **AAPS** version without looking into these options, this section is for users who already have good control and are looking to further improve their setup.
-
-In section **10) [How to support AAPS](SupportingAaps/HowToEditTheDocs.md)** we provide  information so that you can support this project. You can donate money, equipment or expertise. You can suggest/make changes to the documentation yourself, help with [translation of the documentation](SupportingAaps/Translations) and provide your data through the Open Humans project.
-
-Section **11) Resources**, contains archived or additional documentation, including a subsection for [clinicians](UsefulLinks/ClinicianGuideToAaps.md) who have expressed interest in open source artificial pancreas technology such as **AAPS**, or for patients who want to share such information with their clinicians, this topic is also addressed in the introduction. More diabetes and looping references and resources are also contained in this section. It includes the  [Glossary](./UsefulLinks/Glossary.md), a list of the acronyms (or short-term names) used throughout **AAPS**. This is where to go to find out what the terms ISF or TT, stand for, for example.
+Sezione **6) Wear OS smartwatches** fornisce informazioni e procedure per utilizzare uno smartwatch Android **Wear OS** con quadranti **AAPS** dedicati o personalizzati, come telecomando del telefono o semplicemente come indicatore di visualizzazione.
 
 
- ### Interested in getting started with **AAPS**? Read more about **AAPS** in the [Introduction](Getting-Started/Introduction.md).
+Sezione **7) La manutenzione di AAPS** spiega come esportare e eseguire il backup delle impostazioni (che è molto importante nel caso in cui si perde/rompe il telefono), e fornisce le ultime release note e i dettagli su come aggiornare **AAPS**. Ci si può aspettare che ci sarà una nuova versione e 2-3 aggiornamenti richiesti per anno. Sei tenuto a fare questi aggiornamenti come con tutti i software, quando i bug minori sono risolti, e sono stati apportati miglioramenti a **AAPS**. C'è una sezione dedicata "aggiornamenti" per la risoluzione dei problemi, con le domande frequente.
+
+Sezione **8) [Ottenere Aiuto](GettingHelp/WhereCanIGetHelp.md)** dovrebbe indirizzarti verso i posti migliori per trovare un aiuto generico con **AAPS**. Questo è molto importante in modo da poter entrare in contatto con gli altri il più rapidamente possibile, chiarire le domande e risolvere i soliti trabocchetti. Molte persone stanno già utilizzando **AAPS** con successo, ma tutti, a un certo punto, hanno una domanda che non sono riusciti a risolvere da soli. Grazie al gran numero di utenti, i tempi di risposta alle domande sono solitamente molto veloci, in genere solo poche ore. Non preoccuparti di chiedere aiuto, non esiste una domanda stupida! Incoraggiamo gli utenti di qualsiasi livello di esperienza, a porre tutte le domande che ritengono necessarie, per aiutarli a fare funzionare AAPS in modo sicuro. Questa sezione include la risoluzione generale dei problemi per **AAPS** e **AAPSClient** (un app per seguire AAPS) e spiega come inviare i dati di **AAPS** (file di log) agli sviluppatori per indagare, se pensi che un problema tecnico con **AAPS** debba essere esaminato.
+
+La sezione **9)** copre le **opzioni avanzate di AAPS** come il modo di progredire dall'utilizzo di **AAPS** come circuito ibrido (bolo per i pasti) _ecc._ al circuito chiuso completo (senza bolo), e dettaglia le modalità sviluppo e ingegneria. La maggior parte degli utenti si trova bene con la versione principale o "Master" di **AAPS** senza considerare queste opzioni. Questa sezione è per gli utenti che hanno già un buon controllo e stanno cercando di migliorare ulteriormente la loro configurazione.
+
+Nella sezione **10) [Come supportare AAPS](SupportingAaps/HowToEditTheDocs.md)** forniamo informazioni per supportare questo progetto. Puoi donare denaro, attrezzature o competenze. Puoi suggerire/apportare modifiche alla documentazione, aiutarci con la [traduzione della documentazione](SupportingAaps/Translations) e donare i tuoi dati attraverso il progetto Open Humans.
+
+Sezione **11) Risorse**, contiene documentazione archiviata o aggiuntiva, includendo una sottosezione per i [medici](UsefulLinks/ClinicianGuideToAaps.md) che hanno espresso interesse per la tecnologia del pancreas artificiale open source come **AAPS**, o per i pazienti che vogliono condividere tali informazioni con i loro medici. Questo argomento è anche affrontato nell'introduzione. In questa sezione ci sono altri contenuti sul diabete e il circuito chiuso, riferimenti e risorse. Include il [glossario](./UsefulLinks/Glossary.md), un elenco degli acronimi (o abbreviazioni) utilizzati in **AAPS**. Questo è dove andare per scoprire cosa vogliono dire i termini ISF o TT, per esempio.
+
+
+ ### Vuoi iniziare con **AAPS**? Leggi di più su **AAPS** nell' [Introduzione](Getting-Started/Introduction.md).
 
 ```{admonition} SAFETY NOTICE
 :class: danger
-The safety of **AAPS** relies on the safety features of your hardware (phone, pump, CGM). Only use a fully functioning FDA/CE approved insulin pump and CGM. Do not use broken, modified or self-built insulin pumps or CGM receivers. Only use original consumable supplies (inserters, cannulas and insulin reservoirs) approved by the manufacturer for use with your pump and CGM. Using untested or modified supplies can cause inaccuracy and insulin dosing errors, resulting in significant risk to the user. 
+La sicurezza di **AAPS** si basa sulle caratteristiche di sicurezza del tuo materiale (telefono, microinfusore, sensore). Usa solo un microinfusore per insulina approvato FDA/CE e un sensore CGM pienamente funzionanti. Non utilizzare sensori e microinfusori per insulina rotti, modificati o autocostruiti. Usare solo materiale di consumo originale (inseritori, cannule e serbatoi di insulina) approvati dal produttore per l'uso con il microinfusore e il sensore. L’uso di forniture non testate o modificate può causare imprecisioni e errori di dosaggio dell’insulina, con un conseguente rischio significativo per l’utilizzatore. 
 
-Do not use **AAPS** if you take SGLT-2 inhibitors (gliflozins), as they lower blood sugar levels. You increase the risk diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
+Non usare **AAPS** se prendi degli inibitori SGLT-2 (Gliflozine), poiché abbassano i livelli di zucchero nel sangue. Aumenti il rischio di chetoacidosi diabetica (DKA) a causa della riduzione della somministrazione di insulina e dell’ipoglicemia dovuta alla riduzione dei livelli di zucchero nel sangue. 
 ```
 
 ```{admonition} Disclaimer
-:class: note
+:class: nota
 
-- All information and code described here is for informational and educational purposes only. Use [Nightscout](https://nightscout.github.io/) and **AAPS** at your own risk, and do not use the information or code to make medical decisions. Nightscout currently makes no attempt at HIPAA privacy compliance. 
-- Use of code from github.com is without warranty or formal support of any kind. Please review this repository's LICENSE for details.
-- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
+- L’utilizzo è soggetto all’assunzione di esclusiva responsabilità personale. L'uso di [Nightscout](https://nightscout.github.io/) e **AAPS** è a esclusivo rischio dell'utente. Non utilizzare le informazioni o il codice per prendere decisioni mediche. Nightscout attualmente non fa alcun tentativo di conformità alla privacy HIPAA. 
+- L'uso di codice da github.com è senza garanzia o supporto formale di qualsiasi tipo. Controlla la LICENZA di questo repository per i dettagli.
+- Tutti i nomi di prodotti e aziende, marchi, servicemarks, marchi registrati e servizi registrati sono di proprietà dei rispettivi titolari. Il loro uso è a scopo informativo e non implica alcuna affiliazione o approvazione da parte loro.
 
-**AAPS** has no association with, and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
+**AAPS** non ha alcuna associazione con, e non è approvata da: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) o [Medtronic](https://www.medtronic.com/).
 
 ```
 
 (index-aaps-documentation-index)=
 
-## AAPS Documentation Index
+## Indice Documentazione AAPS
 
 ```{toctree}
-:caption: 1) Change language
+:caption: 1) Cambia lingua
 
-Change language <./NavigateDoc/ChangeLanguage.md>
-Change version <./NavigateDoc/ChangeVersion.md>
+Cambia lingua <./NavigateDoc/ChangeLanguage.md>
+Cambia la versione <./NavigateDoc/ChangeVersion.md>
 ```
 ```{toctree}
-:caption: 2) Getting started
+:caption: 2) Per iniziare
 
-Introduction to AAPS <./Getting-Started/Introduction.md>
-Preparing for AAPS <./Getting-Started/PreparingForAaps.md>
-Component Overview <./Getting-Started/ComponentOverview.md>
-- Compatible pumps <./Getting-Started/CompatiblePumps.md>
-- Compatible CGMs <./Getting-Started/CompatiblesCgms.md>
-- Compatible phones  <./Getting-Started/Phones.md>
-- Compatible watches  <./Getting-Started/Watches.md>
+Introduzione ad AAPS <./Getting-Started/Introduction.md>
+Preparazione ad AAPS <. Getting-Started/PreparingForAaps.md>
+Panoramica componenti <./Getting-Started/ComponentOverview.md>
+- Microinfusori compatibili <. Getting-Started/CompatiblePumps.md>
+- Sensori compatibili <./Getting-Started/CompatiblesCgms.md>
+- Telefonini compatibili  <. Getting-Started/Phones.md>
+- Smartwatch compatibili  <./Getting-Started/Watches.md>
 ```
 
 ```{toctree}
-:caption: 3) Setting up AAPS
+:caption: 3) Impostare AAPS
 
-Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
+Impostazione del server di rendicontazione <./SettingUpAaps/SettingUpTheReportingServer. d>
 - Nightscout <./SettingUpAaps/Nightscout.md>
-- Tidepool <./SettingUpAaps/Tidepool.md>
-Building AAPS <./SettingUpAaps/BuildingAaps.md>
-Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Config Builder <./SettingUpAaps/ConfigBuilder.md>
-- Preferences <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
+- Tidepool <. SettingUpAaps/Tidepool.md>
+Costruire AAPS <./SettingUpAaps/BuildingAaps. d>
+Trasferire e installare AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Configurazione guidata <. SettingUpAaps/SetupWizard.md>
+Il Tuo Profilo AAPS <./SettingUpAaps/YourAapsProfile. d>
+Cambiare la configurazione AAPS <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Config Builder <. SettingUpAaps/ConfigBuilder.md>
+- Preferenze <./SettingUpAaps/Preferences.md>
+Completare gli obiettivi <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
-:caption: 4) Daily Life with AAPS
+:caption: 4) Vita giornaliera con AAPS
 
-AAPS Screens <./DailyLifeWithAaps/AapsScreens.md>
-Key AAPS Features <./DailyLifeWithAaps/KeyAapsFeatures.md>
-COB calculation <./DailyLifeWithAaps/CobCalculation.md>
-Sensitivity detection <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
-Profile Switch & Profile Percentage <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
-Temp-Targets <./DailyLifeWithAaps/TempTargets.md>
-Extended carbs <./DailyLifeWithAaps/ExtendedCarbs.md>
-Automations <./DailyLifeWithAaps/Automations.md>
-Dynamic ISF <./DailyLifeWithAaps/DynamicISF.md>
-AAPS for children <./DailyLifeWithAaps/AapsForChildren.md>
-Pumps and cannulas <./DailyLifeWithAaps/PumpsAndCannulas.md>
-Timezone traveling & Daylight Saving Time <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
+Schermate AAPS <./DailyLifeWithAaps/AapsScreens.md>
+Funzioni chiavi di AAPS <. DailyLifeWithAaps/KeyAapsFeatures.md>
+Calcolo di CHO a bordo <./DailyLifeWithAaps/CobCalculation. d>
+Rilevamento sensibilità <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
+Cambio profilo & Percentuale profilo <. DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
+Target Temporanei <./DailyLifeWithAaps/TempTargets. d>
+CHO estesi <./DailyLifeWithAaps/ExtendedCarbs.md>
+Automazioni <./DailyLifeWithAaps/Automation. d>
+Sensibilità insulinica dinamica <./DailyLifeWithAaps/DynamicISF.md>
+AAPS per i bambini <. DailyLifeWithAaps/AapsForChildren.md>
+Micro e cannule <./DailyLifeWithAaps/PumpsAndCannulas. d>
+Viaggi, fuso orario & Ora legale <./DailyLifeWithAaps/TimezoneTraveling-DaySavingTime.md>
 
 ```
 
 ```{toctree}
-:caption: 5) Remote AAPS features
+:caption: 5) Funzioni AAPS a distanza
 
-Remote monitoring <./RemoteFeatures/RemoteMonitoring.md>
-Remote control <./RemoteFeatures/RemoteControl.md>
-SMS Commands <./RemoteFeatures/SMSCommands.md>
-Following Only <./RemoteFeatures/FollowingOnly.md>
+Monitoraggio remoto <./RemoteFeatures/RemoteMonitoring. d>
+Telecomando <./RemoteFeatures/RemoteControl.md>
+Comandi SMS <. RemoteFeatures/SMSCommands.md>
+Soltanto follower <./RemoteFeatures/FollowingOnly.md>
 Android Auto <./RemoteFeatures/AndroidAuto.md>
 
 ```
 ```{toctree}
-:caption: 6) Wear OS Smartwatches
+:caption: 6) Smartwatch Wear OS
 
-AAPS for Wear OS <./WearOS/BuildingAapsWearOS.md>
-Use the smartwatch <./WearOS/WearOsSmartwatch.md>
-Remote control <./RemoteFeatures/RemoteControlWearOS.md>
-Custom watchfaces reference <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
-Exchange site custom watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
-
-```
-
-```{toctree}
-:caption: 7) Maintenance of AAPS
-
-Export/Import Settings <./Maintenance/ExportImportSettings.md>
-Reviewing your data <./Maintenance/Reviewing.md>
-AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-Documentation updates <./Maintenance/DocumentationUpdate.md>
-Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
+AAPS per Wear OS <./WearOS/BuildingAapsWearOS.md>
+Usa lo smartwatch <. WearOS/WearOsSmartwatch.md>
+Telecomando <./RemoteFeatures/RemoteControlWearOS. d>
+Riferimento per quadranti personalizzati <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
+Scambio di quadranti personalizzati <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 
 ```{toctree}
-:caption: 8) Getting Help
+:caption: 7) Manutenzione di AAPS
 
-Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
-General troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
-Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
-Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
+Esportazione/Importazione Impostazioni <./Maintenance/ExportImportSettings. d>
+Rivedere i tuoi dati <./Maintenance/Reviewing.md>
+AAPS Release Notes <. Manutenzione/RilascioNotes.md>
+Aggiornamenti sulla documentazione <./Manutenzione/DocumentazioneUpdate.md>
+Aggiornamento a una nuova versione di AAPS <./Manutenzione/AggiornamentoNewVersion.md>
+
 ```
 
 ```{toctree}
-:caption: 9) Advanced AAPS options
+:caption: 8) Ottenere Aiuto
 
-Full Closed Loop <./AdvancedOptions/FullClosedLoop.md>
-Dev branch <./AdvancedOptions/DevBranch.md>
+Dove posso ottenere aiuto con AAPS <./GettingHelp/WhereCanIGetHelp.md>
+Risoluzione generale dei problemi <./GettingHelp/GeneraleRisoluzione dei problemi. d>
+Risoluzione dei problemi Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
+Accesso ai file di log <./GettingHelp/AccessingLogFiles.md>
+```
+
+```{toctree}
+:caption: 9) Opzioni AAPS avanzate
+
+Circuito chiuso completo <./AdvancedOptions/FullClosedLoop.md>
+Ramo sviluppatori <./AdvancedOptions/DevBranch.md>
 Autotune <./AdvancedOptions/Autotune.md>
 
 ```
 ```{toctree}
-:caption: 10) How to support AAPS
+:caption: 10) Come supportare AAPS
 
-How to help <./SupportingAaps/HowCanIHelp.md>
-Editing the docs <./SupportingAaps/HowToEditTheDocs.md>
-Translating the app and docs <./SupportingAaps/Translations.md>
-State of translations <./SupportingAaps/StateOfTranslations.md>
-Open Humans Uploader <./SupportingAaps/OpenHumans.md>
+Come aiutare <./SupportingAaps/HowCanIHelp. d>
+Modificare la documentazione <./SupportingAaps/HowToEditTheDocs.md>
+Tradurre l'app e la documentazione <. SupportingAaps/Translations.md>
+Stato delle traduzioni <./SupportingAaps/StateOfTranslations.md>
+Uploader Open Humans <./SupportingAaps/OpenHumans.md>
 
 ```
 ```{toctree}
-:caption: 11) Resources
+:caption: 11) Risorse
 
-Glossary <./UsefulLinks/Glossary.md>
-FAQ <./UsefulLinks/FAQ.md>
-General diabetes and looping resources <./UsefulLinks/BackgroundReading.md>
-Dedicated Google account for AAPS (optional)<./UsefulLinks/DedicatedGoogleAccountForAaps.md>
-For Clinicians (outdated) <./UsefulLinks/ClinicianGuideToAaps.md>
+Glossario <./UsefulLinks/Glossary.md>
+FAQ <. UsefulLinks/FAQ.md>
+Risorse generale diabete e looping <./UsefulLinks/BackgroundReading. d>
+Account Google dedicato per AAPS (facoltativo)<./UsefulLinks/DedicatedGoogleAccountForAaps.md>
+Per i medici (obsoleto) <./UsefulLinks/ClinicianGuideToAaps.md>
 ```
