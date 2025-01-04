@@ -198,7 +198,7 @@ Then link this refernce in the text you are writing with the following kind of l
 
 You can add notes and warning boxes to documentation.
 
-Furthermore you can add collapsing notes for detailed information which would users who are not interested in the details quench to read the text at all. Please use these carefully as the documentation should be as easy to read as possible.
+Furthermore you can add collapsing notes for detailed information which would users who are not interested in the details quench to read the text at all. Please use these carefully as the documentation should be as easy to read as possible. Please use these carefully as the documentation should be as easy to read as possible.
 
 #### Notes
 
