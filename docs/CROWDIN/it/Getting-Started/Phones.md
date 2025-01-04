@@ -1,13 +1,35 @@
-# List of tested Phones
+# Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
 
-Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
+The current version of **AAPS** (3.3) requires an Android smartphone with Google **Android 11.0 or above**. If you are considering buying a new phone, (as of December 2024), Android 14 is preferred.<br/> As of November 2024, several users have reported issues with Android 15 and Bluetooth connection. You may wish to delay the update to Android 15, especially if you are using Omnipod Dash or Dexcom G7. Check [Facebook or Discord](../GettingHelp/WhereCanIGetHelp.md) for latest updates on this subject.<br/> Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. However, for users unable to use a device with Android 11.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
 
-You can use filters to display particular pumps or phones but please set back to view all when you've finished looking, ready for the next person to view all.
+- [Jelly Pro Settings](../CompatiblePhones/Jelly.md)
+- [Huawei Settings](../CompatiblePhones/Huawei.md)
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)
+(Phones-list-of-tested-phones)=
+
+## List of tested Phones
+
+We maintain a list of the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true).
+
+This list provides user feedback on the usage of a phone along with **AAPS** and a given pump and CGM. It can help you check if your phone / pump / CGM has been used successfully by other users.
+
+The document is read-only. With CRTL-F, you can search in the text of the Google sheet.
+
+To record your test of a hardware setup, please fill in this [form](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). After you fill in the form data, the sheet is updated automatically every 5 minutes
+
+Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the [Where can I get help? page](../GettingHelp/WhereCanIGetHelp.md).
+
+## I didn't find my phone
+
+If you have questions regarding a specific phone model, please search or ask in our [Facebook or Discord community](../GettingHelp/WhereCanIGetHelp.md).
 
 Any problems with the spreadsheet please email hardware@androidaps.org, any donations of phone/watch models that still need testing please email donations@androidaps.org.
 
-# Phone Background
+(Phones-phone-wallpaper)=
+## Phone Background
 
-![phone background](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
+Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here:
+
+![phone background](../images/bg_phone_thump.jpg)
+
+Design: Thiago :)
