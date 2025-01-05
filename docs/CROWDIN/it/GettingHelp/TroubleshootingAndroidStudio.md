@@ -2,74 +2,74 @@
 # Risoluzione dei Problemi Android Studio
 
 (troubleshooting_androidstudio-lost-keystore)=
-## Lost keystore
-If you use the same keystore when updating **AAPS** you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a safe place.
+## Chiave persa
+Se utilizzi la stessa chiave (keystore) durante l'aggiornamento di **AAPS** non è necessario disinstallare la versione precedente sullo smartphone. Ecco perché è consigliato memorizzare la chiave in un luogo sicuro.
 
-If you try to install the apk, signed with a different keystore than before, you will get an error message explaining that the installation failed!
+Se provi a installare l'apk, firmato con una chiave diversa, avrai un messaggio di errore che spiega che l'installazione è fallita!
 
-In the event that you cannot trace your old keystore or password, proceed as follows:
+Nel caso in cui non sia possibile rintracciare la tua chiave originale o la password, procedi come segue:
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) on your phone.
-2. Copy or upload the settings file from your phone to an external location (i.e. your computer, cloud storage service...).
-4. Generate a new version of the signed apk as described on the [Update guide](../Maintenance/UpdateToNewVersion) and transfer it to your phone.
-5. Uninstall previous **AAPS** version on your phone.
-6. Install new **AAPS** version on your phone.
-7. [Import settings](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
+1. [Esporta le impostazioni](../Maintenance/ExportImportSettings.md) sul tuo telefono.
+2. Copia o carica il file delle impostazioni dal telefono in una postazione esterna (un computer, un servizio di cloud...).
+4. Genera una nuova versione dell'apk firmato come descritto nella guida [Aggiornamento ](../Maintenance/UpdateToNewVersion) e trasferiscila sul tuo telefono.
+5. Disinstalla la versione **AAPS** precedente sul tuo telefono.
+6. Installa la nuova versione **AAPS** sul tuo telefono.
+7. [Importa le impostazioni](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) per ripristinare gli obiettivi e la configurazione.
 
-   If you can't find these on your phone, copy them from the external storage to your phone.
+   Se non riesci a trovarle sul tuo telefono, copiale dalla memoria esterna al tuo telefono.
 
-8. Check your battery optimization options and disable them again.
-9. Keep on looping.
+8. Controlla le opzioni di ottimizzazione della batteria e disabilitale di nuovo.
+9. Continua con il tuo circuito chiuso.
 
-## Gradle Sync failed
-Gradle Sync can fail for various reasons. When you receive a message saying that 'gradle sync failed', open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
+## Gradle Sync fallito
+Gradle Sync può fallire per vari motivi. Se ricevi un messaggio che dice 'gradle sync failed', apri la scheda "Build" (1) nella parte inferiore di Android Studio e controlla quale messaggio di errore (2) viene visualizzato.
 
   ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
-The common reasons for gradle sync failures are:
+I motivi più comuni per i fallimenti di sincronizzazione del Gradle sono:
 * [Uncommitted changes](#uncommitted-changes)
 * [No cached version of ... available](#could-not-resolveno-cached-version)
 * [Incompatible Gradle JVM](#incompatible-gradle-jvm)
 * [Incompatible version of the Android Gradle plugin](#incompatible-version-of-android-gradle-plugin)
 
-*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
+*Importante*: Dopo aver seguito le istruzioni per il tuo problema, devi attivare nuovamente la sincronizzazione del [gradle](#gradle-resync).
 
 
 ### Uncommitted changes
 
-If you receive a failure message this this one:
+Se ricevi un messaggio di errore come questo:
 
 ![Gradle Uncommited Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
-#### Step 1 - Check git installation
-  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal.
+#### Fase 1 - Controlla l'installazione di Git
+  * Apri la scheda del terminale (1) nella parte inferiore di Android Studio e copia/incolla (o digita) il testo sotto, nel terminale.
     ```
     git --version
     ```
 
     ![Gradle Git Version](../images/studioTroubleshooting/03_GitVersion.png)
 
-    Note: There is a space and two hyphens between Git and version!
+    Nota: C'è uno spazio e due trattini tra git e version!
 
-  * You must receive a message saying what Git version is installed, as you can see in the screenshot above. In this case, go to [Step 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
+  * Devi ricevere un messaggio che dica quale versione di Git è installata, come puoi vedere nella schermata sopra. In questo caso, vai alla [Fase 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
-  * In case you get an message saying
+  * Se ottieni un messaggio che dice
     ```
     Git: command not found
     ```
-    your Git installation is not right.
+    la tua installazione Git non è corretta.
 
-  * [Check git installation](#BuildingAaps-steps-for-installing-git)
+  * [Controlla l'installazione di Git](#BuildingAaps-steps-for-installing-git)
 
-  * if on Windows and the Git was just installed, you should restart your computer to make Git globally available after the installation
+  * se hai appena installato Git su Windows, devi riavviare il computer per rendere Git disponibile a livello globale
 
-  * If Git is installed, you have restarted (if on windows), and Git still couldn't found:
+  * Se Git è installato, il computer è stato riavviato (con Windows), e Git non è ancora stato trovato:
 
-  * Search your computer for a file "git.exe".
+  * Cerca nel tuo computer un file "git.exe".
 
-    Note for yourself, what directory it is in.
+    Nota per te, in quale cartella si trova.
 
-  * Go to the Environment variables in windows, select the variable "PATH" and click edit. Add the directory where you have found your Git installation.
+  * Vai alle Variabili di Ambiente in Windows, seleziona la variabile "PATH" e fai clic su modifica. Aggiungi la cartella in cui hai trovato la tua installazione di Git.
 
   * Save and close.
 
