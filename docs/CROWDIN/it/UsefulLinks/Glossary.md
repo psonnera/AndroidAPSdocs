@@ -40,7 +40,7 @@ __Closed Loop__ = a closed loop system which makes automatic adjustments to the 
 
 __COB__ = Carbs On Board. This is the amount of carbohydrates currently available for the user's digestion → see also IOB.
 
-__CSF__ =Carbs Sensitivity Factor. i.e. how much does the user’s __BG__ increase for 1g of carbs absorbed.
+__ISF__ = Insulin Sensitivity Factor. The expected decrease in BG as a result of one unit of insulin.
 
 __DIA__ = Duration of Insulin Action.  Further info →  Wiki - 'insulin types' and see also →  DIABETTECH - 'DIA'.
 
@@ -56,11 +56,11 @@ __GitHub__ = a web-based hosting service and build process for the __AAPS’__ s
 
 __Glimp__ = an app to collect values from Freestyle Libre Glimp.
 
-__IC (or I:C)__ = Insulin to Carb ratio. (i.e. how many carbs are covered by one unit of insulin?).
-
 __IOB__ = Insulin On Board. Insulin active in the user’s body.
 
-__ISF__ = Insulin Sensitivity Factor. The expected decrease in BG as a result of one unit of insulin.
+__IC (or I:C)__ = Insulin to Carb ratio. (i.e. Insulin active in the user’s body.
+
+__CSF__ =Carbs Sensitivity Factor. i.e. The expected decrease in BG as a result of one unit of insulin.
 
 __LGS__ = Low Glucose Suspend. __AAPS__ will reduce basal if __BG__ is dropping and if __BG__ is rising, then it will only increase basal if  __IOB__ is negative (from a previous __LGS__), otherwise basal rates will remain the same as the user’s selected __Profile__. The user may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound. → see also objective 6.
 
@@ -108,7 +108,7 @@ __SAGE__ = sensor age. This is displayed on the homescreen of __AAPS__ and in __
 
 __SEN__ = status light sensor change on home screen Preferences, Screenshots → see also __BAT__ / __CAN__ / __RES__.
 
-__Sensivity detection__ = calculation of sensitivity to insulin as a result of exercise, hormones etc.  see also → DIABETTECH - 'Autosens'.
+__Sensivity detection__ = calculation of sensitivity to insulin as a result of exercise, hormones etc. see also → DIABETTECH - 'Autosens'.
 
 __Sensor noise__ = a term used to describe the unstable __CGM’s__ readings leading to "jumping" __BG__ values.  Further info → Wiki - 'sensor noise'.
 

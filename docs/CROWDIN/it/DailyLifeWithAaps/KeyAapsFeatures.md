@@ -160,7 +160,7 @@ For safety reasons, this setting is only available if **AAPS** detects that you 
 This setting is only available if **AAPS** detects that you are using a reliable BG source, with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure. Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).<br/> This setting is not visible if "Enable SMB always" is switched on.
 
 #### How frequently SMBs will be given in min
-This feature limits the frequency of SMBs. This value determines the minimum time between SMBs. Note that the loop runs every time a glucose value comes in (generally 5 minutes). Subtract 2 minute to give loop additional time to complete. E.g. if you want SMB to be given every loop run, set this to 3 minutes.
+This feature limits the frequency of SMBs. This value determines the minimum time between SMBs. Note that the loop runs every time a glucose value comes in (generally 5 minutes). Subtract 2 minute to give loop additional time to complete. E.g. E.g. if you want SMB to be given every loop run, set this to 3 minutes.
 
 Default value: 3 min.
 

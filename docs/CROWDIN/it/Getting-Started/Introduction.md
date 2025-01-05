@@ -1,12 +1,12 @@
-# Introduction to APS and AAPS
+# Introduzione a APS e AAPS
 
-## What is an “Artificial Pancreas System”?
+## Che cos’è un “Sistema Pancreas Artificiale”?
 
-A human pancreas does a lot of things besides regulating blood sugar. However, the term **“Artificial Pancreas System” (APS)** usually refers to a system which works to automatically keep blood sugar levels within healthy limits.
+Un pancreas umano fa un sacco di cose oltre a regolare lo zucchero nel sangue. Tuttavia, il termine **“Sistema Pancreas Artificiale” (APS)** di solito si riferisce a un sistema che funziona per mantenere automaticamente i livelli di zucchero nel sangue entro limiti sani.
 
-The most basic way to do this is by detecting **glucose levels**, using these values to do **calculations**, and then delivering the (predicted) right amount of **insulin** to the body. It repeats the calculation, every few minutes, 24/7. It uses **alarms** and **alerts** to inform the user if intervention or attention is needed. This system is typically made up of a **glucose sensor**, an **insulin pump** and an **app** on a phone.
+Il modo più semplice per farlo è rilevare la **glicemia**, utilizzando questi valori per fare **calcoli**, e quindi somministrare all’organismo la giusta quantità (prevista) di **insulina**. Ripete il calcolo, ogni pochi minuti, 24/7. Utilizza **allarmi** e **avvisi** per informare l'utente se è necessario un intervento o la sua attenzione. Questo sistema è tipicamente costituito da un **sensore di glucosio**, un **microinfusore di insulina** e un'**app** su un telefono.
 
-You can read more about the different artificial pancreas systems currently in use and in development in this 2022 review article:
+Puoi leggere di più sui diversi sistemi di pancreas artificiali attualmente in uso e in sviluppo in questo articolo del 2022:
 
 ![Frontiers](../images/FRONTIERS_Logo_Grey_RGB.png) [Future Directions in Closed-Loop Technology](https://www.frontiersin.org/articles/10.3389/fendo.2022.919942/full#:~:text=Fully%20closed%2Dloop%20systems%2C%20unlike,user%20input%20for%20mealtime%20boluses).
 
