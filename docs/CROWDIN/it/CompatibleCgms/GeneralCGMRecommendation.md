@@ -2,29 +2,29 @@
 orphan: true
 - - -
 
-# General CGM recommendations
+# Raccomandazioni generali sui sensori
 
-## CGM hygiene
+## Manutenzione del sensore
 
-Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
+Qualunque sia il sistema CGM in uso, se si vuole utilizzare la calibrazione con il glucometro, ci sono alcune regole molto chiare da seguire, sia che si utilizzi un software DIY che per le applicazioni ufficiali.
 
--   Make sure hands and kit are clean.
--   Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
--   Avoid calibrating when glucose levels are moving up or down.
--   Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
--   For sensors not requiring or not allowing calibration, check at least daily real blood sugar. AAPS will be as safe as your sensor readings are reliable.
--   If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
+-   Assicurati che le mani e il kit siano puliti.
+-   Cerca di calibrare quando hai una sequenza di valori con una freccia orizzontale (15-30 minuti di solito è sufficiente).
+-   Evita di calibrare quando la glicemia è in rialzo o discesa.
+-   Fai “abbastanza” calibrazioni – sulle applicazioni ufficiali, ti verrà chiesto di effettuare controlli una o due volte al giorno. Sui sistemi DIY potrebbe non accadere, e si dovrebbe essere cauti nel continuare senza calibrazioni.
+-   Per i sensori che non richiedono o non consentono la calibrazione, controlla almeno una volta al giorno la glicemia con il glucometro. AAPS sarà sicuro tanto quanto le letture del sensore sono attendibili.
+-   Se possibile, calibra con alcuni valori in un intervallo basso (4-5 mmol/l o 72-90 mg/dl) e altri in un intervallo leggermente più alto (7-9 mmol/l o 126-160 mg/dl) in modo da fornire un margine migliore per la calibrazione del punto/pendenza.
 
-## Setting sensor (G6)
+## Inserimento del sensore (G6)
 
-When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. The sensor contacts should not come into contact with blood.
+Quando si posiziona il sensore, si consiglia di non premere con troppa forza l'inseritore per evitare perdite di sangue. I contatti del sensore non dovrebbero venire a contatto con il sangue.
 
-After setting the sensor, the transmitter can be clicked into the sensor holder. Caution! First click in the square side and then press down the round side.
+Dopo aver inserito il sensore, è possibile applicare il trasmettitore al supporto del sensore. Attenzione! Fare clic prima sul lato squadrato e poi premere sul lato rotondo.
 
 (general-cgm-troubleshooting)=
-## Troubleshooting
+## Risoluzione dei problemi
 
-### Connection problems
+### Problemi di connessione
 
 Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xDrip+ does not display any BG values. When Bluetooth connection is re-established the data is backfilled.
 
