@@ -143,9 +143,9 @@ Scambio di quadranti personalizzati <./ExchangeSiteCustomWatchfaces/index.md>
 
 Esportazione/Importazione Impostazioni <./Maintenance/ExportImportSettings. d>
 Rivedere i tuoi dati <./Maintenance/Reviewing.md>
-AAPS Release Notes <. Manutenzione/RilascioNotes.md>
-Aggiornamenti sulla documentazione <./Manutenzione/DocumentazioneUpdate.md>
-Aggiornamento a una nuova versione di AAPS <./Manutenzione/AggiornamentoNewVersion.md>
+AAPS Release Notes <. Maintenance/ReleaseNotes.md>
+Aggiornamenti sulla documentazione <./Maintenance/DocumentationUpdate.md>
+Aggiornamento a una nuova versione di AAPS <./Maintenance/UpdateToNewVersion.md>
 
 ```
 
@@ -153,7 +153,7 @@ Aggiornamento a una nuova versione di AAPS <./Manutenzione/AggiornamentoNewVersi
 :caption: 8) Ottenere Aiuto
 
 Dove posso ottenere aiuto con AAPS <./GettingHelp/WhereCanIGetHelp.md>
-Risoluzione generale dei problemi <./GettingHelp/GeneraleRisoluzione dei problemi. d>
+Risoluzione generale dei problemi <./GettingHelp/GeneralTroubleshooting.md>
 Risoluzione dei problemi Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
 Accesso ai file di log <./GettingHelp/AccessingLogFiles.md>
 ```
