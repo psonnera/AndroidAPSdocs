@@ -1,13 +1,13 @@
-# Change version
+# Cambia versione
 
-The documentation you are currently reading is specific to a given version of **AAPS**.
+La documentazione che stai leggendo è specifica per una certa versione di **AAPS**.
 
-The current version is shown in the bottom right of the screen. To switch to a different version, click on the current version.
+La versione corrente è mostrata in basso a destra dello schermo. Per passare a una versione diversa, fai clic sulla versione corrente.
 
-![Open language menu](../images/documentation_language_menu.png)
+![Apri menu lingua](../images/documentation_language_menu.png)
 
 ```{warning}
-When changing language and/or version, you might get a 404 - Page not found, if the language or version page doesn't exist. This will frequently happen when switching version but should not happen when changing language: the page will show in English if not translated yet.
+Quando cambi lingua e/o versione, puoi ottenere un 404 - Pagina non trovata, se la lingua o la pagina di versione non esiste. Questo accade di frequente quando cambi versione ma non dovrebbe accadere quando cambi lingua: la pagina sarà in inglese se non è ancora tradotta.
 ```
 
-Feel welcome to join [Crowdin](https://crowdin.com/project/androidapsdocs) translators and proofreaders.
+Sei invitato ad unirti ai traduttori e revisori [Crowdin](https://crowdin.com/project/androidapsdocs).
