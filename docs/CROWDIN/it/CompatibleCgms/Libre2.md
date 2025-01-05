@@ -2,13 +2,13 @@
 orphan: true
 - - -
 
-# Freestyle Libre 2 and 2+
+# Freestyle Libre 2 e 2+
 
-The Freestyle Libre 2 sensor is now a real CGM even with the official app. Still, LibreLink cannot send data to AAPS. There are several solutions to use it with AAPS.
+Il sensore Freestyle Libre 2 è ora un vero e proprio CGM anche con l'app ufficiale. Tuttavia, LibreLink non può inviare dati ad AAPS. Ci sono diverse soluzioni per usarlo con AAPS.
 
-## 1. Use a Bluetooth bridge and OOP
+## 1. Usa un collegamento Bluetooth e OOP
 
-Bluetooth transmitters can be used with the Libre 2 (EU) or 2+ (EU) and an [out of process algorithm](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) app. You can receive blood sugar readings every 5 minutes like with the [Libre 1](./Libre1.md).
+I trasmettitori Bluetooth possono essere utilizzati con il Libre 2 (EU) o 2+ (EU) e un'app con [un algoritmo esterno](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view). È possibile ricevere i valori della glicemia ogni 5 minuti come con il [Libre 1](./Libre1.md).
 
 Check the bridge and app you want to use are compatible with your sensor and xDrip+ (older Blucon and recent ones won't work, Miaomiao 1 needs firmware 39 and Miaomiao 2 firmware 7).
 
