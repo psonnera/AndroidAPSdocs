@@ -2,13 +2,13 @@
 orphan: true
 - - -
 
-# For users of other CGM uploaded to Nightscout
+# Per gli utenti di altri sensori caricando in Nightscout
 
-If you have any other CGM set up that can send your BG data **only** to [Nightscout](https://nightscout.github.io/).
+Se hai configurato un altro sensore che può inviare i tuoi dati di glicemia **solo** a [Nightscout](https://nightscout.github.io/).
 
 ```{important}
-This data source will not work when you are offline, when you experience network issues or when your Nightscout site is down. Use with caution.
+Questa sorgente dati non funzionerà quando sei offline, quando ci sono problemi di rete o quando il tuo sito Nightscout non funziona. Usa con cautela.
 ```
 
--   Setup NSClient with your Nightscout site information.
+-   Imposta AAPSClient con le informazioni del tuo sito Nightscout.
 -   Select NSClient BG in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
