@@ -6,64 +6,64 @@ orphan: true
 
 Il sensore Freestyle Libre 2 è ora un vero e proprio CGM anche con l'app ufficiale. Tuttavia, LibreLink non può inviare dati ad AAPS. Ci sono diverse soluzioni per usarlo con AAPS.
 
-## 1. Usa un collegamento Bluetooth e OOP
+## 1. Usa un trasmettitore Bluetooth e OOP
 
-I trasmettitori Bluetooth possono essere utilizzati con il Libre 2 (EU) o 2+ (EU) e un'app con [un algoritmo esterno](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view). È possibile ricevere i valori della glicemia ogni 5 minuti come con il [Libre 1](./Libre1.md).
+I trasmettitori Bluetooth possono essere utilizzati con il Libre 2 (EU) o 2+ (EU) e un'app con [un algoritmo esterno (OOP)](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view). È possibile ricevere i valori della glicemia ogni 5 minuti come con il [Libre 1](./Libre1.md).
 
-Check the bridge and app you want to use are compatible with your sensor and xDrip+ (older Blucon and recent ones won't work, Miaomiao 1 needs firmware 39 and Miaomiao 2 firmware 7).
+Controlla che il collegamento e l'applicazione che vuoi usare siano compatibili con il tuo sensore e con xDrip+ (i Blucon più vecchi e quelli più recenti non funzionano, Miaomiao 1 richiede il firmware 39 e Miaomiao 2 il firmware 7).
 
-The Libre2 OOP is creating the same BG readings as with the original reader or the LibreLink app via NFC scan. AAPS with Libre 2 do a 10 to 25 minutes smoothing to avoid certain jumps. See below [Value smoothing & raw values](#libre2-value-smoothing-raw-values). OOP generates readings every 5 minutes with the average of the last 5 minutes. Therefore the BG readings are not that smooth but match the original reader device and faster follow the "real" BG readings. If you try to loop with OOP please enable all smoothing settings in xDrip+.
+Il Libre2 OOP crea le stesse letture della glicemia del lettore originale o dell'app LibreLink tramite scansione NFC. AAPS con Libre 2 applica uno smussamento da 10 a 25 minuti per ridurre alcuni sbalzi. Vedi sotto [Smussamento dei valori e dati grezzi](#libre2-value-smoothing-raw-values). OOP crea letture ogni 5 minuti utilizzando la media degli ultimi 5 minuti. Di conseguenza, le letture della glicemia non sono molto omogenee, ma coincidono con quelle del dispositivo di lettura originale e ricalcano più rapidamente le letture della glicemia “reale”. Se vuoi provare a utilizzare il loop con OOP, attiva tutte le impostazioni di smussamento dati in xDrip+.
 
-There are some good reasons to use a Bluetooth transmitter:
+Ci sono alcune buone ragioni per utilizzare un trasmettitore Bluetooth:
 
--   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the the readers like values with "calibrate based on glucose".  
-  Make sure to leave OOP1 disabled (2).
+-   Puoi scegliere diverse strategie di calibrazione OOP2 (1): avere i valori del lettore utilizzando “nessuna calibrazione”, oppure calibrare il sensore come un Libre 1 utilizzando “calibrazione basata su dati grezzi” o infine calibrare i valori del lettore con “calibrazione basata sul glucosio”.  
+  Assicurati di lasciare OOP1 disabilitato (2).
 
-    → Hamburger Menu → Settings → Less common settings → Other misc. options
+    → Menu → Impostazioni → Impostazioni meno usate → Altre opzioni
 
 ![OOP2 Calibration](../images/Libre2_OOP2Calibration.png)
 
--   The Libre 2 sensor can be used 14.5 days as the Libre 1
--   8 hours backfilling is fully supported
+-   Il sensore Libre 2 può essere usato per 14,5 giorni come il Libre 1
+-   Il recupero dei dati entro le 8 ore è totalmente supportato
 
-Remark: The transmitter can be used in parallel to the LibreLink app without interfering with it.
+Nota: Il trasmettitore può essere utilizzato in contemporanea con l'applicazione LibreLink senza interferire.
 
-## 2. Use xDrip+ direct connection
+## 2. Usa la connessione diretta di xDrip+
 
 ```{admonition} Libre 2 EU only
 :class: warning
-xDrip+ doesn't support direct connection to Libre 2 US and AUS.
-Only Libre 2 and 2+ **EU** models.
+xDrip+ non supporta la connessione diretta a Libre 2 US e AUS.
+Solo i modelli Libre 2 e 2+ **EU**.
 ```
 
-- Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [this latest OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) as the one in the document is obsolete.
-- Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
+- Segui [queste istruzioni](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) per configurare xDrip+, ma assicurati di scaricare [quest'ultimo OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) perché quello contenuto nel documento è obsoleto.
+- Segui le istruzioni di configurazione nella [pagina delle impostazioni di xDrip+](../CompatibleCgms/xDrip.md).
 
--   Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   Seleziona xDrip+ in [Configuratore strutturale, Origine BG](#Config-Builder-bg-source).
 
-## 3. Use Diabox
+## 3. Usa Diabox
 
-- Install [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). In Settings, Integration, enable Share data with other apps.
+- Installa [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). In Settings, Integration, abilita Share data with other apps.
 
 ![Diabox](../images/Diabox.png)
 
-- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Seleziona xDrip+ in [Configuratore strutturale, Origine BG](#Config-Builder-bg-source).
 
-## 4. Use Juggluco
+## 4. Usa Juggluco
 
-- Download and install the Juggluco app from [here](https://www.juggluco.nl/Juggluco/download.html).
-- Follow the instructions [here](https://www.juggluco.nl/Juggluco/index.html)
-- In Settings, enable xDrip+ broadcast (which doesn't send data to xDrip+ but to AAPS).
+- Scarica e installa l'applicazione Juggluco da [qui](https://www.juggluco.nl/Juggluco/download.html).
+- Segui le istruzioni [qui](https://www.juggluco.nl/Juggluco/index.html)
+- Nelle impostazioni, abilita la trasmissione verso xDrip+ (che non invia dati a xDrip+ ma ad AAPS).
 
 ![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
 
-- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Seleziona xDrip+ in [Configuratore strutturale, Origine BG](#Config-Builder-bg-source).
 
 ```{admonition} Use with xDrip+
 :class: note
-You can set Juggluco to broadcast to xDrip+ with Patched Libre Broadcast (you should disable xDrip+ broadcast), in order to calibrate (see here) and avoid 1 minute readings to be sent to AAPS.  
-![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)  
-You will then need to set xDrip+ data source to Libre 2 Patched App to receive data from Juggluco.  
+Puoi impostare Juggluco per la trasmissione verso xDrip+ con Patched Libre Broadcast (dovrai disabilitare la trasmissione verso xDrip+), in modo da calibrare (vedi qui) ed evitare che le letture vengano inviate ad AAPS ogni minuto.  
+![Trasmissione di Juggluco verso xDrip+](../images/Juggluco_xDrip.png)  
+Sarà quindi necessario impostare l'origine dati di xDrip+ su Libre 2 Patched App per ricevere i dati da Juggluco.  
 ```
 
 (libre2-patched-librelink-app-with-xdrip)=
