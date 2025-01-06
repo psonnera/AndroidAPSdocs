@@ -67,88 +67,88 @@ Sarà quindi necessario impostare l'origine dati di xDrip+ su Libre 2 Patched Ap
 ```
 
 (libre2-patched-librelink-app-with-xdrip)=
-## 5. Use the patched LibreLink app with xDrip+
+## 5. Usa l'app LibreLink modificata con xDrip+
 
 ```{admonition} Libre 2 EU only
 :class: warning
-The patched app is an old version (22/4/2019) and might not be compatible with recent Android releases.  
+L'applicazione modificata è una versione vecchia (22/4/2019) e potrebbe non essere compatibile con le versioni recenti di Android.  
 ```
 
-### Step 1: Build the patched app
+### Passo 1: Crea l'applicazione modificata
 
-For legal reasons, "patching" has to be done by yourself. Use search engines to find the corresponding links. There are two variants: The recommended original patched app blocks any internet traffic to avoid tracking. The other variant supports LibreView.
+Per motivi legali, la "modifica" deve essere fatta autonomamente. Usa i motori di ricerca per trovare i link corrispondenti. Esistono due varianti: l'app modificata originale e consigliata blocca qualsiasi traffico internet per evitarne il rilevamento. L'altra variante supporta LibreView.
 
-The patched app has to be installed instead of the original app. The next sensor started with it will transmit the current BG values to the xDrip+ app running on your smartphone via Bluetooth.
+L'app modificata deve essere installata al posto dell'app ufficiale. Il primo sensore che viene avviato trasmetterà i valori della glicemia attuale all'app xDrip+ in esecuzione sullo smartphone tramite Bluetooth.
 
-Important: To avoid possible problems it may help to first install and uninstall the original app on an NFC capable smartphone. NFC has to be enabled. This costs no extra power. Then install the patched app.
+Importante: per evitare possibili problemi, può essere utile installare e disinstallare prima l'applicazione ufficiale su uno smartphone con funzionalità NFC. L'NFC deve essere abilitato. Questo non consuma energia aggiuntiva. In seguito, installa l'app modificata.
 
-The patched app can be identified by the foreground authorization notification. The foreground authorization service improves the connection stability compared to the original app which does not use this service.
+L'app modificata può essere riconosciuta dalla notifica di autorizzazione in primo piano. Il servizio di autorizzazione in primo piano migliora la stabilità della connessione rispetto all'applicazione ufficiale che non lo utilizza.
 
 ![LibreLink Foreground Service](../images/Libre2_ForegroundServiceNotification.png)
 
-Other indications could be the Linux penguin logo in the three dot menu -> Info or the font of the patched app (2) different from the original app (1). These criteria are optional depending on the app source you choose.
+Altri indicatori sono il logo del pinguino di Linux nel menu con i tre punti -> Informazioni o il font dell'applicazione modificata (2) diverso da quello dell'applicazione ufficiale (1). Questi elementi sono variabili in base alla fonte scelta dell'app.
 
 ![LibreLink Font Check](../images/LibreLinkPatchedCheck.png)
 
-Ensure that NFC is activated, enable the memory and location permission for the patched app, enable automatic time and time zone and set at least one alarm in the patched app.
+Controlla che l'NFC sia attivato, attiva i permessi di memoria e di localizzazione per l'app modificata, attiva l'ora e il fuso orario automatici e imposta almeno un allarme nell'app modificata.
 
-### Step 2: Start the sensor with the patched app
+### Passo 2: Avvia il sensore con l'applicazione modificata
 
-Now start the Libre2 sensor with the patched app by simply scanning the sensor. Ensure to have set all settings done.
+Ora avvia il sensore Libre2 con l'app modificata effettuando una semplice scansione del sensore. Assicurati di aver configurato tutte le impostazioni.
 
-Mandatory settings for successful sensor start:
+Impostazioni obbligatorie per l'avvio corretto del sensore:
 
--   NFC enabled / BT enabled
--   memory and location permission enabled
--   location service enabled
--   automatic time and time zone setting
--   set at least one alarm in the patched app
+-   NFC abilitato / Bluetooth abilitato
+-   autorizzazioni per la memoria e la localizzazione abilitate
+-   servizio di localizzazione abilitato
+-   regolazione automatica dell'ora e del fuso orario
+-   imposta almeno un allarme nell'app modificata
 
-Please note that the location service is a central setting. This is not the app location permission which has to be set also!
+Tieni presente che il servizio di localizzazione è un'impostazione globale. Non si tratta dell'autorizzazione dell'app per la localizzazione, che deve essere ugualmente attivata!
 
 ![LibreLink permissions memory & location](../images/Libre2_AppPermissionsAndLocation.png)
 
 ![automatic time and time zone + alarm settings](../images/Libre2_DateTimeAlarms.png)
 
-Once the sensor started with the patched app, you won't be able to connect it to another app/phone. If you uninstall the patched app, you will lose alarms and continuous BG readings.
+Una volta avviato il sensore con l'app modificata, non sarà più possibile collegarlo a un'altra app o telefono. Se disinstalli l'app modificata, perderai gli allarmi e le letture continue della glicemia.
 
-The first connection setup to the sensor is critical. The LibreLink app tries to establish a wireless connection to the sensor every 30 seconds. If one or more mandatory settings are missing they have to be adjusted. You have no time limit to do that. The sensor is constantly trying to setup the connection. Even if is last some hours. Be patient and try different settings before even thinking of changing the sensor.
+La fase di abbinamento con il sensore è cruciale. L'app LibreLink cerca di stabilire una connessione wireless con il sensore ogni 30 secondi. Se mancano una o più impostazioni obbligatorie, è necessario sistemarle. Non ci sono limiti di tempo per farlo. Il sensore tenterà regolarmente di stabilire la connessione. Anche se questo durasse alcune ore. Sii paziente e prova diverse impostazioni prima di considerare l'idea di cambiare il sensore.
 
-As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLink start screen there is no connection or some other setting blocks LibreLink to signal alarms. Please check if the sound is enabled and all sorts of blocking app notifications are disabled. When the exclamation mark is gone, the connection should be established and blood sugar values are sent to the smartphone. This should happen after a maximum of 5 minutes.
+Finché compare un punto esclamativo rosso (“!”) nell'angolo superiore sinistro della schermata di avvio di LibreLink, significa che non è presente il collegamento o che qualche altra impostazione impedisce a LibreLink di notificare gli allarmi. Verifica che il volume sia attivo e che qualsiasi impostazione per bloccare le notifiche delle app siano disattivate. Quando il punto esclamativo scompare, la connessione dovrebbe essere riuscita e i valori della glicemia saranno inviati allo smartphone. Questo dovrebbe accadere dopo massimo 5 minuti.
 
 ![LibreLink no connection](../images/Libre2_ExclamationMark.png)
 
-If the exclamation mark remains or you get an error message, this can have several reasons:
+Se il punto esclamativo rimane o viene visualizzato un messaggio di errore, le ragioni possono essere varie:
 
--   Android location service is not granted - please enable it in system settings
--   automatic time and time zone not set - please change settings accordingly
--   activate alarms - at least one of the three alarms must be activated in LibreLink
--   Bluetooth is switched off - please switch on
--   sound is blocked
--   app notifications are blocked
--   idle screen notifications are blocked
+-   il servizio di localizzazione di Android non è abilitato - attivalo nelle impostazioni di sistema
+-   l'ora e il fuso orario automatici non sono configurati - cambia le impostazioni necessarie
+-   attiva gli allarmi - almeno uno dei tre allarmi deve essere attivato in LibreLink
+-   il Bluetooth è disattivato - attivalo
+-   il volume è disattivato
+-   le notifiche dell'app sono bloccate
+-   le notifiche nella schermata di blocco sono disattivate
 
-Restarting the phone can help, you may have to do it several times. As soon as the connection is established, the red exclamation mark disappears and the most important step is taken. It may happen that depending on system settings the exclamation mark remains but you still get readings. In both cases you are fine. Sensor and phone are now connected, every minute a blood sugar value is transmitted.
+Può essere d'aiuto riavviare il telefono, ma è possibile che sia necessario farlo più volte. Non appena la connessione viene stabilita, il punto esclamativo rosso scompare e si passa alla fase più importante. Può accadere che, a seconda delle impostazioni del sistema, il punto esclamativo rimanga, ma che le letture siano comunque visualizzate. In entrambi i casi va bene. Il sensore e il telefono sono ora collegati, e ogni minuto viene trasmesso il valore della glicemia.
 
 ![LibreLink connection established](../images/Libre2_Connected.png)
 
-In rare case it could help to empty the bluetooth cache and/or reset all network connections via the system menu. This removes all connected bluetooth devices which may help to setup a proper bluetooth connection. That procedure is safe as the started sensor is remembered by the patched LibreLink app. Nothing additional has to be done here. Simply wait for the patched app to connect to the sensor.
+In rari casi potrebbe essere utile cancellare la cache del Bluetooth e/o resettare tutte le connessioni di rete tramite il menu di sistema. In questo modo si rimuovono tutti i dispositivi bluetooth collegati, il che può aiutare a impostare una connessione bluetooth corretta. Questa procedura è sicura, in quanto il sensore avviato viene memorizzato dall'app LibreLink modificata. Non è necessario fare nulla di più. Basta attendere che l'app modificata si connetta al sensore.
 
-After a successful connection the smartphone settings can be changed if necessary. This is not recommended but you may want to save power. Location service can be switched off, volume can be set to zero or alarms can be switched off again. The blood sugar levels are transferred anyway.
+Dopo che la connessione è andata a buon fine, è possibile modificare le impostazioni dello smartphone, se necessario. Questa procedura non è consigliata, ma potresti voler risparmiare energia. Il servizio di localizzazione può essere disattivato, il volume può essere abbassato a zero o gli allarmi possono essere nuovamente disattivati. I valori della glicemia verranno trasmessi in ogni caso.
 
-When starting the next sensor, however, all settings must be set again!
+Tuttavia, all'avvio del sensore successivo, tutte le impostazioni devono essere nuovamente modificate!
 
-Remark: The patched app needs the mandatory settings set in that hour after warmup to enable a connection. For the 14 days operation time they are not needed. In most cases when you have problems with starting a sensor the location service was switched off. For Android it is needed for proper bluetooth operation(!) to connect. Please refer to Google's Android documentation.
+Nota: l'app modificata ha bisogno che le impostazioni obbligatorie siano configurate nell'ora successiva al periodo di attivazione del sensore per consentire la connessione. Per i 14 giorni di utilizzo non sono necessarie. Nella maggior parte dei casi in cui si verificano problemi con l'avvio di un sensore, significa che il servizio di localizzazione è stato disattivato. In Android è indispensabile per il corretto funzionamento del bluetooth(!) per la connessione. Si rimanda alla documentazione di Google su Android.
 
-During the 14 days you can use in parallel one or more NFC capable smartphones (not the reader device!) running the original LibreLink app for scanning via NFC. There is no time limitation to start that. You could use a parallel phone for example on day 5 or so. The parallel phones(s) could upload the blood sugar values into the Abbott Cloud (LibreView). LibreView can generate reports for your diabetes team.
+Durante i 14 giorni è possibile utilizzare in parallelo uno o più smartphone con tecnologia NFC (non il lettore originale!) con l'applicazione ufficiale LibreLink per la scansione tramite NFC. Non ci sono vincoli di tempo per farlo. Si può utilizzare un telefono in parallelo, ad esempio, a partire dal quinto giorno. I telefoni aggiuntivi possono inviare i valori della glicemia al server di Abbott (LibreView). LibreView può generare report per il team diabetologico.
 
-Please note that the original patched app **does not have any connection to the internet** to avoid tracking.
+Tieni in considerazione che l'app modificata originale **non ha alcuna connessione a Internet** per evitarne il rilevamento.
 
-However there is a variant of the patched app supporting LibreView with enabled internet access. Please be aware that your data is transferred to the cloud then. But your endo team reporting is fully supported then. With that variant it is also possible to move the alarms of a running sensor to a different device which not has started the sensor. Please google in diabetes related German forums how this could be done.
+Tuttavia, esiste una variante dell'app modificata che supporta LibreView con accesso a Internet attivo. Tieni presente che in questo caso i tuoi dati sono inviati al cloud. Ma la reportistica per il team diabetologico è totalmente disponibile. Con questa variante è anche possibile trasferire gli allarmi di un sensore in funzione su un altro dispositivo che non ha avviato il sensore. Cerca su Google nei forum tedeschi relativi al diabete come si può fare.
 
-### Step 3: Install and configure xDrip+ app
+### Passo 3: Installa e configura l'app xDrip+
 
-The blood sugar values are received on the smartphone by the xDrip+ App.
+I valori della glicemia vengono ricevuti sullo smartphone dall'app xDrip+.
 
 -   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features, in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
 -   Set xDrip+ with the [patched app data source](#xdrip-libre2-patched-app).
