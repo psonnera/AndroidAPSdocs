@@ -12,7 +12,7 @@ AAPS permette anche il **circuito chiuso completo senza che l'utente debba fare 
 
 - Nota che **UAM** può anche essere abilitato in circuito chiuso ibrido, in questo caso l'algoritmo tollera meglio gli errori di calcoli nelle quantità di CHO assunti.
 
-- It is discussed controversially whether e.g. for particularly high carb meals, or for people with certain eating habits or sensitivity swings, a mode with small pre-bolusses might be preferable or even needed. This would basically be a hybrid closed loop without carb info, and therefore a variant of HCL really. We stick to FCL as really **without user boli**, and once you tuned your FCL, you might even remove all „useless“ buttons on the bottom of your AAPS main screen.
+- Si dibatte se, per pasti particolarmente ricchi di carboidrati, o per persone con determinate abitudini alimentari o oscillazioni di sensibilità; una modalità con piccoli pre-boli potrebbe essere preferibile o anche necessaria. Sarebbe una variante di un circuito chiuso ibrido: senza informazioni di CHO. We stick to FCL as really **without user boli**, and once you tuned your FCL, you might even remove all „useless“ buttons on the bottom of your AAPS main screen.
 
 ### What to expect?
 
