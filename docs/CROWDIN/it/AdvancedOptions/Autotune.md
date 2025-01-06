@@ -43,28 +43,28 @@ Il plugin Autotune è un'implementazione dell'algoritmo di Autotune di OpenAPS a
 
 - Il pulsante "Confronta profili" apre la visualizzazione del comparatore del profilo. Il profilo di input è in blu e il profilo di output (chiamato "Tuned") è in rosso.
 
-  - Nota: nell'esempio sottostante il profilo di input ha una variazione circadiana per IC e ISF, ma il profilo calcolato in uscita ha un singolo valore. If it's important for you to get a circadian output profile see [Circadian IC or ISF profile](#circadian-ic-or-isf-profile) below.
+  - Nota: nell'esempio sottostante il profilo di input ha una variazione circadiana per IC e ISF, ma il profilo calcolato in uscita ha un singolo valore. Se è importante per voi ottenere un profilo di output circadiano andate alla sezione [ IC circadiano o profilo ISF ](#circadian-ic-or-isf-profile) qui sotto.
 
-  ![Autotune Compare profiles](../images/Autotune/Autotune_5.png)
+  ![Comparatore profili Autotune](../images/Autotune/Autotune_5.png)
 
-- If you trust results (low percentage of variation between input profile and output profile), you can click on "Activate profile" button and then click on OK to validated.
+- Se ti fidi dei risultati (bassa percentuale di variazione tra il profilo di input e il profilo di output), puoi cliccare sul pulsante "Attiva il profilo" e poi cliccare su OK per convalidarlo.
 
-  - Activate Tuned profile will automatically create a new profile "Tuned" in your Local profile plugin.
-  - If you already have a profile named "Tuned" in your local profile plugin, then this profile will be updated with calculated Autotune profile before the activation
+  - Il profilo Activate Tuned creerà automaticamente un nuovo profilo "Tuned" nel plugin del profilo locale.
+  - Se hai già un profilo chiamato "Tuned" nel plugin del tuo profilo locale, questo profilo verrà aggiornato con il profilo Autotune calcolato prima dell'attivazione
 
   ![Autotune Activate profile](../images/Autotune/Autotune_6.png)
 
-- If you think Tuned profile must be adjusted (for example if you think some variation are too important), then you can click on "Copy to local profile" button
+- Se pensi che il profilo Tuned debba essere regolato (ad esempio se pensi che alcune variazioni siano troppo importanti), puoi cliccare sul pulsante "Copia sul profilo locale"
 
-  - A new profile with the prefix "Tuned" and the date and time of the run will be created in local profile plugin
+  - Un nuovo profilo con il prefisso "Tuned" e la data e l'ora di esecuzione saranno creati nel plugin del profilo locale
 
-![Autotune Copy to local profile](../images/Autotune/Autotune_7.png)
+![Autotune Copia nel profilo locale](../images/Autotune/Autotune_7.png)
 
-- You can then select local profile to edit the Tuned profile (it will be selected by default when you open Local profile plugin)
+- È quindi possibile selezionare il profilo locale per modificare il profilo aggiornato (sarà selezionato come impostazione predefinita quando si apre il plugin del profilo locale)
 
   - the values in local profile will but rounded in the user interface to your pump capabilities
 
-  ![Autotune local profile update](../images/Autotune/Autotune_8.png)
+  ![Autotune aggiornamento profilo locale](../images/Autotune/Autotune_8.png)
 
 - If you want to replace your input profile with Autotune result, click on "Update input profile" button and validate the Popup with OK
 
