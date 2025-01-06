@@ -1,16 +1,16 @@
-# Full Closed Loop
+# Circuito Chiuso Completo
 
-## Full vs. Hybrid Closed Loop (FCL, HCL)
+## Completo contro Ibrido (FCL, HCL)
 
-### Definitions
+### Definizioni
 
-In **hybrid closed loop** you gave at least one bolus prior to meals. This pushed your loop often into a temporary shut-off (temporary zero basal) and generally only into a co-management role while that given bolus was strongly active.
+In un **circuito chiuso ibrido**, hai dato almeno un bolo prima dei pasti. Questo fa che il tuo circuito chiuso sospende l'erogazione (basale temporanea zero) e generalmente ha solo in un ruolo di co-gestione, mentre il bolo dato è ancora attivo.
 
-Also, prior to each meal, you made inputs about the carb, fat, and protein intake, and also gave indications (generally in settings, plus every day related to each meal) related to estimated carb absorption times.
+Inoltre, prima di ogni pasto, hai fatto la conta dei CHO, valutato grassi e proteine, e hai anche dato delle indicazioni (generalmente nelle impostazioni, per ogni giorno relativo ad ogni pasto) relative ai tempi stimati di assorbimento dei CHO.
 
-AAPS also allows **full closed looping without the user giving any boli**, and without making carb inputs, in a mode called UAM = un-announced meals.
+AAPS permette anche il **circuito chiuso completo senza che l'utente debba fare alcun bolo**, e senza digitare i CHO, in una modalità chiamata UAM = pasti non annunciati.
 
-- Note that **UAM** can also be switched on in hybrid closed looping, in which case it just means that the algorithm tolerates wrong carb inputs better.
+- Nota che **UAM** può anche essere abilitato in circuito chiuso ibrido, in questo caso l'algoritmo tollera meglio gli errori di calcoli nelle quantità di CHO assunti.
 
 - It is discussed controversially whether e.g. for particularly high carb meals, or for people with certain eating habits or sensitivity swings, a mode with small pre-bolusses might be preferable or even needed. This would basically be a hybrid closed loop without carb info, and therefore a variant of HCL really. We stick to FCL as really **without user boli**, and once you tuned your FCL, you might even remove all „useless“ buttons on the bottom of your AAPS main screen.
 

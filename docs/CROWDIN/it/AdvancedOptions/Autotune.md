@@ -1,10 +1,10 @@
-# Come usare il plugin Autotune (solo con versione dev)
+# Come usare il plugin Autotune (solo dev)
 
-La documentazione sull'algoritmo di Autotune è disponibile in [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
+La documentazione sull'algoritmo di Autotune è disponibile nella [documentazione OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
 
 Il plugin Autotune è un'implementazione dell'algoritmo di Autotune di OpenAPS all'interno di AAPS.
 
-**Attualmente Autotune Plugin è disponibile solo in [dev branch](../AdvancedOptions/DevBranch.md) e in modalità Engineering.**
+**Attualmente il Plugin Autotune è disponibile solo nel [ramo dev](../AdvancedOptions/DevBranch.md) e in modalità sviluppatore.**
 
 ![Autotune plugin](../images/Autotune/Autotune_1.png)
 
@@ -14,7 +14,7 @@ Il plugin Autotune è un'implementazione dell'algoritmo di Autotune di OpenAPS a
 
 - È possibile selezionare nel menu a tendina di scelta Profilo, quello che si desidera aggiornare (come impostazione predefinita è selezionato il profilo attivo corrente)
   - Nota: Ogni volta che si seleziona un nuovo profilo, i risultati precedenti verranno rimossi e il parametro Tune Days verrà impostato sul valore predefinito
-- Then Tune days is to select the number of days used in calculation to tune your profile. Il valore minimo è 1 giorno e il valore massimo 30 giorni. Questo numero non dovrebbe essere troppo basso per ottenere risultati corretti e regolari (oltre 7 giorni per ogni calcolo)
+- Quindi Tune days è permette di definire il numero di giorni utilizzati nel calcolo per sintonizzare il tuo profilo. Il valore minimo è 1 giorno e il valore massimo 30 giorni. Questo numero non dovrebbe essere troppo basso per ottenere risultati corretti e regolari (oltre 7 giorni per ogni calcolo)
   - Nota: ogni volta che si cambia il parametro Tune Days, i risultati precedenti verranno rimossi
 - Last Run è un link che recupera l'ultimo calcolo valido. Se non hai lanciato Autotune il giorno corrente, o se i risultati precedenti sono stati rimossi con una modifica del parametro di calcolo sopra riportata, allora puoi recuperare i parametri e i risultati dell'ultima esecuzione riuscita.
 - Una nota segnala ad esempio, alcune informazioni sul profilo selezionato (se si hanno diversi valori IC o diversi valori ISF)
