@@ -12,11 +12,11 @@ AAPS permette anche il **circuito chiuso completo senza che l'utente debba fare 
 
 - Nota che **UAM** può anche essere abilitato in circuito chiuso ibrido, in questo caso l'algoritmo tollera meglio gli errori di calcoli nelle quantità di CHO assunti.
 
-- Si dibatte se, per pasti particolarmente ricchi di carboidrati, o per persone con determinate abitudini alimentari o oscillazioni di sensibilità; una modalità con piccoli pre-boli potrebbe essere preferibile o anche necessaria. Sarebbe una variante di un circuito chiuso ibrido: senza informazioni di CHO. We stick to FCL as really **without user boli**, and once you tuned your FCL, you might even remove all „useless“ buttons on the bottom of your AAPS main screen.
+- Si dibatte se, per pasti particolarmente ricchi di carboidrati, o per persone con determinate abitudini alimentari o oscillazioni di sensibilità; una modalità con piccoli pre-boli potrebbe essere preferibile o anche necessaria. Sarebbe una variante di un circuito chiuso ibrido: senza informazioni di CHO. Si intende circuito chiuso completo come **senza boli utente**. Una volta sintonizzato, puoi anche rimuovere tutti i pulsanti „inutili” nella parte inferiore della schermata principale AAPS.
 
-### What to expect?
+### Cosa aspettarsi?
 
-In 2022/23 a first medical study was conducted and published that showed patients can achieve comparatively good results with AAPS in a simple FCL mode:
+Nel 2022/23 è stato condotto e pubblicato un primo studio medico che ha mostrato che i pazienti possono ottenere risultati relativamente buoni con AAPS in una semplice modalità di ciruito chiuso completo:
 
 > 16 adolescents with T1D (HbA1c range 43-75), and duration of diabetes of 9-15 years underwent three distinct 3-day periods of camp living, while using a modified and locked version of AAPS 3.1.0.3 **Results:** The glycemia was controlled by the system 95% time of the study and the proportion of time below 3.9 mmol/L did not exceed 1% over the whole study period (0.72%). The HCL scenario reached significantly higher percentage of time below 3 mmol/L (HCL 1.05% vs. MA 0.0% vs. FCL 0.0%; P = 0.05) compared to other scenarios. **No difference was observed among the scenarios in the percentage of time between 3.9 and 10 mmol/L** (HCL 83.3% vs. MA 79.85% vs. **FCL 81.03%**, P = 0.58) corresponding to mean glycemia (HCL 6.65 mmol/L vs. MA 7.34 mmol/L vs. FCL 7.05 mmol/L, P = 0.28). No difference was observed in the mean daily dose of insulin or in the daily carbohydrate intake. No serious adverse event occurred during the study period. **Conclusions:** Our pilot study showed that **FCL might be a realistic mode of treatment** for people with T1D.
 
