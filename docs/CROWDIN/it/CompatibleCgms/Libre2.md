@@ -160,24 +160,24 @@ I valori della glicemia vengono ricevuti sullo smartphone dall'app xDrip+.
 
 ![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
 
-Questo non avvia alcun sensore Libre2, né vi interagisce in alcun modo. Questo serve semplicemente a dire a xDrip+ che un nuovo sensore sta trasmettendo i valori della glicemia. Se disponibili, inserisci due misurazioni con il glucometro per la calibrazione iniziale. Ora i valori della glicemia dovrebbero essere visibili su xDrip+ ogni 5 minuti. Skipped values, e.g. because you were too far away from your phone, will not be backfilled.
+Questo non avvia alcun sensore Libre2, né vi interagisce in alcun modo. Questo serve semplicemente a dire a xDrip+ che un nuovo sensore sta trasmettendo i valori della glicemia. Se disponibili, inserisci due misurazioni con il glucometro per la calibrazione iniziale. Ora i valori della glicemia dovrebbero essere visibili su xDrip+ ogni 5 minuti. I valori mancanti, ad esempio quando il sensore è distante dal telefono, non verranno reintegrati.
 
-After a sensor change xDrip+ will automatically detect the new sensor and will delete all calibration data. You may check you blood glucose after activation and make a new initial calibration.
+Dopo un cambio di sensore, xDrip+ rileva automaticamente il nuovo sensore ed elimina tutti i parametri di calibrazione vecchi. Dopo l'attivazione è possibile misurare la glicemia con il glucometro ed effettuare una nuova calibrazione iniziale.
 
-### Step 5: Configure AAPS (for looping only)
+### Passo 5: Configura AAPS (solo per il loop)
 
--   In AAPS go to Config Builder > BG Source and check 'xDrip+'
+-   Su AAPS vai in Configuratore strutturale > Origine BG e seleziona 'xDrip+'.
 
 ![xDrip+ BG Source](../images/ConfBuild_BG_xDrip.png)
 
--   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](#xdrip-identify-receiver).
+-   Se AAPS non riceve i valori della glicemia quando il telefono è in modalità aereo, usa “Identifica ricevitore” come descritto nella [pagina delle impostazioni di xDrip+](#xdrip-identify-receiver).
 
-Until now, using Libre 2 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within SMB algorithm. The BG values of Libre 2 are not smooth enough to use it safely. See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md) for more details.
+Per ora, utilizzando Libre 2 come origine dati, non è possibile attivare le opzioni “Abilita SMB sempre” e “Abilita SMB dopo i carboidrati” per l'algoritmo SMB. I valori della glicemia del Libre 2 non sono abbastanza omogenei per poterli usare in modo sicuro. Per maggiori dettagli, vedi [Smussamento dei dati glicemici](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 (Libre2-experiences-and-troubleshooting)=
-### Experiences and Troubleshooting
+### Esperienze e risoluzione dei problemi
 
-#### Connectivity
+#### Connettività
 
 The connectivity is good with most phones, with the exception of Huawei mobile phones. The connection can break off if the mobile phone is in the pocket opposite the sensor or if you are outdoors. Wear your phone on the sensor side of your body. In rooms, where Bluetooth spreads over reflections, no problems should occur. If you have connectivity problems please test another phone. It may also help to set the sensor with the internal BT antenna pointing down. The slit on the applicator must be pointing down when setting the sensor.
 
