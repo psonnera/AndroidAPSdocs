@@ -2,9 +2,9 @@
 orphan: true
 - - -
 
-# Dexcom G6 and ONE
+# Dexcom G6 e ONE
 
-## Basics first
+## Prima le basi
 
 -   Follow general CGM hygiene and setting sensor recommendation [here](../CompatibleCgms/GeneralCGMRecommendation.md).
 
