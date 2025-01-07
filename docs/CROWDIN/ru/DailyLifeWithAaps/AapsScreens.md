@@ -17,7 +17,7 @@
 
 * Позволяют выполнять переход между различными модулями **AAPS**.
 * Между экранами также можно переходить свайпом влево или вправо.
-* Displayed tabs can be selected in the [config builder](#Config-Builder-tab-or-hamburger-menu).
+* Видимые вкладки можно выбрать в [Конфигураторе](#Config-Builder-tab-or-hamburger-menu).
 
 ### Раздел B - Профиль & Цель
 
@@ -75,11 +75,11 @@
 * красный = ниже заданного диапазона
 * желтый = выше заданного диапазона 
 
-![Deltas](../images/Home_Delta.png)
+![Дельта](../images/Home_Delta.png)
 
-The blocks in the middle shows:
+Блоки в середине показывают:
 
-1. how many minutes since last **CGM** reading
+1. минуты с предыдущего показания **мониторинга**
 2. differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
     Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
 
@@ -154,7 +154,7 @@ The blocks in the middle shows:
 
 *Примечание*: В своих расчетах.**AAPS** учитывает данные за 30 часов. Поэтому даже после устранения проблемы нерегулярной передачи данных, может потребоваться до 30 часов, чтобы исчез желтый треугольник.
 
-#### Simple mode
+#### Простой режим
 
 An icon with a kid's face at the top right of this section indicates that you are in [Simple mode](#preferences-simple-mode).
 
@@ -164,9 +164,8 @@ An icon with a kid's face at the top right of this section indicates that you ar
 
 ![Раздел D](../images/Home2020_TBR.png)
 
-**Пиктограмма шприца**: инсулин "на борту" (IOB, АктИнс) - количество активного инсулина в организме
-
-1. Значение активного инсулина IOB будет равно нулю, если активна только база текущего профиля и нет остаточного инсулина от предыдущих болюсов.
+1. **Syringe**: insulin on board (IOB) - amount of active insulin inside your body  
+    The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses.
     
     * IOB может быть отрицательным если был период с пониженным относительно текущего профиля базалом.
     * Нажмите на иконку (только короткое нажатие), чтобы увидеть как IOB распределяется между базой и болюсом.
@@ -175,7 +174,9 @@ An icon with a kid's face at the top right of this section indicates that you ar
 
 3. **Фиолетовая линия**: текущая скорость базала. Пиктограмма меняется, отражая временные изменения в базальной скорости (плоская при 100%) 
     * Кратко нажмите на иконку, чтобы увидеть подробности базала (значение текущего базала, время начала, остаток/общая продолжительность в минутах)
-4. **Пиктограмма со стрелками вверх & вниз**: отображает актуальный статус [Autosens](#Open-APS-features-autosens) (включен или отключен) и под ней его текущий расчет
+4. **Arrows up & down**: indicates dynamic sensitivity features status ([Autosens](#Open-APS-features-autosens) or [DynamicISF](#Open-APS-features-DynamicISF)): enabled or disabled. Several values may be shown in this section: 
+    * AS: Autosens value. Shown even if Autosens is disabled (for information only). Also shown when DynISF is activated, although it has no effect.
+    * Alg: DynamicISF value (based on TDD). More information on the last line on [DynamicISF](#Open-APS-features-DynamicISF) page.
 
 (aaps-screens-carbs-requirement)=
 
@@ -335,9 +336,11 @@ To configure additional graphs, check the boxes corresponding to the data you wa
 
 Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. До достижения этой цели линия Autosens на диаграмме отображается только для информации.
 
-#### Частота сердцебиения
+(screen-heart-rate-steps)=
 
-Эти данные могут быть доступны при использовании [смарт-часов Garmin](#Watchfaces-garmin).
+#### Heart rate & Steps
+
+This data may be available when using a [Wear smartwatch](../WearOS/WearOsSmartwatch.md). Enable them on **AAPS** Wear app and give permission for health data.
 
 #### Отклонения
 

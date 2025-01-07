@@ -1,5 +1,9 @@
 # 文件更新與變更
 
+## 2025年1月
+
+- 快速嚮導[長按功能](#Preferences-quick-wizard) @emilise
+
 ## 2024年12月
 
 - 文檔 [3.3版](#version3300) @emilise

@@ -164,9 +164,8 @@ Libre 使用者的特殊注意事項：
 
 ![D 區](../images/Home2020_TBR.png)
 
-**針筒**: 體內的胰島素量 (IOB) - 你身體內活性胰島素的數量
-
-1. 如果僅運作標準基礎率，且沒有先前注射的胰島素剩餘量，則 IOB 為零。
+1. **針筒**：體內的胰島素量（IOB） - 你體內活性胰島素的數量  
+    如果僅有標準的基礎胰島素在運行，且沒有來自之前注射的胰島素剩餘，則體內的胰島素量為零。
     
     * 如果最近有減少的基礎率，IOB 可能為負值。
     * 按圖示可查看注射胰島素與基礎胰島素的分配情況。
@@ -175,7 +174,9 @@ Libre 使用者的特殊注意事項：
 
 3. **紫色線**: 當前的基礎率。 圖示會根據基礎率的臨時變化而改變（維持在 100%） 
     * 按圖示可查看基礎基礎率和任何臨時基礎率的詳細資訊(包括剩餘時間)。
-4. **上下箭頭**: 表示實際的 [自動敏感度調整](#Open-APS-features-autosens) 狀態（啟用或停用），數值顯示在圖示下方
+4. **上下箭頭**：顯示動態敏感度特徵狀態（[Autosens](#Open-APS-features-autosens) 或 [DynamicISF](#Open-APS-features-DynamicISF)）：啟用或停用。 本部分可能顯示幾個值： 
+    * AS：Autosens 值。 即使在 Autosens 停用時也會顯示（僅供參考）。 當 DynISF 啟用時也會顯示，儘管它並不會產生影響。
+    * Alg：DynamicISF 值（基於 TDD）。 有關最後一行的更多資訊，請參見[DynamicISF](#Open-APS-features-DynamicISF) 頁面。
 
 (aaps-screens-carbs-required)=
 
@@ -335,9 +336,11 @@ Libre 使用者的特殊注意事項：
 
 請注意，您需要在[目標 8](#objectives-objective8)中，以便讓敏感度檢測/[自動敏感調整](#Open-APS-features-autosens)所提供的胰島素量。 在達到該目標之前，你的圖表中的線條僅顯示為資訊。
 
-#### 心率(Heart rate)
+(screen-heart-rate-steps)=
 
-使用 [Garmin 智慧型手錶](#Watchfaces-garmin) 時，該資料可能可用。
+#### 心率＆步數
+
+當使用 [Wear 智慧型手錶](../WearOS/WearOsSmartwatch.md) 時，這些資料可能會可以顯示。 可在**AAPS** Wear 應用程式中啟用它們並授權健康資料。
 
 #### 偏差(Deviations)
 

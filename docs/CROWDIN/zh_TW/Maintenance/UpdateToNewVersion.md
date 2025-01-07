@@ -10,6 +10,10 @@
 * 當有新版本發布時，你將在 **AAPS** 應用中收到關於新版本的訊息橫幅。
 * 新版本也會在發布時於 Facebook 上公佈。
 * 發布後，請詳細閱讀[發布說明](ReleaseNotes.md)，如有任何疑問，請在Facebook或Discord社群中澄清後再進行更新。
+    
+    ```{note}
+    如果你想在新電腦上建立 **AAPS**：請將你的備份金鑰存檔複製到新電腦上。 然後按照 [初始建置 **AAPS** 程序](../SettingUpAaps/BuildingAaps.md) 的步驟，而不是這個指導。 唯一的不同之處在於，你可以選擇你在新電腦上複製的金鑰存檔，而不必建立新的金鑰存檔。
+    ```
 
 ## 更新到新版本 AAPS 的概述
 
@@ -67,19 +71,13 @@
     
     ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-### 檢查 JVM 和 Gradle 版本
+### 檢查 JVM 版本
 
-如果你已在同一臺電腦上構建過先前版本的 **AAPS**，則特別建議進行這些檢查。
+如果你已經在同一台電腦上建立了 **AAPS** 的先前版本，特別建議進行此檢查。
 
-請參考 [建立指導](#Building-APK-recommended-specification-of-computer-for-building-apk-file) 中所需的 JVM 和 Gradle 版本，與你正在構建的 **AAPS** 版本相對應。
+請在 [建置指示](#Building-APK-recommended-specification-of-computer-for-building-apk-file) 中檢查與你現在要建置的 **AAPS** 版本對應的 JVM 所需版本。 然後按照在 [不相容的 Gradle JVM](#incompatible-gradle-jvm) 中描述的步驟，以確保你當前使用的是正確的版本。
 
-對於 Gradle，請前往 **檔案 > 專案結構** (1)。 在**專案**標籤 (2) 中，確認**Gradle 版本** (3) 是合適的版本。 如果找不到所需的版本，則表示你正在使用過時的 Android Studio 版本（請參閱前一步關於最低 Android Studio 版本的說明）。
-
-![檢查 Gradle 版本](../images/studioTroubleshooting/gradle_version.png)
-
-對於 JVM 版本，請按照[不相容的 Gradle JVM](#incompatible-gradle-jvm) 中描述的步驟檢查以確保你當前使用的版本正確。
-
-(更新至新版本-建立簽署的 APK)=
+Update-to-new-version-build-the-signed-apk)=
 
 ### 建置簽章 APK
 

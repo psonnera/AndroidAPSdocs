@@ -64,6 +64,31 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 ```
 
 (version3300)=
+## Version 3.3.1.0
+
+Release date: 06-01-2025
+
+### UI changes
+
+* [Added colors to differentiate between AAPSClient and AAPSClient2](#RemoteControl_aapsclient) @MilosKozak
+* Improved Users actions layout and icons
+
+### Other functionalities
+
+* New automation trigger : [steps count](#screen-heart-rate-steps) @Roman Rihter
+* Allow to receive everything on NSCv3 full sync (including data previously not synced such as TBR) @MilosKozak
+* NSClient v3 : make Announcement work (_i.e._ from AAPSClient to AAPS) @MilosKozak
+
+### Technical changes & bug fixes
+
+* Fix Insight crash @philoul
+* Fix creation of extra-numerous deviceStatus entries in Nightscout @MilosKozak
+* Fix carbs absorption @MilosKozak
+* Fixed color of RadioButtons & CheckBoxes @MilosKozak
+* Fixed bug in DynISF percentage migration @MilosKozak
+* Resolved misplaced DynISF notification @MilosKozak
+* Fixed bug in watchfaces @philoul
+
 ## Version 3.3.0.0
 
 Release date: 29-12-2024
@@ -73,8 +98,8 @@ Release date: 29-12-2024
 * **[Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md)** feature is no more a dedicated plugin, but is now included as an option of [OpenAPS SMB](#Config-Builder-aps) plugin, along with some changes in its behaviour: 
   * **Profile Switch** and **Profile Percentage** is now taken into account for **Dynamic ISF** in respect of dynamic sensitivity strengthness
   * The average **ISF** of the last 24h is calculated and this value is used for bolus wizard and **COB** calculation. **Profile ISF** value is not used at all (except fallback when history data is not available)
-  * If you use **DynamicISF** and you have **Automation** set for a **Profile %** in relation to **BG**: Turn It Off. This is already part of dynamic sensitivity algorithm
-  * *** AGAIN: Turn off all **Automations** which activates a **Profile %** in relation to **BG** because it will be too aggressive and may over deliver in insulin! *****
+  * Reminder: If you use **DynamicISF** and you have **Automation** set for a **Profile %** in relation to **BG**: Turn It Off. This is already part of dynamic sensitivity algorithm
+  * *** AGAIN: When using DynamicISF, turn off all **Automations** which activates a **Profile %** in relation to **BG** because it will be too aggressive and may over deliver in insulin! *****
   * Do not use a **Profile %** increase of greater than 100% for a long time. If you determine that your **Profile** has changed, create a new **Profile** with your revised values in order to replicate the **Profile** with %
 * Enable “SMB always” and “SMB after carbs” for FreeStyle Libre 2 and Libre 3 users
   * Note : Although the limitation was removed on **AAPS** side, this functionality is not fully operational yet, since **AAPS** needs to receive proper identification of the CGM used. See the [bug opened on xDrip+ project](https://github.com/NightscoutFoundation/xDrip/issues/3841).
@@ -91,6 +116,8 @@ Release date: 29-12-2024
   * The [Bluetooth connectivity issues some people encounter on Android 15](../Getting-Started/Phones.md) are **NOT** solved by this release (this is an Android issue, not **AAPS**).
   * The BYODA button on the homescreen is no longer available due to Android limitations. There is no known workaround.
 * Update instructions: follow the [Update to a new version](../Maintenance/UpdateToNewVersion.md) guide.
+* Tip - if you do not want to lose your **AAPS** history ALWAYS do an UPDATE and NOT an UNINSTALL/INSTALL. As a precaution, back up your current **AAPS** settings and old APK to revert to an old version should anything go wrong. 
+* If using Omnipod dash any importing of Preferneces to **AAPS** will cancel any current pods.
 * After upgrading:
   * Set the new [“AAPS directory” setting](#preferences-maintenance-logdirectory), in the Maintenance tab.
 
@@ -123,7 +150,7 @@ Release date: 29-12-2024
 
 #### Other functionalities
 
-* Unattended exports @vanelsberg
+* [Unattended settings exports](#ExportImportSettings-Automating-Settings-Export) @vanelsberg
 * New [Automation trigger](#automations-automation-triggers) @vanelsberg
   * Pod Activation (patch pump only)
 * New [Automation triggers](#automations-automation-triggers) @jbr77rr
@@ -146,6 +173,7 @@ Release date: 29-12-2024
 
 #### Technical changes
 
+* [log files location change](#Accessing-logfiles-accessing-logfiles)
 * new internal modules structure @MilosKozak
 * split persistence layer from main code @MilosKozak
 * build files rewritten to kts @MilosKozak
