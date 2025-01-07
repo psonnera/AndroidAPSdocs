@@ -6,28 +6,28 @@ orphan: true
 
 ## Prima le basi
 
--   Follow general CGM hygiene and setting sensor recommendation [here](../CompatibleCgms/GeneralCGMRecommendation.md).
+-   Segui i consigli generali di igiene del sensore e le impostazioni corrispondente [qui](../CompatibleCgms/GeneralCGMRecommendation.md).
 
-## General hints for looping with G6 and ONE
+## Suggerimenti generali per il circuito chiuso con G6 e ONE
 
-- Recent transmitters are called Firefly. Sensors cannot be restarted without removing the transmitter, which itself cannot be reset, they also do not generate raw data.
+- I trasmettitori recenti sono chiamati Firefly. I sensori non possono essere riavviati senza rimuovere il trasmettitore, il quale non può essere resettato, e non generano dati grezzi.
 
-- If you are restarting sensors, ensure you are ready to calibrate and keep an eye on variation.
+- Se stai riavviando i sensori, assicurati di essere pronto a calibrare e tieni d'occhio le variazioni di glicemia.
 
-- Pre-soaking of the G6/ONE with factory calibration is likely to give variation in results. If you do pre-soak, then to get best results, you will probably need to calibrate the sensor.
+- È probabile che l'inserimento anticipato dei sensori G6/ONE crei variazioni nei risultati, data la calibrazione di fabbrica di questi sensori. Se usi questa strategia, dovrai probabilmente calibrare il sensore per ottenere risultati migliori.
 
-Read more in the [article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
+Leggi di più nell'[articolo](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) pubblicato da Tim Street su [www.diabettech.com](https://www.diabettech.com).
 
-## If using G6 or ONE with xDrip+
+## Se usi un sensore G6 o ONE con xDrip+
 
-- If you are using a recent (Firefly) transmitter, preemptive restarts are **ignored**.
-- If you are using a modded transmitter you do **not need** to use preemptive restarts.
--   If you are using an old rebatteried transmitter, the safest thing to do is **disable** [preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html). Though, in this case you will have to use the G6 in non-[native mode](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) (which is unadvisable as it disables factory calibration and doesn't filter noisy readings), or else the sensor will stop after 10 days.
--   The Dexcom G6 and ONE transmitters can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
--   When using xDrip+ as receiver uninstall the Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
--   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (only G6) with local broadcast to xDrip+.
--   You can also use xDrip+ as a companion app of the official Dexcom app, but you might experience delays in BG readings.
--   If not already set up, download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
+- Se stai usando un trasmettitore recente (Firefly), il riavvio preventivo è **ignorato**.
+- Se stai usando un trasmettitore modificato, **non hai bisogno** di impostare i riavvii preventivi.
+-   Se stai usando un vecchio trasmettitore ricondizionato, la cosa più sicura da fare è di **disabilitare** il [riavvio preventivo](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html). Però, in questo caso dovrai usare il G6 in [ modalità nativa](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) (che è sconsigliato in quanto disabilita la calibrazione di fabbrica e non filtra le letture rumorose), oppure il sensore si fermerà dopo 10 giorni.
+-   I trasmettitori Dexcom G6 e ONE possono essere collegati contemporaneamente al ricevitore Dexcom (o in alternativa al micro t:slim) e a un’app sul telefono.
+-   Quando utilizzi xDrip+ collegato al sensore, disinstalla prima l'app Dexcom. **Non è possibile collegare le app xDrip+ e Dexcom al trasmettitore contemporaneamente!**
+-   Se hai bisogno di Clarity e vuoi approfittare degli allarmi xDrip+ usa [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (solo G6) con trasmissione locale (broadcast) verso xDrip+.
+-   È anche possibile utilizzare xDrip+ come app di compagno dell'app ufficiale Dexcom, ma si potrebbero verificare ritardi nelle letture di glicemia.
+-   Se non lo hai già installato, scarica [xDrip+](https://github.com/NightscoutFoundation/xDrip) e segui le istruzioni sulla pagina [Impostazioni xDrip+](../CompatibleCgms/xDrip.md).
 -   Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 - Adjust settings in xDrip+ according to [xDrip+ settings page](../CompatibleCgms/xDrip.md)
