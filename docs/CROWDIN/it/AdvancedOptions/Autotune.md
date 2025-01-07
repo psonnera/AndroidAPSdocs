@@ -6,7 +6,7 @@ Il plugin Autotune è un'implementazione dell'algoritmo di Autotune di OpenAPS a
 
 **Attualmente il Plugin Autotune è disponibile solo nel [ramo dev](../AdvancedOptions/DevBranch.md) e in modalità sviluppatore.**
 
-![Autotune plugin](../images/Autotune/Autotune_1.png)
+![Plugin Autotune](../images/Autotune/Autotune_1.png)
 
 ## Interfaccia utente Autotune
 
@@ -89,20 +89,20 @@ Il plugin Autotune è un'implementazione dell'algoritmo di Autotune di OpenAPS a
 - Cambio profilo automatica (default Off): vedi [Run Autotune con una regola di automazione ](#run-autotune-with-an-automation-rule) di seguito. Se si modifica questa impostazione in On, il profilo di input verrà automaticamente aggiornato dal profilo Tuned e verrà attivato.
   - **Fai attenzione, devi fidarti e verificare durante diversi giorni successivi, che dopo un aggiornamento e l'attivazione del profilo Tuned senza modifiche, il tuo loop migliori**
 
-- Categorize UAM as basal (default On): Questa impostazione è per gli utenti che usano AndroidAPS senza alcun carbs inserito (Full UAM). It will prevent (when Off) to categorize UAM as basal.
-  - Note: if you have at least one hour of Carbs absorption detected during one day, then all data categorized as "UAM" will be categorized as basal, whatever this setting (On or Off)
-- Number of days of data (default 5): You can define default value with this setting. Each time your select a new profile in Autotune plugin, Tune days parameter will be replaced by this default value
-- Apply average result in circadian IC/ISF (default Off): see [Circadian IC or ISF profile](#circadian-ic-or-isf-profile) below.
+- Categorize UAM as basal (default On): Questa impostazione è per gli utenti che usano AndroidAPS senza alcun carbs inserito (Full UAM). Impedirà (quando disattivato) di classificare l'UAM come basale.
+  - Nota: se viene rilevata almeno un'ora di assorbimento dei carboidrati durante un giorno, tutti i dati classificati come "UAM" saranno classificati come basali, indipendentemente da questa impostazione (On o Off)
+- Numero di giorni di dati (predefinito 5): è possibile definire il valore predefinito con questa impostazione. Each time your select a new profile in Autotune plugin, Tune days parameter will be replaced by this default value
+- Applica il risultato medio in IC/ISF circadiano (default Off): vedi [ IC circolare o profilo ISF ](#circadian-ic-or-isf-profile) di seguito.
 
 ### Other settings
 
-- Autotune also uses Max autosens ratio and Min autosens ratio to limit variation. You can see and adjust these values in Config Builder > Sensitivity detection plugin > Settings > Advanced Settings
+- Autotune utilizza anche il rapporto di autosenso massimo e il rapporto di autosenso minimo per limitare la variazione. È possibile vedere e regolare questi valori in Config Builder & #062; Sensitivity detection plugin & #062; Impostazioni & #062; Impostazioni avanzate
 
-  ![Autotune default screen](../images/Autotune/Autotune_12.png)
+  ![Schermata predefinita Autotune ](../images/Autotune/Autotune_12.png)
 
 
 
-## Advanced feature
+## Funzioni avanzate
 
 (autotune-circadian-ic-or-isf-profile)=
 
