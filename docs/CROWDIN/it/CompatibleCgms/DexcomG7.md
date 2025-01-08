@@ -10,12 +10,12 @@ orphan: true
 È da notare che i sensori G7 e ONE+, contrariamente al G6, non lisciano i valori della glicemia, né nell'app, né con il lettore. Maggiori dettagli [qui](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
 Immagine obsoleta!!!![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
-`{admonition} [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md)`
+`{admonition} [Metodo di smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md)`
 
 ## 1. xDrip+ (collegamento diretto a G7 o ONE+)
 
 - Segui le istruzioni qui: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-- Select  xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Seleziona xDrip+ in [Configuratore strutturale, Origine BG](#Config-Builder-bg-source).
 
 - Regola le impostazioni xDrip+ seguendo le spiegazioni [impostazioni xDrip+](../CompatibleCgms/xDrip.md)
 
@@ -39,15 +39,15 @@ L’app Dexcom G7 patchata (DiaKEM) dà accesso ai dati Dexcom G7. Questa non è
 
 ### Configurazione in AAPS
 
-- Select 'BYODA' in in [ConfigBuilder, BG Source](#Config-Builder-bg-source) - even if it is not the BYODA app!
+- Seleziona 'BYODA' nel [Configuratore Strutturale, Origine BG](#Config-Builder-bg-source) - anche se non è l'app BYODA!
 
-- If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
+- Se AAPS non riceve alcun valore, passa a un altra origine BG e poi torna a 'BYODA' per fare generare la richiesta di scambio di dati tra AAPS e BYODA.
 
-## 3. xDrip+ (companion mode)
+## 3. xDrip+ (modalità app compagno)
 
--   Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- As data source in xDrip+ "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
--   Select  xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   Scarica e installa xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- Come sorgente dati in xDrip+, seleziona "Companion App", nelle Impostazioni avanzate > Impostazioni Bluetooth > abilita "Companion Bluetooth".
+-   Seleziona xDrip+ in [Configuratore strutturale, Origine BG](#Config-Builder-bg-source).
 
 -   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
 
