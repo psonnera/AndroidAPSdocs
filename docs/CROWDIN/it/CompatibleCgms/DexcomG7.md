@@ -9,7 +9,7 @@ orphan: true
 
 È da notare che i sensori G7 e ONE+, contrariamente al G6, non lisciano i valori della glicemia, né nell'app, né con il lettore. Maggiori dettagli [qui](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
-Immagine obsoleta!!!![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
+Immagine obsoleta!!!![G7 inglese](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 `{admonition} [Metodo di smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md)`
 
 ## 1. xDrip+ (collegamento diretto a G7 o ONE+)
@@ -49,20 +49,20 @@ L’app Dexcom G7 patchata (DiaKEM) dà accesso ai dati Dexcom G7. Questa non è
 - Come sorgente dati in xDrip+, seleziona "Companion App", nelle Impostazioni avanzate > Impostazioni Bluetooth > abilita "Companion Bluetooth".
 -   Seleziona xDrip+ in [Configuratore strutturale, Origine BG](#Config-Builder-bg-source).
 
--   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
+-   Regola le impostazioni xDrip+ seguendo le spiegazioni [impostazioni xDrip+](../CompatibleCgms/xDrip.md)
 
 ## 4. Juggluco
 
-Version 9.0+ required
+Versione 9.0+ necessaria
 
-- Disable the app previously connected to the sensor: Uninstall the app or use "Force Stop." Disable "Nearby Devices" permission in app settings. Restrict the app's battery usage.
+- Disabilita l'applicazione precedentemente collegata al sensore: disinstalla l'applicazione o usa "Arresto forzato". Disabilita l'autorizzazione "Dispositivi vicini" nelle impostazioni dell'app. Limita l'utilizzo della batteria dell'app.
 
-- Forget the sensor in Bluetooth settings: In Android settings, find the sensor in bonded devices and select "Forget." Dexcom G7 sensor names start with DXCM.
+- Dimentica il sensore nelle impostazioni Bluetooth: nelle impostazioni di Android, trova il sensore nei dispositivi collegati e seleziona "Elimina". I nomi dei sensori Dexcom G7 iniziano con DXCM.
 
-- Avoid interference from other sensors: Keep old Dexcom sensors out of Bluetooth range.
+- Evita le interferenze da altri sensori: mantieni i vecchi sensori Dexcom fuori portata Bluetooth.
 
-- Connect the G7 sensor to Juggluco: Open Juggluco → Left menu → Photo. Scan the data matrix on the G7 sensor's applicator. Wait up to 5 minutes for Juggluco to find the sensor.
+- Collega il sensore G7 a Juggluco: Apri Juggluco → Menu sinistro → Foto. Scansiona il codice QR sull'applicatore del sensore G7. Attendi fino a 5 minuti perché Juggluco trovi il sensore.
 
-- Pairing requirements: Agree to pair the sensor with Juggluco. Ensure the screen isn’t locked during pairing. If pairing fails, wait 5 minutes before trying again.
+- Accoppiamento: Accetta di abbinare il sensore a Juggluco. Assicurati che lo schermo non sia bloccato durante l'accoppiamento. Se l'accoppiamento fallisce, aspetta 5 minuti prima di riprovare.
 
-- Exception: Wear OS watches can bond without pressing an agree button.
+- Eccezione: gli orologi Wear OS possono collegarsi senza accordo.
