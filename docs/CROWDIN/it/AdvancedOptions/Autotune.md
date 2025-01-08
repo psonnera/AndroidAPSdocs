@@ -144,23 +144,23 @@ Nota: per ulteriori informazioni su come impostare una regola di automazione, ve
 
   ![Autotune default screen](../images/Autotune/Autotune_16.png)
 
-- È meglio all'inizio eseguire Autotune durante il giorno per essere in grado di controllare i risultati. If you want to run Autotune during the night, you have to select in the trigger 4AM or later to include current day in next Autotune Calculation.
+- È meglio all'inizio eseguire Autotune durante il giorno per essere in grado di controllare i risultati. Se si desidera eseguire Autotune durante la notte, è necessario selezionare nel trigger 4AM o versione successiva per includere il giorno corrente nel prossimo calcolo di Autotune.
 
   ![Autotune default screen](../images/Autotune/Autotune_17.png)
 
-- Then you can select "Run Autotune" Action in the list
+- Quindi è possibile selezionare la funzione "Esegui Autotune" dall' elenco
 
   ![Autotune default screen](../images/Autotune/Autotune_18.png)
 
-- You can then select Autotune Action to adjust parameters for your run. Default parameters are "Active Profile", default Tune days value defined in Autotune Plugin preferences, and All days are selected.
+- You can then select Autotune Action to adjust parameters for your run. I parametri predefiniti sono "Profilo attivo", il valore di Tune days predefinito definito nelle preferenze di plugin di Autotune e tutti i giorni sono selezionati.
 
   ![Autotune default screen](../images/Autotune/Autotune_19b.png)
 
-- After a few days, if you fully trust Autotune results and percentage of modification is low, you can modify [Autotune settings](#autotune-plugin-settings) "Automation Switch Profile" to enabled to automatically update and activate profile tuned after calculation.
+- Dopo alcuni giorni, se ti fidi completamente dei risultati di Autotune e la percentuale di modifica è bassa, puoi modificare le [impostazioni di Autotune](#autotune-plugin-settings) "Profilo di commutazione di automazione" per abilitare l'aggiornamento automatico e attivare il profilo sintonizzato dopo il calcolo.
 
-Note: if you want to automatically tune profiles for specific days of the week (for example a profile for "Weekend days" and another one for "Working days"), then create one rule for each profile, select the same days in Trigger and in Autotune Action, Tune days must be high enough to be sure tuning will be done with at least 6 or 8 days, and don't forget to select time after 4AM in trigger...
+Dopo alcuni giorni, se ti fidi completamente dei risultati di Autotune e la percentuale di modifica è bassa, puoi modificare le <0>impostazioni di Autotune</0> "Profilo di commutazione di automazione" per abilitare l'aggiornamento automatico e attivare il profilo sintonizzato dopo il calcolo.
 
-- See below an example of rule to tune "my profile" on all "Working days" with 14 Tune days selected (so only 10 days included in autotune calculation).
+- Puoi vedere di seguito un esempio di regola per sintonizzare "il mio profilo" su tutti i "giorni di lavoro" con 14 giorni di sintonizzazione selezionati (quindi solo 10 giorni inclusi nel calcolo automatico).
 
 ![Autotune default screen](../images/Autotune/Autotune_20b.png)
 
