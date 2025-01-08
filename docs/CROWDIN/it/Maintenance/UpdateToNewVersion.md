@@ -8,7 +8,11 @@
 * Aggiorna alla nuova versione di **AAPS** appena possibile dopo che una nuova versione è stata rilasciata.
 * Quando è disponibile una nuova versione, nell'app **AAPS** stessa, riceverai una notifica informativa sulla nuova versione.
 * La nuova versione sarà anche annunciata su Facebook al momento del rilascio.
-* A seguito della pubblicazione, leggi in dettaglio le [note di rilascio](ReleaseNotes.md), e chiarisci eventuale domande con la communità, su Facebook o Discord, prima di procedere con l'aggiornamento.
+* Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
+
+  ```{note}
+  In case you want to build **AAPS** on a new computer : copy your back-up keystore file to the new computer. Then follow the [Initial build **AAPS** procedure](../SettingUpAaps/BuildingAaps.md) instead of this guide. With the only difference that instead of creating a new keystore, you can select the one you have copied on the new computer.
+  ```
 
 ## Panoramica per l'aggiornamento a una nuova versione di AAPS
 
@@ -69,17 +73,11 @@ Se aggiorni da una versione precedente a 2.8.x, segui le istruzioni per fare un 
 
   ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-### Controlla le versioni di JVM e Gradle
+### Check JVM version
 
-Questi controlli sono particolarmente racommandati se hai già costruito una versione precedente di **AAPS** sullo stesso computer.
+This check is particularly indicated if you have already built a previous version of **AAPS** on the same computer.
 
-Controlla nelle [Istruzioni di Costruzione](#Building-APK-recommended-specification-of-computer-for-building-apk-file) le versioni necessarie per JVM e Gradle, corrispondenti alla versione **AAPS** che stai costruendo.
-
-Per Gradle, vai su **File > Project Structure** (1). Nella scheda **Project** (2), controlla che la **versione Gradle** (3) sia quella appropriata. Se non trovi la versione richiesta, stai usando una versione obsoleta di Android Studio (controlla il passo precedente sulla versione minima di Android Studio).
-
-![Controlla la versione Gradle](../images/studioTroubleshooting/gradle_version.png)
-
-Per la versione JVM, segui i passaggi descritti in [Gradle JVM incompatibile](#incompatible-gradle-jvm) per assicurarti di utilizzare la versione corretta.
+Check in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file) the required version for JVM, matching the **AAPS** version you are now building. Then follow the steps described at [Incompatible Gradle JVM](#incompatible-gradle-jvm) to make sure you currently use the correct version.
 
 (Update-to-new-version-build-the-signed-apk)=
 ### Costruisci l'APK Firmato

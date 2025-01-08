@@ -6,7 +6,7 @@ Il plugin Autotune è un'implementazione dell'algoritmo di Autotune di OpenAPS a
 
 **Attualmente il Plugin Autotune è disponibile solo nel [ramo dev](../AdvancedOptions/DevBranch.md) e in modalità sviluppatore.**
 
-![Autotune plugin](../images/Autotune/Autotune_1.png)
+![Plugin Autotune](../images/Autotune/Autotune_1.png)
 
 ## Interfaccia utente Autotune
 
@@ -89,78 +89,78 @@ Il plugin Autotune è un'implementazione dell'algoritmo di Autotune di OpenAPS a
 - Cambio profilo automatica (default Off): vedi [Run Autotune con una regola di automazione ](#run-autotune-with-an-automation-rule) di seguito. Se si modifica questa impostazione in On, il profilo di input verrà automaticamente aggiornato dal profilo Tuned e verrà attivato.
   - **Fai attenzione, devi fidarti e verificare durante diversi giorni successivi, che dopo un aggiornamento e l'attivazione del profilo Tuned senza modifiche, il tuo loop migliori**
 
-- Categorize UAM as basal (default On): Questa impostazione è per gli utenti che usano AndroidAPS senza alcun carbs inserito (Full UAM). It will prevent (when Off) to categorize UAM as basal.
-  - Note: if you have at least one hour of Carbs absorption detected during one day, then all data categorized as "UAM" will be categorized as basal, whatever this setting (On or Off)
-- Number of days of data (default 5): You can define default value with this setting. Each time your select a new profile in Autotune plugin, Tune days parameter will be replaced by this default value
-- Apply average result in circadian IC/ISF (default Off): see [Circadian IC or ISF profile](#circadian-ic-or-isf-profile) below.
+- Categorize UAM as basal (default On): Questa impostazione è per gli utenti che usano AndroidAPS senza alcun carbs inserito (Full UAM). Impedirà (quando disattivato) di classificare l'UAM come basale.
+  - Nota: se viene rilevata almeno un'ora di assorbimento dei carboidrati durante un giorno, tutti i dati classificati come "UAM" saranno classificati come basali, indipendentemente da questa impostazione (On o Off)
+- Numero di giorni di dati (predefinito 5): è possibile definire il valore predefinito con questa impostazione. Each time your select a new profile in Autotune plugin, Tune days parameter will be replaced by this default value
+- Applica il risultato medio in IC/ISF circadiano (default Off): vedi [ IC circolare o profilo ISF ](#circadian-ic-or-isf-profile) di seguito.
 
 ### Other settings
 
-- Autotune also uses Max autosens ratio and Min autosens ratio to limit variation. You can see and adjust these values in Config Builder > Sensitivity detection plugin > Settings > Advanced Settings
+- Autotune utilizza anche il rapporto di autosenso massimo e il rapporto di autosenso minimo per limitare la variazione. È possibile vedere e regolare questi valori in Config Builder & #062; Sensitivity detection plugin & #062; Impostazioni & #062; Impostazioni avanzate
 
-  ![Autotune default screen](../images/Autotune/Autotune_12.png)
-
-
-
-## Advanced feature
-
-(autotune-circadian-ic-or-isf-profile)=
-
-### Circadian IC or ISF profile
-
-- If you have important variation of IC and/or you ISF in your profile, and you fully trust in your circadian time and variation, then you can set "Apply average result in circadian IC/ISF"
-
-  - Note that Autotune calculation will always be done with a single value, and circadian variation will not be tuned by Autotune. This setting only apply average variation calculated for IC and/or ISF on your circadian values
-
-- See on screenshot below Tuned profile with Apply average variation Off (on the left) and On (on the right)
-
-  ![Autotune default screen](../images/Autotune/Autotune_13.png)
+  ![Schermata predefinita Autotune ](../images/Autotune/Autotune_12.png)
 
 
 
-### Tune specific days of the week
+## Funzioni avanzate
 
-- If you click on the checkbox with the eye on the right of "Rune days" parameter, you will see the day selection. You can specify which day of the week should be included in Autotune calculation (in screenshot below you can see an example for "working days" with Saturday and Sunday removed from autotune calculation)
-  - If the number of day included in Autotune calculation is lower than the number of Tune days, then you will see how many days will be included on the right of Tune days selector (10 days in the example below)
-  - This setting gives good results only if the number of remaining days is not to small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should select a minimum of 21 or 28 Tune days to have 6 or 8 days included in Autotune calculation)
+(Ic-circadiano-o-profilo-Isf di Autotune) =
+
+### IC Circadiano o profilo ISF
+
+- Se hai un'importante variazione di IC e/o di ISF nel tuo profilo, e ti fidi completamente del tuo tempo e della tua variazione circadiana, allora puoi impostare "Applicare il risultato medio in IC/ISF circadiano"
+
+  - Note that Autotune calculation will always be done with a single value, and circadian variation will not be tuned by Autotune. Questa impostazione applica solo la variazione media calcolata per IC e/o ISF sui valori circadiani
+
+- Guarda nella schermata sotto Profilo aggiornato con Applica variazione media Off (a sinistra) e On (a destra)
+
+  ![Schermata predefinita di Autotune](../images/Autotune/Autotune_13.png)
+
+
+
+### Aggiorna uno specifico giorno della settimana
+
+- Se cliccate sulla casella con l'occhio a destra del parametro "Rune days", vedrete la selezione del giorno. È possibile specificare quale giorno della settimana deve essere incluso nel calcolo di Autotune (nella schermata sottostante è possibile vedere un esempio di "giorni lavorativi" con sabato e domenica rimossi dal calcolo automatico)
+  - Se il numero di giorni inclusi nel calcolo di Autotune è inferiore al numero di giorni di sintonizzazione, vedrai quanti giorni saranno inclusi a destra del selettore di Tune days (10 giorni nell'esempio sottostante)
+  - Questa impostazione dà buoni risultati solo se il numero di giorni rimanenti non è troppo piccolo (ad esempio se si sintonizza un profilo specifico per i giorni di fine settimana con solo la domenica e il sabato selezionati, è necessario selezionare un minimo di 21 o 28 giorni di sintonizzazione per avere 6 o 8 giorni inclusi nel calcolo di Autotune)
 
 ![Autotune default screen](../images/Autotune/Autotune_14b.png)
 
-- During Autotune calculation, you can see the progress of the calculations ("Partial result day 3 / 10 tuned" on example below)
+- Durante il calcolo di Autotune, è possibile vedere l'avanzamento dei calcoli ("Risultato parziale giorno 3 / 10 sintonizzato" sull'esempio sotto)
 
   ![Autotune default screen](../images/Autotune/Autotune_15b.png)
 
 
 
-(autotune-run-autotune-with-an-automation-rule)=
+(avvio-autotune-con-una-regola-automatica) =
 
-## Run Autotune with an automation rule
+## Avvio Autotune con una regola automatica
 
-First step is to define correct trigger for an automation rule with Autotune:
+Il primo passo è definire il corretto evento per una regola di automazione con Autotune:
 
-Note: for more information on how to set an automation rule, see [here](../DailyLifeWithAaps/Automations.md).
+Nota: per ulteriori informazioni su come impostare una regola di automazione, vedere [ qui](../DailyLifeWithAaps/Automations.md).
 
-- You should select Recurring time trigger: only run Autotune once per day, and autotune is designed to be run daily (each new run you shift one day later and quickly profile modification should be tiny)
+- È necessario selezionare Ripristinare il tempo di attivazione: eseguire Autotune solo una volta al giorno e l'autotune è progettato per essere eseguito quotidianamente (ogni nuova esecuzione si sposta un giorno dopo e la modifica rapida del profilo dovrebbe essere piccola)
 
   ![Autotune default screen](../images/Autotune/Autotune_16.png)
 
-- It's better at the beginning to run Autotune during the day to be able to check results. If you want to run Autotune during the night, you have to select in the trigger 4AM or later to include current day in next Autotune Calculation.
+- È meglio all'inizio eseguire Autotune durante il giorno per essere in grado di controllare i risultati. Se si desidera eseguire Autotune durante la notte, è necessario selezionare nel trigger 4AM o versione successiva per includere il giorno corrente nel prossimo calcolo di Autotune.
 
   ![Autotune default screen](../images/Autotune/Autotune_17.png)
 
-- Then you can select "Run Autotune" Action in the list
+- Quindi è possibile selezionare la funzione "Esegui Autotune" dall' elenco
 
   ![Autotune default screen](../images/Autotune/Autotune_18.png)
 
-- You can then select Autotune Action to adjust parameters for your run. Default parameters are "Active Profile", default Tune days value defined in Autotune Plugin preferences, and All days are selected.
+- You can then select Autotune Action to adjust parameters for your run. I parametri predefiniti sono "Profilo attivo", il valore di Tune days predefinito definito nelle preferenze di plugin di Autotune e tutti i giorni sono selezionati.
 
   ![Autotune default screen](../images/Autotune/Autotune_19b.png)
 
-- After a few days, if you fully trust Autotune results and percentage of modification is low, you can modify [Autotune settings](#autotune-plugin-settings) "Automation Switch Profile" to enabled to automatically update and activate profile tuned after calculation.
+- Dopo alcuni giorni, se ti fidi completamente dei risultati di Autotune e la percentuale di modifica è bassa, puoi modificare le [impostazioni di Autotune](#autotune-plugin-settings) "Profilo di commutazione di automazione" per abilitare l'aggiornamento automatico e attivare il profilo sintonizzato dopo il calcolo.
 
-Note: if you want to automatically tune profiles for specific days of the week (for example a profile for "Weekend days" and another one for "Working days"), then create one rule for each profile, select the same days in Trigger and in Autotune Action, Tune days must be high enough to be sure tuning will be done with at least 6 or 8 days, and don't forget to select time after 4AM in trigger...
+Dopo alcuni giorni, se ti fidi completamente dei risultati di Autotune e la percentuale di modifica è bassa, puoi modificare le <0>impostazioni di Autotune</0> "Profilo di commutazione di automazione" per abilitare l'aggiornamento automatico e attivare il profilo sintonizzato dopo il calcolo.
 
-- See below an example of rule to tune "my profile" on all "Working days" with 14 Tune days selected (so only 10 days included in autotune calculation).
+- Puoi vedere di seguito un esempio di regola per sintonizzare "il mio profilo" su tutti i "giorni di lavoro" con 14 giorni di sintonizzazione selezionati (quindi solo 10 giorni inclusi nel calcolo automatico).
 
 ![Autotune default screen](../images/Autotune/Autotune_20b.png)
 

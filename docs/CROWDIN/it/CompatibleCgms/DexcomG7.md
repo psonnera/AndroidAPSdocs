@@ -2,42 +2,42 @@
 orphan: true
 - - -
 
-# Dexcom G7 and ONE+
+# Dexcom G7 e ONE+
 
 
-## Fundamental in advance
+## Basi anticipate
 
-Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. More details about this [here](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
+È da notare che i sensori G7 e ONE+, contrariamente al G6, non lisciano i valori della glicemia, né nell'app, né con il lettore. Maggiori dettagli [qui](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
-Picture is outdated!!!![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
+Immagine obsoleta!!!![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 `{admonition} [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md)`
 
-## 1. xDrip+ (direct connection to G7 or ONE+)
+## 1. xDrip+ (collegamento diretto a G7 o ONE+)
 
-- Follow the instructions here: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- Segui le istruzioni qui: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
 - Select  xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
-- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
+- Regola le impostazioni xDrip+ seguendo le spiegazioni [impostazioni xDrip+](../CompatibleCgms/xDrip.md)
 
-## 2.  Patched Dexcom G7 App (DiaKEM)
+## 2.  App Dexcom G7 Patchata (DiaKEM)
 
-**Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+.**
+**Nota: è necessario AAPS 3.2.0.0 o superiore! Non è disponibile per ONE+.**
 
-### Install a new patched (!) G7 app and start the sensor
+### Installare una nuova app G7 patchata (!) e avviare il sensore
 
-A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
+L’app Dexcom G7 patchata (DiaKEM) dà accesso ai dati Dexcom G7. Questa non è l'app BYODA in quanto questa non può ricevere i dati dal G7 al momento.
 
-- Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
+- Disinstalla l'app Dexcom originale se l'hai utilizzata prima (un sensore già avviato può ancora essere usato dopo - nota il codice del sensore prima di rimuovere l'app!)
 
-- Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
+- Scarica e installa l'app patchata [qui](https://github.com/authorgambel/g7/releases).
 
-- Enter sensor code in the patched app.
+- Inserisci il codice del sensore nell'app patchata.
 
-- Follow the general recommendations for CGM hygiene and sensor placement found [here](../CompatibleCgms/GeneralCGMRecommendation.md).
+- Segui le raccomandazioni generali per l'igiene e il posizionamento dei sensori CGM [qui](../CompatibleCgms/GeneralCGMRecommendation.md).
 
-- After the warm-up phase, the values are displayed as usual in the G7 app.
+- Dopo la fase di riscaldamento, i valori vengono visualizzati come di consueto nell'app G7.
 
-### Configuration in AAPS
+### Configurazione in AAPS
 
 - Select 'BYODA' in in [ConfigBuilder, BG Source](#Config-Builder-bg-source) - even if it is not the BYODA app!
 
