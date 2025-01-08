@@ -179,48 +179,48 @@ Per ora, utilizzando Libre 2 come origine dati, non è possibile attivare le opz
 
 #### Connettività
 
-The connectivity is good with most phones, with the exception of Huawei mobile phones. The connection can break off if the mobile phone is in the pocket opposite the sensor or if you are outdoors. Wear your phone on the sensor side of your body. In rooms, where Bluetooth spreads over reflections, no problems should occur. If you have connectivity problems please test another phone. It may also help to set the sensor with the internal BT antenna pointing down. The slit on the applicator must be pointing down when setting the sensor.
+La connettività è buona con la maggior parte dei telefoni, ad eccezione degli smartphone Huawei. La connessione può interrompersi se il cellulare si trova nella tasca opposta al sensore o se si è all'aperto. Tieni il telefono sul lato del corpo dove si trova il sensore. Negli ambienti chiusi, dove il Bluetooth si diffonde rimbalzando sulle superfici, non dovrebbero verificarsi problemi. Se riscontri problemi di connettività, prova con un altro telefono. Può anche essere utile applicare il sensore con l'antenna Bluetooth interna rivolta verso il basso. La tacca sull'applicatore deve essere rivolta verso il basso quando si posiziona il sensore.
 
 (libre2-value-smoothing-raw-values)=
-#### Value smoothing & raw values
+#### Smussamento dei valori e dati grezzi
 
-Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
+Dal punto di vista tecnico, il valore della glicemia viene trasmesso a xDrip+ ogni minuto. Di default, viene calcolato un valore “smussato” in base alla media ponderata degli ultimi 25 minuti. Puoi modificare questo periodo nelle impostazioni della scansione NFC.
 
-→ Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
+→ Menu → Impostazioni → Funzionalità scansione NFC → Liscia i dati libre 3 quando si usa il metodo xxx
 
 ![xDrip+ advanced settings Libre 2 & raw values](../images/xDrip_Libre3_Smooth.png)
 
-This is mandatory for looping. The curves look smooth and the loop results are great. The raw values on which the alarms are based jitter a little more, but correspond to the values that the reader also displays. In addition, the raw values can be displayed in the xDrip+ graph in order to be able to react in time to rapid changes. Please switch on Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" and "show Sensors Infos". Then the raw values are additionally displayed as small white dots and additional sensor info is available in the system menu.
+Questo è obbligatorio per il loop. La curva dei valori diventa omogenea e i risultati del loop saranno migliori. I valori grezzi su cui si basano gli allarmi sono leggermente più discontinui, ma corrispondono ai valori mostrati anche dal lettore. Inoltre, i valori grezzi possono essere visualizzati nel grafico di xDrip+ per poter agire in tempo su variazioni improvvise. È sufficiente attivare Impostazioni meno usate \> Impostazioni avanzate per Libre 2 \> "Mostra i valori grezzi nel grafico" e "Mostra informazioni sensore nello stato". In questo modo i valori grezzi saranno indicati come piccoli punti bianchi e le informazioni aggiuntive sul sensore saranno visibili nello stato del sistema.
 
-The raw values are very helpful when the blood sugar is moving fast. Even if the dots are jumpier you would detect the tendency much better as using the smoothed line to make proper therapy decisions.
+I valori grezzi sono molto utili quando la glicemia cambia rapidamente. Anche se i punti sono più irregolari, il trend viene individuato molto meglio se si utilizza la curva smussata per prendere decisioni terapeutiche corrette.
 
-→ Hamburger menu → Settings → Less common settings → Advanced settings for Libre 2
+→ Menu → Impostazioni → Impostazioni meno usate → Impostazioni avanzate per Libre 2
 
 ![xDrip+ advanced settings Libre 2 & raw values](../images/Libre2_RawValues.png)
 
-#### Sensor runtime
+#### Durata del sensore
 
-The sensor runtime is fixed to 14 days. The 12 extra hours of Libre1 no longer exist. xDrip+ shows additional sensor information after enabling Advanced Settings for Libre2 → "show Sensors Infos" in the system menu like the starting time. The remaining sensor time can also be seen in the patched LibreLink app. Either in the main screen as remaining days display or as the sensor start time in the three-point menu → Help → Event log under "New sensor found".
+La durata del sensore è di 14 giorni. Le 12 ore supplementari del Libre1 non sono più disponibili. xDrip+ mostra informazioni aggiuntive sul sensore dopo aver attivato in Impostazioni avanzate per Libre 2 → “Mostra informazioni sensore nello stato” nello Stato del sistema, come l'ora di avvio. Il tempo rimanente del sensore può essere visualizzato anche nell'app LibreLink modificata. Sia nella schermata principale come giorni rimanenti, sia come ora di avvio del sensore nel menu a tre punti → Guida → Registro eventi sotto “Nuovo sensore trovato”.
 
 ![Libre 2 start time](../images/Libre2_Starttime.png)
 
-#### New sensor
+#### Nuovo sensore
 
-A sensor exchange takes place on-the-fly: Set new sensor shortly before activation. As soon as xDrip+ receives no more data from the old sensor, start the new sensor with the patched app. After one hour new values should appear automatically in xDrip+.
+Il cambio di sensore è immediato: applica il nuovo sensore poco prima dell'attivazione. Non appena xDrip+ non riceve più dati dal vecchio sensore, avvia il nuovo sensore con l'app modificata. Dopo un'ora i nuovi valori appariranno automaticamente in xDrip+.
 
-If not, please check the phone settings and proceed as with the first start. You have no time limit. Try to find the correct settings. No need to immediately replace the sensor before you tried different combinations. The sensors are robust and try permanently to establish a connection. Please take your time. In most cases you accidentally changed one setting which causes now problems.
+In caso contrario, controlla le impostazioni del telefono e ripeti la procedura come per il primo avvio. Non c'è limite di tempo. Cerca di trovare le impostazioni corrette. È inutile sostituire immediatamente il sensore prima di provare diverse configurazioni. I sensori sono affidabili e cercano di stabilire una connessione continuamente. Prenditi tutto il tempo necessario. Nella maggior parte dei casi è stata modificata per errore un'impostazione che ora causa problemi.
 
-Once successful please select "Sensor Stop" and "Delete calibration only" in xDrip. This indicates for xDrip+ that a new sensor is releasing blood sugar levels and the old calibrations are no longer valid and therefore have to be deleted. No real interaction is done with the Libre2 sensor here! You do not need to start the sensor in xDrip+.
+Una volta che la connessione è stata stabilita, seleziona “Stop sensore” e “Cancella solo la calibrazione” in xDrip+. Questo segnala a xDrip+ che un nuovo sensore sta trasmettendo i valori della glicemia e che le vecchie calibrazioni non sono più valide e devono quindi essere cancellate. In questo caso non avviene alcuna interazione con il sensore Libre2! Non è necessario avviare il sensore in xDrip+.
 
 ![xDrip+ missing data when changing Libre 2 sensor](../images/Libre2_GapNewSensor.png)
 
-#### Calibration
+#### Calibrazione
 
-You can calibrate the Libre2 **with an offset of -40 mg/dl to +20 mg/dL \[-2,2 mmol/l to +1,1 mmol/l\]** (intercept). The slope isn't changeable. Please check by fingerpricking after setting a new sensor, keeping in mind it might not be accurate in the first 12 hours after insertion. Since there can be large differences to the blood measurements, verify every 24 hours and calibrate if necessary. If the sensor is completely off after a few days, it should then be replaced.
+Puoi calibrare il Libre2 **con una differenza da -40 mg/dl a +20 mg/dL \[-2,2 mmol/l a +1,1 mmol/l\]** (intercetta). La pendenza non è modificabile. Controlla la glicemia con il glucometro dopo aver impostato un nuovo sensore, tenendo presente che potrebbe non essere preciso nelle prime 12 ore dopo l'inserimento. Visto che possono esserci notevoli differenze rispetto al glucometro, verifica ogni 24 ore e calibra se necessario. Se il sensore è ancora sballato dopo alcuni giorni, è necessario sostituirlo.
 
-### Plausibility checks
+### Verifiche di attendibilità
 
-The Libre2 sensors contain plausibility checks to detect bad sensor values. As soon as the sensor moves on the arm or is lifted slightly, the values may start to fluctuate. The Libre2 sensor will then shut down for safety reasons. Unfortunately, when scanning with the App, additional checks are made. The app can deactivate the sensor even though the sensor is OK. Currently the internal test is too strict. Avoid scanning the sensor with another phone to reduce the risk of unexpected sensor shutdown.
+I sensori Libre2 contengono controlli di attendibilità per rilevare i valori errati del sensore. Non appena il sensore si muove sul braccio o viene leggermente sollevato, i valori possono iniziare a oscillare. Il sensore Libre2 si disconnette per motivi di sicurezza. Purtroppo, quando si esegue la scansione con l'app, vengono effettuati ulteriori controlli. L'app può disattivare il sensore anche se è funzionante. Attualmente il controllo interno è troppo stringente. Non scansionare il sensore con un altro telefono per ridurre il rischio di una disattivazione inaspettata del sensore.
 
 (Libre2-best-practices-for-calibrating-a-libre-2-sensor)=
 # Best practices for calibrating a Libre 2 sensor
