@@ -11,4 +11,4 @@ Questa sorgente dati non funzionerà quando sei offline, quando ci sono problemi
 ```
 
 -   Imposta AAPSClient con le informazioni del tuo sito Nightscout.
--   Select NSClient BG in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   Seleziona BG NSClient nel [Configuratore Strutturale, Origine BG](#Config-Builder-bg-source).
