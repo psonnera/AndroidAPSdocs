@@ -179,12 +179,12 @@ Per ora, utilizzando Libre 2 come origine dati, non è possibile attivare le opz
 
 #### Connettività
 
-The connectivity is good with most phones, with the exception of Huawei mobile phones. The connection can break off if the mobile phone is in the pocket opposite the sensor or if you are outdoors. Wear your phone on the sensor side of your body. In rooms, where Bluetooth spreads over reflections, no problems should occur. If you have connectivity problems please test another phone. It may also help to set the sensor with the internal BT antenna pointing down. The slit on the applicator must be pointing down when setting the sensor.
+La connettività è buona con la maggior parte dei telefoni, ad eccezione degli smartphone Huawei. La connessione può interrompersi se il cellulare si trova nella tasca opposta al sensore o se si è all'aperto. Tieni il telefono sul lato del corpo dove si trova il sensore. Negli ambienti chiusi, dove il Bluetooth si diffonde rimbalzando sulle superfici, non dovrebbero verificarsi problemi. Se riscontri problemi di connettività, prova con un altro telefono. Può anche essere utile applicare il sensore con l'antenna Bluetooth interna rivolta verso il basso. La tacca sull'applicatore deve essere rivolta verso il basso quando si posiziona il sensore.
 
 (libre2-value-smoothing-raw-values)=
-#### Value smoothing & raw values
+#### Smussamento dei valori e dati grezzi
 
-Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
+Dal punto di vista tecnico, il valore della glicemia viene trasmesso a xDrip+ ogni minuto. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
 
 → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
