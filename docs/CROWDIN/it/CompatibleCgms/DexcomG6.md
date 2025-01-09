@@ -28,7 +28,7 @@ Leggi di più nell'[articolo](https://www.diabettech.com/artificial-pancreas/diy
 -   Se hai bisogno di Clarity e vuoi approfittare degli allarmi xDrip+ usa [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (solo G6) con trasmissione locale (broadcast) verso xDrip+.
 -   È anche possibile utilizzare xDrip+ come app di compagno dell'app ufficiale Dexcom, ma si potrebbero verificare ritardi nelle letture di glicemia.
 -   Se non lo hai già installato, scarica [xDrip+](https://github.com/NightscoutFoundation/xDrip) e segui le istruzioni sulla pagina [Impostazioni xDrip+](../CompatibleCgms/xDrip.md).
--   Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   Seleziona xDrip+ in [Configuratore strutturale, Origine BG](#Config-Builder-bg-source).
 
 - Regola le impostazioni in xDrip+ secondo la pagina [impostazioni xDrip](../CompatibleCgms/xDrip.md)
 
@@ -48,9 +48,9 @@ Leggi di più nell'[articolo](https://www.diabettech.com/artificial-pancreas/diy
 
 ### Impostazioni per AAPS
 
--   Select 'Dexcom App (patched)' in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   Seleziona BYODA in [Configuratore Strutturale, Origine BG](#Config-Builder-bg-source).
 
--   If you don't receive any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
+-   Se non ricevi alcun valore, seleziona qualsiasi altra origine BG, poi ri-seleziona 'BYODA' per stabilire la connessione tra AAPS e BYODA.
 
 ### Impostazioni per xDrip+
 

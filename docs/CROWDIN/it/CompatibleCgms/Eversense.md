@@ -2,33 +2,33 @@
 orphan: true
 - - -
 
-# For users of Eversense
+# Per gli utilizzatori di Eversense
 
-There are three different methods to access the readings from Eversense:
+Ci sono tre metodi diversi per accedere alle letture di Eversense:
 
-- ESEL companion mode
-- ESEL patched mode
-- xDrip+ companion app
+- Modalità compagno ESEL
+- Modalità ESEL patched
+- xDrip+ app compagno
 
 ## ESEL
 
-Get and install the [ESEL app](https://github.com/BernhardRo/Esel/tree/master/apk), following these [instructions](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
+Ottieni e installa l'app [ESEL](https://github.com/BernhardRo/Esel/tree/master/apk), seguendo [queste istruzioni](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
 
-- Enable "Send to AAPS and xDrip"
-- **Disable** "Send to Nightscout"
-- As the BG data from Eversense can be noisy, it is recommended to enable "Smooth Data" in ESEL.
+- Abilita "Send to AAPS and xDrip"
+- **Disabilita** "Send to Nightscout"
+- Poiché i dati di glicemia di Eversense possono essere rumorosi, è consigliato abilitare "Smooth Data" in ESEL.
 
 ![ESEL Broadcast](../images/ESEL.png)
 
-### Companion Mode
+### Modalità Compagno
 
-Reads the data from the Eversense app notifications (works with the standard Eversense App, available since ESEL version 3.0.1).
+Legge i dati dalle notifiche dell'app Eversense (funziona con l'app Eversense standard, disponibile dalla versione ESEL 3.0.1).
 
-1. Use the official Eversense App from the Google Play Store
-   - Optional, but required for backfilling: Login to your Eversense account
-   - In Sync, enable Auto synchronization
-2. Configuration of ESEL:
-   - Disable the setting "Get data from patched Eversense App"
+1. Usa l'app ufficiale Eversense dal Google Play Store
+   - Facoltativo, ma necessario per il recupero dei dati storici: Accedi al tuo account Eversense
+   - In Sync, abilita la sincronizzazione automatica
+2. Configurazione di ESEL:
+   - Disabilita l'impostazione "Get data from patched Eversense App"
    - For backfilling: Enable "Fill missing data from eversensedms.com"
    - Provide as Email address and password your Eversense login data
 3. Set "MM640g" as BG source in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).

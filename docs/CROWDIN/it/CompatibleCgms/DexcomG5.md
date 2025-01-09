@@ -9,7 +9,7 @@ orphan: true
 -   Puoi scaricare tranquillamente l'[ultimo APK (release)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) se non desideri nuove funzionalità specifiche.
 -   Imposta xDrip+ con G5 seguendo [queste istruzioni](https://navid200.github.io/xDrip/docs/G5-Recommended-Settings.html).
 -   Imposta xDrip+ leggendo la pagina delle [impostazioni xDrip+](../CompatibleCgms/xDrip.md).
--   Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   Seleziona xDrip+ in [Configuratore strutturale, Origine BG](#Config-Builder-bg-source).
 
 ## Se usi un G5 con l'app Dexcom patchata
 
@@ -31,6 +31,6 @@ Queste app non sono compatibili con le versioni recenti di Android.
 
 -   Avvia il sensore
 
-- Select Dexcom App (patched) in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Seleziona BYODA in [Configuratore Strutturale, Origine BG](#Config-Builder-bg-source).
 
 -   Se vuoi utilizzare gli avvisi xDrip+ tramite trasmissione locale: nel menu hamburger xDrip+ > impostazioni > scegli la sorgente dati hardware > 640G / EverSense.
