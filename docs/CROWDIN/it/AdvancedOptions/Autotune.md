@@ -174,23 +174,23 @@ Autotune è solo un aiuto, è importante controllare regolarmente se sei d'accor
 
 Usare sempre Autotune per diversi giorni manualmente per controllare i risultati prima di applicarli. Ed è solo quando ti fidi completamente dei risultati di Autotune, e quando la variazione diventa minima tra il profilo precedente e il profilo calcolato, che inizi a usare l'automazione (mai prima)
 
-- Autotune can work very well for some users and not for others, so **If you don't trust Autotune result, don't use it**
+- Autotune può funzionare molto bene per alcuni utenti e non per altri, quindi se non ti fidi del risultato di Autotune, non usarlo
 
-It's also important to analyse Autotune results to understand (or try to understand) why Autotune propose these modifications
+È anche importante analizzare i risultati di Autotune per capire (o cercare di capire) perché Autotune propone queste modifiche
 
-- you can have a whole increase or decrease of the strength of your profile (for example increase of total basal associated to decrease of ISF and IC values). it could be associated to several following days with autosens correction above 100% (more agressivity required) or below 100% (you are more sensitive)
-- Sometimes Autotune propose a different balance between basal rates and IC/ISF (for ex lower basal and more aggressive IC/ISF)
+- you can have a whole increase or decrease of the strength of your profile (for example increase of total basal associated to decrease of ISF and IC values). potrebbe essere associato a diversi giorni successivi con correzione dell'autosens superiore al 100% (più aggressività richiesta) o inferiore al 100% (sei più sensibile)
+- A volte Autotune propone un diverso equilibrio tra i tassi basali e IC/ISF (per IC/ISF basale inferiore e più aggressivo)
 
-We advise to not use Autotune in the following cases:
+Si consiglia di non utilizzare Autotune nei seguenti casi:
 
 - You don't enter all your carbs
-  - If you don't enter carbs correction for an hypoglycemia, Autotune will see an unexpected increase of your BG value and will increase your basal rates the 4 hours earlier, it could be the opposite of what you need to avoid hypo, especially if it's in the middle of the night. That's why it's important to enter all carbs especially correction for hypo.
+  - Se non si inserisce la correzione dei carboidrati per un'ipoglicemia, Autotune vedrà un aumento inaspettato del valore BG e aumenterà i tassi basali le 4 ore precedenti, potrebbe essere l'opposto di quello che serve per evitare l'ipo, specialmente se è nel cuore della notte. Ecco perché è importante inserire tutti i carboidrati, specialmente la correzione per l'ipo.
 - You have a lot of period with UAM detected during the day.
-  - Do you have entered all your carbs and correctly estimated your Carbs ?
-  - All UAM periods (except if you enter no carbs during a day and categorized UAM as basal is disabled), all your UAM periods will be categorized as basal, this can increase a lot your basal (much more than necessary)
+  - Avete inserito tutti i vostri carboidrati e stimato correttamente i vostri carboidrati?
+  - Tutti i periodi UAM (tranne se non si immettono carboidrati durante un giorno e la funzione classifica UAM come basale è disabilitata), tutti i periodi UAM saranno classificati come basali, questo può aumentare molto il vostro basale (molto più del necessario)
 
-- Your carbs absorption is very slow: if most of your carbs absorption are calculated with min_5m_carbimpact parameter (you can see these periods with a little orange dot in the top of COB curve), the calculation of COB could be wrong and leads to wrong results.
-  - When you practice sport, you are generally more sensitive and your BG doesn't rise a lot, so during or after an exercise, it's usual to see some periods with slow carbs. But if you have too often unexpected slow carb absorption, then you may need a profile adjustment (higher value of IC) or a min_5m_carbimpact a bit too high.
-- You have a "very bad days", for example stuck several hours in hyperglycemia with a huge amount of insulin to be able to go down within the range, or after a sensor change you got long periods of wrong BG values. If during the pas weeks you only have one or 2 "bad days", you can disable manually these days in autotune calculation to exclude them from calculation, and again **check carefully if you can trust the results**
+- L'assorbimento dei carboidrati è molto lento: se la maggior parte dell'assorbimento dei carboidrati viene calcolato con il parametro min_5m_carbimpact (si possono vedere questi periodi con un piccolo punto arancione nella parte superiore della curva COB), il calcolo del COB potrebbe essere sbagliato e portare a risultati sbagliati.
+  - When you practice sport, you are generally more sensitive and your BG doesn't rise a lot, so during or after an exercise, it's usual to see some periods with slow carbs. Ma se si ha troppo spesso un assorbimento di carboidrati lento inaspettato, allora potrebbe essere necessario un aggiustamento del profilo (valore più alto di IC) o un impatto min_5m_carb un po' troppo alto.
+- Avete "giorni molto brutti", per esempio bloccati diverse ore in iperglicemia con un'enorme quantità di insulina per poter scendere all'interno del range, o dopo un cambiamento del sensore avete avuto lunghi periodi di valori BG sbagliati. If during the pas weeks you only have one or 2 "bad days", you can disable manually these days in autotune calculation to exclude them from calculation, and again **check carefully if you can trust the results**
 - If the percentage of modification is too important
   - You can try to increase the number of days to get smoother results
