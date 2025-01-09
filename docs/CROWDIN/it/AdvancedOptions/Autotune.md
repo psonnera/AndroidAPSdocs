@@ -25,19 +25,19 @@ Il plugin Autotune è un'implementazione dell'algoritmo di Autotune di OpenAPS a
 - "Run Autotune" lancerà il calcolo di Autotune con il profilo selezionato e il numero di giorni di sintonizzazione
   - Nota: il calcolo automatico può richiedere molto tempo. Una volta lanciato, è possibile passare a un'altra schermata (come quella iniziale , ...) e tornare successivamente nel plugin Autotune per vedere i risultati
 
-![Autotune Run start](../images/Autotune/Autotune_2b.png)
+![Avvio Autotune](../images/Autotune/Autotune_2b.png)
 
 - Poi durante l'esecuzione i risultati intermedi verranno visualizzati nell'area sottostante
 
   - Nota: Durante l'esecuzione, le impostazioni sono bloccate, quindi non è più possibile modificare il profilo di input selezionato o il numero di giorni. Dovrai aspettare la fine del calcolo corrente se vuoi lanciare un'altra esecuzione con altri parametri.
 
-  ![Autotune during run](../images/Autotune/Autotune_3b.png)
+  ![Durante l'esecuzione di Autotune](../images/Autotune/Autotune_3b.png)
 
 - Quando il calcolo di Autotune è finito, vedrai il risultato (profilo sintonizzato) e quattro pulsanti sotto.
 
 ![Risultati esecuzione Autotune](../images/Autotune/Autotune_4b.png)
 
-- It's important to always compare input profile (column "Profile"), output profile (column "Tuned") and the percentage of variation for each value (Column "%").
+- È importante confrontare sempre il profilo di input (colonna "Profilo"), il profilo di output (colonna "Tuned") e la percentuale di variazione per ciascun valore (colonna "%").
 
 - Per i valori della basale, avete anche il numero di "giorni mancanti". Ci sono giorni mancanti in cui Autotune non ha abbastanza dati classificati come "Basal" per regolare la velocità basale per questo periodo (ad esempio dopo ogni pasto quando si ha l'assorbimento di carboidrati). Questo numero dovrebbe essere il più basso possibile, specialmente quando la basale è importante (per esempio durante la notte o alla fine del pomeriggio)
 
@@ -52,7 +52,7 @@ Il plugin Autotune è un'implementazione dell'algoritmo di Autotune di OpenAPS a
   - Il profilo Activate Tuned creerà automaticamente un nuovo profilo "Tuned" nel plugin del profilo locale.
   - Se hai già un profilo chiamato "Tuned" nel plugin del tuo profilo locale, questo profilo verrà aggiornato con il profilo Autotune calcolato prima dell'attivazione
 
-  ![Autotune Activate profile](../images/Autotune/Autotune_6.png)
+  ![Attivazione profilo Autotune](../images/Autotune/Autotune_6.png)
 
 - Se pensi che il profilo Tuned debba essere regolato (ad esempio se pensi che alcune variazioni siano troppo importanti), puoi cliccare sul pulsante "Copia sul profilo locale"
 
@@ -62,7 +62,7 @@ Il plugin Autotune è un'implementazione dell'algoritmo di Autotune di OpenAPS a
 
 - È quindi possibile selezionare il profilo locale per modificare il profilo aggiornato (sarà selezionato come impostazione predefinita quando si apre il plugin del profilo locale)
 
-  - the values in local profile will but rounded in the user interface to your pump capabilities
+  - i valori nel profilo locale saranno arrotondati nell'interfaccia utente alle capacità della pompa
 
   ![Autotune aggiornamento profilo locale](../images/Autotune/Autotune_8.png)
 
@@ -82,19 +82,19 @@ Il plugin Autotune è un'implementazione dell'algoritmo di Autotune di OpenAPS a
 
 (autotune-configurazione-plugin)=
 
-### Autotune plugin settings
+### Impostazioni plugin Autotune
 
-![Autotune default screen](../images/Autotune/Autotune_11.png)
+![Schermata predefinita Autotune](../images/Autotune/Autotune_11.png)
 
 - Cambio profilo automatica (default Off): vedi [Run Autotune con una regola di automazione ](#run-autotune-with-an-automation-rule) di seguito. Se si modifica questa impostazione in On, il profilo di input verrà automaticamente aggiornato dal profilo Tuned e verrà attivato.
   - **Fai attenzione, devi fidarti e verificare durante diversi giorni successivi, che dopo un aggiornamento e l'attivazione del profilo Tuned senza modifiche, il tuo loop migliori**
 
 - Categorize UAM as basal (default On): Questa impostazione è per gli utenti che usano AndroidAPS senza alcun carbs inserito (Full UAM). Impedirà (quando disattivato) di classificare l'UAM come basale.
   - Nota: se viene rilevata almeno un'ora di assorbimento dei carboidrati durante un giorno, tutti i dati classificati come "UAM" saranno classificati come basali, indipendentemente da questa impostazione (On o Off)
-- Numero di giorni di dati (predefinito 5): è possibile definire il valore predefinito con questa impostazione. Each time your select a new profile in Autotune plugin, Tune days parameter will be replaced by this default value
+- Numero di giorni di dati (predefinito 5): è possibile definire il valore predefinito con questa impostazione. Ogni volta che si seleziona un nuovo profilo nel plugin Autotune, il parametro Tune days sarà sostituito da questo valore predefinito
 - Applica il risultato medio in IC/ISF circadiano (default Off): vedi [ IC circolare o profilo ISF ](#circadian-ic-or-isf-profile) di seguito.
 
-### Other settings
+### Altre impostazioni
 
 - Autotune utilizza anche il rapporto di autosenso massimo e il rapporto di autosenso minimo per limitare la variazione. È possibile vedere e regolare questi valori in Config Builder & #062; Sensitivity detection plugin & #062; Impostazioni & #062; Impostazioni avanzate
 
@@ -110,7 +110,7 @@ Il plugin Autotune è un'implementazione dell'algoritmo di Autotune di OpenAPS a
 
 - Se hai un'importante variazione di IC e/o di ISF nel tuo profilo, e ti fidi completamente del tuo tempo e della tua variazione circadiana, allora puoi impostare "Applicare il risultato medio in IC/ISF circadiano"
 
-  - Note that Autotune calculation will always be done with a single value, and circadian variation will not be tuned by Autotune. Questa impostazione applica solo la variazione media calcolata per IC e/o ISF sui valori circadiani
+  - . Si noti che il calcolo di Autotune sarà sempre fatto con un singolo valore, e la variazione circadiana non sarà regolata da Autotune. Questa impostazione applica solo la variazione media calcolata per IC e/o ISF sui valori circadiani
 
 - Guarda nella schermata sotto Profilo aggiornato con Applica variazione media Off (a sinistra) e On (a destra)
 
@@ -124,11 +124,11 @@ Il plugin Autotune è un'implementazione dell'algoritmo di Autotune di OpenAPS a
   - Se il numero di giorni inclusi nel calcolo di Autotune è inferiore al numero di giorni di sintonizzazione, vedrai quanti giorni saranno inclusi a destra del selettore di Tune days (10 giorni nell'esempio sottostante)
   - Questa impostazione dà buoni risultati solo se il numero di giorni rimanenti non è troppo piccolo (ad esempio se si sintonizza un profilo specifico per i giorni di fine settimana con solo la domenica e il sabato selezionati, è necessario selezionare un minimo di 21 o 28 giorni di sintonizzazione per avere 6 o 8 giorni inclusi nel calcolo di Autotune)
 
-![Autotune default screen](../images/Autotune/Autotune_14b.png)
+![Schermata predefinita di Autotune](../images/Autotune/Autotune_14b.png)
 
 - Durante il calcolo di Autotune, è possibile vedere l'avanzamento dei calcoli ("Risultato parziale giorno 3 / 10 sintonizzato" sull'esempio sotto)
 
-  ![Autotune default screen](../images/Autotune/Autotune_15b.png)
+  ![Schermata predefinita di Autotune](../images/Autotune/Autotune_15b.png)
 
 
 
@@ -142,19 +142,19 @@ Nota: per ulteriori informazioni su come impostare una regola di automazione, ve
 
 - È necessario selezionare Ripristinare il tempo di attivazione: eseguire Autotune solo una volta al giorno e l'autotune è progettato per essere eseguito quotidianamente (ogni nuova esecuzione si sposta un giorno dopo e la modifica rapida del profilo dovrebbe essere piccola)
 
-  ![Autotune default screen](../images/Autotune/Autotune_16.png)
+  ![Schermata predefinita di Autotune](../images/Autotune/Autotune_16.png)
 
 - È meglio all'inizio eseguire Autotune durante il giorno per essere in grado di controllare i risultati. Se si desidera eseguire Autotune durante la notte, è necessario selezionare nel trigger 4AM o versione successiva per includere il giorno corrente nel prossimo calcolo di Autotune.
 
-  ![Autotune default screen](../images/Autotune/Autotune_17.png)
+  ![Schermata predefinita di Autotune](../images/Autotune/Autotune_17.png)
 
 - Quindi è possibile selezionare la funzione "Esegui Autotune" dall' elenco
 
-  ![Autotune default screen](../images/Autotune/Autotune_18.png)
+  ![Schermata predefinita di Autotune](../images/Autotune/Autotune_18.png)
 
-- You can then select Autotune Action to adjust parameters for your run. I parametri predefiniti sono "Profilo attivo", il valore di Tune days predefinito definito nelle preferenze di plugin di Autotune e tutti i giorni sono selezionati.
+- È quindi possibile selezionare la funzione Autotune per regolare i parametri per l'esecuzione. I parametri predefiniti sono "Profilo attivo", il valore di Tune days predefinito definito nelle preferenze di plugin di Autotune e tutti i giorni sono selezionati.
 
-  ![Autotune default screen](../images/Autotune/Autotune_19b.png)
+  ![Schermata predefinita di Autotune](../images/Autotune/Autotune_19b.png)
 
 - Dopo alcuni giorni, se ti fidi completamente dei risultati di Autotune e la percentuale di modifica è bassa, puoi modificare le [impostazioni di Autotune](#autotune-plugin-settings) "Profilo di commutazione di automazione" per abilitare l'aggiornamento automatico e attivare il profilo sintonizzato dopo il calcolo.
 
@@ -162,17 +162,17 @@ Dopo alcuni giorni, se ti fidi completamente dei risultati di Autotune e la perc
 
 - Puoi vedere di seguito un esempio di regola per sintonizzare "il mio profilo" su tutti i "giorni di lavoro" con 14 giorni di sintonizzazione selezionati (quindi solo 10 giorni inclusi nel calcolo automatico).
 
-![Autotune default screen](../images/Autotune/Autotune_20b.png)
+![Schermata predefinita di Autotune](../images/Autotune/Autotune_20b.png)
 
 
 
-## Tips and trick's
+## Consigli e trucchi
 
-Autotune works with information existing in your database, so if you just installed AAPS on a new phone, you will have to wait several days before being able to launch Autotune with enough days to get relevant results.
+Autotune funziona con le informazioni esistenti nel tuo database, quindi se hai appena installato AAPS su un nuovo telefono, dovrai aspettare diversi giorni prima di essere in grado di lanciare Autotune con abbastanza giorni per ottenere risultati rilevanti.
 
-Autotune is just an help, it's important to regularly check if you agree with calculated profile. If you have any doubt, change Autotune settings (for example the number of days) or copy results in local profile and adjust profile before using it.
+Autotune è solo un aiuto, è importante controllare regolarmente se sei d'accordo con il profilo calcolato. In caso di dubbi, modificare le impostazioni di Autotune (ad esempio il numero di giorni) o copiare i risultati nel profilo locale e regolare il profilo prima di utilizzarlo.
 
-Always use Autotune several days manually to check results before applying them. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile than you start to use Automation (Never before)
+Usare sempre Autotune per diversi giorni manualmente per controllare i risultati prima di applicarli. Ed è solo quando ti fidi completamente dei risultati di Autotune, e quando la variazione diventa minima tra il profilo precedente e il profilo calcolato, che inizi a usare l'automazione (mai prima)
 
 - Autotune can work very well for some users and not for others, so **If you don't trust Autotune result, don't use it**
 
