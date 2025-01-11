@@ -20,7 +20,7 @@ Nel 2022/23 è stato condotto e pubblicato un primo studio medico che ha mostrat
 
 > 16 adolescenti con T1D (intervallo HbA1c 43-75) e durata del diabete di 9-15 anni sono stati sottoposti a tre periodi distinti di 3 giorni di vita in campo, mentre utilizzavano una versione modificata e bloccata di AAPS 3.1.0.3 **Risultati: ** La glicemia è stata controllata dal sistema al 95% del tempo dello studio e la percentuale di tempo inferiore a 3,9 mmol/L non ha superato l'1% per l'intero periodo di studio (0,72%). Lo scenario HCL ha raggiunto una percentuale di tempo significativamente più alta al di sotto di 3 mmol/L (HCL 1,05% vs. MA 0,0% vs. FCL 0,0%; P = 0,05) rispetto ad altri scenari. **Nessuna differenza è stata osservata tra gli scenari nella percentuale di tempo tra 3,9 e 10 mmol/L** (HCL 83,3% vs. MA 79,85% vs. **FCL 81,03%**, P = 0,58) corrispondente alla glicemia media (HCL 6,65 mmol/L vs. MA 7,34 mmol/L vs. FCL 7,05 mmol/L, P = 0,28). Non è stata osservata alcuna differenza nella dose media giornaliera di insulina o nell'assunzione giornaliera di carboidrati. Non si sono verificati eventi avversi gravi durante il periodo di studio. Il nostro studio pilota ha mostrato che **FCL potrebbe essere una modalità di trattamento realistica** per le persone con T1D.
 
-Source:
+Fonte:
 
 1) ![NationalLibraryOfMedicine](../images/Logo_of_U.S._National_Library_of_Medicine.png) ![PubMed](../images/US-NLM-PubMed-Logo.png) Biblioteca Nazionale di Medicina, PubMed [Primo uso di AndroidAPS per la somministrazione automatica dell'insulina in Loop Chiusoa scenario: Pancreas4ALL Randomized Pilot Study](https://pubmed.ncbi.nlm.nih.gov/36826996/);
 
@@ -28,16 +28,16 @@ Source:
 
 Per godervi la promessa di riduzione del fardello quotidiano, dovrete:
 
-- check whether you have all pre-requisites for FCL
-- set up a couple of Automations
-- go through a learning and tuning stage in which you adjust the settings, notably those in your Automations. The suggestions that follow guide you in this process.
+- verificare se si hanno tutti i prerequisiti per la FCL
+- creare un paio di Automazioni
+- passare attraverso una fase di apprendimento e sintonizzazione in cui si regolano le impostazioni, in particolare quelle delle automazioni. I suggerimenti che seguono vi guidano in questo processo.
 
-### General considerations why (not to) move from hybrid to full closed loop
+### Considerazioni generali sul perché (non) passare da un ciclo ibrido a un ciclo chiuso completo
 
-The full closed loop system may **not** be **for everyone**:
+Il sistema a circuito chiuso completo potrebbe **non**essere<0> per tutti **:</p>
 
-- While some full closed loopers using Automations achieve TIR (70-180) around 90%  and HbA1c under 6%, you might prefer tighter control. Notably, **minimizing values over 140 mg/dl at diets with rapid carbs** probably requires pre-bolussing.
-- Are you up for an informed and mindful approach towards a highly personalized calibration of your system? The **personalized tuning** can be **challenging**. This is definitely not for you if you were overwhelmed already with setting basal rate and ISFs. But balance it against what you could gain every day without counting any carbs. You might also value the gained deeper knowledge from analyzing and tuning your loop’s reponse to your meals.
+- Mentre alcuni utilizzatori di  loop chiusio che utilizzano le Automazioni raggiungono TIR (70-180) circa il 90% e HbA1c sotto il 6%, si potrebbe preferire un controllo più stretto. In particolare, ** i valori minimizzanti superiori a 140 mg/dl nelle diete con carboidrati rapidi ** probabilmente richiedono un pre-bolussing.
+- Siete pronti per un approccio informato e consapevole verso una calibrazione altamente personalizzata del vostro sistema? The **personalized tuning** can be **challenging**. This is definitely not for you if you were overwhelmed already with setting basal rate and ISFs. But balance it against what you could gain every day without counting any carbs. You might also value the gained deeper knowledge from analyzing and tuning your loop’s reponse to your meals.
 - While meal management gets very easy, **activity** management might get a bit more difficult, especially considering most of us probably like to limit sports snacks, in an attempt to control body weight.
 - Unfortunately, there are additional difficulties to establish a full closed loop for **kids** (see next section, pre-requisites)
 
