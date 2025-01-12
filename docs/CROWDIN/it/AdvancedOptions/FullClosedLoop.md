@@ -66,13 +66,13 @@ Fonte:
 
 IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
 
-- will result in significantly **lower** glucose **peaks** than slower insulins
-- **tolerate** a couple of minutes **delayed** first meal bolus while not incurring unacceptable height of peaks
-- **minimize the effect** on glucose peak **from different** carb load (**meal sizes**).
+- si tradurrà in **picchi** di glucosio significativamente **inferiori** rispetto alle insuline più lente
+- **Tollerare un paio di minuti ** di <0>ritardo** per il bolo del primo pasto senza incorrere in un'altezza inaccettabile dei picchi</li>
+- **Riduci al minimo** l'effetto sul picco di glucosio **da un diverso**carico di carboidrati (**quantità dei pasti**).</ul>
 
-In conclusion, do not attempt FCL with other insulin than Lyumjev or Fiasp, unless, maybe, if you are on a very moderate to low carb diet.
+In conclusione, non si cerchi di ottenere FCL con insulina diversa da Lyumjev o Fiasp, a meno che, forse, non si stia seguendo una dieta a basso contenuto di carboidrati da moderata a bassa.
 
-Many users of Fiasp or of Lyumjev observe frequent **occlusions**, even after optimizing things like needle length or SMB delivery speed. It seems very important to have an eye on the time a **cannula (or pod)** is in use (many find **48 hrs** to be the **limit**), and whether hard-to-explain glucose rises happen at ever increasing „fake“ iob.
+Molti utilizzatori di Fiasp o di Lyumjev osservano frequenti **occlusioni**, anche dopo aver ottimizzato cose come la lunghezza dell'ago o la velocità di rilascio del SMB. Sembra molto importante dare un'occhiata al momento in cui una **cannula (o pod) ** è in uso (molti trovano **48 ore** per essere il **limite**), e se gli aumenti di glucosio difficili da spiegare si verificano con un aumento sempre crescente del "falsa" iob.
 
 An incidence report in (LINK, section 2.2.) illustrates this problem and shows that per *one* occlusion you easily lose 25% TIR that day, or 5% TIR on the week, and still 1% TIR on the month.
 
