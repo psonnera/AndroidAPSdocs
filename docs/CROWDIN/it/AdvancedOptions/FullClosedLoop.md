@@ -50,15 +50,15 @@ L'attrazione principale del ciclo chiuso completo sarebbe che ci si potrebbe avv
 È consigliabile stabilire prima un circuito chiuso ibrido ben sintonizzato prima di considerare il passaggio a FCL. There are two important reasons for this:
 
 - The UAM full closed loop requires a highly personalized (individual) tuning of settings, so the loop will give insulin mimicking YOUR successful hybrid closed loop mode.
-- L'UAM full closed loop è dotato di nuovi parametri (nelle automazioni) da impostare e regolare. It would be **problematic to set and tune these additional parameters before the basics were tuned “right”**. Errors could easily be balanced with counter-errors. This can work in single scenarios, but would create a highly unstable system, hard to re-calibrate better later. Also, as seen by many early testers and also in the above quoted study, you should expect to reach comparable %TIR with your *FCL* as you see today in your *HCL*. The switch is not about performance, but about convenience, -  after a bit of inconvenience: **The heart of this FCL method is a DIY set up of Automations that you have to do for yourself, analyzing *your data*, both, from *your* successful HCL, and from your initial FCL experience when tuning your settings.** This is no self-adjusting off the shelf wonder-product! The programmers of the software, and writers of this wiki, assume no responsibility. You have to find out for yourself whether and how you may want to make use of the tools, and suggested ways they might be used.
+- L'UAM full closed loop è dotato di nuovi parametri (nelle automazioni) da impostare e regolare. Sarebbe **problematico impostare e sintonizzare questi parametri aggiuntivi prima che quelli principalii siano sintonizzati "correttamente" **. Gli errori potrebbero essere facilmente bilanciati con i contro-errori. Questo può funzionare in singoli scenari, ma creerebbe un sistema altamente instabile, difficile da ricalibrare meglio in seguito. Inoltre, come visto da molti dei primi tester e anche nello studio sopra citato, dovresti aspettarti di raggiungere una %TIR comparabile con il tuo *FCL * come vedi oggi nel tuo *HCL*. The switch is not about performance, but about convenience, -  after a bit of inconvenience: **The heart of this FCL method is a DIY set up of Automations that you have to do for yourself, analyzing *your data*, both, from *your* successful HCL, and from your initial FCL experience when tuning your settings.** This is no self-adjusting off the shelf wonder-product! I programmatori del software, e gli scrittori di questo wiki, non si assumono alcuna responsabilità. Dovete scoprire da soli se e come volete usare gli strumenti, e i modi consigliati in cui potrebbero essere usati.
 
-### Fast insulin (Lyumjev, Fiasp)
+### Insulina veloce (Lyumjev, Fiasp)
 
-If the user does not bolus for meals, clearly a very fast insulin is needed so, upon realization of a starting meal-related glucose rise, the loop has any chance to eventually keep glucose in range (by common definition, under 180 mg/dl (10 mmol/l)).
+Se l'utilizzatore non fa bolo per i pasti, è chiaramente necessaria un'insulina molto veloce, quindi, una volta realizzato un aumento di glucosio correlato al pasto, il ciclo ha qualche possibilità di mantenere il glucosio nel range (per definizione comune, sotto 180 mg/dl (10 mmol/l)).
 
-A modelling study (details see LINK FullLoop V2/March2023; there section 2.2) can show in quantitative terms that *faster insulins*
+Uno studio di modellizzazione (si veda LINK FullLoop V2/marzo23; qui la sezione 2.2) può mostrare in termini quantitativi che le *insuline più veloci*
 
-Source:
+Fonte:
 
 ![IEEEControlSystemsMagazine](../images/IEEE_Control_Systems_Society_Logo_RGB.jpg) ![ResearchGate](../images/researchgate-logo-white.svg)
 
