@@ -20,7 +20,7 @@ Nel 2022/23 è stato condotto e pubblicato un primo studio medico che ha mostrat
 
 > 16 adolescenti con T1D (intervallo HbA1c 43-75) e durata del diabete di 9-15 anni sono stati sottoposti a tre periodi distinti di 3 giorni di vita in campo, mentre utilizzavano una versione modificata e bloccata di AAPS 3.1.0.3 **Risultati: ** La glicemia è stata controllata dal sistema al 95% del tempo dello studio e la percentuale di tempo inferiore a 3,9 mmol/L non ha superato l'1% per l'intero periodo di studio (0,72%). Lo scenario HCL ha raggiunto una percentuale di tempo significativamente più alta al di sotto di 3 mmol/L (HCL 1,05% vs. MA 0,0% vs. FCL 0,0%; P = 0,05) rispetto ad altri scenari. **Nessuna differenza è stata osservata tra gli scenari nella percentuale di tempo tra 3,9 e 10 mmol/L** (HCL 83,3% vs. MA 79,85% vs. **FCL 81,03%**, P = 0,58) corrispondente alla glicemia media (HCL 6,65 mmol/L vs. MA 7,34 mmol/L vs. FCL 7,05 mmol/L, P = 0,28). Non è stata osservata alcuna differenza nella dose media giornaliera di insulina o nell'assunzione giornaliera di carboidrati. Non si sono verificati eventi avversi gravi durante il periodo di studio. Il nostro studio pilota ha mostrato che **FCL potrebbe essere una modalità di trattamento realistica** per le persone con T1D.
 
-Source:
+Fonte:
 
 1) ![NationalLibraryOfMedicine](../images/Logo_of_U.S._National_Library_of_Medicine.png) ![PubMed](../images/US-NLM-PubMed-Logo.png) Biblioteca Nazionale di Medicina, PubMed [Primo uso di AndroidAPS per la somministrazione automatica dell'insulina in Loop Chiusoa scenario: Pancreas4ALL Randomized Pilot Study](https://pubmed.ncbi.nlm.nih.gov/36826996/);
 
@@ -28,37 +28,37 @@ Source:
 
 Per godervi la promessa di riduzione del fardello quotidiano, dovrete:
 
-- check whether you have all pre-requisites for FCL
-- set up a couple of Automations
-- go through a learning and tuning stage in which you adjust the settings, notably those in your Automations. The suggestions that follow guide you in this process.
+- verificare se si hanno tutti i prerequisiti per la FCL
+- creare un paio di Automazioni
+- passare attraverso una fase di apprendimento e sintonizzazione in cui si regolano le impostazioni, in particolare quelle delle automazioni. I suggerimenti che seguono vi guidano in questo processo.
 
-### General considerations why (not to) move from hybrid to full closed loop
+### Considerazioni generali sul perché (non) passare da un ciclo ibrido a un ciclo chiuso completo
 
-The full closed loop system may **not** be **for everyone**:
+Il sistema a circuito chiuso completo potrebbe **non**essere** per tutti **:
 
-- While some full closed loopers using Automations achieve TIR (70-180) around 90%  and HbA1c under 6%, you might prefer tighter control. Notably, **minimizing values over 140 mg/dl at diets with rapid carbs** probably requires pre-bolussing.
-- Are you up for an informed and mindful approach towards a highly personalized calibration of your system? The **personalized tuning** can be **challenging**. This is definitely not for you if you were overwhelmed already with setting basal rate and ISFs. But balance it against what you could gain every day without counting any carbs. You might also value the gained deeper knowledge from analyzing and tuning your loop’s reponse to your meals.
-- While meal management gets very easy, **activity** management might get a bit more difficult, especially considering most of us probably like to limit sports snacks, in an attempt to control body weight.
+- Mentre alcuni utilizzatori di  loop chiusio che utilizzano le Automazioni raggiungono TIR (70-180) circa il 90% e HbA1c sotto il 6%, si potrebbe preferire un controllo più stretto. In particolare, ** i valori minimizzanti superiori a 140 mg/dl nelle diete con carboidrati rapidi ** probabilmente richiedono un anticipo del bolo.
+- Siete pronti per un approccio informato e consapevole verso una calibrazione altamente personalizzata del vostro sistema? La **sintonizzazione personalizzata** può essere**stimolante**. Questo non fa per voi se siete già stati sopraffatti dall'impostazione del tasso basale e degli ISF. Ma bilanciatelo con quello che potreste guadagnare ogni giorno senza contare i carboidrati. Potreste anche apprezzare la conoscenza più profonda acquisita dall'analisi e dalla messa a punto della risposta del vostro ciclo ai vostri pasti.
+- Mentre la gestione dei pasti diventa molto semplice, la gestione dell'**attività** potrebbe diventare un po' più difficile, specialmente considerando che alla maggior parte di noi probabilmente piace limitare gli spuntini sportivi, nel tentativo di controllare il peso corporeo.
 - Unfortunately, there are additional difficulties to establish a full closed loop for **kids** (see next section, pre-requisites)
 
-## Pre-requisites for full closed looping
+## Prerequisiti per il ciclo chiuso completo
 
-The main attraction of full closed looping would be that you could get close to the dream of an artificial pancreas. Indeed, it promises very easy everyday use. **“Just eat!”**
+L'attrazione principale del ciclo chiuso completo sarebbe che ci si potrebbe avvicinare al sogno di un pancreas artificiale. In effetti, promette un uso quotidiano molto facile. **“Just eat!”**
 
-### Well-tuned hybrid closed loop
+### Ciclo chiuso ibrido ben sintonizzato
 
-It is advisable to first establish a well-tuned hybrid closed loop before considering the transition to FCL. There are two important reasons for this:
+È consigliabile stabilire prima un circuito chiuso ibrido ben sintonizzato prima di considerare il passaggio a FCL. There are two important reasons for this:
 
 - The UAM full closed loop requires a highly personalized (individual) tuning of settings, so the loop will give insulin mimicking YOUR successful hybrid closed loop mode.
-- The UAM full closed loop comes with new parameters (in your Automations) to be set and tuned. It would be **problematic to set and tune these additional parameters before the basics were tuned “right”**. Errors could easily be balanced with counter-errors. This can work in single scenarios, but would create a highly unstable system, hard to re-calibrate better later. Also, as seen by many early testers and also in the above quoted study, you should expect to reach comparable %TIR with your *FCL* as you see today in your *HCL*. The switch is not about performance, but about convenience, -  after a bit of inconvenience: **The heart of this FCL method is a DIY set up of Automations that you have to do for yourself, analyzing *your data*, both, from *your* successful HCL, and from your initial FCL experience when tuning your settings.** This is no self-adjusting off the shelf wonder-product! The programmers of the software, and writers of this wiki, assume no responsibility. You have to find out for yourself whether and how you may want to make use of the tools, and suggested ways they might be used.
+- L'UAM full closed loop è dotato di nuovi parametri (nelle automazioni) da impostare e regolare. Sarebbe **problematico impostare e sintonizzare questi parametri aggiuntivi prima che quelli principalii siano sintonizzati "correttamente" **. Gli errori potrebbero essere facilmente bilanciati con i contro-errori. Questo può funzionare in singoli scenari, ma creerebbe un sistema altamente instabile, difficile da ricalibrare meglio in seguito. Inoltre, come visto da molti dei primi tester e anche nello studio sopra citato, dovresti aspettarti di raggiungere una %TIR comparabile con il tuo *FCL * come vedi oggi nel tuo *HCL*. The switch is not about performance, but about convenience, -  after a bit of inconvenience: **The heart of this FCL method is a DIY set up of Automations that you have to do for yourself, analyzing *your data*, both, from *your* successful HCL, and from your initial FCL experience when tuning your settings.** This is no self-adjusting off the shelf wonder-product! I programmatori del software, e gli scrittori di questo wiki, non si assumono alcuna responsabilità. Dovete scoprire da soli se e come volete usare gli strumenti, e i modi consigliati in cui potrebbero essere usati.
 
-### Fast insulin (Lyumjev, Fiasp)
+### Insulina veloce (Lyumjev, Fiasp)
 
-If the user does not bolus for meals, clearly a very fast insulin is needed so, upon realization of a starting meal-related glucose rise, the loop has any chance to eventually keep glucose in range (by common definition, under 180 mg/dl (10 mmol/l)).
+Se l'utilizzatore non fa bolo per i pasti, è chiaramente necessaria un'insulina molto veloce, quindi, una volta realizzato un aumento di glucosio correlato al pasto, il ciclo ha qualche possibilità di mantenere il glucosio nel range (per definizione comune, sotto 180 mg/dl (10 mmol/l)).
 
-A modelling study (details see LINK FullLoop V2/March2023; there section 2.2) can show in quantitative terms that *faster insulins*
+Uno studio di modellizzazione (si veda LINK FullLoop V2/marzo23; qui la sezione 2.2) può mostrare in termini quantitativi che le *insuline più veloci*
 
-Source:
+Fonte:
 
 ![IEEEControlSystemsMagazine](../images/IEEE_Control_Systems_Society_Logo_RGB.jpg) ![ResearchGate](../images/researchgate-logo-white.svg)
 
@@ -66,13 +66,13 @@ Source:
 
 IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
 
-- will result in significantly **lower** glucose **peaks** than slower insulins
-- **tolerate** a couple of minutes **delayed** first meal bolus while not incurring unacceptable height of peaks
-- **minimize the effect** on glucose peak **from different** carb load (**meal sizes**).
+- si tradurrà in **picchi** di glucosio significativamente **inferiori** rispetto alle insuline più lente
+- **Tollerare un paio di minuti ** di <0>ritardo** per il bolo del primo pasto senza incorrere in un'altezza inaccettabile dei picchi</li>
+- **Riduci al minimo** l'effetto sul picco di glucosio **da un diverso**carico di carboidrati (**quantità dei pasti**).</ul>
 
-In conclusion, do not attempt FCL with other insulin than Lyumjev or Fiasp, unless, maybe, if you are on a very moderate to low carb diet.
+In conclusione, non si cerchi di ottenere FCL con insulina diversa da Lyumjev o Fiasp, a meno che, forse, non si stia seguendo una dieta a basso contenuto di carboidrati da moderata a bassa.
 
-Many users of Fiasp or of Lyumjev observe frequent **occlusions**, even after optimizing things like needle length or SMB delivery speed. It seems very important to have an eye on the time a **cannula (or pod)** is in use (many find **48 hrs** to be the **limit**), and whether hard-to-explain glucose rises happen at ever increasing „fake“ iob.
+Molti utilizzatori di Fiasp o di Lyumjev osservano frequenti **occlusioni**, anche dopo aver ottimizzato cose come la lunghezza dell'ago o la velocità di rilascio del SMB. Sembra molto importante dare un'occhiata al momento in cui una **cannula (o pod) ** è in uso (molti trovano **48 ore** per essere il **limite**), e se gli aumenti di glucosio difficili da spiegare si verificano con un aumento sempre crescente del "falsa" iob.
 
 An incidence report in (LINK, section 2.2.) illustrates this problem and shows that per *one* occlusion you easily lose 25% TIR that day, or 5% TIR on the week, and still 1% TIR on the month.
 
