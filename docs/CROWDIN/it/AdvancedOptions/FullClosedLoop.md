@@ -74,13 +74,13 @@ In conclusione, non si cerchi di ottenere FCL con insulina diversa da Lyumjev o 
 
 Molti utilizzatori di Fiasp o di Lyumjev osservano frequenti **occlusioni**, anche dopo aver ottimizzato cose come la lunghezza dell'ago o la velocità di rilascio del SMB. Sembra molto importante dare un'occhiata al momento in cui una **cannula (o pod) ** è in uso (molti trovano **48 ore** per essere il **limite**), e se gli aumenti di glucosio difficili da spiegare si verificano con un aumento sempre crescente del "falsa" iob.
 
-An incidence report in (LINK, section 2.2.) illustrates this problem and shows that per *one* occlusion you easily lose 25% TIR that day, or 5% TIR on the week, and still 1% TIR on the month.
+Un rapporto di incidenza in (LINK, paragrafo 2.2.) illustra questo problema e mostra che per *una *occlusione si perde facilmente il 25% sul TIR quel giorno, o il 5% sul TIR alla settimana, e ancora l'1% sul TIR del mese.
 
 ### Excellent CGM
 
-You do not give a mealsize-related bolus any longer; that leaves ALL insulination jobs to the algo! As glucose values are the very basis for this, please **inform yourself well about** how **your CGM** 1) principally performs  2) whether and how this may depend on data flow and intermediate apps you use, or differ between days of sensor usage   3) specifically, how and where any smoothing is done, and what this might imply for your tuning, notably for how you define a delta that is a true sign of a starting meal.
+Non si dà più un bolo legato ai pasti; di lascia tutta l'attività di insulinizzazione all'algoritmo </strong> Poiché i valori di glucosio sono la base stessa per questo, si prega di **informarsi bene **su come </0>il vostro CGM</0> 1) funziona principalmente 2) se e come questo può dipendere dal flusso di dati e dalle applicazioni intermedie che si usano, o differire tra i giorni di utilizzo del sensore 3) in particolare, come e dove viene fatto qualsiasi normalizzazione, e cosa questo potrebbe implicare per la vostra sintonizzazione, in particolare per come si definisce un delta che è un vero segno di un pasto iniziale.
 
-Around meals, a stable Bluetooth connectivity is absolutely essential, too, so CGM, loop, and pump can do their job without losing more valueable time.
+Anche intorno ai pasti, una connettività Bluetooth stabile è assolutamente essenziale, quindi CGM, loop e pompa insulinica possono fare il loro lavoro senza perdere tempo più prezioso.
 
 Then, but even more importantly in all other day and night times, the CGM should not produce any artefacts (jumpy values) that the loop could **misinterpret** as sign of a starting meal. Note that also calibrations could produce jumps.
 
