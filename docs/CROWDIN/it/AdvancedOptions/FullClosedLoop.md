@@ -82,26 +82,26 @@ Non si dà più un bolo legato ai pasti; di lascia tutta l'attività di insulini
 
 Anche intorno ai pasti, una connettività Bluetooth stabile è assolutamente essenziale, quindi CGM, loop e pompa insulinica possono fare il loro lavoro senza perdere tempo più prezioso.
 
-Then, but even more importantly in all other day and night times, the CGM should not produce any artefacts (jumpy values) that the loop could **misinterpret** as sign of a starting meal. Note that also calibrations could produce jumps.
+Quindi, ma ancora più importante in tutti gli altri momenti del giorno e della notte, il CGM non dovrebbe produrre alcun artefatto (valori di salto) che il loop potrebbe **interpretare erroneamente** come segno di un pasto iniziale. Note that also calibrations could produce jumps.
 
-The best way currently is to use Dexcom G5 or **G6**, and to ensure via **overlapping** right and left arm sensor and transmitter utilization, that always good quality values can be used by the loop. Other ways are possible, but come with a lot of monitoring effort (via watch) and occasional time-outs for the loop.
+Il modo migliore attualmente è usare Dexcom G5 o **G6**, e assicurare tramite ** sovrapposizione**del sensore del braccio destro e sinistro e l'utilizzo del trasmettitore, che i valori di buona qualità possano sempre essere usati dal loop. Altri modi sono possibili, ma comportano sforzi maggiori per il monitoraggio (tramite orologio) e pause occasionali del loop
 
-### Meal-related limitations
+### Limitazioni legate ai pasti
 
-Setting up a full closed loop is relatively easy for people whose diet does not consist **mainly** of components with **rapid high effect on blood glucose**, and whose meal patterns do not wildly vary day-to-day. They do not have to be low carb.
+La creazione di un loop chiuso completo è relativamente facile per le persone la cui dieta non consiste **principalmente** di componenti con **un effetto elevato rapido sulla glicemia **, e i cui modelli di pasto non variano enormemente da un giorno all'altro. Non devono essere a basso contenuto di carboidrati.
 
-Fat or protein rich diets, or slow digestion/gastroparesis, make things easier rather than harder for the full closed loop because late carbs nicely cover for inevitable “tails” of late action from boli needed around peak time.
+Le diete ricche di grassi o proteine, o la digestione lenta/gastroparesi, rendono le cose più facili piuttosto che più difficili per l'intero loop chiuso perché i carboidrati tardivi coprono bene le inevitabili "code" di azione tardiva da parte del boli necessarie durante il picco glicemico
 
-#### Glycemic index and effect on blood glucose
+#### Indice glicemico ed effetto sulla glicemia
 
-Challenge for the UAM mode rises with rising EBG (effect on blood glucose)
+La sfida per la modalità UAM aumenta con l'aumento dell'EBG (effetto sul glucosio nel sangue)
 
-- Start moderate/low, and tune your settings. Inly then, "test" meals with high EBG
-- Consider a < 50% initial bolus if consuming very high EBG
+- Avviare in modalità moderatamente/bassa e regolare le impostazioni. Solo allora, "testare" i pasti con EBG elevato
+- Si consideri un < 50% di bolo iniziale se si consuma un EBG molto alto
 
-1) **No EBG**: fresh meat, fish, eggs, bacon, oils, cheese. 2) **Low EBG**: fresh vegetables and berries, mushrooms, nuts, milk, yoghurt, cottage cheese. 3) **Moderate EBG**: whole grain bread/noodles, potatoes, wild rice, oats, dried fruits. 4) **High EBG**: wheat breads, baguette, toast, waffles, cookies, mash potatoes, noodles, rice. 5) **Very High EBG**: (sugar-) sweet drinks, fruit juices, cornflakes, candy, sweets, potato chips, salty pretzel sticks.
+1) **No EBG**: carne fresca, pesce, uova, pancetta, oli, formaggio. 2) **Basso EBG**: verdure fresche e bacche, funghi, noci, latte, yogurt, ricotta. 3) **Moderate EBG**: whole grain bread/noodles, potatoes, wild rice, oats, dried fruits. 4) {** EBG **: pane di frumento, baguette, toast, cialde, biscotti, purè di patate, tagliatelle, riso. 5) **EBG molto alto**: (zucchero-) bevande dolci, succhi di frutta, cornflakes, caramelle, dolci, patatine fritte, bastoncini di pretzel salati.
 
-![Glycemic index and effect on blood glucose](../images/fullClosedLoop01.png)
+![Indice glicemico ed effetto sulla glicemia](../images/fullClosedLoop01.png)
 
 The most difficult meals are those with exclusively very high and high EBG components (see red in the picture): Not only does glucose shoot up rapidly, but also there is not much of a fat/protein/fibre component to balance the inevitable “tail” of insulin activity that would come with attempts to control the high glucose earlier on.
 
