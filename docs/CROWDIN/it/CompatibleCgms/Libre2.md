@@ -84,11 +84,11 @@ Importante: per evitare possibili problemi, può essere utile installare e disin
 
 L'app modificata può essere riconosciuta dalla notifica di autorizzazione in primo piano. Il servizio di autorizzazione in primo piano migliora la stabilità della connessione rispetto all'applicazione ufficiale che non lo utilizza.
 
-![LibreLink Foreground Service](../images/Libre2_ForegroundServiceNotification.png)
+![Servizio Di Primo Piano LibreLink](../images/Libre2_ForegroundServiceNotification.png)
 
 Altri indicatori sono il logo del pinguino di Linux nel menu con i tre punti -> Informazioni o il font dell'applicazione modificata (2) diverso da quello dell'applicazione ufficiale (1). Questi elementi sono variabili in base alla fonte scelta dell'app.
 
-![LibreLink Font Check](../images/LibreLinkPatchedCheck.png)
+![Controllo Caratteri LibreLink](../images/LibreLinkPatchedCheck.png)
 
 Controlla che l'NFC sia attivato, attiva i permessi di memoria e di localizzazione per l'app modificata, attiva l'ora e il fuso orario automatici e imposta almeno un allarme nell'app modificata.
 
@@ -106,9 +106,9 @@ Impostazioni obbligatorie per l'avvio corretto del sensore:
 
 Tieni presente che il servizio di localizzazione è un'impostazione globale. Non si tratta dell'autorizzazione dell'app per la localizzazione, che deve essere ugualmente attivata!
 
-![LibreLink permissions memory & location](../images/Libre2_AppPermissionsAndLocation.png)
+![Memoria permessi LibreLink & posizione](../images/Libre2_AppPermissionsAndLocation.png)
 
-![automatic time and time zone + alarm settings](../images/Libre2_DateTimeAlarms.png)
+![orario e fuso orario automatici + impostazioni allarme](../images/Libre2_DateTimeAlarms.png)
 
 Una volta avviato il sensore con l'app modificata, non sarà più possibile collegarlo a un'altra app o telefono. Se disinstalli l'app modificata, perderai gli allarmi e le letture continue della glicemia.
 
@@ -116,7 +116,7 @@ La fase di abbinamento con il sensore è cruciale. L'app LibreLink cerca di stab
 
 Finché compare un punto esclamativo rosso (“!”) nell'angolo superiore sinistro della schermata di avvio di LibreLink, significa che non è presente il collegamento o che qualche altra impostazione impedisce a LibreLink di notificare gli allarmi. Verifica che il volume sia attivo e che qualsiasi impostazione per bloccare le notifiche delle app siano disattivate. Quando il punto esclamativo scompare, la connessione dovrebbe essere riuscita e i valori della glicemia saranno inviati allo smartphone. Questo dovrebbe accadere dopo massimo 5 minuti.
 
-![LibreLink no connection](../images/Libre2_ExclamationMark.png)
+![LibreLink senza connessione](../images/Libre2_ExclamationMark.png)
 
 Se il punto esclamativo rimane o viene visualizzato un messaggio di errore, le ragioni possono essere varie:
 
@@ -130,7 +130,7 @@ Se il punto esclamativo rimane o viene visualizzato un messaggio di errore, le r
 
 Può essere d'aiuto riavviare il telefono, ma è possibile che sia necessario farlo più volte. Non appena la connessione viene stabilita, il punto esclamativo rosso scompare e si passa alla fase più importante. Può accadere che, a seconda delle impostazioni del sistema, il punto esclamativo rimanga, ma che le letture siano comunque visualizzate. In entrambi i casi va bene. Il sensore e il telefono sono ora collegati, e ogni minuto viene trasmesso il valore della glicemia.
 
-![LibreLink connection established](../images/Libre2_Connected.png)
+![Connessione LibreLink stabilita](../images/Libre2_Connected.png)
 
 In rari casi potrebbe essere utile cancellare la cache del Bluetooth e/o resettare tutte le connessioni di rete tramite il menu di sistema. In questo modo si rimuovono tutti i dispositivi bluetooth collegati, il che può aiutare a impostare una connessione bluetooth corretta. Questa procedura è sicura, in quanto il sensore avviato viene memorizzato dall'app LibreLink modificata. Non è necessario fare nulla di più. Basta attendere che l'app modificata si connetta al sensore.
 
@@ -158,7 +158,7 @@ I valori della glicemia vengono ricevuti sullo smartphone dall'app xDrip+.
 
 - → Menu (1) → Inizializza sensore (2) → Inizializza sensore (3) → Rispondi con "Non oggi" (4).
 
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ Avvia Trasmettitore Libre & Sensore 3](../images/xDrip_Libre_Transmitter03.png)
 
 Questo non avvia alcun sensore Libre2, né vi interagisce in alcun modo. Questo serve semplicemente a dire a xDrip+ che un nuovo sensore sta trasmettendo i valori della glicemia. Se disponibili, inserisci due misurazioni con il glucometro per la calibrazione iniziale. Ora i valori della glicemia dovrebbero essere visibili su xDrip+ ogni 5 minuti. I valori mancanti, ad esempio quando il sensore è distante dal telefono, non verranno reintegrati.
 
@@ -168,7 +168,7 @@ Dopo un cambio di sensore, xDrip+ rileva automaticamente il nuovo sensore ed eli
 
 -   Su AAPS vai in Configuratore strutturale > Origine BG e seleziona 'xDrip+'.
 
-![xDrip+ BG Source](../images/ConfBuild_BG_xDrip.png)
+![sorgente xDrip+ BG](../images/ConfBuild_BG_xDrip.png)
 
 -   Se AAPS non riceve i valori della glicemia quando il telefono è in modalità aereo, usa “Identifica ricevitore” come descritto nella [pagina delle impostazioni di xDrip+](#xdrip-identify-receiver).
 
@@ -188,7 +188,7 @@ Dal punto di vista tecnico, il valore della glicemia viene trasmesso a xDrip+ og
 
 → Menu → Impostazioni → Funzionalità scansione NFC → Liscia i dati libre 3 quando si usa il metodo xxx
 
-![xDrip+ advanced settings Libre 2 & raw values](../images/xDrip_Libre3_Smooth.png)
+![xDrip+ impostazioni avanzate Libre 2 & valori grezzi](../images/xDrip_Libre3_Smooth.png)
 
 Questo è obbligatorio per il loop. La curva dei valori diventa omogenea e i risultati del loop saranno migliori. I valori grezzi su cui si basano gli allarmi sono leggermente più discontinui, ma corrispondono ai valori mostrati anche dal lettore. Inoltre, i valori grezzi possono essere visualizzati nel grafico di xDrip+ per poter agire in tempo su variazioni improvvise. È sufficiente attivare Impostazioni meno usate \> Impostazioni avanzate per Libre 2 \> "Mostra i valori grezzi nel grafico" e "Mostra informazioni sensore nello stato". In questo modo i valori grezzi saranno indicati come piccoli punti bianchi e le informazioni aggiuntive sul sensore saranno visibili nello stato del sistema.
 
@@ -196,13 +196,13 @@ I valori grezzi sono molto utili quando la glicemia cambia rapidamente. Anche se
 
 → Menu → Impostazioni → Impostazioni meno usate → Impostazioni avanzate per Libre 2
 
-![xDrip+ advanced settings Libre 2 & raw values](../images/Libre2_RawValues.png)
+![xDrip+ impostazioni avanzate Libre 2 & valori grezzi](../images/Libre2_RawValues.png)
 
 #### Durata del sensore
 
 La durata del sensore è di 14 giorni. Le 12 ore supplementari del Libre1 non sono più disponibili. xDrip+ mostra informazioni aggiuntive sul sensore dopo aver attivato in Impostazioni avanzate per Libre 2 → “Mostra informazioni sensore nello stato” nello Stato del sistema, come l'ora di avvio. Il tempo rimanente del sensore può essere visualizzato anche nell'app LibreLink modificata. Sia nella schermata principale come giorni rimanenti, sia come ora di avvio del sensore nel menu a tre punti → Guida → Registro eventi sotto “Nuovo sensore trovato”.
 
-![Libre 2 start time](../images/Libre2_Starttime.png)
+![Libre 2 orario di avvio](../images/Libre2_Starttime.png)
 
 #### Nuovo sensore
 
@@ -212,7 +212,7 @@ In caso contrario, controlla le impostazioni del telefono e ripeti la procedura 
 
 Una volta che la connessione è stata stabilita, seleziona “Stop sensore” e “Cancella solo la calibrazione” in xDrip+. Questo segnala a xDrip+ che un nuovo sensore sta trasmettendo i valori della glicemia e che le vecchie calibrazioni non sono più valide e devono quindi essere cancellate. In questo caso non avviene alcuna interazione con il sensore Libre2! Non è necessario avviare il sensore in xDrip+.
 
-![xDrip+ missing data when changing Libre 2 sensor](../images/Libre2_GapNewSensor.png)
+![xDrip+ dati mancanti quando si cambia il sensore Libre 2](../images/Libre2_GapNewSensor.png)
 
 #### Calibrazione
 
