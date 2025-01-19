@@ -26,7 +26,7 @@ Gradle Sync può fallire per vari motivi. Se ricevi un messaggio che dice 'gradl
 
   ![Gradle Fallito](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
-Likely reasons for gradle sync failures are:
+I motivi più comuni per i fallimenti di sincronizzazione del Gradle sono:
 * [Uncommitted changes](#uncommitted-changes)
 * [No cached version of ... available](#could-not-resolveno-cached-version)
 * [Incompatible Gradle JVM](#incompatible-gradle-jvm)
@@ -37,7 +37,7 @@ Likely reasons for gradle sync failures are:
 
 ### Modifiche senza commit
 
-If you receive a failure message like this one:
+Se ricevi un messaggio di errore come questo:
 
 ![Gradle Modifiche Non Commitate](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
@@ -67,7 +67,7 @@ If you receive a failure message like this one:
 
   * Cerca nel tuo computer un file "git.exe".
 
-    Note for yourself, which directory it is saved in.
+    Segna per te stesso in quale directory viene salvato.
 
   * Vai alle Variabili di Ambiente in Windows, seleziona la variabile "PATH" e fai clic su modifica. Aggiungi la cartella in cui hai trovato la tua installazione di Git.
 
@@ -89,7 +89,7 @@ If you receive a failure message like this one:
 
     * I file vengono recuperati nuovamente dal server Git. Se nella scheda commit non ci sono altre modifiche, vai al [Passo 3](#gradle-resync).
 
-  * If you can see "Unversioned Files", you might have stored files in your source code directory by mistake. Maybe they are important files: like your keystore file, that should be moved elsewhere. If you don't know what those files are and you have not created them yourself, you can delete them.
+  * Se vedi "Unversioned Files", potresti avere dei file memorizzati nella directory del codice sorgente per errore. Forse sono file importanti: come il tuo file keystore, che dovrebbe essere spostato altrove. Se non sai cosa sono questi file e non li hai creati te, puoi eliminarli.
 
     * Usa il gestionario di file (explorer) sul tuo computer per spostare o tagliare e incollare quei file in un luogo sicuro.
 
@@ -109,19 +109,19 @@ Segui le istruzioni di [Risincronizza Gradle](#gradle-resync).
 (incompatible-gradle-jvm)=
 ### Incompatible Gradle JVM
 
-![Incompatible Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png) Se vedi il messaggio di errore sopra, devi scaricare la versione corretta di JVM prima di riprovare a ricostruire:
+![Gradle JVM incompatibile](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png) Se vedi il messaggio di errore sopra, devi scaricare la versione corretta di JVM prima di riprovare a ricostruire:
 1.  Controlla nella [tabella dei prerequisiti](#Building-APK-recommended-specification-of-computer-for-building-apk-file) la versione JVM necessaria per la versione **AAPS** che stai costruendo, e prendine nota.
 
 2. Apri la scheda Gradle cliccando sull'elefante (1) sul lato destro di Android Studio, apri le impostazioni (2) e seleziona **Gradle Settings** (3):
 
 ![Apri Le Impostazioni Gradle](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  **In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. The example below shows JVM 21 is labeled as “jbr-21”. If you find it, just select it, and you are done. If not available, then select 'Download JDK'.
+3.  **Nel campo **Gradle JDK**, controlla se è selezionata la versione appropriata (1) Se non, fai clic sul campo e vedere se è già disponibile nella lista. L’esempio seguente mostra che JVM 21 è segnato “jbr-21”. Se lo trovi, basta selezionarlo, e hai finito. Se non è disponibile, selezionare 'Scarica JDK'.
 
 
 ![Seleziona Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. In Version (1), select the JDK required for your **AAPS** version (the one you made a note of when you checked the requirement table). In Vendor (2) select 'JetBrains Runtime'. Location (3): do not change.
+4. In Version (1), seleziona il JDK richiesto per la tua versione **AAPS** (quella che ti sei segnata quando hai controllato la tabella dei requisiti). In Vendor (2) seleziona 'JetBrains Runtime'. Location (3): non modificare.
 
 ![Seleziona JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
@@ -157,7 +157,7 @@ Segui le istruzioni di [Risincronizza Gradle](#gradle-resync).
 
   Se vedi un messaggio di errore come quello sotto, probabilmente stai utilizzando un sistema Windows 10 a 32 bit. Non è supportato da Android Studio 3.5.1 e oltre, e purtroppo non c'è nulla che gli sviluppatori **AAPS** possano fare a riguardo!
 
-  There is information on the internet about how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
+  Ci sono informazioni su internet su come determinare se hai un sistema operativo a 32 bit o 64 bit - [questo](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
   ![Schermata Impossibile avviare il processo daemon](../images/AndroidStudioWin10_32bitError.png)
 
@@ -231,7 +231,7 @@ Se hai creato l'app con successo, trasferita sul tuo telefono e installata con s
 
 ## Niente di quello suggerito ha funzionato
 
-If none of the above tips helped you might consider building the apk from scratch:
+Se nessuno dei suggerimenti sopra ti ha aiutato, considera ricostruire l'apk da zero:
 
 1. [Esporta le impostazioni](../Maintenance/ExportImportSettings.md) (nella versione AAPS già installata sul tuo telefono)
 
@@ -241,13 +241,13 @@ If none of the above tips helped you might consider building the apk from scratc
 
 3. Costruisci l'apk da zero come descritto [qui](#Building-APK-download-AAPS-code).
 
-4. When you have built the apk successfully delete the existing apk on your phone, transfer the new apk to your phone and install.
+4. Dopo aver costruito l'apk, elimina quello esistente dal telefono, trasferisci il nuovo apk sul telefono e installalo.
 5. [Importa le impostazioni](../Maintenance/ExportImportSettings.md), di nuovo, per ripristinare gli obiettivi e le impostazioni.
 6. Controlla le opzioni di ottimizzazione della batteria e disabilitale di nuovo.
 
 ## Scenario peggiore
 
-If the above does not solve your build issue you may wish to try to uninstall Android Studio completely and rebuild from scratch.  Alcuni utenti trovano che questo può risolvere il loro problema di compilazione.  Quando disinstalli Android Studio, non eliminare le impostazioni utente Android e **Assicurati di disinstallare tutti i file associati con Android Studio.** Se non rimuovi completamente Android Studio e tutti i file nascosti, la disinstallazione può causare nuovi problemi invece di risolvere quelli esistenti. I manuali per la disinstallazione completa possono essere trovati online ad es.
+Niente di quello suggerito sopra risolve il problema di build, puoi provare a disinstallare completamente Android Studio e ricostruire da zero.  Alcuni utenti trovano che questo può risolvere il loro problema di compilazione.  Quando disinstalli Android Studio, non eliminare le impostazioni utente Android e **Assicurati di disinstallare tutti i file associati con Android Studio.** Se non rimuovi completamente Android Studio e tutti i file nascosti, la disinstallazione può causare nuovi problemi invece di risolvere quelli esistenti. I manuali per la disinstallazione completa possono essere trovati online ad es.
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
