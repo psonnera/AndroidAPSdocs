@@ -92,7 +92,7 @@ Il plugin Autotune è un'implementazione dell'algoritmo di Autotune di OpenAPS a
 - Categorize UAM as basal (default On): Questa impostazione è per gli utenti che usano AndroidAPS senza alcun carbs inserito (Full UAM). Impedirà (quando disattivato) di classificare l'UAM come basale.
   - Nota: se viene rilevata almeno un'ora di assorbimento dei carboidrati durante un giorno, tutti i dati classificati come "UAM" saranno classificati come basali, indipendentemente da questa impostazione (On o Off)
 - Numero di giorni di dati (predefinito 5): è possibile definire il valore predefinito con questa impostazione. Ogni volta che si seleziona un nuovo profilo nel plugin Autotune, il parametro Tune days sarà sostituito da questo valore predefinito
-- Applica il risultato medio in IC/ISF circadiano (default Off): vedi [ IC circolare o profilo ISF ](#circadian-ic-or-isf-profile) di seguito.
+- Applica il risultato medio in IC/ISF circadiano (default Off): vedi [ IC circadiano o profilo ISF ](#circadian-ic-or-isf-profile) di seguito.
 
 ### Altre impostazioni
 
@@ -104,7 +104,7 @@ Il plugin Autotune è un'implementazione dell'algoritmo di Autotune di OpenAPS a
 
 ## Funzioni avanzate
 
-(Ic-circadiano-o-profilo-Isf di Autotune) =
+(autotune-circadian-ic-or-isf-profile)=
 
 ### IC Circadiano o profilo ISF
 
@@ -132,7 +132,7 @@ Il plugin Autotune è un'implementazione dell'algoritmo di Autotune di OpenAPS a
 
 
 
-(avvio-autotune-con-una-regola-automatica) =
+(autotune-run-autotune-with-an-automation-rule)=
 
 ## Avvio Autotune con una regola automatica
 
