@@ -4,54 +4,54 @@ orphan: true
 
 # Freestyle Libre 1
 
-To use your Libre as a CGM that is getting new BG values every 5 minutes without having to scan the sensor, you need to buy an NFC to Bluetooth bridge (commercially available devices, based on the obsolete [LimiTTer](https://github.com/JoernL/LimiTTer) project).
+Per utilizzare il tuo Libre come CGM, ottenendo nuovi valori di glicemia ogni 5 minuti senza dover eseguire la scansione del sensore, è necessario acquistare un ponte NFC a Bluetooth (dispositivi disponibili in commercio, in base al progetto obsoleto [LimiTTer](https://github.com/JoernL/LimiTTer)).
 
 ```{admonition} Libre 2, Libre 1 US and Libre Pro
 :class: warning
-Verify the bridge and the app you want to use are compatible with your sensor.  
+Verifica che il bridge e l'app che vuoi usare siano compatibili con il tuo sensore.  
 ```
 
-Several bridges are available on the market:
+Sul mercato sono disponibili diversi ponti:
 
--   [MiaoMiao Reader](https://www.miaomiao.cool/) (version 1, 2 or 3) also available on AliExpress.
--   [Blucon Nightrider](https://www.ambrosiasys.com/our-products/blucon/) (mind recent firmware versions might not be compatible with all apps, the vendor app does not broadcast data to AAPS)
--   [Bubble (or Bubble Mini)](https://www.bubblesmartreader.com/) from European vendors ([Bubblan](https://www.bubblan.org/), [BubbleShop](https://bubbleshop.eu/)) or for Russian users [here](https://vk.com/saharmonitor/). Also available on AliExpress.
--   Atom for Russian users.
+-   [MiaoMiao Reader](https://www.miaomiao.cool/) (versione 1, 2 o 3) disponibile anche su AliExpress.
+-   [Blucon Nightrider](https://www.ambrosiasys.com/our-products/blucon/) (le versioni recente del firmware potrebbero non essere compatibile con tutte le applicazioni, l'app del fornitore non trasmette dati a AAPS)
+-   [Bubble (o Bubble Mini)](https://www.bubblesmartreader.com/) da rivenditori europei ([Bubblan](https://www.bubblan.org/), [BubbleShop](https://bubbleshop.eu/)) o per gli utenti russi [qui](https://vk.com/saharmonitor/). Disponibile anche su AliExpress.
+-   Atom per gli utenti russi.
 
-Historically it is possible to use a specific watch, the Sony Smartwatch 3 (SWR50) which has an NFC chip that can be enabled and used as an NFC collector. However the custom NFC to Bluetooth bridges listed above offer a less complex solution and would be used by the majority of those wanting to use their Libre 1 (non-US) as a CGM.
+Storicamente è possibile utilizzare un orologio specifico, Sony Smartwatch 3 (SWR50) che ha un chip NFC che può essere abilitato e utilizzato come collettore NFC. Tuttavia i ponti NFC a Bluetooth elencati sopra offrono una soluzione meno complessa e sono utilizzati dalla maggior parte di quelli che vogliono utilizzare il loro Libre 1 (non US) come CGM.
 
 -   Sony Smartwatch 3 (SWR50) <https://github.com/pimpimmi/LibreAlarm/wiki/>
 
-As it currently stands, if using Libre 1 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within the SMB algorithm. The BG values of Libre 1 are not smooth enough to use it safely. See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md) for more details.
+Per ora, utilizzando Libre 1 come origine dati, non è possibile attivare le opzioni “Abilita SMB sempre” e “Abilita SMB dopo i carboidrati” per l'algoritmo SMB. I valori della glicemia del Libre 1 non sono abbastanza omogenei per poterli usare in modo sicuro. Per maggiori dettagli, vedi [Smoothing dei dati glicemici](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
-## 1. Using xDrip+
+## 1. Usando xDrip+
 
--   xDrip+ supports Miaomiao, Bubble, Blucon, Atom and LibreAlarm.
--   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features, in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
--   Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
--    You also need [OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) for Libre 1 US (and Libre 2 EU).
--   Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   xDrip+ supporta Miaomiao, Bubble, Blucon, Atom e LibreAlarm.
+-   Puoi scaricare tranquillamente l'[ultimo APK (stabile)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) a meno che tu non abbia bisogno di funzionalità più recenti, caso in cui dovresti usare l'ultimo [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
+-   Segui le istruzioni di configurazione nella [pagina delle impostazioni di xDrip+](../CompatibleCgms/xDrip.md).
+-    Hai anche bisogno di [OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) per Libre 1 US (e Libre 2 EU).
+-   Seleziona xDrip+ in [Configuratore strutturale, Origine BG](#Config-Builder-bg-source).
 
 (libre1-using-glimp)=
-## 2. Using Glimp
+## 2. Usando Glimp
 
--   Glimp supports Miaomiao, Blucon and Bubble for Libre 1 and Libre 2 EU.
--   You will need Glimp version 4.15.57 or newer. Older versions are not supported.
--   Install [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia).
--   Select Glimp in in [ConfigBuilder, BG Source.](#Config-Builder-bg-source)
+-   Glimp supporta Miaomiao, Blucon e Bubble per Libre 1 e Libre 2 EU.
+-   Avrai bisogno di Glimp versione 4.15.57 o più recente. Le versioni precedenti non sono supportate.
+-   Installa [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia).
+-   Seleziona Glimp in [Configuratore strutturale, Origine BG](#Config-Builder-bg-source)
 
 (libre1-using-tomato)=
-## 3. Using Tomato
+## 3. Usando Tomato
 
-- Tomato is the vendor app for Miaomiao.
-- Install [Tomato](http://tomato.cool/#download_page) and follow the vendor [instructions](http://tomato.cool/how-to-broadcast-data-to-android-aps/tips/).
-- Select Tomato in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Tomato è l'app del fornitore di Miaomiao.
+- Installa [Tomato](http://tomato.cool/#download_page) e segui le [istruzioni](http://tomato.cool/how-to-broadcast-data-to-android-aps/tips/) del fornitore.
+- Seleziona Tomato in [Configuratore strutturale, Origine BG](#Config-Builder-bg-source).
 
-## 4. Using Diabox
+## 4. Usando Diabox
 
-- Diabox is the vendor app for Bubble.
-- Install [Diabox](https://t.me/s/DiaboxApp). In Settings, Integration, enable Share data with other apps.
+- Diabox è l'app del fornitore per Bubble.
+- Installa [Diabox](https://t.me/s/DiaboxApp). Nelle Impostazioni, Integrazione, abilita Condividi i dati con altre applicazioni.
 
-![Diabox](../images/Diabox.png)
+![Diabox](../images/Diabox. png)
 
-- Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Seleziona xDrip+ in [Configuratore strutturale, Origine BG](#Config-Builder-bg-source).
