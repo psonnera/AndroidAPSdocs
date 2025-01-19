@@ -5,11 +5,11 @@ orphan: true
 # Ottai M8
 
 
-## Using M8 with Ottai app
+## Utilizzo di M8 con l'app Ottai
 
--   Download and Install the apk from <https://play.google.com/store/apps/details?id=com.ottai.seas>.
+-   Scarica e installa l'apk da <https://play.google.com/store/apps/details?id=com.ottai.seas>.
 
--   Start sensor
+-   Inizializza il sensore
 
-- Select Ottai in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Seleziona Ottai in [Configuratore strutturale, Origine BG](#Config-Builder-bg-source).
 
