@@ -52,36 +52,36 @@ I valori di glicemia vengono ricevuti dall'app xDrip+ sullo smartphone.
 
 ### Passo 3: Avviare il sensore all'interno di xDrip
 
-In xDrip+ start the sensor with "Start Sensor" and "not today". It is not necessary to hold the mobile phone onto the sensor. In fact "Start Sensor" will not physically start any Libre 3 sensor or interact with them in any case. This is simply to indicate xDrip+ that a new sensor is delivering blood sugar levels. If available, enter two bloody measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip+ every 5 minutes. Skipped values, e.g. because you were too far away from your phone, will not be backfilled.
+In xDrip+ avvia il sensore con "Avvia Sensore" e "non oggi". Non è necessario tenere il telefono cellulare sul sensore. Questo non avvia alcun sensore Libre 3, né vi interagisce in alcun modo. Questo serve semplicemente a dire a xDrip+ che un nuovo sensore sta trasmettendo i valori della glicemia. Se disponibili, inserisci due misurazioni con il glucometro per la calibrazione iniziale. Ora i valori della glicemia dovrebbero essere visibili su xDrip+ ogni 5 minuti. I valori mancanti, ad esempio quando il sensore è distante dal telefono, non verranno reintegrati.
 
-Wait at least 15-20 minutes if there is still no data.
+Aspetta almeno 15-20 minuti se non ci sono ancora dati.
 
-After a sensor change xDrip+ will automatically detect the new sensor and will delete all calibration data. You may check you bloody BG after activation and make a new initial calibration.
+Dopo un cambio di sensore, xDrip+ rileva automaticamente il nuovo sensore ed elimina tutti i parametri di calibrazione vecchi. Dopo l'attivazione è possibile misurare la glicemia con il glucometro ed effettuare una nuova calibrazione iniziale.
 
-### Step 4: Configure AndroidAPS
+### Passo 4: Configurare AndroidAPS
 
-- Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Seleziona xDrip+ in [Configuratore strutturale, Origine BG](#Config-Builder-bg-source).
 
-- If AndroidAPS does not receive BG values when phone is in airplane mode, use "Identify receiver"
-- Turn of Smoothing (done in xDrip+ already)
+- Se AndroidAPS non riceve i valori di glicemia quando il telefono è in modalità aereo, usa "Identifica ricevitore"
+- Disabilita lo smoothing (già fatto in xDrip+)
 
-As of now, when using Libre 3 as a BG source, the "Always enable SMB" and "Enable SMB by Carbs" options cannot be enabled in the SMB algorithm. The BG values from Libre 3 are not smooth enough to use safely.
+Per ora, quando si utilizza il Libre 3 come sorgente di glicemia, le opzioni "Abilita SMB sempre" e "Abilita SMB con COB" non possono essere abilitate nell'algoritmo SMB. I valori della glicemia del Libre 3 non sono abbastanza omogenei per poterli usare in modo sicuro.
 
 
 
-## Subsequent sensor changes
+## Cambiamenti successivi del sensore
 
-1. Open Juggluco and note the serial number of the existing sensor
+1. Apri Juggluco e nota il numero di serie del sensore esistente
 
 ![Libre serial number](../images/libre3/step_13.jpg)
 
-2. Now simply scan your new sensor with your phone’s NFC reader. Juggluco will display a notice if the process had been started successfully.
-3. When you are ready to deactivate the old sensor, then open the Juggluco menu by clicking anywhere in the empty space in the upper left hand corner of the screen.
-4. Select the exired sensor and tap "Terminate"
+2. Ora basta eseguire la scansione del nuovo sensore con il lettore NFC del telefono. Juggluco mostrerà un avviso se il processo è stato avviato correttamente.
+3. Quando sei pronto a disattivare il vecchio sensore, poi aprire il menu Juggluco cliccando ovunque nello spazio vuoto nell'angolo in alto a sinistra dello schermo.
+4. Seleziona il sensore scaduto e tocca "Termina"
 
 ![Terminate sensor](../images/libre3/step_14.jpg)
 
-Note: When two sensors are active Juggluco will send the most recent value from either sensor to xDrip+. If the sensors are not calibrated and reading BG similarly, this may result in jumpy BG values being reported to xDrip+. If you terminate the wrong sensor, you can reactivate it by simply scanning the sensor.
+Nota: Quando due sensori sono attivi, Juggluco invierà il valore più recente da entrambi i sensori a xDrip+. If the sensors are not calibrated and reading BG similarly, this may result in jumpy BG values being reported to xDrip+. If you terminate the wrong sensor, you can reactivate it by simply scanning the sensor.
 
 ## Switch sensor between Libre 3 and Juggluco app
 
