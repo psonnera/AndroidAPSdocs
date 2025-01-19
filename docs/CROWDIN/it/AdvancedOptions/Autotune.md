@@ -92,11 +92,11 @@ Il plugin Autotune è un'implementazione dell'algoritmo di Autotune di OpenAPS a
 - Categorize UAM as basal (default On): Questa impostazione è per gli utenti che usano AndroidAPS senza alcun carbs inserito (Full UAM). Impedirà (quando disattivato) di classificare l'UAM come basale.
   - Nota: se viene rilevata almeno un'ora di assorbimento dei carboidrati durante un giorno, tutti i dati classificati come "UAM" saranno classificati come basali, indipendentemente da questa impostazione (On o Off)
 - Numero di giorni di dati (predefinito 5): è possibile definire il valore predefinito con questa impostazione. Ogni volta che si seleziona un nuovo profilo nel plugin Autotune, il parametro Tune days sarà sostituito da questo valore predefinito
-- Applica il risultato medio in IC/ISF circadiano (default Off): vedi [ IC circolare o profilo ISF ](#circadian-ic-or-isf-profile) di seguito.
+- Applica il risultato medio in IC/ISF circadiano (default Off): vedi [ IC circadiano o profilo ISF ](#circadian-ic-or-isf-profile) di seguito.
 
 ### Altre impostazioni
 
-- Autotune utilizza anche il rapporto di autosenso massimo e il rapporto di autosenso minimo per limitare la variazione. È possibile vedere e regolare questi valori in Config Builder & #062; Sensitivity detection plugin & #062; Impostazioni & #062; Impostazioni avanzate
+- Autotune utilizza anche il rapporto di autosens massimo e il rapporto di autosens minimo per limitare la variazione. È possibile vedere e regolare questi valori in Config Builder & #062; Sensitivity detection plugin & #062; Impostazioni & #062; Impostazioni avanzate
 
   ![Schermata predefinita Autotune ](../images/Autotune/Autotune_12.png)
 
@@ -104,7 +104,7 @@ Il plugin Autotune è un'implementazione dell'algoritmo di Autotune di OpenAPS a
 
 ## Funzioni avanzate
 
-(Ic-circadiano-o-profilo-Isf di Autotune) =
+(autotune-circadian-ic-or-isf-profile)=
 
 ### IC Circadiano o profilo ISF
 
@@ -120,7 +120,7 @@ Il plugin Autotune è un'implementazione dell'algoritmo di Autotune di OpenAPS a
 
 ### Aggiorna uno specifico giorno della settimana
 
-- Se cliccate sulla casella con l'occhio a destra del parametro "Rune days", vedrete la selezione del giorno. È possibile specificare quale giorno della settimana deve essere incluso nel calcolo di Autotune (nella schermata sottostante è possibile vedere un esempio di "giorni lavorativi" con sabato e domenica rimossi dal calcolo automatico)
+- Se cliccate sulla casella con l'occhio a destra del parametro "Run days", vedrete la selezione del giorno. È possibile specificare quale giorno della settimana deve essere incluso nel calcolo di Autotune (nella schermata sottostante è possibile vedere un esempio di "giorni lavorativi" con sabato e domenica rimossi dal calcolo automatico)
   - Se il numero di giorni inclusi nel calcolo di Autotune è inferiore al numero di giorni di sintonizzazione, vedrai quanti giorni saranno inclusi a destra del selettore di Tune days (10 giorni nell'esempio sottostante)
   - Questa impostazione dà buoni risultati solo se il numero di giorni rimanenti non è troppo piccolo (ad esempio se si sintonizza un profilo specifico per i giorni di fine settimana con solo la domenica e il sabato selezionati, è necessario selezionare un minimo di 21 o 28 giorni di sintonizzazione per avere 6 o 8 giorni inclusi nel calcolo di Autotune)
 
@@ -132,7 +132,7 @@ Il plugin Autotune è un'implementazione dell'algoritmo di Autotune di OpenAPS a
 
 
 
-(avvio-autotune-con-una-regola-automatica) =
+(autotune-run-autotune-with-an-automation-rule)=
 
 ## Avvio Autotune con una regola automatica
 
@@ -140,11 +140,11 @@ Il primo passo è definire il corretto evento per una regola di automazione con 
 
 Nota: per ulteriori informazioni su come impostare una regola di automazione, vedere [ qui](../DailyLifeWithAaps/Automations.md).
 
-- È necessario selezionare Ripristinare il tempo di attivazione: eseguire Autotune solo una volta al giorno e l'autotune è progettato per essere eseguito quotidianamente (ogni nuova esecuzione si sposta un giorno dopo e la modifica rapida del profilo dovrebbe essere piccola)
+- È necessario selezionare una regola Tempo ricorrente: eseguire Autotune solo una volta al giorno e l'autotune è progettato per essere eseguito quotidianamente (ogni nuova esecuzione si sposta un giorno dopo e la modifica rapida del profilo dovrebbe essere piccola)
 
   ![Schermata predefinita di Autotune](../images/Autotune/Autotune_16.png)
 
-- È meglio all'inizio eseguire Autotune durante il giorno per essere in grado di controllare i risultati. Se si desidera eseguire Autotune durante la notte, è necessario selezionare nel trigger 4AM o versione successiva per includere il giorno corrente nel prossimo calcolo di Autotune.
+- È meglio all'inizio eseguire Autotune durante il giorno per essere in grado di controllare i risultati. Se si desidera eseguire Autotune durante la notte, è necessario selezionare nel trigger 4AM o più tardi per includere il giorno corrente nel prossimo calcolo di Autotune.
 
   ![Schermata predefinita di Autotune](../images/Autotune/Autotune_17.png)
 
@@ -158,9 +158,9 @@ Nota: per ulteriori informazioni su come impostare una regola di automazione, ve
 
 - Dopo alcuni giorni, se ti fidi completamente dei risultati di Autotune e la percentuale di modifica è bassa, puoi modificare le [impostazioni di Autotune](#autotune-plugin-settings) "Profilo di commutazione di automazione" per abilitare l'aggiornamento automatico e attivare il profilo sintonizzato dopo il calcolo.
 
-Dopo alcuni giorni, se ti fidi completamente dei risultati di Autotune e la percentuale di modifica è bassa, puoi modificare le <0>impostazioni di Autotune</0> "Profilo di commutazione di automazione" per abilitare l'aggiornamento automatico e attivare il profilo sintonizzato dopo il calcolo.
+Nota: se desideri regolare automaticamente i profili per determinati giorni della settimana (ad esempio un profilo per i "giorni del weekend" e un altro per i "giorni lavorativi"), quindi creare una regola per ogni profilo, seleziona gli stessi giorni in Trigger e in Azione Autotune; I giorni utilizzati devono essere abbastanza numerosi per essere sicuro che la sintonizzazione sarà fatta con almeno 6 o 8 giorni, e non dimenticare di selezionare un orario dopo le 4AM in Trigger...
 
-- Puoi vedere di seguito un esempio di regola per sintonizzare "il mio profilo" su tutti i "giorni di lavoro" con 14 giorni di sintonizzazione selezionati (quindi solo 10 giorni inclusi nel calcolo automatico).
+- Puoi vedere di seguito un esempio di regola per sintonizzare "my profile" su tutti i "giorni di lavoro" con 14 giorni di sintonizzazione selezionati (quindi solo 10 giorni inclusi nel calcolo automatico).
 
 ![Schermata predefinita di Autotune](../images/Autotune/Autotune_20b.png)
 
@@ -178,19 +178,19 @@ Usare sempre Autotune per diversi giorni manualmente per controllare i risultati
 
 È anche importante analizzare i risultati di Autotune per capire (o cercare di capire) perché Autotune propone queste modifiche
 
-- puoi avere un aumento o una diminuzione totale della forza del suo profilo (ad esempio un aumento del basale totale associato a una diminuzione dei valori di ISF e IC). potrebbe essere associato a diversi giorni successivi con correzione dell'autosens superiore al 100% (più aggressività richiesta) o inferiore al 100% (sei più sensibile)
-- A volte Autotune propone un diverso equilibrio tra i tassi basali e IC/ISF (per IC/ISF basale inferiore e più aggressivo)
+- puoi avere un aumento o una diminuzione totale della forza del tuo profilo (ad esempio un aumento del basale totale associato a una diminuzione dei valori di ISF e IC). potrebbe essere associato a diversi giorni successivi con correzione dell'autosens superiore al 100% (più aggressività richiesta) o inferiore al 100% (sei più sensibile)
+- A volte Autotune propone un diverso equilibrio tra tassi basali e IC/ISF (per es. basale inferiore e IC/ISF più aggressivo)
 
 Si consiglia di non utilizzare Autotune nei seguenti casi:
 
 - Non inserisci tutti i tuoi carboidrati
-  - Se non si inserisce la correzione dei carboidrati per un'ipoglicemia, Autotune vedrà un aumento inaspettato del valore BG e aumenterà i tassi basali le 4 ore precedenti, potrebbe essere l'opposto di quello che serve per evitare l'ipo, specialmente se è nel cuore della notte. Ecco perché è importante inserire tutti i carboidrati, specialmente la correzione per l'ipo.
-- Avete inserito tutti i vostri carboidrati e stimato corretta mente i vostri carboidrati.
-  - Avete inserito tutti i vostri carboidrati e stimato correttamente i vostri carboidrati?
-  - Tutti i periodi UAM (tranne se non si immettono carboidrati durante un giorno e la funzione classifica UAM come basale è disabilitata), tutti i periodi UAM saranno classificati come basali, questo può aumentare molto il vostro basale (molto più del necessario)
+  - Se non si inserisce la correzione dei carboidrati per un'ipoglicemia, Autotune vedrà un aumento inaspettato del valore BG e aumenterà i tassi basali le 4 ore precedenti, potrebbe essere l'opposto di quello che serve per evitare l'ipo, specialmente se è nel cuore della notte. Ecco perché è importante inserire tutti i carboidrati, specialmente le correzioni per ipo.
+- Hai molto periodi con UAM rilevato durante il giorno.
+  - Hai inserito tutti i tuoi carboidrati e sono stati stimati correttamente?
+  - Tutti i periodi UAM (tranne se non si immettono carboidrati durante un giorno e la funzione classifica UAM come basale è disabilitata), tutti i periodi UAM saranno classificati come basale, questo può aumentare molto la tua basale (molto più del necessario)
 
 - L'assorbimento dei carboidrati è molto lento: se la maggior parte dell'assorbimento dei carboidrati viene calcolato con il parametro min_5m_carbimpact (si possono vedere questi periodi con un piccolo punto arancione nella parte superiore della curva COB), il calcolo del COB potrebbe essere sbagliato e portare a risultati sbagliati.
-  - . Quando si pratica sport, si è generalmente più sensibili e il BG non aumenta molto, quindi durante o dopo un esercizio, è normale vedere alcuni periodi con carboidrati lenti. Ma se si ha troppo spesso un assorbimento di carboidrati lento inaspettato, allora potrebbe essere necessario un aggiustamento del profilo (valore più alto di IC) o un impatto min_5m_carb un po' troppo alto.
-- Avete "giorni molto brutti", per esempio bloccati diverse ore in iperglicemia con un'enorme quantità di insulina per poter scendere all'interno del range, o dopo un cambiamento del sensore avete avuto lunghi periodi di valori BG sbagliati. Se durante le ultime settimane hai solo uno o due "giorni non buoni", puoi disattivare manualmente questi giorni nel calcolo automatico per escluderli dal calcolo, e di nuovo **controllare attentamente se puoi fidarti dei risultati**
+  - Quando si pratica sport, si è generalmente più sensibili e il BG non aumenta molto, quindi durante o dopo un esercizio, è normale vedere alcuni periodi con carboidrati lenti. Ma se si ha troppo spesso un assorbimento di carboidrati inaspettamente lento, allora potrebbe essere necessario un aggiustamento del profilo (valore più alto di IC) oppure hai un min_5m_carbimpact un po' troppo alto.
+- Hai "giorni molto brutti", per esempio bloccati diverse ore in iperglicemia con un'enorme quantità di insulina per poter scendere all'interno del range, o dopo un cambiamento del sensore hai avuto lunghi periodi di valori BG sbagliati. Se durante le ultime settimane hai solo uno o due "giorni non buoni", puoi disattivare manualmente questi giorni nel calcolo automatico per escluderli dal calcolo, e di nuovo **controllare attentamente se puoi fidarti dei risultati**
 - Se la percentuale di modifica è troppo importante
   - Si può provare ad aumentare il numero di giorni per ottenere risultati più agevoli
