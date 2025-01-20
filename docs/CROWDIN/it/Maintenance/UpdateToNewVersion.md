@@ -8,10 +8,10 @@
 * Aggiorna alla nuova versione di **AAPS** appena possibile dopo che una nuova versione è stata rilasciata.
 * Quando è disponibile una nuova versione, nell'app **AAPS** stessa, riceverai una notifica informativa sulla nuova versione.
 * La nuova versione sarà anche annunciata su Facebook al momento del rilascio.
-* Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
+* A seguito della pubblicazione, leggi in dettaglio le [note di rilascio](ReleaseNotes.md), e chiarisci eventuale domande con la communità, su Facebook o Discord, prima di procedere con l'aggiornamento.
 
   ```{note}
-  In case you want to build **AAPS** on a new computer : copy your back-up keystore file to the new computer. Then follow the [Initial build **AAPS** procedure](../SettingUpAaps/BuildingAaps.md) instead of this guide. With the only difference that instead of creating a new keystore, you can select the one you have copied on the new computer.
+  Nel caso in cui desideri costruire **AAPS** su un nuovo computer: copia il tuo file keystore nel nuovo computer. Quindi segui la procedura [costruzione iniziale di **AAPS**](../SettingUpAaps/BuildingAaps.md) invece di questa guida. With the only difference that instead of creating a new keystore, you can select the one you have copied on the new computer.
   ```
 
 ## Panoramica per l'aggiornamento a una nuova versione di AAPS
@@ -73,7 +73,7 @@ Se aggiorni da una versione precedente a 2.8.x, segui le istruzioni per fare un 
 
   ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-### Check JVM version
+### Controlla la versione JVM
 
 This check is particularly indicated if you have already built a previous version of **AAPS** on the same computer.
 
