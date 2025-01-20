@@ -2,7 +2,7 @@
 orphan: true
 - - -
 
-# For users of PocTech CT-100
+# Per gli utilizzatori di PocTech CT-100
 
-- Install [PocTech App](https://play.google.com/store/apps/details?id=com.poctechcorp.pocct)
-- Select PocTech App in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Installa l'[App PocTech](https://play.google.com/store/apps/details?id=com.poctechcorp.pocct)
+- Seleziona App Poc Tech in [Configuratore strutturale, Origine BG](#Config-Builder-bg-source).
