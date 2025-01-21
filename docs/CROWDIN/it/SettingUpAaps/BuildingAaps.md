@@ -61,16 +61,16 @@ La versione Gradle è legata al codice sorgente, otterrai sempre la versione cor
 
 ## Aiuto e assistenza durante il processo di costruzione
 
-If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](../GettingHelp/TroubleshootingAndroidStudio) section, please consult that first.
+Se incontri difficoltà nel processo di costruzione dell'app **AAPS**, consulta la sezione [**dedicata alla risoluzione dei problemi Android Studio**](../GettingHelp/TroubleshootingAndroidStudio).
 
-If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
+Se pensi che qualcosa nelle istruzioni di costruzione sia sbagliato, mancante o confusionale, o ancora stai lottando, contatta il gruppo di utenti **AAPS** su [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) o [Discord](https://discord.gg/4fQUWHZ4Mw). Se vuoi cambiare qualcosa te stesso (aggiornamento screenshot _etc_), ti preghiamo di inviare una [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
-## Step-by-step guide to building the AAPS app
+## Guida passo-passo per costruire l'app AAPS
 
 ```{admonition} WARNING
 :class: warning
-If you have built AAPS before, you don't need to take all the following steps again.
-Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)!
+Se hai costruito AAPS prima, non è necessario eseguire nuovamente tutti i passaggi.
+Vai direttamente alla [guida per l'aggiornamento](../Maintenance/UpdateToNewVersion.md)!
 ```
 
 ```{contents} The overall steps for building the **AAPS** apk file
@@ -78,12 +78,12 @@ Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)
 :local: true
 ```
 
-In this guide you will find _example_ screenshots of building of **AAPS** apk file. Because  **Android Studio** - the software which we use to build the **AAPS** apk - is regularly updated, these screenshots may not be identical to your installation, but they should still be possible to follow.
+In questa guida troverete schermate di _esempi_ di costruzione dell'apk di **AAPS**. Perché **Android Studio** - il software che utilizziamo per costruire l'apk **AAPS** - viene regolarmente aggiornato, questi screenshot potrebbero non essere identici alla tua installazione, ma dovrebbero essere ancora possibili da seguire.
 
-Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might be also be minor differences in the steps for the different  platforms.
+Dal momento che **Android Studio** viene eseguito su piattaforme Windows, Mac OS X e Linux, potrebbero esserci anche piccole differenze nelle fasi per le diverse piattaforme.
 
 (install-git-if-you-dont-have-it)=
-### Install Git
+### Installare Git
 
 ```{admonition} Why Git? 
 :class: dropdown
