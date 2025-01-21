@@ -75,9 +75,9 @@ Se aggiorni da una versione precedente a 2.8.x, segui le istruzioni per fare un 
 
 ### Controlla la versione JVM
 
-This check is particularly indicated if you have already built a previous version of **AAPS** on the same computer.
+Questo controllo è particolarmente racommandato se hai già costruito una versione precedente di **AAPS** sullo stesso computer.
 
-Check in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file) the required version for JVM, matching the **AAPS** version you are now building. Then follow the steps described at [Incompatible Gradle JVM](#incompatible-gradle-jvm) to make sure you currently use the correct version.
+Controlla nelle [Istruzioni di Costruzione](#Building-APK-recommended-specification-of-computer-for-building-apk-file) le versioni necessarie per JVM e Gradle, corrispondenti alla versione **AAPS** che stai costruendo. Quindi segui i passaggi descritti in [Gradle JVM incompatibile](#incompatible-gradle-jvm) per assicurarti di utilizzare la versione corretta.
 
 (Update-to-new-version-build-the-signed-apk)=
 ### Costruisci l'APK Firmato

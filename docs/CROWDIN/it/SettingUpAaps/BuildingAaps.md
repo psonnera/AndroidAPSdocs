@@ -1,65 +1,65 @@
-# Building AAPS
+# Costruire AAPS
 
-## Build yourself instead of download
+## Costruisci te stesso invece di scaricare
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**L'app AAPS (un file apk) non è disponibile per il download, a causa delle normative sui dispositivi medici. È legale costruire l'app per il proprio uso, ma non devi darne una copia ad altri!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Vedi la pagina [Domande frequenti](../UsefulLinks/FAQ.md) per i dettagli.
 
 
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
-## Computer and software specifications for building AAPS
+## Specifiche computer e software per la costruzione di AAPS
 
-* A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk. See table below :
+* Una versione specifica di **[Android Studio](https://developer.android.com/studio/)** potrebbe essere necessaria per costruire l'apk. Cfr. tabella sotto:
 
-| AAPS Version        | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version                                                              | Gradle | JVM |
-| ------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------ |:--- |
-| [3.2](#version3200) | Hedgehog (2023.1.1)                                  | Iguana (2023.2.1)<br/>Jellyfish (2023.3.1)<br/>Koala (2024.1.1)<br/>Ladybug (2024.2.1)<br/> | 8.2    | 19  |
-| [3.3](#version3300) | Ladybug (2024.2.1)                                   |                                                                                                                     | 8.9    | 21  |
+| Versione AAPS       | Versione<br/>Android Studio<br/>preferita | Versione Alternative<br/>Android Studio<br/>                                                            | Gradle | JVM |
+| ------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------ |:--- |
+| [3.2](#version3200) | Hedgehog (2023.1.1)                                   | Iguana (2023.2.1)<br/>Jellyfish (2023.3.1)<br/>Koala (2024.1.1)<br/>Ladybug (2024.2.1)<br/> | 8.2    | 19  |
+| [3.3](#version3300) | Ladybug (2024.2.1)                                    |                                                                                                                     | 8.9    | 21  |
 
-The "preferred version" is packaged with the appropriate JVM version. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+La "versione preferita" contiene già la versione JVM appropriata. Se usi una versione diversa, potresti incontrare dei problemi con la versione JVM. Guarda la pagina [Risoluzione dei problemi Android Studio](#troubleshooting_androidstudio-uncommitted-changes) per aiutarti a risolverli. Se la tua versione attuale di Android Studio non è elencata nella tabella, è necessario aggiornarla prima.
 
-The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
+La versione Gradle è legata al codice sorgente, otterrai sempre la versione corretta Gradle quando scarichi / aggiorni il codice sorgente. E menzionata qui solo per riferimento, non è necessario intervenire su di esso.
 
-* [Windows 32-bit systems](#troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.
+* I sistemi [Windows 32 bit](#troubleshooting_androidstudio-unable-to-start-daemon-process) non sono supportati da Android Studio. Tieni presente che sia **la CPU 64 bit che il sistema operativo a 64 bit sono condizioni obbligatorie.** Se il sistema NON soddisfa queste condizioni, è necessario cambiare il computer, il software, o l'intero sistema.
 
 <table class="tg">
 <tbody>
   <tr>
-    <th class="tg-baqh">OS (Only 64 bit)</th>
-    <td class="tg-baqh">Windows 8 or higher</td>
-    <td class="tg-baqh">Mac OS 10.14 or higher</td>
-    <td class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</td>
+    <th class="tg-baqh">OS (solo 64 bit)</th>
+    <td class="tg-baqh">Windows 8 o superiore</td>
+    <td class="tg-baqh">Mac OS 10.14 o superiore</td>
+    <td class="tg-baqh">Qualsiasi Linux che supporta Gnome, KDE o Unity DE;&nbsp;&nbsp;librerie GNU C 2.31 o versioni successive</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
-    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
+    <th class="tg-baqh"><p align="center">CPU (solo 64 bit)</th>
+    <td class="tg-baqh">CPU di architettura x86_64; Intel Core di seconda generazione o più recente, o CPU AMD con supporto per <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">Chip basati su ARM, o Intel Core di seconda generazione o più recenti con supporto per <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <td class="tg-baqh">CPU di architettura x86_64; Intel Core di seconda generazione o più recente, o processore AMD con supporto per la virtualizzazione AMD (AMD-V) e SSSE3</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">8GB or more</td>
+    <th class="tg-baqh"><p align="center">Memoria</th>
+    <td class="tg-baqh" colspan="3"><p align="center">Uguale o superiore a 8GB</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Disk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
+    <th class="tg-baqh"><p align="center">Disco fisso</th>
+    <td class="tg-baqh" colspan="3"><p align="center">Almeno 30GB di spazio libero. SSD consigliato.</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Resolution</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
+    <th class="tg-baqh"><p align="center">Risoluzione</th>
+    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimo <br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
-    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Banda larga</td>
   </tr>
 </tbody>
 </table>
 
-**It is strongly recommended (not mandatory) to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the AAPS apk file.**  You can still use a HDD when you are building the **AAPS** apk file. If you do, the building process may take a long time to complete, but once it has started, you can leave it running unattended.
+**E' fortemente consigliato (non obbligatorio) utilizzare un disco SSD (stato solido) invece di un HDD (meccanico) perché ci vorrà meno tempo per costruire il file apk di AAPS.**  Puoi comunque usare un disco fisso meccanico per costruire il file apk di **AAPS**. Se ne usi uno, il processo di costruzione può richiedere molto tempo, ma una volta che è iniziato, puoi lasciarlo in esecuzione incustodito.
 
-## Help and support during the building process
+## Aiuto e assistenza durante il processo di costruzione
 
 If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](../GettingHelp/TroubleshootingAndroidStudio) section, please consult that first.
 
