@@ -105,16 +105,16 @@ La sfida per la modalità UAM aumenta con l'aumento dell'EBG (effetto sul glucos
 
 The most difficult meals are those with exclusively very high and high EBG components (see red in the picture): Not only does glucose shoot up rapidly, but also there is not much of a fat/protein/fibre component to balance the inevitable “tail” of insulin activity that would come with attempts to control the high glucose earlier on.
 
-**Erratic consumption of snacks and sweet drinks** that are loaded with fast resorbing carbs is a problem.
+**Il consumo errato di snack e bevande dolci**che sono carichi di carboidrati a rapido assorbimento è un problema.
 
 
-### Lifestyle-related limitations
+### Limitazioni legate allo stile di vita
 
-#### Technically stable system
+#### Sistema tecnicamente stabile
 
-Full closed looping requires a 24/7 technically stable system, especially regarding reliable **CGM** signals, but also **Bluetooth stability** with the **pump**, and avoiding (or at least early recognition of) occlusion. This could require attention to details like keeping all components well charged and in close proximity; making cannula (or pod) changes always early enough to lower the risk of occlusion; having always potentially needed parts with you. **Depending on your system, your experience with it, but also on your acceptance and general lifestyle, these aspects may or may not limit you.**
+Il loop chiuso completo richiede un sistema tecnicamente stabile 24/7, specialmente per quanto riguarda i segnali affidabili **CGM**, ma anche la **stabilità del collegamento Bluetooth ** con la pompa **, ed evitando (o almeno il riconoscimento tempestivo dell'occlusione). Questo potrebbe richiedere attenzione ai dettagli come mantenere tutti i componenti ben carichi e in stretta prossimità; fare cambiamenti di cannula (o pod) sempre abbastanza presto per ridurre il rischio di occlusione; avere sempre con sé parti potenzialmente necessarie. **A seconda del vostro sistema, della vostra esperienza con esso, ma anche della vostra accettazione e del vostro stile di vita generale, questi aspetti possono o meno limitarvi.**</p>
 
-#### Preparing for activity/sports
+#### Preparazione per attività/sportive
 
 To prepare for activity / sports /exercise,  the normal protocol with a pump or **hybrid** closed loop is to take actions that reduce insulin on board prior to exercise.
 
