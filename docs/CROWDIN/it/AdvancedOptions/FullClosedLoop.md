@@ -116,26 +116,28 @@ Il loop chiuso completo richiede un sistema tecnicamente stabile 24/7, specialme
 
 #### Preparazione per attività/sportive
 
-To prepare for activity / sports /exercise,  the normal protocol with a pump or **hybrid** closed loop is to take actions that reduce insulin on board prior to exercise.
+Per prepararsi all'attività/sport/esercizio fisico, il normale protocollo con una pompa o un loop chiuso
 
-With your **full closed loop**, the algorithm is tuned to detect meals and to give you insulin to counter glucose rises automatically. Setting a high temp. target and lower %profile right away (effective already around meal start) would be a problem.
+ibrido</strong> è quello di intraprendere azioni che riducano l'insulina a bordo prima dell'esercizio.
 
-Unusual activity levels therefore likely require **disciplined preparation** (especially **if you want to keep the need to snack during sports low**). In nights after an active day it can be smart to keep a lowered% profile, and set, for the hours after the evening meal is fully digested, an elevated (>100 mg/dl) glucose target, with “no SMBs at elevated target” selected in AAPS preferences.
+Con il **loop chiuso completo**, l'algoritmo è regolato per rilevare i pasti e per darvi insulina per contrastare automaticamente gli aumenti di glucosio. Impostare una basale temporanea elevata. un target glicemico e profilo % immediatamente inferiore (efficace già all'inizio del pasto) sarebbero un problema.
+
+I livelli di attività insoliti richiedono quindi una **preparazione disciplinata** (specialmente ** se si desidera mantenere bassa la necessità di fare uno spuntino durante gli sport**). Nelle notti dopo una giornata attiva può essere intelligente mantenere una % profilo ridotta e impostare, per le ore successive alla completa digestione del pasto serale, un target di glucosio elevato (>100 mg/dl), con "nessun SMB con target elevato" selezionato nelle preferenze AAPS.
 
 #### Hurdles for kids
 
-To establish and maintain a FCL for kids brings about some extra challenges if:
+Stabilire e mantenere una FCL per i bambini comporta alcune sfide aggiuntive se:
 
-- Lyumjev is not available or well tolerated
-- Hourly basal rate is very low, providing a poor basis for big SMBs
-- Diet is rich in sweet components. With the typical low blood volume of a small body, strong tendency towards very high bg spikes!
-- Going through marked changes of insulin sensitivity or of circadian pattern makes it difficult to keep the FCL appropriately tuned.
+- Lyumjev non è disponibile o ben tollerata
+- Il tasso basale orario è molto basso, fornendo una base scadente per i grandi SMB
+- La dieta è ricca di  dolciumi. Con il tipico basso volume di sangue di un piccolo corpo, forte tendenza verso picchi glicemici molto alti!
+- Passare attraverso marcati cambiamenti della sensibilità all'insulina o del pattern circadiano rende difficile mantenere la FCL adeguatamente regolata.
 
-There are a couple of parents and kids pioneering this area, too. This paper highlights areas that would require some minimum compliance; in the end it comes down to whether the achieved results are at least comparable to where everyone stood in her/his everyday hybrid closed loop.
+Ci sono anche un paio di genitori e bambini all'avanguardia in quest'area. Questo documento mette in evidenza le aree che richiederebbero una certa conformità minima; alla fine si tratta di stabilire se i risultati ottenuti sono almeno paragonabili a quelli di tutti i soggetti nel proprio loop chiuso ibrido quotidiano.
 
-#### Time required for setting-up
+#### Tempo necessario per l'installazione
 
-Lastly, before enjoying a functioning full closed loop you need to have a period of a some weeks with some free time and „free head“ for set-up –. Can you get, in the time you are willing to invest, to a result that you consider good-enough is really the question. Depending on your „habits“, and which – if any - compromises (like doing cannula/pod changes more often, never starting meals when bg sits high … ) are you willing to make (and everyday able to stick to), for the ease of not having to deal with assessing meals and bolussing for them?
+Infine, prima di godere di un loop chiuso completo funzionante è necessario avere un periodo di alcune settimane con un po 'di tempo libero e "testa libera" per l'installazione -. Puoi ottenere, nel tempo che sei disposto a investire, un risultato che consideri abbastanza buono è davvero la domanda. A seconda delle vostre "abitudini", - se ce ne sono - e compromessi (come cambiare la cannula/pod più spesso, non iniziare mai i pasti quando la glicemia è alta[...]… ) are you willing to make (and everyday able to stick to), for the ease of not having to deal with assessing meals and bolussing for them?
 
 ## Enabling boosted SMBs; safety
 
