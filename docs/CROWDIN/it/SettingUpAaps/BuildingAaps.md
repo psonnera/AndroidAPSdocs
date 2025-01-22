@@ -214,52 +214,52 @@ Ora diremo a Android Studio da dove ottenere il codice:
 ![Get from Version Control](../images/Building-the-App/033_CloneGit.png)
 
 * "Repository URL" deve essere selezionato (impostazione predefinita) a sinistra (1).
-* "Git" should be selected (by default) as version control (2).
-* Now copy this URL:
+* "Git" deve essere selezionato (impostazione predefinita) come controllo di versione (2).
+* Ora copia questo indirizzo URL:
     ```
     https://github.com/nightscout/AndroidAPS.git
     ```
-    and paste it into the URL textbox (3).
+    e incollalo nella casella di testo dell'URL (3).
 
-* Check the (default) directory for saving the cloned code exists on your computer and doesn't already exists (4). You can change it to some directory, but please remember where you stored it!
-* Now click the button "Clone" (5).
+* Check the (default) directory for saving the cloned code exists on your computer and doesn't already exists (4). Puoi cambiarla in qualsiasi cartella, ma ricordati dove hai salvato il progetto!
+* Ora clicca sul pulsante "Clone" (5).
 
 ```{admonition} INFORMATION
-:class: information
-Make a note of the directory. It is where your sourcecode is stored!
+:class: informazioni
+Prendi nota della cartella. È dove viene memorizzato il tuo codice sorgente!
 ```
 
-You will now see a screen telling you that the repository is being cloned:
+Ora vedrai uno schermo che ti dice che il repository è in fase di clonazione:
 
 ![cloning_repository](../images/Building-the-App/034_CloningProgress.png)
 
-At some point, Android Studio will close and start again. You may be asked whether you want to trust the project. Click on "Trust project":
+Ad un certo punto, Android Studio si chiuderà e ricomincierà. Ti potrebbe essere chiesto se vuoi fidarti del progetto. Clicca su "Trust project":
 
   ![Trust project](../images/Building-the-App/035_TrustProject.png)
 
 
-Only for Windows users: If your firewall asks for permission, grant access:
+Solo per gli utenti Windows: Se il firewall richiede l'autorizzazione, concedi l'accesso:
 
  ![Firewall permission java](../images/AndroidStudio361_18.png)
 
-After the repository is cloned successfully, Android Studio will open the cloned project.
+Dopo aver clonato il repository con successo, Android Studio aprirà il progetto clonato.
 
 (NewUI)=
 ```{admonition} New UI
-:class: information
-Android Studio changed its UI recently. New installations of Android Studio use the new UI by default!
+:class: informazioni
+Android Studio ha cambiato la sua interfaccia grafica di recente. Le nuove installazioni di Android Studio utilizzano la nuova interfaccia per impostazione predefinita!
 
-Only if your Android Studio looks different, you might need to switch to the new UI:
-Click on the hamburger menu on the top left, then select **Settings** (or **Preferences** on Apple computers).
-In **Appearance & Behaviour**, go to **New UI** and tick **Enable new UI**. Then restart Android Studio to start using it.
+Solo se il tuo Android Studio sembra diverso, potrebbe essere necessario passare alla nuova interfaccia:
+Fai clic sul menu hamburger in alto a sinistra, quindi seleziona **Impostazioni** (o **Preferenze** su computer Apple).
+In **Appearance & Behaviour**, vai su **New UI** e spunta **Enable new UI**. Quindi riavvia Android Studio per iniziare a usarlo.
 
-If you don't find the option **New UI** don't worry: you are already using it!
+Se non trovi l'opzione **New UI** non ti preoccupare: la stai già utilizzando!
 ```
 
 
-When Android Studio opened, wait patiently (this may take a few minutes), and particularly, **do not** update the project as suggested in the pop-up.
+Quando Android Studio si è aperto, aspetta pazientemente (questo può richiedere alcuni minuti), e in particolare, **non** aggiorna il progetto come suggerito nel pop-up.
 
-Android Studio will start a "Gradle project sync" automatically, which will take a couple of minutes to finish. You can see it (still) running:
+Android Studio avvierà automaticamente una "sincronizzazione del progetto Gradle", che richiederà un paio di minuti per finire. Lo puoi vedere (ancora) in esecuzione:
 
 ![AS_download_dependencies](../images/Building-the-App/036_GradleSyncing.png)
 
