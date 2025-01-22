@@ -88,14 +88,14 @@ Dal momento che **Android Studio** viene eseguito su piattaforme Windows, Mac OS
 ```{admonition} Why Git? 
 :class: dropdown
 
-Git is known as a “_Versioning Control System_” (VCS).\
-Git is a program that allows you to track changes in code and to collaborate with others. You will use Git to make a copy of the **AAPS** source code from the GitHub website to your local computer. Then, you will use Git on your computer to build the **AAPS** application (apk). 
+Git è conosciuto come un “_Versioning Control System_” (VCS).
+Git è un programma che consente di tenere traccia delle modifiche nel codice e di collaborare con gli altri. Utilizzerai Git per fare una copia del codice sorgente **AAPS** dal sito GitHub al tuo computer locale. Quindi, utilizzerai Git sul tuo computer per creare l'applicazione **AAPS** (apk). 
 ```
 
 (BuildingAaps-steps-for-installing-git)=
-#### Steps for Installing Git
+#### Passi per l'installazione di Git
 
-1.  Check that you don’t already have **Git** installed. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#install-android-studio):
+1.  Verifica che non hai già installato **Git**. Puoi farlo digitando “git” nella barra di ricerca di Windows – se si vede **“Git bash”** o qualche altra forma di Git, è già installato e puoi andare direttamente su [installa Android Studio](#install-android-studio):
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
