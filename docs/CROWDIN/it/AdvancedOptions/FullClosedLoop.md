@@ -137,13 +137,13 @@ Ci sono anche un paio di genitori e bambini all'avanguardia in quest'area. Quest
 
 #### Tempo necessario per l'installazione
 
-Infine, prima di godere di un loop chiuso completo funzionante è necessario avere un periodo di alcune settimane con un po 'di tempo libero e "testa libera" per l'installazione -. Puoi ottenere, nel tempo che sei disposto a investire, un risultato che consideri abbastanza buono è davvero la domanda. A seconda delle vostre "abitudini", - se ce ne sono - e compromessi (come cambiare la cannula/pod più spesso, non iniziare mai i pasti quando la glicemia è alta[...]… ) are you willing to make (and everyday able to stick to), for the ease of not having to deal with assessing meals and bolussing for them?
+Infine, prima di godere di un loop chiuso completo funzionante è necessario avere un periodo di alcune settimane con un po 'di tempo libero e "testa libera" per l'installazione -. Puoi ottenere, nel tempo che sei disposto a investire, un risultato che consideri abbastanza buono è davvero la domanda. A seconda delle vostre "abitudini", - se ce ne sono - e compromessi (come cambiare la cannula/pod più spesso, non iniziare mai i pasti quando la glicemia è alta[...]… ) siete disposti a fare (e ogni giorno in grado di attenersi a), per la facilità di non avere a che fare con la valutazione dei pasti e il calcolo bolo per loro?
 
-## Enabling boosted SMBs; safety
+## Abilitazione SMB potenziato; sicurezza
 
-In hybrid closed looping, strong safety restrictions are implemented regarding bolus sizes that can be automatically given by the loop.
+Nel loop ibrido chiuso, sono attuate forti restrizioni di sicurezza per quanto riguarda le unità dei boli che possono essere automaticamente fornite dal loop.
 
-However, in full closed loop application, loopers themselves do no longer give a sizeable bolus around meal start. Then clearly size limits on SMBs must be widened to make the loop capable of giving large enough SMBs.
+Tuttavia, nell'applicazione a loop chiuso, gli stessi utilizzatori non somministrano più un bolo considerevole a inizio del pasto. Quindi i limiti di dimensione degli SMB devono essere ampliati per rendere il loop in grado di dare SMB abbastanza grandi.
 
 As you are operating with AAPS Master release, it is suggested you set in AAPS preferences the largest setting for maximum allowed SMB size the loop can give (maxUAMSMBBasalMinutes=120, i.e. 2 hours worth of basal at that daytime).
 
