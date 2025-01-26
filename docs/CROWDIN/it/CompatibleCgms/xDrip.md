@@ -87,63 +87,63 @@ Ricordati di disabilitare Importa suoni per evitare che xDrip+ faccia una suoner
 
 ### Impostazioni specifiche Dexcom
 
-* Follow [these instructions](https://navid200.github.io/xDrip/docs/G6-Recommended-Settings.html) to setup xDrip+.
+* Segui [queste istruzioni](https://navid200.github.io/xDrip/docs/G6-Recommended-Settings.html) per configurare xDrip+.
 
 
-### Preemptive restarts not recommended
+### Riavvio preventivo sconsigliato
 
-**Only rebatteried or modified Dexcom transmitters. [Preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) do not work with standard transmitters and will stop the sensor completely: you need to [remove the transmitter](https://navid200.github.io/xDrip/docs/Remove-transmitter.html) to restart the sensor.**
+**Solo trasmettitori Dexcom con batteria sostituibile o modificati. Il [riavvio preventivo](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) non funziona con trasmettitori standard e fermerà completamente il sensore: è necessario [rimuovere il trasmettitore](https://navid200.github.io/xDrip/docs/Remove-transmitter.html) per riavviare il sensore.**
 
-The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
+L’estensione automatica dei sensori Dexcom (`riavvio preventivo`) non è raccomandata in quanto ciò potrebbe portare a “salti” nei valori di glicemia il giorno 9 dopo il riavvio.
 
 ![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
-To use it safely, there are a few points to be aware of:
+Per utilizzarlo in modo sicuro, ci sono alcuni punti di cui essere a conoscenza:
 
-* If you are using the native data with the calibration code in xDrip+ or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
-* If you must use preemptive restarts, then make sure you insert at a time of day where you can observe the change and calibrate if necessary.
-* If you are restarting sensors, either do it without the factory calibration for safest results on days 11 and 12, or ensure you are ready to calibrate and keep an eye on variation.
-* Pre-soaking of the G6 with factory calibration is likely to give variation in results. If you do pre-soak, then to get best results, you will probably need to calibrate the sensor.
-* If you aren’t being observant about the changes that may be taking place, it may be better to revert to non-factory-calibrated mode and use the system like a G5.
+* Se utilizzi i dati nativi con il codice di calibrazione in xDrip+ o Spike, la cosa più sicura da fare è di non consentire il riavvio preventivo del sensore.
+* Se è necessario riavviare preventivamente, assicurati di effettuarlo in un momento della giornata in cui è possibile osservare il cambiamento e tarare se necessario.
+* Se stai riavviando i sensori, fallo senza usare la calibrazione di fabbrica per risultati più sicuri nei giorni 11 e 12, o assicurati di essere pronto a calibrare e tieni d'occhio le variazioni.
+* È probabile che l'inserimento anticipato dei sensori G6/ONE crei variazioni nei risultati. Quando inserisci il sensore in anticipo, è meglio calibrarlo per ottenere risultati migliori.
+* Se non sei pronto ad osservare tutte le circostanze in cui il G6 potrebbe fornire informazioni sbagliate, sarebbe meglio non usare la calibrazione di fabbrica e quindi utilizzare il sistema come se fosse un G5.
 
-To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
+Per saperne di più sui dettagli e i motivi di questi consigli,leggi [l'articolo completo](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) pubblicato da Tim Street in [www.diabettech.com](https://www.diabettech.com).
 
 (xdrip-connect-g6-transmitter-for-the-first-time)=
 
-### Connect G6 transmitter for the first time
+### Collegare il trasmettitore G6 per la prima volta
 
-**For second and following transmitters see [Extend transmitter life](#xdrip-extend-transmitter-life) below.**
+**Per i trasmettitori successivi, vedi [Estendere la vita del trasmettitore](#xdrip-extend-transmitter-life) sotto.**
 
-Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
+Segui [queste istruzioni](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
 (xdrip-transmitter-battery-status)=
 
-### Transmitter battery status
+### Stato della batteria del trasmettitore
 
-* Battery status can be controlled in system status  
-  → Hamburger Menu (1) → System Status (2) → If you are on the Classic Status Page (3) swipe the screen (4) to reach → G5/G6/G7 Status screen.
+* Lo stato della batteria può essere controllato nello stato del sistema  
+  → Menu (1) → Stato del sistema (2) → Se sei nella pagina Classic Status Page (3) scorri lo schermo (4) per raggiungere → Dex Status.
 
 ![xDrip+ System status](../images/xDrip_Dexcom_Battery.png)
 
-* See [here](https://navid200.github.io/xDrip/docs/Battery-condition.html) for more information.
+* Vedi [qui](https://navid200.github.io/xDrip/docs/Battery-condition.html) per maggiori informazioni.
 
 
 (xdrip-extend-transmitter-life)=
 
-### Extend transmitter life
+### Estendere la vita del trasmettitore
 
-* [Lifetime](https://navid200.github.io/xDrip/docs/Transmitter-lifetime.html) cannot be extended for Firefly transmitters: only rebatteried or modified transmitters.
-* Follow [these instructions](https://navid200.github.io/xDrip/docs/Hard-Reset.html) for non-Firefly transmitters.
+* [Il tempo di vita](https://navid200.github.io/xDrip/docs/Transmitter-lifetime.html) non può essere esteso per i trasmettitori Firefly: solo trasmettitori con batteria sostituibile o modificati.
+* Segui [queste istruzioni](https://navid200.github.io/xDrip/docs/Hard-Reset.html) per i trasmettitori non-Firefly.
 
 (xdrip-replace-transmitter)=
 
-### Replace transmitter
+### Sostituire il trasmettitore
 
-* Turn original Dexcom receiver off (if used).
-* [Stop sensor](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html) (only if replacing sensor).
+* Spegni il ricevitore Dexcom originale (se lo stai utilizzando).
+* [Stop sensore](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html) (solo se vuoi sostituire il sensore).
 
 
-* Forget device in xDrip+ system status AND in smartphone’s BT settings (Will be shown as Dexcom?? whereas ?? are the last two digits of the transmitter serial no.)  
+* Dimentica questo dispositivo nello Stato del sistema di xDrip+ E ANCHE nelle impostazioni Bluetooth dello smartphone (Sarà visualizzato come Dexcom?? dove ?? are the last two digits of the transmitter serial no.)  
   → Hamburger Menu (1) → System Status (2) → If you are on the Classic Status Page (3) swipe the screen (4) to reach → G5/G6/G7 Status screen → Forget Device (5).
 
 ![xDrip+ System status](../images/xDrip_Dexcom_StopSensor.png)
