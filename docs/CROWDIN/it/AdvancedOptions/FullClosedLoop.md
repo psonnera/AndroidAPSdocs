@@ -137,17 +137,17 @@ Ci sono anche un paio di genitori e bambini all'avanguardia in quest'area. Quest
 
 #### Tempo necessario per l'installazione
 
-Infine, prima di godere di un loop chiuso completo funzionante è necessario avere un periodo di alcune settimane con un po 'di tempo libero e "testa libera" per l'installazione -. Puoi ottenere, nel tempo che sei disposto a investire, un risultato che consideri abbastanza buono è davvero la domanda. A seconda delle vostre "abitudini", - se ce ne sono - e compromessi (come cambiare la cannula/pod più spesso, non iniziare mai i pasti quando la glicemia è alta[...]… ) are you willing to make (and everyday able to stick to), for the ease of not having to deal with assessing meals and bolussing for them?
+Infine, prima di godere di un loop chiuso completo funzionante è necessario avere un periodo di alcune settimane con un po 'di tempo libero e "testa libera" per l'installazione -. Puoi ottenere, nel tempo che sei disposto a investire, un risultato che consideri abbastanza buono è davvero la domanda. A seconda delle vostre "abitudini", - se ce ne sono - e compromessi (come cambiare la cannula/pod più spesso, non iniziare mai i pasti quando la glicemia è alta[...]… ) siete disposti a fare (e ogni giorno in grado di attenersi a), per la facilità di non avere a che fare con la valutazione dei pasti e il calcolo bolo per loro?
 
-## Enabling boosted SMBs; safety
+## Abilitazione SMB potenziato; sicurezza
 
-In hybrid closed looping, strong safety restrictions are implemented regarding bolus sizes that can be automatically given by the loop.
+Nel loop ibrido chiuso, sono attuate forti restrizioni di sicurezza per quanto riguarda le unità dei boli che possono essere automaticamente fornite dal loop.
 
-However, in full closed loop application, loopers themselves do no longer give a sizeable bolus around meal start. Then clearly size limits on SMBs must be widened to make the loop capable of giving large enough SMBs.
+Tuttavia, nell'applicazione a loop chiuso, gli stessi utilizzatori non somministrano più un bolo considerevole a inizio del pasto. Quindi i limiti di dimensione degli SMB devono essere ampliati per rendere il loop in grado di dare SMB abbastanza grandi.
 
-As you are operating with AAPS Master release, it is suggested you set in AAPS preferences the largest setting for maximum allowed SMB size the loop can give (maxUAMSMBBasalMinutes=120, i.e. 2 hours worth of basal at that daytime).
+Poiché si sta operando con la versione AAPS Master, si suggerisce di impostare nelle preferenze AAPS l'impostazione più grande per la dimensione massima consentita SMB che il loop può dare (maxUAMSMBBasalMinutes=120, cioè. 2 ore di basale in quel giorno).
 
-> If your basal rate is very low, the resulting SMB limits might be too low to allow good-enough control of your post-prandial glucose rises. In that case the solution might be to avoid diets with strong spikes and later switch to a AAPS dev variant that offers a new parameter in SMB delivery settings: smb_max_range_extension. It expands the standard maximum of 2 h worth of basal by a factor of >1. (Additionally, the default 50% SMB delivery ratio might be elevated in dev variants).
+> Se la basale è molto bassa, i limiti di SMB risultanti potrebbero essere troppo bassi per consentire un controllo sufficiente degli aumenti di glucosio post-prandiale. In that case the solution might be to avoid diets with strong spikes and later switch to a AAPS dev variant that offers a new parameter in SMB delivery settings: smb_max_range_extension. It expands the standard maximum of 2 h worth of basal by a factor of >1. (Additionally, the default 50% SMB delivery ratio might be elevated in dev variants).
 
 Going to the max. limits on SMB size in AAPS Master will not make the FCL mode inheritantly less safe. In contrary, you replace your big meal bolus by several smaller ones that you enable your loop to give you, and even with some minutes of delay. This virtually eliminates the hypo risk in the first 1-2 hours of any meal. In hour 3 and thereafter, there should not be much difference because in HCL and FCL the loop manages with the same algorithm.
 
