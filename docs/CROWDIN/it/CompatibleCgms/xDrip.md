@@ -143,119 +143,119 @@ Segui [queste istruzioni](https://navid200.github.io/xDrip/docs/Starting-G6.html
 * [Stop sensore](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html) (solo se vuoi sostituire il sensore).
 
 
-* Dimentica questo dispositivo nello Stato del sistema di xDrip+ E ANCHE nelle impostazioni Bluetooth dello smartphone (Sarà visualizzato come Dexcom?? dove ?? are the last two digits of the transmitter serial no.)  
-  → Hamburger Menu (1) → System Status (2) → If you are on the Classic Status Page (3) swipe the screen (4) to reach → G5/G6/G7 Status screen → Forget Device (5).
+* Dimentica questo dispositivo nello Stato del sistema di xDrip+ E ANCHE nelle impostazioni Bluetooth dello smartphone (Sarà visualizzato come Dexcom?? dove ?? sono le ultime due cifre del numero di serie del trasmettitore  
+  → Menu (1) → Stato del sistema (2) → Se non sei sulla pagina Classic Status Page (3) scorri lo schermo (4) per raggiungerla → Quindi tocca Dimentica Questo Dispositivo (5).
 
 ![xDrip+ System status](../images/xDrip_Dexcom_StopSensor.png)
 
 
-* Remove transmitter (and sensor if replacing sensor). To remove transmitter without removing sensor see [this](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), or this video [https://youtu.be/AAhBVsc6NZo](https://youtu.be/AAhBVsc6NZo).
-* Put the old transmitter far away to prevent reconnection. A microwave is a perfect Faraday shield for this - but unplug power cord to be 100% sure no one is turning the microwave on.
-* Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
-* Do not turn original Dexcom receiver (if used) back on before xDrip+ shows first readings.
+* Togli il trasmettitore (e il sensore se lo devi sostituire). Per rimuovere il trasmettitore senza rimuovere il sensore vedi [questo](https://navid200.github.io/xDrip/docs/Remove-transmitter.html) o questo video [https://youtu.be/AAhBVsc6NZo](https://youtu.be/AAhBVsc6NZo).
+* Metti il vecchio trasmettitore lontano per evitare la riconnessione. Un forno a microonde è un gabbia di Faraday perfetta per questo - ma scollega il cavo di alimentazione per essere 100% sicuro che nessuno accenderà il forno.
+* Segui [queste istruzioni](https://navid200.github.io/xDrip/docs/Starting-G6.html).
+* Non accendere il ricevitore Dexcom originale (se lo stai utilizzando) prima che xDrip+ mostri le prime letture.
 
 
-### New Sensor
+### Nuovo sensore
 
-* Turn original Dexcom receiver off (if used).
-* Stop sensor following [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html).
+* Spegni il ricevitore Dexcom originale (se lo stai utilizzando).
+* Ferma il sensore seguendo [queste istruzioni](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html).
 
-* Insert and then start a new sensor following [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
+* Inserisci e quindi avvia un nuovo sensore seguendo [queste istruzioni](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
 
 (xdrip-retrieve-sensor-code)=
 
-### Retrieve sensor code
+### Recupera il codice del sensore
 
-→ Hamburger Menu (1) → System Status (2) → If you are on the Classic Status Page (3) swipe the screen (4) to reach → G5/G6/G7 Status screen → Calibration Code.
+→ Menu (1) → Stato del sistema (2) → Se sei sulla pagina Classic Status Page (3) scorri lo schermo (4) per raggiungere → Dex Status → Calibration Code.
 
 ![xDrip+ Retrieve Dexcom Sensor Code2](../images/xDrip_Dexcom_SensorCode2.png)
 
 (xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)=
 
-### Troubleshooting Dexcom G5/G6 and xDrip+
+### Risoluzione dei problemi con Dexcom G5/G6 e xDrip+
 
-#### Problem connecting transmitter
+#### Problemi di collegamento al trasmettitore
 
-Follow [these instructions](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html).
+Segui [queste istruzioni](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html).
 
-#### Problem when starting new sensor
+#### Problemi all'avvio del nuovo sensore
 
-Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorFailedStart.html).
+Segui [queste istruzioni](https://navid200.github.io/xDrip/docs/Dexcom/SensorFailedStart.html).
 
 ## Libre 1
 
-* Setup your NFC to Bluetooth bridge in xDrip+
+* Configura il tuo dispositivo trasmettitore ponte NFC a Bluetooth in xDrip+
 
-  → Hamburger Menu (1) → Settings (2) → Less common settings (3) → Bluetooth Settings (4)
+  → Menu (1) → Impostazioni (2) → Impostazioni meno usate (3) → Impostazioni Bluetooth (4)
 
-* In Bluetooth Settings set the checkboxes exactly as in the screenshots below (5)
+* Nelle Impostazioni Bluetooth metti le caselle esattamente come nelle schermate sotto (5)
 
-  - Disable watchdogs as they will reset the phone Bluetooth and interrupt your pump connection.
+  - Disabilita il watchdog in quanto resetterà il Bluetooth del telefono e interromperà la connessione del microinfusore.
 
   ![xDrip+ Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
 
-* You can try to enable the following settings (7)
+* Puoi provare ad abilitare le impostazioni seguente (7)
 
-  - Use scanning
+  - Usa scansione
   - Trust Auto-Connect
-  - Use Background Scans
+  - Usa Scansione In Background
 
-* If you easily lose connection to the bridge or have difficulties recovering connection, **DISABLE THEM** (8).
+* Se perdi facilmente la connessione al trasmettitore o hai difficoltà a recuperare la connessione, **DISABILITALI** (8).
 
   ![xDrip+ Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
 
-- Leave all other options disabled unless you know why you want to enable them.
+- Lascia tutte le altre opzioni disabilitate a meno che sai perché le vuoi abilitare.
 
   ![xDrip+ Libre Bluetooth Settings 3](../images/xDrip_Libre_BTSettings3.png)
 
-### Libre smart reader battery level
+### Livello batteria del ponte Libre
 
-* Battery level of bridges such as MiaoMiao and Bubble can be displayed in AAPS (not Blucon).
-* Details can be found on [screenshots page](#screens-sensor-level-battery).
+* Il livello della batteria di trasmettitori come MiaoMiao e Bubble può essere visualizzato in AAPS (non Blucon).
+* I dettagli possono essere trovati nella [pagina delle schermate](#screens-sensor-level-battery).
 
-### Connect Libre Transmitter & start sensor
+### Connetti il trasmettitore Libre & avvia il sensore
 
-- If your sensor requires it (Libre 2 EU and Libre 1 US) install the [latest out of process algorithm](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view).
+- Se il tuo sensore lo richiede (Libre 2 EU e Libre 1 US) installa l'ultimo [algoritmo fuori di processo OOP](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view).
 
-- Your sensor must be already started using the vendor app or the reader (xDrip+ cannot start or stop Libre sensors).
+- Il sensore deve essere già avviato utilizzando l'app del fornitore oppure il lettore (xDrip+ non può avviare o fermare i sensori Libre).
 
-- Set the data source to Libre Bluetooth.
+- Imposta la sorgente dati su Libre Bluetooth.
 
-  → Hamburger Menu (1) → Settings (2) → Select Libre Bluetooth in Hardware Data source (3)
+  → Menu (1) → Impostazioni (2) → Seleziona Libre Bluetooth nei Dati hardware di origine (3)
 
   ![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
 
-- Scan Bluetooth and connect the bridge.
+- Scansiona il Bluetooth e collega il trasmettitore.
 
-  → Hamburger Menu (1) → Scan Bluetooth (2) → Scan (3)
+  → Menu (1) → Scansione Bluetooth (2) → Scansiona (3)
 
-  - If xDrip+ can't find the bridge, make sure it's not connected to the vendor app. Put it in charge and reset it.
+  - Se xDrip+ non riesce a trovare il trasmettitore, assicurati di non essere connesso all'app del fornitore. Mettilo in carica e resettalo.
 
   ![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
 
-- Start the sensor in xDrip+.
+- Avvia il sensore in xDrip+.
 
   ```{admonition} Safety warning
   :class: warning
-  Do not use sensor data before the one hour warm-up is over: the values can be extremely high and cause wrong decisions in AAPS.  
+  Non utilizzare i dati del sensore prima che il riscaldamento di un'ora sia finito: i valori possono essere estremamente alti e causare decisioni sbagliate in AAPS.  
   ```
 
-  → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Set the exact time you started it with the reader or the vendor app. If you didn't start it today, answer "Not Today" (4).
+  → Menu (1) → Avvia sensore (2) → Avvia sensore (3) → Imposta l'orario esatto al quale lo hai avviato con il lettore o l'app del fornitore. Se non lo hai avviato oggi, rispondi "Non oggi" (4).
 
 ![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
 
 
 (xdrip-libre2-patched-app)=
-## Libre 2 patched app
+## App modificata Libre 2
 
-* Set the data source to Libre patched app.
+* Imposta la sorgente dati su Libre (patched app).
 
-  → Hamburger Menu (1) → Settings (2) → Select Libre (patched App) in Hardware Data source (3)
+  → Menu (1) → Impostazioni (2) → Seleziona Libre (patch App) in Sorgente dati hardware (3)
 
   ![xDrip+ Libre Patched app 1](../images/xDrip_Libre_Patched01.png)
 
--   You can add `BgReading:d,xdrip libre_receiver:v` under Less Common Settings->Extra Logging Settings->Extra tags for logging. This will log additional error messages for trouble shooting.
+-   Puoi aggiungere `BgReading:d,xdrip libre_receiver:v` sotto Impostazioni meno usate->Impostazioni di log supplementari->Tag aggiuntivi per la registrazione. Questo registrerà ulteriori messaggi di errore per la risoluzione dei problemi.
 
 ![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
 
