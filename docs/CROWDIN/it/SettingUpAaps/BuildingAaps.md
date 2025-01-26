@@ -221,7 +221,7 @@ Ora diremo a Android Studio da dove ottenere il codice:
     ```
     e incollalo nella casella di testo dell'URL (3).
 
-* Check the (default) directory for saving the cloned code exists on your computer and doesn't already exists (4). Puoi cambiarla in qualsiasi cartella, ma ricordati dove hai salvato il progetto!
+* Controlla che la directory (default) per salvare il codice clonato non esiste già sul tuo computer (4). Puoi cambiarla in qualsiasi cartella, ma ricordati dove hai salvato il progetto!
 * Ora clicca sul pulsante "Clone" (5).
 
 ```{admonition} INFORMATION
@@ -266,24 +266,24 @@ Android Studio avvierà automaticamente una "sincronizzazione del progetto Gradl
 ```{admonition} NEVER UPDATE GRADLE!
 :class: warning
 
-Android Studio might recommend updating the gradle system. **Never update gradle!** This will lead to difficulties.
+Android Studio potrebbe raccomandare di aggiornare il gradle. **Non aggiornare mai Gradle!** Genererà soltanto dei problemi supplementari.
 ```
 
-Only on windows computers: You might get a notification about windows defender running: Click on **Automatically** and confirm, it will make the build run faster!
+Solo sui computer Windows: È possibile che avrai una notifica di Windows Defender: Clicca su **Automaticamente** e conferma, renderà la build più veloce!
 
 ![Windows Defender](../images/Building-the-App/037_WindowsDefender.png)
 
 
-You can leave the gradle sync running and follow the next steps already.
+Puoi lasciare andare la sincronizzazione gradle e proseguire con i passaggi successivi nel frattempo.
 
 (Building-APK-set-git-path-in-preferences)=
-### Set Git path in Android Studio preferences
+### Imposta percorso di Git nelle preferenze di Android Studio
 
-Now we will tell Android studio where to find Git, which you installed [earlier](#install-git-if-you-dont-have-it).
+Ora diremo a Android studio dove trovare Git, che hai installato [prima](#install-git-if-you-dont-have-it).
 
-* Windows users only: Make sure you have restarted your computer after [installing Git](#install-git-if-you-dont-have-it). If not, restart now and re-open Android Studio
+* Solo per gli utenti Windows: Assicurati di aver riavviato il computer dopo che [hai installato Git](#install-git-if-you-dont-have-it). Altrimenti, riavvialo ora quindi riapri Android Studio
 
-In the top left corner of **Android Studio**, open the hamburger menu and navigate to **File** > **Settings** (on Windows) or **Android Studio** > **Preferences** (on Mac). This opens the following window, click to expand the dropdown called **Version Control** (1) and select **Git**
+Nell'angolo in alto a sinistra di **Android Studio**, apri il menu hamburger e naviga in **File** > **Setting** (con Windows) o **Android Studio** > **Preferences** (con Mac). Aprirà la finestra successiva, clicca per espandere il menu a tendina chiamato **Version Control** (1) e seleziona **Git**
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
