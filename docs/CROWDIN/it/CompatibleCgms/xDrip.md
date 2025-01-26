@@ -2,40 +2,40 @@
 orphan: true
 - - -
 
-# xDrip+ settings
+# Impostazioni xDrip+
 
-If not already set up, then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
+Se non è già installato, scarica [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
-Disable battery optimization and allow background activity for the xDrip+ app.
+Disabilita l'ottimizzazione della batteria e abilita l'attività in background per l'app xDrip+.
 
-You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features or are using sensors that are being actively integrated (like G7), in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
+Puoi scaricare di modo sicuro l'ultima [APK (stabile)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) a meno che non hai bisogno di funzionalità recenti o se usi sensori che sono attivamente integrati (come G7), in questo caso dovresti utilizzare l'ultimo [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
 
-## Basic settings for all CGM & FGM systems
+## Impostazioni di base per tutti i sistemi CGM & FGM
 
-### Disable Nightscout upload
+### Disabilita il caricamento verso Nightscout
 
-Starting with AAPS 3.2, you shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
+A partire da AAPS 3.2, non dovresti permettere ad altre app di caricare i dati (glicemia e trattamenti) su Nightscout.
 
-→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) -> Nightscout Sync (REST-API)(4) → Switch **OFF** `Enabled` (5)
+→ Hamburger Menu (1) → Impostazioni (2) → Caricamento nel Cloud (3) -> API Upload (REST) (4) → Metti a **OFF** `Abilitato` (5)
 
 ![xDrip+ Basic Settings 1](../images/xDrip_Basic1.png)
 
-#### Disable automatic calibration and treatments
+#### Disabilita calibrazione automatica e trattamenti
 
-If you use an older version of AAPS (before 3.2), make sure to deactivate `Automatic Calibration` (7) If the checkbox for `Automatic Calibration` is checked, activate `Download treatments` (6) once, then remove the checkbox for `Automatic Calibration` and deactivate `Download treatments` again.
+Se usi una versione precedente di AAPS (prima di 3.2), assicurati di disattivare la `calibrazione automatica` (7) Se la casella per la calibrazione `automatica` è selezionata, attiva `Accetta trattamenti` (6) una volta, quindi deseleziona `Calibrazione automatica` e disattiva di nuovo `Accetta trattamenti`.
 
 ![xDrip+ Basic Settings 2](../images/xDrip_Basic2.png)
 
-Tap `Extra Options`(8)
+Tocca `Altre Opzioni`(8)
 
 ```{admonition} Safety warning
 :class: warning
-You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB. 
+Devi disattivare "Carica trattamenti" da xDrip+, altrimenti i trattamenti possono essere raddoppiati in AAPS portando a falsi COB e IOB. 
 ```
 
-Deactivate `Upload treatments`(9) and make sure you will **NOT** use `Back-fill data` (11).
+Disattiva i `Carica trattamenti`(9) e assicurati di **NON** utilizzare `Ricupera dati storici` (11).
 
-Option `Alert on failures` should also be deactivated (10). Otherwise you will get an alarm every 5 minutes in case Wi-Fi/mobile network issues or if the server is not available.
+Anche l'opzione `Allarmi in caso di errori` dovrebbe essere disattivata (10). Otherwise you will get an alarm every 5 minutes in case Wi-Fi/mobile network issues or if the server is not available.
 
 ![xDrip+ Basic Settings 3](../images/xDrip_Basic3.png)
 
