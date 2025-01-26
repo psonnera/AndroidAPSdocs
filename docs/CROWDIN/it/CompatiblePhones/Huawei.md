@@ -6,7 +6,7 @@ orphan: true
 
 Ci sono diverse opzioni, alcune specifiche a Android, altre specifiche a Huawei:
 
-* Add AAPS and xdrip+ to apps list which ignore battery optimisations:
+* Aggiungi AAPS e xdrip+ alla lista delle app che ignorano le ottimizzazioni della batteria:
   * Settings / App / Settings / Special autorisations / Ignore battery optimisation / Select "All applications" / Set app to allowed
 
     ![Huawei - ignore battery optimization](../images/Huawei_BatteryOptimization.png)
