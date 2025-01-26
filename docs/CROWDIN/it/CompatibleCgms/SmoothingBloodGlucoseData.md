@@ -2,52 +2,52 @@
 orphan: true
 - - -
 
-# Smoothing blood glucose data
+# Smoothing dei dati glicemici
 
-If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. If you observe errors in your CGM data it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
+Se i dati di glicemia (**BG**) sono salteggianti/rumorosi, **AAPS** può dosare l’insulina in modo non corretto con conseguenti iper o ipo. Se si osservano errori nei dati del sensore, è imperativo disattivare il circuito chiuso fino a quando il problema non verrà risolto. A seconda del tuo sensore, tali problemi potrebbero essere dovuti alla configurazione CGM in **AAPS** (come spiegato più avanti); o un problema del sito di inserimento del sensore (che potrebbe richiederne la sostituzione).
 
-Some CGM systems have internal algorithms to detect the noise level in the readings, and **AAPS** can use this information to avoid giving SMBs if the BG data is too unreliable. However, some CGMs do not transmit this data and for these BG sources 'Enable SMB always' and 'Enable SMB after carbs' are disabled for safety reasons.
+Alcuni sistemi CGM hanno algoritmi interni per rilevare il livello di rumore nelle letture, e **AAPS** può utilizzare queste informazioni per evitare di fare SMB se i dati di glicemia sono troppo inaffidabili. Tuttavia, alcuni CGM non trasmettono questi dati e per queste sorgenti di glicemia 'Abilita sempre SMB' e 'Abilita SMB con COB' sono disabilitati per motivi di sicurezza.
 
-## Smoothing data within AAPS
+## Smooting dei dati in AAPS
 
-As of **AAPS** version 3.2, **AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. There are three options available in [Config Builder > Smoothing](../SettingUpAaps/ConfigBuilder.md).
+A partire dalla versione **AAPS** 3.2, **AAPS** offre la possibilità di fare lo smoothing dei dati all'interno di **AAPS** piuttosto che nell'app CGM. Ci sono tre opzioni disponibili in [Configuratore Strutturale > Smoothing](../SettingUpAaps/ConfigBuilder.md).
 
 ![Smoothing](../images/ConfBuild_Smoothing.png)
 
-### Exponential smoothing
+### Smoothing esponenziale
 
-This is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value.
+Questa è l'opzione consigliata per cominciare, in quanto è più aggressiva nel risolvere il rumore, e riscrive il valore più recente.
 
-### Average smoothing
+### Smoothing medio
 
-This option works similar to back smoothing that was previously implemented on certain CGM platforms. It is more reactive to recent changes in BG value and therefore more prone to responding incorrectly to noisy CGM data.
+Questa opzione funziona in modo simile allo smoothing che è stato precedentemente implementato su alcune piattaforme CGM. È più reattivo ai recenti cambiamenti del valore di glicemia e quindi più soggetto a risposte errate ai dati CGM rumorosi.
 
-### No Smoothing
+### No smoothing
 
-Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to **AAPS**.
+Usa questa opzione solo se i tuoi dati CGM vengono correttamente filtrati dalla tua app prima di essere trasmessi ad **AAPS**.
 
-## Suggestions to use smoothing
+## Suggerimenti per usare lo smoothing
 
-|                           | Exponential |  Average  |    None     |
-| ------------------------- |:-----------:|:---------:|:-----------:|
-| G5 and G6                 |  If noisy   |           | Recommended |
-| G7                        |  If noisy   | If stable |             |
-| Libre 1 or Juggluco       | Recommended |           |             |
-| Libre 2 and 3 from xDrip+ |             |           | Recommended |
+|                       | Esponenziale |   Medio    |   Nessuno   |
+| --------------------- |:------------:|:----------:|:-----------:|
+| G5 e G6               | Se rumoroso  |            | Consigliato |
+| G7                    | Se rumoroso  | Se stabile |             |
+| Libre 1 o Juggluco    | Consigliato  |            |             |
+| Libre 2 e 3 da xDrip+ |              |            | Consigliato |
 
-### Dexcom sensors
+### Sensori Dexcom
 
-#### Build Your Own Dexcom App
-When using [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app), your BG data is smooth and consistent. Furthermore, you can take advantage of Dexcom back-smoothing. There are no restrictions in using SMBs, because the noise-level data is shared with AAPS.
+#### Costruisci La Tua App Dexcom (BYODA)
+Quando usi [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app), i dati di glicemia sono fluidi e coerenti. Inoltre, puoi approfittare dell'algoritmo Dexcom back-smoothing. Non ci sono restrizioni nell'utilizzo di SMB, perché i dati di livello di rumore sono condivisi con AAPS.
 
 (smoothing-xdrip-dexcom-g6)=
-#### xDrip+ with Dexcom G6 or Dexcom ONE
-Noise-level data and smooth BG readings are only shared with AAPS if you use xDrip+ [native mode](https://navid200.github.io/xDrip/docs/Native-Algorithm). Using native mode, there are no restrictions in using SMBs.
+#### xDrip+ con Dexcom G6 o Dexcom ONE
+I dati di livello di rumore e le letture regolari di glicemia sono solo condivisi con AAPS se usi la modalità nativa di [xDrip+](https://navid200.github.io/xDrip/docs/Native-Algorithm). Utilizzando la modalità nativa, non ci sono restrizioni nell'uso di SMB.
 
-#### Dexcom G6 or Dexcom ONE with xDrip+ Companion Mode
-The noise-level data is not shared with AAPS using this method. Therefore, 'Enable SMB always' and 'Enable SMB after carbs' are disabled.
+#### Dexcom G6 o Dexcom ONE con modalità Companion xDrip+
+I dati di livello di rumore non sono condivisi con AAPS utilizzando questo metodo. Pertanto, 'Abilita SMB sempre' e 'Abilita SMB con CHO' sono disabilitati.
 
-### Freestyle Libre sensors
+### Sensori Freestyle Libre
 
-#### xDrip+ with FreeStyle Libre1
-The FreeStyle Libre 1 does not broadcast any information about the level of noise detected in the readings, and therefore 'Enable SMB always' and 'Enable SMB after carbs' are disabled when using this CGM. In addition, many people have reported the FreeStyle Libre 1 often produces noisy data.
+#### xDrip+ con FreeStyle Libre1
+Il FreeStyle Libre 1 non trasmette alcuna informazione sul livello di rumore rilevato nelle letture, e quindi 'Abilita SMB sempre' e 'Abilita SMB con CHO' sono disabilitati quando si usa questo CGM. Inoltre, molte persone hanno segnalato che il FreeStyle Libre 1 produce spesso dati rumorosi.
