@@ -98,7 +98,7 @@ Git è un programma che consente di tenere traccia delle modifiche nel codice e 
 1.  Verifica che non hai già installato **Git**. Puoi farlo digitando “git” nella barra di ricerca di Windows – se si vede **“Git bash”** o qualche altra forma di Git, è già installato e puoi andare direttamente su [installa Android Studio](#install-android-studio):
 
 
-![Git_installed](../images/Building-the-App/001_check_git_installed.png)
+![Git_installato](../images/Building-the-App/001_check_git_installed.png)
 
 2. Se non hai installato Git, scarica e installa l'ultima versione per il tuo sistema dalla sezione "Download" [**qui**](https://git-scm.com/downloads). Qualsiasi recente versione di Git dovrebbe funzionare, seleziona la versione corretta in base al tuo sistema, Mac, Windows o Linux.
 
@@ -135,7 +135,7 @@ La versione di studio Android è molto importante. Segui le istruzioni [sopra](#
 
 Scarica la versione attuale di [Android Studio](https://developer.android.com/studio) o una versione precedente dall' [**Archivi**](https://developer.android.com/studio/archive) e accetta gli accordi per il download.
 
-![DownloadAndroidStudio](../images/Building-the-App/010_DownloadLadybug.png)
+![Scarica AndroidStudio](../images/Building-the-App/010_DownloadLadybug.png)
 
 Una volta completato il download, avvia l'applicazione scaricata per installarla sul computer. Potresti aver bisogno di accettare/confermare alcun avvertimento sulle app scaricate da Windows!
 
@@ -287,132 +287,132 @@ Nell'angolo in alto a sinistra di **Android Studio**, apri il menu hamburger e n
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
-Check if **Android Studio** can automatically locate the correct **Path to Git executable** automatically by clicking the button "Test" (1):
+Controlla se **Android Studio** può trovare automaticamente il **percorso per l'eseguibile di Git**, facendo clic sul pulsante "Test" (1):
 
 ![Git Executable](../images/Building-the-App/039_GitTest.png)
 
 
-If the automatic setting is successful, your current version of **Git** will be displayed next to the path.
+Se l'impostazione automatica è riuscita, la tua versione corrente di **Git** verrà visualizzata accanto al percorso.
 
    ![Git_version_displayed](../images/Building-the-App/039_GitTestSuccess.png)
 
 
-If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error (1), you can either
-* manually enter the path which you saved [earlier](#BuildingAaps-steps-for-installing-git), or
-* click on the folder icon (1) and manually navigating to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
-* Verify your settings with the **Test** button!
+Se **git.exe** non viene trovato automaticamente, oppure ottieni un errore cliccando su "Test" (1), puoi
+* inserire manualmente il percorso che hai salvato [in precedenza](#BuildingAaps-steps-for-installing-git) o
+* fare clic sull'icona della cartella (1) e navigare manualmente alla directory dove **git.exe** è stato installato [in precedenza](#BuildingAaps-steps-for-installing-git)
+* Verifica le impostazioni con il pulsante **Test**!
 
   ![Git not found](../images/Building-the-App/039_GitTestError.png)
 
 (Building-APK-generate-signed-apk)=
-### Build the AAPS "signed" APK
+### Costruisci l'APK AAPS "firmato"
 
 ```{admonition} Why does the AAPS app need to be "signed"?
 :class: dropdown
 
-Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key). 
+Android richiede che ogni app sia _firmata_, per garantire che possa essere aggiornata successivamente solo dalla stessa fonte attendibile che ha rilasciato l'app originale. Per ulteriori informazioni su questo argomento, segui [questo link](https://developer.android.com/studio/publish/app-signing.html#generate-key). 
 
-For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
+Per i nostri scopi, questo significa solo che generiamo un file di firma o "keystore" (chiavi) e lo usiamo quando costruiamo l'app **AAPS**.
 ```
 
 
-**Important: Make sure the gradle sync is finished successfully before proceeding!**
+**Importante: Assicurati che la sincronizzazione del gradle sia terminata con successo prima di procedere!**
 
 
-Click the hamburger menu on the top left to open the menu bar. Select **Build** (1), then select **Generate Signed App Bundle / APK** (2)
+Fare clic sul menu hamburger in alto a sinistra per aprire la barra dei menu. Seleziona **Build** (1), quindi seleziona **Generate Signed App Bundle / APK** (2)
 
 ![Build apk](../images/Building-the-App/040_GenerateSignedAPK.png)
 
-Select "APK" instead of "Android App Bundle" and click "Next":
+Seleziona "APK" invece di "Android App Bundle" e clicca su "Next":
 
 ![APK instead of bundle](../images/Building-the-App/041_APK.png)
 
-In the next screen, make sure that "Module" is set to "AAPS.app" (1).
+Nella schermata successiva, assicurati che "Module" sia impostato su "AAPS.app" (1).
 
 (Building-APK-wearapk)=
 ```{admonition} INFORMATION!
 :class: information
-If you want to create the apk for your watch, you now need to select AAPS.wear!
+Se vuoi creare l'apk per il tuo smartwatch, devi selezionare AAPS.wear!
 ```
 ![Create_key_store](../images/Building-the-App/042_CreateNewKey.png)
 
-Click "Create new..." (2) to start creating your key store.
+Clicca "Create new..." (2) per iniziare a creare il tuo keystore (chiavi).
 
 ```{admonition} INFORMATION!
 :class: information
-You will only need to create the keystore once.
-If you have build AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
+Dovrai solo creare il keystore una volta.
+Se hai costruito AAPS prima, NON creare un nuovo keystore ma seleziona quello esistente e inserisci le sue password!
 ```
 
-**_Note:_** The key store is a file in which the information for signing the app is stored. It is encrypted, and the information is secured with passwords.
+**_Nota:_** Il keystore è un file in cui vengono memorizzate le informazioni per la firma dell'app. È criptato e le informazioni sono protette con le password.
 
 ![Create key store](../images/Building-the-App/043_Keystore.png)
 
-* Click the "folder" symbol (1) to select a path on your computer for your key store.
+* Fai clic sul simbolo "cartella" (1) per selezionare il percorso del computer per il tuo keystore.
 
-  Do **not** use the directory where you stored your sourcecode but some directory that you would also transfer to a new computer.
-
-```{admonition} WARNING!
-:class: warning
-Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AndroidAPS update!
-```
-
-* Now choose a simple password (and make a note of it), enter it in the password box (2), and confirm it (2).
-
-  The passwords for key store and key do not have to be sophisticated. If you lose your password in the future, see [troubleshooting for lost key store](#troubleshooting_androidstudio-lost-keystore).
-
-* The default alias (3) for your key is "key0", leave this unchanged.
-
-* You now need a password for your key. To keep it simple, if you want, you can use the same password you used for your keystore, above. Enter a password (4) and confirm it.
+  **non** usare la cartella dove hai memorizzato il tuo codice sorgente, ma qualche altra cartella che userai per trasferirlo a un altro computer.
 
 ```{admonition} WARNING!
 :class: warning
-Note down these passwords! You will need them when you build the next AAPS update!
+Prendi nota di dove è salvato il tuo keystore. Ne avrai bisogno quando costruirai il prossimo aggiornamento di AndroidAPS!
 ```
 
-* The validity is 25 years by default, leave it as it is.
+* Ora scegli una password semplice (e segnatela in un posto sicuro), inseriscila nella casella di password (2), e confermala (2).
 
-* Enter your first and last name (5). No other information needs to be added but you are free to do (6-7).
+  Le password per il keystore e la chiave non devono essere sofisticate. Se perdi la tua password in futuro, vedi la risoluzione dei problemi [chiave persa](#troubleshooting_androidstudio-lost-keystore).
 
-* Click "OK" (8) to continue:
+* L'alias (3) predefinito per la tua chiave è "key0", lascialo cosi.
+
+* Ora hai bisogno di una password per la tua chiave. Per mantenere semplice, se vuoi, puoi usare la stessa password che hai usato per il tuo keystore, sopra. Inserisci una password (4) e conferma.
+
+```{admonition} WARNING!
+:class: warning
+Segna queste password! Ne avrai bisogno quando costruirai il prossimo aggiornamento di AndroidAPS!
+```
+
+* La validità è di 25 anni di default, lascialo così com'è.
+
+* Inserisci il tuo nome e cognome (5). Non è necessario aggiungere altre informazioni, ma sei libero di farlo (6-7).
+
+* Clicca su "OK" (8) per proseguire:
 
 
-On the **Generate signed App Bundle or APK** page, the path to your keystore will now be displayed. Now re-enter the Key Store password (1) and Key password (2), and tick the box (3) to remember passwords, so you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version). Click "Next" (4):
+Nella pagina **Generate signed App Bundle or APK**, verrà visualizzato il percorso del tuo keystore. Ora reinserisci la password (1) e la password (2) del keystore e spunta la casella (3) per ricordare le password, in modo da non doverli entrare di nuovo la prossima volta che si costruisce l'apk (es. quando aggiorni a una nuova versione AAPS). Clicca "Next" (4):
 
 ![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
 
 
-On the next screen, select build variant "fullRelease" (2) and click "Create" (3). You should remember the directory displayed at (1), as later you will find your built apk file there!
+Nella schermata successiva, seleziona la variante di build "fullRelease" (2) e clicca su "Create" (3). Devi ricordare la cartella visualizzata in (1), perché in seguito troverai il tuo file apk costruito proprio lì!
 
    ![Select build variant](../images/Building-the-App/045_BuildPath.png)
 
-Android Studio will now build the **AAPS** apk. It will show "Gradle Build running" (2) at the bottom right. The process takes some time, depending on your computer and internet connection, so **be patient!** If you want to watch the progress of the build, click on the small hammer "build" (1) at the bottom of Android Studio:
+Android Studio ora costruirà l'apk **AAPS**. Mostrerà "Gradle Build running" (2) in basso a destra. Il processo richiede un po' di tempo, a seconda del computer e della connessione a internet, quindi **sii paziente!** Se vuoi guardare il progresso della build, clicca sul piccolo martello "build" (1) nella parte inferiore di Android Studio:
 
 ![Gradle Running](../images/Building-the-App/046_BuildRunning.png)
 
-Now you can watch the building progress:
+Ora puoi guardare il progresso della costruzione:
 
 ![Android_Studio_building](../images/Building-the-App/047_BuildDetails.png)
 
-Android Studio will display the information "BUILD SUCCESSFUL" after build is finished. You may see a popup notification which you can click to select "locate". If you miss this, click on the notification icon (1) and then on **locate** (2) at the very bottom of the screen to bring up the Notifications:
+Android Studio mostrerà l'informazione "BUILD SUCCESSFUL" dopo che la costruzione è finita. Potresti vedere una notifica popup dove puoi cliccare "locate" per localizzare la cartella del file apk. Se te la sei persa, clicca sull'icona della notifica (1) e poi su **locate** (2) nella parte inferiore dello schermo per far apparire le notifiche:
 
 ![Build finished](../images/Building-the-App/049_ReopenNotification.png)
 
-**_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio)._**
+**_Se la build non è andata a buon fine, fai riferimento alla sezione [Risoluzione dei problemi Android Studio](../GettingHelp/TroubleshootingAndroidStudio)._**
 
-In the Notifications box, click on the blue link "locate":
+Nella casella Notifiche, clicca sul link blu "locate":
 
-![Locate build](../images/Building-the-App/048_BuildFinished.png) Your file manager will open and show you the build apk file that you have just built.
+![Locate build](../images/Building-the-App/048_BuildFinished.png) Il file manager si aprirà e mostrerà il file apk che hai appena costruito.
 
    ![File location apk](../images/Building-the-App/050_LocateAPK.png)
 
-Congratulations! Now you have built the **AAPS** apk file, you will be transferring this file to your smartphone in the next section of the docs.
+Complimenti! Ora hai costruito il file apk di **AAPS**, trasferirai questo file sul tuo smartphone nella sezione successiva dei documenti.
 
 ```{tip}
-If you think you might want to use an Android Wear smartwatch in the future, this is the best time to build the AAPS Wear apk to be sure it will be synchronized with your AAPS apk.
+Se pensi che potresti voler utilizzare uno smartwatch Android Wear in futuro, questo è il momento migliore per costruire l'apk AAPS Wear per essere sicuro che sarà sincronizzato con il tuo apk AAPS.
 ```
 
-Move to the next stage of [Transferring and Installing **AAPS**](../SettingUpAaps/TransferringAndInstallingAaps.md).
+Passa alla fase successiva [Trasferimento e installazione di **AAPS**](../SettingUpAaps/TransferringAndInstallingAaps.md).
 
 
 
