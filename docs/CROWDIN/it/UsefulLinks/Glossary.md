@@ -8,6 +8,10 @@ __APS__ = Artificial Pancreas System.
 
 __AMA__ = Advanced Meal Assist. An algorithm which allows __AAPS__ to increase the user’s basal more aggressively after a meal bolus. Further info → Wiki - 'AMA'.
 
+__Adjustment Factor__ = used within **DynamicISF** and is a value set within a user's **Preferences** between 1% and 300%. This acts as a multiplier on the **TDD** value.
+- increasing the **Adjustment Factor** value above 100 % makes **DynamicISF** more aggressive: the **ISF** values become smaller (i.e. more insulin required to decrease **BG** levels a small amount)
+- lowering the **Adjustment Factor** value under 100% makes **DynamicISF** less aggressive: the **ISF** values become larger (i.e. less insulin required to decrease **BG** levels a small amount).
+
 __Android Auto__ = a system used to host certain functions of an Android smartphone’s features, including __AAPS__, within a car's display. Further info → Wiki - 'android auto'.
 
 __APK__ = Android application Package. A software installation file.  Further info → Wiki - 'Building APK'.
@@ -46,6 +50,11 @@ __DIA__ = Duration of Insulin Action.  Further info →  Wiki - 'insulin types' 
 
 __DST__ = Daylight Savings Time Wiki DST.
 
+__Dynamic ISF (or DynISF)__ =  a feature within **AAPS** that adapts the insulin sensitivity factor (**ISF**) dynamically based on the user’s:
+- Total Daily Dose of insulin (**TDD**); and
+- current and predicted **BG** values.
+
+
 __eCarbs__ = extended Carbs. Carbs split up over several hours to accommodate/protein and permits __AAPS__ to deliver extended boluses.  Further info →  Wiki - 'eCarbs', 'eCarbs use'.
 
 __FGM__ = Flash Glucose Monitor manufactured by Freestyle Libre. Further info →  Wiki - 'BG source' and see also 'CGM'.
@@ -81,8 +90,6 @@ __Nightscout Reporter Tool__ = a tool which generates PDFs reports from Nightsco
 __NSClient__ ( or __‘AAPSClient’)__ = see __AAPSClient__.
 
 __OpenAPS__ = Open Artificial Pancreas System.
-
-__AAPS__ operating  on small computers (i.e. Raspberry Pi).and  uses some of the OpenAPS features OpenAPS docs.
 
 __Open Loop system__ = an __AAPS__ feature that will recommend adjustments and which must be performed manually by the user on __AAPS__.  Further info →  Wiki - 'config builder'.
 
