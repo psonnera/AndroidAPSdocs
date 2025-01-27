@@ -147,29 +147,29 @@ Tuttavia, nell'applicazione a loop chiuso, gli stessi utilizzatori non somminist
 
 Poiché si sta operando con la versione AAPS Master, si suggerisce di impostare nelle preferenze AAPS l'impostazione più grande per la dimensione massima consentita SMB che il loop può dare (maxUAMSMBBasalMinutes=120, cioè. 2 ore di basale in quel giorno).
 
-> Se la basale è molto bassa, i limiti di SMB risultanti potrebbero essere troppo bassi per consentire un controllo sufficiente degli aumenti di glucosio post-prandiale. In that case the solution might be to avoid diets with strong spikes and later switch to a AAPS dev variant that offers a new parameter in SMB delivery settings: smb_max_range_extension. It expands the standard maximum of 2 h worth of basal by a factor of >1. (Additionally, the default 50% SMB delivery ratio might be elevated in dev variants).
+> Se la basale è molto bassa, i limiti di SMB risultanti potrebbero essere troppo bassi per consentire un controllo sufficiente degli aumenti di glucosio post-prandiale. In tal caso la soluzione potrebbe essere quella di evitare diete con forti picchi e successivamente passare a una variante di sviluppo AAPS che offra un nuovo parametro nelle impostazioni di somministrazione SMB: smb_max_range_extension. Espande il valore standard massimo di 2 ore di basale di un fattore di & #062;1. (Inoltre, il rapporto di somministrazione SMB predefinito del 50% potrebbe essere elevato nelle varianti di sviluppo).
 
-Going to the max. limits on SMB size in AAPS Master will not make the FCL mode inheritantly less safe. In contrary, you replace your big meal bolus by several smaller ones that you enable your loop to give you, and even with some minutes of delay. This virtually eliminates the hypo risk in the first 1-2 hours of any meal. In hour 3 and thereafter, there should not be much difference because in HCL and FCL the loop manages with the same algorithm.
+Andare ai limiti massimi della quantità di SMB in AAPS Master non renderà la modalità FCL derivata meno sicura. Al contrario, sostituite il vostro bolo di pasto grande con diversi più piccoli che permettete al vostro loop di somministrarvi, e anche con qualche minuto di ritardo. Questo elimina virtualmente il rischio di ipo nelle prime 1-2 ore di ogni pasto. Nell'ora 3 e successivamente, non ci dovrebbe essere molta differenza perché in HCL e FCL il loop funziona con lo stesso algoritmo.
 
-**Follow the instruction** to enable AAPS **to mimick your bolussing via a couple of SMBs**.
+**Seguire le istruzioni**per consentire all'AAPS di **mimare la somministrazione dei boli tramite un paio di SMB**.
 
-Check the SMB tab from time to time to see whether your SMBs are allowed to be large enough to deliver the insulinReq as needed for your full closed loop around meal starts.
+Controllare di tanto in tanto la scheda SMB per vedere se gli SMB sono abilitati ad essere abbastanza grandi da somministrare l'insulinaReq secondo necessità per l'inizio del pasto.
 
-If not, your tuning efforts will sometimes come to nothing!
+In caso contrario, i vostri sforzi di messa a punto a volte non porteranno a nulla!
 
 ```{admonition} Boosting ISF can become dangerous
-:class: danger
+:Classe: Pericoloso
 
-Carefully observe/analyze the SMB sizes that, briefly after meal start, result from your settings. Tune in steps, and do not vary more than 1 or 2 parameters at a time.
+Osservare/analizzare attentamente le dimensioni degli SMB che, poco dopo l'inizio dei pasti, derivano dalle impostazioni. Sintonizzare i passaggi e non variare più di uno o due parametri alla volta.
 
-Setting must work good-enough for your (!) variety of meals.
+L'impostazione deve funzionare abbastanza bene per la vostra (!) varietà di pasti.
 ```
 
-## Meal detection/your Automations for boosting
+## Rilevamento dei pasti/le vostre automazioni per il potenziamento
 
-For successful full closed looping, ISF is the key tuning parameter. When utilizating AAPS Master + Automations, a **> 100% profile change must automatically be triggered upon meal recognition** (via glucose deltas), and provide the sharpened ISF.
+Per il successo del loop chiuso completo, ISF è il parametro di sintonizzazione chiave. Quando si utilizza AAPS Master + Automations, un **> icambiamento del profilo del 100% deve essere attivato automaticamente al momento del riconoscimento del pasto ** (tramite delta di glucosio), e fornire un ISF dedicato.
 
-AAPS Master allows up to 130% temp. profile in Hybrid Closed Loop mode. Boosting the ISF is done in 3 steps:
+AAPS Master consente fino al 130% di profilo temp. profile in Hybrid Closed Loop mode. Boosting the ISF is done in 3 steps:
 
 - Step 1 is to look up the ISF applicable for this meal time hour in the profile, and see whether e.g. Autosens suggest a modification that takes care of the current (last few hours’) insulin sensitivity status of the body.
 - Step 2 applies a factor (1/profile%, as set in your Automation) to boost ISF.
