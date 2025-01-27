@@ -75,26 +75,26 @@ Cambia la versione <./NavigateDoc/ChangeVersion.md>
 :caption: 2) Per iniziare
 
 Introduzione ad AAPS <./Getting-Started/Introduction.md>
-Preparazione ad AAPS <. Getting-Started/PreparingForAaps.md>
+Preparazione ad AAPS <./Getting-Started/PreparingForAaps.md>
 Panoramica componenti <./Getting-Started/ComponentOverview.md>
-- Microinfusori compatibili <. Getting-Started/CompatiblePumps.md>
+- Microinfusori compatibili <./Getting-Started/CompatiblePumps.md>
 - Sensori compatibili <./Getting-Started/CompatiblesCgms.md>
-- Telefonini compatibili  <. Getting-Started/Phones.md>
+- Telefonini compatibili  <./Getting-Started/Phones.md>
 - Smartwatch compatibili  <./Getting-Started/Watches.md>
 ```
 
 ```{toctree}
 :caption: 3) Impostare AAPS
 
-Impostazione del server di rendicontazione <./SettingUpAaps/SettingUpTheReportingServer. d>
+Impostazione del server di reportistica <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
-- Tidepool <. SettingUpAaps/Tidepool.md>
-Costruire AAPS <./SettingUpAaps/BuildingAaps. d>
+- Tidepool <./SettingUpAaps/Tidepool.md>
+Costruire AAPS <./SettingUpAaps/BuildingAaps.md>
 Trasferire e installare AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-Configurazione guidata <. SettingUpAaps/SetupWizard.md>
-Il Tuo Profilo AAPS <./SettingUpAaps/YourAapsProfile. d>
+Configurazione guidata <./SettingUpAaps/SetupWizard.md>
+Il Tuo Profilo AAPS <./SettingUpAaps/YourAapsProfile.md>
 Cambiare la configurazione AAPS <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Config Builder <. SettingUpAaps/ConfigBuilder.md>
+- Config Builder <./SettingUpAaps/ConfigBuilder.md>
 - Preferenze <./SettingUpAaps/Preferences.md>
 Completare gli obiettivi <./SettingUpAaps/CompletingTheObjectives.md>
 ```
@@ -103,16 +103,16 @@ Completare gli obiettivi <./SettingUpAaps/CompletingTheObjectives.md>
 :caption: 4) Vita giornaliera con AAPS
 
 Schermate AAPS <./DailyLifeWithAaps/AapsScreens.md>
-Funzioni chiavi di AAPS <. DailyLifeWithAaps/KeyAapsFeatures.md>
-Calcolo di CHO a bordo <./DailyLifeWithAaps/CobCalculation. d>
+Funzioni chiavi di AAPS <./DailyLifeWithAaps/KeyAapsFeatures.md>
+Calcolo di CHO a bordo <./DailyLifeWithAaps/CobCalculation.md>
 Rilevamento sensibilità <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
-Cambio profilo & Percentuale profilo <. DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
-Target Temporanei <./DailyLifeWithAaps/TempTargets. d>
+Cambio profilo & Percentuale profilo <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
+Target Temporanei <./DailyLifeWithAaps/TempTargets.md>
 CHO estesi <./DailyLifeWithAaps/ExtendedCarbs.md>
-Automazioni <./DailyLifeWithAaps/Automation. d>
+Automazioni <./DailyLifeWithAaps/Automation.md>
 Sensibilità insulinica dinamica <./DailyLifeWithAaps/DynamicISF.md>
-AAPS per i bambini <. DailyLifeWithAaps/AapsForChildren.md>
-Micro e cannule <./DailyLifeWithAaps/PumpsAndCannulas. d>
+AAPS per i bambini <./DailyLifeWithAaps/AapsForChildren.md>
+Micro e cannule <./DailyLifeWithAaps/PumpsAndCannulas.md>
 Viaggi, fuso orario & Ora legale <./DailyLifeWithAaps/TimezoneTraveling-DaySavingTime.md>
 
 ```
@@ -120,9 +120,9 @@ Viaggi, fuso orario & Ora legale <./DailyLifeWithAaps/TimezoneTraveling-DaySavin
 ```{toctree}
 :caption: 5) Funzioni AAPS a distanza
 
-Monitoraggio remoto <./RemoteFeatures/RemoteMonitoring. d>
+Monitoraggio remoto <./RemoteFeatures/RemoteMonitoring.md>
 Telecomando <./RemoteFeatures/RemoteControl.md>
-Comandi SMS <. RemoteFeatures/SMSCommands.md>
+Comandi SMS <./RemoteFeatures/SMSCommands.md>
 Soltanto follower <./RemoteFeatures/FollowingOnly.md>
 Android Auto <./RemoteFeatures/AndroidAuto.md>
 
@@ -131,8 +131,8 @@ Android Auto <./RemoteFeatures/AndroidAuto.md>
 :caption: 6) Smartwatch Wear OS
 
 AAPS per Wear OS <./WearOS/BuildingAapsWearOS.md>
-Usa lo smartwatch <. WearOS/WearOsSmartwatch.md>
-Telecomando <./RemoteFeatures/RemoteControlWearOS. d>
+Usa lo smartwatch <./WearOS/WearOsSmartwatch.md>
+Telecomando <./RemoteFeatures/RemoteControlWearOS.md>
 Riferimento per quadranti personalizzati <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
 Scambio di quadranti personalizzati <./ExchangeSiteCustomWatchfaces/index.md>
 
@@ -141,9 +141,9 @@ Scambio di quadranti personalizzati <./ExchangeSiteCustomWatchfaces/index.md>
 ```{toctree}
 :caption: 7) Manutenzione di AAPS
 
-Esportazione/Importazione Impostazioni <./Maintenance/ExportImportSettings. d>
+Esportazione/Importazione Impostazioni <./Maintenance/ExportImportSettings.md>
 Rivedere i tuoi dati <./Maintenance/Reviewing.md>
-AAPS Release Notes <. Maintenance/ReleaseNotes.md>
+AAPS Release Notes <./Maintenance/ReleaseNotes.md>
 Aggiornamenti sulla documentazione <./Maintenance/DocumentationUpdate.md>
 Aggiornamento a una nuova versione di AAPS <./Maintenance/UpdateToNewVersion.md>
 
@@ -169,9 +169,9 @@ Autotune <./AdvancedOptions/Autotune.md>
 ```{toctree}
 :caption: 10) Come supportare AAPS
 
-Come aiutare <./SupportingAaps/HowCanIHelp. d>
+Come aiutare <./SupportingAaps/HowCanIHelp.md>
 Modificare la documentazione <./SupportingAaps/HowToEditTheDocs.md>
-Tradurre l'app e la documentazione <. SupportingAaps/Translations.md>
+Tradurre l'app e la documentazione <./SupportingAaps/Translations.md>
 Stato delle traduzioni <./SupportingAaps/StateOfTranslations.md>
 Uploader Open Humans <./SupportingAaps/OpenHumans.md>
 
@@ -180,8 +180,8 @@ Uploader Open Humans <./SupportingAaps/OpenHumans.md>
 :caption: 11) Risorse
 
 Glossario <./UsefulLinks/Glossary.md>
-FAQ <. UsefulLinks/FAQ.md>
-Risorse generale diabete e looping <./UsefulLinks/BackgroundReading. d>
+FAQ <./UsefulLinks/FAQ.md>
+Risorse generale diabete e looping <./UsefulLinks/BackgroundReading.md>
 Account Google dedicato per AAPS (facoltativo)<./UsefulLinks/DedicatedGoogleAccountForAaps.md>
 Per i medici (obsoleto) <./UsefulLinks/ClinicianGuideToAaps.md>
 ```
