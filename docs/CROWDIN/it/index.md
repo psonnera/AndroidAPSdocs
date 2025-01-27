@@ -86,7 +86,7 @@ Panoramica componenti <./Getting-Started/ComponentOverview.md>
 ```{toctree}
 :caption: 3) Impostare AAPS
 
-Impostazione del server di rendicontazione <./SettingUpAaps/SettingUpTheReportingServer.md>
+Impostazione del server di reportistica <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
 Costruire AAPS <./SettingUpAaps/BuildingAaps.md>
@@ -131,8 +131,8 @@ Android Auto <./RemoteFeatures/AndroidAuto.md>
 :caption: 6) Smartwatch Wear OS
 
 AAPS per Wear OS <./WearOS/BuildingAapsWearOS.md>
-Usa lo smartwatch <. WearOS/WearOsSmartwatch.md>
-Telecomando <./RemoteFeatures/RemoteControlWearOS. d>
+Usa lo smartwatch <./WearOS/WearOsSmartwatch.md>
+Telecomando <./RemoteFeatures/RemoteControlWearOS.md>
 Riferimento per quadranti personalizzati <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
 Scambio di quadranti personalizzati <./ExchangeSiteCustomWatchfaces/index.md>
 
@@ -141,9 +141,9 @@ Scambio di quadranti personalizzati <./ExchangeSiteCustomWatchfaces/index.md>
 ```{toctree}
 :caption: 7) Manutenzione di AAPS
 
-Esportazione/Importazione Impostazioni <./Maintenance/ExportImportSettings. d>
+Esportazione/Importazione Impostazioni <./Maintenance/ExportImportSettings.md>
 Rivedere i tuoi dati <./Maintenance/Reviewing.md>
-AAPS Release Notes <. Maintenance/ReleaseNotes.md>
+AAPS Release Notes <./Maintenance/ReleaseNotes.md>
 Aggiornamenti sulla documentazione <./Maintenance/DocumentationUpdate.md>
 Aggiornamento a una nuova versione di AAPS <./Maintenance/UpdateToNewVersion.md>
 
@@ -169,9 +169,9 @@ Autotune <./AdvancedOptions/Autotune.md>
 ```{toctree}
 :caption: 10) Come supportare AAPS
 
-Come aiutare <./SupportingAaps/HowCanIHelp. d>
+Come aiutare <./SupportingAaps/HowCanIHelp.md>
 Modificare la documentazione <./SupportingAaps/HowToEditTheDocs.md>
-Tradurre l'app e la documentazione <. SupportingAaps/Translations.md>
+Tradurre l'app e la documentazione <./SupportingAaps/Translations.md>
 Stato delle traduzioni <./SupportingAaps/StateOfTranslations.md>
 Uploader Open Humans <./SupportingAaps/OpenHumans.md>
 
@@ -180,8 +180,8 @@ Uploader Open Humans <./SupportingAaps/OpenHumans.md>
 :caption: 11) Risorse
 
 Glossario <./UsefulLinks/Glossary.md>
-FAQ <. UsefulLinks/FAQ.md>
-Risorse generale diabete e looping <./UsefulLinks/BackgroundReading. d>
+FAQ <./UsefulLinks/FAQ.md>
+Risorse generale diabete e looping <./UsefulLinks/BackgroundReading.md>
 Account Google dedicato per AAPS (facoltativo)<./UsefulLinks/DedicatedGoogleAccountForAaps.md>
 Per i medici (obsoleto) <./UsefulLinks/ClinicianGuideToAaps.md>
 ```
