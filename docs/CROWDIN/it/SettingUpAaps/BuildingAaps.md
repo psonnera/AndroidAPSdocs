@@ -13,12 +13,13 @@ Vedi la pagina [Domande frequenti](../UsefulLinks/FAQ.md) per i dettagli.
 
 * Una versione specifica di **[Android Studio](https://developer.android.com/studio/)** potrebbe essere necessaria per costruire l'apk. Cfr. tabella sotto:
 
-| Versione AAPS       | Versione<br/>Android Studio<br/>preferita | Versione Alternative<br/>Android Studio<br/>                                                            | Gradle | JVM |
-| ------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------ |:--- |
-| [3.2](#version3200) | Hedgehog (2023.1.1)                                   | Iguana (2023.2.1)<br/>Jellyfish (2023.3.1)<br/>Koala (2024.1.1)<br/>Ladybug (2024.2.1)<br/> | 8.2    | 19  |
-| [3.3](#version3300) | Ladybug (2024.2.1)                                    |                                                                                                                     | 8.9    | 21  |
+| Versione AAPS           | Versione<br/>Android Studio<br/>preferita | Versione Alternative<br/>Android Studio<br/>                                                            | Gradle | JVM |
+| ----------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------ |:--- |
+| [3.2](#version3200)     | Hedgehog (2023.1.1)                                   | Iguana (2023.2.1)<br/>Jellyfish (2023.3.1)<br/>Koala (2024.1.1)<br/>Ladybug (2024.2.1)<br/> | 8.2    | 19  |
+| [3.3](#version3300)     | Ladybug (2024.2.1)                                    |                                                                                                                     | 8.9    | 21  |
+| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                       |                                                                                                                     | 8.10   | 21  |
 
-La "versione preferita" contiene già la versione JVM appropriata. Se usi una versione diversa, potresti incontrare dei problemi con la versione JVM. Guarda la pagina [Risoluzione dei problemi Android Studio](#troubleshooting_androidstudio-uncommitted-changes) per aiutarti a risolverli. Se la tua versione attuale di Android Studio non è elencata nella tabella, è necessario aggiornarla prima.
+La "versione preferita" contiene già la versione JVM appropriata. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. Se usi una versione diversa, potresti incontrare dei problemi con la versione JVM. Guarda la pagina [Risoluzione dei problemi Android Studio](#troubleshooting_androidstudio-uncommitted-changes) per aiutarti a risolverli. Se la tua versione attuale di Android Studio non è elencata nella tabella, è necessario aggiornarla prima.
 
 La versione Gradle è legata al codice sorgente, otterrai sempre la versione corretta Gradle quando scarichi / aggiorni il codice sorgente. E menzionata qui solo per riferimento, non è necessario intervenire su di esso.
 
@@ -221,7 +222,7 @@ Ora diremo a Android Studio da dove ottenere il codice:
     ```
     e incollalo nella casella di testo dell'URL (3).
 
-* Controlla che la directory (default) per salvare il codice clonato non esiste già sul tuo computer (4). Puoi cambiarla in qualsiasi cartella, ma ricordati dove hai salvato il progetto!
+* Check the (default) directory for saving the cloned code does not already exist on your computer (4). Puoi cambiarla in qualsiasi cartella, ma ricordati dove hai salvato il progetto!
 * Ora clicca sul pulsante "Clone" (5).
 
 ```{admonition} INFORMATION
