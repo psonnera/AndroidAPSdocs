@@ -143,8 +143,8 @@ Segui [queste istruzioni](https://navid200.github.io/xDrip/docs/Starting-G6.html
 * [Stop sensore](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html) (solo se vuoi sostituire il sensore).
 
 
-* Dimentica questo dispositivo nello Stato del sistema di xDrip+ E ANCHE nelle impostazioni Bluetooth dello smartphone (Sarà visualizzato come Dexcom?? dove ?? sono le ultime due cifre del numero di serie del trasmettitore  
-  → Menu (1) → Stato del sistema (2) → Se non sei sulla pagina Classic Status Page (3) scorri lo schermo (4) per raggiungerla → Quindi tocca Dimentica Questo Dispositivo (5).
+* Dimentica questo dispositivo nello Stato del sistema di xDrip+ E ANCHE nelle impostazioni Bluetooth dello smartphone (Sarà visualizzato come Dexcom?? dove ?? are the last two digits of the transmitter serial no.)  
+  → Hamburger Menu (1) → System Status (2) → If you are not on the Classic Status Page (3) swipe the screen (4) to reach it → then tap Forget Device (5).
 
 ![xDrip+ System status](../images/xDrip_Dexcom_StopSensor.png)
 
