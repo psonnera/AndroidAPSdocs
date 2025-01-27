@@ -104,22 +104,22 @@ Se ricevi un messaggio di errore come questo:
 
 Segui le istruzioni di [Risincronizza Gradle](#gradle-resync).
 
-### Git Pull Failed - Please tell me who you are
+### Git Pull Fallito - Please tell me who you are
 
-If you see this message, Git needs you to identify yourself.
+Se vedi questo messaggio, Git ha bisogno che ti identifichi te stesso.
 
-![Git identification](../images/studioTroubleshooting/164_Git_Identify.png)
+![Identificazione Git](../images/studioTroubleshooting/164_Git_Identify.png)
 
-Open the terminal and type the following two commands, one after the other.
+Apri il terminale e digita i due comandi seguenti, uno dopo l'altro.
 
 ```
-git config --global user.name "Your name here"
-git config --global user.email your.email@here.com
+git config --global user.name "Il tuo nome qua"
+git config --global user.email la-tua.mail@qua.com
 ```
 
-Your name needs to be written between quotation marks.
+Il tuo nome deve essere scritto tra virgolette.
 
-![Git identification fix](../images/studioTroubleshooting/164_Git_Identify2.png)
+![Correzione di identificazione di Git](../images/studioTroubleshooting/164_Git_Identify2.png)
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
