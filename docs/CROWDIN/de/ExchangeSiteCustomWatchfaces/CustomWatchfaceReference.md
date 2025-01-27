@@ -169,7 +169,7 @@ Zwei zusätzliche Parameter, die Du für die Diagrammansicht (ChartView) hinzuf�
 
 (cwf-reference-how-to-build-watchface)=
 
-## Wie Du Dein erstes Zifferblatt entwirfst/ertellst
+## Wie Du Dein erstes Zifferblatt entwirfst/erstellst
 
 ### Benötigte Werkzeuge
 
@@ -879,17 +879,17 @@ Bitte berücksichtige, dass Zifferblätter, die diese neuen Funktionen oder Ansi
 
 Wenn Du ein Zip-Datei „v2“ mit einer Smartwatch nutzt, die CustomWachface V1 hat, werden entweder falsche Inhalte auf der Smartwatch angezeigt oder es fehlen möglicherweise Informationen in der Anzeige.
 
-CustomWatchface V2 includes these new features:
+Das CustomWatchface V2 enthält folgende Funktionen:
 
-- [New Status view](cwf-reference-new-status-feature)
-- [New TempTarget view](cwf-reference-new-temp-target-feature)
-- [New Reservoir Level view](cwf-reference-new-reservoir-level-feature)
-- [New Formating Feature](cwf-reference-new-formating-feature)
-- [Show External datas for Follower](cwf-reference-show-external-datas) (up to 3 set of datas within one single Watchface, for AAPS, AAPSCLIENT and AAPSCLIENT2)
+- [Neue Status-View](cwf-reference-new-status-feature)
+- [Neue View für temporäre Ziele](cwf-reference-new-temp-target-feature)
+- [Neue Reservoir-Stand-View](cwf-reference-new-reservoir-level-feature)
+- [Neue Formatierungs-Möglichkeiten](cwf-reference-new-formating-feature)
+- [Anzeigen von externen Daten für Follower](cwf-reference-show-external-datas) (bis zu 3 Datensätze in einem Zifferblatt für AAPS, AAPSCLIENT und AAPSCLIENT2)
 
 (cwf-reference-new-status-feature)=
 
-#### New Status view
+#### Neue Status-View
 
 Der Key dieser Ansicht ist `„status“` und der zugeordnete Block wird automatisch in die Vorlage exportiert, die von Wear-APK „Custom Watchface V2“ (erstellt aus der AAPS-Version 3.3.0 oder neuer)
 
@@ -907,49 +907,49 @@ Diese Ansicht konnte in V1 mit den bestehenden `"iob1"`, `"iob2"` und `"bgi"` An
 
 (cwf-reference-new-temp-target-feature)=
 
-#### New TempTarget view
+#### Neue View für temporäre Ziele
 
-The key of this view is `"tempTarget"` and associated block is automatically included into the template exported from wear apk "Custom Watchface V2" (built from AAPS 3.3.0 version or above).
+Der Key dieser Ansicht ist `„tempTarget“` und der zugeordnete Block wird automatisch in die Vorlage aus der Wear-APK „Custom Watchface V2“ (erstellt aus der AAPS-Version 3.3.0 oder neuer) exportiert.
 
-It shows within watchface:
+Im Zifferblatt wird angezeigt:
 
-- Profile target (single value or min-max target values) (default color in white)
-- Loop adjusted target (default color in Green)
-- Temp Target defined by user (default color in Yellow)
+- Profil-Ziel (Einzelwert oder min-max Zielwerte) (Standardfarbe in Weiß)
+- Das durch den Loop angepasste Ziel (Standardfarbe in Grün)
+- Das durch Dich definierte temporäre Ziel (Standardfarbe in Gelb)
 
-This `"tempTarget"` view is associated with `"key_show_temp_target"` key (within dynPref) to manage visibility.
+Diese `"tempTarget"`-Ansicht ist (innerhalb von dynPref) mit dem `"key_show_temp_target"`-Schlüssel verknüpft, um die Sichtbarkeit zu steuern.
 
-The DynData Key (associated with color information) is `"tempTarget"` (default DynData key associated with TempTarget View)
+Der DynData-Schlüssel (verknüpft mit Farbinformation) ist in `"tempTarget"` (dem Standard DynData-Schlüssel in der TempTarget Ansicht)
 
-DynData value equals:
+Der DynData-Wert ist gleich:
 
-- 0 (Profile Target),
-- 1 (Loop Target) or
-- 2 (User Temp Target)
+- 0 (Profil-Ziel),
+- 1 (Loop-Ziel) oder
+- 2 (Benutzerdefiniertes temporäres Ziel)
 
-Note that this view is also available for external data (see [below](cwf-reference-show-external-datas)) with `"tempTarget_Ext1"` and  `"tempTarget_Ext2"` keys (View and DynData)
+Beachte, dass diese Ansicht auch für externe Daten verfügbar ist (siehe [unten](cwf-reference-show-external-datas)) mit `"tempTarget_Ext1"` und  `"tempTarget_Ext2"`-Schlüsseln (Ansicht und DynData)
 
 (cwf-reference-new-reservoir-level-feature)=
 
-#### New Reservoir Level view
+#### Neue Reservoir-Stand-View
 
-The key of this view is `"reservoir"` and associated block is automatically included into the template exported from wear apk "Custom Watchface V2" (built from AAPS 3.3.0 version or above).
+Der Key dieser Ansicht ist `„reservoir“` und der zugeordnete Block wird automatisch in die Vorlage aus der Wear-APK „Custom Watchface V2“ (erstellt aus der AAPS-Version 3.3.0 oder neuer) exportiert.
 
-This view show Reservoir level (in `U`) with a White default color, Yellow if Warning Level, Red if Urgent Level
+Diese Ansicht zeigt den Reservoir-Stand (in `IE`) mit einer weißen Standardfarbe, Gelb bei Warnung, Rot, wenn dringender Stand
 
-This `"reservoir"` view is associated with `"key_show_reservoir_level"` key (within dynPref) to manage visibility.
+Diese `„Reservoir“`-Ansicht ist mit dem `„key_show_reservoir_level“`-Schlüssel (innerhalb von dynPref) verknüpft, um die Sichtbarkeit zu steuern.
 
-The DynData Keys associated with Reservoir Level are:
+Die DynData-Schlüssel, die mit dem Reservoir-Stand verknüpft sind:
 
--  `"reservoir"`  (Default DynData Key associated with Reservoir Level view) associated with level in insulin `U`
-  - Min Value is 0.0 U
-  - Max Value is 500.0 U
--  `"reservoirLevel"`
-  - 0 (Standard Level, White Color by default)
-  - 1 (Warning Level, Yellow color by default)
-  - 2 (Urgent Level, Red color by default)
+-  `„reservoir“`  (Standard-DynData-Schlüssel, der mit der Reservoir-Stand-Ansicht verknüpft ist) verknüpft mit dem Insulin-Stand in `IE`
+  - Min. Wert ist 0,0 IE
+  - Max. Wert ist 500,0 IE
+-  `„reservoirLevel“`
+  - 0 (Standard, weiße Farbe voreingestellt)
+  - 1 (Warnstufe, gelbe Farbe voreingestellt)
+  - 2 (Dringend, rote Farbe voreingestellt)
 
-Note that this view is also available for external data (see [below](cwf-reference-show-external-datas)) with `"reservoir_Ext1"`, `"reservoir_Ext2"`, `"reservoirLevel_Ext1"` and  `"reservoirLevel_Ext2"` keys (View and DynData).
+Beachte, dass diese Ansicht auch für externe Daten verfügbar ist (siehe [unten](cwf-reference-show-external-datas)) mit `"reservoir_Ext1"`, `"reservoir_Ext2"`, `"reservoirLevel_Ext1"` und  `"reservoirLevel_Ext2"`-Schlüsseln (Ansicht und DynData).
 
 (cwf-reference-new-formating-feature)=
 
@@ -1097,19 +1097,19 @@ Lass uns jetzt einen Blick auf den Timestamp dynPref-Block werfen, um mehrere zu
 
 (cwf-reference-show-external-datas)=
 
-#### Show External datas for Follower
+#### Externe Daten für Follower anzeigen
 
-Custom Watchface is now able to display on the same watchface up to 3 set of data: AAPS, AAPSCLIENT and AAPSCLIENT2
+Das benutzerdefinierte Zifferblatt kann nun auf dem gleichen Zifferblatt bis zu 3 Datensätze anzeigen: AAPS, AAPSCLIENT und AAPSCLIENT2
 
-To use this feature, you need to:
+Um dieses Feature nutzen zu können, muss Folgendes erfüllt sein:
 
-- have at leat 2 of the 3 following apps installed in phone (AAPS, AAPSCLIENT, AAPSCLIENT2)
-- enable Broadcast data in AAPSCLIENT and/or AAPSCLIENT2 to broadcast data to the main app used to sync with CustomWatchface (AAPS or AAPSCLIENT)
-- Use a CustomWatchface that implement Views with Key including `_Ext1` or `_Ext2` (see [Key and KeyValue reference](cwf-reference-key-and-keyvalue-reference) below)
+- es müssen 2 der 3 folgenden Apps auf dem Smartphone installiert sein (AAPS, AAPSCLIENT, AAPSCLIENT2)
+- Aktiviere Broadcast-Daten in AAPSCLIENT und/oder AAPSCLIENT2, um Daten an die Hauptanwendung zu übermitteln, die zur Synchronisierung mit CustomWatchface verwendet wird (AAPS oder AAPSCLIENT)
+- Benutze ein CustomWatchface, das Ansichten mit einem Schlüssel implementiert, einschließlich `_Ext1` oder `_Ext2` (siehe [Schlüssel und KeyValue Referenz](cwf-reference-key-and-keyvalue-reference) unten)
 
-Note that if main app in phone is AAPSCLIENT and secondary app which broadcast data is AAPSCLIENT2, you will have to enable `Switch external datas in watchface` parameter within Custom Watchface dedicated parameter if you use a watchface which use standard views and Ext1 additional views (Ext1 is linked to AAPSCLIENT and Ext2 is linked to AAPSCLIENT2)
+Wenn die Hauptanwendung auf dem Smartphone der AAPSCLIENT ist und die sekundäre App zur Übertragung der Daten der AAPSCLIENT2 ist: Du musst den dedizierten „`Switch external datas in watchface`“-Parameter im Custom Watchface aktivieren, wenn Du ein Zifferblatt nutzt, das die Standardansichten und Ext1 Zusatzansichten nutzt (Ext1 ist mit AAPSCLIENT verknüpft und Ext2 mit AAPSCLIENT2)
 
-Additionally three new views (`"patient_name"` , `"patient_name_Ext1"`  and `"patient_name_Ext2"` *) has been added to be able to automatically include patient name (set within AAPS preferences) within watchface (see example below)
+Zusätzlich wurden drei neue Ansichten (`"patient_name"` , `"patient_name_Ext1"`  und `"patient_name_Ext2"` *) hinzugefügt, um den Patientennamen automatisch in das Ziffeerblatt einbinden zu können (siehe Beispiel unten)
 
 ![CustomWatchface_7](../images/CustomWatchface_7.png)
 
@@ -1138,7 +1138,7 @@ Additionally three new views (`"patient_name"` , `"patient_name_Ext1"`  and `"pa
 
 #### Einstellungen-Schlüssel
 
-| Key                           | Default value and Comment                                                                                                                                                                                                                                                                                                       |
+| Key                           | Standardwert und Kommentar                                                                                                                                                                                                                                                                                                      |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `"key_show_detailed_iob"`     | true sperrt detaillierte IOB-Daten auf der Ansicht `iob2`, dann wird `iob1` (falls sichtbar und nicht durch ein Symbol ersetzt) den gesamten IOB anzeigen.<br />false sperrt den Gesamt-IOB auf der Ansicht `iob2`. Kann verwendet werden, wenn die Breite von `iob2` zu klein ist, um iob detailliert richtig anzuzeigen |
 | `"key_show_detailed_delta"`   | false (nur wenn das Design nicht mit der Breite des detaillierten Delta für die Ansichten `delta` und `avg_delta` kompatibel ist)                                                                                                                                                                                               |
@@ -1147,8 +1147,8 @@ Additionally three new views (`"patient_name"` , `"patient_name_Ext1"`  and `"pa
 | `"key_show_cob"`              | true, wenn Dein Design `cob1` oder `cob2`-Ansichten (views) benötigen                                                                                                                                                                                                                                                           |
 | `"key_show_delta"`            | true, wenn Dein Design `delta`-Informationen benötigt                                                                                                                                                                                                                                                                           |
 | `"key_show_avg_delta"`        | true, wenn Dein Design `avg_delta`-Informationen benötigt                                                                                                                                                                                                                                                                       |
-| `"key_show_temp_target"`      | true if your design requires `tempTarget` information                                                                                                                                                                                                                                                                           |
-| `"key_show_reservoir_level"`  | true if your design requires `reservoir` information                                                                                                                                                                                                                                                                            |
+| `"key_show_temp_target"`      | true, wenn Dein Design `tempTarget`-Informationen benötigt                                                                                                                                                                                                                                                                      |
+| `"key_show_reservoir_level"`  | true, wenn Dein Design `Reservoir`-Informationen benötigt                                                                                                                                                                                                                                                                       |
 | `"key_show_uploader_battery"` | true, wenn Dein Design `uploader_battery` (Smartphone-Akku)-Informationen benötigt                                                                                                                                                                                                                                              |
 | `"key_show_rig_battery"`      | true, wenn Dein Design `rig_battery`-Informationen benötigt                                                                                                                                                                                                                                                                     |
 | `"key_show_temp_basal"`       | true, wenn Dein Design `basalRate`-Informationen benötigt                                                                                                                                                                                                                                                                       |
@@ -1217,7 +1217,7 @@ Als Dateitypen sind `.jpg`, `.png` und `.svg` möglich. Aber Vorsicht, `.jpg` ha
 
 Diese Liste ist von hinten nach vorne (Hintergrund zum Vordergrund), da dies beim Umgang mit dem Zifferblatt sehr wichtig ist. Es ist wichtig, die Anordnung zu kennen, da Bilder oder Texte sich sonst gegenseitig verdecken können.
 
-Note: all keys including `_Ext1` or `_Ext2` at the end are new and dedicated for multi users Watchfaces.
+Hinweis: Alle Schlüssel, die `_Ext1` oder `_Ext2` am Ende enthalten sind neu und für Multi-User-Watchfaces gedacht.
 
 | Key                                                                                    | Type of view        | Data attached                                                                                                                                                                | DynData Schlüssel                                                                                                                                |
 | -------------------------------------------------------------------------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1228,7 +1228,7 @@ Note: all keys including `_Ext1` or `_Ext2` at the end are new and dedicated for
 | `"freetext2"`                                                                          | Text View           |                                                                                                                                                                              |                                                                                                                                                  |
 | `"freetext3"`                                                                          | Text View           |                                                                                                                                                                              |                                                                                                                                                  |
 | `"freetext4"`                                                                          | Text View           |                                                                                                                                                                              |                                                                                                                                                  |
-| `"patient_name"` *<br/>`"patient_name_Ext1"` *<br/>`"patient_name_Ext2"` * | Text View           | Patient Name                                                                                                                                                                 |                                                                                                                                                  |
+| `"patient_name"` *<br/>`"patient_name_Ext1"` *<br/>`"patient_name_Ext2"` * | Text View           | Patientenname                                                                                                                                                                |                                                                                                                                                  |
 | `"iob1"`<br/>`"iob1_Ext1"` *<br/>`"iob1_Ext2"` *                           | Text View           | IOB-Label oder IOB Total                                                                                                                                                     |                                                                                                                                                  |
 | `"iob2"`<br/>`"iob2_Ext1"` *<br/>`"iob2_Ext2"` *                           | Text View           | IOB Total or IOB Detailed                                                                                                                                                    |                                                                                                                                                  |
 | `"cob1"`<br/>`"cob1_Ext1"` *<br/>`"cob1_Ext2"` *                           | Text View           | Kohlenhydrate-Bezeichnung                                                                                                                                                    |                                                                                                                                                  |
@@ -1237,7 +1237,7 @@ Note: all keys including `_Ext1` or `_Ext2` at the end are new and dedicated for
 delta_Ext1<br/>delta_Ext2                                                                                                          |
 | `"avg_delta"`<br/>`"avg_delta_Ext1"` *<br/>`"avg_delta_Ext2"` *            | Text View           | Avg delta (15 min)                                                                                                                                                           | avg_delta<br/>avg_delta_Ext1<br/>avg_delta_Ext2                                                                                  |
 | `"tempTarget"`*<br/>`"tempTarget_Ext1"` *<br/>`"tempTarget_Ext2"` *        | Text View           | BG Target (single value or min - max targets values)                                                                                                                         | tempTarget<br/>tempTarget_Ext1<br/>tempTarget_Ext2                                                                                   |
-| `"reservoir"`*<br/>`"reservoir_Ext1"` *<br/>`"reservoir_Ext2"` *           | Text View           | Reservoir level                                                                                                                                                              | reservoir<br/>reservoirLevel<br/>reservoir_Ext1<br/>reservoirLevel_Ext1<br/>reservoir_Ext2<br/>reservoirLevel_Ext2 |
+| `"reservoir"`*<br/>`"reservoir_Ext1"` *<br/>`"reservoir_Ext2"` *           | Text View           | Reservoirstand                                                                                                                                                               | reservoir<br/>reservoirLevel<br/>reservoir_Ext1<br/>reservoirLevel_Ext1<br/>reservoir_Ext2<br/>reservoirLevel_Ext2 |
 | `"uploader_battery"`                                                                   | Text View           | Smartphone Akkustand (%)                                                                                                                                                     | uploader_battery                                                                                                                                 |
 | `"rig_battery"`<br/>`"rig_battery_Ext1"` *<br/>`"rig_battery_Ext2"` *      | Text View           | Akkustand des Rigs (%)                                                                                                                                                       | rig_battery<br/>rig_battery_Ext1<br/>rig_battery_Ext2                                                                            |
 | `"basalRate"`<br/>`"basalRate_Ext1"` *<br/>`"basalRate_Ext2"` *            | Text View           | % oder absoluter Wert                                                                                                                                                        |                                                                                                                                                  |
@@ -1364,8 +1364,8 @@ Aus dem Custom Watchface plugin v2 (AAPS 3.3), kann der Textwert verwendet werde
 | `"topOffset"`             | block  | Gibt die vertikale Verschiebung der Ansicht gemäß den Minimal- und Maximalwerten in Pixel an.<br />- Es beinhaltet den Schlüssel für den minimalen Wert, den Schlüssel für den maximalen Wert und den Schlüssel für ungültige Werte (optional)<br />- Wenn die Daten unterhalb oder gleich dem minData sind, wird die Ansicht um minValue Pixel verschoben, und wenn die Daten oberhalb oder gleich dem maxData sind, wird die Ansicht um maxValue Pixel verschoben<br />Beachte, dass für die Anwendung dieser Verschiebung topOffset innerhalb der Ansicht auf true gesetzt werden sollte                                             |
 | `"rotationOffset"`        | block  | Gibt den Drehwinkel in Grad der Ansicht gemäß den Minimal- und Maximalwerten in Pixel an.<br />- Er beinhaltet den Schlüssel für den minimalen Wert (`minValue`), den Schlüssel für den maximalen Wert (`maxValue`) und den optionalen Schlüssel für ungültige Werte (`invalidValue`)<br />- Wenn die Daten unterhalb oder gleich dem `minData` sind, wird die Ansicht um `minValue`-Grad gedreht, und wenn die Daten oberhalb oder gleich dem `maxData` sind, wird die Ansicht um `maxValue`-Grad gedreht <br />Beachte, dass für die Anwendung dieser Drehung `rotationOffset` innerhalb der Ansicht auf „true“ gesetzt werden sollte |
 | `"dynValue"`*             | block  | Gib die Konvertierung des `dynValue` von min und max range auf min und max value in Pixeln an.<br />- Das sind der `minValue`-Schlüssel, der `maxValue`-Schlüssel und der optionale `invalidValue`-Schlüssel<br />- Wenn die Daten nierdriger oder gleich `minData` sind, dann wird der gesendete dynValue zu minValue (zu „double“ konvertiert), und wenn Daten höher oder gleich wie `maxData` sind, dann wird der berechnete dynValue zu maxValue (zu „double“ konvertiert)<br />Beachte, dass für die Konvertierung der <1>dynValue</1>-Schlüssel innerhalb der Ansicht auf „true“ gesetzt werden muss                              |
-| `"minValue"`              |        | result value to apply to the view (key only applicable within a leftOffset, topOffset or rotationOffset block)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `"maxValue"`              |        | result value to apply to the view (key only applicable within a leftOffset, topOffset or rotationOffset block)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `"minValue"`              |        | Ergebniswert, der auf die Ansicht angewendet werden soll (Schlüssel nur innerhalb eines leftOffset-, topOffset- oder rotationOffset-Blocks anwendbar)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `"maxValue"`              |        | Ergebniswert, der auf die Ansicht angewendet werden soll (Schlüssel nur innerhalb eines leftOffset-, topOffset- oder rotationOffset-Blocks anwendbar)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | `"invalidValue"`          |        | Ergebniswert, der auf die Ansicht angewendet werden soll, wenn Daten ungültig sind (Schlüssel nur innerhalb eines leftOffset-, topOffset- oder rotationOffset-Blocks anwendbar)                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | `"invalidImage"`          | string | `resource_filename` wird für die ImageView oder die Hintergrund TextView genutzt, wenn Daten ungültig sind                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | image*1_to_n*           | string | `resource_filename` image to use for each step between minData (or close to minData) with `"image1"` and maxData (or close to maxData) with image*n*<br />If for example your put 5 images (from image1 to image5), the range between minData and maxData will be divided in 5 steps and according to data value, the corresponding image will be shown                                                                                                                                                                                                                                                                                             |
@@ -1376,7 +1376,7 @@ Aus dem Custom Watchface plugin v2 (AAPS 3.3), kann der Textwert verwendet werde
 | `"invalidTextSize"`       |        | Manage die Textgröße, wenn die Daten ungültig sind                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | textsize*1_to_n*        |        | Manage text size to use for each step between minData (or close to minData) with `"textsize1"` and maxData (or close to maxData) with textsize*n*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `"invalidLeftOffset"`     |        | Manage leftOffset-Schritte, wenn die Daten ungültig sind                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| leftOffset*1_to_n*      |        | Manage leftOffset to use for each step between minData (or close to minData) with `"leftOffset1"` and maxData (or close to maxData) with leftOffset*n*<br />Note, can be used with dynPref to shift a view when another is hidden...                                                                                                                                                                                                                                                                                                                                                                                                                |
+| leftOffset*1_to_n*      |        | Manage leftOffset, der für jeden Schritt zwischen minData (oder nahe bei minData) mit `leftOffset1` und maxData (oder nahe bei maxData) mit leftOffset*n*<br /> Hinweis: Kann mit dynPref verwendet werden, um eine Ansicht zu verschieben, wenn eine andere Ansicht verborgen ist...                                                                                                                                                                                                                                                                                                                                                               |
 | `"invalidTopOffset"`      |        | Manage topOffset-Schritte, wenn die Daten ungültig sind                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | topOffset*1_to_n*       |        | Manage topOffset, der für jeden Schritt zwischen minData (oder nahe bei minData) mit topOffset1 und maxData (oder nahe bei maxData) mit leftOffset*n*<br /> Hinweis: Kann mit dynPref verwendet werden, um eine Ansicht zu verschieben, wenn eine andere Ansicht verborgen ist...                                                                                                                                                                                                                                                                                                                                                                   |
 | `"invalidRotationOffset"` |        | Manage rotationOffset-Schritte, wenn die Daten ungültig sind                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
@@ -1397,9 +1397,9 @@ Aus dem Custom Watchface plugin v2 (AAPS 3.3), kann der Textwert verwendet werde
 | `"direction"`<br/>`"direction_Ext1"` *<br/>`"direction_Ext2"` *                 | valueKey        | default minData = 1 (double Down)<br />default maxValue = 7 (double Up)<br />flat arrow data = 4<br />Error or missing data = 0 (??)                                                                                                                                                         |
 | `"delta"`<br/>`"delta_Ext1"` *<br/>`"delta_Ext2"` *                             | valueKey        | default minData = -25 mgdl<br />default maxData = 25 mgdl<br />- Berücksichtige, dass die wahren min und maxData darüber liegen können und dass intern immer mgdl als Einheit verwendet wird                                                                                                       |
 | `"avg_delta"`<br/>`"avg_delta_Ext1"` *<br/>`"avg_delta_Ext2"` *                 | valueKey        | default minData = -25 mgdl<br />default maxData = 25 mgdl<br />- Berücksichtige, dass die wahren min und maxData darüber liegen können und dass intern immer mgdl als Einheit verwendet wird                                                                                                       |
-| `"tempTarget"`*<br/>`"tempTarget_Ext1"` *<br/>`"tempTarget_Ext2"` *             | valueKey        | default minData = 0 (Profile Target)<br />default maxData = 2 (Temp Target)<br />Target is adjusted byt the loop = 1<br/>Default or missing information = 0                                                                                                                                  |
+| `"tempTarget"`*<br/>`"tempTarget_Ext1"` *<br/>`"tempTarget_Ext2"` *             | valueKey        | Default minData = 0 (Profil-Ziel)<br />Default maxData = 2 (temporäres Ziel)<br />Ziel wurde durch Loop angepasst = 1<br/>Default oder fehlende Informationen = 0                                                                                                                            |
 | `"reservoir"`*<br/>`"reservoir_Ext1"` *<br/>`"reservoir_Ext2"` *                | valueKey        | default minData = 0 U<br />default maxData = 500 U                                                                                                                                                                                                                                                       |
-| `"reservoirLevel"`*<br/>`"reservoirLevel_Ext1"` *<br/>`"reservoirLevel_Ext2"` * | valueKey        | default minData = 0 (Standard Color)<br/>default maxData = 2 (Urgent Color)<br/>Warning Color = 1                                                                                                                                                                                                  |
+| `"reservoirLevel"`*<br/>`"reservoirLevel_Ext1"` *<br/>`"reservoirLevel_Ext2"` * | valueKey        | default minData = 0 (Standardfarbe)<br/>default maxData = 2 (Farbe für „Dringend“)<br/>Warnfarbe = 1                                                                                                                                                                                               |
 | `"uploader_battery"`                                                                        | valueKey        | default minData = 0 %<br />default maxData = 100%                                                                                                                                                                                                                                                        |
 | `"rig_battery"`<br/>`"rig_battery_Ext1"` *<br/>`"rig_battery_Ext2"` *           | valueKey        | default minData = 0 %<br />default maxData = 100%                                                                                                                                                                                                                                                        |
 | `"timestamp"`<br/>`"timestamp_Ext1"` *<br/>`"timestamp_Ext2"` *                 | valueKey        | default minData = 0 min<br />default maxData = 60 min                                                                                                                                                                                                                                                    |

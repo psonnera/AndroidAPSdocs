@@ -9,7 +9,7 @@
 
 如果你無法找到舊的金鑰存檔或密碼，請按以下步驟進行：
 
-1. [匯出設定](../Maintenance/ExportImportSettings.md)到您的手機。
+1. [匯出設定](../Maintenance/ExportImportSettings.md)到你的手機。
 2. 將設置文件從手機複製或上傳到外部位置（例如你的電腦、雲端存儲服務……）。
 4. 根據 [更新指導](../Maintenance/UpdateToNewVersion) 中的描述生成簽名的 apk 新版本，並將其轉移到你的手機上。
 5. 在你的手機上卸載先前的 **AAPS** 版本。
@@ -32,7 +32,7 @@ gradle 同步失敗的可能原因包括：
 * [不相容的 Gradle JVM](#incompatible-gradle-jvm)
 * [Android Gradle 外掛程式版本不相容](#incompatible-version-of-android-gradle-plugin)
 
-*重要*: 在您遵循針對具體問題的指示後，您需要再次觸發[gradle 同步](#gradle-resync)。
+*重要*: 在你遵循針對具體問題的指示後，你需要再次觸發[gradle 同步](#gradle-resync)。
 
 
 ### 未提交的更改
@@ -104,12 +104,30 @@ gradle 同步失敗的可能原因包括：
 
 請按照[Gradle Resync](#gradle-resync)上的指示進行操作。
 
+### Git Pull Failed - Please tell me who you are
+
+如果您看到此訊息，Git 需要您進行身份確認。
+
+![Git 身份確認](../images/studioTroubleshooting/164_Git_Identify.png)
+
+打開命令列視窗，依序輸入以下兩條指令：
+
+```
+git config --global user.name "你的名稱"
+git config --global user.email 你的email@xxx.com
+```
+
+您的名稱需要用引號括起來。
+
+![Git 身份確認修復](../images/studioTroubleshooting/164_Git_Identify2.png)
+
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
 (incompatible-gradle-jvm)=
 ### 不相容的 Gradle JVM
 
 ![不相容的 Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png) 如果你遇到以上錯誤訊息，則在重新構建之前需要下載正確的 JVM 版本：
+
 1.  檢查[需求表](#Building-APK-recommended-specification-of-computer-for-building-apk-file)以確定你需要的**AAPS**版本的 JVM 版本，並做好記錄。
 
 2. 通過單擊 Android Studio 右側的“大象圖示” (1) 打開 Gradle 視圖，並打開設定 (2)，然後選擇 **Gradle 設定** (3)：
@@ -126,7 +144,7 @@ gradle 同步失敗的可能原因包括：
 ![選擇JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
 5.  用**OK**關閉**設定**對話框。
-6. 您現在需要重新啟動Gradle同步。 請按照[Gradle Resync](#gradle-resync)上的指示進行操作。
+6. 你現在需要重新啟動Gradle同步。 請按照[Gradle Resync](#gradle-resync)上的指示進行操作。
 
 (incompatible-version-of-android-gradle-plugin)=
 ### 不相容的 Android Gradle 外掛版本
@@ -218,7 +236,7 @@ gradle 同步失敗的可能原因包括：
 * 請確保你已將 "app-full-release.apk" 文件傳輸到你的手機。
 * 如果手機上顯示 "應用程序未安裝"，請按照以下步驟操作：
 
-1. [匯出設定](../Maintenance/ExportImportSettings.md)（在已安裝於您手機上的 AAPS 版本中）
+1. [匯出設定](../Maintenance/ExportImportSettings.md)（在已安裝於你手機上的 AAPS 版本中）
 2. 在你的手機上卸載 **AAPS**。
 3. 啟用飛行模式並關閉藍牙。
 4. 安裝新版本（"app-full-release.apk"）
@@ -233,7 +251,7 @@ gradle 同步失敗的可能原因包括：
 
 如果以上技巧均未幫助你，你可能考慮從頭開始構建 apk：
 
-1. [匯出設定](../Maintenance/ExportImportSettings.md)（在已安裝於您手機上的 AAPS 版本中）
+1. [匯出設定](../Maintenance/ExportImportSettings.md)（在已安裝於你手機上的 AAPS 版本中）
 
 2. 準備好你的密鑰密碼和密鑰庫密碼。 如果你忘記了密碼，可以嘗試在項目文件中找到他們，具體方法如[此處](https://youtu.be/nS3wxnLgZOo)所述。
 
@@ -242,7 +260,7 @@ gradle 同步失敗的可能原因包括：
 3. 按此 [從頭構建 apk](#Building-APK-download-AAPS-code) 的說明。
 
 4. 當你成功構建 apk 後，請刪除手機上現有的 apk，將新的 apk 轉移到手機上並安裝。
-5. [再次匯入設定](../Maintenance/ExportImportSettings.md)以恢復您的目標和設定。
+5. [再次匯入設定](../Maintenance/ExportImportSettings.md)以恢復你的目標和設定。
 6. 你應該檢查你的電池優化選項並再次停用他們。
 
 ## 最壞的情況

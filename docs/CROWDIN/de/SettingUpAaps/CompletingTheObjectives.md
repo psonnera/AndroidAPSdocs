@@ -31,8 +31,8 @@ Wenn etwas mit Deinem **AAPS**-Smartphone passiert und Du keine Sicherung Deiner
 
 **Ziel 1** fordert die Einrichtung Deiner technischen Grundausstattung in **AAPS**. No progress can be made until this step has been completed.
 
-- Select the correct CGM/FGM in [Config Builder > BG Source](#Config-Builder-bg-source). Siehe [BZ-Quelle](../Getting-Started/CompatiblesCgms.md) für weitere Informationen.
-- Select the correct Pump in [Config Builder > Pump](../SettingUpAaps/ConfigBuilder.md) to ensure your pump can communicate with **AAPS**. Wähle eine **virtuelle Pumpe** aus, wenn Du ein Pumpenmodell für das Loopen nutzt, das keine **AAPS**-Unterstützung hat oder wenn Du Dich durch die ersten **Ziele** arbeiten möchtest ohne Dein aktuelles Setup nutzen zu wollen. Siehe [Insulinpumpen](../Getting-Started/CompatiblePumps.md) für weitere Informationen.
+- Wähle das richtigen CGM/FGM in [Konfiguration > BZ-Quelle](#Config-Builder-bg-source) aus. Siehe [BZ-Quelle](../Getting-Started/CompatiblesCgms.md) für weitere Informationen.
+- Wähle die richtige Pumpe in der [Konfiguration > Pumpe](../SettingUpAaps/ConfigBuilder.md) aus, um so sicherzustellen, dass Deine Pumpe mit **AAPS** kommunizieren kann. Wähle eine **virtuelle Pumpe** aus, wenn Du ein Pumpenmodell für das Loopen nutzt, das keine **AAPS**-Unterstützung hat oder wenn Du Dich durch die ersten **Ziele** arbeiten möchtest ohne Dein aktuelles Setup nutzen zu wollen. Siehe [Insulinpumpen](../Getting-Started/CompatiblePumps.md) für weitere Informationen.
 - If using Nightscout:
   - Befolge die Anleitung auf der [Nightscout](../SettingUpAaps/Nightscout.md)-Seite, damit ** Nightscout** **AAPS**-Daten empfangen und anzeigen kann.
   - Achte darauf, dass die URL im **Nightscout-Client** **_ohne_ „/api/v1/“** am Ende sein muss - siehe [Einstellungen > Nightscout-Client](#Preferences-nsclient).
@@ -63,8 +63,8 @@ Aufgaben, die zum Abschließen des **Ziel 2** notwendig sind, sind:
 - Zeige den Inhalt des **Loop**-Moduls (sog. Plugin) an.
 - [Skaliere das Glukosewert-Diagramm](#aaps-screens-main-graph), um größere oder kleinere Zeiträume sehen zu können: Zwischen 6h, 12h, 18h und 24h-Zeiträumen wechseln.
   - _Hinweis_: Lange auf das Diagramm drücken oder den Pfeil oben rechts verwenden.
-- Check that AAPS master password is set and known
-  - Hint : see [Preferences > Protection](#Preferences-protection).
+- Überprüfe, ob AAPS Master-Passwort gesetzt und bekannt ist
+  - Tipp: siehe [Einstellungen > Schutz](#Preferences-protection).
 
 
 (objectives-objective3)=
@@ -96,7 +96,7 @@ Das Ziel kann frühestens nach **7 Tagen** abgeschlossen werden. Das ist eine Pf
 - Aktiviere den Open Loop entweder über das Menü [Einstellungen > OpenAPS](#Preferences-aps-mode) oder durch tippen auf das Loop-Symbol oben links auf der **ÜBERSICHT**.
 - Bestätige in einem Zeitraum von 7 Tagen mindestens 20 der vorgeschlagenen temporären Basalratenanpassungen; gib diese (physisch) in der Pumpe ein und bestätige in AAPS, dass Du den Vorschlag akzeptierst hast. Vergewissere Dich, dass die Basalraten-Anpassungen sowohl in **AAPS** als auch in **Nightscout** angezeigt werden.
 - Wenn nötig, nutze [**temporäre Ziele**](../DailyLifeWithAaps/TempTargets.md). After treating a hypo, use the predefined "hypo temp target" to prevent the system from overcorrecting upon the bounce back.
-- If you are still in [Simple Mode](#preferences-simple-mode) at this point, now is probably a good time to switch it off.
+- Wenn Du noch im [Einfachen Modus](#preferences-simple-mode) unterwegs bist, ist es jetzt wahrscheinlich ein guter Zeitpunkt, um ihn auszuschalten.
 
 Um die Anzahl der vorgeschlagenen Basalrate-Änderungen im Open Loop zu reduzieren, helfen die Tipps des [** Ziel 3**](#objective-3-prove-your-knowledge). Additionally, you can change the minimum percentage for recommended basal rate changes. The higher the value, the fewer change notifications you will receive.
 
@@ -234,16 +234,6 @@ Set-up the most basic automation rule; for example trigger an Android notificati
 Du kannst ein wenig damit herumexperimentieren sinnvollere **Automationen** zu erstellen. Die Dokumentationsseite gibt ein paar Beispiele, und Du kannst Screenshots von Automatisierungen durch eine Suche mit dem Stichwort „automation“ in der [Facebook](https://www.facebook.com/groups/AndroidAPSUsers)-Gruppe finden. Es gibt zu diesem Thema auch einen eigenen Kanal in der [Discord](https://discord.gg/4fQUWHZ4Mw)-Community.
 
 Wenn Du beispielsweise jeden Morgen vor der Arbeit/Schule das Gleiche isst, kannst Du eine **Automation** (z.B. mit dem Namen „Ziel vor dem Frühstück“) erstellen, die ein etwas niedrigeres **Temporäres Ziel** 30 Minuten vor dem Frühstück setzt. In einem solchen Fall besteht Deine Bedingung wahrscheinlich aus der Auswahl bestimmter Wochentage (Montag, Dienstag, Mittwoch, Donnerstag, Freitag) und einer bestimmten Uhrzeit (06:30 Uhr). The action will consist of "Start temp target" with a lower than usual target value and a 30 minutes duration.
-
-(objectives-objective11)=
-## Objective 11: Enabling additional features for daytime use, such as Dynamic Sensitivity plugin (DynISF).
-
-Das **Ziel** kann frühestens nach **28 Tagen** abgeschlossen werden. Das ist eine Pflichtwartezeit. Das nächste **Ziel** kann erst dann gestartet werden, wenn die Wartezeit abgelaufen ist.
-
-- Stelle sicher, dass **SMB** wie gewünscht funktionieren
-- Lies im Abschnitt „**Dynamischen ISF**“ in der Dokumention [hier](../DailyLifeWithAaps/DynamicISF.md) nach
-- Suche in den [Facebook](https://www.facebook.com/groups/AndroidAPSUsers)- und [Discord](https://discord.gg/4fQUWHZ4Mw)-Gruppen nach Beiträgen zu **Dynamic ISF** und lies über die Erfahrungen und Empfehlungen der Anderen.
-- Aktiviere das **DynamicISF-Modul** und passe es auf den individuellen Bedarf Deines Körpers an. Aus Sicherheitsgründen ist es ratsam, mit einem Wert unter 100% zu beginnen.
 
 (CompletingTheObjectives-go-back-in-objectives)=
 ## Objective (Ziel) neu starten

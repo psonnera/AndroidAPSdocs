@@ -59,7 +59,7 @@ orphan: true
 
 #### Вариант 2: Конфигуратор
 
-On an existing installation you can select the **Medtrum** pump in [Config Builder > Pump](#Config-Builder-pump):
+При существующей установке вы можете выбрать **Medtrum** в [Конфигураторе > Помпа](#Config-Builder-pump):
 
 В левом верхнем углу из **выпадающего меню** выберите **Конфигуратор**\ ➜\ **Помпа**\ ➜\ **Medtrum**\, включив кнопку **Medtrum**.
 
@@ -132,13 +132,13 @@ On an existing installation you can select the **Medtrum** pump in [Config Build
 
 Установите это значение на разумную величину вашей потребности.
 
-#### Scan on Connection error
+#### Сканировать при ошибке соединения
 
-***Default: Off.***
+***По умолчанию: Выкл.***
 
-Located under **Advanced Settings**.
+Расположено в разделе **Дополнительные настройки**.
 
-Only enable if you have connection problems. If enabled the driver scans for the pump again before trying to reconnect to the pump. Make sure you have Location permission set to "Always allow".
+Включите только при наличии проблем с подключением. При включении драйвер заново сканирует и пытается подключиться к помпе. Убедитесь, что права доступа к Местоположению установлены на "Всегда позволять".
 
 ### Шаг 2b: Настройки оповещений AAPS
 

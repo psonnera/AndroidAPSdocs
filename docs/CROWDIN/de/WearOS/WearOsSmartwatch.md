@@ -41,14 +41,14 @@ Stelle sicher, dass in dem eMail-Konto, das Du zur Einrichtung des Samsung-Konto
 
 Die wear.apk kann über mehrere Wege aus dem Android Studio auf Dein Smartphone übertragen werden:
 
-a) Mit einem USB-Kabel, um die **AAPS** wear apk Datei auf das Smartphone zu bringen und sie dann über "Sideloading" auf die Smartwatch zu laden. Übertrage die Wear.apk auf das Smartphone über USB in den "Downloads"-Ordner oder
+a) Mit einem USB-Kabel, um die **AAPS** wear apk Datei auf das Smartphone zu bringen und sie dann über "Sideloading" auf die Smartwatch zu laden. Übertrage die Wear.apk auf das Smartphone über USB in den „Downloads“-Ordner oder
 
 b) Schneide die Wear.apk aus Android Studio aus und füge sie in Dein Google Drive Laufwerk ein.
 
 
 Um AAPS per "sideloading" auf die Smartwatch zu bringen, kannst Du entweder Wear Installer 2 oder Easy Fire Tools nutzen. Wir empfehlen den Wear Installer 2 zu nutzen, da die Anleitung und der Prozess im Video klar und verständlich erklärt wird.
 
-## Wear Installer 2 zum "Sideloading" von AAPS Wear vom Smartphone auf die Smartwatch nutzen
+## Wear Installer 2 zum „Sideloading“ von **AAPS** Wear vom Smartphone auf die Smartwatch nutzen
 
  ![grafik](../images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
 
@@ -129,7 +129,7 @@ Wenn das Sideloading der **AAPS** Wear.apk auf die Smartwatch erfolgreich war, s
 1.  Wenn Easy Fire Tools sich nicht verbindet oder Du die Meldung "authorisation failed" erhälst > Überprüfe, ob die IP-Adresse korrekt eingegeben wurde.
 2.  Überprüfe, ob die Smartwatch mit dem Internet (und nicht nur über Bluetooth mit dem Smartphone) verbunden ist.
 3.  Überprüfe, ob das **AAPS** Smartphone und die Smartwatch in der Samsung App miteinander gekoppelt bzw. verbunden sind.
-4.  Es kann auch helfen, einen harten Neustart von Smartphone und Smartwatch durchzuführen (d.h. Samartphone aus- und wieder einschalten)
+4.  Es kann auch helfen, einen harten Neustart von Smartphone und Smartwatch durchzuführen (d. h. Smartphone aus- und wieder einschalten)
 5.  Angenommen Du hast die Wear.apk auf Dein Smartphone herunterladen können, bekommst allerdings keine Glukosewerte angezeigt, _überprüfe_, ob Du die richtige **AAPS** apk Version per Sideloading auf die Smartwatch übertragen hast. Wenn Deine AAPS Wear.apk Version in der folgenden Liste enthalten ist a) „wear-AAPSClient-release“; b) „wear-full-release.aab“; oder c) das Wort „debug“ im Namen hat, dann hast Du im Erstellprozess (build) die falsche Wear OS apk Version ausgewählt.
 6.  Überprüfe, dass Dein Router die Geräte nicht voneinander isoliert (IP Isolation).
 
@@ -145,7 +145,7 @@ In der Basisversion der AAPS Wear OS APK sind schon eine Vielzahl von Zifferblä
 
 ![Screenshot_20231123_124657_sysui](../images/efd4268f-0536-4a31-9ba1-f98108f32483.png)
 
-2. Wische an das Ende der Liste, bis Du die heruntergeladen Zifferblätter "AAPS (Custom)" siehst. Klicke in die Mitte des Bildes, um es in Deine Zifferblatt-Auswahl zu übernehmen. Keine Angst, das Aussehen des "AAPS (Custom)" Zifferblattes kannst Du im nächsten Schritt noch anpassen.
+2. Wische an das Ende der Liste, bis Du die heruntergeladen Zifferblätter „AAPS (Custom)“ siehst. Klicke in die Mitte des Bildes, um es in Deine Zifferblatt-Auswahl zu übernehmen. Keine Angst, das Aussehen des „AAPS (Custom)“-Zifferblattes kannst Du im nächsten Schritt noch anpassen.
 
 ![Screenshot_20231123_124619_sysui](../images/036dc7c4-6672-46c8-b604-8810a16a2eb3.png)
 
@@ -153,11 +153,11 @@ In der Basisversion der AAPS Wear OS APK sind schon eine Vielzahl von Zifferblä
 
 ![Screenshot_20231123_090941_AAPS](../images/5df23fa3-791b-4c9a-999a-251391a82835.png)
 
-4. Klicke auf "Watchface laden" und wähle das gewünschte Zifferblatt aus.
+4. Klicke auf „Watchface laden“ und wähle das gewünschte Zifferblatt aus.
 
 ![Screenshot_20231123_130410_AAPS](../images/adde2eca-1df7-4382-b9ab-346819c35d9d.png)
 
-5. Das ""AAPS (Custom)"-Zifferblatt sollte im ausgewählten Design auf Deiner Smartwatch angezeigt werden. Das Laden kann einige Sekunden dauern. Du kannst jetzt die „Complications“ anpassen, in dem Du lange auf das Zifferblatt drückst und dann auf „Anpassen“ tippst.
+5. Das „AAPS (Custom)“-Zifferblatt sollte im ausgewählten Design auf Deiner Smartwatch angezeigt werden. Das Laden kann einige Sekunden dauern. Du kannst jetzt die „Complications“ anpassen, in dem Du lange auf das Zifferblatt drückst und dann auf „Anpassen“ tippst.
 
 ## AAPSv2 Watchface - Legende
 

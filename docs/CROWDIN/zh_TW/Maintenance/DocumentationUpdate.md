@@ -3,10 +3,11 @@
 ## 2025年1月
 
 - 快速嚮導[長按功能](#Preferences-quick-wizard) @emilise
+- [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) 頁面改寫 @emilise
 
 ## 2024年12月
 
-- 文檔 [3.3版](#version3300) @emilise
+- 文件 [3.3版](#version3300) @emilise
 
 ## 2024年11月
 
@@ -25,9 +26,9 @@
 
 2022年3月到2024年9月的歷史紀錄遺失
 
-隨著 3.2 的重製，一些過時的信息已被移除。 你可以在之前的文檔版本中找到它：
+隨著 3.2 的重製，一些過時的信息已被移除。 你可以在之前的文件版本中找到它：
 
-AAPS 3.1 文檔可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.html) 獲得。
+AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.html) 獲得。
 
 ***
 
@@ -155,7 +156,7 @@ AAPS 3.1 文檔可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 - [Accu-Chek Insight 與自動調整](#Accu-Chek-Insight-Pump-settings-in-aaps) - 使用的替代方案
 - [Glimp](#Config-Builder-bg-source) - 支援版本 4.15.57 及更新版本
 - [錶盤](../WearOS/WearOsSmartwatch.md) - 重大的更新，更多詳細資訊
-- [錶盤小工具](#Watchfaces-complications) - 使用您最喜愛的錶盤與 AAPS 資料
+- [錶盤小工具](#Watchfaces-complications) - 使用你最喜愛的錶盤與 AAPS 資料
 
 ## 2019年11月
 
