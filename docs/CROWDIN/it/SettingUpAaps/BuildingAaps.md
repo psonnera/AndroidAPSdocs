@@ -13,12 +13,13 @@ Vedi la pagina [Domande frequenti](../UsefulLinks/FAQ.md) per i dettagli.
 
 * Una versione specifica di **[Android Studio](https://developer.android.com/studio/)** potrebbe essere necessaria per costruire l'apk. Cfr. tabella sotto:
 
-| Versione AAPS       | Versione<br/>Android Studio<br/>preferita | Versione Alternative<br/>Android Studio<br/>                                                            | Gradle | JVM |
-| ------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------ |:--- |
-| [3.2](#version3200) | Hedgehog (2023.1.1)                                   | Iguana (2023.2.1)<br/>Jellyfish (2023.3.1)<br/>Koala (2024.1.1)<br/>Ladybug (2024.2.1)<br/> | 8.2    | 19  |
-| [3.3](#version3300) | Ladybug (2024.2.1)                                    |                                                                                                                     | 8.9    | 21  |
+| Versione AAPS           | Versione<br/>Android Studio<br/>preferita | Versione Alternative<br/>Android Studio<br/>                                                            | Gradle | JVM |
+| ----------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------ |:--- |
+| [3.2](#version3200)     | Hedgehog (2023.1.1)                                   | Iguana (2023.2.1)<br/>Jellyfish (2023.3.1)<br/>Koala (2024.1.1)<br/>Ladybug (2024.2.1)<br/> | 8.2    | 19  |
+| [3.3](#version3300)     | Ladybug (2024.2.1)                                    |                                                                                                                     | 8.9    | 21  |
+| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                       |                                                                                                                     | 8.10   | 21  |
 
-La "versione preferita" contiene già la versione JVM appropriata. Se usi una versione diversa, potresti incontrare dei problemi con la versione JVM. Guarda la pagina [Risoluzione dei problemi Android Studio](#troubleshooting_androidstudio-uncommitted-changes) per aiutarti a risolverli. Se la tua versione attuale di Android Studio non è elencata nella tabella, è necessario aggiornarla prima.
+La "versione preferita" contiene già la versione JVM appropriata. La versione preferita è anche la versione minima che puoi usare per costruire **AAPS**. **NON PUOI** costruire su una versione più vecchia di quella "preferita". Se usi una versione diversa, potresti incontrare dei problemi con la versione JVM. Guarda la pagina [Risoluzione dei problemi Android Studio](#troubleshooting_androidstudio-uncommitted-changes) per aiutarti a risolverli. Se la tua versione attuale di Android Studio non è elencata nella tabella, è necessario aggiornarla prima.
 
 La versione Gradle è legata al codice sorgente, otterrai sempre la versione corretta Gradle quando scarichi / aggiorni il codice sorgente. E menzionata qui solo per riferimento, non è necessario intervenire su di esso.
 
@@ -143,21 +144,21 @@ Installa Android Studio cliccando "Next", come mostrato nelle schermate seguenti
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-![Choose_components](../images/Building-the-App/012_InstallLadybug.png)
+![Scelta_componenti](../images/Building-the-App/012_InstallLadybug.png)
 
-![Configuration_Settings](../images/Building-the-App/013_InstallLadybug.png)
+![Configurazione_Impostazioni](../images/Building-the-App/013_InstallLadybug.png)
 
 Ora clicca su "Install":
 
-![Choose_start_Menu_Folder](../images/Building-the-App/014_InstallLadybug.png)
+![Cartella](../images/Building-the-App/014_InstallLadybug.png)
 
 Una volta completato, premi "Next"
 
-![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
+![Installazione_Completata](../images/Building-the-App/015_InstallLadybug.png)
 
 Nell'ultimo passo, fai clic su "Finished" per avviare Android Studio per la prima volta.
 
-![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
+![Completamento_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
 Ti verrà chiesto se vuoi contribuire a migliorare Android Studio. Scegli l'opzione a tuo piacimento, non farà alcuna differenza per i passaggi successivi.
 
@@ -165,31 +166,31 @@ Ti verrà chiesto se vuoi contribuire a migliorare Android Studio. Scegli l'opzi
 
 La schermata di benvenuto ti accoglierà all'installazione di Android Studio. Premi "Next".
 
-![Welcome](../images/Building-the-App/022_WelcomeAndroidStudioInstallation.png)
+![Benvenuto](../images/Building-the-App/022_WelcomeAndroidStudioInstallation.png)
 
 Seleziona "Standard" come tipo di installazione.
 
-![Install_Type](../images/Building-the-App/023_DefaultInstallation.png)
+![Install_Tipo](../images/Building-the-App/023_DefaultInstallation.png)
 
 Conferma nuovamente le impostazioni facendo clic su "Next".
 
-![Verify_Settings](../images/Building-the-App/024_DefaultInstallation.png)
+![Controlla_Impostazioni](../images/Building-the-App/024_DefaultInstallation.png)
 
 Ora devi accettare gli accordi di licenza. Hai due sezioni (1 + 3) sul lato sinistro che devi selezionare una dopo l'altra e per ciascuna selezionare "Accept" (2 + 4) sul lato destro.
 
 Quindi puoi cliccare sul pulsante "Finish" (5).
 
-![License_Agreement](../images/Building-the-App/025_LicenseAgreement.png)
+![Licenza_Accordo](../images/Building-the-App/025_LicenseAgreement.png)
 
 Alcuni pacchetti Android verranno scaricati e installati. Sii paziente e aspetta.
 
 Una volta terminato, vedrai la schermata seguente, dove puoi di nuovo selezionare "Finish".
 
-![Downloading_Components](../images/Building-the-App/026_DownloadFinished.png)
+![Scaricare_Componenti](../images/Building-the-App/026_DownloadFinished.png)
 
 Ora vedrai la schermata di benvenuto di Android Studio.
 
-![Welcome_to_Android_Studio](../images/Building-the-App/031_WelcomeAndroidStudio.png)
+![Welcome_a_Android_Studio](../images/Building-the-App/031_WelcomeAndroidStudio.png)
 
 
 (Building-APK-download-AAPS-code)=
@@ -207,11 +208,11 @@ Nella schermata di benvenuto di Android Studio controlla che "**Progetti**" (1) 
 
 Quindi clicca su "**Get from VCS**" (2) a destra:
 
-![Get_from_VCS](../images/Building-the-App/032_GetVCS.png)
+![Get_da_VCS](../images/Building-the-App/032_GetVCS.png)
 
 Ora diremo a Android Studio da dove ottenere il codice:
 
-![Get from Version Control](../images/Building-the-App/033_CloneGit.png)
+![Ottieni dal Controllo di Versione](../images/Building-the-App/033_CloneGit.png)
 
 * "Repository URL" deve essere selezionato (impostazione predefinita) a sinistra (1).
 * "Git" deve essere selezionato (impostazione predefinita) come controllo di versione (2).
@@ -221,7 +222,7 @@ Ora diremo a Android Studio da dove ottenere il codice:
     ```
     e incollalo nella casella di testo dell'URL (3).
 
-* Controlla che la directory (default) per salvare il codice clonato non esiste già sul tuo computer (4). Puoi cambiarla in qualsiasi cartella, ma ricordati dove hai salvato il progetto!
+* Controllare che la cartella (predefinita) per salvare il codice clonato non esiste già sul computer (4). Puoi cambiarla in qualsiasi cartella, ma ricordati dove hai salvato il progetto!
 * Ora clicca sul pulsante "Clone" (5).
 
 ```{admonition} INFORMATION
@@ -231,16 +232,16 @@ Prendi nota della cartella. È dove viene memorizzato il tuo codice sorgente!
 
 Ora vedrai uno schermo che ti dice che il repository è in fase di clonazione:
 
-![cloning_repository](../images/Building-the-App/034_CloningProgress.png)
+![clonazione_repository](../images/Building-the-App/034_CloningProgress.png)
 
 Ad un certo punto, Android Studio si chiuderà e ricomincierà. Ti potrebbe essere chiesto se vuoi fidarti del progetto. Clicca su "Trust project":
 
-  ![Trust project](../images/Building-the-App/035_TrustProject.png)
+  ![Fidati del progetto](../images/Building-the-App/035_TrustProject.png)
 
 
 Solo per gli utenti Windows: Se il firewall richiede l'autorizzazione, concedi l'accesso:
 
- ![Firewall permission java](../images/AndroidStudio361_18.png)
+ ![Autorizzazione firewall java](../images/AndroidStudio361_18.png)
 
 Dopo aver clonato il repository con successo, Android Studio aprirà il progetto clonato.
 
@@ -261,7 +262,7 @@ Quando Android Studio si è aperto, aspetta pazientemente (questo può richieder
 
 Android Studio avvierà automaticamente una "sincronizzazione del progetto Gradle", che richiederà un paio di minuti per finire. Lo puoi vedere (ancora) in esecuzione:
 
-![AS_download_dependencies](../images/Building-the-App/036_GradleSyncing.png)
+![Dipendenze AS_download](../images/Building-the-App/036_GradleSyncing.png)
 
 ```{admonition} NEVER UPDATE GRADLE!
 :class: warning
@@ -289,7 +290,7 @@ Nell'angolo in alto a sinistra di **Android Studio**, apri il menu hamburger e n
 
 Controlla se **Android Studio** può trovare automaticamente il **percorso per l'eseguibile di Git**, facendo clic sul pulsante "Test" (1):
 
-![Git Executable](../images/Building-the-App/039_GitTest.png)
+![Eseguibile Git](../images/Building-the-App/039_GitTest.png)
 
 
 Se l'impostazione automatica è riuscita, la tua versione corrente di **Git** verrà visualizzata accanto al percorso.
@@ -302,7 +303,7 @@ Se **git.exe** non viene trovato automaticamente, oppure ottieni un errore clicc
 * fare clic sull'icona della cartella (1) e navigare manualmente alla directory dove **git.exe** è stato installato [in precedenza](#BuildingAaps-steps-for-installing-git)
 * Verifica le impostazioni con il pulsante **Test**!
 
-  ![Git not found](../images/Building-the-App/039_GitTestError.png)
+  ![Git non trovato](../images/Building-the-App/039_GitTestError.png)
 
 (Building-APK-generate-signed-apk)=
 ### Costruisci l'APK AAPS "firmato"
@@ -321,11 +322,11 @@ Per i nostri scopi, questo significa solo che generiamo un file di firma o "keys
 
 Fare clic sul menu hamburger in alto a sinistra per aprire la barra dei menu. Seleziona **Build** (1), quindi seleziona **Generate Signed App Bundle / APK** (2)
 
-![Build apk](../images/Building-the-App/040_GenerateSignedAPK.png)
+![Costruisci apk](../images/Building-the-App/040_GenerateSignedAPK.png)
 
 Seleziona "APK" invece di "Android App Bundle" e clicca su "Next":
 
-![APK instead of bundle](../images/Building-the-App/041_APK.png)
+![APK invece di bundle](../images/Building-the-App/041_APK.png)
 
 Nella schermata successiva, assicurati che "Module" sia impostato su "AAPS.app" (1).
 
@@ -334,7 +335,7 @@ Nella schermata successiva, assicurati che "Module" sia impostato su "AAPS.app" 
 :class: information
 Se vuoi creare l'apk per il tuo smartwatch, devi selezionare AAPS.wear!
 ```
-![Create_key_store](../images/Building-the-App/042_CreateNewKey.png)
+![Crea_key_store](../images/Building-the-App/042_CreateNewKey.png)
 
 Clicca "Create new..." (2) per iniziare a creare il tuo keystore (chiavi).
 
@@ -346,7 +347,7 @@ Se hai costruito AAPS prima, NON creare un nuovo keystore ma seleziona quello es
 
 **_Nota:_** Il keystore è un file in cui vengono memorizzate le informazioni per la firma dell'app. È criptato e le informazioni sono protette con le password.
 
-![Create key store](../images/Building-the-App/043_Keystore.png)
+![Crea deposito chiavi](../images/Building-the-App/043_Keystore.png)
 
 * Fai clic sul simbolo "cartella" (1) per selezionare il percorso del computer per il tuo keystore.
 
@@ -379,32 +380,32 @@ Segna queste password! Ne avrai bisogno quando costruirai il prossimo aggiorname
 
 Nella pagina **Generate signed App Bundle or APK**, verrà visualizzato il percorso del tuo keystore. Ora reinserisci la password (1) e la password (2) del keystore e spunta la casella (3) per ricordare le password, in modo da non doverli entrare di nuovo la prossima volta che si costruisce l'apk (es. quando aggiorni a una nuova versione AAPS). Clicca "Next" (4):
 
-![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
+![Memorizza le password](../images/Building-the-App/044_RememberPwd.png)
 
 
 Nella schermata successiva, seleziona la variante di build "fullRelease" (2) e clicca su "Create" (3). Devi ricordare la cartella visualizzata in (1), perché in seguito troverai il tuo file apk costruito proprio lì!
 
-   ![Select build variant](../images/Building-the-App/045_BuildPath.png)
+   ![Seleziona variante di build](../images/Building-the-App/045_BuildPath.png)
 
 Android Studio ora costruirà l'apk **AAPS**. Mostrerà "Gradle Build running" (2) in basso a destra. Il processo richiede un po' di tempo, a seconda del computer e della connessione a internet, quindi **sii paziente!** Se vuoi guardare il progresso della build, clicca sul piccolo martello "build" (1) nella parte inferiore di Android Studio:
 
-![Gradle Running](../images/Building-the-App/046_BuildRunning.png)
+![Gradle In Esecuzione](../images/Building-the-App/046_BuildRunning.png)
 
 Ora puoi guardare il progresso della costruzione:
 
-![Android_Studio_building](../images/Building-the-App/047_BuildDetails.png)
+![Android Studio_building](../images/Building-the-App/047_BuildDetails.png)
 
 Android Studio mostrerà l'informazione "BUILD SUCCESSFUL" dopo che la costruzione è finita. Potresti vedere una notifica popup dove puoi cliccare "locate" per localizzare la cartella del file apk. Se te la sei persa, clicca sull'icona della notifica (1) e poi su **locate** (2) nella parte inferiore dello schermo per far apparire le notifiche:
 
-![Build finished](../images/Building-the-App/049_ReopenNotification.png)
+![Build completato](../images/Building-the-App/049_ReopenNotification.png)
 
 **_Se la build non è andata a buon fine, fai riferimento alla sezione [Risoluzione dei problemi Android Studio](../GettingHelp/TroubleshootingAndroidStudio)._**
 
 Nella casella Notifiche, clicca sul link blu "locate":
 
-![Locate build](../images/Building-the-App/048_BuildFinished.png) Il file manager si aprirà e mostrerà il file apk che hai appena costruito.
+![Localizza build](../images/Building-the-App/048_BuildFinished.png) Il file manager si aprirà e mostrerà il file apk che hai appena costruito.
 
-   ![File location apk](../images/Building-the-App/050_LocateAPK.png)
+   ![Posizione del file apk](../images/Building-the-App/050_LocateAPK.png)
 
 Complimenti! Ora hai costruito il file apk di **AAPS**, trasferirai questo file sul tuo smartphone nella sezione successiva dei documenti.
 

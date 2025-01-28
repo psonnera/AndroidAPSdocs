@@ -104,12 +104,30 @@ Se ricevi un messaggio di errore come questo:
 
 Segui le istruzioni di [Risincronizza Gradle](#gradle-resync).
 
+### Git Pull Fallito - Please tell me who you are
+
+Se vedi questo messaggio, Git ha bisogno che ti identifichi te stesso.
+
+![Identificazione Git](../images/studioTroubleshooting/164_Git_Identify.png)
+
+Apri il terminale e digita i due comandi seguenti, uno dopo l'altro.
+
+```
+git config --global user.name "Il tuo nome qua"
+git config --global user.email la-tua.mail@qua.com
+```
+
+Il tuo nome deve essere scritto tra virgolette.
+
+![Correzione di identificazione di Git](../images/studioTroubleshooting/164_Git_Identify2.png)
+
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
 (incompatible-gradle-jvm)=
 ### Incompatible Gradle JVM
 
 ![Gradle JVM incompatibile](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png) Se vedi il messaggio di errore sopra, devi scaricare la versione corretta di JVM prima di riprovare a ricostruire:
+
 1.  Controlla nella [tabella dei prerequisiti](#Building-APK-recommended-specification-of-computer-for-building-apk-file) la versione JVM necessaria per la versione **AAPS** che stai costruendo, e prendine nota.
 
 2. Apri la scheda Gradle cliccando sull'elefante (1) sul lato destro di Android Studio, apri le impostazioni (2) e seleziona **Gradle Settings** (3):

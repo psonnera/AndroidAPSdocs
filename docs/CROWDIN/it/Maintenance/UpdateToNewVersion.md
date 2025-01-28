@@ -11,7 +11,7 @@
 * A seguito della pubblicazione, leggi in dettaglio le [note di rilascio](ReleaseNotes.md), e chiarisci eventuale domande con la communità, su Facebook o Discord, prima di procedere con l'aggiornamento.
 
   ```{note}
-  Nel caso in cui desideri costruire **AAPS** su un nuovo computer: copia il tuo file keystore nel nuovo computer. Quindi segui la procedura [costruzione iniziale di **AAPS**](../SettingUpAaps/BuildingAaps.md) invece di questa guida. With the only difference that instead of creating a new keystore, you can select the one you have copied on the new computer.
+  Nel caso in cui desideri costruire **AAPS** su un nuovo computer: copia il tuo file keystore nel nuovo computer. Quindi segui la procedura [costruzione iniziale di **AAPS**](../SettingUpAaps/BuildingAaps.md) invece di questa guida. Con l'unica differenza che: invece di creare un nuovo keystore, puoi selezionare quello che hai copiato sul nuovo computer.
   ```
 
 ## Panoramica per l'aggiornamento a una nuova versione di AAPS

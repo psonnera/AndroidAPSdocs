@@ -9,7 +9,7 @@ orphan: true
 
 È da notare che i sensori G7 e ONE+, contrariamente al G6, non lisciano i valori della glicemia, né nell'app, né con il lettore. Maggiori dettagli [qui](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
-![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
+![G7 inglese](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 `{admonition} [Metodo di smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md)`
 
 ## 1. xDrip+ (collegamento diretto a G7 o ONE+)
