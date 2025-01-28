@@ -169,7 +169,7 @@ L'impostazione deve funzionare abbastanza bene per la vostra (!) varietà di pas
 
 Per il successo del loop chiuso completo, ISF è il parametro di sintonizzazione chiave. Quando si utilizza AAPS Master + Automations, un **> icambiamento del profilo del 100% deve essere attivato automaticamente al momento del riconoscimento del pasto ** (tramite delta di glucosio), e fornire un ISF dedicato.
 
-AAPS Master consente fino al 130% di profilo temp. profile in Hybrid Closed Loop mode. Boosting the ISF is done in 3 steps:
+AAPS Master consente fino al 130% di profilo temp. profilo in modalità Hybrid Closed Loop. Il potenziamento dell'ISF avviene in 3 fasi:
 
 - Step 1 is to look up the ISF applicable for this meal time hour in the profile, and see whether e.g. Autosens suggest a modification that takes care of the current (last few hours’) insulin sensitivity status of the body.
 - Step 2 applies a factor (1/profile%, as set in your Automation) to boost ISF.
