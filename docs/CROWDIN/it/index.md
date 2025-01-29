@@ -110,7 +110,7 @@ Cambio profilo & Percentuale profilo <./DailyLifeWithAaps/ProfileSwitch-ProfileP
 Target Temporanei <./DailyLifeWithAaps/TempTargets.md>
 CHO estesi <./DailyLifeWithAaps/ExtendedCarbs.md>
 Automazioni <./DailyLifeWithAaps/Automations.md>
-Sensibilità insulinica dinamica <./DailyLifeWithAaps/DynamicISF.md>
+Sensibilità Insulinica Dinamica <./DailyLifeWithAaps/DynamicISF.md>
 AAPS per i bambini <./DailyLifeWithAaps/AapsForChildren.md>
 Micro e cannule <./DailyLifeWithAaps/PumpsAndCannulas.md>
 Viaggi, fuso orario & Ora legale <./DailyLifeWithAaps/TimezoneTraveling-DaySavingTime.md>
