@@ -6,17 +6,17 @@ orphan: true
 
 ## Jelly 2
 
-Do not confuse with Jelly Star.
+Non confondere con Jelly Star.
 
-**Advantages**
+**Vantaggi**
 
-* It's really small.
+* È davvero piccolo.
 * Android 11.
-* Even if you tell people, they might not consider it as a normal smartphone and will except it easier as a exception when phones are normally not allowed.
+* Anche se lo dici alla gente, potrebbero non considerarlo come uno telefonino normale e sarà più facile chiedere un'eccezione dove i telefoni non sono normalmente ammessi.
 
-**Disadvantages**
+**Svantaggi**
 
-* Recommended only for experienced loopers (some settings are not recognizable, you have to know from experience with a big Android AAPS phone, how and where what is located. Some AAPS buttons are hard to touch with a lot of feeling, but not with stubby fingers.)
+* Consigliato solo per utenti esperti (alcune impostazioni non sono riconoscibili, devi sapere dall'esperienza con un telefono Android AAPS normale, come e dove si trovano. Some AAPS buttons are hard to touch with a lot of feeling, but not with stubby fingers.)
 * Can only be used as LooperPhone. It's better to have a normal smartphone in your pocket.
 
 ### Battery life optimization
