@@ -4,7 +4,7 @@ orphan: true
 
 # Omnipod DASH
 
-These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**. The Omnipod driver is available as part of AAPS (AAPS) as of version 3.0.
+Queste istruzioni sono per configurare il microinfusore patch pump **Omnipod DASH** e **(NON Omnipod Eros)**. Il driver Omnipod è disponibile in AAPS (AAPS) dalla versione 3.0.
 
 **This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.**
 
