@@ -4,29 +4,29 @@ orphan: true
 
 # Omnipod DASH
 
-These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**. The Omnipod driver is available as part of AAPS (AAPS) as of version 3.0.
+Queste istruzioni sono per configurare il microinfusore patch pump **Omnipod DASH** e **(NON Omnipod Eros)**. Il driver Omnipod è disponibile in AAPS (AAPS) dalla versione 3.0.
 
-**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.**
+**Questo software è parte di un progetto che prevede una soluzione fai da te (DIY) di pancreas artificiale. Non è un prodotto, richiede che tu legga, impari e capisca come funziona il sistema. Sei l'unico responsabile di quello che ne farai.**
 
-## Omnipod DASH specifications
+## Specifiche Omnipod DASH
 
-These are the specifications of the **Omnipod DASH** and what differentiates it from the **Omnipod EROS**:
+Queste sono le specifiche dell' **Omnipod DASH** e ciò che lo differenzia dall' **Omnipod EROS**:
 
-* The DASH pods are identified by a blue needle cap (EROS has a clear needle cap). The pods are otherwise identical in terms of physical dimensions
-* No need for a separate Omnipod to BLE link/bridge device (NO RileyLink, OrangeLink, or EmaLink needed).
-* BT connection only when needed, connects to send command and disconnects right after !
-* No more "no connection to link device / pod" errors
-* AAPS will wait for pod accessibility to send commands
-* On activation, AAPS will find and connect a new DASH pod.
-* Expected range: 5-10 meters (YMMV)
+* I pod DASH sono identificabili dalla linguetta di protezione dell'ago blu (gli EROS hanno una linguetta trasparente). I pod sono altrimenti identici in termini di dimensioni fisiche
+* Non c'è bisogno di un dispositivo separato per fare da ponte da Omnipod a Bluetooth (NO RileyLink, OrangeLink o EmaLink necessari).
+* Il Bluetooth si connette solo quando necessario, per inviare i comandi e si disconnette subito dopo !
+* Non ci saranno più errori "nessuna connessione dal dispositivo al pod"
+* AAPS attenderà che il pod sia accessibile per inviare i comandi
+* Al momento dell'attivazione, AAPS troverà e connetterà il nuovo pod DASH.
+* Distanza massima prevista: 5-10 metri (variabile)
 
-## Hardware/Software Requirements
+## Requisiti Hardware/Software
 
-* A new **Omnipod DASH Pod** (Identified by blue needle cap)
+* Un nuovo **Omnipod DASH Pod** (Identificato dalla linguetta blu)
 
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
-* **Compatible Android phone** with a BLE Bluetooth connection
+* Un **telefono Android** compatibile, con connessione Bluetooth Low Energy
    -  Not all phone hardware and Android versions are guaranteed to work. Please check [**DASH Tested phones**](#Phones-list-of-tested-phones) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work).
    - **Important note: There have been multiple cases of permanent, non-recoverable connection losses when using older pods with firmware version 3.XX.X. Be careful when using these old pods with AAPS, especially with other Bluetooth devices connected!** Be aware that AAPS Omnipod Dash driver Connects with the Dash POD via Bluetooth every time it sends a command, and it disconnects right after. The Bluetooth connections might be disturbed by other devices linked to the phone that is running AAPS, like earbuds etc... (which might cause, in rare occasions, connection issue or pod errors/loss on activation or afterwards in some phone models), or be disturbed by it.
    -  **Version 3.0 or newer of AAPS built and installed** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions.
