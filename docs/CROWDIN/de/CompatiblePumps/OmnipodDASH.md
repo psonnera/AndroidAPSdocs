@@ -31,7 +31,7 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 
 The instructions below explain how to activate a new pod session. Wait to close to expiry of a current pod session before trying to connect **AAPS** with a new pod. Once a pod is is cancelled it cannot reused and the disconnection will be final.
 
-## Bevor du anfängst
+## Bevor Du anfängst
 
 **SAFETY FIRST** - you should not try to connect **AAPS** to a pod for the first time without having access to extra pods, insulin, and phone devices are a must have.
 
@@ -363,7 +363,7 @@ The Notification section allows the user to so select their preferred notificati
 * **Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when **AAPS**is uncertain if a bolus was successfully delivered.
 * **Ton bei unterbrochener Abgabe aktiviert:** Aktivieren oder deaktivieren Sie diese Einstellung, um eine akustische Benachrichtigung und visuelle Benachrichtigung auszulösen, wenn die Unterbrechung der Insulinabgabe erfolgreich durchgeführt wurde.
 
-## Actions (ACT) Tab
+## Aktionen (AKT) Tab
 
 This tab is well documented in the main**AAPS**documentation but there are a few items on this tab that are specific to how the DASH differs from tube based pumps, especially after the processes of applying a new pod.
 
@@ -418,7 +418,7 @@ Wenn für eine voreingestellte Zeitspanne keine Kommunikation mit dem Pod herges
 
 Exporting **AAPS** settings enables you to restore all your settings, and maybe more importantly, all your Objectives. You may need to restore settings to the “last known working situation” or after uninstalling/reinstalling **AAPS** or in case of phone loss, reinstalling on the new phone.
 
-Hinweis: Die Informationen des aktiven Pod sind in den exportierten Einstellungen enthalten. Wenn Sie eine "alte" Exportdatei importieren, wird Ihr aktueller Pod "sterben". Es gibt hierzu keine Alternative. In some cases (like a _programmed_ phone change), you may need to use the exported file to restore **AAPS'** settings **while keeping the current active Pod**. In diesem Fall ist es wichtig, nur die zuletzt exportierte Einstellungsdatei zu verwenden, die den aktuell aktiven Pod enthält.
+Hinweis: Die Informationen des aktiven Pod sind in den exportierten Einstellungen enthalten. Wenn Du eine „alte“ Exportdatei importierst, wird Dein aktueller Pod „sterben“. Es gibt hierzu keine Alternative. In some cases (like a _programmed_ phone change), you may need to use the exported file to restore **AAPS'** settings **while keeping the current active Pod**. In diesem Fall ist es wichtig, nur die zuletzt exportierte Einstellungsdatei zu verwenden, die den aktuell aktiven Pod enthält.
 
 **Es ist eine gute Idee, einen Export sofort nach der Aktivierung eines Pods durchzuführen.** This way you will always be able to restore the current active pod in case of a problem. Zum Beispiel, wenn Du auf ein anderes Smartphone wechseln willst.
 
