@@ -29,9 +29,9 @@ Queste sono le specifiche dell' **Omnipod DASH** ('DASH') e ciò che lo differen
    -  **Versione 3.0 o più recente di AAPS costruita e installata** utilizzando le istruzioni [**Costruisci AAPS**](../SettingUpAaps/BuildingAaps.md).
 * [**Sensore di Glicemia (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
-The instructions below explain how to activate a new pod session. Wait to close to expiry of a current pod session before trying to connect **AAPS** with a new pod. Once a pod is is cancelled it cannot reused and the disconnection will be final.
+Le istruzioni qui sotto spiegano come attivare una nuova sessione pod. Aspetta di essere vicino alla scadenza della sessione del pod che stai usando prima di provare a connettere **AAPS** con un nuovo pod. Una volta che un pod viene disattivato, non può essere riutilizzato e la disconnessione sarà definitiva.
 
-## Before You Begin
+## Prima Di Iniziare
 
 **SAFETY FIRST** - you should not try to connect **AAPS** to a pod for the first time without having access to extra pods, insulin, and phone devices are a must have.
 
