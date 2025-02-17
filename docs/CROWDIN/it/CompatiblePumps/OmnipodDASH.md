@@ -16,7 +16,9 @@ Queste sono le specifiche dell' **Omnipod DASH** ('DASH') e ciò che lo differen
 * Non ci saranno più errori "nessuna connessione dal dispositivo al pod" con DASH.
 * **AAPS** attenderà che il pod sia accessibile per inviare i comandi.
 * Al momento dell'attivazione, **AAPS** troverà e connetterà il nuovo pod DASH.
-* Distanza massima prevista: 5-10 metri (variabile)
+* Expected range: 5-10 meters (YMMV).
+
+WARNING: There are currently reported Bluetooth connection issues with the following combination of **AAPS** / DASH / Android 15. **AAPS** should not be used in combination with Android 15 and DASH unless the user has checked the following [**List**](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) and verified that their phone is not a known reported issue. **AAPS** is currently working to resolve this issue.
 
 ## Requisiti Hardware/Software
 
