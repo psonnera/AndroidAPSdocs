@@ -2,30 +2,30 @@
 orphan: true
 - - -
 
-# AAPS Omnipod Insulin Pump Driver Documentation
+# Documentazione del driver AAPS per il microinfusore Omnipod
 
-These instructions are for configuring the Omnipod Eros generation pump (**NOT Omnipod Dash**). The Omnipod driver is available as part of AAPS (AAPS) as of version 2.8.
+Queste istruzioni riguardano la configurazione del microinfusore Omnipod Eros (**NON Omnipod Dash**). Il driver per Omnipod è disponibile all'interno di AAPS (AAPS) a partire dalla versione 2.8.
 
-**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.**
+**Questo software fa parte di una tecnologia di pancreas artificiale fai-da-te e non è un prodotto, ma richiede che TU legga, impari e comprenda il sistema, compreso il suo utilizzo. Tu solo sei responsabile dell'uso che ne farai.**
 
 ```{contents}
 :backlinks: entry
 :depth: 2
 ```
 
-## Hardware and Software Requirements
+## Requisiti hardware e software
 
-- **Pod Communication Device**
+- **Dispositivo di comunicazione con il pod**
 
-> Component that bridges communication from your AAPS enabled phone to Eros generation pods.
+> Elemento che consente la comunicazione tra il telefono con AAPS e i pod della serie Eros.
 > 
-> > - ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink Website](https://getrileylink.org/product/orangelink)
-> > - ![RileyLink](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
-> > - ![EmaLink](../images/omnipod/EmaLink.png)  [Emalink Website](https://github.com/sks01/EmaLink) - [Contact Info](mailto:getemalink@gmail.com)
-> > - ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Contact Info](mailto:Boshetyn@ukr.net)
-> > - ![LoopLink](../images/omnipod/LoopLink.png)  [LoopLink Website](https://www.getlooplink.org/) - [Contact Info](https://jameswedding.substack.com/) - Untested
+> > - ![OrangeLink](../images/omnipod/OrangeLink.png)  [Sito di OrangeLink](https://getrileylink.org/product/orangelink)
+> > - ![RileyLink](../images/omnipod/RileyLink.png) [RileyLink 433MHz](https://getrileylink.org/product/rileylink433)
+> > - ![EmaLink](../images/omnipod/EmaLink.png)  [Sito di Emalink](https://github.com/sks01/EmaLink) - [Info di contatto](mailto:getemalink@gmail.com)
+> > - ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Info di contatto](mailto:Boshetyn@ukr.net)
+> > - ![LoopLink](../images/omnipod/LoopLink.png)  [Sito di LoopLink](https://www.getlooplink.org/) - [Info di contatto](https://jameswedding.substack.com/) - Non testato
 
-- ![Android_phone](../images/omnipod/Android_phone.png)  **Mobile Phone Device**
+- ![Android_phone](../images/omnipod/Android_phone.png)  **Telefono cellulare**
 
 > Component that will operate AAPS and send control commands to the Pod communication device.
 > 
