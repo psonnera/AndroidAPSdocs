@@ -40,7 +40,7 @@ I motivi più comuni per i fallimenti di sincronizzazione del Gradle sono:
 
 Se ricevi un messaggio di errore come questo:
 
-![Gradle Modifiche Non Commitate](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
+![Gradle Uncommitted Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
 ```
 Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
@@ -200,7 +200,7 @@ Se vedi il messaggio di errore sopra, devi scaricare la versione corretta di JVM
 
   Se vedi un messaggio di errore come quello sotto, probabilmente stai utilizzando un sistema Windows 10 a 32 bit. Non è supportato da Android Studio 3.5.1 e oltre, e purtroppo non c'è nulla che gli sviluppatori **AAPS** possano fare a riguardo!
 
-  Ci sono informazioni su internet su come determinare se hai un sistema operativo a 32 bit o 64 bit - [questo](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
+  There is information on the internet about how to determine whether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
   ![Schermata Impossibile avviare il processo daemon](../images/AndroidStudioWin10_32bitError.png)
 
