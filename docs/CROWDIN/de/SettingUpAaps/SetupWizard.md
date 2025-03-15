@@ -253,7 +253,7 @@ Gehe auf den vorherigen Bildschirm zurück und tippe auf "Alarm-Optionen":
 
 ![grafik](../images/setup-wizard/Screenshot_20231202_141310.png)
 
-Lasse die Schalter vorerst alle deaktiviert. Wir sind nur zu diesem Bildschirm gegangen, um Dich mit den möglichen Optionen vertraut zu machen, die Du zukünftig vielleicht konfigurieren möchtest. Im Moment besteht hierzu noch kein Grund.
+Lasse die Schalter vorerst alle deaktiviert. We only walked to the screen to make you familiar with possible options you might configure in the future. Im Moment besteht hierzu noch kein Grund.
 
 Gehe auf den vorherigen Bildschirm zurück und wähle "Verbindungs-Einstellungen" aus.
 
@@ -261,7 +261,7 @@ Hier kannst Du konfigurieren, wie Du Deine Daten auf den Auswertungsserver über
 
 Betreuende müssen die Option „Mobilfunkverbindung verwenden“ aktivieren, da das Smartphone das dem Kind oder der betreuten Person helfen soll, sonst keine Daten außerhalb der WLAN-Reichweite (_z.B._ auf dem Weg zur Schule) hochladen kann.
 
-Andere **AAPS**-Nutzende können die Übertragung über die Mobilfunkverbindung deaktivieren, um so Daten oder Akku zu sparen.
+Other **AAPS** users can disable the transfer via cellular connection if they want to save data or battery.
 
 Im Zweifel lass einfach alles aktiviert.
 
@@ -275,7 +275,7 @@ Es könnte interessant sein zu sehen, ob **AAPS** jetzt korrekt konfiguriert ist
 
 Aktiviere "Ankündigungen aus Fehlern generieren" und "Benachrichtigungen aus KH-Vorschlags-Alarmen erzeugen".
 
-Lass "Hochladen verlangsamen" weiterhin deaktiviert. Du würdest es nur in ganz besonderen Situationen (wenn z.B. viele Informationen zum Nightscout-Server übertragen werden müssen und der Nightscout-Server diese Daten nur sehr verzögert verarbeiten kann) aktivieren.
+Lass "Hochladen verlangsamen" weiterhin deaktiviert. You would only use it in unusual circumstances if for example a lot of information is to be transferred to the Nightscout server, and the Nightscout server is being slow in processing this data.
 
 Gehe zweimal zurück zur Liste der Plugins und wähle "WEITER", um zum nächsten Bildschirm zu kommen:
 
@@ -355,7 +355,9 @@ Bitte lies die Dokumentation zu den [Profilen](../SettingUpAaps/YourAapsProfile.
 
 ```{admonition} Working profile required - no exceptions here !
 :class: danger
-Für den sicheren Betrieb von **AAPS** ist ein richtiges und präzises Profil Grundvoraussetzung. Das Profil soll mit Deinem Diabetes-Team besprochen und erstellt und sich durch einen Basalratentest, ISF- und IC-Faktortest bestätigt worden sein!
+An accurate profile is necessary to control the safe action of **AAPS**.
+
+It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
 
 Wenn ein Roboter eine falsche Eingabe bekommt, wird er versagen - immer wieder. **AAPS** kann nur mit den zur Verfügung gestellten Informationen arbeiten. Wenn Dein Profil zu stark ist, riskierst Du Hypoglykämien, und wenn es zu schwach ist, riskierst Du Hyperglykämien. 
 ```
@@ -409,7 +411,7 @@ Speichere das Profil, indem Du auf "SPEICHERN" tippst:
 ![grafik](../images/setup-wizard/Screenshot_20231202_143724.png)
 
 
-Nach dem Speichern erscheint eine neue Schaltfläche "AKTIVIERE PROFIL".
+After saving, a new button "Activate Profile" appears.
 
 ```{admonition} Several defined but only one active profile
 :class: information
@@ -477,7 +479,7 @@ Tippe auf "WEITER", um zur nächsten Seite zu kommen:
 
 ## Der APS Algorithmus
 
-Nutze den OpenAPS SMB-Algorithmus als Deinen APS-Algorithmus. Trotz des Namens ist das SMB-Feature des Algorithmus deaktiviert, bis Du mit AAPS vertraut bist und die ersten Ziele abgeschlossen hast. OpenAPS SMB ist im Vergleich zu OpenAPS AMA neuer und im Allgemeinen auch besser.
+Nutze den OpenAPS SMB-Algorithmus als Deinen APS-Algorithmus. Despite the name the SMB feature of the algorithm is disabled until you are familiar with AAPS and already worked through the first objectives. OpenAPS SMB ist im Vergleich zu OpenAPS AMA neuer und im Allgemeinen auch besser.
 
 Der Grund dafür, dass SMB zu Beginn deaktiviert sind, ist, dass die SMB-Funktion durch einen sogenannten Super Micro Bolus (SMB) eine schnellere Reaktion auf den Anstieg des Glukosewerts ermöglicht und das nicht durch eine prozentuale Erhöhung des Basalwerts erreicht. Am Anfang ist Dein Profil in der Regel noch nicht so gut abgestimmt, wie es später mit etwas mehr Erfahrung sein wird. Daher wird diese Funktion zu Beginn zunächst deaktiviert.
 

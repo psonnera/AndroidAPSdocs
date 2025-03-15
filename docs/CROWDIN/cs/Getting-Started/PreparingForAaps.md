@@ -28,7 +28,7 @@ Caution is advised concerning rapid improvements in blood glucose control and lo
 
 An important safety consideration is that a **rapid reduction in HbA1c and improved blood glucose control in those who have had elevated glucose levels for some time can cause permanent damage**. Many people with diabetes are unaware of this, and not all clinicans make their patients aware of this issue.
 
-This damage can include **sight loss, and permanent neuropathy (pain)**. It is possible to avoid this damage occuring, by reducing average glucose levels more slowly. If you currently have an elevated HbA1c and are moving to **AAPS** (or any other closed loop system), _please_ discuss this potential risk with your clinical team before starting, and agree a timescale with gradually decreasing safe glucose targets with them. You can easily set higher glucose targets in **AAPS** initially (currently, the highest target you can select is 10.6 mmol/L but you can also maintain a purposefully weak profile if needed), and then reduce the target as the months pass.
+This damage can include **sight loss, and permanent neuropathy (pain)**. It is possible to avoid this damage occurring, by reducing average glucose levels more slowly. If you currently have an elevated HbA1c and are moving to **AAPS** (or any other closed loop system), _please_ discuss this potential risk with your clinical team before starting, and agree a timescale with gradually decreasing safe glucose targets with them. You can easily set higher glucose targets in **AAPS** initially (currently, the highest target you can select is 10.6 mmol/L but you can also maintain a purposefully weak profile if needed), and then reduce the target as the months pass.
 
 #### Jak rychle můžu snížit můj HbA1c bez rizika trvalých následků?
 
@@ -122,7 +122,7 @@ Cílem této sekce je poskytnout novým uživatelům odkazy na zdroje, aby získ
 
 #### [Oddíl pro lékaře](../UsefulLinks/ClinicianGuideToAaps.md)
 
-This is a [section specificially for clinicians](../UsefulLinks/ClinicianGuideToAaps.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
+This is a [section specifically for clinicians](../UsefulLinks/ClinicianGuideToAaps.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
 
 ## Co budeme sestavovat a instalovat?
 
@@ -139,7 +139,7 @@ Kromě tří základních hardwarových komponentů (telefon, pumpa, glukózový
 
 ### 2) Reportovací server: NightScout (nebo Tidepool*)
 
-Abyste dokázali plně využít **AAPS**, potřebujete nastavit Nightscout server. Můžete to udělat sami (odkaz na manuál) nebo alternativně zaplatit drobný poplatek za spravovanou Nighscout službu vytvořenou pro vás (odkaz na T1 pal 10.be atp.). Nightscout se používá pro průběžný sběr dat z **AAPS**, ze kterých může vytvářet podrobné zprávy související s CGM a inzulínovými schematy. Pečovatelé mohou používat Nightscout ke vzdálené komunikaci s **AAPS** aplikací, která jim umožní dohlížet nad nad managementem diabetu jejich dítěte. Možnosti vzdálené komunikace zahrnují monitoring úrovní glukózy a inzulínu v reálném čase, vzdálené posílání bolusů (pomocí textových zpráv) a zadávání jídel. Pokusit se analyzovat data o vaší sukrovce pomocí informací z CGM odděleně od dat z inzulínové pumpy je jako pokoušet se řídit auto se slepým řidičem, kterému pasažér popisuje situaci.  Pro AAPS verze 3.2 a novější je k dispozici také Tidepool jako alternativa k Nightscoutu.
+Abyste dokázali plně využít **AAPS**, potřebujete nastavit Nightscout server. You can [do this yourself](https://nightscout.github.io/nightscout/new_user/#free-diy) or alternatively, pay a small fee for a [managed Nightscout service](https://nightscout.github.io/#nightscout-as-a-service) to be set up for you. Nightscout se používá pro průběžný sběr dat z **AAPS**, ze kterých může vytvářet podrobné zprávy související s CGM a inzulínovými schematy. Pečovatelé mohou používat Nightscout ke vzdálené komunikaci s **AAPS** aplikací, která jim umožní dohlížet nad nad managementem diabetu jejich dítěte. Možnosti vzdálené komunikace zahrnují monitoring úrovní glukózy a inzulínu v reálném čase, vzdálené posílání bolusů (pomocí textových zpráv) a zadávání jídel. Pokusit se analyzovat data o vaší sukrovce pomocí informací z CGM odděleně od dat z inzulínové pumpy je jako pokoušet se řídit auto se slepým řidičem, kterému pasažér popisuje situaci.  Pro AAPS verze 3.2 a novější je k dispozici také Tidepool jako alternativa k Nightscoutu.
 
 ### 3) Aplikace senzoru CGM
 
@@ -219,7 +219,8 @@ Uživatelům doporučujeme udržovat jejich Android telefon aktualizovaný, vče
 
 ```{admonition} delaying Samsung phones updates
 :class: warning
-Samsung has an unfortunate track record of forcing updates of their phones which cause bluetooth connectivity issues. Chcete-li tyto nucené aktualizace zakázat, je třeba přepnout telefon do "vývojářského režimu": přejděte do nastavení, informací o softwaru, poté klepněte na číslo sestavení, které potvrzuje, že máte odemčený vývojářský režim. Přejděte zpět do hlavního menu a měli byste vidět novou položku možností pro vývojáře. Open developer options and scroll to find auto system update and turn it off
+Samsung has an unfortunate track record of forcing updates of their phones which cause bluetooth connectivity issues. To disable these forced updates you need to switch the phone to "developer mode" by:
+ go to settings and about then software information, then tap build number u til it confirms you have unlocked developer mode. Přejděte zpět do hlavního menu a měli byste vidět novou položku možností pro vývojáře. Open developer options and scroll to find auto system update and turn it off
 ```
 
 ```{admonition} Google Play Protect potential Issue

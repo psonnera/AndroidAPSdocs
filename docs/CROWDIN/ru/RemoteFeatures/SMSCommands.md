@@ -37,6 +37,7 @@ If you want to remove the ability of a caregiver phone to send SMS commands, use
 :depth: 1
 :local: true
 ```
+
 (sms-commands-authenticator-setup)=
 ### Настройка аутентификации
 
@@ -56,7 +57,7 @@ On your phone, go to **Apps > AAPS > Permissions**. Make sure **SMS** and **Phon
 
 ![изображение](../images/remote-control-08.png)
 
-### Date and time synching
+### Date and time syncing
 
 Время на обоих телефонах должно быть синхронизировано. Оптимальный вариант - установить на автоматическую настройку из сети. Различия во времени могут привести к проблемам аутентификации.
 
@@ -108,7 +109,6 @@ PIN requirements are:
 
 ![изображение](../images/remote-control-13.png)
 
-(sms-commands-authenticator-setup)=
 #### Настройка аутентификации
 
 * Follow the step-by-step instructions on the screen.

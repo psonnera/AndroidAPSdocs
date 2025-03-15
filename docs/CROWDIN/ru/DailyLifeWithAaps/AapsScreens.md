@@ -303,7 +303,7 @@
 
 Большинство пользователей считают достаточной следующую конфигурацию дополнительных графиков:
 
-* График 1 с IOB, COB, изменениями Чувствительности
+* Graph 1 with IOB, COB, Sensitivity change
 * Диаграмма 2 с отклонениями и влиянием ГК
 
 #### Абсолютный инсулин
@@ -366,7 +366,7 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 
 ![Кнопки главного экрана](../images/Home2020_Buttons.png)
 
-Кнопки инсулина, углеводов и калькулятора отображаются почти всегда. При потере связи с помпой кнопка инсулина не видна.
+Buttons for Insulin and Carbs are almost always visible. If the connection to the pump is lost, the Calculator button will not be visible.
 
 Другие кнопки можно установить в [Настройках > Обзор > Кнопки](#Preferences-buttons).
 

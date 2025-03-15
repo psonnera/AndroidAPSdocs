@@ -37,6 +37,7 @@ Wenn Du die Möglichkeit SMS-Befehle vom Smartphone der betreuenden Person aus s
 :depth: 1
 :local: true
 ```
+
 (sms-commands-authenticator-setup)=
 ### Konfiguration der Authenticator App
 
@@ -56,7 +57,7 @@ Gehe auf Deinem Smartphone zu **Apps > AAPS > Berechtigungen**. Stelle sicher, d
 
 ![grafik](../images/remote-control-08.png)
 
-### Datum und Uhrzeit synchronisieren
+### Date and time syncing
 
 Die Zeit auf beiden Telefonen muss synchron sein. Am einfachsten erfolgt dies direkt über das Mobilfunknetz. Zeitunterschiede können zu Authentifizierungsproblemen führen.
 
@@ -108,7 +109,6 @@ Anforderungen an die PIN sind:
 
 ![grafik](../images/remote-control-13.png)
 
-(sms-commands-authenticator-setup)=
 #### Konfiguration der Authenticator App
 
 * Folge den Anweisungen auf dem Bildschirm.

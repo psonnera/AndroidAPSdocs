@@ -13,11 +13,15 @@
 
 * 可能需要特定版本的 **[Android Studio](https://developer.android.com/studio/)** 來建立 apk。 見下表：
 
-| AAPS版本                  | 首選<br/>Android Studio<br/>版本 | 替代<br/>Android Studio<br/>版本                                                                        | Gradle | JVM |
-| ----------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------ |:--- |
-| [3.2](#version3200)     | Hedgehog（2023.1.1）                       | Iguana（2023.2.1）<br/>Jellyfish（2023.3.1）<br/>Koala（2024.1.1）<br/>Ladybug（2024.2.1）<br/> | 8.2    | 19  |
-| [3.3](#version3300)     | Ladybug (2024.2.1)                       |                                                                                                                 | 8.9    | 21  |
-| [3.3.1.3](#version3300) | Ladybug功能更新（2024.2.2）                    |                                                                                                                 | 8.10   | 21  |
+| AAPS版本                  | 首選<br/>Android Studio<br/>版本 | 替代<br/>Android Studio<br/>版本 | Gradle | JVM |
+| ----------------------- | ---------------------------------------- | ---------------------------------------- | ------ |:--- |
+| 2.6.2                   | 3.6.1                                    |                                          | 5.6    | 11  |
+| 2.8.2.1                 | 4.1.1                                    |                                          | 6.1    | 13  |
+| 3.1.0.3                 | 2020.3.1                                 | 升級至 Meerkat                              | 7.3    | 17  |
+| [3.2.0.4](#version3200) | Hedgehog（2023.1.1）                       | 升級至 Meerkat                              | 8.2    | 19  |
+| [3.3](#version3300)     | Ladybug (2024.2.1)                       | 升級至 Meerkat                              | 8.9    | 21  |
+| [3.3.1.3](#version3300) | Ladybug功能更新（2024.2.2）                    | 升級至 Meerkat                              | 8.10   | 21  |
+| 3.3.2                   | Meerkat (2024.3.1)                       |                                          | 8.11   | 21  |
 
 "首選版本"已打包與適當的JVM版本。 首選版本也是你可以用來建立**AAPS**的最小版本。 你**無法**在比"首選"版本更舊的版本上建立。 如果使用不同的版本，你可能會遇到與JVM版本相關的問題。 請參閱 [Android Studio 問題排除](#troubleshooting_androidstudio-uncommitted-changes) 頁面以協助解決這些問題。 如果你當前的 Android Studio 版本未在表格中列出，你必須先更新它。
 
@@ -206,7 +210,7 @@ Android Studio 版本非常重要。 請參閱 [上面的指示](#Building-APK-r
 
 在Android Studio的歡迎畫面上，檢查左側的“**專案**” (1)是否高亮顯示。
 
-然後在右側點擊“**從VCS獲取**” (2)：
+點一下右側的"**Clone Repository**" (2)
 
 ![Get_from_VCS](../images/Building-the-App/032_GetVCS.png)
 

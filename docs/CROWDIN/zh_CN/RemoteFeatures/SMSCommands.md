@@ -37,6 +37,7 @@ AAPS还会通过短信通知您，远程指令（如大剂量注射或配置切�
 :depth: 1
 :local: true
 ```
+
 (sms-commands-authenticator-setup)=
 ### 身份验证器设置
 
@@ -56,7 +57,7 @@ AAPS还会通过短信通知您，远程指令（如大剂量注射或配置切�
 
 ![image](../images/remote-control-08.png)
 
-### 日期和时间同步
+### Date and time syncing
 
 两台手机的时间必须同步。 最佳做法是从网络自动设置。 时间差异可能会导致身份验证问题。
 
@@ -108,7 +109,6 @@ PIN码要求：
 
 ![image](../images/remote-control-13.png)
 
-(sms-commands-authenticator-setup)=
 #### 身份验证器设置
 
 * 遵循屏幕上的逐步说明。

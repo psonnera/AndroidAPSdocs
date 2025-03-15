@@ -40,13 +40,13 @@ Wahrscheinliche Gründe für Gradle-Synchronisierungsfehler sind:
 
 Falls Du eine Fehlermeldung bekommst, die so aussieht:
 
-![Gradle Uncommited Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
+![Gradle Uncommitted Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
 ```
 Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
 
 There are uncommitted changes.
-Clone sources again as described in wiki and do not allow gradle update
+Klone den Quellcode noch einmal so wie es in der Dokumentation beschrieben ist und und mache dabei keinen Gradle Update
 ```
 
 #### Schritt 1 - Überprüfe Deine Git Installation
@@ -112,18 +112,18 @@ Folge der Anleitung unter [Gradle Resync](#gradle-resync).
 
 ### Git Pull Failed - Please tell me who you are
 
-If you see this message, Git needs you to identify yourself.
+Wenn Du diese Mitteilung erhälst, möchte Git, dass Du Dich identifizierst.
 
 ![Git identification](../images/studioTroubleshooting/164_Git_Identify.png)
 
-Open the terminal and type the following two commands, one after the other.
+Öffne das Terminal und gib die folgenden zwei Befehle nacheinander ein.
 
 ```
-git config --global user.name "Your name here"
-git config --global user.email your.email@here.com
+git config --global user.name "Deine Name hier"
+git config --global user.email deine.email@hier.com
 ```
 
-Your name needs to be written between quotation marks.
+Dein Name muss zwischen die Anführungszeichen geschrieben werden.
 
 ![Git identification fix](../images/studioTroubleshooting/164_Git_Identify2.png)
 
@@ -145,7 +145,7 @@ The minimum compatible Gradle version is 8.5.
 The maximum compatible Gradle JVM version is 19.
 ```
 
-Or:
+Oder:
 
 ```
 Cause: error: invalid source release: 21
@@ -159,7 +159,7 @@ Wenn Du die folgende Fehlermeldung erhältst, musst Du, bevor Du es noch einmal 
 
 ![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. Im Beispiel unten ist JVM 21 als „jbr-21“ benannt. Wenn Du es findest, wähle es einfach aus und Du bist damit fertig. Falls es nicht verfügbar ist, wähle „Download JDK“ aus.
+3.  Prüfe im **Gradle JDK**-Feld, ob die richtige Version ausgewählt ist (1). Wenn nicht, klicke auf das Feld und schaue, ob es schon in der Liste zu sehen ist. Im Beispiel unten ist JVM 21 als „jbr-21“ benannt. Wenn Du es findest, wähle es einfach aus und Du bist damit fertig. Falls es nicht verfügbar ist, wähle „Download JDK“ aus.
 
 
 ![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
@@ -200,7 +200,7 @@ Wenn Du die folgende Fehlermeldung erhältst, musst Du, bevor Du es noch einmal 
 
   Wenn Du eine Fehlermeldung wie die unten siehst, verwendest Du wahrscheinlich ein Windows 10 32-Bit-Betriebssystem. Dies wird seit Android Studio 3.5.1 und höher nicht unterstützt und es gibt leider nichts, was die **AAPS**-Entwickelnden dagegen tun können!
 
-  Es gibt im Internet eine Reihe von Anleitungen (wie z. B. [diese](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d)), die beschreiben, wie Du herausfindest, ob Du ein 32-Bit oder 64-Bit Betriebssystem hast.
+  There is information on the internet about how to determine whether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
   ![Screenshot konnte den Daemon-Prozess nicht starten](../images/AndroidStudioWin10_32bitError.png)
 
