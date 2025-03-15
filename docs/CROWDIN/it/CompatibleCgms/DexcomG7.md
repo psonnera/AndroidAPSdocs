@@ -10,7 +10,10 @@ orphan: true
 È da notare che i sensori G7 e ONE+, contrariamente al G6, non lisciano i valori della glicemia, né nell'app, né con il lettore. Maggiori dettagli [qui](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
 ![G7 inglese](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
-`{admonition} [Metodo di smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md)`
+
+```{admonition} Smoothing method 
+Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggestions to use for Dexcom G7/ONE+/Stelo
+```
 
 ## 1. xDrip+ (collegamento diretto a G7 o ONE+)
 
@@ -21,11 +24,11 @@ orphan: true
 
 ## 2.  App Dexcom G7 Patchata (DiaKEM)
 
-**Nota: è necessario AAPS 3.2.0.0 o superiore! Non è disponibile per ONE+.**
+**Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+.**
 
 ### Installare una nuova app G7 patchata (!) e avviare il sensore
 
-L’app Dexcom G7 patchata (DiaKEM) dà accesso ai dati Dexcom G7. Questa non è l'app BYODA in quanto questa non può ricevere i dati dal G7 al momento.
+A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
 
 - Disinstalla l'app Dexcom originale se l'hai utilizzata prima (un sensore già avviato può ancora essere usato dopo - nota il codice del sensore prima di rimuovere l'app!)
 
@@ -53,7 +56,7 @@ L’app Dexcom G7 patchata (DiaKEM) dà accesso ai dati Dexcom G7. Questa non è
 
 ## 4. Juggluco
 
-Versione 9.0+ necessaria
+Version 9.0+ required
 
 - Disabilita l'applicazione precedentemente collegata al sensore: disinstalla l'applicazione o usa "Arresto forzato". Disabilita l'autorizzazione "Dispositivi vicini" nelle impostazioni dell'app. Limita l'utilizzo della batteria dell'app.
 
