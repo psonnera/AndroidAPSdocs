@@ -21,7 +21,7 @@ Vedi la pagina [Domande frequenti](../UsefulLinks/FAQ.md) per i dettagli.
 | [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                                   | up to Meerkat                                            | 8.2    | 19  |
 | [3.3](#version3300)     | Ladybug (2024.2.1)                                    | up to Meerkat                                            | 8.9    | 21  |
 | [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                       | up to Meerkat                                            | 8.10   | 21  |
-| 3.3.2                   | Meerkat (2024.3.1)                                    |                                                          | 8.11   | 21  |
+| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                    |                                                          | 8.11   | 21  |
 
 La "versione preferita" contiene già la versione JVM appropriata. La versione preferita è anche la versione minima che puoi usare per costruire **AAPS**. **NON PUOI** costruire su una versione più vecchia di quella "preferita". Se usi una versione diversa, potresti incontrare dei problemi con la versione JVM. Guarda la pagina [Risoluzione dei problemi Android Studio](#troubleshooting_androidstudio-uncommitted-changes) per aiutarti a risolverli. Se la tua versione attuale di Android Studio non è elencata nella tabella, è necessario aggiornarla prima.
 
