@@ -30,11 +30,9 @@
 
 #### 设置Dexcom Follow：操作指南
 
-如果您使用非官方的Dexcom应用程序BYODA接收传感器数据，您可能能够从BYODA应用程序内发送邀请给跟踪者。 您还可以从xDrip+发送邀请到Dexcom Follow（设置-云上传-Dexcom Share服务器上传，具体说明请参考：
+If you use the unofficial Dexcom app BYODA for receiving sensor data, you may be able to send invites to followers from within the BYODA app.
 
-https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
-
-从第三方应用程序中不能再向Dexcom跟踪者发送邀请电子邮件。 在xDrip+中，邀请请求只会显示“邀请未发送”的消息。
+You cannot send invite emails to Dexcom followers anymore from third-party apps. 在xDrip+中，邀请请求只会显示“邀请未发送”的消息。
 
 您必须安装官方“Dexcom”应用程序，发送邀请，然后卸载官方应用程序。
 
@@ -111,41 +109,32 @@ https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
 
 ![image](../images/remote_control_and_following/xDrip+_Companion_Sync.png)
 
-### xDrip4iOS/Shuggah (iOS)
+### xDrip4iOS (iOS)
 
 ![image](../images/remote_control_and_following/xdrip4ios.jpg)
 
 xDripSwift是从将原始xDrip应用程序移植到iOS发展而来的，后来演变为“xDrip for iOS”，即**xDrip4iOS**。
 
-**xDrip4iOS**的一个版本在Apple Store上以**Shuggah**的名称可用。
-
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
-[xDrip4iOS Facebook群组](https://www.facebook.com/groups/853994615056838/announcements)是xDrip4iOS和Shuggah的主要社区支持。 **xDrip4iOS**可以连接到许多不同的CGM系统和发射器，并显示血糖值、图表和统计数据，同时提供警报。 它还可以上传到Nightscout或作为[Nightscout的跟踪器应用程序](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/)使用。 但是，实际上很难将**xDrip4iOS**应用程序获取到您的手机上。 
+[xDrip4iOS Facebook群组](https://www.facebook.com/groups/853994615056838/announcements)是xDrip4iOS和Shuggah的主要社区支持。 **xDrip4iOS**可以连接到许多不同的CGM系统和发射器，并显示血糖值、图表和统计数据，同时提供警报。 它还可以上传到Nightscout或作为[Nightscout的跟踪器应用程序](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/)使用。 
 
 怎样才能在我的iPhone上获取xDrip4iOS？
 有两种可选的方式
-1. 如果您有Mac和Apple开发者帐户（每年99欧元/美元），您可以按照以下说明构建自己的xDrip4iOS：
-https://xdrip4ios.readthedocs.io/en/latest/install/build/
-如果您愿意，之后您还可以成为“发布者”，并与最多100名其他人共享个人Testflight xDrip4iOS，以帮助他们：
-https://xdrip4ios.readthedocs.io/.../personal_testflight/
+1. If you have a Mac and an Apple Developer account (99 EUR/USD per year) you can build your own xDrip4iOS by [following the instructions](https://xdrip4ios.readthedocs.io/en/latest/install/build/).
 
-2. 您加入[xDrip4iOS Facebook群组](https://www.facebook.com/groups/853994615056838/announcements)并监控帖子……等待有人在群组中提供他们的个人Testflight发布的邀请。 **您不应该请求应用程序的邀请**（请阅读群组规则）。 
+If you want, you can then become a "releaser" and [share a Personal Testflight xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/install/personal_testflight/) with up to 100 other people to help them.
 
-一个更简单的解决方案是下载**Shuggah**应用程序。 
+2. You join the [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) and read the pinned posts for current methods to get the app. **您不应该请求应用程序的邀请**（请阅读群组规则）。
 ```
 
-#### [Shuggah](https://apps.apple.com/sa/app/shuggah/id1586789452)
 
-应用程序界面：
-
-![image](../images/03fc0c6a-067a-40ea-8be3-c66d4ce8b5d9.png)
 
 ![image](../images/fae3ec63-2c2c-4152-ab42-97f9744a8f36.png)
 
-Shuggah是什么？ 一群乌克兰开发人员复制了xDrip4iOS项目代码（该项目代码在GitHub上公开共享），并在商业帐户下将其发布到App Store（该应用程序是免费的，他们的意图是好的）。 为了通过审核，该应用程序必须稍作修改以添加隐私声明和免责声明，但其余部分应该与xDrip4iOS相同。 Shuggah发布不由xDrip4iOS开发人员管理，因此无法保证它会以与xDrip4iOS相同的方式运行，会同时更新，或者Apple不会在某个时候将其从App Store中移除。
+"What is **Shuggah**?" A group of Ukrainian developers copied the project code for xDrip4iOS (which is shared publicly on GitHub) and released it on the App Store under a business account. The Shuggah release is in no way managed by the xDrip4iOS developers.
 
-[xDrip4iOS Facebook群组](https://www.facebook.com/groups/853994615056838/announcements)支持xDrip4iOS、Shuggah以及匹配的Apple Watch应用程序。
+The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) supports xDrip4iOS, and the matching Apple Watch apps.
 
 ### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108) (iOS)
 

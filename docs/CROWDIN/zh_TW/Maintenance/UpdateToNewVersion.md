@@ -15,7 +15,7 @@
     如果你想在新電腦上建立 **AAPS**：請將你的備份金鑰存檔複製到新電腦上。 然後按照 [初始建置 **AAPS** 程序](../SettingUpAaps/BuildingAaps.md) 的步驟，而不是這個指導。 唯一的不同之處在於，你可以選擇你在新電腦上複製的金鑰存檔，而不必建立新的金鑰存檔。
     ```
 
-## 更新到新版本 AAPS 的概述
+## 更新到新版本 AAPS 的總覽
 
 ```{contents} 更新到新版本 AAPS 的步驟 :depth: 1 :local: true
 
@@ -36,7 +36,7 @@
     
     ```{admonition} 警告
     :class: warning
-    如果你是從 2.8.x 之前的版本更新，請遵循指示進行 [新複製](../Installing-AndroidAPS/building-AAPS)，因為本指南對你無效！
+    如果你是從 2.8.x 之前的版本更新，請遵循指示進行 [新複製](../SettingUpAaps/BuildingAaps.md)，因為本指南對你無效！
     
 
 * 使用 Android Studio 開啟你現有的 AAPS 項目。 你可能需要選擇你的項目。 (雙擊) 點擊 AAPS 項目。

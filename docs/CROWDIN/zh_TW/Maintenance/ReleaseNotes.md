@@ -23,7 +23,7 @@
 
 ## Android 版本與 AAPS 版本
 
-如果你的手機使用的是 Android 9 以下的版本，你將無法使用 AAPS v3 及以上版本，因為這些版本至少需要 Android 9。
+如果你的智慧型手機使用的是 Android 11 以下的版本，就無法使用 AAPS v3.3 及更新版本，因為這些版本至少需要 Android 11 才能運作。
 
 為了允許使用舊版 Android 的用戶繼續使用舊版 AAPS，我們發佈了一些僅更改版本驗證的版本。 這些版本不包含其他改進。
 
@@ -56,6 +56,49 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 ```
 
 (version3300)=
+## 版本 3.3.2.0
+
+發布日期：2025-03-27
+
+### 如何升級
+
+* [需要 Android Studio 版本為 "Meerkat" 或以上版本才能建置此版本。](#Building-APK-recommended-specification-of-computer-for-building-apk-file) 如果你已經建置了 3.3.x 版本，你需要再次升級 Android Studio。
+
+### 從這個版本開始，通知和版本強制執行變得簡化並放寬，並以以下方式運作：
+*  當設備離線時不會過期（如果沒有網路連線）。 這意味著不再有 60 天和 90 天的寬限期。
+*  過期後將強制進入 LGS 模式
+*  你將會收到警告/通知的頻率會降低：
+   - 剩餘 28+ 天：每 7 天一次
+   - 剩餘 27-14 天：每 3 天一次
+   - 然後每天一次
+   - 通知將在中午後產生，以免在晚上打擾你
+* 只有 2 種通知類型
+   - 新版本可用（對 AAPS 沒有影響）
+   - 應用程式在未來的某個日期到期（對 AAPS 仍然沒有影響）/ 已經過期（AAPS 會轉為 LGS 模式）
+
+### 新功能
+
+* SMS RESTART 命令 @MilosKozak
+* 手錶個人設置切換參數 @olorinmaia
+* AAPS V2 手錶面板的暗色模式 @olorinmaia
+* G7 資料交換的改善 @olorinmaia
+* 小工具配置 @MilosKozak
+* 單選按鈕 UI 改進 @olorinmaia
+* 自動化：從地圖選擇位置 @MilosKozak
+* 主畫面上可見版本 @MilosKozak
+* 強制執行現有 git 系統的編譯（不支援 ZIP 下載）
+* 在主畫面上顯示版本 @MilosKozak
+* Tidepool 上傳改善 @ConstantinMatheis
+
+### 錯誤修正
+
+* Dash 解除綁定修正 @Andreas
+* Garmin 修正 @robertbuessow @suside
+* 修正對話框中的 IOB 顯示 @olorinmaia
+* 目標拼寫與驗證改善 @MilosKozak
+* 修正模擬 TBR 的顯示問題 @MilosKozak
+* 修正繞過安全性 @tdrkDev
+
 ## 版本 3.3.1.3
 
 發布日期：2025-01-21
@@ -118,7 +161,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 ## 版本 3.3.0.0
 
-發布日期：2024-29-12
+發布日期：2024-12-29
 
 ### 主要功能
 
@@ -761,9 +804,9 @@ v3 是新的協議。 更加安全和高效
   - 點擊「應用」或「確定」。
 
 (Releasenotes-overview-tab)=
-### 概述標籤
+### 總覽標籤
 
-- 頂部功能區可用於暫停/停用循環、查看/調整設定檔，並開始/停止臨時目標（TT）。 TT 使用偏好設置中設置的預設值。 新的 Hypo TT 選項是一個高溫 TT，用於防止循環過度積極地糾正急救碳水化合物。
+- 頂部功能區可用於暫停/停用循環、查看/調整設定檔，並開始/停止臨時目標（TT）。 TT 使用偏好設置中設置的預設值。 新的 Hypo TT 選項是一個高臨時目標 TT，用於防止循環過度積極地糾正急救碳水化合物。
 - 治療按鈕：舊的治療按鈕仍可用，但預設情況下被隱藏。 按鈕的可見性現在可以配置。 新增胰島素按鈕，新增碳水化合物按鈕（包括[eCarbs/延長碳水化合物](../DailyLifeWithAaps/ExtendedCarbs.md)）
 - [彩色預測線](#aaps-screens-prediction-lines)
 - 選項可在胰島素/碳水化合物/計算機/注射+填充對話框中顯示筆記字段，這些字段會上傳到 NS

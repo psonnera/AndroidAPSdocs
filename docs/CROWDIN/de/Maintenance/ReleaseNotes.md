@@ -23,7 +23,7 @@ Da die Releasefolge und deren Veröffenlichungszeitpunkte immer wieder erfragt w
 
 ## Android Version und AAPS Version
 
-Wenn die Android Version Deines Smartphones älter als 9 ist, kannst Du nicht auf AAPS 3.0.0 updaten, da dieses mindestens Android 9 erfordert.
+If your smartphone uses an Android Version older than Android 11 you will not be able to use AAPS v3.3 and up as it requires at least Android 11.
 
 Damit Benutzer älterer Android-Versionen nicht ausgeschlossen werden, wurden zwei ältere Versionen zur Verfügung gestellt, bei denen die Versionsprüfung angepasst wurde. Es sind keine anderen Verbesserungen enthalten.
 
@@ -56,6 +56,49 @@ WearOS 5, API Level 34 (Android 14) hat [einige Einschränkungen](#BuildingAapsW
 ```
 
 (version3300)=
+## Version 3.3.2.0
+
+Release date: 27-03-2025
+
+### So wird aktualisiert
+
+* [Android Studio version called "Meerkat"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already built a 3.3.x version, you need to upgrade Android Studio again.
+
+### Starting this version, notification and version enforcement has been simplified and softed and works following way:
+*  No expiration when device is offline (if no connection to the internet). It means no 60 and 90 days grace periods anymore.
+*  After expiration LGS mode is enforced
+*  You'll receive warning/notifications less often:
+   - 28+ days remaining: every 7 days
+   - 27-14 days remaining: every 3 days
+   - then once a day
+   - Notification will be generated after noon to not bother you during nights
+* There are only 2 kinds of notification
+   - New version available (has no effect on AAPS)
+   - Application is expiring on some date in the future (still no effect on AAPS) / has expired (AAPS will turn into LGS mode)
+
+### News
+
+* SMS RESTART command @MilosKozak
+* Watch Profile switch parameters @olorinmaia
+* Dark mode AAPS V2 watchface @olorinmaia
+* G7 data exchange improvements @olorinmaia
+* Widget configuration @MilosKozak
+* Radiobuttons UI improvements @olorinmaia
+* Automation: position choosing from map @MilosKozak
+* Version visible on main screens @MilosKozak
+* Compilation with existing git system in enforced (no zip downloads)
+* Show version on main screen @MilosKozak
+* Tidepool upload improvements @ConstantinMatheis
+
+### Behobene Fehler
+
+* Dash unbonding fix @Andreas
+* Garmin fixes @robertbuessow @suside
+* Fix of IOB displaying in dialogs @olorinmaia
+* Objectives spelling and validation improvements @MilosKozak
+* Fixed rendering of emulated TBRs @MilosKozak
+* Fixed bypassing security @tdrkDev
+
 ## Version 3.3.1.3
 
 Erscheinungsdatum: 21.01.2025
@@ -525,7 +568,7 @@ Nutze bitte [Android Studio 3.6.1](https://developer.android.com/studio/) oder n
 
 Erscheinungsdatum: 03.05.2020
 
-Nutze bitte [Android Studio 3.6.1](https://developer.android.com/studio/) oder neuer, um die apk zu erstellen.
+Nutze bitte [Android Studio 3.6.1](https://developer.android.com/studio/) oder neuer um die apk zu erstellen.
 
 ### Wichtige neue Funktionen
 
@@ -558,7 +601,7 @@ Nutze bitte [Android Studio 3.6.1](https://developer.android.com/studio/) oder n
 
 Erscheinungsdatum: 21.03.2020
 
-Nutze bitte [Android Studio 3.6.1](https://developer.android.com/studio/) oder neuer um die apk zu erstellen.
+Nutze bitte [Android Studio 3.6.1](https://developer.android.com/studio/) oder neuer, um die apk zu erstellen.
 
 ### Wichtige neue Funktionen
 
@@ -578,7 +621,7 @@ Nutze bitte [Android Studio 3.6.1](https://developer.android.com/studio/) oder n
 
 Erscheinungsdatum: 29.02.2020
 
-Nutze bitte [Android Studio 3.6.1](https://developer.android.com/studio/) oder neuer, um die apk zu erstellen.
+Nutze bitte [Android Studio 3.6.1](https://developer.android.com/studio/) oder neuer um die apk zu erstellen.
 
 ### Wichtige neue Funktionen
 
