@@ -85,8 +85,8 @@ The blocks in the middle shows:
 On the right side, an icon shows the loop status:
 1. Green circle = loop running
 2. Green circle with dotted line = [low glucose suspend (LGS)](#objectives-objective6)
-3. Red circled = loop disabled (not working permanently)
-4. Yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
+3. Red circle = loop disabled (not working permanently)
+4. Red circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
 5. Grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
 6. Orange circle = super bolus running - remaining time is shown below icon
 7. Blue circle with dotted line = open loop
@@ -280,7 +280,7 @@ To open settings for additional graphs click the triangle on the right side of t
 To configure additional graphs, check the boxes corresponding to the data you want to see on each graph.
 
 Most users find the following configuration of additional graphs to be adequate :
-* Graph 1 with IOB, COB, Sensitivity chnge
+* Graph 1 with IOB, COB, Sensitivity change
 * Graph 2 with Deviations and BGI.
 
 #### Absolute insulin
@@ -341,7 +341,7 @@ It is a good combination to display this line along with the Deviation bars. The
 
 ![Homescreen buttons](../images/Home2020_Buttons.png)
 
-Buttons for Insulin, Carbs and Calculator are almost always visible. If the connection to the pump is lost, the insulin button will not be visible.
+Buttons for Insulin and Carbs are almost always visible. If the connection to the pump is lost, the Calculator button will not be visible.
 
 Other Buttons can be setup in [Preferences > Overview > Buttons](#Preferences-buttons).
 

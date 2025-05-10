@@ -11,6 +11,14 @@ Additional useful information might also be available in the [FAQ](../UsefulLink
 * [Lost keystore](#troubleshooting_androidstudio-lost-keystore)
 * [Troubleshooting AndroidStudio](TroubleshootingAndroidStudio)
 
+### Installing
+
+You may see a Google Play Protect warning that the app is unsafe, was built for older Android versions and doesn't include latest privacy protections.
+
+Ignore it: More details, Install anyway.
+
+![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
+
 ### Settings
 * Profile
 
@@ -95,7 +103,6 @@ Here are examples how to find them on specific android phones.
 
 * [DanaRS](#DanaRS-Insulin-Pump-dana-rs-specific-errors)
 * [Accu-Chek Combo general](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)
-* [Accu-Chek Combo + Ruffy](#Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
 * [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
 * [Medtronic + RileyLink](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
 

@@ -82,7 +82,7 @@ Ricordati di disabilitare Importa suoni per evitare che xDrip+ faccia una suoner
 ### Versione xDrip+ a secondo del numero di serie del trasmettitore G6.
 
 * Tutti i trasmettitori G6 prodotti dopo l'autunno/fine 2018 sono chiamati "Firefly". Non consentono il riavvio del sensore senza [rimuovere il trasmettitore](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), non inviano dati grezzi. Si consiglia di utilizzare l'ultimo [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
-* I vecchi trasmettitori rinnovati e trasmettitori modificati consentono l'estensione e il riavvio del sensore, inviano anche dati grezzi. È possibile utilizzare l'[ultima APK (stabile)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk).
+* Old rebatteried transmitters and modified transmitters allow sensor life extension and restarts, they also send raw data. È possibile utilizzare l'[ultima APK (stabile)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk).
 
 
 ### Impostazioni specifiche Dexcom
