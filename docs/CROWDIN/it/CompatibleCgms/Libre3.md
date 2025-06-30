@@ -8,21 +8,19 @@ Freestyle Libre 3 (FSL3) richiede una configurazione unica per ricevere i valori
 
 ![FSL3](../images/d912c1d3-06d2-4b58-ad7c-025ca1980fae.jpeg)
 
-**La versione 3.2.0.1 di AndroidAPS non supporta i valori ogni minuto. Accelerazione e smoothing non funzionano con i valori ogni minuto.**
-
 I metodi elencati sotto, chiedono l'uso dell'app separata Juggluco. Utilizza Juggluco per ricevere dati grezzi con intervallo di 1 minuto dal sensore che viene poi passato a xDrip+ o AAPS. I nuovi sensori possono essere avviati con l'App Libre 3 o direttamente in Juggluco. La guida qui sotto indica il processo per avviare un sensore con l'app Juggluco. Se il sensore è stato avviato con l'account Libreview collegato, è anche possibile passare da Juggluco all'app Libre 3 come ricevitore.
 
 Juggluco può anche mandare i dati a LibreView per la condivisione con il diabetologo quando il sensore viene avviato con l'app Libre 3.
 
 All'interno di xDrip+ il sensore può essere calibrato nell'intervallo da -40 mg/dl a +20 mg/dl (da -2,2 mmol/l a +1,1 mmol/l) per compensare le differenze tra la lettura manuale con il gluometro e le letture del sensore.
 
-## Metodo 1: letture ogni minuto
-La versione 3.2.0.1 di AndroidAPS non supporta i valori ogni minuto. Accelerazione e smoothing non funzionano con i valori ogni minuto.
+## Method 1: use 1-minute readings directly
+AndroidAPS is taylored for 5-minute readings. Therefore processing 1-minute values has occasional limitations.
 
 ![Juggluco trasmissione a AAPS](.../images/Juggluco_AAPS.png)
 
 
-## Metodo 2: letture ogni 5 minuti
+## Method 2: convert 1-minute readings into 5-minute values via xDrip
 Questo metodo utilizza Juggluco per ricevere i dati grezzi dal sensore ogni minuto, vengono poi passati a xDrip+ che ne fa la media ogni 5 minuti, e sono quindi inoltrati ad AAPS.
 
 ### Passo 1: Impostare Juggluco
