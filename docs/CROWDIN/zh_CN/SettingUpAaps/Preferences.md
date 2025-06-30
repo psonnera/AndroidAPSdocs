@@ -1,4 +1,4 @@
-# Preferences
+# 偏好设置
 
 - 通过点击主页屏幕右上角的三个点菜单来**打开参数设置**。
 
@@ -22,7 +22,7 @@
 ```
 
 (Preferences-general)=
-## 一般
+## 常规
 
 ![参数设置 > 一般](../images/Pref2020_General.png)
 
@@ -86,7 +86,7 @@
 
 **生物识别保护功能可能在一加手机上无法正常工作。 这是一些一加手机上已知的问题。**
 
-![Set master password](../images/MasterPW.png)
+![设置主密码](../images/MasterPW.png)
 
 ### 设置保护
 
@@ -321,7 +321,7 @@
 
 在此模式下，[maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)设置为零。
 
-这意味着如果血糖正在下降，**AAPS**可以降低你的基础率。 但如果血糖正在上升，则不会自动进行校正。 您的基础率将保持与您当前**个人设置**中定义的一致。 仅当基础率IOB为负值时（缘于之前的低血糖暂停LGS），才会额外给予胰岛素以降低**血糖（BG）**。
+这意味着如果血糖正在下降，**AAPS**可以降低你的基础率。 但如果血糖正在上升，则不会自动进行校正。 您的基础率将保持与您当前**个人设置**中定义的一致。 Only if IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower **BG**.
 
 (Preferences-minimal-request-change)=
 ### 最小请求更改（Minimal request change）
@@ -378,9 +378,9 @@ min_5m_carbimpact的标准值：AMA算法为5，SMB算法为8。
 - 定义最小和最大[自动灵敏度（autosens）](#Open-APS-features-autosens)比率。
 - 通常，不应更改标准值（最大1.2，最小0.7）。
 
-## Pump
+## 胰岛素泵
 
-### BT Watchdog
+### 蓝牙看门狗
 
 如有必要请激活蓝牙看门狗（例如，对于Dana泵）。 如果无法与泵建立连接，它将蓝牙关闭一秒钟。 这可能有助于解决某些手机上的蓝牙卡顿问题。
 
@@ -500,7 +500,7 @@ min_5m_carbimpact的标准值：AMA算法为5，SMB算法为8。
 
 ## 开源人类项目（Open Humans）
 
-You can help the community by donating your data to research projects! 详细信息在[Open Humans页面](../SupportingAaps/OpenHumans.md)上有描述。
+您可通过向研究项目捐献数据来助力科研社区！ 详细信息在[Open Humans页面](../SupportingAaps/OpenHumans.md)上有描述。
 
 在“首选项”中，您可以定义何时上传数据。
 - 仅在连接到Wi-Fi时

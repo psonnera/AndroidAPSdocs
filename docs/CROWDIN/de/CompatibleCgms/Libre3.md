@@ -8,21 +8,19 @@ Der Freestyle Libre 3 (FSL3) benötigt ein besonderes Setup, um Glukosewerte in 
 
 ![FL3](../images/d912c1d3-06d2-4b58-ad7c-025ca1980fae.jpeg)
 
-**AAPS Version 3.2.0.1 unterstützt keine minütlichen Werte. Beschleunigung und Glättung funktionieren nicht mit minütlichen Werten.**
-
 Um das zu beheben, wird in den unten beschriebenen Methoden Juggluco als separate App eingesetzt. Juggluco reicht die minütlichen unveränderten Daten (Rohdaten) des Sensors an xDrip+ oder AAPS weiter. Neu gesetzte Sensoren können entweder mit der Libre 3 App oder direkt in Juggluco gestartet werden. Die Anleitung unten beschreibt, wie ein Sensor mit der Juggluco-App gestartet werden kann. Wenn der Sensor mit einem eingeloggten Libreview-Konto gestartet wurde, ist es auch möglich, zwischen Juggluco und der Libre 3 App als Empfänger zu wechseln.
 
 Wenn der Sensor mit der Libre 3 App gestartet wird, können Deine Daten über Juggluco und LibreView z. B. mit Deinem Diabetes-Team geteilt werden.
 
 Der Sensor kann in xDrip+ im Bereich von -40 mg/dl bis +20 mg/dl (-2.2 mmol/l bis +1.1 mmol/l) kalibriert werden. Damit kannst Du die Differenz zwischen einer blutigen Messung und den Sensorwerten anpassen.
 
-## Methode 1: Minütliche Werte
-AAPS Version 3.2.0.1 unterstützt keine minütlichen Werte. Beschleunigung und Glättung funktionieren nicht mit minütlichen Werten.
+## Method 1: use 1-minute readings directly
+AndroidAPS is taylored for 5-minute readings. Therefore processing 1-minute values has occasional limitations.
 
 ![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
 
 
-## Methode 2: Werte alle 5 Minuten
+## Method 2: convert 1-minute readings into 5-minute values via xDrip
 Juggluco wird dabei genutzt, die minütlich vorliegenden Sensorrohdaten an xDrip+ zur Glättung auf 5-Minutenintervalle zu übergeben, und von dort aus an AAPS weiterzureichen.
 
 ### Schritt 1: Juggluco einrichten

@@ -112,7 +112,7 @@
 在选择**自动操作**中的负值时请小心。
 ```
 
-在选择“条件”中的负值（如“小于”）时需要谨慎。 For example:
+在选择“条件”中的负值（如“小于”）时需要谨慎。 例如：
 
 ![Alt text](../images/automation_2024-02-12_20-56-25.png-500x.png)
 
@@ -317,13 +317,13 @@
 
 ![Alt text](../images/automation_2024-02-12_21-05-56.png-500x.png)
 
-## Troubleshooting
+## 故障排除
 
 * 问题：__我的自动化没有由AAPS触发？__
 
 勾选右侧的框以激活自动操作事件：
 
-## Troubleshooting
+## 故障排除
 
 ![Alt text](../images/automation_2024-02-12_21-06-12.png-500x.png)
 

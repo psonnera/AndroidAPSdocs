@@ -252,7 +252,23 @@ Release date: 29-12-2024
 * libraries updated to latest version, toml @MilosKozak
 * migration to kotlin 2.0, java 21 @MilosKozak
 
+(version3204)=
+
+## [Version 3.2.0.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)
+
+Release date: 27-02-2024
+
+This version is the last one supporting Android 10. If you cannot upgrade to Android 11, [update AAPS to 3.2.0.4](#update-aaps-3204).
+
+### Değişiklikler
+
+- xDrip G7 support
+- Medtrum fixes
+- Automation icon fix
+- Passing objective 1 fix
+
 (version3200)=
+
 ## Version 3.2.0.0 dedicated to @Philoul
 
 Release date: 23-10-2023
@@ -327,6 +343,8 @@ RECOMMENDED SETTING
 - v3 is preferred because of efficiency
 - using websockets or not using with v3 depends on your preference
 - it HIGHLY recommended to let AAPS gather all data and then upload it to NS as a single uploader. All other devices/applications should only read from NS. By doing it you'll prevent conflicts and sync errors. This is valid for getting BG data to NS using Dexcom Share connector etc. too
+
+(version3100)=
 
 ## Sürüm 3.1.0
 

@@ -8,21 +8,19 @@ Freestyle Libre 3 (FSL3) requires a unique setup to receive BG values in to AAPS
 
 ![FL3](../images/d912c1d3-06d2-4b58-ad7c-025ca1980fae.jpeg)
 
-**Version 3.2.0.1 of AndroidAPS does not support 1-minute values. Acceleration and Smoothing does not work with 1-minute values.**
-
 The below methods for achieving this are using the separate app Juggluco. It uses Juggluco to receive raw, 1-minute interval data from the sensor which is then passed to xDrip+ or AAPS. New sensors can be started either with the Libre 3 App or directly in Juggluco. The guide below indicates the process for starting a sensor with the Juggluco app. If the sensor has been started with a Libreview account logged in, it is also possible to switch between Juggluco and the Libre 3 app as receiver.
 
 Juggluco can also pass data to LibreView for sharing with health care providers when the sensor is started with the Libre 3 app.
 
 Within xDrip+ the sensor can be calibrated in the range of -40 mg/dl to +20 mg/dl (-2.2 mmol/l to +1.1 mmol/l) to compensate for differences between a manual meter reading and the sensor readings.
 
-## Method 1: 1-minute-readings
-Version 3.2.0.1 of AndroidAPS does not support 1-minute values. Acceleration and Smoothing does not work with 1-minute values.
+## Method 1: use 1-minute readings directly
+AndroidAPS is taylored for 5-minute readings. Therefore processing 1-minute values has occasional limitations.
 
 ![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
 
 
-## Method 2: 5-minute-readings
+## Method 2: convert 1-minute readings into 5-minute values via xDrip
 This method uses Juggluco to receive raw, 1-minute interval data from the sensor which is then passed to xDrip+ to be smoothed into 5-minute interval data to be passed to AAPS.
 
 ### Step 1: Setup Juggluco

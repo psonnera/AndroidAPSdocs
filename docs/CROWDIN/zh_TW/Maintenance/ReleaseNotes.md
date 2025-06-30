@@ -252,7 +252,23 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 * 函式庫更新至最新版本，toml @MilosKozak
 * 移轉至 kotlin 2.0，java 21 @MilosKozak
 
+(version3204)=
+
+## [版本 3.2.0.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)
+
+發布日期：2024-02-27
+
+此版本為最後一個支援 Android 10 的版本。 如果您無法升級到 Android 11，[請將 AAPS 更新至 3.2.0.4](#update-aaps-3204)。
+
+### 變更
+
+- xDrip G7 支援
+- Medtrum 修復
+- 自動化圖示修復
+- 目標 1 傳遞修復
+
 (version3200)=
+
 ## 3.2.0.0 版本獻給 @Philoul
 
 發布日期：2023-10-23
@@ -327,6 +343,8 @@ v3 是新的協議。 更加安全和高效
 - v3 更受推崇，因為效率更高。
 - 使用或不使用 v3 中的 websockets 取決於你的偏好
 - 強烈建議讓 AAPS 收集所有資料，然後將其作為單一上傳器上傳到 NS。 所有其他設備/應用程式應僅從 NS 讀取資料。 這樣可以防止衝突和同步錯誤。 這對於使用 Dexcom Share 連線器等將血糖資料上傳到 NS 也適用。
+
+(version3100)=
 
 ## 版本 3.1.0
 

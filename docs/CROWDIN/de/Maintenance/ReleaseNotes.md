@@ -252,7 +252,23 @@ Erscheinungsdatum: 29.12.2024
 * Bibliotheken auf die neueste Version aktualisiert, toml @MilosKozak
 * Migration auf Kotlin 2.0, Java 21 @MilosKozak
 
+(version3204)=
+
+## [Version 3.2.0.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)
+
+Release date: 27-02-2024
+
+This version is the last one supporting Android 10. If you cannot upgrade to Android 11, [update AAPS to 3.2.0.4](#update-aaps-3204).
+
+### Änderungen
+
+- xDrip G7 support
+- Medtrum fixes
+- Automation icon fix
+- Passing objective 1 fix
+
 (version3200)=
+
 ## Version 3.2.0.0 ist @Philoul gewidmet
 
 Erscheinungsdatum: 23.10.2023
@@ -327,6 +343,8 @@ EMPFOHLENE EINSTELLUNGEN
 - v3 is preferred because of efficiency
 - Der Einsatz von Websockets mit V3 oder nicht ist Geschmackssache
 - Es wird DRINGEND empfohlen AAPS die Daten sammeln zu lassen und dann zentral als einziger Uploader an Nightscout übertragen lassen. Alle anderen Geräte und Anwendungen sollten Daten von Nightscout lediglich auslesen. Dadurch vermeidest Du Synchronisierungsfehler und -konflikte. Dies gilt auch für die Übermittlung der Glukosewerte an Nightscout mit dem Dexcom Share Connector o. ä. Tools
+
+(version3100)=
 
 ## Version 3.1.0
 
