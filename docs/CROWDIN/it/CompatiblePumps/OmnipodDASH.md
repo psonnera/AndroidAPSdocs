@@ -18,7 +18,13 @@ Queste sono le specifiche dell' **Omnipod DASH** ('DASH') e ciò che lo differen
 * Al momento dell'attivazione, **AAPS** troverà e connetterà il nuovo pod DASH.
 * Expected range: 5-10 meters (YMMV).
 
-WARNING: There are currently reported Bluetooth connection issues with the following combination of **AAPS** / DASH / Android 15. **AAPS** should not be used in combination with Android 15 and DASH unless the user has checked the following [**List**](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) and verified that their phone is not a known reported issue. **AAPS** is currently working to resolve this issue.
+```{admonition} Android 15
+:class: warning
+
+There are currently reported Bluetooth connection issues with the following combination of **AAPS**: DASH + Android 15.
+Please refrain from upgrading your phone to Android 15 unless you have checked the following [**list**](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&amp;single=true) and verified that your phone is not a known reported issue.
+If you experience frequent disconnection; try to enable Bond BT as described in: [**Bluetooth Issues**](../GettingHelp/GeneralTroubleshooting.md). 
+```
 
 ## Requisiti Hardware/Software
 
@@ -31,7 +37,7 @@ WARNING: There are currently reported Bluetooth connection issues with the follo
    -  **Versione 3.0 o più recente di AAPS costruita e installata** utilizzando le istruzioni [**Costruisci AAPS**](../SettingUpAaps/BuildingAaps.md).
 * [**Sensore di Glicemia (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
-Le istruzioni qui sotto spiegano come attivare una nuova sessione pod. Aspetta di essere vicino alla scadenza della sessione del pod che stai usando prima di provare a connettere **AAPS** con un nuovo pod. Una volta che un pod viene disattivato, non può essere riutilizzato e la disconnessione sarà definitiva.
+The instructions below explain how to activate a new pod session. Wait to close to expiry of a current pod session before trying to connect **AAPS** with a new pod. Once a pod is is cancelled it cannot reused and the disconnection will be final.
 
 ## Prima Di Iniziare
 
