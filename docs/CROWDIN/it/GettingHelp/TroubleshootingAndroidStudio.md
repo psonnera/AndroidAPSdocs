@@ -1,5 +1,11 @@
 (troubleshooting_androidstudio-troubleshooting-android-studio)=
+
 # Risoluzione dei Problemi Android Studio
+
+```{contents} List of common issues
+:depth: 2
+:local: true
+```
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## Chiave persa
@@ -24,22 +30,28 @@ Nel caso in cui non sia possibile rintracciare la tua chiave originale o la pass
 ## Gradle Sync failed
 Gradle Sync può fallire per vari motivi. Se ricevi un messaggio che dice 'gradle sync failed', apri la scheda "Build" (1) nella parte inferiore di Android Studio e controlla quale messaggio di errore (2) viene visualizzato.
 
-  ![Gradle Fallito](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
+![Gradle Fallito](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
-I motivi più comuni per i fallimenti di sincronizzazione del Gradle sono:
-* [Uncommitted changes](#uncommitted-changes)
-* [No cached version of ... available](#could-not-resolveno-cached-version)
-* [Incompatible Gradle JVM](#incompatible-gradle-jvm)
-* [Incompatible version of the Android Gradle plugin](#incompatible-version-of-android-gradle-plugin)
+```{contents} Likely reasons for gradle sync failures are:
+:depth: 1
+:local: true
+```
 
 *Importante*: Dopo aver seguito le istruzioni per il tuo problema, devi attivare nuovamente la sincronizzazione del [gradle](#gradle-resync).
 
-
-### Modifiche senza commit
+(troubleshooting_androidstudio-uncommitted-changes)=
+### Uncommitted changes
 
 Se ricevi un messaggio di errore come questo:
 
-![Gradle Modifiche Non Commitate](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
+![Gradle Uncommitted Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
+
+```
+Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
+
+There are uncommitted changes.
+Clone sources again as described in wiki and do not allow gradle update
+```
 
 #### Passo 1 - Controlla l'installazione di Git
   * Apri la scheda del terminale (1) nella parte inferiore di Android Studio e copia/incolla (o digita) il testo sotto, nel terminale.
@@ -75,7 +87,7 @@ Se ricevi un messaggio di errore come questo:
 
   * Riavvia Android Studio.
 
-
+(troubleshooting-android-studio-check-for-uncommitted-changes)=
 #### Passo 2: Controlla le modifiche senza commit
 
   * In Android Studio, apri la scheda 'Commit' (1) sul lato sinistro. ![Scheda di Commit: modifiche senza commit](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
@@ -96,8 +108,6 @@ Se ricevi un messaggio di errore come questo:
     * Torna a Android Studio e fai clic sul pulsante Aggiorna (4) all'interno della scheda Commit per assicurarti che il file non sia più memorizzato nella cartella **AAPS**.
 
       Se non ci sono altre modifiche nella scheda Commit, vai al [Passo 3](#gradle-resync).
-
-
 
 
 #### Passo 3: Risincronizza Gradle (ancora)
@@ -126,7 +136,26 @@ Il tuo nome deve essere scritto tra virgolette.
 (incompatible-gradle-jvm)=
 ### Incompatible Gradle JVM
 
-![Gradle JVM incompatibile](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png) Se vedi il messaggio di errore sopra, devi scaricare la versione corretta di JVM prima di riprovare a ricostruire:
+![Incompatible Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png)
+
+```
+Your build is currently configured to use incompatible Java 21.0.3 and Gradle 8.2.
+Cannot sync the project.
+
+We recommend upgrading to Gradle version 8.9.
+
+The minimum compatible Gradle version is 8.5.
+
+The maximum compatible Gradle JVM version is 19.
+```
+
+Or:
+
+```
+Cause: error: invalid source release: 21
+```
+
+Se vedi il messaggio di errore sopra, devi scaricare la versione corretta di JVM prima di riprovare a ricostruire:
 
 1.  Controlla nella [tabella dei prerequisiti](#Building-APK-recommended-specification-of-computer-for-building-apk-file) la versione JVM necessaria per la versione **AAPS** che stai costruendo, e prendine nota.
 
@@ -134,12 +163,12 @@ Il tuo nome deve essere scritto tra virgolette.
 
 ![Apri Le Impostazioni Gradle](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  **Nel campo **Gradle JDK**, controlla se è selezionata la versione appropriata (1) Se non, fai clic sul campo e vedere se è già disponibile nella lista. L’esempio seguente mostra che JVM 21 è segnato “jbr-21”. Se lo trovi, basta selezionarlo, e hai finito. Se non è disponibile, selezionare 'Scarica JDK'.
+3.  In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. L’esempio seguente mostra che JVM 21 è segnato “jbr-21”. Se lo trovi, basta selezionarlo, e hai finito. Se non è disponibile, selezionare 'Scarica JDK'.
 
 
 ![Seleziona Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. In Version (1), seleziona il JDK richiesto per la tua versione **AAPS** (quella che ti sei segnata quando hai controllato la tabella dei requisiti). In Vendor (2) seleziona 'JetBrains Runtime'. Location (3): non modificare.
+4. In Version (1), seleziona il JDK richiesto per la tua versione **AAPS** (quella che ti sei segnata quando hai controllato la tabella dei requisiti). In Vendor (2) select any Vendor. Location (3): non modificare.
 
 ![Seleziona JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
@@ -147,11 +176,13 @@ Il tuo nome deve essere scritto tra virgolette.
 6. Ora è necessario riavviare la sincronizzazione di Gradle. Segui le istruzioni di [Risincronizza Gradle](#gradle-resync).
 
 (incompatible-version-of-android-gradle-plugin)=
-### Incompatible version of Android Gradle plugin
+### Versione incompatibile del plugin di Android Gradle
 
   Se vedi questo messaggio di errore
 
-  ![Versione incompatibile del plugin di Android Gradle](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
+`The project is using an incompatible version (AGP x.x.x) of the Android Gradle plugin. Latest supported version is AGP x.x.x`
+
+  ![Incompatible version of Android Gradle plugin](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
 
   Stai usando una versione obsoleta di Android Studio. Nel menu, vai a Help > Check for updates e installa gli aggiornamenti di Android Studio e di tutti i plugin che vengono trovati.
 
@@ -175,7 +206,7 @@ Il tuo nome deve essere scritto tra virgolette.
 
   Se vedi un messaggio di errore come quello sotto, probabilmente stai utilizzando un sistema Windows 10 a 32 bit. Non è supportato da Android Studio 3.5.1 e oltre, e purtroppo non c'è nulla che gli sviluppatori **AAPS** possano fare a riguardo!
 
-  Ci sono informazioni su internet su come determinare se hai un sistema operativo a 32 bit o 64 bit - [questo](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
+  There is information on the internet about how to determine whether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
   ![Schermata Impossibile avviare il processo daemon](../images/AndroidStudioWin10_32bitError.png)
 
@@ -211,15 +242,6 @@ Se la tua build è completata con successo ma ottieni avvisi compilatore o kotli
  ![Gradle finito con avvertimenti](../images/studioTroubleshooting/13_BuildWithWarnings.png)
 
 Il tuo apk è stato costruito con successo e può essere trasferito sul tuo telefono!
-
-
-## Key was created with errors
-
-Quando crei un nuovo keystore per costruire l'apk firmato, su Windows potrebbe apparire il seguente messaggio di errore
-
-![La chiave è stata creata con errori](../images/AndroidStudio35SigningKeys.png)
-
-Sembra essere un bug con Android Studio 3.5.1 e il suo ambiente Java in Windows. La chiave viene creata correttamente, ma una raccomandazione viene visualizzata erroneamente come se fosse un errore. Questo può essere ignorato al momento.
 
 
 ## Nessun dato sensore CGM è ricevuto da AAPS

@@ -13,11 +13,14 @@ Vedi la pagina [Domande frequenti](../UsefulLinks/FAQ.md) per i dettagli.
 
 * Una versione specifica di **[Android Studio](https://developer.android.com/studio/)** potrebbe essere necessaria per costruire l'apk. Cfr. tabella sotto:
 
-| Versione AAPS           | Versione<br/>Android Studio<br/>preferita | Versione Alternative<br/>Android Studio<br/>                                                            | Gradle | JVM |
-| ----------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------ |:--- |
-| [3.2](#version3200)     | Hedgehog (2023.1.1)                                   | Iguana (2023.2.1)<br/>Jellyfish (2023.3.1)<br/>Koala (2024.1.1)<br/>Ladybug (2024.2.1)<br/> | 8.2    | 19  |
-| [3.3](#version3300)     | Ladybug (2024.2.1)                                    |                                                                                                                     | 8.9    | 21  |
-| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                       |                                                                                                                     | 8.10   | 21  |
+| Versione AAPS           | Versione<br/>Android Studio<br/>preferita | Versione Alternative<br/>Android Studio<br/> | Gradle | JVM |
+| ----------------------- | ----------------------------------------------------- | -------------------------------------------------------- | ------ |:--- |
+| 2.6.2                   | 3.6.1                                                 |                                                          | 5.6    | 11  |
+| 2.8.2.1                 | 4.1.1                                                 |                                                          | 6.1    | 13  |
+| [3.1.0.3](#version3100) | 2020.3.1                                              | up to Narwhal                                            | 7.3    | 17  |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                   | up to Narwhal                                            | 8.2    | 17  |
+| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                       | up to Narwhal                                            | 8.10   | 21  |
+| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                    | Narwhal                                                  | 8.11   | 21  |
 
 La "versione preferita" contiene già la versione JVM appropriata. La versione preferita è anche la versione minima che puoi usare per costruire **AAPS**. **NON PUOI** costruire su una versione più vecchia di quella "preferita". Se usi una versione diversa, potresti incontrare dei problemi con la versione JVM. Guarda la pagina [Risoluzione dei problemi Android Studio](#troubleshooting_androidstudio-uncommitted-changes) per aiutarti a risolverli. Se la tua versione attuale di Android Studio non è elencata nella tabella, è necessario aggiornarla prima.
 
@@ -206,7 +209,7 @@ Android Studio userà **Gradle** (uno strumento di sviluppo per applicazioni And
 
 Nella schermata di benvenuto di Android Studio controlla che "**Progetti**" (1) sia evidenziato a sinistra.
 
-Quindi clicca su "**Get from VCS**" (2) a destra:
+Then click "**Clone Repository**" (2) on the right:
 
 ![Get_da_VCS](../images/Building-the-App/032_GetVCS.png)
 

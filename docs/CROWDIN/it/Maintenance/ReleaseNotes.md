@@ -23,7 +23,7 @@ The chronology of these releases is not available at the moment but as this ques
 
 ## Android version and AAPS version
 
-If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS v3 and up as it requires at least Android 9.
+If your smartphone uses an Android Version older than Android 11 you will not be able to use AAPS v3.3 and up as it requires at least Android 11.
 
 In order to allow users with older Android to use older version of AAPS new versions were pushed which only change version verification. No other improvements are included.
 
@@ -56,6 +56,49 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 ```
 
 (version3300)=
+## Version 3.3.2.0
+
+Release date: 27-03-2025
+
+### How to upgrade
+
+* [Android Studio version called "Meerkat"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already built a 3.3.x version, you need to upgrade Android Studio again.
+
+### Starting this version, notification and version enforcement has been simplified and softed and works following way:
+*  No expiration when device is offline (if no connection to the internet). It means no 60 and 90 days grace periods anymore.
+*  After expiration LGS mode is enforced
+*  You'll receive warning/notifications less often:
+   - 28+ days remaining: every 7 days
+   - 27-14 days remaining: every 3 days
+   - then once a day
+   - Notification will be generated after noon to not bother you during nights
+* There are only 2 kinds of notification
+   - New version available (has no effect on AAPS)
+   - Application is expiring on some date in the future (still no effect on AAPS) / has expired (AAPS will turn into LGS mode)
+
+### News
+
+* SMS RESTART command @MilosKozak
+* Watch Profile switch parameters @olorinmaia
+* Dark mode AAPS V2 watchface @olorinmaia
+* G7 data exchange improvements @olorinmaia
+* Widget configuration @MilosKozak
+* Radiobuttons UI improvements @olorinmaia
+* Automation: position choosing from map @MilosKozak
+* Version visible on main screens @MilosKozak
+* Compilation with existing git system in enforced (no zip downloads)
+* Show version on main screen @MilosKozak
+* Tidepool upload improvements @ConstantinMatheis
+
+### Bug fixes
+
+* Dash unbonding fix @Andreas
+* Garmin fixes @robertbuessow @suside
+* Fix of IOB displaying in dialogs @olorinmaia
+* Objectives spelling and validation improvements @MilosKozak
+* Fixed rendering of emulated TBRs @MilosKozak
+* Fixed bypassing security @tdrkDev
+
 ## Version 3.3.1.3
 
 Release date: 21-01-2025
@@ -64,7 +107,7 @@ Release date: 21-01-2025
 
 * Dash: bonding is optional (default off) @MilosKozak
 * Equil: fixed bolud 10+U, alarm improvements @EquilHack
-* Garmin: watch improvents @swissalpine
+* Garmin: watch improvements @swissalpine
 * Watch improvements @olorinmaia
 * Control loop status from watch @tdrkDev
 * Stability improvements
@@ -209,7 +252,23 @@ Release date: 29-12-2024
 * libraries updated to latest version, toml @MilosKozak
 * migration to kotlin 2.0, java 21 @MilosKozak
 
+(version3204)=
+
+## [Version 3.2.0.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)
+
+Release date: 27-02-2024
+
+This version is the last one supporting Android 10. If you cannot upgrade to Android 11, [update AAPS to 3.2.0.4](#update-aaps-3204).
+
+### Changes
+
+- xDrip G7 support
+- Medtrum fixes
+- Automation icon fix
+- Passing objective 1 fix
+
 (version3200)=
+
 ## Version 3.2.0.0 dedicated to @Philoul
 
 Release date: 23-10-2023
@@ -217,8 +276,8 @@ Release date: 23-10-2023
 ### Important hints
 
 - NS 15 is required
-- While using websockets in NS v3 plugin treatments entered through NS UI (plus button) and other applications using v1 API are not sent to AAPS. This will be fixed in future release of NS. Always use the same client (v1 or v3) in AAPS and AAPSClient until NS fully switch to v3 internaly. The same is valid for AAPS and AAPSClient itself.
-- Websockets in v3 plugin works similiar way to v1 plugin. Without websockets enabled AAPS schedules regularly downloads from NS which should lead to lower power consumption because NS is not permanently connected. On the oposite side it means delays in exchanging data. Please read [here](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) the important comments from the dev team before you use it!
+- While using websockets in NS v3 plugin treatments entered through NS UI (plus button) and other applications using v1 API are not sent to AAPS. This will be fixed in future release of NS. Always use the same client (v1 or v3) in AAPS and AAPSClient until NS fully switch to v3 internally. The same is valid for AAPS and AAPSClient itself.
+- Websockets in v3 plugin work in a similar manner as v1 plugin. Without websockets enabled AAPS schedules regularly downloads from NS which should lead to lower power consumption because NS is not permanently connected. On the opposite side it means delays in exchanging data. Please read [here](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) the important comments from the dev team before you use it!
 - If you are using xdrip as cgm source you must select it again after update due to internal changes
 - Tidepool can be used as a replacement of NS to pass first objective
 - If you send to xDrip+ you must configure xDrip synchronization plugin. In order to receive BGs from AAPS in xDrip, “xDrip+ Sync Follower” must be selected as source
@@ -254,7 +313,7 @@ Release date: 23-10-2023
 - Change in BolusWizard. If CGM is not available percentage is ignored (ie 100% is used)
 - migration to kts build system @MilosKozak
 - improved CI integration @MilosKozak @buessow
-- tests cleaup @ryanhaining @MilosKozak
+- tests cleanup @ryanhaining @MilosKozak
 - new 110k+ lines of code, changed 240k lines, 6884 changed files
 
 (Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)=
@@ -277,13 +336,15 @@ LIMITATIONS
 - NS 15 must be used with AAPS 3.2
 - v3 doesn't see updates done by v1 protocol (probably it will be resolved in some future version of NS)
 - in opposite because of old uneffective method of tracking changes v1 see changes done by v3
-- remember NS still uses v1 internaly so far thus is not possible to enter data through NS web UI if you are using v3. You must use AAPSClient on SMS if you want enter data remotely
+- remember NS still uses v1 internally so far thus is not possible to enter data through NS web UI if you are using v3. You must use AAPSClient on SMS if you want enter data remotely
 
 RECOMMENDED SETTING
 - because of all above you should choose only one method and use it on all devices (remember all other uploaders at time of writing this are using v1). If you decide to go to v3, select v3 in AAPS and all AAPSClients
-- v3 is preffered because of efficiency
+- v3 is preferred because of efficiency
 - using websockets or not using with v3 depends on your preference
 - it HIGHLY recommended to let AAPS gather all data and then upload it to NS as a single uploader. All other devices/applications should only read from NS. By doing it you'll prevent conflicts and sync errors. This is valid for getting BG data to NS using Dexcom Share connector etc. too
+
+(version3100)=
 
 ## Version 3.1.0
 
@@ -433,7 +494,7 @@ Release date: 12-01-2021
 - fix for SMB & Dexcom app
 - watchface fixes
 - crash reporting improved
-- gradle reverted to allow direct watchface instalation
+- gradle reverted to allow direct watchface installation
 - automation fixes
 - RS driver improvement
 - various crashes fixed
@@ -459,10 +520,10 @@ Release date: 01-01-2021
 - New watchface @rICTx-T1D
 - Dana RS connection improvements @MilosKozak
 - Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
-- New [Low Ressolution Skin](#Preferences-skin)
+- New [Low Resolution Skin](#Preferences-skin)
 - New ["Pregnant" patient type](#Open-APS-features-overview-of-hard-coded-limits) @Brian Quinion
 - New NSClient tablet layout @MilosKozak
-- NSClient transfer insulin, senstivity and display settings directly from main AAPS @MilosKozak
+- NSClient transfer insulin, sensitivity and display settings directly from main AAPS @MilosKozak
 - [Preferences filter](../SettingUpAaps/Preferences.md) @Brian Quinion
 - New pump icons @Rig22 @@teleriddler @osodebailar
 - New [insulin type Lyumjev](#Config-Builder-lyumjev)
@@ -592,7 +653,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
   - Profiles can be cloned and edited
   - Ability of upload profiles to NS
   - Old profile switches can be cloned to new profile in LocalProfile (timeshift and percentage is applied)
-  - Veritical NumberPicker for targets
+  - Vertical NumberPicker for targets
 
 - SimpleProfile is removed
 
@@ -724,7 +785,7 @@ Release date: 03-03-2019
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
 - Status lights on main screen (Nico Schmitz)
 - Daylight saving time helper (Roumen Georgiev)
-- Fix processing profile names comming from NS (Johannes Mockenhaupt)
+- Fix processing profile names coming from NS (Johannes Mockenhaupt)
 - Fix UI blocking (Johannes Mockenhaupt)
 - Support for updated G5 app (Tebbe Ubben and Milos Kozak)
 - G6, Poctech, Tomato, Eversense BG source support (Tebbe Ubben and Milos Kozak)

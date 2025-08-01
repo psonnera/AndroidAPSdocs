@@ -49,7 +49,7 @@ The **simple mode** is activated by default when you first install **AAPS**. In 
 - Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
 
 (Preferences-skin)=
-#### Skin
+### Skin
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -61,12 +61,12 @@ You can choose from four types of skins:
 
 Difference between the other skins depends on the phone's display orientation:
 
-##### Portrait orientation
+#### Portrait orientation
 
 - **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
 - **Large Display** has an increased height for all graphs compared to other skins
 
-##### Landscape orientation
+#### Landscape orientation
 
 - Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
 
@@ -321,7 +321,7 @@ Closed Loop is only possible if you are in **[Objective 6](#objectives-objective
 
 In this mode, [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero.
 
-This means that if blood glucose is dropping, **AAPS** can reduce the basal for you. But if blood glucose is rising, no automatic correction will be made. Your basal rates will remain the same as defined in your current **Profile**. Only if basal IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower **BG**.
+This means that if blood glucose is dropping, **AAPS** can reduce the basal for you. But if blood glucose is rising, no automatic correction will be made. Your basal rates will remain the same as defined in your current **Profile**. Only if IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower **BG**.
 
 (Preferences-minimal-request-change)=
 ### Minimal request change

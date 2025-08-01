@@ -139,7 +139,9 @@ If this setting is enabled, **SMB** will only be enabled with a high temp target
 #### Enable SMB always
 If this setting is enabled, SMB is enabled always enabled(independent of COB, temp targets or boluses). If this setting is enabled, the rest of the enable settings below will have no effect. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled.
 
-This setting is only available if **AAPS** detects that you are using a reliable BG source, with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure. Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+This setting is only available if **AAPS** detects that you are using a [reliable BG source](#GettingStarted-TrustedBGSource), with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure.
+
+Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 #### Enable SMB with COB
 If this setting is enabled, SMB is enabled when the COB is greater than 0.
@@ -157,10 +159,12 @@ If enabled, SMB is enabled for 6h after carbohydrates are announced, even if COB
 
 For safety reasons, this setting is only available if **AAPS** detects that you are using a reliable BG source. It is not visible if "Enable SMB always" is switched on.
 
-This setting is only available if **AAPS** detects that you are using a reliable BG source, with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure. Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).<br/> This setting is not visible if "Enable SMB always" is switched on.
+This setting is only available if **AAPS** detects that you are using a [reliable BG source,](#GettingStarted-TrustedBGSource) with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure.
+
+Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).<br/> This setting is not visible if "Enable SMB always" is switched on.
 
 #### How frequently SMBs will be given in min
-This feature limits the frequency of SMBs. This value determines the minimum time between SMBs. Note that the loop runs every time a glucose value comes in (generally 5 minutes). Subtract 2 minute to give loop additional time to complete. E.g. E.g. if you want SMB to be given every loop run, set this to 3 minutes.
+This feature limits the frequency of SMBs. This value determines the minimum time between SMBs. Note that the loop runs every time a glucose value comes in (generally 5 minutes). Subtract 2 minute to give loop additional time to complete. E.g. if you want SMB to be given every loop run, set this to 3 minutes.
 
 Default value: 3 min.
 
@@ -280,11 +284,11 @@ Default value: 2
 
 |            | Child | Teenager | Adult | Insulin resistant adult | Pregnant |
 | ---------- | ----- | -------- | ----- | ----------------------- | -------- |
-| MAXBOLUS   | 5,0   | 10,0     | 17,0  | 25,0                    | 60,0     |
-| MINDIA     | 5,0   | 5,0      | 5,0   | 5,0                     | 5,0      |
-| MAXDIA     | 9,0   | 9,0      | 9,0   | 9,0                     | 10,0     |
-| MINIC      | 2,0   | 2,0      | 2,0   | 2,0                     | 0,3      |
-| MAXIC      | 100,0 | 100,0    | 100,0 | 100,0                   | 100,0    |
-| MAXIOB_AMA | 3,0   | 5,0      | 7,0   | 12,0                    | 25,0     |
-| MAXIOB_SMB | 7,0   | 13,0     | 22,0  | 30,0                    | 70,0     |
-| MAXBASAL   | 2,0   | 5,0      | 10,0  | 12,0                    | 25,0     |
+| MAXBOLUS   | 5     | 10       | 17    | 25                      | 60       |
+| MINDIA     | 5     | 5        | 5     | 5                       | 5        |
+| MAXDIA     | 9     | 9        | 9     | 9                       | 10       |
+| MINIC      | 2     | 2        | 2     | 2                       | 0.3      |
+| MAXIC      | 100   | 100      | 100   | 100                     | 100      |
+| MAXIOB_AMA | 3     | 5        | 7     | 12                      | 25       |
+| MAXIOB_SMB | 7     | 13       | 22    | 30                      | 70       |
+| MAXBASAL   | 2     | 5        | 10    | 12                      | 25       |

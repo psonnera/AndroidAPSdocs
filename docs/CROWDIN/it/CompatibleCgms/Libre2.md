@@ -172,8 +172,6 @@ Dopo un cambio di sensore, xDrip+ rileva automaticamente il nuovo sensore ed eli
 
 -   Se AAPS non riceve i valori della glicemia quando il telefono è in modalità aereo, usa “Identifica ricevitore” come descritto nella [pagina delle impostazioni di xDrip+](#xdrip-identify-receiver).
 
-Per ora, utilizzando Libre 2 come origine dati, non è possibile attivare le opzioni “Abilita SMB sempre” e “Abilita SMB dopo i carboidrati” per l'algoritmo SMB. I valori della glicemia del Libre 2 non sono abbastanza omogenei per poterli usare in modo sicuro. Per maggiori dettagli, vedi [Smussamento dei dati glicemici](../CompatibleCgms/SmoothingBloodGlucoseData.md).
-
 (Libre2-experiences-and-troubleshooting)=
 ### Esperienze e risoluzione dei problemi
 

@@ -1,8 +1,8 @@
 # Come usare il plugin Autotune (solo con versione dev)
 
-La documentazione sull'algoritmo di Autotune è disponibile in [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
+Documentation about Autotune algorithm can be found in [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
 
-Il plugin Autotune è un'implementazione dell'algoritmo di Autotune di OpenAPS all'interno di AAPS.
+Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
 
 **Attualmente Autotune Plugin è disponibile solo in [dev branch](../AdvancedOptions/DevBranch.md) e in modalità Engineering.**
 
@@ -18,7 +18,7 @@ Il plugin Autotune è un'implementazione dell'algoritmo di Autotune di OpenAPS a
   - Nota: ogni volta che si cambia il parametro Tune Days, i risultati precedenti verranno rimossi
 - Last Run è un link che recupera l'ultimo calcolo valido. Se non hai lanciato Autotune il giorno corrente, o se i risultati precedenti sono stati rimossi con una modifica del parametro di calcolo sopra riportata, allora puoi recuperare i parametri e i risultati dell'ultima esecuzione riuscita.
 - Una nota segnala ad esempio, alcune informazioni sul profilo selezionato (se si hanno diversi valori IC o diversi valori ISF)
-  - Nota: Il calcolo automatico funziona con un solo IC e un singolo valore ISF. Attualmente non esiste un algoritmo Autotune per sintonizzare un IC o un ISF circadiani. Se il tuo profilo di input ha diversi valori, puoi vedere nella sezione di avvisi il valore medio preso in considerazione per sintonizzare il tuo profilo.
+  - Nota: Il calcolo automatico funziona con un solo IC e un singolo valore ISF. There is currently no existing Autotune algorithm to tune a circadian IC or circadian ISF. Se il tuo profilo di input ha diversi valori, puoi vedere nella sezione di avvisi il valore medio preso in considerazione per sintonizzare il tuo profilo.
 - Il pulsante Controlla il profilo di Input consente una rapida verifica del profilo (Unità, DIA, IC, ISF, basale e target)
   - Nota: Autotune regola solo il tuo IC (valore singolo), ISF (valore singolo) e basale (con variazione circadiana). Le unità, la DIA e il target rimarranno invariati nel profilo di output.
 
@@ -178,7 +178,7 @@ Usare sempre Autotune per diversi giorni manualmente per controllare i risultati
 
 È anche importante analizzare i risultati di Autotune per capire (o cercare di capire) perché Autotune propone queste modifiche
 
-- puoi avere un aumento o una diminuzione totale della forza del tuo profilo (ad esempio un aumento del basale totale associato a una diminuzione dei valori di ISF e IC). potrebbe essere associato a diversi giorni successivi con correzione dell'autosens superiore al 100% (più aggressività richiesta) o inferiore al 100% (sei più sensibile)
+- puoi avere un aumento o una diminuzione totale della forza del tuo profilo (ad esempio un aumento del basale totale associato a una diminuzione dei valori di ISF e IC). it could be associated to several following days with autosens correction above 100% (more aggressivity required) or below 100% (you are more sensitive)
 - A volte Autotune propone un diverso equilibrio tra tassi basali e IC/ISF (per es. basale inferiore e IC/ISF più aggressivo)
 
 Si consiglia di non utilizzare Autotune nei seguenti casi:

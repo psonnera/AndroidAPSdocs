@@ -16,7 +16,15 @@ Queste sono le specifiche dell' **Omnipod DASH** ('DASH') e ciò che lo differen
 * Non ci saranno più errori "nessuna connessione dal dispositivo al pod" con DASH.
 * **AAPS** attenderà che il pod sia accessibile per inviare i comandi.
 * Al momento dell'attivazione, **AAPS** troverà e connetterà il nuovo pod DASH.
-* Distanza massima prevista: 5-10 metri (variabile)
+* Expected range: 5-10 meters (YMMV).
+
+```{admonition} Android 15
+:class: warning
+
+There are currently reported Bluetooth connection issues with the following combination of **AAPS**: DASH + Android 15.
+Please refrain from upgrading your phone to Android 15 unless you have checked the following [**list**](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&amp;single=true) and verified that your phone is not a known reported issue.
+If you experience frequent disconnection; try to enable Bond BT as described in: [**Bluetooth Issues**](../GettingHelp/GeneralTroubleshooting.md). 
+```
 
 ## Requisiti Hardware/Software
 
@@ -29,7 +37,7 @@ Queste sono le specifiche dell' **Omnipod DASH** ('DASH') e ciò che lo differen
    -  **Versione 3.0 o più recente di AAPS costruita e installata** utilizzando le istruzioni [**Costruisci AAPS**](../SettingUpAaps/BuildingAaps.md).
 * [**Sensore di Glicemia (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
-Le istruzioni qui sotto spiegano come attivare una nuova sessione pod. Aspetta di essere vicino alla scadenza della sessione del pod che stai usando prima di provare a connettere **AAPS** con un nuovo pod. Una volta che un pod viene disattivato, non può essere riutilizzato e la disconnessione sarà definitiva.
+The instructions below explain how to activate a new pod session. Wait to close to expiry of a current pod session before trying to connect **AAPS** with a new pod. Once a pod is is cancelled it cannot reused and the disconnection will be final.
 
 ## Prima Di Iniziare
 
@@ -408,7 +416,7 @@ Pods fail occasionally due to a variety of issues, including hardware issues wit
 
 ### Preventing error 49 pod failures
 
-This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. This is when the driver and Pod disagree on the actual state. The Pod (out of a build-in safety measure) then reacts with an unrecoverable error code 49 (0x31) ending up with what is know as a “screamer”: the long irritating beep that can only be stopped by punching a hole at the appropriate location at the back of the Pod. The exact origin of a “49 pod failure” often is hard to trace. In situations that are suspected for this failure to occur (for instance on application crashes, running a development version or re-installation).
+This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. This is when the driver and Pod disagree on the actual state. The Pod (out of a built-in safety measure) then reacts with an unrecoverable error code 49 (0x31) ending up with what is know as a “screamer”: the long irritating beep that can only be stopped by punching a hole at the appropriate location at the back of the Pod. The exact origin of a “49 pod failure” often is hard to trace. In situations that are suspected for this failure to occur (for instance on application crashes, running a development version or re-installation).
 
 ### Pump Unreachable Alerts
 
@@ -441,7 +449,7 @@ When importing settings with an active Pod, make sure the export was done with t
 1. Importing any recent export should work (see above)
 2. Import your settings.
 3. Check all preferences.
-4. You may need to **Deactivate** the "non exixting" pod if the imported settings included any active pod data.
+4. You may need to **Deactivate** the "non existing" pod if the imported settings included any active pod data.
 
 ### Importing settings that contain Pod state from an inactive Pod
 
