@@ -15,12 +15,12 @@ Vedi la pagina [Domande frequenti](../UsefulLinks/FAQ.md) per i dettagli.
 
 | Versione AAPS           | Versione<br/>Android Studio<br/>preferita | Versione Alternative<br/>Android Studio<br/> | Gradle | JVM |
 | ----------------------- | ----------------------------------------------------- | -------------------------------------------------------- | ------ |:--- |
-| 2.6.2                   | 3.6.1                                                 |                                                          | 5.6    | 11  |
-| 2.8.2.1                 | 4.1.1                                                 |                                                          | 6.1    | 13  |
-| [3.1.0.3](#version3100) | 2020.3.1                                              | up to Narwhal                                            | 7.3    | 17  |
+| 2.6.2                   | 3.6.1                                                 |                                                          | 5.6.4  | 11  |
+| 2.8.2.1                 | 4.1.1                                                 |                                                          | 6.1.1  | 13  |
+| [3.1.0.3](#version3100) | 2020.3.1                                              | up to Narwhal                                            | 7.3.3  | 17  |
 | [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                   | up to Narwhal                                            | 8.2    | 17  |
 | [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                       | up to Narwhal                                            | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                    | Narwhal                                                  | 8.11   | 21  |
+| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                    | Narwhal                                                  | 8.11.1 | 21  |
 
 La "versione preferita" contiene già la versione JVM appropriata. La versione preferita è anche la versione minima che puoi usare per costruire **AAPS**. **NON PUOI** costruire su una versione più vecchia di quella "preferita". Se usi una versione diversa, potresti incontrare dei problemi con la versione JVM. Guarda la pagina [Risoluzione dei problemi Android Studio](#troubleshooting_androidstudio-uncommitted-changes) per aiutarti a risolverli. Se la tua versione attuale di Android Studio non è elencata nella tabella, è necessario aggiornarla prima.
 
@@ -146,6 +146,8 @@ Una volta completato il download, avvia l'applicazione scaricata per installarla
 Installa Android Studio cliccando "Next", come mostrato nelle schermate seguenti. **Non** devi modificare le impostazioni suggerite!
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
+
+If you want to save hard disk space, your you can uncheck Android Virtual Device: it is not used for building **AAPS**.
 
 ![Scelta_componenti](../images/Building-the-App/012_InstallLadybug.png)
 
