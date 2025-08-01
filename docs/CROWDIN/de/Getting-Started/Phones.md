@@ -1,8 +1,16 @@
 # Smartphones
 
-Die aktuelle **AAPS**-Version (3.3) setzt ein Android Smartphone mit Google **Android 11.0 oder höher** voraus. Wenn Du planst Dir (ab Dezember 2024) ein neues Smartphone zuzulegen, wäre Android 14 eine gute Wahl.  
-Im November 2024 sind Probleme mit Android 15 und der Bluetooth-Konnektivität gemeldet worden. Eventuell macht es Sinn, das Update auf Android 15 zu verschieben, insbesondere dann, wenn Du den Omnipod Dash oder den Dexcom G7 nutzt. Die neuesten Informationen zu diesem Thema findest Du auf [Facebook oder Discord](../GettingHelp/WhereCanIGetHelp.md).  
-Aus Sicherheitsgründen wird Dir dringend ans Herz gelegt, Dein **AAPS** auf dem neuesten Stand zu halten. Für Menschen, die kein Gerät mit Android 11 (oder neuer) nutzen können, stehen weiterhin ältere **AAPS**-Versionen für ältere Android-Versionen zur Verfügung, siehe dazu auch die [Release Notes](#maintenance-android-version-aaps-version).
+Die aktuelle **AAPS**-Version (3.3) setzt ein Android Smartphone mit Google **Android 11.0 oder höher** voraus. Solltest Du in Erwägung ziehen, ein neues Smartphone zu kaufen so wäre (Stand: Dezember 2024) **Android 14** zu bevorzugen.
+
+Seit November 2024 haben mehrere Benutzer Probleme mit Android 15 und der Omnipod Dash Bluetooth-Verbindung gemeldet.
+
+Seit Juni 2025 gibt es Berichte darüber, dass sie den Omnipod Dash nicht mit Android 16 starten können.
+
+Insbesondere dann, wenn Du einen Omnipod Dash nutzt, solltest Du überlegen, die entsprechenden Updates zu verzögern.
+
+Die allerneusten Informationen zu diesem Thema erhältst Du auf [Facebook oder Discord](../GettingHelp/WhereCanIGetHelp.md).
+
+Aus Sicherheitsgründen wird Dir dringend empfohlen, Deine **AAPS**-Version immer aktuell zu halten. Für Menschen, die kein Gerät mit Android 11 (oder neuer) nutzen können, stehen weiterhin ältere **AAPS**-Versionen für ältere Android-Versionen zur Verfügung, siehe dazu auch die [Release Notes](#maintenance-android-version-aaps-version).
 
 - [Jelly Pro Einstellungen](../CompatiblePhones/Jelly.md)
 - [Huawei Einstellungen](../CompatiblePhones/Huawei.md)
