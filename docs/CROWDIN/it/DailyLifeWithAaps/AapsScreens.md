@@ -1,4 +1,4 @@
-# AAPS screens
+# Schermate AAPS
 
 ```{contents}
 :backlinks: entry
@@ -6,17 +6,17 @@
 ```
 
 (AapsScreens-the-homescreen)=
-## The Homescreen
+## Panoramica
 
 ![Homescreen V2.7](../images/Home2020_Homescreen.png)
 
-This is the first screen you will come across when you open **AAPS**, and it contains most of the information that you will need day to day.
+Questa è la prima schermata che incontrerai quando apri **AAPS**, e contiene la maggior parte delle informazioni di cui si avrà bisogno di giorno in giorno.
 
-### Section A - Tabs
+### Sezione A - Schede
 
-* Navigate between the various **AAPS** modules.
-* Alternatively you can change screens by swiping left or right.
-* Displayed tabs can be selected in the [config builder](#Config-Builder-tab-or-hamburger-menu).
+* Navigare tra i vari moduli **AAPS**.
+* In alternativa è possibile cambiare schermata scorrendo a sinistra o a destra.
+* Le schede visualizzate possono essere selezionate nel configuratore strutturale [](#Config-Builder-tab-or-hamburger-menu).
 
 ### Section B - Profile & target
 
