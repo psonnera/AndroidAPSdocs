@@ -10,7 +10,7 @@
 
 ![Homescreen V2.7](../images/Home2020_Homescreen.png)
 
-Questa è la prima schermata che incontrerai quando apri **AAPS**, e contiene la maggior parte delle informazioni di cui si avrà bisogno di giorno in giorno.
+Questa è la prima schermata che si incontra quando si apre **AAPS**, e contiene la maggior parte delle informazioni di cui si avrà bisogno di giorno in giorno.
 
 ### Sezione A - Schede
 
