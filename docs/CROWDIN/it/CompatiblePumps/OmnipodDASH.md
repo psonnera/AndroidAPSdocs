@@ -18,14 +18,6 @@ Queste sono le specifiche dell' **Omnipod DASH** ('DASH') e ciò che lo differen
 * Al momento dell'attivazione, **AAPS** troverà e connetterà il nuovo pod DASH.
 * Expected range: 5-10 meters (YMMV).
 
-```{admonition} Android 15
-:class: warning
-
-There are currently reported Bluetooth connection issues with the following combination of **AAPS**: DASH + Android 15.
-Please refrain from upgrading your phone to Android 15 unless you have checked the following [**list**](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&amp;single=true) and verified that your phone is not a known reported issue.
-If you experience frequent disconnection; try to enable Bond BT as described in: [**Bluetooth Issues**](../GettingHelp/GeneralTroubleshooting.md). 
-```
-
 ## Requisiti Hardware/Software
 
 * DASH è identificato con la linguetta blu di protezione dell’ago.
