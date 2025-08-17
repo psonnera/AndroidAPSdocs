@@ -77,7 +77,7 @@ Gli utenti stanno creando un elenco [di telefoni e orologi testati](#Phones-list
 
 ### xDrip+
 
-Anche se non hai bisogno di avere l'app [xDrip+](https://xdrip.readthedocs.io/en/latest/) come **sorgente dati di glicemia**, puoi comunque usarla _per esempio_ per gli allarmi o una visualizzazione diversa della glicemia. Puoi avere tutti gli allarmi che vuoi, specificare il tempo in cui l'allarme deve essere attivo, se può ignorare la modalità silenziosa, ecc. Puoi trovare informazioni su xDrip+ [qui](../CompatibleCgms/xDrip.md). Siate consapevoli che la documentazione di questa applicazione non è sempre aggiornata, in quanto la sua evoluzione è abbastanza veloce.
+Even if you don't need to have the xDrip+ App as **BG Source**, you can still use it for _i.e._ alarms or a different blood glucose display. Puoi avere tutti gli allarmi che vuoi, specificare il tempo in cui l'allarme deve essere attivo, se può ignorare la modalità silenziosa, ecc. Puoi trovare informazioni su xDrip+ [qui](../CompatibleCgms/xDrip.md). Siate consapevoli che la documentazione di questa applicazione non è sempre aggiornata, in quanto la sua evoluzione è abbastanza veloce.
 
 ## Cosa fare durante l'attesa dei moduli
 
