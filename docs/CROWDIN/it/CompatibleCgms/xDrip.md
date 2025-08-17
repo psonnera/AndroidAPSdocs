@@ -216,7 +216,7 @@ Segui [queste istruzioni](https://navid200.github.io/xDrip/docs/Dexcom/SensorFai
 
 ### Connetti il trasmettitore Libre & avvia il sensore
 
-- Se il tuo sensore lo richiede (Libre 2 EU e Libre 1 US) installa l'ultimo [algoritmo fuori di processo OOP](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view).
+- If your sensor requires it (Libre 2 EU and Libre 1 US) install the latest out of process algorithm.
 
 - Il sensore deve essere già avviato utilizzando l'app del fornitore oppure il lettore (xDrip+ non può avviare o fermare i sensori Libre).
 
