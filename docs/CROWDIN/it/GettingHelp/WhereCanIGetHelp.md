@@ -22,7 +22,6 @@ Please note that Facebook has recently removed external links shared within the 
 
 * [Looped Facebook group](https://www.facebook.com/groups/TheLoopedGroup): covers all DIY closed loop systems (OpenAPS, Loop and AndroidAPS)
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
-* [xDrip+ - ](https://xdrip.readthedocs.io/en/latest/)
 * [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM in general
 * [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw)
 
@@ -32,7 +31,7 @@ Please note that Facebook has recently removed external links shared within the 
 * [Aussie Aussie Aussie Loop Loop Loop](https://www.facebook.com/groups/AussieLooping/): Australian users of OpenAPS, Loop and AndroidAPS
 
 ### Czech and Slovak
-* [DanaR, Insight a AndroidAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): Czech-speaking users of AndroidAPS
+* [AAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): Czech-speaking users of AndroidAPS
 
 ### France
 * [AndroidAPS France (Toutes Pompes)](https://www.facebook.com/groups/268922660715266)

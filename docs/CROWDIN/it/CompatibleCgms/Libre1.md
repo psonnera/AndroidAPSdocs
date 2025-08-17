@@ -29,7 +29,7 @@ Per ora, utilizzando Libre 1 come origine dati, non è possibile attivare le opz
 -   xDrip+ supporta Miaomiao, Bubble, Blucon, Atom e LibreAlarm.
 -   Puoi scaricare tranquillamente l'[ultimo APK (stabile)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) a meno che tu non abbia bisogno di funzionalità più recenti, caso in cui dovresti usare l'ultimo [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
 -   Segui le istruzioni di configurazione nella [pagina delle impostazioni di xDrip+](../CompatibleCgms/xDrip.md).
--    Hai anche bisogno di [OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) per Libre 1 US (e Libre 2 EU).
+-    You also need OOP2 for Libre 1 US (and Libre 2 EU).
 -   Seleziona xDrip+ in [Configuratore strutturale, Origine BG](#Config-Builder-bg-source).
 
 (libre1-using-glimp)=
