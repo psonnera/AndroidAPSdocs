@@ -8,7 +8,7 @@ Il sensore Freestyle Libre 2 è ora un vero e proprio CGM anche con l'app uffici
 
 ## 1. Usa un trasmettitore Bluetooth e OOP
 
-I trasmettitori Bluetooth possono essere utilizzati con il Libre 2 (EU) o 2+ (EU) e un'app con [un algoritmo esterno (OOP)](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view). È possibile ricevere i valori della glicemia ogni 5 minuti come con il [Libre 1](./Libre1.md).
+Bluetooth transmitters can be used with the Libre 2 (EU) or 2+ (EU) and an out of process algorithm app. È possibile ricevere i valori della glicemia ogni 5 minuti come con il [Libre 1](./Libre1.md).
 
 Controlla che il collegamento e l'applicazione che vuoi usare siano compatibili con il tuo sensore e con xDrip+ (i Blucon più vecchi e quelli più recenti non funzionano, Miaomiao 1 richiede il firmware 39 e Miaomiao 2 il firmware 7).
 
@@ -36,7 +36,7 @@ xDrip+ non supporta la connessione diretta a Libre 2 US e AUS.
 Solo i modelli Libre 2 e 2+ **EU**.
 ```
 
-- Segui [queste istruzioni](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) per configurare xDrip+, ma assicurati di scaricare [quest'ultimo OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) perché quello contenuto nel documento è obsoleto.
+- Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [the latest OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) as the one in the document is obsolete.
 - Segui le istruzioni di configurazione nella [pagina delle impostazioni di xDrip+](../CompatibleCgms/xDrip.md).
 
 -   Seleziona xDrip+ in [Configuratore strutturale, Origine BG](#Config-Builder-bg-source).
