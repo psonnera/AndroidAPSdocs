@@ -43,7 +43,7 @@ Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
 
 - Il pulsante "Confronta profili" apre la visualizzazione del comparatore del profilo. Il profilo di input è in blu e il profilo di output (chiamato "Tuned") è in rosso.
 
-  - Nota: nell'esempio sottostante il profilo di input ha una variazione circadiana per IC e ISF, ma il profilo calcolato in uscita ha un singolo valore. Se è importante per voi ottenere un profilo di output circadiano andate alla sezione [ IC circadiano o profilo ISF ](#circadian-ic-or-isf-profile) qui sotto.
+  - Nota: nell'esempio sottostante il profilo di input ha una variazione circadiana per IC e ISF, ma il profilo calcolato in uscita ha un singolo valore. If it's important for you to get a circadian output profile see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
 
   ![Comparatore profili Autotune](../images/Autotune/Autotune_5.png)
 
@@ -86,13 +86,13 @@ Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
 
 ![Schermata predefinita Autotune](../images/Autotune/Autotune_11.png)
 
-- Cambio profilo automatica (default Off): vedi [Run Autotune con una regola di automazione ](#run-autotune-with-an-automation-rule) di seguito. Se si modifica questa impostazione in On, il profilo di input verrà automaticamente aggiornato dal profilo Tuned e verrà attivato.
+- Automation Switch Profile (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. Se si modifica questa impostazione in On, il profilo di input verrà automaticamente aggiornato dal profilo Tuned e verrà attivato.
   - **Fai attenzione, devi fidarti e verificare durante diversi giorni successivi, che dopo un aggiornamento e l'attivazione del profilo Tuned senza modifiche, il tuo loop migliori**
 
 - Categorize UAM as basal (default On): Questa impostazione è per gli utenti che usano AndroidAPS senza alcun carbs inserito (Full UAM). Impedirà (quando disattivato) di classificare l'UAM come basale.
   - Nota: se viene rilevata almeno un'ora di assorbimento dei carboidrati durante un giorno, tutti i dati classificati come "UAM" saranno classificati come basali, indipendentemente da questa impostazione (On o Off)
 - Numero di giorni di dati (predefinito 5): è possibile definire il valore predefinito con questa impostazione. Ogni volta che si seleziona un nuovo profilo nel plugin Autotune, il parametro Tune days sarà sostituito da questo valore predefinito
-- Applica il risultato medio in IC/ISF circadiano (default Off): vedi [ IC circadiano o profilo ISF ](#circadian-ic-or-isf-profile) di seguito.
+- Apply average result in circadian IC/ISF (default Off): see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
 
 ### Altre impostazioni
 
@@ -120,7 +120,7 @@ Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
 
 ### Aggiorna uno specifico giorno della settimana
 
-- Se cliccate sulla casella con l'occhio a destra del parametro "Run days", vedrete la selezione del giorno. È possibile specificare quale giorno della settimana deve essere incluso nel calcolo di Autotune (nella schermata sottostante è possibile vedere un esempio di "giorni lavorativi" con sabato e domenica rimossi dal calcolo automatico)
+- If you click on the checkbox with the eye on the right of "Tune days" parameter, you will see the day selection. È possibile specificare quale giorno della settimana deve essere incluso nel calcolo di Autotune (nella schermata sottostante è possibile vedere un esempio di "giorni lavorativi" con sabato e domenica rimossi dal calcolo automatico)
   - Se il numero di giorni inclusi nel calcolo di Autotune è inferiore al numero di giorni di sintonizzazione, vedrai quanti giorni saranno inclusi a destra del selettore di Tune days (10 giorni nell'esempio sottostante)
   - Questa impostazione dà buoni risultati solo se il numero di giorni rimanenti non è troppo piccolo (ad esempio se si sintonizza un profilo specifico per i giorni di fine settimana con solo la domenica e il sabato selezionati, è necessario selezionare un minimo di 21 o 28 giorni di sintonizzazione per avere 6 o 8 giorni inclusi nel calcolo di Autotune)
 
@@ -179,18 +179,18 @@ Usare sempre Autotune per diversi giorni manualmente per controllare i risultati
 È anche importante analizzare i risultati di Autotune per capire (o cercare di capire) perché Autotune propone queste modifiche
 
 - puoi avere un aumento o una diminuzione totale della forza del tuo profilo (ad esempio un aumento del basale totale associato a una diminuzione dei valori di ISF e IC). it could be associated to several following days with autosens correction above 100% (more aggressivity required) or below 100% (you are more sensitive)
-- A volte Autotune propone un diverso equilibrio tra tassi basali e IC/ISF (per es. basale inferiore e IC/ISF più aggressivo)
+- Sometimes Autotune proposes a different balance between basal rates and IC/ISF (for ex lower basal and more aggressive IC/ISF)
 
 Si consiglia di non utilizzare Autotune nei seguenti casi:
 
 - Non inserisci tutti i tuoi carboidrati
-  - Se non si inserisce la correzione dei carboidrati per un'ipoglicemia, Autotune vedrà un aumento inaspettato del valore BG e aumenterà i tassi basali le 4 ore precedenti, potrebbe essere l'opposto di quello che serve per evitare l'ipo, specialmente se è nel cuore della notte. Ecco perché è importante inserire tutti i carboidrati, specialmente le correzioni per ipo.
-- Hai molto periodi con UAM rilevato durante il giorno.
-  - Hai inserito tutti i tuoi carboidrati e sono stati stimati correttamente?
+  - If you don't enter carbs correction for hypoglycemia, Autotune will see an unexpected increase of your BG value and will increase your basal rates 4 hours earlier, it could be the opposite of what you need to avoid hypo, especially if it's in the middle of the night. That's why it's important to enter all carbs, especially correction for hypo.
+- You have a lot of periods with UAM detected during the day.
+  - Do you have entered all your carbs and correctly estimated your Carbs?
   - Tutti i periodi UAM (tranne se non si immettono carboidrati durante un giorno e la funzione classifica UAM come basale è disabilitata), tutti i periodi UAM saranno classificati come basale, questo può aumentare molto la tua basale (molto più del necessario)
 
 - L'assorbimento dei carboidrati è molto lento: se la maggior parte dell'assorbimento dei carboidrati viene calcolato con il parametro min_5m_carbimpact (si possono vedere questi periodi con un piccolo punto arancione nella parte superiore della curva COB), il calcolo del COB potrebbe essere sbagliato e portare a risultati sbagliati.
   - Quando si pratica sport, si è generalmente più sensibili e il BG non aumenta molto, quindi durante o dopo un esercizio, è normale vedere alcuni periodi con carboidrati lenti. Ma se si ha troppo spesso un assorbimento di carboidrati inaspettamente lento, allora potrebbe essere necessario un aggiustamento del profilo (valore più alto di IC) oppure hai un min_5m_carbimpact un po' troppo alto.
-- Hai "giorni molto brutti", per esempio bloccati diverse ore in iperglicemia con un'enorme quantità di insulina per poter scendere all'interno del range, o dopo un cambiamento del sensore hai avuto lunghi periodi di valori BG sbagliati. Se durante le ultime settimane hai solo uno o due "giorni non buoni", puoi disattivare manualmente questi giorni nel calcolo automatico per escluderli dal calcolo, e di nuovo **controllare attentamente se puoi fidarti dei risultati**
+- You have "very bad days", for example stuck several hours in hyperglycemia with a huge amount of insulin to be able to go down within the range, or after a sensor change you have long periods of wrong BG values. If during the past weeks you only have one or 2 "bad days", you can disable manually these days in autotune calculation to exclude them from calculation, and again **check carefully if you can trust the results**
 - Se la percentuale di modifica è troppo importante
   - Si può provare ad aumentare il numero di giorni per ottenere risultati più agevoli
