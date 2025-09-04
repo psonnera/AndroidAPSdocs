@@ -60,7 +60,7 @@ While setting up AAPS to work with your medtronic pump you need to set following
 
 - **Pompa Seri Numarası**: Pompanızın arkasında yer alır ve SN ile başlar. You should only enter the 6 numbers shown without any alphabetic characters (e.g. 123456).
 - **Pompa Tipi**: Kullandığınız pompa modeli (ör. 522). 
-- **Pompa Frekansı**: Pompanızın ilk dağıtıldığı yere bağlı olarak iki seçenek vardır. Please check the [FAQ](#faq) if you are unsure which option to select): 
+- **Pompa Frekansı**: Pompanızın ilk dağıtıldığı yere bağlı olarak iki seçenek vardır. Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select): 
     - ABD & Kanada için (NA-CA) kullanılan frekans 916 Mhz
     - Dünya çapında (WW) kullanılan frekans 868 Mhz'dir.
 - **Pompadaki Maks Bazal (Ü/s)**: Bunun, pompanızda ayarlanan değerle eşleşmesi gerekir (yukarıdaki pompa konfigürasyonuna bakın). Again this setting must be carefully selected as it will determine how much AAPS can deliver via your basal rate. Bu değer maksimum geçici bazal oranını etkin bir şekilde ayarlayacaktır. Örnek olarak, bu değeri maksimum standart bazal oranınızın dört katına ayarlamak %400 Geçici Bazal Oranına izin verir. Pompa tarafından izin verilen maksimum değer saatte 34,9 ünitedir.
@@ -99,8 +99,8 @@ While setting up AAPS to work with your medtronic pump you need to set following
 Ekranın altında üç buton vardır:
 
 - **Yenile**: Pompanın mevcut durumunu yenilemek içindir. Bu buton komple veri yenilediğinden (geçmişi al, zamanı al/ayarla, profil al, pil durumunu al, vb.) yalnızca bağlantı uzun bir süre boyunca kopmuşsa kullanılmalıdır.
-- **Pump History**: Shows pump history (see [below](#pump-history))
-- **RL Stats**: Show RL Stats (see [below](#rl-status-rileylink-status))
+- **Pump History**: Shows pump history (see [below](#MedtronicPump-pump-history))
+- **RL Stats**: Show RL Stats (see [below](#MedtronicPump-rl-status-rileylink-status))
 
 (MedtronicPump-pump-history)=
 

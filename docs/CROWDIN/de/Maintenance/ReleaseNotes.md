@@ -55,6 +55,8 @@ Damit Benutzer älterer Android-Versionen nicht ausgeschlossen werden, wurden zw
 WearOS 5, API Level 34 (Android 14) hat [einige Einschränkungen](#BuildingAapsWearOs-WearOS5).
 ```
 
+(latestrelease)=
+
 (version3321)=
 
 ## Version 3.3.2.1
@@ -490,6 +492,8 @@ Erscheinungsdatum: 23.01.2021
 - Verbesserung für Smartwatches
 - NSClient-Korrekturen
 - Bolus-Berater funktioniert jetzt auch mit Pumpcontrol und NSClient
+
+(version-2811)=
 
 ## Version 2.8.1.1
 

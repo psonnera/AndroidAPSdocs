@@ -2,10 +2,10 @@
 
 ![image](./images/basic-outline-of-AAPS.png)
 
-```{admonition} Version 3.3
+```{admonition} Latest Release
 :class: note
 
-29/12/2024 : La version 3.3 est sortie. Consultez les [Notes de version] (#version3300) pour voir ce qui est nouveau et obtenir des instructions de mise à jour.
+14/08/2025 : Version 3.3.2.1 is out. Check the [Release Notes](#latestrelease) to see what's new and get update instructions.
 
 ```
 
@@ -21,7 +21,7 @@ Cette section vous prépare techniquement à assembler aussi rapidement et effic
 
 Maintenant que vous avez une bonne compréhension du processus, vous pouvez démarrer l'assemblage de votre boucle **AAPS**.
 
-Vous trouverez les instructions détaillées pour ce faire dans le chapitre **3) Installation d'AAPS**. On y parlera du choix et du [serveur de reporting](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout ou Tidepool) afin que vous puissiez analyser et partager vos données, de la préparation de votre ordinateur pour installer Android Studio, de la compilation elle-même de l'application AAPS et du transfert de l'application AAPS sur votre téléphone. Ce chapitre décrit également la configuration de l'application **AAPS** à l'aide de l'Assistant de configuration, pour qu'il puisse communiquer avec votre application MGC et avec une pompe à insuline réelle ou virtuelle, ainsi qu'en liant **AAPS** à votre serveur de reporting. Vous serez ensuite petit à petit guidé dans l'utilisation d'**AAPS**, via un processus progressif, sécurisé et soigneusement calibré. Ce processus est conçu pour s'assurer que vous/votre enfant connaissez bien et êtes à l'aise dans la navigation entre les différents menus et sous-menus de configuration avant de passer à la phase suivante. Ces phases sont communément appelées Objectifs, et visent à vous faire acquérir suffisamment d'expérience pour pouvoir commencer à utiliser les fonctionnalités les plus avancées de l'application. Ces objectifs sont conçus spécifiquement de manière à débloquer progressivement plus de possibilités dans **AAPS** et à passer de la boucle ouverte à la boucle fermée.
+Vous trouverez les instructions détaillées pour ce faire dans le chapitre **3) Installation d'AAPS**. It covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data, getting ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone. Ce chapitre décrit également la configuration de l'application **AAPS** à l'aide de l'Assistant de configuration, pour qu'il puisse communiquer avec votre application MGC et avec une pompe à insuline réelle ou virtuelle, ainsi qu'en liant **AAPS** à votre serveur de reporting. Vous serez ensuite petit à petit guidé dans l'utilisation d'**AAPS**, via un processus progressif, sécurisé et soigneusement calibré. Ce processus est conçu pour s'assurer que vous/votre enfant connaissez bien et êtes à l'aise dans la navigation entre les différents menus et sous-menus de configuration avant de passer à la phase suivante. Ces phases sont communément appelées Objectifs, et visent à vous faire acquérir suffisamment d'expérience pour pouvoir commencer à utiliser les fonctionnalités les plus avancées de l'application. Ces objectifs sont conçus spécifiquement de manière à débloquer progressivement plus de possibilités dans **AAPS** et à passer de la boucle ouverte à la boucle fermée.
 
 Le chapitre **4) Utilisation d'AAPS** couvre les principales fonctionnalités d'**AAPS**, pour vous aider à utiliser (et personnaliser) **AAPS**. Vous y trouverez des explications sur les écrans de l'application, les glucides actifs, la sensibilité, le changement de profil, les cibles temporaires, les glucides étendus (ou eCarbs), les automatisations et la SI Dynamique. On y parle également de sujets tels que la gestion de différents types de repas, le changement de cathéter ou de capteur, les mises à jour du smartphone, les changements d'heure, [voyager avec AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) et faire du sport. Les questions et réponses courantes se trouvent dans la section de dépannage.
 
@@ -84,19 +84,21 @@ Les différents composants <./Getting-Started/ComponentOverview.md>
 ```
 
 ```{toctree}
-:caption: 3) Installation d'AAPS
+:caption: 3) Setting up AAPS
 
-Serveur de reporting <./SettingUpAaps/SettingUpTheReportingServer.md>
+Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
-Compilation d'AAPS <./SettingUpAaps/BuildingAaps.md>
-Transfert et Installation d'AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-Assistant de configuration <./SettingUpAaps/SetupWizard.md>
-Votre Profil AAPS <./SettingUpAaps/YourAapsProfile.md>
-Modifier la configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Configuration <./SettingUpAaps/ConfigBuilder.md>
-- Préférences <./SettingUpAaps/Preferences.md>
-Compléter les objectifs <./SettingUpAaps/CompletingTheObjectives.md>
+Building AAPS <./SettingUpAaps/BuildingAaps.md>
+- Browser Build <./SettingUpAaps/BrowserBuild.md>
+- Computer Build <./SettingUpAaps/ComputerBuild.md>
+Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Setup Wizard <./SettingUpAaps/SetupWizard.md>
+Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
+Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Config Builder <./SettingUpAaps/ConfigBuilder.md>
+- Preferences <./SettingUpAaps/Preferences.md>
+Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -139,13 +141,15 @@ Site d'échange des cadrans personnalisés <./ExchangeSiteCustomWatchfaces/index
 ```
 
 ```{toctree}
-:caption: 7) Maintenance d'AAPS
+:caption: 7) Maintenance of AAPS
 
-Exporter/Importer les paramètres <./Maintenance/ExportImportSettings.md>
-Analyse des données <./Maintenance/Reviewing.md>
-Notes de version AAPS <./Maintenance/ReleaseNotes.md>
-Changements de la doc <. Maintenance/DocumentationUpdate.md>
-Mise à jour vers une nouvelle version d'AAPS <./Maintenance/UpdateToNewVersion.md>
+Export/Import Settings <./Maintenance/ExportImportSettings.md>
+Reviewing your data <./Maintenance/Reviewing.md>
+AAPS Release Notes <./Maintenance/ReleaseNotes.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
+Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
+- Browser Update <./Maintenance/UpdateBrowserBuild.md>
+- Computer Update <./Maintenance/UpdateComputerBuild.md>
 
 ```
 

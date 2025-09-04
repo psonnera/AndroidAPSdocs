@@ -43,7 +43,8 @@ extensions = [
     'sphinx_togglebutton',
     'notfound.extension',
     'sphinxcontrib.jquery',
-    # 'alabaster',
+    'sphinx_design',# That is for tabs
+    'sphinx_copybutton'
 ]
 
 myst_enable_extensions = [

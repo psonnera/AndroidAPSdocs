@@ -55,20 +55,22 @@
 WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 ```
 
+(latestrelease)=
+
 (version3321)=
 
-## Version 3.3.2.1
+## 版本 3.3.2.1
 
-Release date: 13-08-2025
+發布日期：2025-08-13
 
-- Fixed Omnipod Bluetooth connection on Android 16
-- CI process (Browser build)
-- Fix mmol-mgdl conversion
-- Fix wrong time selection in dialogs in some timezones
-- Fix reading keys in simple mode
-- Fix missed predictions on wear
-- Improved ConfigBuilder
-- Improved NSCv3 full sync
+- 修正 Omnipod 在 Android 16 的藍牙連線問題
+- CI 流程 (瀏覽器版)
+- 修正 mmol-mgdl 轉換問題
+- 修正某些時區對話框中的錯誤時間選擇
+- 修正簡單模式下的金鑰讀取問題
+- 修正穿戴設備上的預測遺漏問題
+- 改善 ConfigBuilder
+- 改善 NSCv3 完全同步
 
 (version3300)=
 
@@ -490,6 +492,8 @@ v3 是新的協議。 更加安全和高效
 - 手錶改進
 - NSClient 修復
 - 注射建議器現在與 Pumpcontrol 和 NSClient 一起工作
+
+(version-2811)=
 
 ## 版本 2.8.1.1
 

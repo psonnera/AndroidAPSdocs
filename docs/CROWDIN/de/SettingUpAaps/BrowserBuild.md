@@ -1,6 +1,6 @@
-# Browser build
-
 (browser-build)=
+
+# Browser build
 
 Building AAPS with GitHub Actions.
 
@@ -16,12 +16,16 @@ Zu den Details schaue bitte auf die [FAQ-Seite](../UsefulLinks/FAQ.md).
 
 ## Device and software specifications for building AAPS
 
-You need a browser that works on either Android or iOS.
+We recommend using an Android device. You can also use a computer or an iOS device.
+
+You will need to use multiple tabs in your browser, and switch from one to the other. Example Chrome:
+
+![fork_aaps](../images/Building-the-App/CI/BrowserBuildTabs.png)
 
 You also need a Google account so that the app can be saved in your Google Drive.
 
 ```{note}
-This wiki assumes you're performing all operations with your Android cellular phone and the Chrome web browser.  
+This wiki assumes you're performing all operations with your cellular phone and the Chrome web browser.  
 You will need to jump from tab to tab: start with all tabs closed to avoid losing yourself when switching from one to another.
 ```
 
@@ -65,140 +69,229 @@ GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab
 ## 2. Preparation Steps
 
 - If you are building from an Android device, install [File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) from the Google Play store.
+
+```{admonition} File Manager Plus
+:class: dropdown
+
+:::{include} BrowserBuildFileManagerPlus.md
+```
+
+- Download the preparation file from here: [aaps-ci-preparation.html](https://github.com/Angus-repo/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
+
+````{admonition} Note
+:class: note
+
+1. If you open this page from within an app (via a web view), the HTML file may not download. Please copy the URL and open it in your browser instead:
+```text
+https://github.com/Angus-repo/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
+```
+Or visit the latest release page:
+```text
+https://github.com/Angus-repo/aaps-ci-preparation/releases/latest
+```
+
+2.Backup copy hosted on this site:
+
+ - If the external link is also unavailable, you can use this backup file to download.
+<!--crowdin:disable-->
+
 ```{eval-rst}
 .. raw:: html
 
-    <pre style="font-family: inherit; margin: 0;">
-      • Download the preparation file from <a href="../_static/CI/aaps-ci-preparation.html" download>here</a>
-    </pre>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download>  aaps-ci-preparation.html</a>
 ```
-<br>
-
+<!--crowdin:enable-->
+````
 AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS):
-
 - If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](aaps-ci-option1) to complete the setup.
-- If you want to use your own JKS (the one you used on a previous build of AAPS from a computer in Android Studio), you know its password and alias (key0), please choose [AAPS-CI Option 2 – Upload Existing JKS](aaps-ci-option2).
+</br>
 
 ```{warning}
-Building AAPS with **Option 1** will not allow you to upgrade your existing AAPS: you will need to uninstall it, restore the settings from your phone and data from Nightscout.
+Building AAPS with **Option 1** will not allow you to upgrade your existing AAPS.
+You will need to:
+1. [Export settings](#ExportImportSettings-Automating-Settings-Export) on your phone.
+2. Copy or upload the settings file from your phone to an external location (i.e. your computer, cloud storage service…).
+3. Generate a new version of the signed apk as described in Option 1 and transfer it to your phone.
+4. Uninstall previous AAPS version on your phone.
+5. Install new AAPS version on your phone.
+6. [Import settings](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
+7. Restore your data from Nightscout.
 ```
 
-The AAPS app will be saved in your Google Cloud drive once built:
+- If you want to use your own JKS (the one you used on a previous build of AAPS from a computer in Android Studio), you know its password and alias (key0), please choose [AAPS-CI Option 2 – Upload Existing JKS](aaps-ci-option2).
 
-- Also perform the Google Drive [Auth](aaps-ci-google-drive-auth) to allow the build to be saved there.
+</br>
+
+The AAPS app will be saved in your Google Cloud drive once built.
 
 (aaps-ci-option1)=
 ### AAPS-CI Option 1 – Generate JKS
  - Suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
+- Here are examples using multiple platforms below.
+- Select your platform in the list below, between Android (preferred choice), iOS or Computer.
 
- Compatible with Android
-```{eval-rst}
-.. raw:: html
+```{tab-set}
 
-    <!--crowdin: exclude-->
-    <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
-      <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
-        <iframe
-          src="https://www.youtube.com/embed/t1VlnCpm-A4"
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-          frameborder="0"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
+:::{tab-item} Android
+(aaps-ci-option1-android)=
+:::{include} BrowserBuildO1A.md
+:::  
+
+:::{tab-item} iOS
+(aaps-ci-ios-ipad)=
+:::{include} BrowserBuildO1I.md
+:::  
+
+:::{tab-item} Computer
+(aaps-ci-option1-computer)=
+:::{include} BrowserBuildO1C.md
+:::  
+
 ```
 
- Compatible with iOS (using iPad as an example)
-```{eval-rst}
-.. raw:: html
+Skip the next section and continue [here](#aaps-ci-google-drive-auth).
 
-    <!--crowdin: exclude-->
-    <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
-      <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
-        <iframe
-          src="https://www.youtube.com/embed/pA-z1ODrSps"
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-          frameborder="0"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-```
-
-- As described in the video, please copy it to the corresponding field.
-
-![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_option1.png)
+---
 
 (aaps-ci-option2)=
-### AAPS-CI Option 2 – Upload Existing JKS
- - Suitable for users who already have a JKS and know the JKS password and alias.
-```{eval-rst}
-.. raw:: html
 
-    <!--crowdin: exclude-->
-    <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
-      <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
-        <iframe
-          src="https://www.youtube.com/embed/L5L3XtnszMQ"
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-          frameborder="0"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
+### AAPS-CI Option 2 – Upload Existing JKS
+ - Suitable for users who already have a JKS and know the JKS password and alias  (For `KEYSTORE_PASSWORD`, `KEY_ALIAS`, and `KEY_PASSWORD`, enter your actual password and alias in GitHub - those from Android Studio, see below where you used them.)
+
+```{admonition} KEY + PASSWORDS
+:class: dropdown
+
+![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
 ```
 
-- As described in the video, please copy it to the corresponding field.
+ - Here are examples using multiple platforms below.
+ - Select your platform in the list below, between Android (preferred choice) or Computer.
 
-![aaps_ci_option2](../images/Building-the-App/CI/aaps_ci_option2.png)
 
-- For KEYSTORE_PASSWORD, KEY_ALIAS, and KEY_PASSWORD, please enter your actual password and alias in GitHub.
+```{tab-set}
 
-![aaps_ci_option2_2](../images/Building-the-App/CI/aaps_ci_option2_2.png)
+:::{tab-item} Android
+(aaps-ci-option2-android)=
+:::{include} BrowserBuildO2A.md
+:::  
 
-![aaps_ci_option2_3](../images/Building-the-App/CI/aaps_ci_option2_3.png)
+:::{tab-item} Computer
+(aaps-ci-option2-computer)=
+:::{include} BrowserBuildO2C.md
+:::  
 
-![aaps_ci_option2_4](../images/Building-the-App/CI/aaps_ci_option2_4.png)
+```
 
 (aaps-ci-google-drive-auth)=
-### AAPS-CI Google Drive Auth
-- Click Start Auth to begin the authorization process, and set the obtained token in GitHub after authorization.
 
-![aaps_ci_gdrive_auth](../images/Building-the-App/CI/aaps_ci_gdrive_auth.png)
+### AAPS-CI Google Drive Auth
+
+Note: If you already followed this part in the video, you can now skip to [here](#github-build-apk).
+
+Return to the File Explorer Plus tab.
+
+Scroll down to the Google Drive Auth section and tap Start Auth.
+
+![](../images/Building-the-App/CI/BrowserBuildStep44.png)
+
+Select your Google account.
+
+![](../images/Building-the-App/CI/BrowserBuildGAUTH1.png)
+
+Scroll down and accept the access. The web page needs it to obtain the Google Drive authentication key.
+
+Tap Continue.
+
+![](../images/Building-the-App/CI/BrowserBuildGAUTH2.png)
+
+The `GDRIVE_OAUTH2` field will populate, tap the top Copy button.
+
+![](../images/Building-the-App/CI/BrowserBuildGAUTH3.png)
+
+Switch back to the GitHub tab.
+
+Scroll down to Repository secrets and tap New repository secret.
+
+If you followed Option 1 you should see this:
+
+![](../images/Building-the-App/CI/BrowserBuildGAUTH4.png)
+
+If you followed Option 2 there will be more keys:
+
+![](../images/Building-the-App/CI/BrowserBuildGAUTH4b.png)
+
+In the Name field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+
+![](../images/Building-the-App/CI/BrowserBuildGAUTH5.png)
+
+Switch to the File Explorer Plus tab.
+
+Tap the second Copy button.
+
+![](../images/Building-the-App/CI/BrowserBuildGAUTH6.png)
+
+Switch back to the GitHub tab.
+
+1. In the Secret field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+
+2. Tap Add secret.
+
+![](../images/Building-the-App/CI/BrowserBuildGAUTH7.png)
+
+GitHub will now be able to store the AAPS apk file in your Google Drive, once built.
 
 (github-build-apk)=
 ## AAPS-CI GitHub Actions to Build the AAPS APK
  - Suitable for general users.
-```{eval-rst}
-.. raw:: html
 
-    <!--crowdin: exclude-->
-    <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
-      <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
-        <iframe
-          src="https://www.youtube.com/embed/amfEBwpTtQI"
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-          frameborder="0"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
+```{tab-set}
+
+:::{tab-item} YouTube
+<div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
+  <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
+    <iframe
+      src="https://www.youtube.com/embed/amfEBwpTtQI"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+:::  
+
+:::{tab-item} Wiki
+:::{include} BrowserBuildCIS.md
+:::  
+
 ```
-  - In GitHub, go to Actions, select AAPS-CI, and click Run workflow to start building the APK.
+
+### Build Version selection
+
+**Only AAPS versions from 3.3.2.1 and above will build with the Browser method.**
+
+![](../images/Building-the-App/CI/BrowserBuildVariant2.png)
+
+(variant)=
+
+### Build Variants selection
 
 *Note: both Android and Android Wear apps will be built automatically.*
 
-  ![aaps_ci_github_build_apk](../images/Building-the-App/CI/aaps_ci_github_build_apk.png)
+  - Select the variant you need:
+    - fullRelease: For regular pump usage with full functionality.
+    - [aapsclientRelease, aapsclient2Release](#RemoteControl_aapsclient): For caregivers (requires [Nightscout](../SettingUpAaps/Nightscout.md))。
+    - pumpcontrolRelease: To replace your pump app/controller
 
-  - variant:
-    - Please refer to [variant](variant)
+![](../images/Building-the-App/CI/BrowserBuildVariant3.png)
+
+Variants ending with “Debug” indicates that the APK will be built in debug mode, which is useful for developers for troubleshooting.
 
 <!-- If you want to test the items in a pull request has been moved to dev page /AdvancedOptions/DevBranch.md -->
 
 (aaps-ci-troubleshooting)=
 ## AAPS-CI Troubleshooting
 
-(aaps-ci-preparation)=
+(aaps-ci-preparation-web)=
 ### aaps-ci-preparation web page
   - When you open aaps-ci-preparation.html using a file manager, it will start a temporary local server on your phone to display the webpage and receive the Google refresh token.
   - If you see the screen below, it means you have been inactive for a while, and the file manager has already shut down the local server.
@@ -214,7 +307,9 @@ The AAPS app will be saved in your Google Cloud drive once built:
 ### Check GitHub Actions Permission Settings
   - Make sure GitHub Actions policies are set to “Allow all actions and reusable workflows” (Settings → Actions → General).
 
-  ![aaps_ci_actions_permission](../images/Building-the-App/CI/aaps-ci-actions-permission.jpg)
+  ![aaps_ci_actions_permission](../images/Building-the-App/CI/aaps-ci-actions-permission.png)
+
+`actions/checkout@v4` and `actions/setup-java@v4` are not allowed to be used in `xxxxx/AndroidAPS`. Actions in this workflow must be: within a repository owned by `xxxxx`
 
 --------
 

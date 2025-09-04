@@ -53,6 +53,8 @@ Se han lanzado nuevas versiones de AAPS que sólo comprueban la versión de Andr
 WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS5).
 ```
 
+(latestrelease)=
+
 (version3321)=
 
 ## Version 3.3.2.1
@@ -488,6 +490,8 @@ Fecha de lanzamiento: 23-01-2021
 - watch improvements
 - NSClient fixes
 - Bolus advisor now works with Pumpcontrol and NSClient
+
+(version-2811)=
 
 ## Versión 2.8.1.1
 

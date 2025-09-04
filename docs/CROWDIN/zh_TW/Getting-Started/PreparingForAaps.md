@@ -88,7 +88,7 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 
 - “[如何安裝 AAPS](../SettingUpAaps/BuildingAaps.md)？” （D 部分），包括[問題排除](../GettingHelp/GeneralTroubleshooting.md)子部分。
 
-達到閉環控制的時間因人而異，但使用 AAPS 達到全閉環控制的大致時間表可以參考[>此處](#how-long-will-it-take-to-set-everything-up)。
+達到閉環控制的時間因人而異，但使用 AAPS 達到全閉環控制的大致時間表可以參考[>此處](#preparing-how-long-will-it-take)。
 
 
 #### Keystore 和配置設置匯出文件
@@ -188,7 +188,7 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 
 ### 醫療考量
 
-除了 [安全部分](#safety-first) 中的醫療警告外，根據你在幫浦中使用的胰島素類型，還有不同的參數需要考量。
+除了 [安全部分](#preparing-safety-first) 中的醫療警告外，根據你在幫浦中使用的胰島素類型，還有不同的參數需要考量。
 
 #### 胰島素選擇
 
@@ -210,7 +210,7 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 
 #### AAPS 與 Android 版本
 
-目前版本的 **AAPS**（3.3）需要使用 Google **Android 11.0 或更高版本** 的 Android 智慧型手機。 If you are considering buying a new phone, (as of December 2024), Android 14 is preferred.<br/> Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. 然而，對於無法使用 Android 11.0 或更新版本的使用者，早期版本的 **AAPS** 仍然可與舊版 Android 相容，詳情請見： [版本說明](#maintenance-android-version-aaps-version)。
+目前版本的 **AAPS**（3.3）需要使用 Google **Android 11.0 或更高版本** 的 Android 智慧型手機。 如果你考慮購買新手機，(截至 2024 年 12 月)，建議使用 Android 14。<br/> 強烈建議使用者將 **AAPS** 的版本保持最新，以確保安全。 然而，對於無法使用 Android 11.0 或更新版本的使用者，早期版本的 **AAPS** 仍然可與舊版 Android 相容，詳情請見： [版本說明](#maintenance-android-version-aaps-version)。
 
 #### 智慧型手機型號選擇
 你選購的具體型號取決於所需的功能。 你可以在 [手機頁面](../Getting-Started/Phones.md) 上找到推薦與用戶對於可用設置的反饋。

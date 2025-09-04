@@ -54,6 +54,8 @@
 WearOS 5（API级别34，基于Android 14）存在[限制](#BuildingAapsWearOs-WearOS5)。
 ```
 
+(latestrelease)=
+
 (version3321)=
 
 ## Version 3.3.2.1
@@ -489,6 +491,8 @@ v3为新协议， 更加安全高效
 - 手表功能优化
 - NSClient修复
 - 推注顾问支持Pumpcontrol与NSClient
+
+(version-2811)=
 
 ## 版本 2.8.1.1
 
