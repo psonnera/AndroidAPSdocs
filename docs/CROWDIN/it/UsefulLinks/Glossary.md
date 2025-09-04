@@ -71,6 +71,8 @@ __IC (or I:C)__ = Insulin to Carb ratio. (i.e. Insulin active in the user’s bo
 
 __CSF__ =Carbs Sensitivity Factor. i.e. The expected decrease in BG as a result of one unit of insulin.
 
+__Keystore (or JKS)__ = a Java Key Store which is an encrypted file where your personal developer certificates and keys will be stored required for your __AAPS'__ build (and rebuid).
+
 __LGS__ = Low Glucose Suspend. __AAPS__ will reduce basal if __BG__ is dropping and if __BG__ is rising, then it will only increase basal if  __IOB__ is negative (from a previous __LGS__), otherwise basal rates will remain the same as the user’s selected __Profile__. The user may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound. → see also objective 6.
 
 __LineageOS__ = free and open-source operating system for smartphones etc. (When using Accu-Chek Combo see Wiki - Combo pump).
