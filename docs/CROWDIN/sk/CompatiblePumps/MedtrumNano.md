@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Medtrum Nano / 300U
 
 These instructions are for configuring the Medtrum insulin pump.
@@ -65,7 +61,7 @@ On the top-left hand corner **hamburger menu** select **Config Builder**\ ➜\ *
 
 Selecting the **checkbox** next to the **Settings Gear** will allow the Medtrum overview to be displayed as a tab in the AAPS interface titled **Medtrum**. Checking this box will facilitate your access to the Medtrum commands when using AAPS and is highly recommended.
 
-![Config Builder](../images/medtrum/ConfigBuilder.png)
+![Konfigurácia](../images/medtrum/ConfigBuilder.png)
 
 ### Step 2: Change Medtrum settings
 
@@ -146,13 +142,13 @@ Go to preferences
 
 #### Pump:
 
-##### BT Watchdog
+##### Strážny pes BT
 
 Go to preferences and select **Pump**:
 
-![BT Watchdog](../images/medtrum/BTWatchdogSetting.png)
+![Strážny pes BT](../images/medtrum/BTWatchdogSetting.png)
 
-##### BT Watchdog
+##### Strážny pes BT
 
 This setting will try to work around any BLE issues. It will try to reconnect to the pump when the connection is lost. It will also try to reconnect to the pump when the pump is unreachable for a certain amount of time.
 
@@ -276,7 +272,7 @@ The driver will try to determine the current status of the patch activation. If 
 
 (nano-overview)=
 
-## Overview
+## Prehľad
 
 The overview contains the current status of the Medtrum patch. It also contains buttons to change the patch, reset alarms and refresh the status.
 

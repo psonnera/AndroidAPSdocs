@@ -59,8 +59,7 @@ This safety setting determines the maximum temporary basal rate the insulin pump
 
 The value is measured in units per hour (U/h). It is advised to set this to something sensible. A good recommendation for setting this parameter is:
 
-    max-basal = highest basal rate x 4
-    
+**MAX-BASAL = HIGHEST BASAL RATE x 4**
 
 For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
 
@@ -224,7 +223,7 @@ With this option enabled, the SMB algorithm can recognize unannounced meals. Thi
 
 Minimum grams of carbs to display a carbs suggestion alert. Eating of additional carbs will be suggested when the reference design detects that it requires carbs. In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes.
 
-Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+Upozornenia na potrebu sacharidov je možné v prípade potreby odoslať do Nightscoutu, v takom prípade sa upozornenie zobrazí a pošle ďalej.
 
 In any case, the required carbs will be displayed in the COB section on your home screen.
 

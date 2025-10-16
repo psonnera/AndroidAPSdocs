@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Dexcom G7 和 ONE+
 
 
@@ -27,6 +23,9 @@ orphan: true
 **注意：需要 AAPS 3.2.0.0 或更高版本！ 不适用于 ONE+。**
 
 ### 安装新的修补版 (\!) G7 应用程序并启动传感器
+
+WARNING --- [BYODA](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750)--- There are reported issues **AAPS** receiving no BG data when using either BYODA & DiaKEM as its data source. Users are recommended to use [X-Drip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) as **AAPS'** BG data source until this issue has been resolved.
+
 
 修补版 Dexcom G7 应用程序 (DiaKEM) 可访问 Dexcom G7 数据。 这不是 BYODA 应用程序，因为此应用程序目前无法接收 G7 数据。
 

@@ -1,7 +1,3 @@
----
-orphan: true
----
-
 # Dexcom G7 and ONE+
 
 
@@ -27,6 +23,9 @@ Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggesti
 **Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+.**
 
 ### Install a new patched (!) G7 app and start the sensor
+
+WARNING --- There are reported issues **AAPS** receiving no BG data when using either DiaKEM as its data source. Users are recommended to use [X-Drip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) as **AAPS'** BG data source until this issue has been resolved.
+
 
 A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
 

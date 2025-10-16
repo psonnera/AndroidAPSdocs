@@ -76,18 +76,18 @@ GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab
 :::{include} BrowserBuildFileManagerPlus.md
 ```
 
-- Download the preparation file from here: [aaps-ci-preparation.html](https://github.com/Angus-repo/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
+- Download the preparation file from here: [aaps-ci-preparation.html](https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
 
 ````{admonition} Note
 :class: note
 
 1. If you open this page from within an app (via a web view), the HTML file may not download. Please copy the URL and open it in your browser instead:
 ```text
-https://github.com/Angus-repo/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
+https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
 Or visit the latest release page:
 ```text
-https://github.com/Angus-repo/aaps-ci-preparation/releases/latest
+https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 
 2.Backup copy hosted on this site:
@@ -246,21 +246,21 @@ GitHub will now be able to store the AAPS apk file in your Google Drive, once bu
 
 ```{tab-set}
 
-:::{tab-item} YouTube
+:::{tab-item} Wiki
+:::{include} BrowserBuildCIS.md
+:::  
+
+:::{tab-item} Video
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
   <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
     <iframe
-      src="https://www.youtube.com/embed/amfEBwpTtQI"
+      src="https://www.dailymotion.com/embed/video/x9rdwms?autoplay=0&queue-enable=false&loop=1"
       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
       frameborder="0"
       allowfullscreen>
     </iframe>
   </div>
 </div>
-:::  
-
-:::{tab-item} Wiki
-:::{include} BrowserBuildCIS.md
 :::  
 
 ```
@@ -327,3 +327,36 @@ Customizations are usually not necessary. This is for your information ony.
   - Upstream Repository: Please enter the repository name you want to cherry-pick from.
   - Commit SHA: Please enter the commit SHA you want to cherry-pick.(like git commit hash)
   - Select Build Variant: [variant](variant)
+
+(ci-keystore-export)=
+## CI KeyStore Export
+
+If you want to export your stored keystore, use this method.
+
+This script will export your previously configured keystore information (from Option 1 or Option 2) as a password-protected ZIP file to the `/AAPS/KeyStore` directory in your Google Drive.
+
+```{warning}
+Before using this export method, make sure your keystore and Google Drive settings have been completed.
+```
+
+### Kroky:
+
+1. **Add ZIP Password Secret:**
+   - Go to your repository's **Settings** → **Secrets and variables** → **Actions**
+   - Click **New repository secret**
+   - In the **Name** field, enter: `ZIP_PASSWORD`
+   - In the **Secret** field, enter your custom ZIP encryption password
+   - Use only English letters and numbers for the password (no special symbols)
+   - Click **Add secret**
+
+   ![aaps_ci_zip_password.png](../images/Building-the-App/CI/aaps_ci_zip_password.png)
+
+2. **Run Export Workflow:**
+   - Go to the **Actions** tab in your repository
+   - Select **CI KeyStore Export**
+   - Click **Run workflow**
+   - The exported keystore ZIP file will be saved to your Google Drive
+
+   ![aaps_ci_keystore_export.png](../images/Building-the-App/CI/aaps_ci_keystore_export.png)
+
+   ![aaps_ci_keystore_export_run.png](../images/Building-the-App/CI/aaps_ci_keystore_export_run.png)

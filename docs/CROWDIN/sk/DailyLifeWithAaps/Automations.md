@@ -1,4 +1,4 @@
-# Automation
+# Automatizácia
 
 ## What is an Automation?
 
@@ -78,7 +78,7 @@ To set up an **Automation** create a ‘rule’ with **AAPS** as follows:
 
 * check the right box to the **Automation** event is ‘ticked’ to activate the **Automation**:
 
-![Automation](../images/automation_2024-10-26_17-48-05.png)
+![Automatizácia](../images/automation_2024-10-26_17-48-05.png)
 
 
 
@@ -163,7 +163,7 @@ Several conditions can be linked with
 
 * Use passive location: **AAPS** only takes locations when other apps are requesting it.
 * Use network location: Location of your Wi-Fi.
-* Use GPS location (Attention! This can cause excessive battery drain!)
+* Použiť GPS polohu (Pozor! This can cause excessive battery drain!)
 
 **Triggers** : pump and sensor data
 

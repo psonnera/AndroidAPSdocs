@@ -24,7 +24,7 @@
 
 A. 要使用此功能，用户必须在**AAPS**中保存多于一个**配置文件**。 要激活**配置文件切换**：
 
-- 在**AAPS**主屏幕上**长按****配置文件**的名称（以下示例中采用保存为“(Lyum) low”的“配置文件”，并从下拉菜单中选择所需的**配置文件**）：
+- **long-press** on the name of the **Profile** (the example below adopts a ‘Profile’ saved as: “School” on **AAPS’** homescreen and selects the desired **Profile** from the drop down tab:
 
 1. 长按**配置文件**；
 2. 选择所需的**配置文件**；
@@ -53,7 +53,7 @@ B. 要激活**配置文件百分比**：
 
 4. 输入“时间偏移”。
 
-## 如何执行配置文件“百分比”操作：
+## Profile Percentage
 
 用户了解**配置文件百分比**的基本功能至关重要。 通过对**配置文件切换**应用百分比增加或减少，这将以相同的百分比提高或降低用户在**配置文件**中设置的参数。
 

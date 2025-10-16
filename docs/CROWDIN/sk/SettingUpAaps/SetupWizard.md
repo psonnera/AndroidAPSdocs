@@ -134,7 +134,7 @@ Click the "NEXT" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_130031.png)
 
-## Master password
+## Hlavné heslo
 
 As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing your Nightscout server) it is encrypted by a password you can set here.
 
@@ -282,7 +282,7 @@ Go back twice, to the list of plugins and select "NEXT" to go to the next screen
 
 ![image](../images/setup-wizard/Screenshot_20231202_141351.png)
 
-## Patient name
+## Meno pacienta
 
 Here you can setup your name in **AAPS**.
 
@@ -294,7 +294,7 @@ Press "NEXT" to go to the next screen.
 
 ![image](../images/setup-wizard/Screenshot_20231202_141445.png)
 
-## Patient type
+## Typ pacienta
 
 Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. This is important for security and safety reasons.
 
@@ -348,7 +348,7 @@ Go back and press "NEXT" to go to the next screen:
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
 (setup-wizard-profile)=
-## Profile
+## Profil
 
 Now we are entering a very important part of the Setup Wizard.
 
@@ -453,7 +453,7 @@ Your profile has now been set:
 ![image](../images/setup-wizard/Screenshot_20231202_143833.png)
 
 
-## Insulin pump
+## Inzulínová pumpa
 
 
 
@@ -502,7 +502,7 @@ Go back and press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_144025.png)
 
-## APS mode
+## Režim APS
 
 Let "Open Loop" remain selected.
 

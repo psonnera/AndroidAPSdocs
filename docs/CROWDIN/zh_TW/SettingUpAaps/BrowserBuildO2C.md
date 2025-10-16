@@ -1,10 +1,15 @@
-- - -
-orphan: true
-- - -
-
 電腦上相容的作法（支援 Windows/Mac/Linux）
 
-打開網頁 [https://simplewebserver.org/download.html](https://simplewebserver.org/download.html)
+<div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
+  <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
+    <iframe
+      src="https://www.dailymotion.com/embed/video/x9rdyc6?autoplay=0&queue-enable=false&loop=1"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
 
 安裝 Simple HTTP Server</br></br> 如果您是 Windows / Mac 使用者，您可以從商店安裝它。 點擊連結後，系統會詢問您是否允許打開它。 請選擇打開連結。</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)</br></br>
 
@@ -27,7 +32,7 @@ orphan: true
   <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
     <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
       <iframe
-        src="https://www.youtube.com/embed/L5L3XtnszMQ?start=138"
+        src="https://www.dailymotion.com/embed/video/x9rdvt0?start=138&autoplay=0&queue-enable=false&loop=1"
         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
         frameborder="0"
         allowfullscreen>

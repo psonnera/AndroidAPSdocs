@@ -76,18 +76,18 @@ GitHub 現在顯示你個人的 AndroidAPS 副本。 請保持這個瀏覽器頁
 :::{include} BrowserBuildFileManagerPlus.md
 ```
 
-- 從這裡下載準備檔案：[aaps-ci-preparation.html](https://github.com/Angus-repo/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
+- 從這裡下載準備檔案：[aaps-ci-preparation.html](https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
 
 ````{admonition} Note
 :class: 注意
 
 1. 如果你是從應用程式內開啟此頁面（透過 Web View），HTML 檔案可能無法下載。 請複製下方 URL 並在瀏覽器中開啟下載：
 ```text
-https://github.com/Angus-repo/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
+https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
 或前往最新版本頁面：
 ```text
-https://github.com/Angus-repo/aaps-ci-preparation/releases/latest
+https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 
 2.本站提供的備份檔：
@@ -246,21 +246,21 @@ GitHub 現在將能夠將 AAPS apk 檔案儲存在您的 Google Drive 中，一�
 
 ```{tab-set}
 
-:::{tab-item} YouTube
+:::{tab-item} Wiki
+:::{include} BrowserBuildCIS.md
+:::  
+
+:::{tab-item} Video
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
   <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
     <iframe
-      src="https://www.youtube.com/embed/amfEBwpTtQI"
+      src="https://www.dailymotion.com/embed/video/x9rdwms?autoplay=0&queue-enable=false&loop=1"
       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
       frameborder="0"
       allowfullscreen>
     </iframe>
   </div>
 </div>
-:::  
-
-:::{tab-item} Wiki
-:::{include} BrowserBuildCIS.md
 :::  
 
 ```
@@ -327,3 +327,36 @@ Google 雲端硬碟授權中的「自訂」欄位，適合熟悉Google Oauth2的
   - Upstream Repository：請輸入你想要 cherry-pick 的庫名稱。
   - Commit SHA：請輸入你想要 cherry-pick 的提交 SHA（像 git commit hash）。
   - Select Build Variant： [變體](variant)
+
+(ci-keystore-export)=
+## CI KeyStore 匯出
+
+如果您想要匯出儲存的金鑰庫，請使用這個方法。
+
+這段腳本將會把您先前配置的金鑰庫資訊（來自選項 1 或選項 2）匯出為一個受密碼保護的 ZIP 檔案到你的 Google 雲端硬碟裡 `/AAPS/KeyStore` 目錄中
+
+```{warning}
+在使用這個匯出方法之前，請確保您的金鑰庫和 Google 雲端硬碟的設定已完成。
+```
+
+### 步驟：
+
+1. **新增 ZIP 密碼：**
+   - 前往您的儲存庫的 **設定** → **密碼和變數** → **動作**
+   - 點擊 **New repository secret(新增儲存庫密碼)**
+   - 在 **Name(名稱)** 欄位中，輸入: `ZIP_PASSWORD`
+   - 在 **Secret(密碼)** 欄位中，輸入您自訂的 ZIP 加密密碼
+   - 請僅使用英文字母和數字作為密碼（不可以使用特殊符號）
+   - 點擊 **Add secret(新增密碼)**
+
+   ![aaps_ci_zip_password.png](../images/Building-the-App/CI/aaps_ci_zip_password.png)
+
+2. **執行匯出工作流程：**
+   - 前往您的儲存庫中的 **Actions** 標籤
+   - 選擇 **CI KeyStore Export**
+   - 點擊 **執行工作流程**
+   - 匯出的金鑰庫 ZIP 檔案將會保存在您的 Google 雲端硬碟中
+
+   ![aaps_ci_keystore_export.png](../images/Building-the-App/CI/aaps_ci_keystore_export.png)
+
+   ![aaps_ci_keystore_export_run.png](../images/Building-the-App/CI/aaps_ci_keystore_export_run.png)
