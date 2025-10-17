@@ -1,19 +1,15 @@
-- - -
-orphan: true
-- - -
-
 # Ottai M8
 
 
 ## Utilizzo di M8 con l'app Ottai
 
--   Scarica e installa l'apk da <https://play.google.com/store/apps/details?id=com.ottai.seas>.
+-   Scarica e installa l'apk da <https://play.google.com/store/apps/details?id=com.ottai.seas>. For the Chinese version of Ottai use <https://ottai.com.cn/70ICjxAI4i>
 
 -   Inizializza il sensore
 
 - Seleziona Ottai in [Configuratore strutturale, Origine BG](#Config-Builder-bg-source).
 
-Abilita la trasmissione nell'app Ottai:
+Enable broadcast in the Ottai app:
 
 1. Seleziona Profilo
 2. Ottai hub

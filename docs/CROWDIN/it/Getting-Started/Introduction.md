@@ -39,7 +39,7 @@ Sono stati rilasciati diversi sistemi commerciali a circuito chiuso ibrido, i pi
 
 Android APS (**AAPS**) è un sistema a circuito chiuso ibrido, o Sistema Pancreas Artificiale (APS). Fa i suoi calcoli di dosaggio di insulina utilizzando gli algoritmi [OpenAPS](https://openaps.org/) stabiliti (una serie di regole) sviluppati dalla comunità diabete di tipo 1 #WeAreNotWaiting.
 
-Poiché OpenAPS è compatibile solo con alcun microinfusore per insulina più vecchi, Nel 2016 Milos Kozak ha sviluppato **AAPS** (che può essere utilizzato con una gamma più ampia di micro) per un familiare con diabete di tipo 1. Da quei primi giorni, **AAPS** è stato continuamente sviluppato e raffinato da un team di sviluppatori volontari e altri appassionati che hanno una connessione al mondo del diabete di tipo 1. Oggi, **AAPS** è utilizzato da circa 10.000 persone. It is a highly customisable and versatile system, and because it is open-source, it is also readily compatible with many other open-source diabetes software and platforms. I componenti fondamentali del sistema attuale **AAPS** sono descritti nella figura **Figura 1** di cui sopra.
+Poiché OpenAPS è compatibile solo con alcun microinfusore per insulina più vecchi, Nel 2016 Milos Kozak ha sviluppato **AAPS** (che può essere utilizzato con una gamma più ampia di micro) per un familiare con diabete di tipo 1. Da quei primi giorni, **AAPS** è stato continuamente sviluppato e raffinato da un team di sviluppatori volontari e altri appassionati che hanno una connessione al mondo del diabete di tipo 1. Today, **AAPS** is used by approximately 20,000 people. It is a highly customisable and versatile system, and because it is open-source, it is also readily compatible with many other open-source diabetes software and platforms. I componenti fondamentali del sistema attuale **AAPS** sono descritti nella figura **Figura 1** di cui sopra.
 
 
 
@@ -324,6 +324,8 @@ David Burren [https://bionicwookie.com/](https://bionicwookie.com/)
 The above table assumes that the user has access to both continuous gluocse monitor and insulin pump.
 
 *All data from **AAPS** can be made available to healthcare professionals via data sharing platforms, including Nightscout that provides logging and real time monitoring of CGM data, insulin delivery, carbohydrate entries, predictions and settings. Nightscout records include daily and weekly reports which can aid healthcare professionals' discussions with type 1 patients with more accurate data on glycemic control and any behavioural considerations.
+
+(accessibility-for-users-aaps-who-are-partially-or-completely-blind)=
 
 ### Accessibility for users AAPS who are partially or completely blind
 

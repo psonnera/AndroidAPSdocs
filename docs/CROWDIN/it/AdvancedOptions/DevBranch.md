@@ -27,7 +27,7 @@ Available from 3.3.2.1.dev
     <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
       <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
         <iframe
-          src="https://www.youtube.com/embed/REQ7RqzoUkM"
+          src="https://www.dailymotion.com/embed/video/x9rdx1q"
           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
           frameborder="0"
           allowfullscreen>
@@ -53,14 +53,3 @@ Available from 3.3.2.1.dev
 
   - variant:
     - Please refer to [variant](variant)
-
-  (variant)=
-
-
-  ### variant
-
-    - Select the variant you need:
-      - fullRelease: For regular pump usage with full functionality.
-      - [aapsclient、aapsclient2](../RemoteFeatures/RemoteControl.md#aapsclient) For caregivers (requires [Nightscout](../SettingUpAaps/Nightscout.md))。
-      - pumpcontrol
-      - Text ending with “Debug” indicates that the APK will be built in debug mode, which is useful for troubleshooting.

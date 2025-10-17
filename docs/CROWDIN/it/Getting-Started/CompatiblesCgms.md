@@ -9,7 +9,7 @@ Questa sezione fornisce una breve panoramica di tutti i **sensori CGMs/FGMs** co
 * [Impostazioni xDrip+](../CompatibleCgms/xDrip.md)
 * [Nightscout come fonte di valori di glicemia](../CompatibleCgms/CgmNightscoutUpload.md): Mentre è possibile utilizzare Nightscout come fonte di glicemia per il rilascio di insulina a circuito chiuso, **questo metodo non è raccomandato** a causa della sua dipendenza da dati mobili stabili o connettività Wi-Fi. Ciò significa che i tuoi dati di **glicemia** saranno ricevuti solo da **AAPS** quando hai una connessione online al tuo sito Nightscout. Per una configurazione più affidabile, utilizzare un sensore con trasmissione locale dal ricevitore (come elencato di seguito) a **AAPS**, è un'opzione molto migliore.
 
-| CGM                                                    | Available [BG Sources](../SettingUpAaps/ConfigBuilder.md#bg-source)                                                  |
+| CGM                                                    | Available [BG Sources](#Config-Builder-bg-source)                                                                    |
 | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
 | [Dexcom G7](../CompatibleCgms/DexcomG7.md)             | [xDrip+](../CompatibleCgms/xDrip.md), DiaKEM app or [Juggluco](../CompatibleCgms/Juggluco.md)                        |
 | [Dexcom ONE+ and Stelo](../CompatibleCgms/DexcomG7.md) | [xDrip+](../CompatibleCgms/xDrip.md)                                                                                 |
