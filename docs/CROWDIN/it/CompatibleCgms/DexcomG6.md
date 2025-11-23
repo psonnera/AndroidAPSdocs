@@ -1,7 +1,5 @@
 # Dexcom G6 e ONE
 
-WARNING --- [BYODA](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750)--- There are reported issues **AAPS** receiving no BG data when using either BYODA & DiaKEM as its data source. Users are recommended to use [X-Drip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) as **AAPS'** BG data source until this issue has been resolved.
-
 ## Prima le basi
 
 -   Segui i consigli generali di igiene del sensore e le impostazioni corrispondente [qui](../CompatibleCgms/GeneralCGMRecommendation.md).
@@ -33,7 +31,14 @@ Leggi di più nell'[articolo](https://www.diabettech.com/artificial-pancreas/diy
 (DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
 ## Se usi un G6 con Build Your Own Dexcom App
 
--   [Costruisci la tua app Dexcom](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supporta la trasmissione locale su AAPS e/o xDrip+ (non per i sensori G5/ONE/G7!)
+```{admonition} No new users
+:class: warning
+Latest Dexcom servers update broke BYODA for new installs: the app no longer can get through the login and onboarding process that happens on a fresh install of the app. 
+Existing users do not experience issues for now: do not logout, wipe data, or reinstall the BYODA app as that will prevent you from getting the app up and running again. If it is already running, you should be unaffected.
+New users are recommended to use [xDrip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) as **AAPS'** BG data source until this issue has been resolved.
+```
+
+-   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+ (**not for** **G5/ONE/G7 sensors!**)
 
 ![Opzioni broadcast BYODA](../images/BYODA.png)
 
