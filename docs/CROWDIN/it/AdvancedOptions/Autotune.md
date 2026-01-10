@@ -1,10 +1,18 @@
-# Come usare il plugin Autotune (solo con versione dev)
+# How to use Autotune plugin
 
 Documentation about Autotune algorithm can be found in [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
 
 Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
 
-**Attualmente Autotune Plugin è disponibile solo in [dev branch](../AdvancedOptions/DevBranch.md) e in modalità Engineering.**
+Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
+
+## Show the Autotune plugin
+
+Create an empty file named `enable_autotune` in the `extra` subfolder of your phone AAPS folder.
+
+![Enable Autotune](../images/Autotune/Autotune_0.png)
+
+Autotune will then display in Config Builder after you restart AAPS.
 
 ![Plugin Autotune](../images/Autotune/Autotune_1.png)
 
@@ -74,7 +82,7 @@ Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
 
 - Se è stato aggiornato il profilo di input, il pulsante "Aggiorna profilo di input" viene sostituito dal pulsante "Revert input profile" (vedere la schermata sottostante). Puoi vedere immediatamente in questo modo se il tuo attuale profilo di input nel plugin del profilo locale include già il risultato dell'ultima esecuzione o meno. Hai anche la possibilità di recuperare il tuo profilo di input senza risultati automatici con questo pulsante
 
-  ![Autotune Aggiornamento profilo di input](../images/Autotune/Autotune_10.png)
+  ![Autotune Update input profile](../images/Autotune/Autotune_10.png)
 
 
 
@@ -85,6 +93,11 @@ Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
 ### Impostazioni plugin Autotune
 
 ![Schermata predefinita Autotune](../images/Autotune/Autotune_11.png)
+
+```{admonition} Only DEV
+:class: info
+Automation Switch Profile feature is only available in Dev/Engineering mode.
+```
 
 - Automation Switch Profile (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. Se si modifica questa impostazione in On, il profilo di input verrà automaticamente aggiornato dal profilo Tuned e verrà attivato.
   - **Fai attenzione, devi fidarti e verificare durante diversi giorni successivi, che dopo un aggiornamento e l'attivazione del profilo Tuned senza modifiche, il tuo loop migliori**
@@ -136,6 +149,11 @@ Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
 
 ## Avvio Autotune con una regola automatica
 
+```{admonition} Only DEV
+:class: info
+Automation Switch Profile feature is only available in Dev/Engineering mode.
+```
+
 Il primo passo è definire il corretto evento per una regola di automazione con Autotune:
 
 Nota: per ulteriori informazioni su come impostare una regola di automazione, vedere [ qui](../DailyLifeWithAaps/Automations.md).
@@ -150,11 +168,11 @@ Nota: per ulteriori informazioni su come impostare una regola di automazione, ve
 
 - Quindi è possibile selezionare la funzione "Esegui Autotune" dall' elenco
 
-  ![Schermata predefinita di Autotune](../images/Autotune/Autotune_18.png)
+  ![Autotune default screen](../images/Autotune/Autotune_18.png)
 
 - È quindi possibile selezionare la funzione Autotune per regolare i parametri per l'esecuzione. I parametri predefiniti sono "Profilo attivo", il valore di Tune days predefinito definito nelle preferenze di plugin di Autotune e tutti i giorni sono selezionati.
 
-  ![Schermata predefinita di Autotune](../images/Autotune/Autotune_19b.png)
+  ![Autotune default screen](../images/Autotune/Autotune_19b.png)
 
 - Dopo alcuni giorni, se ti fidi completamente dei risultati di Autotune e la percentuale di modifica è bassa, puoi modificare le [impostazioni di Autotune](#autotune-plugin-settings) "Profilo di commutazione di automazione" per abilitare l'aggiornamento automatico e attivare il profilo sintonizzato dopo il calcolo.
 
