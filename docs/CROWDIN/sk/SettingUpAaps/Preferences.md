@@ -300,7 +300,7 @@ Prepínanie medzi otvorenou slučkou, uzavretou slučkou a pozastavením pri ní
 
 ![Konfigurátor – režim slučky](../images/ConfigBuilder_LoopLGS.png)
 
-(Preferences-pen-loop)=
+(Preferences-open-loop)=
 #### Otvorený okruh
 **AAPS** priebežne vyhodnocuje všetky dostupné údaje (IOB, COB, BG...) a v prípade potreby podáva návrhy ošetrení (dočasné bazálne dávky), ako upraviť vašu liečbu.
 
@@ -452,9 +452,12 @@ Pri používaní NSClientV3 musia všetky zdroje ktoré uploadujú dáta použí
 - Ak ste sa zasekli pri Cieli 1, prekontrolujte si zadané údaje.
 - Možnosť Pripojenie k webovým socketom nechajte povolenú (odporúčané).
 
+(Preferences-nsclient-synchronization)=
 
 
 ### Synchronizácia
+
+![Synchronization options](../images/Pref2025_NSclient_Synchronization.png)
 
 Možnosti synchronizácie budú závisieť od spôsobu, akým chcete používať **AAPS**.
 

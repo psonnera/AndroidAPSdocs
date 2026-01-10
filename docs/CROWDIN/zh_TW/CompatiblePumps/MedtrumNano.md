@@ -374,6 +374,9 @@
 如果你遇到連線逾時或其他連線問題：
 - 在 AAPS 的 Android 應用程式設置中：將定位權限設置為「始終允許」。
 
+### 藍牙問題
+若遇到藍牙連線、幫浦 / Pods 中斷，或註冊與連線等已知問題，請參閱 [藍牙疑難排解](../GettingHelp/BluetoothTroubleshooting.md)
+
 ### 啟動中斷
 
 如果啟動過程被中斷，例如手機電量耗盡或手機當機。 你可以前往更換修補版畫面，並按照[恢復中斷的啟動](#nano-resume-interrupted-activation)中的步驟繼續啟動過程。

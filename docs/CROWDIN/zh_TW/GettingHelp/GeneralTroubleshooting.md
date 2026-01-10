@@ -1,17 +1,23 @@
-# 問題排除
+(generaltroubleshooting)=
 
-你可以在許多 wiki 頁面上找到問題排除的資訊。 此頁面是幫助你找到解決問題資訊的鏈接集合。
+# **問題排除**
+
+你可以在許多 wiki 頁面上找到問題排除的資訊。 本頁面彙整多個連結，協助你針對各類已知問題找到解決方式所需的資訊。
 
 額外的有用資訊也可能在[FAQ](../UsefulLinks/FAQ.md)中提供。
 
-## AAPS 應用程式
+---
 
-### 建立 & 更新
+(generaltroubleshooting-aaps-app)=
+
+## **AAPS 應用程式**
+
+### **建立 & 更新**
 
 * [遺失的密鑰庫](#troubleshooting_androidstudio-lost-keystore)
 * [問題排除 AndroidStudio](TroubleshootingAndroidStudio)
 
-### 安裝中
+### **安裝中**
 
 你可能會看到一個 Google Play Protect 警告，表示該應用程式不安全，是為了舊版 Android 而建置，並且不包含最新的隱私防護。
 
@@ -19,7 +25,7 @@
 
 ![Google Play Protect 警告](../images/troubleshooting/InstallGPP.png)
 
-### 設定
+### **設定**
 * 設定檔
 
   ![錯誤：基礎率未對齊到整點](../images/Screen_DifferentPump.png)
@@ -30,46 +36,43 @@
 
 * [Nightscout 用戶端](../GettingHelp/TroubleshootingNsClient.md)
 
-### 使用說明
+### **使用說明**
 * [碳水化合物值錯誤](#CobCalculation-detection-of-wrong-cob-values)
 
    ![錯誤：碳水化合物吸收速度過慢](../images/Calculator_SlowCarbAbsorption.png)
 
 * [SMS 指令](#SMSCommands-troubleshooting)
 
-### 無法在 Android 16 上啟動 Omnipod
+---
 
-升級到最低版本的 AndroidAPS：3.3.2.1。
-
-### 藍牙連線問題頻繁
-
-#### Android 15
-
-升級 Android 或更換到近期手機後，**AAPS**經常會失去與幫浦的藍牙連線。 重新啟動手機後，這個問題會暫時消失。 如果手機運行 Android 15，您可以嘗試啟用以下設定：
-
-1) 透過點擊主畫面右上角的三個點的選單來 **打開偏好設定**。
+(generaltroubleshooting-bluetooth-related-issues)=
 
 
-![打開偏好設定](../images/Pref2020_Open2.png)
+## **藍牙相關問題**
 
-2. 向下滾動並打開 **確認嗶聲** / **進階** 子選單。 啟用 **Android 15+ 的 Bond BT 裝置**。
+若遇到藍牙連線、幫浦 / Pods 中斷，或註冊與連線等已知問題，請參閱 [藍牙疑難排解](../GettingHelp/BluetoothTroubleshooting.md)
 
-   ![BondBT](../images/troubleshooting/BondBT.png)
+---
 
-3. 如果幫浦要求配對請求，請允許它。
+(generaltroubleshooting-android-related-issues)=
 
-4. 重新啟動您的手機。
+## **Android 相關問題**
 
-#### 電池優化
+### **電池優化**
 
-這可能會發生在各種幫浦上。 除了將 AAPS 排除在任何電池優化之外，您還可以將系統藍牙應用排除在電池優化之外。 這在某些情況下有幫助。 根據您使用的手機，您會以不同的方式找到藍牙應用。
+Android 已實作預設啟用的省電設定。 這些設定會自動暫停/中止對系統運作非必需的應用程式，以降低不需要隨時執行的 App 的電量消耗。
 
-這裡是一些如何在特定 Android 手機上找到他們的範例。
+啟用後，很可能會對 **AAPS** 與其他支援的應用程式（如 **xDrip+**）造成問題。
 
+為確保 **AAPS** 與其他支援的應用程式能夠隨時保持運作，請務必停用電池優化。
 
-##### Pixel 手機（原生 Android）
+依你的手機品牌與型號，可能需要在多個位置停用這項設定。
 
-* 進入 Android 設定，選擇「應用程式」。
+***注意：**若你的手機提供此選項，請依下列步驟為藍牙服務停用電池優化；相同步驟也可用於 **AAPS** 與其他應用程式，但螢幕擷取畫面僅示範如何為藍牙服務操作。*
+
+#### **Pixel 手機（原生 Android）**
+
+* 前往 Android 設定，選取「應用程式」。
 
   ![Android 設定¦應用程式](../images/troubleshooting/pixel/01_androidsettings.png)
 
@@ -90,7 +93,7 @@
   ![藍牙電池優化](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
-##### Samsung 手機
+#### **Samsung 手機**
 
 * 進入 Android 設定，選擇「應用程式」
 
@@ -112,8 +115,17 @@
 
   ![未優化](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
+#### **華為手機**
 
-## CGM
+請參閱此指南：[Huawei 藍牙與電池優化](../CompatiblePhones/Huawei.md)
+
+---
+
+(generaltroubleshooting-cgm)=
+
+## **連續式血糖監測（CGM）**
+
+針對 CGM 的已知問題與解決步驟的實用連結。
 
 * [一般問題](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
@@ -121,18 +133,35 @@
 * [xDrip - 無 CGM 資料](#xdrip-identify-receiver)
 * [xDrip - Dexcom 問題排除](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
-## 幫浦
+---
+
+(generaltroubleshooting-pumps)=
+
+## **幫浦**
+
+針對幫浦的已知問題與解決步驟的實用連結
 
 * [DanaRS](#DanaRS-Insulin-Pump-dana-rs-specific-errors)
 * [Accu-Chek Combo 總覽](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)
 * [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
 * [Medtronic + RileyLink](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
 
-## 手機
+---
 
+(generaltroubleshooting-phones)=
+
+## **手機**
+
+針對手機的已知問題與解決步驟的實用連結
+
+* [已測試的手機與裝置設定清單](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
 * [Jelly](../CompatiblePhones/Jelly.md)
 * [華為藍牙 & 電池優化](../CompatiblePhones/Huawei.md)
 
+(generaltroubleshooting-smartwatches)=
+
 ## 智慧型手錶
+
+針對智慧型手錶的已知問題與解決步驟的實用連結
 
 * [問題排除 Wear 應用程式](#Watchfaces-troubleshooting-the-wear-app)

@@ -1,11 +1,11 @@
 # 你的AAPS配置文件
 
 **你的AAPS配置文件**是一组五个关键参数，定义了AAPS如何根据你的传感器血糖水平来输注胰岛素。 这些参数是AAPS运行的基础。 随着你完成各个**目标**，你将解锁额外的可修改参数（如SMB设置），但这些功能的性能依赖于你的底层**配置文件**是否正确。 配置文件包括：
-* [胰岛素作用时间](#duration-of-insulin-action-dia) (DIA),
-* [目标血糖](#glucose-targets)，
-* [基础率](#basal-rates) (BR),
-* [胰岛素敏感因子](#insulin-sensitivity-factor-isf)（ISF）
-* [碳水系数](#insulin-to-carb-ratio-icr)（IC或ICR）
+* [duration of insulin action](#your-aaps-profile-duration-of-insulin-action) (DIA),
+* [glucose targets](#profile-glucose-targets),
+* [basal rates](#your-aaps-profile-basal-rates) (BR),
+* [insulin sensitivity factors](#your-aaps-profile-insulin-sensitivity-factor) (ISF) and
+* [insulin-to-carb ratios](#your-aaps-profile-insulin-to-carbs-ratio) (IC or ICR).
 
 作为AAPS管理的一部分，用户应不断评估和审查其**配置文件**设置的准确性。 建议按照这里提供的顺序调整设置。 在更改另一个设置之前，确保一个设置正确。 以小步骤进行更改，而不是一次性进行大幅更改。 不要忘记在每次更改后激活新的配置文件。 通过导出你的偏好设置来定期[备份你的**配置文件**](#YourAapsProfile_Profile-backup)设置。
 
@@ -57,7 +57,7 @@
 
 ### 如何设置
 
-**下图**显示了在**AAPS**配置文件中设置**DIA**的示例。
+The **figure below** shows an example of how the **DIA** is set in an **AAPS** profile.
 
 ![DIA](../images/Profile_DIA.png)
 
@@ -89,7 +89,7 @@
 
 **血糖（Blood Glucose，BG）**目标是根据您的个人偏好和需求来设定的。 例如，如果你担心夜间低血糖，你可以在晚上9点至早上7点将目标稍微设置高一些，如117 mg/dL（6.5 mmol/L）。 如果你想确保在早上注射早餐前有足够的胰岛素在体内（IOB），你可以在早上7点至8点将目标设置低一些，如81 mg/dL（4.5 mmol/L）。
 
-在[开环](#Preferences-pen-loop)中，尤其是在完成[第一个目标](../SettingUpAaps/CompletingTheObjectives.md)时，使用较宽的目标范围可能是一个不错的选择，同时你可以学习AAPS的行为并调整你的**配置文件**。 <br/>在[闭环](#preferences-closed-loop)（从**[目标6](#objectives-objective6)**开始）中，建议缩小范围，直到你每天为每个时间段设置单个目标（_低_目标 = _高_目标），以确保AAPS迅速对**BG**波动做出反应。
+When In [Open Loop](#Preferences-open-loop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and adjusting your **Profile**.<br/> When In [Closed Loop](#preferences-closed-loop) (starting at **[Objective 6](#objectives-objective6)**), it is recommended to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
 
 (your-aaps-profile-basal-rates)=
 
@@ -123,11 +123,13 @@ AAPS以默认基础率为“基线”。 如果基础率设置得太高，那么
 
 正确设置基础率需要通过反复试验来确定，并且应该与您的糖尿病治疗团队协商进行。
 
-有一些基础率测试方法，通常需要在24小时内的间歇性禁食期间观察您的基础率和胰岛素需求。 虽然你需要测试一整天的基础率，但不建议连续24小时禁食。 这是因为身体会触发激素等机制进行补偿。 一个推荐的方法是在一天中进行三次8小时的禁食。
+There are basal testing methods which usually entails observing your basal rates and insulin needs during an <u>intermittent</u> fasting over a 24-hour period. 虽然你需要测试一整天的基础率，但不建议连续24小时禁食。 这是因为身体会触发激素等机制进行补偿。 一个推荐的方法是在一天中进行三次8小时的禁食。
 
-推荐的方法是暂停循环，这将恢复到你的默认基础率。 观察你的**BG**如何变化：如果它在下降，基础率就过高。 反之亦然。<br/> 另一种方法（可能更棘手）是让闭环系统持续运行，并观察**活性胰岛素（IOB）**的变化情况。 如果IOB为负，你的基础率就过高。 反之亦然。 请注意，这种方法依赖于**ISF**来纠正**BG**，因此取决于其他变量设置得是否合理才能成功。 <br/>另一种调整基础率的方法是观察夜间循环操作，当所有碳水化合物都已消耗时。 这种方法对儿童特别有用，当禁食困难或胰岛素需求经常变化时。 [Tidepool的Dr Saleh Adi](https://www.youtube.com/watch?v=-fpWnGRhLSo)提供了有用的方法来分析夜间BG曲线，以优化你的基础率。
+The recommended method is to suspend the loop (for safety you can set AAPS to [**LGS**](#Preferences-aps-mode) to avoid lows, as done for achieving [objective 6](#objectives-objective6)), which will revert to your default background basal rate. 观察你的**BG**如何变化：如果它在下降，基础率就过高。 反之亦然。<br/> 另一种方法（可能更棘手）是让闭环系统持续运行，并观察**活性胰岛素（IOB）**的变化情况。 如果IOB为负，你的基础率就过高。 反之亦然。 请注意，这种方法依赖于**ISF**来纠正**BG**，因此取决于其他变量设置得是否合理才能成功。 <br/>另一种调整基础率的方法是观察夜间循环操作，当所有碳水化合物都已消耗时。 这种方法对儿童特别有用，当禁食困难或胰岛素需求经常变化时。 [Dr Saleh Adi from Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) provides useful ways on how to analyze overnight BG lines in order to optimize your basal rates.
 
-根据基础测试的结果更改配置文件时，应更改上升/下降情况的前1小时的设置。 根据需要重复测试，直到你对基础率设置感到满意。
+See [here](../GettingHelp/ProfileTuning.md) how to tweak your basal profile, analyzing patterns in closed loop.
+
+When taking action on the result of your basal testing, changes in the **Profile** should be done 1 to 2 hours (depends on your insulin type) before the rise/drop. 根据需要重复测试，直到你对基础率设置感到满意。
 
 (your-aaps-profile-insulin-sensitivity-factor)=
 

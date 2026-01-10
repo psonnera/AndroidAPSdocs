@@ -300,7 +300,7 @@
 
 ![配置构建器 - 循环模式](../images/ConfigBuilder_LoopLGS.png)
 
-(Preferences-pen-loop)=
+(Preferences-open-loop)=
 #### 开环
 **AAPS**连续评估所有可用数据（IOB、COB、BG...），如有必要，会就如何调整治疗（如临时基础率）提出建议。
 
@@ -423,7 +423,10 @@ min_5m_carbimpact的标准值：AMA算法为5，SMB算法为8。
 - 如果您在目标1中遇到了问题，请仔细检查此处是否有拼写错误。
 - 保持启用Websockets连接（推荐）。
 
+(Preferences-nsclient-synchronization)=
 ### 同步
+
+![Synchronization options](../images/Pref2025_NSclient_Synchronization.png)
 
 同步选项将取决于您希望使用**AAPS**的方式。
 

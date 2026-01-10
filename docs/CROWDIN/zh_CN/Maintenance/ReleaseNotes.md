@@ -22,14 +22,19 @@
 
 ## Android版本与AAPS版本
 
-如果您的手机使用低于Android 11的系统，将无法使用AAPS v3.3及更高版本，因为最低要求为Android 11。
+If your smartphone uses an Android Version older than Android 12 you will not be able to use AAPS v3.4 and up as it requires at least Android 12.
 
 为允许旧版Android用户继续使用旧版AAPS，我们推送了仅修改版本验证的新版本，不包含其他改进。 不包含其他改进。
 
-### Android 11及以上
+### Android 12 and up
 
 - 使用最新AAPS版本
 - 从<https://github.com/nightscout/AndroidAPS>下载AAPS代码
+
+### Android 11
+
+- Use AAPS version **3.3.2.1**
+- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 3.3.2.1
 
 ### Android 9,10
 
@@ -48,13 +53,66 @@
 
 ## WearOS版本
 
-- AAPS需要WearOS API级别28（Android 9）或更高
+- AAPS requires at least WearOS API level 30 (Android 11)
 
 ```{tip}
 WearOS 5（API级别34，基于Android 14）存在[限制](#BuildingAapsWearOs-WearOS5)。
 ```
 
 (latestrelease)=
+
+(version3400)=
+
+## Version 3.4.0.0
+
+Release date: 31-12-2025
+
+### 升级前：
+* This version requires Google Android 12.0 or above. 请先确认手机版本
+* Update to latest Android Studio or better setup using browser build.
+
+### New features
+* Running mode @MilosKozak
+  * Show [loop status history](#AapsScreens-running-mode) in treatment tabs
+  * Show and allow changing [loop status from AAPSClient](#RemoteControl_aapsclient).<br>NB : needs the setting [NSClient > Synchronization > Receive Running mode events](#Preferences-nsclient-synchronization)
+* [New CGMs](../Getting-Started/CompatiblesCgms.md) : Glunovo, Intelligo, Sinocare
+* [Site rotation](#Aapsscreens-site-rotation) support @Philoul
+* New [automation action](#automations-automation-action) : enable or disable SMBs @MilosKozak
+* Syai CGM is [trusted source](#GettingStarted-TrustedBGSource) and supports advanced filtering @MilosKozak
+
+### Wear OS Improvements
+* dramatically reduced battery usage @MilosKozak
+* UI improvements and fixes @olorinmaia
+* almost complete rewritten code to match current level of libs (WearOS 2 previously) @MilosKozak
+* 2 new complications for extended data @Philoul
+* Migrated to modern complication provider with DataStore @MilosKozak
+
+### Memory Leak Fixes
+* Fixed memory leaks in code @MilosKozak
+* Added LeakCanary memory leak reporting to Firebase Crashlytics @MilosKozak
+
+### Pump Driver Improvements
+* **DanaI**: fixed disconnection issues @MilosKozak
+* **RileyLink**: Speedup communication by minimizing delays @mifi100
+* **Medtrum**: Added patch activation time and age display @vanelsberg, password uppercase fix @MilosKozak
+* **Combo**: Fixed Test race conditions @MilosKozak @dv1
+* **Equil**: Optimized connectivity, reduced battery usage @MilosKozak
+
+### Nightscout Sync
+* Improved deduplication on NS failure @MilosKozak
+
+### UI/UX Improvements
+* various improvemnts @MilosKozak @Philoul @olorinmaia
+
+### 自动操作
+* New SMB control action - enable/disable SMB via automation @MilosKozak
+
+### Testing
+* Added comprehensive unit tests for Equil, Eopatch, Dana, and Medtronic pumps @MilosKozak
+* Improved test stability and coverage across multiple modules @MilosKozak
+
+### Tidepool
+* Tidepool OAUTH2 (Support for new Tidepool authentication) @MilosKozak
 
 (version3321)=
 

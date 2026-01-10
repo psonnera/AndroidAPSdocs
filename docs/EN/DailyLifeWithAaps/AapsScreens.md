@@ -8,7 +8,7 @@
 (AapsScreens-the-homescreen)=
 ## The Homescreen
 
-![Homescreen V2.7](../images/Home2020_Homescreen.png)
+![Homescreen V2.7](../images/Home_Homescreen.png)
 
 This is the first screen you will come across when you open **AAPS**, and it contains most of the information that you will need day to day.
 
@@ -85,13 +85,13 @@ The blocks in the middle shows:
 ![Loop status](../images/Home2020_LoopStatus.png)
 
 On the right side, an icon shows the loop status:
-1. Green circle = loop running
-2. Green circle with dotted line = [low glucose suspend (LGS)](#objectives-objective6)
+1. Green circle = [closed loop](#KeyAapsFeatures-ClosedLoop), loop running
+2. Purple circle with dotted line = [low glucose suspend (LGS)](#KeyAapsFeatures-LGS)
 3. Red circle = loop disabled (not working permanently)
 4. Red circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
 5. Grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
 6. Orange circle = super bolus running - remaining time is shown below icon
-7. Blue circle with dotted line = open loop
+7. Blue circle with dotted line = [open loop](#KeyAapsFeatures-OpenLoop)
 
 Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
 
@@ -209,22 +209,28 @@ Depending on the pump you use, you may not have all of these icons.
 
 The graph shows your blood glucose (BG) as read from your glucose monitor (CGM).
 
-Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here.
-
 Use the menu on top left of the graph or long press anywhere on the graph to change the timescale. You can choose between 6, 12, 18 or 24 hours.
 
 The green area reflects your target range.
 
-Blue triangles show [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings).
+This information is also shown on this graph : 
+* Boluses: blue triangle on the BG curve and insulin amount
+* Carbs entries: orange triangle on the BG curve and carb amount
+* Target as defined in the profile or modified by temporary target: green line
+* Profile switches: star at the top of the graph
+* Loop status: color line at the top of the graph when the status is anything else than closed loop - see [Loop status](#AapsScreens-loop-status) for the colors
+* [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings): blue triangles at the bottom of the graph
 
 (AapsScreens-activate-optional-information)=
 #### Activate optional information
 
-On the main graph, you can switch on these optional information:
-* Predictions
-* Treatments
+Using the top right arrow, you can switch on these optional information:
+* Predictions (see below)
+* Treatments : notes entered in action tab: grey, orange or red dot depending on the severity, as well as fingerstick calibrations: red dot
 * Basals
-* Activity - insulin activity curve
+  * As defined in the profile: blue dotted line at the bottom of the graph
+  * Actually delivered basal: blue plain line with blue background
+* Activity - insulin activity curve: yellow line
 
 To show this information, click the triangle on the right side of the main graph. For the main graph just the four options above the line "Graph   1 2 3 4" are available.
 
@@ -472,7 +478,7 @@ For details, see the hints on [COB calculation page](#CobCalculation-detection-o
 (screens-action-tab)=
 ## Action tab
 
-![Actions tab](../images/Home2021_Action.png)
+![Actions tab](../images/Home_Action.png)
 
 ### Actions - section M
 
@@ -517,6 +523,49 @@ Prime/Fill allows you to record pump site and insulin cartridge change.
 Section O reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
 
 ### Tools - section P
+
+(Aapsscreens-site-rotation)=
+
+#### Site Rotation
+
+Site Rotation button opens the Site Rotation Dialog in View mode:
+
+- You can select if you want to see Cannula sites only, Sensor sites only, or both with upper checkboxes
+- All Cannula change and Sensor change event since the past 45 days are available.
+- Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
+- You can open the Edit view to update Site location, Arrow, or Comment associated to each entry
+
+![View Mode](../images/SiteRotation/ViewMode.png)
+
+- The Setting tab (upper right cog) allows you to adjust the patient view (Man, Woman or Child), and to select if you want to manage only Pump sites, only Sensor sites or both.
+
+![Settings](../images/SiteRotation/Settings.png)
+
+![Settings type](../images/SiteRotation/Type.png)
+
+*Note: this setting will be used to automatically open or not Site Rotation Dialog (Edit mode) when a new entry is done from "Prime/Fill button" or "CGM Sensor Insert button"*
+
+- For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
+
+Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
+
+- Entry type is visible on the to of Edit mode (Cannula Icon, or Sensor Icon)
+- You have to select Front or Back tab and then the Area
+- Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the pas 45 days in this site
+
+![Edit Mode](../images/SiteRotation/EditMode.png)
+
+- You can adjust an optional arrow with a click on little arrow icon on the top (Arrow allow you to precise sub-location, from 2 to 9, or Pod Orientation)
+
+![Position](../images/SiteRotation/EditModeSub.png)
+
+- You can also adjust comments concerning selected site
+- After confirmation, the site is recorded
+
+Filtering can be done graphically on the image, or clicking a therapy event in the list
+To remove filtering, just click on the image outside any sites
+
+![Filtering](../images/SiteRotation/Filtering.png)
 
 #### History Browser
 
@@ -597,6 +646,7 @@ In this view, you can view and alter the history of the following treatments:
 * [Temporary target](../DailyLifeWithAaps/TempTargets.md)
 * [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 * Careportal: notes entered through action tab and notes in dialogues
+* Running mode : history of loop status
 * User entry: other notes that are not sent to Nightscout
 
 In the last column, the data source for each line is displayed in blue. It can be :
@@ -659,11 +709,20 @@ Deleting the entries only affects your reports in Nightscout and will never actu
 
 You can use the **Clone** button shown on line **1** to make a copy of a **Profile Switch**. See [Your AAPS Profile > Manage your profiles](#your-aaps-profile-clone-profile-switch) for more information.
 
+(AapsScreens-running-mode)=
+### Running mode
+
+![Running mode](../images/TreatmentsView6.png)
+
+This tab shows the history of [loop status](#AapsScreens-loop-status) changes : open, closed, suspend loop.
+
 ### Care portal
 
 ![Care portal](../images/TreatmentsView5.png)
 
 This tab shows all notes and alerts recorded in Nightscout.
+
+(aaps-screens-running-mode)=
 
 ## History Browser
 

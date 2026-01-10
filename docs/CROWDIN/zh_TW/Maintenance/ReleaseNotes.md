@@ -23,14 +23,19 @@
 
 ## Android 版本與 AAPS 版本
 
-如果你的智慧型手機使用的是 Android 11 以下的版本，就無法使用 AAPS v3.3 及更新版本，因為這些版本至少需要 Android 11 才能運作。
+如果你的智慧型手機使用的 Android 版本低於 Android 12，將無法使用 AAPS v3.4 及更新版本，因為至少需要 Android 12。
 
 為了允許使用舊版 Android 的用戶繼續使用舊版 AAPS，我們發佈了一些僅更改版本驗證的版本。 這些版本不包含其他改進。
 
-### Android 11 及以上
+### Android 12 及以上
 
 - 使用最新的 AAPS 版本
 - 從 <https://github.com/nightscout/AndroidAPS> 下載 AAPS 程式碼
+
+### Android 11
+
+- 使用 AAPS 版本 **3.3.2.1**
+- 從 <https://github.com/nightscout/AndroidAPS> 下載 3.3.2.1 分支程式碼
 
 ### Android 9,10
 
@@ -49,13 +54,66 @@
 
 ## WearOS 版本
 
-- AAPS 需要至少 WearOS API 等級 28（Android 9）
+- AAPS 需要至少 WearOS API 等級 30（Android 11）
 
 ```{tip}
 WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 ```
 
 (latestrelease)=
+
+(version3400)=
+
+## 版本 3.4.0.0
+
+發布日期：2025-12-31
+
+### 在升級之前：
+* 此版本需要 Google Android 12.0 或以上。 在嘗試更新之前請檢查你的手機版本。
+* 更新至最新的 Android Studio，或使用瀏覽器建置以獲得更好的設定流程。
+
+### 新功能
+* 執行模式 @MilosKozak
+  * 在治療分頁顯示 [循環狀態歷史](#AapsScreens-running-mode)
+  * 顯示並允許從 [AAPSClient](#RemoteControl_aapsclient) 變更循環狀態。<br>注意：需要在 [NSClient > Synchronization > 接收執行模式事件](#Preferences-nsclient-synchronization) 啟用設定。
+* [新款 CGM](../Getting-Started/CompatiblesCgms.md)：Glunovo、Intelligo、Sinocare
+* [部位輪替](#Aapsscreens-site-rotation) 支援 @Philoul
+* 新的 [自動化動作](#automations-automation-action)：啟用或停用 SMB 微量注射 @MilosKozak
+* Syai CGM 為 [可信來源](#GettingStarted-TrustedBGSource)，並支援進階過濾 @MilosKozak
+
+### Wear OS 改進
+* 大幅降低電量消耗 @MilosKozak
+* 介面改進與修正 @olorinmaia
+* 幾乎完全重寫程式碼以符合目前函式庫層級（先前為 Wear OS 2）@MilosKozak
+* 2 個新的複雜功能，用於擴充資料 @Philoul
+* 使用 DataStore 遷移至現代複雜功能提供程式 @MilosKozak
+
+### 記憶體洩漏修正
+* 修正程式碼中的記憶體洩漏 @MilosKozak
+* 新增 LeakCanary 記憶體洩漏回報至 Firebase Crashlytics @MilosKozak
+
+### 幫浦驅動程式改進
+* **DanaI**: 修正中斷連線問題 @MilosKozak
+* **RileyLink**: 透過最小化延遲加速通訊 @mifi100
+* **Medtrum**: 新增貼片註冊時間與使用時長顯示 @vanelsberg，密碼大寫修正 @MilosKozak
+* **Combo**: 修正測試中的競態條件 @MilosKozak @dv1
+* **Equil**: 最佳化連線，降低電量消耗 @MilosKozak
+
+### Nightscout 同步
+* 改進 Nightscout 異常時的重複資料過濾 @MilosKozak
+
+### UI/UX 改進
+* 多項改進 @MilosKozak @Philoul @olorinmaia
+
+### 自動化
+* 新的微量注射控制動作 - 透過自動化啟用/停用微量注射 @MilosKozak
+
+### 測試
+* 新增針對 Equil、Eopatch、Dana 與 Medtronic 幫浦的完整單元測試 @MilosKozak
+* 提升多個模組的測試穩定性與涵蓋率 @MilosKozak
+
+### Tidepool
+* Tidepool OAUTH2（支援新的 Tidepool 驗證）@MilosKozak
 
 (version3321)=
 

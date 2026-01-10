@@ -1,8 +1,20 @@
 # Обновления и изменения в документации
 
+## January 2025
+
+- [3.4](#version3400) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
+- CGM list update. Dexcom G5, Tomato, Glimp removed.
+- [Site rotation UI](#Aapsscreens-site-rotation)
+- [Running mode](#AapsScreens-running-mode)
+- [Autotune](../AdvancedOptions/Autotune.md)
+
+## December 2025
+
+- [Profile tuning](../GettingHelp/ProfileTuning.md) from @robrub
+
 ## October 2025
 
-- DiaKEM and BYODA: new installs don't work after servers upgrade @psonnera
+- DiaKEM: new installs don't work after servers upgrade @psonnera
 - Removed Libre 2 patched app (obsolete): doesn't work with new sensors @psonnera
 - Reworked Omnipod Dash page @XiTatiON
 
@@ -28,7 +40,7 @@
 ## November 2024
 
 - Update of [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) @emilise
-- Reorganisation of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnerat
+- Reorganization of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnerat
 
 ## October 2024
 
@@ -184,7 +196,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 - [Insight - отключить абсолютные значения в NS Client](#Accu-Chek-Insight-Pump-settings-in-aaps)
 - [Помпа Medtronic - возможные задвоения данных](../CompatiblePumps/MedtronicPump.md)
 - [Новая инструкция для Freestyle Libre 2](../CompatibleCgms/Libre2.md)
-- [Переключение профиля с процентами - пример](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
+- [Смена профиля с процентами - пример](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 - [SMS--команды. Обновление](../RemoteFeatures/SMSCommands.md)
 - [Устранение неполадок Android Studio](../GettingHelp/TroubleshootingAndroidStudio)
 - [Устранение неполадок - коллекция ссылок](../GettingHelp/GeneralTroubleshooting.md)

@@ -25,7 +25,8 @@ Zu den Details schaue bitte auf die [FAQ-Seite](../UsefulLinks/FAQ.md).
 | [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                     | up to Otter                                              | 8.2    | 17  |
 | [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                         | up to Otter                                              | 8.10   | 21  |
 | [3.3.2](#version3300)   | Meerkat (2024.3.1)                                      | up to Otter                                              | 8.11.1 | 21  |
-| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                      | Otter                                                    | 8.13   | 21  |
+| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                      | up to Otter                                              | 8.13   | 21  |
+| [3.4](#version3400)     | Otter 2 Feature Drop (2025.2.2)                         |                                                          | 9      | 21  |
 
 Die „empfohlene Version“ enthält im Paket bereits die entsprechende JVM-Version. Die empfohlene Version ist gleichzeitig auch die Mindestversion, die Du zum Erstellen von **AAPS** nutzen kannst. Mit einer älteren Version als der, die unter „empfohlen“ aufgeführt ist, wirst Du **NICHT** in der Lage sein, AAPS zu erstellen. Solltest Du eine andere Version verwenden, kann es aufgrund der JVM-Version zu Problemen kommen. Schaue auf den Seiten zur [Fehlerbehebung für Android Studio](#troubleshooting_androidstudio-uncommitted-changes) nach, um diese Probleme zu lösen. Wenn Deine aktuelle Android Studio Version nicht in der Tabelle aufgeführt ist, musst Du sie zuerst aktualisieren.
 
@@ -70,7 +71,7 @@ Die Gradle-Version ist mit dem Quellcode verknüpft. Wenn Du den Quellcode herun
 
 ## Hilfe und Unterstützung während des Erstellungsprozesses
 
-Solltest Du Probleme beim Erstellen der **AAPS**-App haben, kannst Du im Abschnitt [**Fehlerbehebung für Android Studio**](../GettingHelp/TroubleshootingAndroidStudio) einiges an Hilfestellung finden.
+If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](../GettingHelp/TroubleshootingAndroidStudio.md) section, please consult that first.
 
 Wenn Du den Eindruck hast, dass in der Anleitung Schritte falsch, fehlend oder missverständlich sind, oder Du trotzdem noch Probleme hast, wende Dich über [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) oder [Discord](https://discord.gg/4fQUWHZ4Mw) an andere **AAPS**-Nutzende. Wenn Du selbst etwas ändern möchtest (z.B. Screenshots aktualisieren _etc_), erstelle einen entsprechenden [Pull-Request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
@@ -409,7 +410,7 @@ Sobald der Build abgeschlossen ist, wird Android Studio "BUILD SUCCESSFUL" anzei
 
 ![Build abgeschlossen](../images/Building-the-App/049_ReopenNotification.png)
 
-**_Wenn der „Build“ fehlgeschlagen ist, lies bitte den Abschnitt [Fehlerbehebung für Android Studio](../GettingHelp/TroubleshootingAndroidStudio)._**
+**_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio.md)._**
 
 Klicke im Benachrichtigungsfeld auf den blauen Link "locate":
 

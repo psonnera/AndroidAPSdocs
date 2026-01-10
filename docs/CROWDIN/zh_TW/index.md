@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
-2025/08/14 : 版本 3.3.2.1 已發布。 檢查[發行說明](#latestrelease)以查看新功能並獲取更新說明。
+31/12/2025 : 版本 3.4 已推出。 檢查[發行說明](#latestrelease)以查看新功能並獲取更新說明。
 
 ```
 
@@ -154,12 +154,14 @@ AAPS 版本更新說明 <./Maintenance/ReleaseNotes.md>
 ```
 
 ```{toctree}
-:caption: 8) 獲取幫助
+:caption: 8) 取得協助
 
-我可以在哪裡獲得 AAPS 的幫助 <./GettingHelp/WhereCanIGetHelp.md>
-一般問題排除 <./GettingHelp/GeneralTroubleshooting.md>
-問題排除 Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
-讀取日誌檔案 <./GettingHelp/AccessingLogFiles.md>
+我可以在哪裡取得 AAPS 的協助 <./GettingHelp/WhereCanIGetHelp.md>
+一般疑難排解 <./GettingHelp/GeneralTroubleshooting.md>
+- 藍牙疑難排解 <./GettingHelp/BluetoothTroubleshooting.md>
+設定檔調整指南 <./GettingHelp/ProfileTuning.md>
+Android Studio 疑難排解 <./GettingHelp/TroubleshootingAndroidStudio.md>
+讀取日誌檔 <./GettingHelp/AccessingLogFiles.md>
 ```
 
 ```{toctree}

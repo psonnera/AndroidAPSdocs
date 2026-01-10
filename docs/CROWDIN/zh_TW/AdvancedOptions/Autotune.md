@@ -1,10 +1,18 @@
-# 如何使用 Autotune 外掛（僅限開發者）
+# 如何使用 Autotune 外掛
 
 有關 Autotune 算法的文檔可以在 [OpenAPS 文檔](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) 中找到。
 
 Autotune 外掛是在 AAPS 中實作的 OpenAPS 自動調整算法。
 
-**目前 Autotune 外掛僅在[dev 分支](../AdvancedOptions/DevBranch.md)和工程模式下可用。**
+Autotune 外掛自 [3.4](#version3400) 版起在 AAPS 釋出中提供，但預設為隱藏。
+
+## 顯示 Autotune 外掛
+
+在手機的 AAPS 資料夾中之 `extra` 子資料夾內，建立一個名為 `enable_autotune` 的空白檔案。
+
+![啟用 Autotune](../images/Autotune/Autotune_0.png)
+
+重新啟動 AAPS 後，Autotune 會顯示在組態建置工具中。
 
 ![自動調整外掛](../images/Autotune/Autotune_1.png)
 
@@ -86,6 +94,11 @@ Autotune 外掛是在 AAPS 中實作的 OpenAPS 自動調整算法。
 
 ![Autotune 預設畫面](../images/Autotune/Autotune_11.png)
 
+```{admonition} Only DEV
+:class: info
+自動化的切換設定檔功能僅在開發/工程模式提供。
+```
+
 - 自動化切換檔案（預設為關閉）：請參見 [使用自動化規則運行自動調整](#autotune-run-autotune-with-an-automation-rule) 下方。 如果你將此設定更改為開啟，則輸入設定檔將自動被調整後的設定檔更新並啟用。
   - **請小心，你必須在接下來幾天內信任並驗證，在更新和啟用未修改的調整配置後，它會改善你的循環運行**
 
@@ -135,6 +148,11 @@ Autotune 外掛是在 AAPS 中實作的 OpenAPS 自動調整算法。
 (autotune-run-autotune-with-an-automation-rule)=
 
 ## 使用自動化規則運作 Autotune
+
+```{admonition} Only DEV
+:class: info
+自動化的切換設定檔功能僅在開發/工程模式提供。
+```
 
 第一步是為 Autotune 定義正確的自動化規則觸發條件：
 

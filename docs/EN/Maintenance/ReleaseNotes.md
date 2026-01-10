@@ -24,14 +24,19 @@ The chronology of these releases is not available at the moment but as this ques
 
 ## Android version and AAPS version
 
-If your smartphone uses an Android Version older than Android 11 you will not be able to use AAPS v3.3 and up as it requires at least Android 11.
+If your smartphone uses an Android Version older than Android 12 you will not be able to use AAPS v3.4 and up as it requires at least Android 12.
 
 In order to allow users with older Android to use older version of AAPS new versions were pushed which only change version verification. No other improvements are included.
 
-### Android 11 and up
+### Android 12 and up
 
 - Use latest AAPS version
 - Download AAPS Code from <https://github.com/nightscout/AndroidAPS>
+
+### Android 11
+
+- Use AAPS version **3.3.2.1**
+- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 3.3.2.1
 
 ### Android 9,10
 
@@ -50,13 +55,66 @@ In order to allow users with older Android to use older version of AAPS new vers
 
 ## WearOS version
 
-- AAPS requires at least WearOS API level 28 (Android 9)
+- AAPS requires at least WearOS API level 30 (Android 11)
 
 ```{tip}
 WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS5).
 ```
 
 (latestrelease)=
+
+(version3400)=
+
+## Version 3.4.0.0
+
+Release date: 31-12-2025
+
+### Before upgrading:
+* This version requires Google Android 12.0 or above. Check your phone version before attempting to update.
+* Update to latest Android Studio or better setup using browser build.
+
+### New features
+* Running mode @MilosKozak
+  * Show [loop status history](#AapsScreens-running-mode) in treatment tabs
+  * Show and allow changing [loop status from AAPSClient](#RemoteControl_aapsclient).<br>NB : needs the setting [NSClient > Synchronization > Receive Running mode events](#Preferences-nsclient-synchronization)
+* [New CGMs](../Getting-Started/CompatiblesCgms.md) : Glunovo, Intelligo, Sinocare
+* [Site rotation](#Aapsscreens-site-rotation) support @Philoul
+* New [automation action](#automations-automation-action) : enable or disable SMBs @MilosKozak
+* Syai CGM is [trusted source](#GettingStarted-TrustedBGSource) and supports advanced filtering @MilosKozak
+
+### Wear OS Improvements
+* dramatically reduced battery usage @MilosKozak 
+* UI improvements and fixes @olorinmaia
+* almost complete rewritten code to match current level of libs (WearOS 2 previously) @MilosKozak
+* 2 new complications for extended data @Philoul
+* Migrated to modern complication provider with DataStore @MilosKozak
+
+### Memory Leak Fixes
+* Fixed memory leaks in code @MilosKozak
+* Added LeakCanary memory leak reporting to Firebase Crashlytics @MilosKozak
+
+### Pump Driver Improvements
+* **DanaI**: fixed disconnection issues @MilosKozak
+* **RileyLink**: Speedup communication by minimizing delays @mifi100
+* **Medtrum**: Added patch activation time and age display @vanelsberg, password uppercase fix @MilosKozak
+* **Combo**: Fixed Test race conditions @MilosKozak @dv1
+* **Equil**: Optimized connectivity, reduced battery usage @MilosKozak
+
+### Nightscout Sync
+* Improved deduplication on NS failure @MilosKozak
+
+### UI/UX Improvements
+* various improvemnts @MilosKozak @Philoul @olorinmaia
+
+### Automation
+* New SMB control action - enable/disable SMB via automation @MilosKozak
+
+### Testing
+* Added comprehensive unit tests for Equil, Eopatch, Dana, and Medtronic pumps @MilosKozak
+* Improved test stability and coverage across multiple modules @MilosKozak
+
+### Tidepool
+* Tidepool OAUTH2 (Support for new Tidepool authentication) @MilosKozak
 
 (version3321)=
 
@@ -572,7 +630,7 @@ You need at least start [objective 11 (in later versions objective 10!)](#object
 - visualization of [dynamic target adjustment](#AapsScreens-visualization-of-dynamic-target-adjustment) @Tornado-Tim
 - new [preferences layout](../SettingUpAaps/Preferences.md) @MilosKozak
 - SMB algorithm update @Tornado-Tim
-- [Low glucose suspend mode](#Preferences-aps-mode) @Tornado-Tim
+- [Low glucose suspend mode](#KeyAapsFeatures-LGS) @Tornado-Tim
 - [carbs required notifications](#key-aaps-features-minimal-carbs-required-for-suggestion) @twain47 @Tornado-Tim
 - removed Careportal (moved to Actions) @MilosKozak
 - [new encrypted backup format](ExportImportSettings.md) @dlvoy

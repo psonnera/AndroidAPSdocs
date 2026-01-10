@@ -300,7 +300,7 @@
 
 ![組態建置工具 - 循環模式](../images/ConfigBuilder_LoopLGS.png)
 
-(Preferences-pen-loop)=
+(Preferences-open-loop)=
 #### 開放循環
 **AAPS**持續評估所有可用資料（IOB、COB、BG...）並在必要時提供治療建議（臨時基礎率），告訴你如何調整治療。
 
@@ -424,7 +424,10 @@ AMA 的標準值為 5，SMB 的標準值為 8。
 - 如果你在目標 1 中遇到困難，請再次檢查是否有拼寫錯誤。
 - 保持啟用與 websockets 的連線（推薦）。
 
+(Preferences-nsclient-synchronization)=
 ### 同步選項
+
+![同步選項](../images/Pref2025_NSclient_Synchronization.png)
 
 同步選擇將取決於你希望如何使用**AAPS**。
 

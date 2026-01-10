@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
-14/08/2025 : Version 3.3.2.1 is out. Check the [Release Notes](#latestrelease) to see what's new and get update instructions.
+31/12/2025 : Version 3.4 is out. Check the [Release Notes](#latestrelease) to see what's new and get update instructions.
 
 ```
 
@@ -154,12 +154,14 @@ Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
 ```
 
 ```{toctree}
-:caption: 8) Hilfe bekommen
+:caption: 8) Getting Help
 
-Wo wird mir mit AAPS geholfen? <./GettingHelp/WhereCanIGetHelp.md>
-Allgemeine Problembehandlung <./GettingHelp/GeneralTroubleshooting.md>
-Fehlerbehebung für Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
-Logdateien erhalten <./GettingHelp/AccessingLogFiles.md>
+Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
+General troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
+- Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
+Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
+Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
+Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
 ```
 
 ```{toctree}

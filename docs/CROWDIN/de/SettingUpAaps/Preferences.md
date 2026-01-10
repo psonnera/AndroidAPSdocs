@@ -300,7 +300,7 @@ Wechsel zwischen Open Loop, Closed Loop und Unterbrechung bei niedrigen BZ (LGS)
 
 ![Konfigurations-Generator - Loop Modus](../images/ConfigBuilder_LoopLGS.png)
 
-(Preferences-pen-loop)=
+(Preferences-open-loop)=
 #### Open Loop
 **AAPS** wertet kontinuierlich alle verfügbaren Daten (IOB, COB, BZ...) aus und erstellt, sofern notwendig, daraus Behandlungsvorschläge (temporäre Basalraten) zur Anpassung Deiner Therapie.
 
@@ -424,7 +424,10 @@ Bei der Verwendung von NSClientV3 müssen alle Uploader die API V3 verwenden. Da
 - Überprüfe die Eingaben auf Tippfehler, wenn du bei Ziel 1 hängen bleibst.
 - Lasse "Mit Websockets verbinden" aktiviert (empfohlen).
 
+(Preferences-nsclient-synchronization)=
 ### Synchronisierung
+
+![Synchronization options](../images/Pref2025_NSclient_Synchronization.png)
 
 Die Art der Synchronisierung hängt davon ab, wie Du **AAPS** nutzen möchtest.
 

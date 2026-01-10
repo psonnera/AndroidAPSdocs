@@ -49,7 +49,7 @@ There are a wide range of Automation options, and users are encouraged to study 
 
 1. **Автоматизации** могут конфликтовать друг с другом, так что их рекомендуется проверять в безопасной обстановке с пониманием того, какие из них сработали с ожидаемым результатом, а какие - нет.
 
-1. Если вы используете Autosens, то попробуйте использовать **временные цели** вместо **смены профилей**. **Временные цели TT** не сбрасывают Autosens на 0. **Переключатели профиля** сбрасывают Autosens.
+1. Если вы используете Autosens, то попробуйте использовать **временные цели** вместо **смены профилей**. **Временные цели TT** не сбрасывают Autosens на 0. Любые **смены профиля** сбрасывают Autosens.
 
 1. Большинство **автоматизаций** следует устанавливать лишь на **определенный промежуток времени**, после которого **AAPS** сможет снова, если потребуется, повторить **автоматизацию**. Например, "установить временную цель 7.0 ммоль/л на 30 мин" или "установить **профиль 110%** на 10 мин" _и_ "установить временную цель 5.0 ммоль/л на 10 мин". Использование **автоматизаций** для внесения постоянных изменений (например, смены профиля) влечет за собой риск гипогликемии.
 
@@ -178,9 +178,10 @@ Note that for all age related triggers the equal comparison is unlikely to trigg
 * Reservoir level trigger: Available for all pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
 * Pump battery level trigger: Available for supported pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
 
+(automations-automation-action)=
 ## Действие
 
-![Automation Triggers](../images/automation_actions.png)
+![Automation Actions](../images/automation_actions.png)
 
 **Действия:** начать **Временную цель**
 
