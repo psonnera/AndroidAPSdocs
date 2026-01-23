@@ -11,7 +11,19 @@ Some of these issues likely apply to other Bluetooth Insulin pumps too, the Medt
 (bluetoothtroubleshooting-cannot-start-omnipod-with-android-16)=
 
 ## Cannot start Omnipod with Android 16
-- Android 16 needs at a minimum **AAPS** version 3.3.2.1 for the Omnipod DASH to work correctly, as this versions has fixes added to specifically address [known problems](../GettingHelp/GeneralTroubleshooting.md#cannot-start-omnipod-with-android-16) introduced in Android 16 for Omnipod.
+- Android 16 needs at a minimum **AAPS** version 3.3.2.1 for the Omnipod DASH to work correctly, as this versions has fixes added to specifically address known problems introduced in Android 16 for Omnipod.
+
+---
+
+(bluetoothtroubleshooting-bluetooth-battery-optimisation)=
+
+## Bluetooth Battery Optimisation
+
+Newer versions of Android have enable Battery optimisation for the system Bluetooth app. This is known to cause some issues for Bluetooth pumps and CGMs.
+
+If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard) and followed the configuration settings in the [Bluetooth Battery Optimisation](setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide its possible you have not changed this setting.
+
+Verify this is correctly configured if you have pump an CGM disconnections.
 
 ---
 
