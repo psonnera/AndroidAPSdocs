@@ -27,22 +27,22 @@
 Автономный замкнутый цикл (**FCL**) не для всех:
 
 - Многие пользователи автономного цикла добиваются 90% времени в целевом диапазоне (4--! 0), а HbA1c - менее 6%, однако некоторые предпочитают более жесткий контроль. Следует отметить, что снижение показателей выше 140 мг/дл (7,7 ммоль/л) при приёме быстрых углеводов, вероятно, требует предварительного введения болюса.
-- **AAPS** tuning can be challenging. It is not for those users who feel overwhelmed AAPS.  You will need to dedicate a few weeks in order to adjust and fine tune your **FCL**. Investing such time can yield better results and **BG** control.
-- Meal management may become easier, however exercise can still be challenging in **FCL**. Most of us like to limit sports snacks in an attempt to control body weight.
-- Difficulties still remain to establish a **FCL** for kids (discussed below).
+- Тонкая настройка **AAPS** может быть сложной. Особенно для тех, кто не чуствует себя уверенным пользователем AAPS.  Для полноценной настройки **Автономного ЗЦ** понадобится несколько недель. Потраченное время не пропадет зря - вы получите полноценную компенсацию и контоль **ГК**.
+- Как правило, при работе с **АЗЦ**. люди легче справляются с компенсацией питания, чем физической нагрузки. Многие любят ограничивать себя в количестве спортивных перекусов чтобы контролировать массу тела.
+- Организация **АЗЦ** для детей по-прежнему представляет сложности (обсуждаются ниже).
 
 
-## Well-tuned hybrid closed loop
+## Правильно настроенный гибридный замкнутый цикл
 
-It is advisable to first establish a well-tuned **HC**L before considering the transition to **FCL**.  Success with **FCL** requires a highly personalised individualised tuning of the user’s setting so that **AAPS** can give insulin to closely mimic YOUR successful hybrid closed loop mode.
+Прежде чем переходить на **АЗЦ** рекомендуется хорошо отладить гибридный **ЗЦ**.  Для успешной работы **АЗЦ** требуются точные индивидуальные настройки, чтобы ** AAPS** мог полноценно имитировать именно ВАШ гибридный режим замкнутого цикла.
 
-**FCL** requires the user to set up and tune their **Automations**. However the user must have a confident understanding of their insulin management needs before embarking on **FCL**. Errors can be masked with counter-errors. This can create an unstable **FCL** system, and make it hard to later correct. You should expect to reach a comparable %TIR with your FCL as you see today in your **HCL**.
+**АЗЦ** требует настройки режимов **Автоматизации**. Прежде чем переходить на **АЗЦ**, пользователь должен иметь четкое представление о своих потребностях в инсулинотерапии. Ошибки могут маскироваться другими ошибками. Это может создать нестабильную систему **АЗЦ**, которую будет трудно откорректировать. Следует стремиться к достижению целевых показателей времени в диапазоне %TIR, сопоставимых с теми, которые вы уже имеете в гибридном цикле **HCL**.
 
-**FCL is a DIY set up of Automations determined by the user by analysing their data from both their successful HCL and  initial FCL experience when tuning your settings.**
+**АЗЦ - это самостоятельно выполненная система автоматизации, которую пользователь создает на основе успешного опыта гибридной петли HCL и первых резульатов работы в автономном замкнутом цикле FCL.**
 
-## Fast insulin (Lyumjev, Fiasp)
+## Инсулины короткого действия (Lyumjev, Fiasp)
 
-**FCL** requires fast insulin.  This is so that at the start of meal-related **BG** rise, **FCL** is able to keep **BG** in range (by common definition, under 180 mg/dl (10 mmol/l)).
+Для корректной работы **АЗЦ** требуется быстродействующий инсулин.  Это нужно для того, чтобы в начале повышения уровня **ГК**, связанного с приемом пищи, алгоритм автономного замкнутого цикла **FCL** был в состоянии поддерживать уровень **ГК** в пределах нормы (обычно ниже 180 мг/дл (10 ммоль/л)).
 
 Моделирующее исследование (подробности см по ссылке Full Loop V2/Март 2023; там же раздел 2.2) показывает, что *инсулины короткого действия*
 
@@ -54,7 +54,7 @@ It is advisable to first establish a well-tuned **HC**L before considering the t
 
 EEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
 
-- will result in significantly lower *BG** peaks than slower insulins;
+- приводят к значительному снижению пиковых *ГК** по сравнению с более медленными инсулинами;
 - tolerate a couple of minutes delayed first meal bolus while not incurring unacceptable height of peaks; and
 - minimise the effect on **BG** peak from different carb loads (meal sizes).
 

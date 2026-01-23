@@ -84,6 +84,47 @@
 
 ![允許背景執行](../images/setup-wizard/Wizard05-Background.png)
 
+(setup-wizard-bluetooth-battery-optimisation)=
+### 藍牙 電池優化
+
+較新的 Android 版本也對系統的藍牙應用程式加入了電池優化。
+
+除了為 **AAPS** 停用電池優化之外，你可能也需要為系統的藍牙應用程式停用此設定。 未這麼做可能會導致幫浦連線中斷與問題。
+
+***注意：xDrip 說明文件在此介紹如何操作：[xDrip 說明文件](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)***
+
+以下步驟以 Android 16 為例，其他版本與提供的螢幕擷圖可能略有不同：
+
+1. 開啟 Android 設定並搜尋 **Apps**，然後開啟 Apps 設定。
+
+   ![settings_apps](../images/setup-wizard/settings_apps.png)
+
+2. 你會看到 App 設定，但我們需要展開以查看所有 App，點擊 **See all apps** 以展開。
+
+   ![settings_apps](../images/setup-wizard/apps_not_expanded.png)
+
+3. 由於藍牙是系統 App，預設會隱藏，我們需要顯示系統 App。 點擊左上角的 **三個點（漢堡）**（1）。 再點擊 **Show System**（2）。
+
+   ![settings_apps](../images/setup-wizard/show_system.png)
+
+4. 搜尋 `Bluetooth` 應用程式，點擊 `Bluetooth` 以及／或 `Legacy Bluetooth`。若兩者皆存在，請確保兩者都依照此流程設定。
+
+   ***注意：可以放心忽略 `Bluetooth MIDI Service`，AAPS 並未使用它。***
+
+   ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
+
+   1. 在 Android 12 點擊 `Battery`，Android 13+ 點擊 `App battery usage`，
+
+   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png))![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
+
+5. 在 Android 12+ 選擇 `Unrestricted` 選項；在 Android 15+ 需要展開 `Allow background usage` 設定，點擊紅色標示的區域展開，然後依步驟 6 完成。
+
+   ![bluetooth_settings_apps_12](../images/setup-wizard/app_bluetooth_unrestricted_12-14.png)    ![bluetooth_settings_apps_15](../images/setup-wizard/app_bluetooth_allow_background.png)
+
+6. 在 Android 16 選擇 `Unrestricted`
+
+   ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background_unrestrict.png)
+
 ### 儲存權限
 
 **AAPS** 需要將訊息記錄到你的智慧型手機的永久儲存中。 永久儲存意味著即使重啟智慧型手機後，他仍然可用。 其他訊息則會遺失，因為他們沒有儲存到永久儲存中。

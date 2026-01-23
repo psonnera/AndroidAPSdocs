@@ -58,8 +58,8 @@ Wenn Du den [SMB-Algorithmus](#Config-Builder-aps) und [Autosens](#Open-APS-feat
 
 Aktiviere eine oder beide der folgenden Optionen in [Einstellungen > OpenAPS SMB Einstellungen](#Preferences-openaps-smb-settings):
 
-     * "sensitivity raises target" and/or 
-     * "resistance lowers target" 
+     * „Empfindlichkeit erhöht den Zielwert“ und/oder 
+     * „Resistenz senkt den Zielwert" 
     
 
 Falls **AAPS** Resistenz oder Sensibilität erkennt, wird das aus dem Profil vorgegebene Ziel angepasst. Falls das Ziel geändert wird, wechselt der Hintergrund der Zielschaltfläche auf grün.
@@ -95,13 +95,13 @@ Der Abschnitt in der Mitte zeigt:
 
 Auf der rechten Seite zeigt ein Symbol den Loop-Status an:
 
-1. Grüner Kreis = Loop läuft
-2. Purple circle with dotted line = [low glucose suspend (LGS)](#objectives-objective6)
+1. Green circle = [closed loop](#KeyAapsFeatures-ClosedLoop), loop running
+2. Purple circle with dotted line = [low glucose suspend (LGS)](#KeyAapsFeatures-LGS)
 3. Roter Kreis = Loop deaktiviert (dauerhaft)
 4. Roter Kreis = Loop ausgesetzt (vorübergehend pausiert, aber Basalinsulin wird weiter abgegeben) - verbleibende Zeit wird unter dem Symbol angezeigt
 5. Grauer Kreis = Pumpe getrennt (vorübergehend gar keine Insulinabgabe) - verbleibende Zeit wird unter dem Symbol angezeigt
-6. orangener Kreis = Superbolus läuft - verbleibende Zeit wird unterhalb des Symbols angezeigt
-7. Blauer Kreis mit gepunkteten Linien = Open Loop
+6. Orangener Kreis = Superbolus läuft - verbleibende Zeit wird unterhalb des Symbols angezeigt
+7. Blue circle with dotted line = [open loop](#KeyAapsFeatures-OpenLoop)
 
 Drücke kurz oder lang auf das Icon um den Dialog zum Wechsel des Loop-Modus (Close loop, Low Glucose Suspend [Reduzierung der Basalrate bei niedrigen Glukosewerten], Open Loop, Abschalten), zum Pausieren / wieder Einschalten des Loop oder zum Trennen / erneuten Verbinden der Pumpe.
 
@@ -179,7 +179,7 @@ Ein Symbol mit einem Kindergesicht oben rechts in diesem Abschnitt zeigt, dass D
 
 2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before The icon pulses red if carbs are required (see [below](#aaps-screens-carbs-required))
 
-3. **Lila Linie**: current basal rate. Das Symbol verändert sich, um eine temporäre Basalrate zu zeigen (Standard ist 100%) 
+3. **Lila Linie**: aktuelle Basalrate. Das Symbol verändert sich, um eine temporäre Basalrate zu zeigen (Standard ist 100%) 
   * Klicke auf das Icon um Details zur Basalrate und einer eventuellen temporären Basalrate (inkl. verbleibende Dauer) angezeigt zu bekommen.
 4. **Pfeile nach oben & unten**: zeigen den aktuellen [Autosens](#Open-APS-features-autosens)-Status bzw. den Status des [dynamischen ISF](#Open-APS-features-DynamicISF) (aktiviert oder deaktiviert) an. In diesem Abschnitt können mehrere Werte angezeigt werden: 
   * AS: Autosens-Wert. Wird auch dann angezeigt, wenn Autosens deaktiviert ist (rein informatorisch). Wird auch angezeigt, wenn DynISF aktiviert ist und ohne Wirkung ist.
@@ -770,12 +770,6 @@ This tab shows the history of [loop status](#AapsScreens-loop-status) changes : 
 Auf dieser Registerkarte werden alle Notizen und Alarme angezeigt, die von Nightscout empfangen wurden.
 
 (aaps-screens-running-mode)=
-
-### Running mode
-
-![Running mode](../images/Screens/RunningMode.png)
-
-Running mode shows current and past AAPS running mode, it is also visible on the main graph as an upper colored bar.
 
 ## Historie
 
