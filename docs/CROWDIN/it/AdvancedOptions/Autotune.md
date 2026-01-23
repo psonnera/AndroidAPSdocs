@@ -8,13 +8,17 @@ Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is h
 
 ## Show the Autotune plugin
 
-Create an empty file named `enable_autotune` in the `extra` subfolder of your phone AAPS folder.
+Create an empty file named `enable_autotune` in the `extra` subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
+
+***NOTE: Ensure you check in the **AAPS** settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.***
 
 ![Enable Autotune](../images/Autotune/Autotune_0.png)
 
 Autotune will then display in Config Builder after you restart AAPS.
 
 ![Plugin Autotune](../images/Autotune/Autotune_1.png)
+
+***NOTE: If you are unable to see the `Autotune` option you will need to click the highlighted (red box) arrow to expand and show all settings in the `General` section.***
 
 ## Interfaccia utente Autotune
 
@@ -33,7 +37,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 - "Run Autotune" lancerà il calcolo di Autotune con il profilo selezionato e il numero di giorni di sintonizzazione
   - Nota: il calcolo automatico può richiedere molto tempo. Una volta lanciato, è possibile passare a un'altra schermata (come quella iniziale , ...) e tornare successivamente nel plugin Autotune per vedere i risultati
 
-![Avvio Autotune](../images/Autotune/Autotune_2b.png)
+  ![Avvio Autotune](../images/Autotune/Autotune_2b.png)
 
 - Poi durante l'esecuzione i risultati intermedi verranno visualizzati nell'area sottostante
 
@@ -43,7 +47,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 
 - Quando il calcolo di Autotune è finito, vedrai il risultato (profilo sintonizzato) e quattro pulsanti sotto.
 
-![Risultati esecuzione Autotune](../images/Autotune/Autotune_4b.png)
+  ![Risultati esecuzione Autotune](../images/Autotune/Autotune_4b.png)
 
 - È importante confrontare sempre il profilo di input (colonna "Profilo"), il profilo di output (colonna "Tuned") e la percentuale di variazione per ciascun valore (colonna "%").
 
@@ -66,7 +70,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 
   - Un nuovo profilo con il prefisso "Tuned" e la data e l'ora di esecuzione saranno creati nel plugin del profilo locale
 
-![Autotune Copia nel profilo locale](../images/Autotune/Autotune_7.png)
+  ![Autotune Copia nel profilo locale](../images/Autotune/Autotune_7.png)
 
 - È quindi possibile selezionare il profilo locale per modificare il profilo aggiornato (sarà selezionato come impostazione predefinita quando si apre il plugin del profilo locale)
 
@@ -92,7 +96,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 
 ### Impostazioni plugin Autotune
 
-![Schermata predefinita Autotune](../images/Autotune/Autotune_11.png)
+  ![Schermata predefinita Autotune](../images/Autotune/Autotune_11.png)
 
 ```{admonition} Only DEV
 :class: info
@@ -137,7 +141,7 @@ Automation Switch Profile feature is only available in Dev/Engineering mode.
   - Se il numero di giorni inclusi nel calcolo di Autotune è inferiore al numero di giorni di sintonizzazione, vedrai quanti giorni saranno inclusi a destra del selettore di Tune days (10 giorni nell'esempio sottostante)
   - Questa impostazione dà buoni risultati solo se il numero di giorni rimanenti non è troppo piccolo (ad esempio se si sintonizza un profilo specifico per i giorni di fine settimana con solo la domenica e il sabato selezionati, è necessario selezionare un minimo di 21 o 28 giorni di sintonizzazione per avere 6 o 8 giorni inclusi nel calcolo di Autotune)
 
-![Schermata predefinita di Autotune](../images/Autotune/Autotune_14b.png)
+  ![Schermata predefinita di Autotune](../images/Autotune/Autotune_14b.png)
 
 - Durante il calcolo di Autotune, è possibile vedere l'avanzamento dei calcoli ("Risultato parziale giorno 3 / 10 sintonizzato" sull'esempio sotto)
 
@@ -180,7 +184,7 @@ Nota: se desideri regolare automaticamente i profili per determinati giorni dell
 
 - Puoi vedere di seguito un esempio di regola per sintonizzare "my profile" su tutti i "giorni di lavoro" con 14 giorni di sintonizzazione selezionati (quindi solo 10 giorni inclusi nel calcolo automatico).
 
-![Schermata predefinita di Autotune](../images/Autotune/Autotune_20b.png)
+  ![Schermata predefinita di Autotune](../images/Autotune/Autotune_20b.png)
 
 
 
