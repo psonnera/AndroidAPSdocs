@@ -55,95 +55,93 @@
 EEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
 
 - приводят к значительному снижению пиковых *ГК** по сравнению с более медленными инсулинами;
-- tolerate a couple of minutes delayed first meal bolus while not incurring unacceptable height of peaks; and
-- minimise the effect on **BG** peak from different carb loads (meal sizes).
+- справляются с задержкой подачи болюса в пару минут, не допуская при этом пиков; и
+- сводят к минимуму влияние количества углеводов (объема принятой пищи) на пики **ГК**.
 
-**FCL** is unlikely to be effective with insulin other than Lyumjev or Fiasp, unless the user is on a very moderate to low carb diet.
+**АЗЦ** вряд ли будет эффективен при применении иных инсулинов кроме Lyumjev или Fiasp, если только пользователь не придерживается диеты с очень умеренным или низким содержанием углеводов.
 
-However, Fiasp or Lyumjev can result in frequent pump occlusions, even after optimising things like needle length. It is important to have an eye on the cannula or pod time. Many users find 48 hours to be the efficacy insulin limit before resulting in cannula/pod failure.
+Однако Fiasp или Lyumjev могут привести к частым закупоркам помпы, даже после оптимизации таких параметров, как длина иглы. Важно наблюдать за состоянием катетора помпы или пода. Многие пользователи считают, что 48 часов - это предел эффективности инсулина до отказа катетера/ канюли.
 
-## Prerequisites
+## Предварительные требования
 
-**BG** values and stable bluetooth connectivity are required to ensure **AAPS** can optimally perform without losing valuable time. **FCL** requires a 24/7 technically stable system:
+Корректные значения **ГК** и стабильная связь по Bluetooth необходимы для оптимальной работы **AAPS** без потери ценного времени. **АЗЦ** требует технически стабильной системы 24/7:
 
-- your **CGM’s performance. Your CGM should not produce jumpy **BG** values that could be misinterpreted by **FCL** as a sign of a starting meal. Similarly, **CGM** calibrations can produce jumpy results.
-- how and where any **CGM** smoothing is done, and what this might imply for your tuning. Notably how delta is defined, and AAPS recognising this as being sign of a starting meal.
-- bluetooth stability for the pump and CGM  pump;
-- avoiding (or at least early recognition of) pump occlusion;
-- data flow and your phone's apps used and difference between days of sensor usage;
-- keeping all **AAPS** components well charged and in spare parts close proximity; and
-- actioning cannula (or pod) changes always early enough to lower the risk of occlusion;
+- Корректная работа системы мониторинга ГК. Система мониторинга гликемии не должна выдавать скачкообразных значений, которые могут быть истолкованы алгоритмом ЗЦ как признак начала приема пищи. Аналогично, неверные калибровки системы НМГ могут привести к скачкам.
+- как и где выполняется сглаживание мониторинга **НМГ** и как оно влияет на индивидуальные настройки. В особенности то, как определяется дельта, и как AAPS распознает признаки начала приема пищи.
+- стабильность работы Bluetooth помпы и мониторинга;
+- недопущение (или по крайней мере раннее распознавание окклюзии помпы);
+- поток данных и используемые приложения телефона, а также разница между днями использования сенсора;
+- поддержание всех компонентов **AAPS** в хорошо заряженном состоянии и в непосредственной близости от запасных частей; и
+- заблаговременная замена катетера (или POD) для снижения риска окклюзии;
 
-The above will vary depending on your **AAPS** component system and your lifestyle.
+Всё вышеперечисленное варьируется в зависимости от компонентов **AAPS** и образа жизни пользователя.
 
-## Meal-related limitations
+## Ограничения, относящиеся к приему пищи
 
-- Setting up a **FCL** may be easier for people whose diets do not consist of food components with a rapid high effect on **BG**, and meal patterns that do not wildly vary day-to-day. This does not necessarily mean low carb.
+- Настройка **АЗЦ** проще для людей, чей рацион состоит из компонентов, не оказывающих влияние на быстрое и значительное колебание **ГК**, и питание которых не сильно меняется изо дня в день. Это не обязательно означает низкоуглеводную диету.
 
-- Fat or protein rich diets, or slow digestion/gastroparesis, make things easier rather than harder for **FCL**  because late carbs nicely cover for inevitable “tails” of late action from bolus needed around peak time.
+- Диета, богатая жирами или белками, или гастропарез (замедленное переваривание пищи), скорее облегчают, чем усложняют работу **АЗЦ**, потому что запоздалые углеводы хорошо маскируют неизбежные “хвосты” болюса, вводимого в пиковое время.
 
 ### Glycemic index and effect on blood glucose
 
-The challenge for the **UAM** mode rises with rising 'Effect on Blood Glucose ('EBG')
+Сложность режима непредвиденного приема пищи **UAM** возрастает при приеме пищи с повышенным воздействием на гликемию ('EBG')
 
-- Start moderate/low, and tune your **Profile's** settings. Only then, "test" meals with high **EBG**.
-- Consider a < 50% initial bolus if consuming very high **EBG**.
+- Начните с пищи с умеренным/низким воздействием и подстройте **Профиль** соответствующим образом. Только после этого пробуйте "тестировать" пищу с более высоким воздействием на гликемию **EBG**.
+- Можно подумать о преболюсе < 50% если употребляете блюда с высоким влиянием на ГК.
 
-1) **No EBG**: e.g. fresh meat, fish, eggs, bacon, oils, cheese. 2) **Low EBG**: e.g. fresh vegetables and berries, mushrooms, nuts, milk, yoghurt, cottage cheese. 3) **Moderate EBG**: e.g. whole grain bread/noodles, potatoes, wild rice, oats, dried fruits. 4) **High EBG**:e.g. wheat breads, baguette, toast, waffles, cookies, mash potatoes, noodles, rice. 5) **Very High EBG**: e.g. sugar, sweet drinks, fruit juices, cornflakes, candy, sweets, potato chips, salty pretzel sticks.
+1) **С нулевым EBG **: например, у таких продуктов как свежее мясо, рыба, яйца, ветчина, растительные масла, сыр. 2) **С низким воздействием на гликемию **: например, у свежих овощей и ягод, грибов, орехов, молока, йогурта, творога. 3) **С умеренным воздействием на гликемию**: например, у хлеба из цельного зерна/лапши, картофеля, дикорастущего риса, овсяных хлопьев, сухофруктов. 4) **С высоким воздействием на гликемию**:например, у пшеничного хлеба, багета, тостов, вафель, печенья, картофельного пюре, лапши, риса. 5) **С очень высокой степенью воздействия на уровень сахара в крови**: например, сахар, сладкие напитки, фруктовые соки, кукурузные хлопья, конфеты, помадки, картофельные чипсы, соленые крендельки.
 
 ![Glycemic index and effect on blood glucose](../images/fullClosedLoop01.png)
 
-The most difficult meals for **FCL** are those foods exclusively very high and high **EBG** components (see red in the picture): Not only does **BG** shoot up rapidly, but also there is little fat/protein/fibre component to balance the inevitable “tail” of insulin activity that would come with attempts to control the high glucose earlier on.
+Самыми сложными блюдами для **АЗЦ** являются продукты с очень высоким воздействием на гликемию **EBG** (см. красный цвет на рисунке): происходит не только быстрый подъем **ГК**, но и отсутствуют жировые/белково-волокнистые компоненты, уравновешивающие неизбежный “хвост” активности инсулина при попытках контролировать высокий уровень глюкозы на ранних стадиях.
 
-Erratic consumption of snacks and sweet drinks that are loaded with fast absorbing carbs is problematic for **FCL**.
-
-
-## Preparing for activity/sports
-
-When exercising or being active, with a pump or hybrid closed loop it is recommended that the user reduces **IOB** prior to exercise.
-
-With **FCL**, the algorithm is tuned to detect **UAM** and automatically deliver insulin to counter **BG** rises.  A high **Temp Target** and lower **Profile Percentage** (effective already around meal start) should be set well in advance of any activity.
-
-Unusual or erratic exercise activity levels present difficulties for **FCL**. Planning ahead is required for exercise (especially if you want to reduce the need for rescue carbs/snacks during sports low). After an active day it is recommended that a lower  **Percentage Profile** is set for overnight after the evening meal is fully digested: set in **Automations** an elevated (>100 mg/dl) **BG**  target, with “no **SMBs** at elevated target” selected in **AAPS*** preferences.
-
-## Hurdles for kids
-
-**FCL** can present extra challenges for children and these include:
-
-- Lyumjev or Fiasp may not available or well tolerated.
-- Hourly basal rate may very low, providing a poor basis for big **SMBs**.
-- Diet may be rich in sweet components. With the typical low blood volume of a small body, strong tendency towards very high **BG** spikes.
-- Growth hormones and going through marked changes of insulin sensitivity makes it difficult to keep the **FCL** accurately tuned.
+Несбалансированное потребление закусок и сладких напитков, содержащих быстро усваиваемые углеводы, приводит к некорректной работе **АЗЦ**.
 
 
-## Enabling boosted SMBs: safety
+## Подготовка к физическим нагрузкам
 
-In **HCL** safety restrictions are implemented regarding bolus sizes that can be automatically given by the loop.
+При физических нагрузках или занятиях спортом на помпе или гибридном замкнутом цикле перед нагрузкой рекомендуется уменьшить значение **IOB**.
 
-**FCL** loopers no longer need to give a sizable bolus around meal start. The impact of this means that restrictions in size limits for **SMBs** must be widened to make the loop capable of delivering large enough **SMBs**.
+При работе **АЗЦ** алгоритм настроен на обнаружение непредвиденного приема пищи **UAM** и автоматическую подачу инсулина для противодействия повышению **ГК**.  Задолго до начала любой нагрузки следует установить высокую ** временную цель TT** и низкий ** процент профиля** (который вступит в силу уже перед началом приема пищи).
 
-If you are operating with **AAPS** in the Master release, it is suggested **AAPS**' Preferences are set up with the maximum allowed **SMB** size so that **FCL** can give (maxUAMSMBBasalMinutes=120, i.e. 2 hours worth of basal at that daytime).
+Необычные или неустойчивые уровни физической активности создают трудности для **АЗЦ**. Перед тренировкой необходимо заранее планировать свои действия (особенно если хотите уменьшить потребность в дополнительных углеводах / перекусах на купирование гипогликемии). После активного дня и полного усвоения вечерней пищи рекомендуется установить более низкий ** процент профиля ** на ночь: в **Автоматизациях** установите повышенную (>100 мг/дл) **целевую гликемию**, при этом в настройках **AAPS*** выберите отключить **SMB** при высокой ВЦ.
 
-If your basal rate is very low, the resulting **SMB** limits might be too low to allow sufficient control to tackle postprandial **BG** rises. One possible solution is to avoid diets that cause strong **BG** spikes and later switches to a **AAPS** dev variant that offers a new parameter in **SMB** delivery settings: smb_max_range_extension. This will expand the standard maximum of 2 hours worth of basal by a factor of >1. (Additionally, the default 50% **SMB** delivery ratio might be elevated in dev. variants).
+## Сложности для детей
 
-**Follow the instructions to enable AAPS to mimic your bolussing via a couple of SMBs**.
+**АЗЦ** может создавать дополнительные трудности для детей, в том числе:
 
-Check the **SMB** tab periodicallu to see whether your **SMBs** are allowed to be sufficient enough to deliver the required insulin needed for the loop around meal starts.
+- Инсулины Liumjev или Fiasp могут быть недоступны или плохо переносимы.
+- Почасовая скорость базала может быть весьма низкой, что создает плохую основу для больших микроболюсов **SMB**.
+- Диета может быть богата сладкими компонентами. При низком объеме крови в теле ребёнка очевидна тенденция к высоким скачкам уровня **ГК**.
+- Гормоны роста и заметные изменения чувствительности к инсулину затрудняют точную настройку **АЗЦ**.
 
-Иначе, все усилия по настройке параметров не приведут ни к чему!
+
+## Включение повышенного SMB; безопасность
+
+В гибридных **ЗЦ** реализованы ограничения безопасности в отношении размера болюсов автоматически вводимых циклом.
+
+Пользователям **АЗЦ** больше не нужно вводить большую дозу перед началом приема пищи. Это означает, что ограничения микроболюсов **SMB** должны быть расширены, чтобы петля была в состоянии вводить достаточно большие **SMB**.
+
+Если вы пользуетесь основной версией **AAPS**, рекомендуется настроить параметры **AAPS** с максимально допустимым размером **SMB**, чтобы **АЗЦ** мог обрабатывать максимум UAM SMB минут базала=120, то есть эквивалент двух часов базала в дневное время).
+
+Если скорость вашего базала очень низкая, то пределы **SMB** могут также оказаться слишком низкими и не обеспечить достаточный контроль над повышением ГК после приема пищи. Одно из возможных решений заключается в том, чтобы избегать диет, которые вызывают сильные скачки **ГК**, а затем перейти на ту ветку разработчиков **AAPS**, которая предлагает новый параметр в настройках **SMB**: smb_max_range_extension. Это увеличит стандартную максимальную продолжительность базала, составляющую 2 часа, в >1 раз. (Плюс к этому, коэффициент микроболюсов **SMB**, равный по умолчанию 50% может быть повышен в вариантах ветки dev. variants).
+
+Чтобы позволить AAPS имитировать обычные болюсы при помощи введения нескольких микроБолюсов (SMB) **следуйте этой инструкции**.
+
+Периодически, где-то в районе начала приема пищи, проверяйте вкладку **SMB**, чтобы узнать, достаточно ли подается микроболюсов **SMB** в замкнутом цикле.
+
+Иначе, все усилия по настройке параметров могут оказаться бесполезными!
 
 
 ```{admonition} Boosting **ISF** can become dangerous
-:class: danger
+:class: опасность Внимательно понаблюдайте / проанализируйте размеры **SMB** вскоре после начала приема пищи. Настраивайте пошагово и никогда не меняйте более 1 или 2 параметров одновременно.
 
-Carefully observe/analyse the **SMB** sizes shortly after your meal commences. Настраивайте пошагово и никогда не меняйте более 1 или 2 параметров одновременно.
-
-Your **AAPS'** setting must be sufficiently set up to cope with your (!) variety of meals.
+Настройки **AAPS'** должны быть достаточно эффективны для того, чтобы справляться с разнообразием потребляемых вами (!) блюд.
 ```
 
-## Meal detection/your Automations for boosting
+## Обнаружение приёма пищи/ Автоматизация для повышения эффективности
 
-For successful **FCL**, **ISF** is the key tuning parameter. When utilising **AAPS** Master + **Automations**, a **> 100% profile change must automatically be triggered upon meal recognition** (via glucose deltas), and provide the sharpened **ISF**.
+Для успешной работы **АЗЦ** ключевым параметром настройки является чувствительность к инсулину **ISF**. When utilising **AAPS** Master + **Automations**, a **> 100% profile change must automatically be triggered upon meal recognition** (via glucose deltas), and provide the sharpened **ISF**.
 
 **AAPS** Master allows up to 130% temporary **Profile** in **HCL** p mode. Boosting the **ISF** is done in 3 steps:
 

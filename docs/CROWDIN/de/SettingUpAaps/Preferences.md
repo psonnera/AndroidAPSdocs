@@ -127,7 +127,7 @@ Im Abschnitt **Übersicht** kannst Du die Einstellungen für den Startbildschirm
 Die Option "Bildschirm aktiv lassen" hindert Android daran, den Bildschirm abzuschalten. Dies ist z.B. zu Präsentationszwecken hilfreich,  es verbraucht aber sehr viel Batterie.  Deshalb wird empfohlen, das Smartphone an ein Ladekabel anzuschließen.
 
 (Preferences-buttons)=
-### Buttons
+### Schaltflächen
 
 - Lege fest welche Schaltflächen am unteren Rand des Homescreens sichtbar sind.
 - Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
@@ -240,9 +240,9 @@ Bei der Verwendung von [SMB](#objectives-objective9) geben viele Menschen nicht 
 * für Menschen mit langsamer Verdauung: Ein voller Vorab-Bolus kann eine Hypo zur Folge haben, da die Insulinwirkung schneller eintritt, als die die Kohlenhydrate verdaut werden.
 * um **AAPS** mehr Spielraum für den Umgang mit **Glukosewertanstiegen** zu geben. Sobald es sinnvoll erscheint, wird **AAPS** in beiden Fällen den fehlenden Bolus-Teil mit SMBs ausgleichen.
 
-### Old glycemia time threshold
+### Schwelllenwert für alte Glykämie
 
-If the last **BG** received is older than this threshold, then the bolus wizard will by default offer a 100% dose instead of the **Deliver this part of bolus wizard result** setting above. The reason for this is that when **BG** is missing, **AAPS** will not be able to send the remaining part of the bolus afterward (the loop is not running), which would result in high **BG**.
+Wenn der letzte empfangene **Glukosewert** älter als dieser Schwellenwert ist, dann bietet der Bolus-Rechner standardmäßig einen 100%igen Bolus an und berücksichtigt nicht, den Wert, der in der Option **Abgabe von [%] des Ergebnisses des Bolus-Rechners** eingetragen ist. Durch den fehlenden **Glukosewert** kann **AAPS** den verbleibenden Bolusteil nicht hinterschicken (der Loop ist ausgeschaltet). Die Folge wären hohe **Glukosewerte**.
 
 ### Bolus-Berater aktivieren
 
@@ -298,7 +298,7 @@ Sei vorsichtig und aktiviere ihn erst dann, wenn Du vollständig verstanden hast
 
 ## Loop
 
-As of [AAPS version 3.4](#version3400), it is no longer possible to set the loop mode here. See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) to change loop mode now.
+Seit der [AAPS-Version 3.4](#version3400), ist es hier nicht mehr möglich den Loop-Modus einzustellen. Du kannst den Loop Status jetzt unter [AAPS Bildschirme > Die Startseite > Loop Status](#AapsScreens-loop-status) ändern.
 
 (Preferences-minimal-request-change)=
 ### Minimaler Wert zur Anfrage einer Änderung

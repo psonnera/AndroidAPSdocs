@@ -64,6 +64,55 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 (version3400)=
 
+## 版本 3.4.1.0
+
+發布日期：2026-08-03
+
+### 核心功能
+- 修正 DST 處理 @MilosKozak
+- 改進並統一一般目標辨識（mg/dL > 99，mmol/L > 5.5）@MilosKozak
+- 簡訊：以 PIN 保護 RESTART @MilosKozak
+- 維護：若選取錯誤目錄則警示 @MilosKozak
+
+### 幫浦驅動程式改進
+- **Omnipod Dash**：重構 BLE 驅動程式的程式碼到 omnipod/common 模組 @jwoglom
+- **Omnipod Dash**：嘗試修正連線狀態 @MilosKozak
+- **Omnipod**：在 Pod 註冊前驗證設定檔，以避免浪費 Pod（#4534）@brianV
+- **Medtronic**：修正設定對話框中顯示相同的編碼類型 @mifi100
+- **Medtronic**：準備幫浦通用類別（Tandem 準備）@andy-rozman
+- **RileyLink**：編碼修正（#4519）@mifi100
+- **Equil**：依序號前綴擴充胰島素幫浦相容性（#4510）@hhfcvmars
+- **Equil**：新增日誌 @MilosKozak
+- **Diaconn G8**：修正日誌同步錯誤並新增韌體 3.58+ 支援 @miyeongkim
+- **Diaconn**：修正臨時基礎率持續時間單位換算 @miyeongkim
+- **Diaconn**：使用 commandQueue.loadEvents() 進行歷史同步 @miyeongkim
+- 允許在循環暫停但幫浦可用時進行胰島素輸注 @cschuijt
+
+### 雲端 / 備份
+- 新增備份至 Google Drive @Angus-repo
+- 於雲端儲存錯誤狀態變更時通知 UI @Angus-repo
+- 允許同時使用本機與雲端儲存 @Angus-repo
+
+### Tidepool
+- 改進 Tidepool OAuth2 移轉 @MilosKozak
+- 修正 Tidepool 無限期的 BLOCKED 狀態，並修正拒絕空白 SSID 的問題 @michaeln-synapse
+
+### NSClient
+- NSCv3：改善重新連線 @MilosKozak
+
+### Wear OS
+- 若計算中使用 IOB，則在嚮導結果中顯示新的活性胰島素（IOB）@olorinmaia
+- 修正 Wear 上的注射進度（BolusProgress）與總量顯示 @Philoul
+
+### 使用者介面
+- 改進 Site Rotation 的 ic_none 圖示 @Philoul
+- 修正針位輪替的幫浦管理設定未被使用的問題 @samfundev
+
+### 貢獻者
+@MilosKozak @Philoul @olorinmaia @jwoglom @mifi100 @andy-rozman @Angus-repo @brianV @cschuijt @hhfcvmars @miyeongkim @samfundev @michaeln-synapse
+
+(version3400)=
+
 ## 版本 3.4.0.0
 
 發布日期：2025-12-31

@@ -1,10 +1,10 @@
 # Smartphones
 
-The current version of **AAPS** (3.4) requires an Android smartphone with Google **Android 12.0 or above**. If you are considering buying a new phone, (as of January 2026), **Android 16 is preferred**, Android 15 is not recommended.
+Die aktuelle **AAPS**-Version (3.4) setzt ein Android Smartphone mit Google **Android 12.0 oder höher** voraus. Solltest Du Dir ein neues Smartphone zulegen wollen, wird Dir (Stand: Januar 2026) empfohlen, eines mit **Android 16** anzuschaffen. Android 15 ist nicht zu empfehlen.
 
 Die allerneusten Informationen zu diesem Thema erhältst Du auf [Facebook oder Discord](../GettingHelp/WhereCanIGetHelp.md).
 
-Aus Sicherheitsgründen wird Dir dringend empfohlen, Deine **AAPS**-Version immer aktuell zu halten. However, for users unable to use a device with Android 12.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
+Aus Sicherheitsgründen wird Dir dringend empfohlen, Deine **AAPS**-Version immer aktuell zu halten. Für Menschen, die kein Gerät mit Android 12.0 (oder neuer) nutzen können, stehen weiterhin ältere **AAPS**-Versionen für ältere Android-Versionen zur Verfügung, siehe dazu auch die [Release Notes](#maintenance-android-version-aaps-version).
 
 - [Jelly Pro Einstellungen](../CompatiblePhones/Jelly.md)
 - [Huawei Einstellungen](../CompatiblePhones/Huawei.md)
@@ -13,7 +13,7 @@ Aus Sicherheitsgründen wird Dir dringend empfohlen, Deine **AAPS**-Version imme
 
 ## Liste der getesteten Smartphones
 
-Wir pflegen eine Liste mit [getesteten Hardware-Kombinationen](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true).
+Wir pflegen eine Liste von [getesteten Hardware-Setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true), die Du [mit einer benutzerfreundlichen Oberfläche](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/) durchschauen kannst. Ergänze Dein Setup und erweitere damit die Liste, in dem Du das [Google-Formular](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform) ausfüllst!
 
 Diese Liste enthält die Rückmeldungen zu Smartphones mit **AAPS** und dem Zusammenspiel mit einer gegebenen Pumpe und Sensor (CGM). Es kann helfen, zu prüfen, ob Dein Smartphone, Deine Insulinpumpe und Dein Sensor von anderen Benutzenden bereits erfolgreich genutzt wurden.
 
