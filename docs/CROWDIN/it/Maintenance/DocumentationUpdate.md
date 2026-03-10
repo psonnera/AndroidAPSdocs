@@ -1,10 +1,28 @@
 # Docs updates & changes
 
+## January 2025
+
+- [3.4](#version3400) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
+- CGM list update. Dexcom G5, Tomato, Glimp removed.
+- [Site rotation UI](#Aapsscreens-site-rotation)
+- [Running mode](#AapsScreens-running-mode)
+- [Autotune](../AdvancedOptions/Autotune.md)
+
+## December 2025
+
+- [Profile tuning](../GettingHelp/ProfileTuning.md) from @robrub
+
+## October 2025
+
+- DiaKEM: new installs don't work after servers upgrade @psonnera
+- Removed Libre 2 patched app (obsolete): doesn't work with new sensors @psonnera
+- Reworked Omnipod Dash page @XiTatiON
+
 ## August 2025
 
 - Updated versions and Android Studio prerequisites
 - Added [3.3.2.1](#version3321) release, removed Android 16 references (fixed)
-- Added [Browser Build](browser-build) @Angus
+- Added [Browser Build](#browser-build) @Angus
 
 ## May 2025
 
@@ -22,7 +40,7 @@
 ## November 2024
 
 - Update of [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) @emilise
-- Reorganisation of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnerat
+- Reorganization of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnerat
 
 ## October 2024
 
@@ -62,7 +80,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 
 ## November 2021
 
-- Best practices for calibrating a [libre 2 sensor](#Libre2-best-practices-for-calibrating-a-libre-2-sensor)
+- Best practices for calibrating a libre 2 sensor
 - [ISF](../UsefulLinks/FAQ.md) reformulation of impact
 - Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio)
 - Removed patched [Dexcom](../CompatibleCgms/DexcomG6.md) app as it is obsolete
@@ -121,7 +139,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 
 ## June 2020
 
-- [Libre 2](../CompatibleCgms/Libre2.md) - more details patched Libre Link app & use of bluetooth transmitters
+- Libre 2 - more details patched Libre Link app & use of bluetooth transmitters
 - [Time zone travelling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) with Libre 2
 
 ## May 2020
@@ -129,7 +147,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 - [Extended bolus only for Dana + Insight pumps](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 - [Insight deactivate vibration](#Accu-Chek-Insight-Pump-vibration) (firmware 3.x only)
 - [Minimal request rate](#Preferences-minimal-request-change) to reduce number of notifications in open loop mode
-- [Patched Libre Link app](#libre2-patched-librelink-app-with-xdrip) - check if correctly patched
+- Patched Libre Link app - check if correctly patched
 - [Prediction lines](#aaps-screens-prediction-lines) - more details
 
 ## April 2020

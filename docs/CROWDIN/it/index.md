@@ -2,10 +2,10 @@
 
 ![image](./images/basic-outline-of-AAPS.png)
 
-```{admonition} Version 3.3
+```{admonition} Latest Release
 :class: note
 
-29/12/2024 : La versione 3.3 è uscita. Controlla le [Release Notes](#version3300) per vedere cosa c'è di nuovo e ottenere le istruzioni per l'aggiornamento.
+14/08/2025 : Version 3.3.2.1 is out. Check the [Release Notes](#latestrelease) to see what's new and get update instructions.
 
 ```
 
@@ -21,7 +21,7 @@ Sezione **2) Per Iniziare**, l' [Introduzione](Getting-Started/Introduction.md) 
 
 Ora che hai una solida comprensione del processo, puoi iniziare a assemblare il tuo loop **AAPS**.
 
-Sezione **3) Impostare AAPS** contiene le istruzioni passo-passo per farlo. Copre la scelta e [l'impostazione del tuo server di rendicontazione](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout o Tidepool) in modo da poter rivedere e condividere i tuoi dati, preparare il tuo computer per creare l'app AAPS, costruire l'app AAPS e trasferire l'app AAPS sul tuo telefono. Copre anche la configurazione dell'app **AAPS** utilizzando la procedura guidata di configurazione, collegarla con la tua app CGM, e un microinfusore reale o virtuale, oltre a collegare **AAPS** al tuo server di rendicontazione. Sei quindi lentamente introdotto al pieno utilizzo di ciò che **AAPS** ha da offrire tramite un processo passo dopo passo sicuro e accuratamente calibrato, progettato per assicurarsi che te/il tuo bambino siate completamente familiari e confortevoli navigando tutti i diversi livelli e configurazioni del menu prima di "diplomarti" nella fase successiva, comunemente indicato come il prossimo "Obiettivo", fino a quando non avrai esperienza sufficiente per iniziare a utilizzare le opzioni più avanzate disponibili all'interno dell'app. Questi Obiettivi sono appositamente progettati in modo tale da sbloccare gradualmente più possibilità di **AAPS** e passare dal circuito aperto al circuito chiuso.
+Sezione **3) Impostare AAPS** contiene le istruzioni passo-passo per farlo. It covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data, getting ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone. Copre anche la configurazione dell'app **AAPS** utilizzando la procedura guidata di configurazione, collegarla con la tua app CGM, e un microinfusore reale o virtuale, oltre a collegare **AAPS** al tuo server di rendicontazione. Sei quindi lentamente introdotto al pieno utilizzo di ciò che **AAPS** ha da offrire tramite un processo passo dopo passo sicuro e accuratamente calibrato, progettato per assicurarsi che te/il tuo bambino siate completamente familiari e confortevoli navigando tutti i diversi livelli e configurazioni del menu prima di "diplomarti" nella fase successiva, comunemente indicato come il prossimo "Obiettivo", fino a quando non avrai esperienza sufficiente per iniziare a utilizzare le opzioni più avanzate disponibili all'interno dell'app. Questi Obiettivi sono appositamente progettati in modo tale da sbloccare gradualmente più possibilità di **AAPS** e passare dal circuito aperto al circuito chiuso.
 
 Sezione **4) Vita quotidiana con AAPS** copre le funzionalità chiavi di **AAPS**, per aiutarti a utilizzare (e personalizzare) **AAPS**. Include la comprensione degli schermi, CHO a bordo, sensibilità, cambio del profilo, target temporanei, CHO estesi (eCarbs), automazioni e sensibilità insulinica dinamica. Copre anche argomenti frequenti come: gestire diversi tipi di pasti, cambiare la cannula e il sensore, aggiornamenti dello smartphone, cambio dell'ora, [viaggiare con AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) e lo sport. Domande e risposte comuni si trovano nella sezione risoluzione dei problemi.
 
@@ -84,19 +84,21 @@ Panoramica componenti <./Getting-Started/ComponentOverview.md>
 ```
 
 ```{toctree}
-:caption: 3) Impostare AAPS
+:caption: 3) Setting up AAPS
 
-Impostazione del server di reportistica <./SettingUpAaps/SettingUpTheReportingServer.md>
+Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
-Costruire AAPS <./SettingUpAaps/BuildingAaps.md>
-Trasferire e installare AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-Configurazione guidata <./SettingUpAaps/SetupWizard.md>
-Il Tuo Profilo AAPS <./SettingUpAaps/YourAapsProfile.md>
-Cambiare la configurazione AAPS <./SettingUpAaps/ChangeAapsConfiguration.md>
+Building AAPS <./SettingUpAaps/BuildingAaps.md>
+- Browser Build <./SettingUpAaps/BrowserBuild.md>
+- Computer Build <./SettingUpAaps/ComputerBuild.md>
+Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Setup Wizard <./SettingUpAaps/SetupWizard.md>
+Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
+Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
 - Config Builder <./SettingUpAaps/ConfigBuilder.md>
-- Preferenze <./SettingUpAaps/Preferences.md>
-Completare gli obiettivi <./SettingUpAaps/CompletingTheObjectives.md>
+- Preferences <./SettingUpAaps/Preferences.md>
+Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -139,23 +141,26 @@ Scambio di quadranti personalizzati <./ExchangeSiteCustomWatchfaces/index.md>
 ```
 
 ```{toctree}
-:caption: 7) Manutenzione di AAPS
+:caption: 7) Maintenance of AAPS
 
-Esportazione/Importazione Impostazioni <./Maintenance/ExportImportSettings.md>
-Rivedere i tuoi dati <./Maintenance/Reviewing.md>
+Export/Import Settings <./Maintenance/ExportImportSettings.md>
+Reviewing your data <./Maintenance/Reviewing.md>
 AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-Aggiornamenti sulla documentazione <./Maintenance/DocumentationUpdate.md>
-Aggiornamento a una nuova versione di AAPS <./Maintenance/UpdateToNewVersion.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
+Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
+- Browser Update <./Maintenance/UpdateBrowserBuild.md>
+- Computer Update <./Maintenance/UpdateComputerBuild.md>
 
 ```
 
 ```{toctree}
-:caption: 8) Ottenere Aiuto
+:caption: 8) Getting Help
 
-Dove posso ottenere aiuto con AAPS <./GettingHelp/WhereCanIGetHelp.md>
-Risoluzione generale dei problemi <./GettingHelp/GeneralTroubleshooting.md>
-Risoluzione dei problemi Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
-Accesso ai file di log <./GettingHelp/AccessingLogFiles.md>
+Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
+General troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
+- Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
+Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
+Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
 ```
 
 ```{toctree}
