@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
-31/12/2025 : 版本 3.4 已推出。 檢查[發行說明](#latestrelease)以查看新功能並獲取更新說明。
+ 2026 年 4 月 10 日：Version 3.4.2.2 已發布。 請參閱 [發行說明](#latestrelease) 以了解最新變更，並依照 [更新手冊](#UpdateToNewVersion) 的指示更新至此版本。
 
 ```
 
@@ -86,17 +86,18 @@ AAPS 簡介 <./Getting-Started/Introduction.md>
 ```{toctree}
 :caption: 3) 設定 AAPS
 
-設定報告伺服器 <./SettingUpAaps/SettingUpTheReportingServer.md>
+設定報表伺服器 <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
 建置 AAPS <./SettingUpAaps/BuildingAaps.md>
 - 瀏覽器建置 <./SettingUpAaps/BrowserBuild.md>
-- 電腦建置 <./SettingUpAaps/ComputerBuild.md>
-傳輸和安裝 AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-嚮導 <./SettingUpAaps/SetupWizard.md>
-您的 AAPS 設定檔 <./SettingUpAaps/YourAapsProfile.md>
-變更 AAPS 配置 <./SettingUpAaps/ChangeAapsConfiguration.md>
-- 配置建構器 <./SettingUpAaps/ConfigBuilder.md>
+- Android Studio 建置 <./SettingUpAaps/ComputerBuild.md>
+- CLI 建置 <./SettingUpAaps/CLIBuild.md>
+傳輸並安裝 AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+設定嚮導 <./SettingUpAaps/SetupWizard.md>
+你的 AAPS 設定檔 <./SettingUpAaps/YourAapsProfile.md>
+變更 AAPS 組態 <./SettingUpAaps/ChangeAapsConfiguration.md>
+- 組態建置工具 <./SettingUpAaps/ConfigBuilder.md>
 - 偏好設定 <./SettingUpAaps/Preferences.md>
 完成目標 <./SettingUpAaps/CompletingTheObjectives.md>
 ```
@@ -144,12 +145,12 @@ AAPS for Wear OS <./WearOS/BuildingAapsWearOS.md>
 :caption: 7) AAPS 維護
 
 匯出/匯入設定 <./Maintenance/ExportImportSettings.md>
-檢查您的資料 <./Maintenance/Reviewing.md>
-AAPS 版本更新說明 <./Maintenance/ReleaseNotes.md>
-文檔更新 <./Maintenance/DocumentationUpdate.md>
-更新到新的 AAPS 版本 <./Maintenance/UpdateToNewVersion.md>
-- 瀏覽器更新 <./Maintenance/UpdateBrowserBuild.md>
-- 電腦更新 <./Maintenance/UpdateComputerBuild.md>
+檢視你的資料 <./Maintenance/Reviewing.md>
+AAPS 發行說明 <./Maintenance/ReleaseNotes.md>
+文件更新 <./Maintenance/DocumentationUpdate.md>
+更新至新的 AAPS 版本 <./Maintenance/UpdateToNewVersion.md>
+- 瀏覽器建置更新 <./Maintenance/UpdateBrowserBuild.md>
+- Android Studio 建置更新 <./Maintenance/UpdateComputerBuild.md>
 
 ```
 

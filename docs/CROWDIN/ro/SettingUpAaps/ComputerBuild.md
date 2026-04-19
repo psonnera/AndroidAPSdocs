@@ -1,4 +1,6 @@
-# Computer Build
+<!-- Android Studio Build, FKA Computer Build. Preserve filenames to avoid breaking URLs. -->
+
+# Android Studio Build
 
 This is the traditional method to build your AAPS app.
 
@@ -21,12 +23,12 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 | ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
 | 2.6.2                   | 3.6.1                                                |                                                        | 5.6.4  | 11  |
 | 2.8.2.1                 | 4.1.1                                                |                                                        | 6.1.1  | 13  |
-| [3.1.0.3](#version3100) | 2020.3.1                                             | up to Otter                                            | 7.3.3  | 17  |
-| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                  | up to Otter                                            | 8.2    | 17  |
-| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                      | up to Otter                                            | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                   | up to Otter                                            | 8.11.1 | 21  |
-| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                   | up to Otter                                            | 8.13   | 21  |
-| [3.4](#version3400)     | Otter 2 Feature Drop (2025.2.2)                      |                                                        | 9      | 21  |
+| [3.1.0.3](#version3100) | 2020.3.1                                             | up to Panda 2                                          | 7.3.3  | 17  |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                  | up to Panda 2                                          | 8.2    | 17  |
+| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                      | up to Panda 2                                          | 8.10   | 21  |
+| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                   | up to Panda 2                                          | 8.11.1 | 21  |
+| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                   | up to Panda 2                                          | 8.13   | 21  |
+| [3.4.1](#version3410)   | Panda 2 (2025.32)                                    |                                                        | 9      | 21  |
 
 The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
 
@@ -39,13 +41,13 @@ The Gradle version is linked to the source code, you will always get the correct
   <tr>
     <th class="tg-baqh">OS (Only 64 bit)</th>
     <td class="tg-baqh">Windows 8 or higher</td>
-    <td class="tg-baqh">Mac OS 10.14 or higher</td>
+    <td class="tg-baqh">Mac OS 10.14 sau mai mare</td>
     <td class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
     <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
-    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <td class="tg-baqh">chip-uri pe bază de ARM sau de a doua generație Intel Core sau mai noi cu suport pentru <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hipervisor.Framework</span></a></td>
     <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
   </tr>
   <tr>

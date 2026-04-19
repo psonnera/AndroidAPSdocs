@@ -471,13 +471,57 @@ AMA 的標準值為 5，SMB 的標準值為 8。
 
 **自動設定匯出**<br/>啟用此功能後，你允許**AAPS**自動執行設定匯出，而無需用戶介入。 為此，主密碼 安全地存儲在你的手機中（僅限於下次手動匯出時）。 存儲的密碼將在最多 4 週內有效。 4 週後，你將收到通知，提示密碼即將過期。 在為期 1 週的寬限期內，可以透過 從維護選單手動匯出設定來刷新密碼。
 
-在寬限期過期的 1 週後，存儲的密碼將過期，任何自動化設定匯出將中止，同時通知用戶，要求 重新輸入密碼。  [(**自動化設定匯出**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)將被記錄在 AAPS 的「照護入口」和「用戶輸入」列表下的治療項目中。
+在寬限期過期的 1 週後，存儲的密碼將過期，任何自動化設定匯出將中止，同時通知用戶，要求 重新輸入密碼。  [(**自動化設定匯出**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)  會記錄 到 **AAPS** 的「照護入口」與「使用者輸入」清單（位於「治療」中）。
 
 啟用此選項後，請確保執行一次手動設定匯出，屆時系統會要求你輸入密碼，以便**AAPS**能夠儲存它。
 
-(preferences-maintenance-logdirectory)= 維護設定還包括**AAPS** 目錄，該目錄可以直接在維護選單中找到。 此設定允許用戶選擇電話上的一個目錄，**AAPS**將在該目錄中儲存偏好設定、日誌及其他檔案。
+### 日誌文件
+
+AAPS 會儲存記錄，以利疑難排解。
+
+請勿停用此功能：若發生問題，它有助於了解原因。
+
+若需要將記錄寄給開發者，請在郵件內容中準確描述問題。 建議僅在[在 GitHub 提交問題回報](https://github.com/nightscout/AndroidAPS/issues)後，且被要求時再傳送記錄。
+
+你可以在手機記憶體 -> Android -> data -> info.nightscout.androidaps -> files 中找到 AAPS 記錄。
+
+![記錄檔選項](../images/Pref2020_Maintenance_Logs.png)
+
+(preferences-maintenance-logdirectory)=
+
+### 設定本機 AAPS 目錄
+
+維護設定還包括**AAPS**目錄，可以直接在維護標籤下找到。 此設定允許用戶選擇電話上的一個目錄，**AAPS**將在該目錄中儲存偏好設定、日誌及其他檔案。
 
 ![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
+
+強烈建議將目錄設在手機儲存空間的主目錄下。 預設為 AAPS。
+
+![本機目錄位置](../images/preferences/maintenance_settings_directory.png)
+
+若你選擇了 AAPS 的子目錄，會顯示「目錄選擇錯誤」的訊息。 點選「確認」並重新選擇正確的目錄（上一層）。 除非你非常清楚自己在做什麼，請不要選擇「關閉」。
+
+![本機目錄位置](../images/preferences/maintenance_settings_wrongdirectory.png)
+
+(preferences-maintenance-cloud)=
+
+### 設定雲端目錄
+
+你可以將設定、記錄與 CSV 資料匯出到雲端服務。
+
+1.  選擇雲端目錄
+2. 選擇你的雲端服務
+3. 啟用雲端匯出
+
+![雲端目錄](../images/preferences/maintenance_settings_cloud.png)
+
+接著你可以定義要上傳到雲端的資料。
+
+![雲端目錄資料](../images/preferences/maintenance_settings_clouddata.png)
+
+你可以停用雲端匯出。
+
+![停用雲端匯出](../images/preferences/maintenance_settings_cloudoff.png)
 
 ## Open Humans
 

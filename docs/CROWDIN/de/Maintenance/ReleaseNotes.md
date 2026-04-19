@@ -1,23 +1,15 @@
 
 # Release Notes
 
-Gehe durch die Schritte der [Update-Anleitung](UpdateToNewVersion). Der Abschnitt Fehlerbehebung bespricht auch die häufigsten Schwierigkeiten, die beim Aktualisieren von **AAPS** mit der Update-Anleitung aufgetreten sind.
+Zur Aktualisierung auf eine neue Version befolge bitte die Schritte in der [Update Anleitung](UpdateToNewVersion). Der Abschnitt Fehlerbehebung bespricht auch die häufigsten Schwierigkeiten, die beim Aktualisieren von **AAPS** mit der Update-Anleitung aufgetreten sind.
 
-Sobald ein neues Update zur Verfügung steht, wirst Du darüber informiert. Solltest Du bis zum Fälligkeitsdatum das Update nicht durchgeführt haben, wird **AAPS** in den „Open Loop“ wechseln.
+Wenn eine neue Version verfügbar wird, wirst Du mit einer Meldung, wie dieser, benachrichtigt:
 
 ![Update-Info](../images/AAPS_LoopDisable90days.png)
 
-Diese Eingabeaufforderung ist wichtig, und sollte nicht ignoriert werden. Sie ist nicht dazu gedacht Dich zu nerven. Neue **AAPS**-Versionen bieten nicht nur neue Funktionen, sondern beheben auch wichtige Sicherheitsprobleme. Daher ist es notwendig, dass jeder, der **AAPS** nutzt, so bald wie möglich auf die neueste Version aktualisiert. Leider werden noch immer Fehler aus sehr alten Versionen gemeldet. Es entsteht ein sehr großer Aufwand darin, die Sicherheit für jeden **AAPS**-Benutzer und die DIY-Community zu verbessern. Vielen Dank für Dein Verständnis.
+Solltest Du bis zum Fälligkeitsdatum das Update nicht durchgeführt haben, wird **AAPS** in den „Open Loop“ wechseln.
 
-```{admonition} First version of **AAPS**
-:class: note
-
-Die erste Testversion gab es bereits 2015. In 2016 wurde dann das erste Release veröffentlicht.
-
-Da die Releasefolge und deren Veröffenlichungszeitpunkte immer wieder erfragt werden, haben wir diese hier - sofern verfügbar - zusammengetragen.
-
-```
-![AAPS 1.0](../images/update/AAPS1.0.png)
+**ignoriere die Benachrichtigung nicht.** Neue **AAPS**-Versionen beheben wichtige Sicherheitsthemen. Deswegen muss jeder **AAPS**-Nutzende so schnell wie möglich auf die neueste Version aktualisieren. Dies ist eine Chance die Sicherheit für jeden **AAPS**-Nutzenden und die DIY-Community zu verbessern. Vielen Dank für Dein Verständnis.
 
 (maintenance-android-version-aaps-version)=
 
@@ -62,53 +54,77 @@ WearOS 5, API Level 34 (Android 14) hat [einige Einschränkungen](#BuildingAapsW
 
 (latestrelease)=
 
-(version3400)=
+(version3422)=
+
+## Version 3.4.2.2
+
+- Probleme mit Equil und Medtronic behoben
+- Medtrum-Sicherheit verbessert
+
+(version3421)=
+
+## Version 3.4.2.1
+
+- Equil: Fehler im Koppelungs- und Fortschrittsdialog behoben @MilosKozak
+
+(version3420)=
+
+## Version 3.4.2.0
+
+Erscheinungsdatum: 04.02.2026
+
+- Equil: Resistenzhandling für diverse Modelle korrigiert @hhfcvmars
+- Tidepool: Session-Handling korrigiert @MilosKozak
+- Medtrum: Aktivierungspfad korrigiert, indem doppelte Befüllung vermieden wird @MilosKozak
+- COB: COB-Berechnung korrigiert (deckt gefährlichen Sonderfall ab) @MilosKozak
+
+(version3410)=
 
 ## Version 3.4.1.0
 
-Release date: 03-08-2026
+Erscheinungsdatum: 03.08.2026
 
 ### Core
-- Fix DST handling @MilosKozak
-- Improve and unify normal target identification (mgdl > 99, mmol > 5.5) @MilosKozak
-- SMS: protect RESTART by PIN @MilosKozak
-- Maintenance: warn if wrong directory selected @MilosKozak
+- Zeitumstellungsproblem behoben @MilosKozak
+- Vereinheitlichung und Verbesserung der normalen Ziel-Bestimmung (mgdl > 99, mmol > 5,5) @MilosKozak
+- SMS: Für RESTART jetzt PIN notwendig @MilosKozak
+- Wartung: Warnen, wenn falsches Verzeichnis ausgewählt ist @MilosKozak
 
 ### Verbesserungen in der Pumpenunterstützung
-- **Omnipod Dash**: refactor BLE driver code to omnipod/common module @jwoglom
-- **Omnipod Dash**: try to fix connection state @MilosKozak
-- **Omnipod**: validate profile before pod activation to prevent wasting pods (#4534) @brianV
-- **Medtronic**: fix same encoding type displayed in settings dialog @mifi100
-- **Medtronic**: prepare pump common classes (Tandem preparation) @andy-rozman
-- **RileyLink**: encoding fix (#4519) @mifi100
-- **Equil**: expand insulin pump compatibility by serial number prefix (#4510) @hhfcvmars
-- **Equil**: add logging @MilosKozak
-- **Diaconn G8**: fix log sync bug and add firmware 3.58+ support @miyeongkim
-- **Diaconn**: fix TBR duration unit conversion @miyeongkim
-- **Diaconn**: use commandQueue.loadEvents() for history sync @miyeongkim
-- Allow insulin delivery while loop is suspended but pump is available @cschuijt
+- **Omnipod Dash**: Bereinigung (Refactor) des BLE-Treibercodes für Omnipod/Common Module @jwoglom
+- **Omnipod Dash**: Versuch den Verbindungs-Status zu korrigieren @MilosKozak
+- **Omnipod**: Überprüfe das Profil vor der Pod-Aktivierung, um zu verhindern, dass Pods verschwendet werden (#4534) @brianV
+- **Medtronic**: Korrektur des gleichen Kodierungstyps, der im Einstellungsdialog angezeigt wird @mifi100
+- **Medtronic**: Tandem Vorbereitung - „pump common classes“ vorbereitet @andy-rozman
+- **RileyLink**: Encoding-Fehler behoben (#4519) @mifi100
+- **Equil**: Erweiterung der Insulinpumpenkompatibilität durch einen Seriennummer-Präfix (#4510) @hhfcvmars
+- **Equil**: Logging hinzugefügt @MilosKozak
+- **Diaconn G8**: Log-Sync-Fehler behoben und Unterstützung für Firmware 3.58+ ergänzt @miyeongkim
+- **Diaconn**: Einheitenumwandlung der TBR-Dauer korrigiert @miyeongkim
+- **Diaconn**: commandQueue.loadEvents() wird für den Sync des historischen Verlaufs genutzt @miyeongkim
+- Insulinabgabe bei ausgesetztem Loop aber verfügbarer Pumpe nun möglich @cschuijt
 
 ### Cloud / Backup
-- Add backup to Google Drive @Angus-repo
-- Notify UI on cloud storage error state change @Angus-repo
-- Allow both local and cloud storage at the same time @Angus-repo
+- Backup zu Google Drive hinzugefügt @Angus-repo
+- Benachrichtigen des UI bei Veränderungen des Cloud-Speicherfehlers @Angus-repo
+- Gleichzeitiges Speichern lokal und in der Cloud nun möglich @Angus-repo
 
 ### Tidepool
-- Improve Tidepool OAuth2 migration @MilosKozak
-- Fix indefinite Tidepool BLOCKED state, fix rejecting empty SSIDs @michaeln-synapse
+- Tidepool OAuth2-Migration verbessert @MilosKozak
+- Unbestimmten Tidepool BLOCKED Zustand und leere SSIDs korrigiert @michaeln-synapse
 
 ### Nightscout-Client
-- NSCv3: improve reconnection @MilosKozak
+- NSCv3: Wiederverbindung verbessert @MilosKozak
 
 ### Wear OS
-- Display New IOB in Wizard Result if IOB is used in calculations @olorinmaia
-- Fix Wear BolusProgress with Total Amount @Philoul
+- Neues IOB wird im Bolus-Rechner angezeigt, wenn IOB in der Berechnung genutzt wird @olorinmaia
+- Wear „BolusProgress“ mit Gesamtmenge korrigiert @Philoul
 
-### UI
-- Improve ic_none icon for Site Rotation @Philoul
-- Fix site rotation manage pump setting not being used @samfundev
+### UI (Benutzeroberfläche)
+- „ic_none“-Icon für „Site-Rotation“ verbessert @Philoul
+- Korrigiert: Site Rotation nicht zum Managen der Pumpeneinstellungen berücksichtigt @samfundev
 
-### Contributors
+### Beitragende
 @MilosKozak @Philoul @olorinmaia @jwoglom @mifi100 @andy-rozman @Angus-repo @brianV @cschuijt @hhfcvmars @miyeongkim @samfundev @michaeln-synapse
 
 (version3400)=
@@ -980,3 +996,15 @@ Erscheinungsdatum: 03.11.2018
 - Option, das Display immer an zu lassen.
 - Option, die Hinweise als Systemmeldungen anzuzeigen.
 - Advanced filtering (das erlaubt die Nutzung von “SMB immer an” und “6 Stunden nach dem Essen”) wird unterstützt mit der gepatchten Dexcom App (nicht mit der originalen Dexcom App!) oder xDrip mit dem G5 native mode als BZ-Quelle.
+
+## Version 1.0
+
+```{admonition} First version of **AAPS**
+:class: note
+
+Die erste Testversion war in 2015 und das erste Release in 2016 verfügbar.
+
+Da die Releasefolge und deren Veröffentlichungszeitpunkte immer wieder erfragt werden, haben wir diese hier - sofern verfügbar - zusammengetragen.
+
+```
+![AAPS 1.0](../images/update/AAPS1.0.png)

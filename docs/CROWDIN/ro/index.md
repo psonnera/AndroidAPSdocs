@@ -5,11 +5,11 @@
 ```{admonition} Latest Release
 :class: note
 
-31/12/2025 : Version 3.4 is out. Check the [Release Notes](#latestrelease) to see what's new and get update instructions.
+ 10 April 2026 : Version 3.4.2.2 is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](#UpdateToNewVersion) to update to a the version.
 
 ```
 
-Android APS (**AAPS**) is an open source app for people living with insulin-dependent diabetes. It is an artificial pancreas system (APS) which runs on Android smartphones. **AAPS** uses an OpenAPS software algorithm and aims to do what a real pancreas does: keep blood sugar levels within healthy limits by using automated insulin dosing. To use **AAPS** you need **three** compatible devices: **(1)** an Android phone, **(2)** a continuous glucose monitor (CGM), and **(3)** a FDA/CE approved insulin pump. Optionally you will need cloud services **(4)** to remote control **AAPS**, share your data and store them in a reporting server, then also **(5)** a smartwatch.
+Android APS (**AAPS**) is an open source app for people living with insulin-dependent diabetes. It is an artificial pancreas system (APS) which runs on Android smartphones. **AAPS** uses an OpenAPS software algorithm and aims to do what a real pancreas does: keep blood sugar levels within healthy limits by using automated insulin dosing. Pentru a utiliza <0>AAPS</0> ai nevoie de <0>trei</0> dispozitive compatibile: <0>(1)</0> un telefon Android, <0>(2)</0> un senzor de monitorizare continuă a glicemiei (CGM), și<0>(3)</0>  de o pompă de insulină aprobată FDA/CE.</0></0> Optionally you will need cloud services **(4)** to remote control **AAPS**, share your data and store them in a reporting server, then also **(5)** a smartwatch.
 
 This documentation explains how to setup and use **AAPS**. You can navigate through the **AAPS** documentation either through the menu on the left (and the handy "**Search docs**" function), or by using the [index](#index-aaps-documentation-index) at the bottom of this page.
 
@@ -91,7 +91,8 @@ Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
 Building AAPS <./SettingUpAaps/BuildingAaps.md>
 - Browser Build <./SettingUpAaps/BrowserBuild.md>
-- Computer Build <./SettingUpAaps/ComputerBuild.md>
+- Android Studio Build <./SettingUpAaps/ComputerBuild.md>
+- CLI Build <./SettingUpAaps/CLIBuild.md>
 Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
 Setup Wizard <./SettingUpAaps/SetupWizard.md>
 Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
@@ -149,7 +150,7 @@ AAPS Release Notes <./Maintenance/ReleaseNotes.md>
 Documentation updates <./Maintenance/DocumentationUpdate.md>
 Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
 - Browser Update <./Maintenance/UpdateBrowserBuild.md>
-- Computer Update <./Maintenance/UpdateComputerBuild.md>
+- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
 
 ```
 

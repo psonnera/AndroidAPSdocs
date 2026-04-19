@@ -196,9 +196,15 @@ Sobald die AAPS-App erstellt wurde, wird sie in Deinem Google Cloud-Laufwerk ges
 
 ```
 
+</br>
+
 (aaps-ci-google-drive-auth)=
 
 ### AAPS-CI Google Drive Auth
+
+```{warning}
+No matter which of the prior sets of instructions you followed (option 1 or option 2), you MUST add the Google Drive authorization to successfully use the Browser Build.
+```
 
 Hinweis: Solltest Du die Schritte aus dem Video bereits durchgeführt haben, kannst Du direkt [hierhin](#github-build-apk) springen.
 
@@ -251,6 +257,10 @@ Wechsle zurück auf den GitHub-Tab.
 2. Tippe auf „Add Secret“.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH7.png)
+
+You should have either two (option 1) or five (option 2) secrets entries now.
+
+![](../images/Building-the-App/CI/BrowserBuildGAUTH8.png)
 
 GitHub wird ab jetzt in der Lage sein, die AAPS-APK-Datei in Deinem Google Drive zu speichern, sobald sie erstellt wurde.
 
@@ -312,6 +322,15 @@ Varianten mit der Endung „Debug“ signalisieren, dass die APK im Debug-Modus 
   - Bitte öffne „aaps-ci-preparation.html“ erneut mit der Dateimanager-App und schließe die verbleibenden Schritte ab.
 
   ![aaps_ci_html_not_found](../images/Building-the-App/CI/aaps_ci_html_not_found.png)
+
+(aaps-ci-google-token-expired)=
+### Google Refresh Token Expired
+  - Google OAuth2 refresh tokens will expire if not used for 6 months, and may also become invalid under other conditions (e.g., you have changed your Google account password, or manually revoked access). For more details, see the [Google OAuth2 documentation](https://developers.google.com/identity/protocols/oauth2).
+  - You will see an error indicating that the access token is invalid, as shown below:
+
+  ![aaps_ci_token_expired](../images/Building-the-App/CI/aaps_ci_token_expired.jpg)
+
+  - If your build fails due to an expired or revoked Google refresh token, you will need to redo the [Google Drive Auth](#aaps-ci-google-drive-auth) steps to obtain a new `GDRIVE_OAUTH2` token and update the secret in your GitHub repository, then re-run the build workflow.
 
 (aaps-ci-disable-software)=
 ### Software, die bei der OAUTH-Verifizierung stören könnte, deaktivieren

@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
-31/12/2025 : Version 3.4 is out. Check the [Release Notes](#latestrelease) to see what's new and get update instructions.
+ 10 April 2026 : Version 3.4.2.2 is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](#UpdateToNewVersion) to update to a the version.
 
 ```
 
@@ -91,7 +91,8 @@ Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
 Building AAPS <./SettingUpAaps/BuildingAaps.md>
 - Browser Build <./SettingUpAaps/BrowserBuild.md>
-- Computer Build <./SettingUpAaps/ComputerBuild.md>
+- Android Studio Build <./SettingUpAaps/ComputerBuild.md>
+- CLI Build <./SettingUpAaps/CLIBuild.md>
 Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
 Setup Wizard <./SettingUpAaps/SetupWizard.md>
 Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
@@ -149,7 +150,7 @@ AAPS Release Notes <./Maintenance/ReleaseNotes.md>
 Documentation updates <./Maintenance/DocumentationUpdate.md>
 Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
 - Browser Update <./Maintenance/UpdateBrowserBuild.md>
-- Computer Update <./Maintenance/UpdateComputerBuild.md>
+- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
 
 ```
 
