@@ -62,10 +62,10 @@ Scroll down the next screen and tap **Create Fork**.
 
 ```{note}
 You cannot fork and you see this?</br></br>
-`**Create a new fork**`</br>
-`A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. <u>View existing forks.</u>`</br>
-`*Required fields are marked with an asterisk (*).*`</br>
-`**No available destinations to fork this repository.**`</br></br>
+**`Create a new fork`**</br>
+`A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. View existing forks.`</br>
+*`Required fields are marked with an asterisk (*).`*</br>
+**`No available destinations to fork this repository.`**</br></br>
 This means you already have an existing fork of AndroidAPS.</br>
 Make sure it's up to date and continue to Preparation Steps.
 ```
@@ -196,9 +196,15 @@ Skip the next section and continue [here](#aaps-ci-google-drive-auth).
 
 ```
 
+</br>
+
 (aaps-ci-google-drive-auth)=
 
 ### AAPS-CI Google Drive Auth
+
+```{warning}
+No matter which of the prior sets of instructions you followed (option 1 or option 2), you MUST add the Google Drive authorization to successfully use the Browser Build.
+```
 
 Note: If you already followed this part in the video, you can now skip to [here](#github-build-apk).
 
@@ -251,6 +257,10 @@ Switch back to the GitHub tab.
 2. Tap Add secret.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH7.png)
+
+You should have either two (option 1) or five (option 2) secrets entries now.
+
+![](../images/Building-the-App/CI/BrowserBuildGAUTH8.png)
 
 GitHub will now be able to store the AAPS apk file in your Google Drive, once built.
 
@@ -312,6 +322,15 @@ Variants ending with “Debug” indicates that the APK will be built in debug m
   - Please reopen aaps-ci-preparation.html using the file manager app and complete the remaining steps.
 
   ![aaps_ci_html_not_found](../images/Building-the-App/CI/aaps_ci_html_not_found.png)
+
+(aaps-ci-google-token-expired)=
+### Google Refresh Token Expired
+  - Google OAuth2 refresh tokens will expire if not used for 6 months, and may also become invalid under other conditions (e.g., you have changed your Google account password, or manually revoked access). For more details, see the [Google OAuth2 documentation](https://developers.google.com/identity/protocols/oauth2).
+  - You will see an error indicating that the access token is invalid, as shown below:
+
+  ![aaps_ci_token_expired](../images/Building-the-App/CI/aaps_ci_token_expired.jpg)
+
+  - If your build fails due to an expired or revoked Google refresh token, you will need to redo the [Google Drive Auth](#aaps-ci-google-drive-auth) steps to obtain a new `GDRIVE_OAUTH2` token and update the secret in your GitHub repository, then re-run the build workflow.
 
 (aaps-ci-disable-software)=
 ### Disable Software That May Interfere With OAUTH Verification
