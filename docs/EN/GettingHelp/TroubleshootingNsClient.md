@@ -1,4 +1,4 @@
-(Troubleshooting-NSClient-troubleshooting-nsclient)=
+<a id="Troubleshooting-NSClient-troubleshooting-nsclient"></a>
 # Troubleshooting NSClient
 
 NSClient relies on stable communication with Nightscout. An unstable connection leads to synchronization errors and high data usage.

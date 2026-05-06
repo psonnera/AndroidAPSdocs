@@ -4,10 +4,6 @@ These instructions are for configuring the Medtrum insulin pump.
 
 This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.
 
-```{contents} Table of contents
-:depth: 1
-:local: true
-```
 
 ## Pump capabilities with AAPS
 * All loop functionality supported (SMB, TBR etc)
@@ -104,7 +100,7 @@ When enabled a Notification will be shown on the phone when a pump warning occur
 
 In either case these warnings are also shown on the Medtrum overview screen under [Active alarms](#medtrum-active-alarms).
 
-(medtrum-patch-expiration)=
+<a id="medtrum-patch-expiration"></a>
 #### Patch Expiration
 
 ***Default: Enabled.***
@@ -235,7 +231,7 @@ Remove safety lock and press the needle button on the patch to insert the cannul
 
 Press **Next** to activate the patch.
 
-(medtrum-activate-patch)=
+<a id="medtrum-activate-patch"></a>
 ##### Activate Patch
 
 ![Activate patch](../images/pump/medtrum/activation/ActivatePatch.png)
@@ -246,7 +242,7 @@ When activation is complete, the following screen will appear
 
 Press **OK** to return to main screen.
 
-(nano-deactivate-patch)=
+<a id="nano-deactivate-patch"></a>
 
 ### Deactivate patch
 
@@ -264,7 +260,7 @@ If Android APS in unable to deactivate the patch (For instance because the pumpb
 
 Once deactivation is complete, press **OK** to return to main screen or press **Next** to continue the process to activate a new patch.
 
-(nano-resume-interrupted-activation)=
+<a id="nano-resume-interrupted-activation"></a>
 
 ### Resume interrupted activation
 
@@ -278,7 +274,7 @@ Press **Next** to continue the activation process. Press **Discard** to discard 
 
 The driver will try to determine the current status of the patch activation. If this was successful it will go into the activation progress at the current step.
 
-(nano-overview)=
+<a id="nano-overview"></a>
 
 ## Overview
 
@@ -316,7 +312,7 @@ This shows the last bolus that was delivered.
 
 This shows the active bolus that is currently being delivered.
 
-(medtrum-active-alarms)=
+<a id="medtrum-active-alarms"></a>
 ### Active alarms:
 
 This shows any active alarms that are currently active.
@@ -353,7 +349,7 @@ This button will refresh the status of the patch.
 
 This button will start the process to change the patch. See [Activate patch](#medtrum-activate-patch) for more information.
 
-(nano-reset-alarms)=
+<a id="nano-reset-alarms"></a>
 
 ### Reset alarms
 

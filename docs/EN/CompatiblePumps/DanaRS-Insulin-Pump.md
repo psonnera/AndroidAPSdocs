@@ -8,7 +8,7 @@ _These instructions are for configuring the app and your pump if you have a Dana
 
 * In DanaRS/i pump "BASAL A" is used by the app. Existing data gets overwritten.
 
-(DanaRS-Insulin-Pump-pairing-pump)=
+<a id="DanaRS-Insulin-Pump-pairing-pump"></a>
 ## Pairing pump
 
 * On AAPS homescreen click hamburger menu on the top left corner and go to Config Builder.
@@ -40,7 +40,7 @@ _These instructions are for configuring the app and your pump if you have a Dana
 * Set bolus step on pump to 0.05 U/h using Doctors menu (see pump user guide).
 * Enable extended boluses on pump
 
-(DanaRS-Insulin-Pump-default-password)=
+<a id="DanaRS-Insulin-Pump-default-password"></a>
 
 ### Default password
 
@@ -51,7 +51,7 @@ _These instructions are for configuring the app and your pump if you have a Dana
   * Number 3 is manifacturing date. 
   * For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AAPS.
 
-(DanaRS-Insulin-Pump-change-password-on-pump)=
+<a id="DanaRS-Insulin-Pump-change-password-on-pump"></a>
 ## Change password on pump
 
 * Press OK button on pump
@@ -87,7 +87,7 @@ _These instructions are for configuring the app and your pump if you have a Dana
 
   ![DanaRS Exit](../images/pump/dana/DanaRSPW_07_Exit.png)
 
-(DanaRS-Insulin-Pump-dana-rs-specific-errors)=
+<a id="DanaRS-Insulin-Pump-dana-rs-specific-errors"></a>
 ## Dana RS specific errors
 
 ### Error during insulin delivery

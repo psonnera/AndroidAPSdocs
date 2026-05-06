@@ -39,11 +39,11 @@ In case your main **AAPS** phone is lost or damaged, having a copy of the APK av
 
 ### AAPS settings file (also referred to as 'Preferences')
 
-```{admonition} Where are preferences stored on my phone?
-:class: tip
+::: tip Where are preferences stored on my phone?
 You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
 You can also change the **AAPS Directory** in Preferences > [Maintenance Settings](#preferences-maintenance-settings).
-```
+:::
+
 
 With a copy of the APK installer file (see above) and your **Settings** file, you can quickly get up and running on an existing or new phone.
 
@@ -69,15 +69,15 @@ Exporting the AAPS settings to file enables you to restore its configuration to 
 
 3. Using the file explorer on your phone (commonly called “Files” or “My Files”) navigate to Internal Storage > AAPS > preferences. Here you will see a copy of all exported preferences files. The file name should be `YYYY-MM-DD_Time_appname.json`. Upload this file to the cloud platform of your choice. Then from the cloud platform, also download a copy to your local computer.
 
-(ExportImportSettings-Settings-Export)=
+<a id="ExportImportSettings-Settings-Export"></a>
 
 ## Settings Export ##
 
-```{admonition} Where are preferences stored on my phone?
-:class: tip
+::: tip Where are preferences stored on my phone?
 You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
 You can also change the **AAPS Directory** in Preferences > [Maintenance Settings](#preferences-maintenance-settings).
-```
+:::
+
 
 It is recommended to do regular settings exports, especially before and after making configuration changes. You can choose to do exports **manually or (preferred) through automation**. Make sure to take a note of your AAPS master password and to backup your settings files by copying them off your phone to for instance a cloud storage location.
 
@@ -89,7 +89,7 @@ To export or import settings, use the **import or export buttons** in the AAPS *
 
 ![Maintenance menu export/import buttons](../images/Maintenance/maintenance_menu_import_export_400px.png)
 
-(ExportImportSettings-Automating-Settings-Export)=
+<a id="ExportImportSettings-Automating-Settings-Export"></a>
 ### Automating Settings Export ###
 
 For doing automating settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) enable the option "**Unattended Settings Exports**" in [Preferences > Maintenance](#preferences-maintenance-settings).
@@ -100,14 +100,14 @@ _**Note:** On importing settings to user always needs to enter the AAPS password
 
 ![Maintenance menu unattended Settings Export](../images/Maintenance/maintenance_menu_preferences_400px.png)
 
-(ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps)=
+<a id="ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps"></a>
 ## Restoring from your backups on a new phone or fresh installation of AAPS
 
-```{admonition} Where are preferences stored on my phone?
-:class: tip
+::: tip Where are preferences stored on my phone?
 You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
 You can also change the **AAPS Directory** in Preferences > [Maintenance Settings](#preferences-maintenance-settings).
-```
+:::
+
 
 Use these instructions if you have a back-up of your APK and **Preferences** that you want to load on to a new phone or if you needed to delete and reinstall the APK on your existing phone for any reason.
 
@@ -117,10 +117,10 @@ If you are updating **AAPS** after you lost or replaced your original keystore (
 
 If needed, [set up your CGM/BG source receiver](../Getting-Started/CompatiblesCgms.md) prior to the steps listed below 
 
-```{admonition} Tubeless pumps (Omnipod and Medtrum) users
-:class: warning
-Importing a **Preferences** file will deactivate your current pod if those **Preferences** were exported during a different active pod session. 
-```
+::: warning Tubeless pumps (Omnipod and Medtrum) users
+Importing a **Preferences** file will deactivate your current pod if those **Preferences** were exported during a different active pod session.
+:::
+
 
 1. Using the back-up copy of your APK from above, follow the instructions for a [new installation](../SettingUpAaps/TransferringAndInstallingAaps.md) 
 

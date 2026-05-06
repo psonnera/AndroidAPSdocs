@@ -21,7 +21,7 @@ The zip file can also contain some additional resource files:
   - image files are often used as background of text views or for dynamic animation (like battery level from 0% to 100%)
   - font files allow you to use dedicated fonts within your watchface
 
-(cwf-reference-json-structure)=
+<a id="cwf-reference-json-structure"></a>
 
 ## JSON Structure
 
@@ -33,7 +33,7 @@ JSON files can be edited in Notepad (or notepad++) text editor (prefer notepad++
 - the json file is a whole block so it starts by  `{`  and ends by `}`, and inside this file all embedded blocks are associated to a `"key"` that should be unique within the block
 - To improve readability of json file, it's generally indented (each new key is on a new line, each new block is shifted on the right by 4 spaces characters)
 
-(cwf-reference-metadata-settings)=
+<a id="cwf-reference-metadata-settings"></a>
 
 ### Metadata Settings
 
@@ -56,7 +56,7 @@ Note that `/` used for the date is a special character, so to be recognize corre
 
 You can see in some json file an additional key `"filename"`, this key will be automatically created or updated when the custom watchface will be loaded within AAPS (it will be used to show to the user the zip filename within exports folder), so you can remove this key within metadata block.
 
-(cwf-reference-general-parameter-settings)=
+<a id="cwf-reference-general-parameter-settings"></a>
 
 ### General parameter settings
 
@@ -76,7 +76,7 @@ See below an example of general parameters
 "pointSize": 2,
 "enableSecond": true,
 ```
-(cwf-reference-imageview-settings)=
+<a id="cwf-reference-imageview-settings"></a>
 
 ### ImageView settings
 
@@ -100,7 +100,7 @@ To have second_hand colored with default BG color (lowRange, midRange or highRan
     "color": "bgColor"
 ```
 
-(cwf-reference-textview-settings)=
+<a id="cwf-reference-textview-settings"></a>
 
 ### TextView settings
 
@@ -148,7 +148,7 @@ If you want to customize background image of a text view, then you can use the k
 
 You also have 4 specific textViews (named freetext1 to freetext4) that have a specific parameter `"textvalue":` that can be used to set for example a label
 
-(cwf-reference-chartview-settings)=
+<a id="cwf-reference-chartview-settings"></a>
 
 ### ChartView settings
 
@@ -167,7 +167,7 @@ Standard settings for this view is very simple:
 ```
 The 2 additional parameters you can include for Chart view is a background color (default is transparent), using `"color"` key or a background image using `"background"` key.
 
-(cwf-reference-how-to-build-watchface)=
+<a id="cwf-reference-how-to-build-watchface"></a>
 
 ## How to build/design your first Watchface
 
@@ -273,7 +273,7 @@ If you want to customize hour_hand, minute_hand or second_hand for an analog wat
 
 You can also noticed within [List of Hardcoded resource files](#cwf-reference-list-of-hardcoded-resource-files) that for each image view, you have two additional hardcoded filenames `High` and `Low` (for example you can include other images named `BackgroundHigh.jpg` and `BackgroundLow.jpg` within zip file). then image will automatically change according to you BG level (within Range, Hyper or Hypo). See AIMICO watchface as example.
 
-(cwf-reference-tune-image-color)=
+<a id="cwf-reference-tune-image-color"></a>
 
 ### Tune image color
 
@@ -299,11 +299,11 @@ Several defaults font are already available within wear apk (see font keys inclu
 
 Keep in mind that some fonts can be included into big files (and you are limited to a maximum size for zip file). So if you only use very few characters (numbers, `.`, `,`), you can use free tools to remove unused characters (for example [here](https://products.aspose.app/font/generator/ttf-to-ttf)) and then reduce font size.
 
-(cwf-reference-advanced-features)=
+<a id="cwf-reference-advanced-features"></a>
 
 ## Advanced features
 
-(cwf-reference-preference-feature)=
+<a id="cwf-reference-preference-feature"></a>
 
 ### Preferences Feature
 
@@ -342,7 +342,7 @@ In example below Gota watchface has one required parameter. If authorization is 
 
 
 
-(cwf-reference-twinview-feature)=
+<a id="cwf-reference-twinview-feature"></a>
 
 ### TwinView Feature
 
@@ -392,7 +392,7 @@ If the twin views are positioned vertically, in this case you must use the key `
     "leftOffsetTwinHidden": -25
 },
 ```
-(cwf-reference-dyndata-feature)=
+<a id="cwf-reference-dyndata-feature"></a>
 
 ### DynData Feature
 
@@ -414,7 +414,7 @@ Note: to be able to see the transparency, all these images are on a yellow backg
 - On the second row you see the 3 scales of dynamic range for avg_delta that will also be managed by dynData
 - On the third row, chartBackground.jpg will be linked manually within chart view, HourHand.png and finally MinuteHand.png files will be automatically mapped with associated views
 
-(cwf-reference-background-management)=
+<a id="cwf-reference-background-management"></a>
 
 #### **Background management**
 
@@ -480,7 +480,7 @@ Of course, the sizing and positioning of the view must be done to the pixel!
     "background": "chartBackground"
 },
 ```
-(cwf-reference-avg-delta-management)=
+<a id="cwf-reference-avg-delta-management"></a>
 
 #### **Avg delta management**
 
@@ -534,7 +534,7 @@ Then we will use a series of images, starting from `"image1":` to `"image8":`. T
 - between -20mgdl and 20mgdl, the overall range is 40mgdl, divided by 8 (number of images provided), we will have 8 steps of 5mgdl
 - Now we can map background images according to avg_delta value, starting from the lowest values: between -20 and -15, and also between -15 and -10 we will use  `steampunk_gauge_mgdl_20` for the scale, then between -10 and -5 `steampunk_gauge_mgdl_10`, and so on until +15 and +20 where we will again use `steampunk_gauge_mgdl_20` background image
 
-(cwf-reference-dynamic-rotation-management)=
+<a id="cwf-reference-dynamic-rotation-management"></a>
 
 **freetext2 to freetext4**
 
@@ -680,7 +680,7 @@ Here we use exactly the same logic that for dynamic background image, but with d
 - `"fontColor1"` (dark red) will be used for all values below 20%, and white will be used for all values above this threshold.
 - If you want to lower the threshold to "below 10%", you just have to add 5 additional keys from `"fontColor6"` to `"fontColor10"` , but you can also adjust each color if you want progressive variation from green to yellow, orange and red...
 
-(cwf-reference-dynpref-feature)=
+<a id="cwf-reference-dynpref-feature"></a>
 
 ### DynPref Feature
 
@@ -927,7 +927,7 @@ Now the text will be in black on white background with a size of 19
 - Do not forget to include the numéric index after the key (when you use for example `"textsize"`key within a view, you will have to use `"textsize1"`within the dynPref  value block, because it's a "dynData" format, so linked to value with a single step in this case)
 - Only one key `"valueKey"` should be set for one view, so if the final `dynData` block is built from several `dynPref`blocks, do not include several `"valueKey"`  (and associated `"minData"`, `"maxData"`, ...)
 
-(cwf-reference-new-v2-features)=
+<a id="cwf-reference-new-v2-features"></a>
 
 ### New Features in CustomWatchface V2 (AAPS V3.3.0 or above)
 
@@ -943,7 +943,7 @@ CustomWatchface V2 includes these new features:
 - [New Formatting Feature](#cwf-reference-new-formating-feature)
 - [Show External data for Follower](#cwf-reference-show-external-datas) (up to 3 set of data within one single Watchface, for AAPS, AAPSCLIENT and AAPSCLIENT2)
 
-(cwf-reference-new-status-feature)=
+<a id="cwf-reference-new-status-feature"></a>
 
 #### New Status view
 
@@ -961,7 +961,7 @@ This `"status"` view is associated with `"key_show_loop_status"` key (within dyn
 
 This view could be managed in V1 using `"iob1"`, `"iob2"` and `"bgi"`  existing views, but with the need of complex dynPref settings to manage spacing within each information according to different settings selected within Watch.
 
-(cwf-reference-new-temp-target-feature)=
+<a id="cwf-reference-new-temp-target-feature"></a>
 
 #### New TempTarget view
 
@@ -985,7 +985,7 @@ DynData value equals:
 
 Note that this view is also available for external data (see [below](#cwf-reference-show-external-datas)) with `"tempTarget_Ext1"` and  `"tempTarget_Ext2"` keys (View and DynData)
 
-(cwf-reference-new-reservoir-level-feature)=
+<a id="cwf-reference-new-reservoir-level-feature"></a>
 
 #### New Reservoir Level view
 
@@ -1007,7 +1007,7 @@ The DynData Keys associated with Reservoir Level are:
 
 Note that this view is also available for external data (see [below](#cwf-reference-show-external-datas)) with `"reservoir_Ext1"`, `"reservoir_Ext2"`, `"reservoirLevel_Ext1"` and  `"reservoirLevel_Ext2"` keys (View and DynData).
 
-(cwf-reference-new-formating-feature)=
+<a id="cwf-reference-new-formating-feature"></a>
 
 #### New Formatting feature for DynData or DynPref
 
@@ -1151,7 +1151,7 @@ Let's now take a look on timestamp dynPref block to manage plural:
 
 - For full documentation you can see [Class Formatter](https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html)
 
-(cwf-reference-show-external-datas)=
+<a id="cwf-reference-show-external-datas"></a>
 
 #### Show External data for Follower
 
@@ -1169,15 +1169,15 @@ Additionally three new views (`"patient_name"` , `"patient_name_Ext1"`  and `"pa
 
 ![CustomWatchface_7](../images/CustomWatchface_7.png)
 
-(cwf-reference-key-and-keyvalue-reference)=
+<a id="cwf-reference-key-and-keyvalue-reference"></a>
 
 ## Key and KeyValue reference
 
-(cwf-reference-list-of-metadata-keys)=
+<a id="cwf-reference-list-of-metadata-keys"></a>
 
 ### List of Metadata keys
 
-(cwf-reference-list-of-standard-metadata-keys)=
+<a id="cwf-reference-list-of-standard-metadata-keys"></a>
 
 #### List of Standard information metadata keys 
 
@@ -1190,7 +1190,7 @@ Additionally three new views (`"patient_name"` , `"patient_name_Ext1"`  and `"pa
 | `"author_version"` | The author can specify here the version of his watchface     |
 | `"comment"`        | Free text that can be used to give some information or limitation of current watchface |
 
-(cwf-reference-preference-keys)=
+<a id="cwf-reference-preference-keys"></a>
 
 #### Preference keys
 
@@ -1222,7 +1222,7 @@ Additionally three new views (`"patient_name"` , `"patient_name_Ext1"`  and `"pa
 | `"filename"`          | This key will be created (or updated) automatically when the watchface is loaded and will contains local zip filename within exports folder |
 | `"cwf_authorization"` | this key will be created (when the watchface is loaded) and updated each time authorization preference is changed in Wear settings, and it will be used to synchronize authorization to watch |
 
-(cwf-reference-list-of-general-parameters)=
+<a id="cwf-reference-list-of-general-parameters"></a>
 
 ### List of General parameters
 
@@ -1241,7 +1241,7 @@ Additionally three new views (`"patient_name"` , `"patient_name_Ext1"`  and `"pa
 | `"dayNameFormat"`        | "E" (default): from "E" to "EEEE" specify dayname format (number, short name, full name) tbc |
 | `"monthFormat"`          | "MMM" (default): from "M" to "MMMM" specify month format (number, short name, full name) |
 
-(cwf-reference-list-of-hardcoded-resource-files)=
+<a id="cwf-reference-list-of-hardcoded-resource-files"></a>
 
 ### List of HardCoded resource files
 
@@ -1267,7 +1267,7 @@ For most images, High and Low suffix allow tuning of image according to BG level
 
 For each above filenames, extension can be either `.jpg`, `.png` or `.svg`. But be careful, `.jpg`doesn't manage transparency (so most of the files should be with .png or .svg to not hide view that are behind...)
 
-(cwf-reference-list-of-view-keys)=
+<a id="cwf-reference-list-of-view-keys"></a>
 
 ### List of View keys
 
@@ -1289,7 +1289,7 @@ Note: all keys including `_Ext1` or `_Ext2` at the end are new and dedicated for
 | `"iob2"`<br/>`"iob2_Ext1"` *<br/>`"iob2_Ext2"` *             | Text View           | IOB Total or IOB Detailed                                    |                                                              |
 | `"cob1"`<br/>`"cob1_Ext1"` *<br/>`"cob1_Ext2"` *             | Text View           | Carb label                                                   |                                                              |
 | `"cob2"`<br/>`"cob2_Ext1"` *<br/>`"cob2_Ext2"` *             | Text View           | COB Value                                                    |                                                              |
-| `"delta"`<br/>`"delta_Ext1"` *<br/>`"delta_Ext2"` *          | Text View           | Short delta (5 min)                                          | delta<BR/>delta_Ext1<br/>delta_Ext2                          |
+| `"delta"`<br/>`"delta_Ext1"` *<br/>`"delta_Ext2"` *          | Text View           | Short delta (5 min)                                          | delta<br/>delta_Ext1<br/>delta_Ext2                          |
 | `"avg_delta"`<br/>`"avg_delta_Ext1"` *<br/>`"avg_delta_Ext2"` * | Text View           | Avg Delta (15 min)                                           | avg_delta<br/>avg_delta_Ext1<br/>avg_delta_Ext2              |
 | `"tempTarget"`*<br/>`"tempTarget_Ext1"` *<br/>`"tempTarget_Ext2"` * | Text View           | BG Target (single value or min - max targets values)         | tempTarget<br/>tempTarget_Ext1<br/>tempTarget_Ext2           |
 | `"reservoir"`*<br/>`"reservoir_Ext1"` *<br/>`"reservoir_Ext2"` * | Text View           | Reservoir level                                              | reservoir<br/>reservoirLevel<br/>reservoir_Ext1<br/>reservoirLevel_Ext1<br/>reservoir_Ext2<br/>reservoirLevel_Ext2 |
@@ -1318,11 +1318,11 @@ Note: all keys including `_Ext1` or `_Ext2` at the end are new and dedicated for
 
 **View added in Custom Watchface V2.0 or above (available on AAPS 3.3.0 wear apk or above)*
 
-(cwf-reference-list-of-json-keys)=
+<a id="cwf-reference-list-of-json-keys"></a>
 
 ### List of Json keys
 
-(cwf-reference-common-keys)=
+<a id="cwf-reference-common-keys"></a>
 
 #### Common keys
 
@@ -1345,7 +1345,7 @@ Note: all keys including `_Ext1` or `_Ext2` at the end are new and dedicated for
 | `"leftOffsetTwinHidden"` | int     | number of pixel to shift view position horizontally if twin view is hidden (positive or negative value)<br />leftOffsetTwinHidden= (leftOffset twinView - leftOffset thisView)/2 |
 | `"dynPref"`              | string  | key block name that will specify dynamic pref to link and associated animation (colors, image, shift, rotation)<br />`"dynPref": "customName",` (see below ) |
 
-(cwf-reference-textview-keys)=
+<a id="cwf-reference-textview-keys"></a>
 
 #### TextView keys
 
@@ -1359,12 +1359,12 @@ Note: all keys including `_Ext1` or `_Ext2` at the end are new and dedicated for
 | `"allCaps"`    | boolean | true if you want text in uppercase (mainly day name or month name) |
 | `"background"` | string  | `resource_filename` you can include a resource image as background of the text view (resource file will be resized to fit height and width of text view, but keeping image ratio). text value will be in front of background image.<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, in front of background image |
 | `"color"`      | string  | Manage the color of view Background or tune color of image (if bitmap only)<br />`"#RRVVBB"`: color code in RVB format, hexadecimal values #FF0000 is red<br />`"#AARRVVBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value<br />- For default embedded image (hand, dial) color will be applied directly, for bitmap image (jpg or png) this will apply a saturation gradient filter on imagae<br />- For svg this parameter will have no effect (color of svg files cannot be modified)<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, in front of background image |
-| `"textvalue"`  | string  | Key specific to the 4 free text views included into the layout (from freetext1 to freetext4), this allow you to set the text that should be included (can be a label, or just `:` if you want to add a separator between hour view and minute view...)<BR>From Custom Watchface plugin v2 (AAPS 3.3), textvalue can be used to include a format string for the other textViews (to use with `dynValue` key and `dynData` or `dynPref`). for example |
+| `"textvalue"`  | string  | Key specific to the 4 free text views included into the layout (from freetext1 to freetext4), this allow you to set the text that should be included (can be a label, or just `:` if you want to add a separator between hour view and minute view...)<br/>From Custom Watchface plugin v2 (AAPS 3.3), textvalue can be used to include a format string for the other textViews (to use with `dynValue` key and `dynData` or `dynPref`). for example |
 | `"dynValue"`*  | boolean | true if you want to include raw value in (double). Useful with `texvalue` key if you want a dedicated format to show value |
 
 **Key added in Custom Watchface V2.0 or above (available on AAPS 3.3.0 wear apk or above)*
 
-(cwf-reference-imageview-keys)=
+<a id="cwf-reference-imageview-keys"></a>
 
 #### ImageView keys
 
@@ -1372,7 +1372,7 @@ Note: all keys including `_Ext1` or `_Ext2` at the end are new and dedicated for
 | --------- | ------ | ------------------------------------------------------------ |
 | `"color"` | string | Manage the color of view Background or tune color of image (if bitmap only)<br />`"#RRVVBB"`: color code in RVB format, hexadecimal values #FF0000 is red<br />`"#AARRVVBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value<br />- For default embedded image (hand, dial) color will be applied directly, for bitmap image (jpg or png) this will apply a saturation gradient filter on imagae<br />- For svg this parameter will have no effect (color of svg files cannot be modified)<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, in front of background image |
 
-(cwf-reference-chartview-keys)=
+<a id="cwf-reference-chartview-keys"></a>
 
 #### ChartView keys
 
@@ -1381,7 +1381,7 @@ Note: all keys including `_Ext1` or `_Ext2` at the end are new and dedicated for
 | `"color"`      | string | Manage the color of view Background or tune color of image (if bitmap only)<br />`"#RRVVBB"`: color code in RVB format, hexadecimal values #FF0000 is red<br />`"#AARRVVBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value<br />- For default embedded image (hand, dial) color will be applied directly, for bitmap image (jpg or png) this will apply a saturation gradient filter on imagae<br />- For svg this parameter will have no effect (color of svg files cannot be modified)<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, in front of background image |
 | `"background"` | string | `resource_filename` you can include a resource image as background of the text view (resource file will be resized to fit height and width of text view, but keeping image ratio). text value will be in front of background image.<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, in front of background image |
 
-(cwf-reference-key-values)=
+<a id="cwf-reference-key-values"></a>
 
 ### Key values
 
@@ -1406,7 +1406,7 @@ Note: all keys including `_Ext1` or `_Ext2` at the end are new and dedicated for
 | `"bold_italic"`              | fontStyle  |                                                              |
 | `"italic"`                   | fontStyle  |                                                              |
 
-(cwf-reference-dyndata-keys)=
+<a id="cwf-reference-dyndata-keys"></a>
 
 ### DynData keys
 
@@ -1442,13 +1442,13 @@ Note: all keys including `_Ext1` or `_Ext2` at the end are new and dedicated for
 
 **Key added in Custom Watchface V2.0 or above (available on AAPS 3.3.0 wear apk or above)*
 
-(cwf-reference-dyndata-key-values)=
+<a id="cwf-reference-dyndata-key-values"></a>
 
 ### DynData key values
 
 | Key value                                                    | key      | comment                                                      |
 | ------------------------------------------------------------ | -------- | ------------------------------------------------------------ |
-| `"sgv"`<br/>`"sgv_Ext1"` *<br>`"sgv_Ext2"` *                 | valueKey | default minData = 39 mgdl<br />default maxData = 400 mgdl<br />- Note that real maxData is linked to your sensor and units are always in mgdl for internal values |
+| `"sgv"`<br/>`"sgv_Ext1"` *<br/>`"sgv_Ext2"` *                 | valueKey | default minData = 39 mgdl<br />default maxData = 400 mgdl<br />- Note that real maxData is linked to your sensor and units are always in mgdl for internal values |
 | `"sgvLevel"`<br/>`"sgvLevel_Ext1"` *<br/>`"sgvLevel_Ext2"` * | valueKey | default minData = -1 (Hypo)<br />default maxData = 1 (Hyper)<br />if BG is within Range = 0 |
 | `"direction"`<br/>`"direction_Ext1"` *<br/>`"direction_Ext2"` * | valueKey | default minData = 1 (double Down)<br />default maxValue = 7 (double Up)<br />flat arrow data = 4<br />Error or missing data = 0 (??) |
 | `"delta"`<br/>`"delta_Ext1"` *<br/>`"delta_Ext2"` *          | valueKey | default minData = -25 mgdl<br />default maxData = 25 mgdl<br />- Note that real min and maxData can be above, and units are always mgdl for internal values |
@@ -1467,7 +1467,7 @@ Note: all keys including `_Ext1` or `_Ext2` at the end are new and dedicated for
 
 **Key added in Custom Watchface V2.0 or above (available on AAPS 3.3.0 wear apk or above)*
 
-(cwf-reference-dynpref-keys)=
+<a id="cwf-reference-dynpref-keys"></a>
 
 ### DynPref keys
 
@@ -1481,7 +1481,7 @@ Note: all keys including `_Ext1` or `_Ext2` at the end are new and dedicated for
 | `"true"`         | block  | most preferences will set a boolean `"true"` or `"false"`. You will specify the dynData block to use if preference selected by user is true.<br />Note that if the block also contains a `"dynPref":`key, the dynData block will be merged with other block. This allow you to tune for example color according to one preference, and textsize according to another preference |
 | `"false"`        | block  | most preferences will set a boolean `"true"` or `"false"`. You will specify the dynData block to use if preference selected by user is false.<br />Note that if the block also contains a `"dynPref":`key, the dynData block will be merged with other block. This allow you to tune for example color according to one preference, and textsize according to another preference |
 
-(cwf-reference-prefkey-values)=
+<a id="cwf-reference-prefkey-values"></a>
 
 ### PrefKey values
 

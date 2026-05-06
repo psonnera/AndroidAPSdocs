@@ -4,19 +4,11 @@ In addition to the range of possibilities available for remotely controlling _an
 
 A good overview of the extensive options available for following **AAPS** is at [Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#) webpage.
 
-```{contents} Table of contents
-:depth: 1
-:local: true
-```
 
 The most common strategies used in combination with **AAPS** are explained in more detail below.
 
 ## Smartphone apps
 
-```{contents} These are some of the main “follower” apps used by **AAPS** users. All of these apps are “free”: 
-:depth: 1
-:local: true
-```
 
 ### Dexcom Follow ([Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl) and [iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080))
 
@@ -121,8 +113,9 @@ If your **AAPS** data source is not xDrip+ but you can display BG data from the 
 
 xDripSwift was created from porting the original xDrip app to iOS and evolved to "xDrip for iOS" written **xDrip4iOS** . 
 
-```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
-:class: dropdown
+<details>
+<summary>Further detail about how to attempt to obtain the original **xDrip4iOS** app</summary>
+
 The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) is the main community support for xDrip4iOS and Shuggah. **xDrip4iOS** can connect to many different CGM systems and transmitters and display blood glucose values, charts and statistics as well as provide alarms. It can also upload to Nightscout or act as a [follower app for Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/). 
 
 "How can I get **xDrip4iOS** on my iPhone?"
@@ -133,7 +126,9 @@ There are two options:
 If you want, you can then become a "releaser" and [share a Personal Testflight xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/install/personal_testflight/) with up to 100 other people to help them.
 
 2. You join the [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) and read the pinned posts for current methods to get the app. **You should not ask for an invitation to the app** (read the group rules).
-```
+
+</details>
+
 
 
 
@@ -175,10 +170,6 @@ See [here](../Getting-Started/Watches.md).
 
 ## Devices for following AAPS
 
-```{contents} Devices include:
-:depth: 1
-:local: true
-```
 
 ### M5 stack
 

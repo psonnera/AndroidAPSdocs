@@ -68,7 +68,7 @@ It is strongly recommended to follow this process with a **new sensor**. While i
 
 ### First download and install the apps below
 
-(Libre2_OOP2)=
+<a id="Libre2_OOP2"></a>
 
 - **OOP2** - Versions of the oop2 can be found at:
 
@@ -80,7 +80,7 @@ It is strongly recommended to follow this process with a **new sensor**. While i
 
 [*xDrip+.apk*](https://github.com/NightscoutFoundation/xDrip/releases)
 
-(minimallooper-started-sensor)=
+<a id="minimallooper-started-sensor"></a>
 
 ### What if my sensor is already started? Can I still get reading in xDrip+? YES!
 
@@ -96,7 +96,7 @@ Many people have asked if this method can be used with an already active sensor 
 
 *NOTE: If there are settings in the screenshots that are not called out with a BOX specifically and are UNCHECKED (IE, disabled) then PLEASE KEEP THEM DISABLED. The screenshots are reflective of a working configuration for ALL settings shown. If you want to experiment turning other features on/off after you have a working sensor, you are free do to so at your own risk.*
 
-(minimallooper-step1)=
+<a id="minimallooper-step1"></a>
 
 ### **Step 1: Application Installation and Configuration**
 
@@ -120,7 +120,7 @@ Many people have asked if this method can be used with an already active sensor 
 
 **Install xDrip+** minimum version: latest release. Further documentation on xDrip+ installation and setup can be found [*here*](https://androidaps.readthedocs.io/en/latest/Configuration/xdrip.html).
 
-(minimallooper-step2)=
+<a id="minimallooper-step2"></a>
 
 ### **Step 2: xDrip+ Settings Configuration**
 
@@ -154,11 +154,13 @@ Many people have asked if this method can be used with an already active sensor 
 
 You can setup xDrip+ using the QR code below. You need to scan it (or load the picture) in xDrip+ -> Auto Configure.
 
-```{admonition} QR Code
-:class: dropdown
+<details>
+<summary>QR Code</summary>
 
 ![Setup Bluetooth](../images/cgm/minimal00per/qr_libre2direct-nocalib.png)
-```
+
+</details>
+
 
 ![xDrip+ BT settings](../images/cgm/minimal00per/xdripBT1.png)
 
@@ -169,11 +171,13 @@ Once scanned the QR code above, if you have a Samsung phone (but this is also us
 - *Trust Auto-Connect*: **off**
 - *Use Background Scans*: **off**
 
-```{admonition} QR Code
-:class: dropdown
+<details>
+<summary>QR Code</summary>
 
 ![Setup Bluetooth](../images/cgm/minimal00per/qr_libre2direct_samsung.png)
-```
+
+</details>
+
 
 ![xDrip+ BT settings](../images/cgm/minimal00per/xdripBT3.png)
 
@@ -193,7 +197,7 @@ Once scanned the QR code above, if you have a Samsung phone (but this is also us
 
 ![xDrip+ debug settings](../images/cgm/minimal00per/xdripDBG.png)
 
-(minimallooper-OOPsettings)=
+<a id="minimallooper-OOPsettings"></a>
 
 **Less Common Settings -\> Other misc options**
 
@@ -205,11 +209,11 @@ Once scanned the QR code above, if you have a Samsung phone (but this is also us
 
 ![xDrip+ OOP2 settings](../images/cgm/minimal00per/xdripOOP.png)
 
-(minimallooper-step3)=
+<a id="minimallooper-step3"></a>
 
 ### **Step 3: Physically insert the sensor**
 
-(minimallooper-step4)=
+<a id="minimallooper-step4"></a>
 
 ### **Step 4: Start the LL App and start sensor with very first NFC Scan**
 
@@ -225,7 +229,7 @@ If you want to be able to use the **FSLReader** as well as the LL app or xDrip+ 
 
 *It has been reported that simply turning off the **location permission** in the LL app Android system settings is enough to prevent it from interfering with the connection. This has been reported by a few users to be successful. Again **I recommend disabling or uninstalling the app** but you can try this if you want to experiment.*
 
-(minimallooper-step5)=
+<a id="minimallooper-step5"></a>
 
 ### **Step 5: Open xDrip+ and NFC SCAN the FSL2 sensor**
 
@@ -235,7 +239,7 @@ If you want to be able to use the **FSLReader** as well as the LL app or xDrip+ 
 
 ![xDrip+ scan](../images/cgm/minimal00per/xdripscan1.png)
 
-(minimallooper-step6)=
+<a id="minimallooper-step6"></a>
 
 ### **Step 6: Start the new sensor in xDrip+**
 
@@ -249,7 +253,7 @@ On the **Start New Sensor** screen press **Start Sensor**. A prompt will ask **D
 
 *NOTE: If you accidentally clicked "YES, TODAY" then you will need to "stop sensor" from the xDrip+ main menu followed by "start sensor" by proceeding with Step 5 again.*
 
-(minimallooper-step7)=
+<a id="minimallooper-step7"></a>
 
 ### **Step 7: Wait 60 seconds and NFC Scan the sensor again**
 
@@ -265,7 +269,7 @@ Open xDrip+ event logs and check the sensor paired correctly with xDrip+.
 
 ![xDrip+ scan](../images/cgm/minimal00per/xdripstream.png)
 
-(minimallooper-step8)=
+<a id="minimallooper-step8"></a>
 
 ### **Step 8: Data Collection between 3 and 15 Minutes**
 
@@ -273,18 +277,20 @@ Between 3 and 15 minutes enough data is collected to display the first values. *
 
 If you use a Samsung (or many Chinese brand phones) and have issues receiving data, scan the QR code below, in xDrip+ -> Auto Configure.
 
-```{admonition} QR Code
-:class: dropdown
+<details>
+<summary>QR Code</summary>
 
 ![Setup Bluetooth](../images/cgm/minimal00per/qr_libre2direct_samsung.png)
-```
+
+</details>
+
 
 It will change xDrip+ Bluetooth settings to:
 
 - *Trust Auto-Connect*: **off**
 - *Use Background Scans*: **off**
 
-(minimallooper-step9)=
+<a id="minimallooper-step9"></a>
 
 ### **Step 9: Verify Sensor is connected and delivering data**
 
@@ -307,7 +313,7 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 ![xDrip+ scan](../images/cgm/minimal00per/xdripSStat.png)
 
-(minimallooper-notes)=
+<a id="minimallooper-notes"></a>
 
 ### **Notes**
 
@@ -339,7 +345,7 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
  
 
-(minimallooper-advantages)=
+<a id="minimallooper-advantages"></a>
 
 ### **Advantages**
 
@@ -366,7 +372,7 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 &nbsp;
 
-(minimallooper-disadvantages)=
+<a id="minimallooper-disadvantages"></a>
 
 ### **Disadvantages**
 
@@ -388,7 +394,7 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 &nbsp;
 
-(minimallooper-definitions)=
+<a id="minimallooper-definitions"></a>
 
 ### **Definitions**
 
@@ -417,7 +423,7 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
  
 
-(minimallooper-troubleshooting)=
+<a id="minimallooper-troubleshooting"></a>
 
 ### Troubleshooting
 

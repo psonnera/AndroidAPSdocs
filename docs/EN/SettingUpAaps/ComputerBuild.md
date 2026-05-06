@@ -14,7 +14,7 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 ---
 
-(Building-APK-recommended-specification-of-computer-for-building-apk-file)=
+<a id="Building-APK-recommended-specification-of-computer-for-building-apk-file"></a>
 ## Computer and software specifications for building AAPS
 
 * A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk. See table below : 
@@ -46,26 +46,26 @@ The Gradle version is linked to the source code, you will always get the correct
     <td class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
-    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <th class="tg-baqh">CPU (Only 64 bit)</th>
+    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br/><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br/><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
     <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">16GB or more</td>
+    <th class="tg-baqh">RAM</th>
+    <td class="tg-baqh" colspan="3">16GB or more</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Disk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
+    <th class="tg-baqh">Disk</th>
+    <td class="tg-baqh" colspan="3">At least 30GB free space. SSD is recommended.</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Resolution</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
+    <th class="tg-baqh">Resolution</th>
+    <td class="tg-baqh" colspan="3">1280 x 800 Minimum <br/></td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Internet</th>
-    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+    <th class="tg-baqh">Internet</th>
+    <td class="tg-baqh" colspan="3">Broadband</td>
   </tr>
 </tbody>
 </table>
@@ -81,32 +81,30 @@ If you think something in the building instructions is wrong, missing or confusi
 
 ## Step-by-step guide to building the AAPS app
 
-```{admonition} WARNING
-:class: warning
+::: warning WARNING
 If you have built AAPS before, you don't need to take all the following steps again.
 Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)!
-```
+:::
 
-```{contents} The overall steps for building the **AAPS** apk file
-:depth: 1
-:local: true
-```
+
 
 In this guide you will find _example_ screenshots of building of **AAPS** apk file. Because  **Android Studio** - the software which we use to build the **AAPS** apk - is regularly updated, these screenshots may not be identical to your installation, but they should still be possible to follow. 
 
 Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might be also be minor differences in the steps for the different  platforms.
 
-(install-git-if-you-dont-have-it)=
+<a id="install-git-if-you-dont-have-it"></a>
 ### Install Git
 
-```{admonition} Why Git? 
-:class: dropdown
+<details>
+<summary>Why Git?</summary>
 
 Git is known as a “_Versioning Control System_” (VCS).\
-Git is a program that allows you to track changes in code and to collaborate with others. You will use Git to make a copy of the **AAPS** source code from the GitHub website to your local computer. Then, you will use Git on your computer to build the **AAPS** application (apk). 
-```
+Git is a program that allows you to track changes in code and to collaborate with others. You will use Git to make a copy of the **AAPS** source code from the GitHub website to your local computer. Then, you will use Git on your computer to build the **AAPS** application (apk).
 
-(BuildingAaps-steps-for-installing-git)=
+</details>
+
+
+<a id="BuildingAaps-steps-for-installing-git"></a>
 #### Steps for Installing Git
 
 1.	Check that you don’t already have **Git** installed. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#install-android-studio): 
@@ -118,7 +116,7 @@ Git is a program that allows you to track changes in code and to collaborate wit
 
 **Note for Mac users:** the Git webpage will also guide you to install an additional program called "homebrew" to aid the installation. If you install Git via homebrew, there is no need to change any preferences.
 
-(Make_a_note_of_Git_path)=
+<a id="Make_a_note_of_Git_path"></a>
 
 * During the installation, when you are asked to "select destination location" make a note of _where_ Git is being installed (the "**installation path**") you will need to check it in the next step. It will be something similar to "C:\Program Files\Git\cmd\git.exe"
 
@@ -128,22 +126,25 @@ Git is a program that allows you to track changes in code and to collaborate wit
 
 * Reboot your computer before the next step.
 
-(Building-APK-install-android-studio)=
+<a id="Building-APK-install-android-studio"></a>
 ### Install Android Studio
 
 - **You have to be online all of the time during the following steps, as Android Studio downloads several updates**
 
-```{admonition} What is Android Studio?
-:class: dropdown
-Android Studio is a program which runs on your computer. It allows you to download source code from the internet (using Git) and build smartphone (and smartwatch) apps. You cannot "break" a current, looping version of **AAPS** which you might have running on a smartphone by building a new or updated app on your PC with Android Studio, these are totally separate processes. 
-```
+<details>
+<summary>What is Android Studio?</summary>
+
+Android Studio is a program which runs on your computer. It allows you to download source code from the internet (using Git) and build smartphone (and smartwatch) apps. You cannot "break" a current, looping version of **AAPS** which you might have running on a smartphone by building a new or updated app on your PC with Android Studio, these are totally separate processes.
+
+</details>
+
 
 One of the most important things when installing Android Studio is **be patient!** During installation and setup, Android Studio is downloading a lot of stuff which will take time.
 
-```{admonition} Different UI
-:class: warning
+::: warning Different UI
 Import note: Android Studio changed its UI during the last releases. This guide will show you the steps with the *new UI* in "Ladybug". If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computer-build-new-ui).
-```
+:::
+
 
 The Android studio version is very important. See the [instructions above](#Building-APK-recommended-specification-of-computer-for-building-apk-file) to pick the proper version of Android Studio.
 
@@ -209,16 +210,18 @@ You will now see the Welcome screen of Android Studio.
 ![Welcome_to_Android_Studio](../images/Building-the-App/031_WelcomeAndroidStudio.png)
 
 
-(Building-APK-download-AAPS-code)=
+<a id="Building-APK-download-AAPS-code"></a>
 ### Download the AAPS code
 
-```{admonition} Why can it take a long time to download the AAPS code?
-:class: dropdown
+<details>
+<summary>Why can it take a long time to download the AAPS code?</summary>
 
 The first time **AAPS** is downloaded, Android Studio will connect over the internet to the Github website to download the source code for **AAPS**. This should take about 1 minute. 
 
-Android Studio will then use **Gradle** (a development tool for Android apps) to identify other components needed to build these items on your computer. 
-```
+Android Studio will then use **Gradle** (a development tool for Android apps) to identify other components needed to build these items on your computer.
+
+</details>
+
 
 On the Android Studio Welcome screen, check that "**Projects**" (1) is highlighted on the left. 
 
@@ -241,10 +244,10 @@ We will now tell Android Studio where to get the code from:
 * Check the (default) directory for saving the cloned code does not already exist on your computer (4). You can change it to some directory, but please remember where you stored it! 
 * Now click the button "Clone" (5).
 
-```{admonition} INFORMATION
-:class: information
+::: info INFORMATION
 Make a note of the directory. It is where your sourcecode is stored!
-```
+:::
+
 
 You will now see a screen telling you that the repository is being cloned:
 
@@ -261,9 +264,8 @@ Only for Windows users: If your firewall asks for permission, grant access:
 
 After the repository is cloned successfully, Android Studio will open the cloned project. 
 
-(computer-build-new-ui)=
-```{admonition} New UI
-:class: information
+<a id="computer-build-new-ui"></a>
+::: info New UI
 Android Studio changed its UI recently. New installations of Android Studio use the new UI by default!
 
 Only if your Android Studio looks different, you might need to switch to the new UI:
@@ -271,7 +273,8 @@ Click on the hamburger menu on the top left, then select **Settings** (or **Pref
 In **Appearance & Behaviour**, go to **New UI** and tick **Enable new UI**. Then restart Android Studio to start using it.
 
 If you don't find the option **New UI** don't worry: you are already using it!
-```
+:::
+
 
 
 When Android Studio opened, wait patiently (this may take a few minutes), and particularly, **do not** update the project as suggested in the pop-up.
@@ -280,11 +283,10 @@ Android Studio will start a "Gradle project sync" automatically, which will take
 
 ![AS_download_dependencies](../images/Building-the-App/036_GradleSyncing.png)
 
-```{admonition} NEVER UPDATE GRADLE!
-:class: warning
-
+::: warning NEVER UPDATE GRADLE!
 Android Studio might recommend updating the gradle system. **Never update gradle!** This will lead to difficulties.
-```
+:::
+
 
 Only on windows computers: You might get a notification about windows defender running: Click on **Automatically** and confirm, it will make the build run faster!
 
@@ -293,7 +295,7 @@ Only on windows computers: You might get a notification about windows defender r
 
 You can leave the gradle sync running and follow the next steps already.
 
-(Building-APK-set-git-path-in-preferences)=
+<a id="Building-APK-set-git-path-in-preferences"></a>
 ### Set Git path in Android Studio preferences
 
 Now we will tell Android studio where to find Git, which you installed [earlier](#install-git-if-you-dont-have-it).
@@ -322,16 +324,18 @@ If you find that **git.exe** is not found automatically, or that clicking "Test"
 
   ![Git not found](../images/Building-the-App/039_GitTestError.png)
 
-(Building-APK-generate-signed-apk)=
+<a id="Building-APK-generate-signed-apk"></a>
 ### Build the AAPS "signed" APK
 
-```{admonition} Why does the AAPS app need to be "signed"?
-:class: dropdown
+<details>
+<summary>Why does the AAPS app need to be "signed"?</summary>
 
 Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key). 
 
 For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
-```
+
+</details>
+
 
 
 **Important: Make sure the gradle sync is finished successfully before proceeding!**
@@ -348,20 +352,20 @@ Select "APK" instead of "Android App Bundle" and click "Next":
 
 In the next screen, make sure that "Module" is set to "AAPS.app" (1).
 
-(Building-APK-wearapk)=
-```{admonition} INFORMATION!
-:class: information
+<a id="Building-APK-wearapk"></a>
+::: info INFORMATION!
 If you want to create the apk for your watch, you now need to select AAPS.wear!
-```
+:::
+
 ![Create_key_store](../images/Building-the-App/042_CreateNewKey.png)
 
 Click "Create new..." (2) to start creating your key store.
 
-```{admonition} INFORMATION!
-:class: information
+::: info INFORMATION!
 You will only need to create the keystore once.
 If you have build AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
-```
+:::
+
 
 **_Note:_** The key store is a file in which the information for signing the app is stored. It is encrypted, and the information is secured with passwords.
 
@@ -371,10 +375,10 @@ If you have build AAPS before, do NOT create a new keystore but select your exis
 
   Do **not** use the directory where you stored your sourcecode but some directory that you would also transfer to a new computer.
 
-```{admonition} WARNING!
-:class: warning
+::: warning WARNING!
 Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AndroidAPS update!
-```
+:::
+
 
 * Now choose a simple password (and make a note of it), enter it in the password box (2), and confirm it (2).  
 
@@ -384,10 +388,10 @@ Make sure to note down for yourself where your keystore is stored. You will need
 
 * You now need a password for your key. To keep it simple, if you want, you can use the same password you used for your keystore, above. Enter a password (4) and confirm it.
 
-```{admonition} WARNING!
-:class: warning
+::: warning WARNING!
 Note down these passwords! You will need them when you build the next AAPS update!
-```
+:::
+
 
 * The validity is 25 years by default, leave it as it is.
 
@@ -428,9 +432,10 @@ In the Notifications box, click on the blue link "locate":
 
 Congratulations! Now you have built the **AAPS** apk file, you will be transferring this file to your smartphone in the next section of the docs. 
 
-```{tip}
+::: tip
 If you think you might want to use an Android Wear smartwatch in the future, this is the best time to build the AAPS Wear apk to be sure it will be synchronized with your AAPS apk.
-```
+:::
+
 
 Move to the next stage of [Transferring and Installing **AAPS**](../SettingUpAaps/TransferringAndInstallingAaps.md).
 

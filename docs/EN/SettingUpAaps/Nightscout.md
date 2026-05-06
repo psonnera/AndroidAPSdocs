@@ -1,6 +1,6 @@
 # Nightscout
 
-(Nightscout-security-considerations)=
+<a id="Nightscout-security-considerations"></a>
 ## Security considerations
 
 Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
@@ -13,7 +13,7 @@ You can deny public access to your Nightscout site by using [authentication role
 
 Nightscout `API_SECRET` is your site main password: don't share it publicly.
 
-(Nightscout-aaps-settings)=
+<a id="Nightscout-aaps-settings"></a>
 ### AAPS settings
 
 You can setup AAPS to accept Nightscout commands (profile changes, treatments, ...), or fully disable it.  
@@ -46,7 +46,7 @@ Note that insulin treatments will only be used for calculations like "Do not bol
 
 Keep your phone up to date as described in [safety first](#preparing-safety-first).
 
-(Nightscout-manual-nightscout-setup)=
+<a id="Nightscout-manual-nightscout-setup"></a>
 ## Manual Nightscout setup
 
 It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site.  Your Nightscout site needs to be at least version 15 for AAPS 3.2, so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app.

@@ -6,27 +6,6 @@ This section provides a brief overview of all compatible **CGMs/FGMs** with **AA
 
 <!-- List of hidden pages to avoid overcrowding the table of contents -->
 
-```{toctree}
-:hidden:
-
-../CompatibleCgms/GeneralCGMRecommendation.md
-../CompatibleCgms/SmoothingBloodGlucoseData.md
-../CompatibleCgms/xDrip.md
-../CompatibleCgms/CgmNightscoutUpload.md
-../CompatibleCgms/DexcomG6.md
-../CompatibleCgms/DexcomG7.md
-../CompatibleCgms/Juggluco.md
-../CompatibleCgms/Libre1.md
-../CompatibleCgms/Libre2.md
-../CompatibleCgms/Libre2MinimalL00per.md
-../CompatibleCgms/Libre3.md
-../CompatibleCgms/Eversense.md
-../CompatibleCgms/MM640g.md
-../CompatibleCgms/PocTech.md
-../CompatibleCgms/OttaiM8.md
-../CompatibleCgms/SyaiTagX1.md
-../CompatibleCgms/Caresens.md
-```
 
 * [General recommendations](../CompatibleCgms/GeneralCGMRecommendation.md)
 * [Data Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md)
@@ -53,7 +32,7 @@ This section provides a brief overview of all compatible **CGMs/FGMs** with **AA
 | Sinocare                                               | Patched Sino App                                             |
 | [Caresens](../CompatibleCgms/Caresens.md), Simplera, iCan, LinX, SmartGuide | xDrip+ Companion App                                         |
 
-(GettingStarted-TrustedBGSource)=
+<a id="GettingStarted-TrustedBGSource"></a>
 
 ## Trusted BG data sources
 

@@ -20,7 +20,7 @@ This option works similar to back smoothing that was previously implemented on c
 
 Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to **AAPS**.
 
-(smoothing-xdrip-dexcom-g6)=
+<a id="smoothing-xdrip-dexcom-g6"></a>
 
 ## Suggestions to use smoothing
 

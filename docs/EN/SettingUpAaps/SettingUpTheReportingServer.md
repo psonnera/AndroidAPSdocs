@@ -9,7 +9,7 @@ There are currently two reporting servers available for use with **AAPS**:
 
 We recommend using Nightscout.
 
-(SettingUpTheReportingServer-nightscout)=
+<a id="SettingUpTheReportingServer-nightscout"></a>
 ## Nightscout
 
 Nightscout is a web application that can log and display your CGM data and **AAPS** data and creates reports. It is a powerful platform which has been integrated into **AAPS** for many years. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). It also allows caregivers to send remote commands to **AAPS**.
@@ -37,25 +37,25 @@ Some Nightscout hosted services are listed [here](https://nightscout.github.io/n
 
 Once you have your Nightscout instance up and running, see [Nightscout configuration page](../SettingUpAaps/Nightscout.md) for additional considerations.
 
-(SettingUpTheReportingServer-tidepool)=
+<a id="SettingUpTheReportingServer-tidepool"></a>
 ## Tidepool
 
 Tidepool has been available in **AAPS** since version 3.2 which was released in late 2023.
 
-```{admonition} Tidepool with **AAPS** is only for reporting
-:class: danger  
+::: danger Tidepool with **AAPS** is only for reporting
 As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool it is not suitable for sharing real-time information with caregivers.  
-On the other hand, Tidepool can be a great solution for sharing reports with a patient's endocrinologist if Nightscout is not an accepted solution.  
-```
+On the other hand, Tidepool can be a great solution for sharing reports with a patient's endocrinologist if Nightscout is not an accepted solution.
+:::
+
 
 Tidepool is an [open source](https://github.com/tidepool-org) project. It offers to run an account free of charge on the Tidepool servers.
 
 More information about setting up Tidepool with AAPS [here](../SettingUpAaps/Tidepool.md).
 
-```{admonition} **AAPS** has a the uploader for Tidepool integrated
-:class: note
-You do **not** need to use the uploader app to Tidepool: **AAPS** will upload blood glucose, treatments and basal for you. You only need a personal account with Tidepool. Do not upload your data with the separate Tidepool uploader tool as it will lead to duplicate values.  
-```
+::: info **AAPS** has a the uploader for Tidepool integrated
+You do **not** need to use the uploader app to Tidepool: **AAPS** will upload blood glucose, treatments and basal for you. You only need a personal account with Tidepool. Do not upload your data with the separate Tidepool uploader tool as it will lead to duplicate values.
+:::
+
 
 ## Next step
 

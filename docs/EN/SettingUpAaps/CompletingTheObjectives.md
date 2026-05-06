@@ -14,11 +14,10 @@ As well as progressing through the **Objectives**, if required, you can also rem
 
 ## Backup your settings
 
-```{admonition} Note
-:class: note
-
+::: info Note
 Exporting your **AAPS** settings is recommended after completing each **Objective**!
-```
+:::
+
 
 It is strongly recommended that you [export your settings](../Maintenance/ExportImportSettings.md) after completing each objective to avoid losing any progress made in **AAPS**. This exporting process creates a **settings file** (.json) which should be backed-up in one or more safe places (e.g. Google Drive, hard disk, email attachment _etc._). This ensures that any progress made in **AAPS** is saved. If your phone is lost or if you accidentally delete your progress, the json file can be re-loaded to **AAPS** by importing a recent settings file. Having a backup **settings file** is also required if a new **AAPS** smartphone is required for any reason (upgrading/lost/broken phone _etc._)
 
@@ -26,7 +25,7 @@ The **settings** file will save not only your progress through the **Objectives*
 
 The **Objectives** will need to be restarted from the beginning should you fail to have a backup of your settings and anything happens to your **AAPS** smartphone. Progressing through the **Objectives** takes time, and having to re-complete them again because for example you lost your smartphone, is a situation to be best avoided.
 
-(objectives-objective1)=
+<a id="objectives-objective1"></a>
 ## Objective 1: Setting up visualization and monitoring, analyzing basals and ratios
 
 **Objective 1** requires the user to set up their basic technical setup in **AAPS**. No progress can be made until this step has been completed.
@@ -41,7 +40,7 @@ The **Objectives** will need to be restarted from the beginning should you fail 
 
 Note - *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognise it.*
 
-(objectives-objective2)=
+<a id="objectives-objective2"></a>
 ## Objective 2: Learn how to control AAPS
 
 **Objective 2** requires several ‘tasks’ to be actioned as shown in the screenshot below
@@ -69,7 +68,7 @@ Tasks to complete **Objective 2** are:
   - Hint : see [Preferences > Protection](#Preferences-protection).
 
 
-(objectives-objective3)=
+<a id="objectives-objective3"></a>
 ## Objective 3: Prove your knowledge
 
 **Objective 3** requires the user to pass a multiple-choice exam which is designed to test your **AAPS** knowledge.
@@ -84,10 +83,10 @@ To proceed with **Objective 3**, click on the orange text “**Not completed yet
 
 For each question, there may be more than one answer that is correct! If an incorrect answer is selected, the question will be time-locked for 1 hour before you can go back and answer the question again. Be aware that the order of the answers may have changed when you next try to answer, this is to make sure you read them carefully and really understand the validity (or not) of each response.
 
-```{admonition}  __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
-:class: Note
+::: info __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
 From time to time, new features are added to **AAPS** which may require a new question to be added to the **Objectives**, particularly **Objective 3**. As a result, any new question added to **Objective 3** will be marked as “incomplete” because **AAPS** will require you to action this. Do not worry, as each **Objective** is independent, you will **not lose the existing functionality of AAPS**, providing the other **Objectives** remain completed.
-```
+:::
+
 
 ## Objective 4: Starting on an open loop
 
@@ -105,12 +104,11 @@ Additionally, you can change the minimum percentage for recommended basal rate c
 
 ![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
 
-```{admonition} Note
-:class: Note
-
+::: info Note
 You don't need to action each and every system recommendation!
-```
-(objectives-objective5)=
+:::
+
+<a id="objectives-objective5"></a>
 ## Objective 5: Understanding your open loop, including its temp basal recommendations
 
 As part of **Objective 5** you will start to understand how temporary basal recommendations are derived. This includes the [determination of basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), analyzing the impact by observing [prediction lines in **AAPS Overview**](#aaps-screens-prediction-lines) (or Nightscout) and looking at detailed calculations shown on your **OpenAPS** tab.
@@ -124,23 +122,21 @@ You might wish to set your [**Profile** BG target](#profile-glucose-targets) hig
 
 ![Stop sign](../images/sign_stop.png)
 
-```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
-:class: note
-
+::: info If you have been using a virtual pump, change to a real insulin pump now!
 If you are open looping with a virtual pump **stop here**. Only click verify at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin.
+:::
 
-```
 
 ![blank](../images/blank.png)
 
-(objectives-objective6)=
+<a id="objectives-objective6"></a>
 ## Objective 6: Starting to close the loop with Low Glucose Suspend
 
 ![Warning sign](../images/sign_warning.png)
-```{admonition}  Closed loop will not correct high **BG** values in **Objective 6** as it is limited to **Low Glucose Suspend** only!
-:class: Note
+::: info Closed loop will not correct high **BG** values in **Objective 6** as it is limited to **Low Glucose Suspend** only!
 You will still need to correct high BG values by yourself (manually with corrections by pump or pen)!
-```
+:::
+
 
 As part of **Objective 6** you will close the loop and activate its **Low Glucose Suspend** (LGS) mode while [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero. You have to remain in LGS mode for 5 days to complete this **objective**. You should use this time to check if your **Profile** settings are accurate and LGS events are not triggered too often.
 
@@ -166,7 +162,7 @@ This means that when you are on **Objective 6**, if sensor glucose levels are dr
 - Watch active temporary basals by looking at the turquoise basal text on the OVERVIEW screen or the turquoise basal render as part of the OVERVIEW graph.
 - You may temporarily experience spikes following treated hypos without being able to increase basals on the rebound.
 
-(objectives-objective7)=
+<a id="objectives-objective7"></a>
 ## Objective 7: Tuning the closed loop, raising maxIOB above 0 and gradually lowering BG targets
 
 To complete **Objective 7** you have to close your loop and raise your [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over). **maxIOB** was zeroed out automatically in **Objective 6**, due to the Low Glucose Suspend mode. This is no longer the case. **AAPS** will start to use your defined maxIOB value to correct high glucose values.
@@ -189,7 +185,7 @@ Alternatively, if you are very insulin resistant, raise the **maxIOB** value ver
 
 Once confident on how much **maxIOB** suits your looping patterns, lower your **BG targets** to your desired level.
 
-(objectives-objective8)=
+<a id="objectives-objective8"></a>
 ## Objective 8: Adjust basals and ratios if needed, and then enable Autosens
 
 As part of this **objective**, you will revisit your **Profile**'s performance and will use [Autosens](#Open-APS-features-autosens) functionality as an indicator for wrong settings.
@@ -202,7 +198,7 @@ This is a good time to review your settings for [Sensitivity Detection](#config-
 
 Additionally, you can use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) as a one off to check your basals remain accurate or do a traditional basal test.
 
-(objectives-objective9)=
+<a id="objectives-objective9"></a>
 ## Objective 9: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
 
 In **Objective 9**, you will tackle and use **"Super Micro Bolus (SMB)"** as one core functionality. After working through the mandatory readings you will have a good understanding of what SMBs are, how these work, and why basal is set to zero temporarily after SMBs are given (zero-temping).
@@ -214,7 +210,7 @@ Minimal time to complete this objective: **28 days**. This is a mandatory wait t
   A good start is setting **maxIOB** = **average meal bolus + 3x max daily basal** where "max daily basal" is the maximum hourly value in any time segment of the day. See [objective 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) as reference.
 - Evaluate your carb absorption rate and consider changing the “min_5m_carbimpact”-parameter in [Preferences > Absorption settings > min_5m_carbimpact](#Preferences-min_5m_carbimpact) if you find it too slow or too fast.
 
-(objectives-objective10)=
+<a id="objectives-objective10"></a>
 ## Objective 10: Automation
 
 **Automations** become available when **Objective 10** is started.
@@ -242,7 +238,7 @@ The documentation page gives a few examples, and you can search for "Automation"
 
 For example, if you eat the same thing for breakfast at the same time every morning before school/work, you can create an **Automation** such as "before-breakfast-target" to set a slightly lower **Temporary Target** 30 minutes before having breakfast. In such case, your condition is likely to include "recurring time" which consists of selecting specific days of the week (Monday, Tuesday, Wednesday, Thursday, Friday) and a specific time (06:30 am). The action will consist of "Start temp target" with a lower than usual target value and a 30 minutes duration.
 
-(CompletingTheObjectives-go-back-in-objectives)=
+<a id="CompletingTheObjectives-go-back-in-objectives"></a>
 ## Go back in objectives
 
 If you wish to go back in the **Objectives** for whatever reason you can do so by clicking at "clear finished".

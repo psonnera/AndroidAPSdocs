@@ -2,14 +2,13 @@ Compatible with Android (The simplest, recommended as the first choice)
 
 <!--crowdin: exclude-->
 
-```{tab-set}
+:::tabs
+== Wiki
+<!--@include: ./BrowserBuildO1AS.md-->
 
-:::{tab-item} Wiki
-:::{include} BrowserBuildO1AS.md
-:::
 
-:::{tab-item} Video
-(aaps-ci-option1-android-video)=
+== Video
+<a id="aaps-ci-option1-android-video"></a>
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
   <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
     <iframe
@@ -20,7 +19,7 @@ Compatible with Android (The simplest, recommended as the first choice)
     </iframe>
   </div>
 </div>
+
 :::
 
-```
 

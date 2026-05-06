@@ -1,6 +1,6 @@
 # Timezone Change and Daylight Saving 
 
-(timezone-traveling-with-pumps)=
+<a id="timezone-traveling-with-pumps"></a>
 
 ## Timezone change for Omnipod Dash
 
@@ -11,7 +11,7 @@
 
 There is no issue with changing timezone in phone because pump doesn't use history
 
-(timezone-traveling-danarv2-danars)=
+<a id="timezone-traveling-danarv2-danars"></a>
 
 ## Timezone change for DanaRv2, DanaRS
 
@@ -49,7 +49,7 @@ When get out of plane:
 * turn on phone
 * let phone connect to the pump and fine-tune time
 
-(timezone-traveling-insight)=
+<a id="timezone-traveling-insight"></a>
 
 
 ## Timezone Change for Insight
@@ -78,7 +78,7 @@ Time zone changes keep the history intact, only TDD may be affected. Manually ch
 
 When the time zone or time changes running **TBR's** are stopped. 
 
-(time-adjustment-daylight-savings-time-dst)=
+<a id="time-adjustment-daylight-savings-time-dst"></a>
 
 
 ## DAYLIGHT SAVING (DST)

@@ -5,9 +5,10 @@
 
 Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. More details about this [here](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
-```{admonition} Smoothing method 
+::: info Smoothing method
 Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggestions to use for Dexcom G7/ONE+/Stelo
-```
+:::
+
 
 ## 1. xDrip+ (direct connection to G7 or ONE+)
 
@@ -18,12 +19,12 @@ Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggesti
 
 ## 2.  Patched Dexcom G7 App (DiaKEM)
 
-```{admonition} No new users
-:class: warning
+::: warning No new users
 Latest Dexcom servers update broke DiaKEM for new installs: the G7 app no longer can get through the login and onboarding process that happens on a fresh install of the app. 
 Existing users do not experience issues for now: do not logout, wipe data, or reinstall the G7 app as that will prevent you from getting the app up and running again. If it is already running, you should be unaffected.
 New users are recommended to use [xDrip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) as **AAPS'** BG data source until this issue has been resolved.
-```
+:::
+
 
 **Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+.**
 

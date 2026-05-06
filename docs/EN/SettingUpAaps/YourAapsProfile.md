@@ -13,13 +13,12 @@ Your **Profile** settings interact with one another - you can have 'wrong' setti
 
 You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances.
 
-```{admonition} Your diabetes may vary
-:class: information
+::: info Your diabetes may vary
 **Profiles** vary significantly from person-to-person.
 
 For basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR), the absolute values and trends in insulin requirements vary significantly from person to person, depending on your biology, gender, age, fitness level etc. as well as shorter term factors like illness and recent exercise. For more guidance on this, the book [“Brights Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
+:::
 
-```
 
 The four last parameters (glucose targets, basal rates, insulin sensitivity factors and insulin-to-carb ratios) can be set to different values, changing hourly if required, over a 24-hour period.
 
@@ -27,7 +26,7 @@ The four last parameters (glucose targets, basal rates, insulin sensitivity fact
 
 Screenshots from **AAPS** of an _example_ profile are shown below. Please note, this sample profile below shows a large number of timepoints. When you start out with **AAPS**, your profile is likely to be much simpler.
 
-(your-aaps-profile-duration-of-insulin-action)=
+<a id="your-aaps-profile-duration-of-insulin-action"></a>
 ## Duration of insulin action (DIA)
 
 ### Description
@@ -63,7 +62,7 @@ The **figure below** shows an example of how the **DIA** is set in an **AAPS** p
 
 The **DIA** setting is often set too short by new users. A **DIA** of 6 or 7 is probably a good place to start. A growing number of people find that a **DIA** of 8 to 9 hours works good for them. See the additional reading mentioned above.
 
-(profile-glucose-targets)=
+<a id="profile-glucose-targets"></a>
 ## Glucose targets
 
 ### Description
@@ -92,7 +91,7 @@ The **figure below** shows an example of how the target can be set in an **AAPS*
 When In [Open Loop](#KeyAapsFeatures-OpenLoop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and adjusting your **Profile**.<br/>
 When In [Closed Loop](#KeyAapsFeatures-ClosedLoop) (starting at **[Objective 6](#objectives-objective6)**), it is recommended to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
 
-(your-aaps-profile-basal-rates)=
+<a id="your-aaps-profile-basal-rates"></a>
 
 ## Basal rates
 
@@ -134,7 +133,7 @@ See [here](../GettingHelp/ProfileTuning.md) how to tweak your basal profile, ana
 
 When taking action on the result of your basal testing, changes in the **Profile** should be done 1 to 2 hours (depends on your insulin type) before the rise/drop. Repeat the test as necessary until you are comfortable with your **basal rates** settings.
 
-(your-aaps-profile-insulin-sensitivity-factor)=
+<a id="your-aaps-profile-insulin-sensitivity-factor"></a>
 
 ## Insulin sensitivity factor (ISF)
 
@@ -185,7 +184,7 @@ Then take an estimated amount of insulin (as per current 1/ISF) to get to your t
 
 Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
 
-(your-aaps-profile-insulin-to-carbs-ratio)=
+<a id="your-aaps-profile-insulin-to-carbs-ratio"></a>
 
 ## Insulin to Carb ratio (ICR)
 
@@ -239,10 +238,6 @@ Assuming your basal rates are correct, you can test by checking if **IOB** is ze
 
 ## Common questions related to the Profile
 
-```{contents} Common questions related to the Profile
-:depth: 1
-:local: true
-```
 
 ### About the importance of getting your profile right
 
@@ -276,11 +271,7 @@ Here are some reasons why you may have negative IOB, and what action to take:
 
 ## Manage your Profiles
 
-```{contents} Operations that you can perform on your **Profiles** in **AAPS**
-:depth: 1
-:local: true
-```
-(your-aaps-profile-create-and-edit-profiles)=
+<a id="your-aaps-profile-create-and-edit-profiles"></a>
 ### Create and edit Profiles
 
 The **Profile** tab can be found from the top menu or hamburger menu, depending on your [Config Builder settings](../SettingUpAaps/ConfigBuilder.md).
@@ -295,7 +286,7 @@ Buttons:
 
 If you make any changes to your **Profile**, make sure you are editing the correct **Profile**. The **Profile** tab may not always show the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen, it may differ from the profile actually shown in profile tab as there is no connection between these.
 
-(your-aaps-profile-profile-from-scratch-for-a-kid)=
+<a id="your-aaps-profile-profile-from-scratch-for-a-kid"></a>
 ### Build a Profile from scratch for a kid
 
 The [Profile Helper](#aaps-screens-profile-helper) tab may help you to create a profile for a child (up to 18 years).
@@ -323,7 +314,7 @@ Profile helper offers data sets from two different hospitals for children to fin
 
 See [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-(your-aaps-profile-clone-profile-switch)=
+<a id="your-aaps-profile-clone-profile-switch"></a>
 ### Clone a Profile switch to a new Profile
 
 ![Profile Switch](../images/TreatmentsView4.png)
@@ -332,7 +323,7 @@ The [Treatments](#aaps-screens-treatments) tab shows all past **Profile Switches
 
 You can now go to the [Profile tab](#your-aaps-profile-create-and-edit-profiles) to edit the newly created Profile.
 
-(YourAapsProfile_Profile-backup)=
+<a id="YourAapsProfile_Profile-backup"></a>
 ### Profile backup
 
 Being a core setting of your looping system, your **Profiles** are highly sensitive and something you really don't want to lose.
@@ -354,7 +345,7 @@ To do this, however, it is important to clone the whole **database record** cons
 
 ![Clone database records](../images/Nightscout_Profile_Editor.PNG)
 
-(your-aaps-profile-compare-profiles)=
+<a id="your-aaps-profile-compare-profiles"></a>
 ### Compare two Profiles
 
 You can use the [Profile Helper](#aaps-screens-profile-helper) tab also to compare to different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).

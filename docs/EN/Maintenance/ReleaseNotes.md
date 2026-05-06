@@ -1,13 +1,6 @@
 
 # Release notes
 
-```{toctree}
-:hidden:
-
-Update2_7.md
-Update3_0.md
-UpdateAaps3204.md
-```
 
 Please follow the instructions in the [update manual](UpdateToNewVersion) to update to a new version. The troubleshooting section also addresses the most common difficulties encountered when updating **AAPS** on the update manual page.
 
@@ -19,7 +12,7 @@ If you do not update until expiration date **AAPS** will switch to Open Loop.
 
 **Do not ignore the notification.** New versions of **AAPS** provide important safety fixes. Therefore, every **AAPS** user must update to the latest version as soon as possible. This an effort to try to improve the safety for each **AAPS** user and the DIY community. Thank you for your understanding.
 
-(maintenance-android-version-aaps-version)=
+<a id="maintenance-android-version-aaps-version"></a>
 
 ## Android version and AAPS version
 
@@ -56,26 +49,27 @@ In order to allow users with older Android to use older version of AAPS new vers
 
 - AAPS requires at least WearOS API level 30 (Android 11)
 
-```{tip}
+::: tip
 WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS5).
-```
+:::
 
-(latestrelease)=
 
-(version3422)=
+<a id="latestrelease"></a>
+
+<a id="version3422"></a>
 
 ## Version 3.4.2.2
 
 - Fixing issues with Equil and Medtronic
 - Improve safety of Medtrum
 
-(version3421)=
+<a id="version3421"></a>
 
 ## Version 3.4.2.1
 
 - Equil: fix Pairing and progress dialog @MilosKozak
 
-(version3420)=
+<a id="version3420"></a>
 
 ## Version 3.4.2.0
 
@@ -86,7 +80,7 @@ Release date: 04-02-2026
 - Medtrum: Fix activation path by preveting double fill @MilosKozak
 - COB: Fix COB calculation (covers dangerous edge case) @MilosKozak
 
-(version3410)=
+<a id="version3410"></a>
 
 ## Version 3.4.1.0
 
@@ -135,7 +129,7 @@ Release date: 03-08-2026
 ### Contributors
 @MilosKozak @Philoul @olorinmaia @jwoglom @mifi100 @andy-rozman @Angus-repo @brianV @cschuijt @hhfcvmars @miyeongkim @samfundev @michaeln-synapse
 
-(version3400)=
+<a id="version3400"></a>
 
 ## Version 3.4.0.0
 
@@ -148,7 +142,7 @@ Release date: 31-12-2025
 ### New features
 * Running mode @MilosKozak
   * Show [loop status history](#AapsScreens-running-mode) in treatment tabs
-  * Show and allow changing [loop status from AAPSClient](#RemoteControl_aapsclient).<br>NB : needs the setting [NSClient > Synchronization > Receive Running mode events](#Preferences-nsclient-synchronization)
+  * Show and allow changing [loop status from AAPSClient](#RemoteControl_aapsclient).<br/>NB : needs the setting [NSClient > Synchronization > Receive Running mode events](#Preferences-nsclient-synchronization)
 * [New CGMs](../Getting-Started/CompatiblesCgms.md) : Glunovo, Intelligo, Sinocare
 * [Site rotation](#Aapsscreens-site-rotation) support @Philoul
 * New [automation action](#automations-automation-action) : enable or disable SMBs @MilosKozak
@@ -188,7 +182,7 @@ Release date: 31-12-2025
 ### Tidepool
 * Tidepool OAUTH2 (Support for new Tidepool authentication) @MilosKozak
 
-(version3321)=
+<a id="version3321"></a>
 
 ## Version 3.3.2.1
 
@@ -203,7 +197,7 @@ Release date: 13-08-2025
 - Improved ConfigBuilder
 - Improved NSCv3 full sync
 
-(version3300)=
+<a id="version3300"></a>
 
 ## Version 3.3.2.0
 
@@ -401,7 +395,7 @@ Release date: 29-12-2024
 * libraries updated to latest version, toml @MilosKozak
 * migration to kotlin 2.0, java 21 @MilosKozak
 
-(version3204)=
+<a id="version3204"></a>
 
 ## [Version 3.2.0.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)
 
@@ -416,7 +410,7 @@ This version is the last one supporting Android 10. If you cannot upgrade to And
 - Automation icon fix
 - Passing objective 1 fix
 
-(version3200)=
+<a id="version3200"></a>
 
 ## Version 3.2.0.0 dedicated to @Philoul
 
@@ -465,7 +459,7 @@ Release date: 23-10-2023
 - tests cleanup @ryanhaining @MilosKozak
 - new 110k+ lines of code, changed 240k lines, 6884 changed files
 
-(Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)=
+<a id="Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS"></a>
 ### Important comments on using v3 versus v1 API for Nightscout with AAPS
 
 v1 is the old protocol used for exchanging data between NS web site and NS server. It has many limitations
@@ -493,13 +487,13 @@ RECOMMENDED SETTING
 - using websockets or not using with v3 depends on your preference
 - it HIGHLY recommended to let AAPS gather all data and then upload it to NS as a single uploader. All other devices/applications should only read from NS. By doing it you'll prevent conflicts and sync errors. This is valid for getting BG data to NS using Dexcom Share connector etc. too
 
-(version3100)=
+<a id="version3100"></a>
 
 ## Version 3.1.0
 
 Release date: 19-07-2022
 
-(Releasenotes-important-hints-3-1-0)=
+<a id="Releasenotes-important-hints-3-1-0"></a>
 ### Important hints
 
 - after update uninstall Wear app and install new version
@@ -527,7 +521,7 @@ Release date: 19-07-2022
 
 Release date: 31-01-2022
 
-(Releasenotes-important-hints-3-0-0)=
+<a id="Releasenotes-important-hints-3-0-0"></a>
 ### Important hints
 
 - **Minimum Android version is 9.0 now.**
@@ -624,13 +618,13 @@ Release date: 23-01-2021
 - NSClient fixes
 - Bolus advisor now works with Pumpcontrol and NSClient
 
-(version-2811)=
+<a id="version-2811"></a>
 
 ## Version 2.8.1.1
 
 Release date: 12-01-2021
 
-(important-hints-2-8-1-1)=
+<a id="important-hints-2-8-1-1"></a>
 ### Important hints
 
 - Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users.
@@ -652,7 +646,7 @@ Release date: 12-01-2021
 - UI fixes and improvements
 - new translations
 
-(Releasenotes-version-2-8-0)=
+<a id="Releasenotes-version-2-8-0"></a>
 ## Version 2.8.0
 
 Release date: 01-01-2021
@@ -682,7 +676,7 @@ Release date: 01-01-2021
 - Security improvements @dlvoy
 - Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion
 
-(Releasenotes-version-2-7-0)=
+<a id="Releasenotes-version-2-7-0"></a>
 ## Version 2.7.0
 
 Release date: 24-09-2020
@@ -721,7 +715,7 @@ You need at least start [objective 11 (in later versions objective 10!)](#object
 - [Open Humans uploader](../SupportingAaps/OpenHumans.md) @TebbeUbben @AdrianLxM
 - New documentation @Achim
 
-(Releasenotes-version-2-6-1-4)=
+<a id="Releasenotes-version-2-6-1-4"></a>
 ## Version 2.6.1.4
 
 Release date: 04-05-2020
@@ -785,7 +779,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 - Fixed NSClient connection settings (wifi, charging)
 - Fixed sending of calibrations to xDrip
 
-(Releasenotes-version-2-6-0)=
+<a id="Releasenotes-version-2-6-0"></a>
 ## Version 2.6.0
 
 Release date: 29-02-2020
@@ -852,12 +846,12 @@ Please note the [important notes](#Releasenotes-version-2-5-0) and [limitations]
 \* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
 \* New versioning that will allow to do minor updates without triggering the update-notification.
 
-(Releasenotes-version-2-5-0)=
+<a id="Releasenotes-version-2-5-0"></a>
 ## Version 2.5.0
 
 Release date: 26-10-2019
 
-(Releasenotes-important-notes-2-5-0)=
+<a id="Releasenotes-important-notes-2-5-0"></a>
 
 ### Important notes
 
@@ -866,7 +860,7 @@ Release date: 26-10-2019
 - If you are using Dexcom G6 with the patched Dexcom app you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 - Glimp is supported from version 4.15.57 and newer.
 
-(Releasenotes-is-this-update-for-me-currently-is-not-supported)=
+<a id="Releasenotes-is-this-update-for-me-currently-is-not-supported"></a>
 ### Is this update for me? Currently is NOT supported
 
 - Android 5 and lower
@@ -959,7 +953,7 @@ Release date: 03-11-2018
 - Accu-Chek Combo pump support
 - Setup wizard: guides you through the process of setting up AAPS
 
-(Releasenotes-settings-to-adjust-when-switching-from-ama-to-smb)=
+<a id="Releasenotes-settings-to-adjust-when-switching-from-ama-to-smb"></a>
 ### Settings to adjust when switching from AMA to SMB
 
 - Objective 10 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
@@ -975,7 +969,7 @@ Release date: 03-11-2018
   - Uncheck the Configure on demand checkbox.
   - Click Apply or OK.
 
-(Releasenotes-overview-tab)=
+<a id="Releasenotes-overview-tab"></a>
 ### Overview tab
 
 - Top ribbon gives access to suspend/disable loop, view/adjust profile and to start/stop temporary targets (TTs). TTs use defaults set in preferences. The new Hypo TT option is a high temp TT to prevent the loop from too aggressively overcorrection rescue carbs.
@@ -1010,12 +1004,10 @@ Release date: 03-11-2018
 
 ## Version 1.0
 
-```{admonition} First version of **AAPS**
-:class: note
-
+::: info First version of **AAPS**
 The first test version started in 2015 and the first release was in 2016.
 
 The exact chronology of these releases is not available at the moment but as this question has been asked several times we document it here.
+:::
 
-```
 ![AAPS 1.0](../images/update/AAPS1.0.png)

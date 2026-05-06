@@ -10,7 +10,7 @@ See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) for 
 
 ![Loop status](../images/Home-Screen/Home2020_LoopStatus.png)
 
-(KeyAapsFeatures-OpenLoop)=
+<a id="KeyAapsFeatures-OpenLoop"></a>
 ### Open Loop
 **AAPS** continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions (temporary basal rates) on how to adjust your therapy if necessary.
 
@@ -18,7 +18,7 @@ The suggestions will not be executed automatically (as in closed loop). The sugg
 
 This option is for getting to know how **AAPS** works or if you are using an unsupported pump. You will be in Open Loop, no matter what choice you make here, until the end of **[Objective 5](#objectives-objective5)**.
 
-(KeyAapsFeatures-LGS)=
+<a id="KeyAapsFeatures-LGS"></a>
 ### Low Glucose Suspend (LGS)
 
 In this mode, [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero.
@@ -27,7 +27,7 @@ This means that if blood glucose is dropping, **AAPS** can reduce the basal for 
 
 This mode is available starting at **[Objective 6](#objectives-objective6)**.
 
-(KeyAapsFeatures-ClosedLoop)=
+<a id="KeyAapsFeatures-ClosedLoop"></a>
 ### Closed Loop
 
 **AAPS** continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (_i.e._ without further intervention by you) to reach the set [target range or value](#profile-glucose-targets) (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.).
@@ -36,7 +36,7 @@ The Closed Loop works within numerous safety limits, which can be set individual
 
 Closed Loop is only possible if you are in **[Objective 7](#objectives-objective7)** or higher and use a supported pump.
 
-(Open-APS-features-autosens)=
+<a id="Open-APS-features-autosens"></a>
 ## Autosens
 * Autosens is an algorithm which looks at blood glucose deviations (positive/negative/neutral).
 * It will try and figure out how sensitive/resistant you are based on these deviations.
@@ -48,7 +48,7 @@ Closed Loop is only possible if you are in **[Objective 7](#objectives-objective
 * Autosens adjusts your basal and ISF (i.e.: mimicking what a Profile shift does).
 * If continuously eating carbs over an extended period, Autosens will be less effective during that period as carbs are excluded from **BG** delta calculations.
 
-(Open-APS-features-super-micro-bolus-smb)=
+<a id="Open-APS-features-super-micro-bolus-smb"></a>
 ## Super Micro Bolus (SMB)
 **SMB**, the shortform of **Super micro bolus**, is an OpenAPS feature introduced from 2018 onwards, within the Oref1 algorithm. In contrast to **AMA**, **SMB** does not use temporary basal rates to control glucose levels, but mainly **small super micro boluses**. In situations where **AMA** would add 1.0 IU insulin using a temporary basal rate, **SMB** delivers several super micro boluses in small steps at **5 minute intervals**, e.g. 0.4 IU, 0.3 IU, 0.2 IU and 0.1 IU. At the same time (for safety reasons) the actual basal rate is set to 0 IU/h for a certain period to prevent overdose (**'zero-temping'**). This allows the system to adjust the blood glucose faster than with the temporary basal rate increase in **AMA**.
 
@@ -82,7 +82,7 @@ See also :
 
 The settings for OpenAPS SMB are described below.
 
-(Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)=
+<a id="Open-APS-features-max-u-h-a-temp-basal-can-be-set-to"></a>
 ### Max U/h a temp basal can be set to
 
 This safety setting determines the maximum temporary basal rate the insulin pump may deliver. It is also known as **max-basal**.
@@ -104,7 +104,7 @@ For example, if the highest basal rate in your profile was 0.5 U/h you could mul
 
 *See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
-(Open-APS-features-maximum-total-iob-openaps-cant-go-over)=
+<a id="Open-APS-features-maximum-total-iob-openaps-cant-go-over"></a>
 ### Maximum total IOB OpenAPS can’t go over
 
 This value determines the maximum **Insulin on Board** (basal and bolus IOB) that **AAPS** will remain under while running in closed loop mode. It is also known as **maxIOB**.
@@ -162,14 +162,14 @@ Enable this to use SMB functionality. If disabled, no **SMBs** will be given.
 
 When enabled, new settings become available.
 
-(Open-APS-features-enable-smb-with-high-temp-targets)=
+<a id="Open-APS-features-enable-smb-with-high-temp-targets"></a>
 #### Enable SMB with high temp targets
 
 If this setting is enabled, **SMBs** will still be delivered even if the user has selected a high **Temp Target** (defined as anything above 100mg/dL or 5.6mmol/l,  regardless of **Profile** target). This option is intended to be used to disable SMBs when the setting is disabled. For example, if this option is disabled, **SMBs** can be disabled by setting a **Temp Target** above 100mg/dL or 5.6mmol/l. This option will also disable **SMBs** regardless of what other condition is trying to enable SMB.
 
 If this setting is enabled, **SMB** will only be enabled with a high temp target if **Enable SMB with temp targets** is also enabled. 
 
-(Open-APS-features-enable-smb-always)=
+<a id="Open-APS-features-enable-smb-always"></a>
 #### Enable SMB always
 If this setting is enabled, SMB is enabled always enabled(independent of COB, temp targets or boluses). If this setting is enabled, the rest of the enable settings below will have no effect. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled. 
 
@@ -204,7 +204,7 @@ Note that the loop runs every time a glucose value comes in (generally 5 minutes
 
 Default value: 3 min.
 
-(Open-APS-features-max-minutes-of-basal-to-limit-smb-to)=
+<a id="Open-APS-features-max-minutes-of-basal-to-limit-smb-to"></a>
 #### Max minutes of basal to limit SMB to
 This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is covered by COBs.
 
@@ -227,7 +227,7 @@ With this option enabled, the SMB algorithm can recognize unannounced meals. Thi
 
 **Therefore, UAM should always be activated when using SMB.**  
 
-(key-aaps-features-minimal-carbs-required-for-suggestion)=
+<a id="key-aaps-features-minimal-carbs-required-for-suggestion"></a>
 ### Minimal carbs required for suggestion
 
 Minimum grams of carbs to display a carbs suggestion alert. 
@@ -255,7 +255,7 @@ Default value: 4 (shouldn’t be changed unless you really need to and know what
 
 ***
 
-(Open-APS-features-advanced-meal-assist-ama)=
+<a id="Open-APS-features-advanced-meal-assist-ama"></a>
 ## Advanced Meal Assist (AMA)
 AMA, the short form of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
 
@@ -317,7 +317,7 @@ Default value: 2
 
 ***
 
-(Open-APS-features-overview-of-hard-coded-limits)=
+<a id="Open-APS-features-overview-of-hard-coded-limits"></a>
 ## Overview of hard-coded limits
 
 |            | Child | Teenager | Adult | Insulin resistant adult | Pregnant |

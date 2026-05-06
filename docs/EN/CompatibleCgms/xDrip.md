@@ -25,10 +25,10 @@ If the checkbox for `Automatic Calibration` is checked, activate `Download treat
 
 Tap `Extra Options`(8)
 
-```{admonition} Safety warning
-:class: warning
-You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB. 
-```
+::: warning Safety warning
+You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB.
+:::
+
 
 Deactivate `Upload treatments`(9) and make sure you will **NOT** use `Back-fill data` (11). 
 
@@ -56,7 +56,7 @@ Remember to disable Import Sounds to avoid xDrip+ making a ringtone every time A
 
 ![xDrip+ Basic Settings 5](../images/cgm/xDrip+/xDrip_Basic5.png)
 
-(xdrip-identify-receiver)=
+<a id="xdrip-identify-receiver"></a>
 
 #### Identify receiver
 
@@ -105,7 +105,7 @@ To use it safely, there are a few points to be aware of:
 
 To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
 
-(xdrip-connect-g6-transmitter-for-the-first-time)=
+<a id="xdrip-connect-g6-transmitter-for-the-first-time"></a>
 
 ### Connect G6 transmitter for the first time
 
@@ -113,7 +113,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
-(xdrip-transmitter-battery-status)=
+<a id="xdrip-transmitter-battery-status"></a>
 
 ### Transmitter battery status
 
@@ -125,14 +125,14 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.ht
 * See [here](https://navid200.github.io/xDrip/docs/Battery-condition.html) for more information.
 
 
-(xdrip-extend-transmitter-life)=
+<a id="xdrip-extend-transmitter-life"></a>
 
 ### Extend transmitter life
 
 * [Lifetime](https://navid200.github.io/xDrip/docs/Transmitter-lifetime.html) cannot be extended for Firefly transmitters: only rebatteried or modified transmitters.
 * Follow [these instructions](https://navid200.github.io/xDrip/docs/Hard-Reset.html) for non-Firefly transmitters.
 
-(xdrip-replace-transmitter)=
+<a id="xdrip-replace-transmitter"></a>
 
 ### Replace transmitter
 
@@ -160,7 +160,7 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.ht
 * Insert and then start a new sensor following [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
 
-(xdrip-retrieve-sensor-code)=
+<a id="xdrip-retrieve-sensor-code"></a>
 
 ### Retrieve sensor code
 
@@ -168,7 +168,7 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.ht
 
 ![xDrip+ Retrieve Dexcom Sensor Code2](../images/cgm/xDrip+/xDrip_Dexcom_SensorCode2.png)
 
-(xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)=
+<a id="xdrip-troubleshooting-dexcom-g5-g6-and-xdrip"></a>
 
 ### Troubleshooting Dexcom G5/G6 and xDrip+
 
@@ -233,17 +233,17 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorF
 
 - Start the sensor in xDrip+.
 
-  ```{admonition} Safety warning
-  :class: warning
-  Do not use sensor data before the one hour warm-up is over: the values can be extremely high and cause wrong decisions in AAPS.  
-  ```
+::: warning Safety warning
+Do not use sensor data before the one hour warm-up is over: the values can be extremely high and cause wrong decisions in AAPS.
+:::
+
 
   → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Set the exact time you started it with the reader or the vendor app. If you didn't start it today, answer "Not Today" (4).
 
 ![xDrip+ Start Libre Transmitter & Sensor 3](../images/cgm/xDrip+/xDrip_Libre_Transmitter03.png)
 
 
-(xdrip-libre2-patched-app)=
+<a id="xdrip-libre2-patched-app"></a>
 ## Libre 2 patched app
 
 * Set the data source to Libre patched app.

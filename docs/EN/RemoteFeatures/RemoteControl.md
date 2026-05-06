@@ -10,13 +10,13 @@ The first three are mostly appropriate for caregivers/parents, but smartwatches 
 
 ![image](../images/remote_control_and_following/AAPS_overview_remote_control_01.png)
 
-(RemoteControl_SMS-Commands)=
+<a id="RemoteControl_SMS-Commands"></a>
 
 ## 1) SMS Commands
 
 See the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
 
-(RemoteControl_aapsclient)=
+<a id="RemoteControl_aapsclient"></a>
 ## 2) AAPSClient
 
 **AAPSClient** looks very similar in appearance to **AAPS** itself, offering the caregiver tabs that will remotely action commands in **AAPS**:
@@ -102,11 +102,11 @@ If you are struggling with **AAPS** v3 to accept the 'NS access token' and using
 
 | Tab / Hamburger     | Features                                                                                                                                                                       |
 | ------------------- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Action** Tab      | - Profile Switch <br>- Loop Status change <br>- Temp Target<br>- BG Check<br>- CGM Sensor Insert<br>- Note<br>- Exercise<br>- Announcement<br>- Question?<br>- History Browser |
+| **Action** Tab      | - Profile Switch <br/>- Loop Status change <br/>- Temp Target<br/>- BG Check<br/>- CGM Sensor Insert<br/>- Note<br/>- Exercise<br/>- Announcement<br/>- Question?<br/>- History Browser |
 | **Food** Tab        |                                                                                                                                                                                |
 | **Treatments** Tab  | - Check Treatments delivered including bolus and carbs entered                                                                                                                 |
 | **Maintenance** Tab | - Export and Import Settings                                                                                                                                                   |
-| **Profile** Tab     | - Creating new profile<br>- Profile switch                                                                                                                                     |
+| **Profile** Tab     | - Creating new profile<br/>- Profile switch                                                                                                                                     |
 
 **AAPSClient** allows the caregiver to make many of the adjustments that are allowed directly in **AAPS** (excluding insulin boluses) remotely, via the mobile or internet network. The main benefits of **AAPSClient** are the speed and ease with which caregivers/parents can use it to remotely control **APPS**. __AAPSClient__ _can_ be much faster than entering SMS Commands, if delivering a command which would require authentication. Commands entered on **AAPSClient** are uploaded onto Nightscout.
 In order for the actions taken in **AAPSClient** to be actually actioned in **AAPS**, the NSClient settings must allow to receive such orders. See the [Synchronization section of NSClient preferences](#Preferences-nsclient-synchronization).
@@ -119,7 +119,7 @@ Remote control through **AAPSClient** is only recommended if your synchronizatio
 
 A smartwatch can be a very useful tool for helping to manage **AAPS** with kids. A couple of different configurations are possible. If **AAPSClient** is installed on the caregiver's phone, the [**AAPSClient WearOS** app](https://github.com/nightscout/AndroidAPS/releases/) can be downloaded and installed on a compatible smartwatch which is connected to the parent's phone. This will show current BG, loop status and allow carb entry, temp targets and profile changes. It will NOT allow bolusing from the WearOS app. You can read more about Smartwatches [here](#4-smartwatches).
 
-(RemoteControl_nightscout)=
+<a id="RemoteControl_nightscout"></a>
 ## 3) Nightscout
 
 As well as Nightscout being a server in “the Cloud”, there is also a dedicated **Nightscout** app which can be downloaded directly from the App Store on your iPhone. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**AAPSClient**](#2-aapsclient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) app from the Playstore.
@@ -213,21 +213,21 @@ Some of the most useful **Nightscout** commands are described in the table below
 
 | Most commonly used treatments                       | Function, example of when command is useful                  |
 | --------------------------------------------------- | ------------------------------------------------------------ |
-| **Correction bolus**                                | Allows you to announce **but <u>not</u> bolus** insulin.<br>Very useful for cancelling negative insulin to prevent a hypo,<br>for example in the middle of the night, if the profile has been too strong. |
+| **Correction bolus**                                | Allows you to announce **but <u>not</u> bolus** insulin.<br/>Very useful for cancelling negative insulin to prevent a hypo,<br/>for example in the middle of the night, if the profile has been too strong. |
 | **Carb correction**                                 | Announce carbs now                                           |
-| **Temporary Target**<br>**Temporary Target cancel** | Allows temp targets to be set and cancelled.<br>Note that cancelling does not always work,<br>in this instance you can set a new target for a short time period (2 min)<br>which will then revert back to the normal target afterwards. |
-| **Profile switch**                                  | Allows you to check the current profile which is running,<br>and switch to another profile, either permanently,<br>or for a defined length of time (mins). |
+| **Temporary Target**<br/>**Temporary Target cancel** | Allows temp targets to be set and cancelled.<br/>Note that cancelling does not always work,<br/>in this instance you can set a new target for a short time period (2 min)<br/>which will then revert back to the normal target afterwards. |
+| **Profile switch**                                  | Allows you to check the current profile which is running,<br/>and switch to another profile, either permanently,<br/>or for a defined length of time (mins). |
 
 
 
 | Less widely used commands                                    | Function, example of when command is useful                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | **BG check**                                                 | Send a BG check to AAPS.                                     |
-| **Snack bolus**<br>**Meal bolus**<br>**Combo bolus**         | Can announce carbs (plus proteins and fat)<br> from 60 min in the past to 60 min in the future.<br>Combo bolus allows insulin announcement at the same time. |
-| **Announcement**<br>**Note**<br>**Question**<br>**Exercise**<br>**Open APS offline**<br>**DAD alert** | Add these info notes (DAD = diabetic dog alert).             |
-| **Pump site change**<br>**Battery change**<br>**Insulin cartridge change** | Announces these pump changes.                                |
-| **CGM sensor start**<br>**CGM sensor insert**<br>**CGM sensor stop** | Announces these CGM changes.                                 |
-| **Temp basal start**<br>**Temp basal end**                   | Most useful in open looping.                                 |
+| **Snack bolus**<br/>**Meal bolus**<br/>**Combo bolus**         | Can announce carbs (plus proteins and fat)<br/> from 60 min in the past to 60 min in the future.<br/>Combo bolus allows insulin announcement at the same time. |
+| **Announcement**<br/>**Note**<br/>**Question**<br/>**Exercise**<br/>**Open APS offline**<br/>**DAD alert** | Add these info notes (DAD = diabetic dog alert).             |
+| **Pump site change**<br/>**Battery change**<br/>**Insulin cartridge change** | Announces these pump changes.                                |
+| **CGM sensor start**<br/>**CGM sensor insert**<br/>**CGM sensor stop** | Announces these CGM changes.                                 |
+| **Temp basal start**<br/>**Temp basal end**                   | Most useful in open looping.                                 |
 
 Read more about **Nightscout** options [here](https://nightscout.github.io/)
 
@@ -245,7 +245,7 @@ More about this [here](https://nightscout.github.io/nightscout/discover/#edit-mo
 
 Although this could potentially be useful for deleting announced (but not bolused for) carbs, in practice it doesn’t currently work well with **AAPS** and we recommend making changes like this via the **AAPS** app directly.
 
-(RemoteControl_smartwatches)=
+<a id="RemoteControl_smartwatches"></a>
 ## 4) Smartwatches
 
 ### Option 1) Controlling AAPS from a Wear OS Watch

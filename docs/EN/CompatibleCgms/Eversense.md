@@ -61,6 +61,7 @@ xDrip+ can read notifications from the vendor app, like ESEL does. No backfillin
 - Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page [xDrip+ settings](../CompatibleCgms/xDrip.md).
 - Enable [Exponential Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md) in AAPS.
 
-```{warning}
+::: warning
 BG values reading frequency is not always 5 minutes and duplicates can occur.
-```
+:::
+

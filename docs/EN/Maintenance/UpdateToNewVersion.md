@@ -23,7 +23,7 @@ Follow [these instructions.](./UpdateComputerBuild.md).
 
 Use the [same instructions](../SettingUpAaps/CLIBuild.md) as when building AAPS previously, but pull new changes with git.
 
-(Update-to-new-version-check-aaps-version-on-phone)=
+<a id="Update-to-new-version-check-aaps-version-on-phone"></a>
 ### Check AAPS version on phone
 
 Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.

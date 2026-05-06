@@ -1,18 +1,16 @@
-(Open-APS-features-DynamicISF)=
+<a id="Open-APS-features-DynamicISF"></a>
 # Dynamic ISF (DynISF)
 
 Up until now, with **AMA** and **SMB**, **ISF** was defined in the **Profile** and was static for each defined period in the day. But in reality, a person’s **ISF** is not that static and varies depending on their **BG** level: when at a high BG level, the user will need more insulin to bring their **BG** down 50mg/dL / 3mmol/L than compared to a lower  **BG**. [Autosens](#Open-APS-features-autosens) was the first algorithm to try and address this issue, by adjusting **ISF** outside of mealtimes. 
 
 **Dynamic ISF** (also called **DynISF**) serves the same purpose but is more advanced as it can be used at all times. It is recommended only for advanced users that have a good handle on their **AAPS**’ controls and monitoring. Read the [Things to consider when activating Dynamic ISF](#dyn-isf-things-to-consider-when-activating-dynamicisf) below before trying it out.
 
-```{admonition} CAUTION - Automations or Profile Percentage change
-:class: warning
-
+::: warning CAUTION - Automations or Profile Percentage change
 **Automations** should always be used with care. This is particularly so with **Dynamic ISF**.
 
 When using **Dynamic ISF**, disable any temporary **Profile** change as an **Automation** rule, because it would cause **Dynamic ISF** to be overly aggressive in correction bolusing and result in hypoglycemia. This is the exact purpose of **Dynamic ISF** and so there is no need for **AAPS** to be told to provide additional insulin by way of Automation in the event of high **BGs**.
+:::
 
-```
 
 To use **Dynamic ISF**, **AAPS'** database requires a minimum of 7 days of the user's **AAPS** data.
 
@@ -83,7 +81,7 @@ For a simplified explanation, refer to the screenshot below, which illustrates t
 
 ![DynISF_BGValue.png](../images/DynamicISF/DynISF_BGValue.png)
 
-(dynisf-other-usages-of-isf)=
+<a id="dynisf-other-usages-of-isf"></a>
 ## Other usages of ISF
 
 ### ISF and COB absorption
@@ -98,14 +96,14 @@ When using the [Bolus wizard](#aaps-screens-bolus-wizard), **ISF** is used if **
 
 When using **Dynamic ISF**, the **ISF** used here is the average of past 24h Dynamic ISF values.
 
-(dyn-isf-preferences)=
+<a id="dyn-isf-preferences"></a>
 ## Preferences
 
 Check **Enable dynamic sensitivity** in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings) to activate. New settings become available once selected.
 
 ![Dynamic ISF settings](../images/Preferences/Pref2020_DynISF.png)
 
-(dyn-isf-adjustment-factor)=
+<a id="dyn-isf-adjustment-factor"></a>
 ### Dynamic ISF Adjustment Factor
 **Dynamic ISF** works based on a single rule which is supposed to apply to everyone, implying that people having the same **TDD** would have the same sensitivity. As each user has their own personal sensitivity, the **Adjustment Factor** allows the user to define whether they are more or less sensitive to insulin than the "standard" person.
 
@@ -128,7 +126,7 @@ This means that, when using **DynISF**, you can use **Profile Percentage** to te
 
 This setting replaces Autosens, and uses the last 24h **TDD**/7D **TDD** as the basis for increasing and decreasing basal rate, in the same way that standard Autosens does. This calculated value is also used to adjust target, if the options to adjust target with sensitivity are enabled. Unlike Autosens, this option does not adjust **ISF** values. 
 
-(dyn-isf-things-to-consider-when-activating-dynamicisf)=
+<a id="dyn-isf-things-to-consider-when-activating-dynamicisf"></a>
 ## Things to consider when activating Dynamic ISF
 
 * **Dynamic ISF** is recommended only for advanced users that have a good handle on their **AAPS'** controls and monitoring. Users should ideally have attained good control with **SMB** before moving onto **Dynamic ISF**.

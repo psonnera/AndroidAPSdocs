@@ -28,7 +28,7 @@ To return to real time select this button:
 
 ![History Browser](../images/Maintenance/historybrowser6.png)
 
-(reviewing-statistics)=
+<a id="reviewing-statistics"></a>
 ## **AAPS Statistics**
 
 **AAPS** provides basic monitoring statistics.

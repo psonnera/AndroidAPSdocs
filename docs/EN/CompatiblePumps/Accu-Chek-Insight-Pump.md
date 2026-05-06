@@ -55,7 +55,7 @@ Note: AAPS will write data always in **first basal rate profile in the pump**.
 
 Note: There will be no permanent connection between pump and phone. A connection will only be established if necessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Otherwise battery of phone and pump would drain way too fast.
 
-(Accu-Chek-Insight-Pump-settings-in-aaps)=
+<a id="Accu-Chek-Insight-Pump-settings-in-aaps"></a>
 ## Settings in AAPS
 **Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](#Preferences-advanced-settings-nsclient)).
 
@@ -83,15 +83,15 @@ In the Insight settings in AAPS you can enable the following options:
 * "Disable vibrations on automated bolus delivery": This disables the Insight pump's vibrations when delivering an automatic bolus (SMB or Temp basal with TBR emulation). This setting is available only with the latest version of Insight firmware (3.x).
   
 * "Recovery duration": This defines how long AAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time.
-    <br><br>Example for min. recovery duration = 5 and max. recovery duration = 20
-    <br><br>no connection -> wait <b>5</b> sec.
-      <br>  retry -> no connection -> wait <b>6</b> sec.
-      <br>  retry -> no connection -> wait <b>7</b> sec.
-      <br>  retry -> no connection -> wait <b>8</b> sec.
-      <br>...
-      <br>retry -> no connection -> wait <b>20</b> sec.
-      <br>retry -> no connection -> wait <b>20</b> sec.
-      <br>...
+    <br/><br/>Example for min. recovery duration = 5 and max. recovery duration = 20
+    <br/><br/>no connection -> wait <b>5</b> sec.
+      <br/>  retry -> no connection -> wait <b>6</b> sec.
+      <br/>  retry -> no connection -> wait <b>7</b> sec.
+      <br/>  retry -> no connection -> wait <b>8</b> sec.
+      <br/>...
+      <br/>retry -> no connection -> wait <b>20</b> sec.
+      <br/>retry -> no connection -> wait <b>20</b> sec.
+      <br/>...
     
 * "Disconnect delay": This defines how long (in seconds) AAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
 
@@ -112,7 +112,7 @@ Configure alarms in the pump as follows:
 
 This will silence all alarms from the pump, allowing AAPS to decide if an alarm is relevant to you. If AAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
 
-(Accu-Chek-Insight-Pump-vibration)=
+<a id="Accu-Chek-Insight-Pump-vibration"></a>
 ### Vibration
 
 Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AAPS issues an SMB or TBR emulation delivers an extended bolus).
@@ -129,7 +129,7 @@ Battery life for Insight when looping range from 10 to 14 days, max. 20 days. Th
 
 The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
 
-(Accu-Chek-Insight-Pump-insight-specific-errors)=
+<a id="Accu-Chek-Insight-Pump-insight-specific-errors"></a>
 ## Insight specific errors
 
 ### Extended bolus

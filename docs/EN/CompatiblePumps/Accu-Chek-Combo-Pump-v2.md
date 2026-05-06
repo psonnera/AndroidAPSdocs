@@ -11,7 +11,7 @@
 
 Some phones may work better than others, depending on their quality of Bluetooth support and whether or not they have additional, very aggressive power saving logic. A list of phones can be found in the [AAPS Phones](#Phones-list-of-tested-phones) document. Please be aware that this is not complete list and reflects personal user experience. You are encouraged to also enter your experience and thereby help others (these projects are all about paying it forward).
 
-(combov2-before-you-begin)=
+<a id="combov2-before-you-begin"></a>
 ## Before you begin
 
 **SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error. Keep your Smartpix / Realtyme device handy, along with the 360 Configuration Software. Plan on spending about an hour for setting everything up and checking that everything is working properly.
@@ -134,7 +134,7 @@ The Accu-Chek Combo was developed before Bluetooth 4.0 was released, and just on
 
 The consequence of this is that pairing will never be 100% without problems, though it is greatly improved in this new driver. In particular, during pairing, Android's Bluetooth PIN dialog can briefly show up and automatically go away. But sometimes, it stays on screen, and asks for a 4-digit PIN. (This is not to be confused with the 10-digit Combo pairing PIN.) Do not enter anything, just press cancel. If pairing does not continue, follow the instructions on screen to retry the pairing attempt.
 
-(combov2-tab-contents)=
+<a id="combov2-tab-contents"></a>
 ## Accu-Chek Combo tab contents
 
 The tab shows the following information when a pump was paired (items are listed from top to bottom):
@@ -180,7 +180,7 @@ These preferences are available for the combo driver (items are listed from top 
 
 Most users only ever use the top two items, the _Pair with pump_ and _Unpair pump_ buttons.
 
-(combov2-autodetections)=
+<a id="combov2-autodetections"></a>
 ## Autodetecting and automatically entering battery and reservoir changes
 
 The driver is capable of detecting battery and reservoir changes by keeping track of the battery and reservoir levels. If the battery level was reported by the Combo as low the last time the pump status was updated, and now, during the new pump status update, the battery level shows up as normal, then the driver concludes that the user must have replaced the battery. The same logic is used for the reservoir level: If it now is higher than before, this is interpreted as a reservoir change.
@@ -189,7 +189,7 @@ This only works if the battery and reservoir are replaced when these levels are 
 
 These autodetections can be turned off in the Preferences UI.
 
-(combov2-alerts)=
+<a id="combov2-alerts"></a>
 ## Alerts (warnings and errors) and how they are handled
 
 The Combo shows alerts as remote-terminal screens. Warnings are shown with a "Wx" code (x is a digit), along with by a short description. One example is "W7", "TBR OVER". Errors are similar, but show up with an "Ex" code instead.

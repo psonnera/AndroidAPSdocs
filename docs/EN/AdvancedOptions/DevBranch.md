@@ -13,7 +13,7 @@ If you find a bug or think something wrong has happened when using the Dev branc
 
 A dev version has an expiration date. This seems inconvenient when using it satisfactorily, but serves a purpose. When a single dev version doing the rounds, it is easier to keep track of bugs that people are reporting. The developers do not want to be in a position where there are three versions of dev in the wild where bugs are fixed in some and not others, and people continue to report the fixed ones.
 
-(branch-ci-test)=
+<a id="branch-ci-test"></a>
 
 ## Test a specific branch (branch-ci)
 
@@ -23,7 +23,7 @@ To build a test branch, select branch-ci, which allows you to choose a specific 
 
 ![aaps_ci_branch_ci2](../images/Building-the-App/CI/aaps_ci_branch_ci2.png)
 
-(github-pr-test)=
+<a id="github-pr-test"></a>
 
 ## Test items in a pull request (GitHub CI actions deploy)
 
@@ -31,7 +31,6 @@ Available from 3.3.2.1.dev
 
  - Suitable for testers or those helping with testing.
 
-```{eval-rst}
 .. raw:: html
 
     <!--crowdin: exclude-->
@@ -45,7 +44,6 @@ Available from 3.3.2.1.dev
         </iframe>
       </div>
     </div>
-```
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_pr_ci.png)
 

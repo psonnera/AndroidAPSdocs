@@ -1,8 +1,5 @@
 # SMS Commands
 
-```{contents} Table of contents
-:depth: 2
-```
 
 Most of the adjustments of temp targets, following **AAPS** etc. can be done on [**AAPSClient** app](../RemoteFeatures/RemoteMonitoring.md) on an Android phone with an internet connection. Boluses, however, can't be given through **AAPSClient**, but you can use SMS commands. If you use an iPhone as a follower and therefore cannot use **AAPSClient** app, there are additional SMS commands available.
 
@@ -33,12 +30,8 @@ If you want to remove the ability of a caregiver phone to send SMS commands, use
 
 ## Setup SMS commands
 
-```{contents} The overall process is as follows
-:depth: 1
-:local: true
-```
 
-(sms-commands-authenticator-setup)=
+<a id="sms-commands-authenticator-setup"></a>
 ### Authenticator setup
 
 Two-factor authentication is used to improve safety.
@@ -77,7 +70,7 @@ Enable “allow remote commands via SMS”:
 
 ![image](../images/remote_control_and_following/remote-control-11.png)
 
-(SMSCommands-authorized-phone-numbers)=
+<a id="SMSCommands-authorized-phone-numbers"></a>
 #### Allowed phone numbers
 
 Enter the caregiver phone number(s). Include the country code and exclude the first “0” of the phone number, as shown in these examples:
@@ -162,13 +155,9 @@ To avoid hypos, it is a good idea to start conservatively, by bolusing **less in
 
 **The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can use a combination of Nightscout or **AAPSClient** with SMS commands. Carbs can be announced through Nightscout without any authentication (see instructions subsection below) , and are therefore quicker than SMS commands.
 
-(SMSCommands-commands)=
+<a id="SMSCommands-commands"></a>
 ## Commands
 
-```{contents} List of command groups
-:depth: 1
-:local: true
-```
 
 Commands must be sent in English, the response will be in your local language if the response string is already [translated](#translations-translate-strings-for-AAPS-app). The commands are not case-sensitive, you can use lower or upper case.
 
@@ -176,7 +165,7 @@ Commands must be sent in English, the response will be in your local language if
 
 The **SMS Commands Tables** below show all the possible SMS commands. _Example values_ are given, to aid understanding. The commands have the same range of possible values (targets, percent profile etc.) which are allowable in the **AAPS** app itself.
 
-(authentication-or-not)=
+<a id="authentication-or-not"></a>
 ### Authentication or not?
 
 Some SMS commands give an immediate response, and some SMS commands require strong **authentication** through the Authenticator app. A simple enquiry like “**BG**” (which requests an update on current glucose) is quick to type, doesn't need authenticating, and returns the **AAPS** status information shown below:
@@ -257,7 +246,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 | TARGET STOP/CANCEL        | Yes  | To cancel Temp Target                     |
 
 
-(SMSCommands-other)=
+<a id="SMSCommands-other"></a>
 ### Other
 
 | Command            | Auth | Function & *Response*                                                                                                                                                             |
@@ -269,13 +258,9 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 | HELP               | No   | Returns all functions available for interrogation:<br/>BG, LOOP, TREATMENTS, ....<br/>Send further **HELP *FUNCTION*** command to list<br/>all options available in this section. |
 | HELP BOLUS         |      | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                    |
 
-(SMSCommands-troubleshooting)=
+<a id="SMSCommands-troubleshooting"></a>
 ## Troubleshooting and FAQ
 
-```{contents} List of questions and issues
-:depth: 1
-:local: true
-```
 
 ### What _can’t_ we do with SMS commands?
 
@@ -339,7 +324,7 @@ If you receive the same message repeatedly (_e.g._ a profile switch) you may hav
 
 If the other app is installed on multiple phones make sure to deactivate upload on all of them.
 
-(sms-commands-too-many-messages)=
+<a id="sms-commands-too-many-messages"></a>
 ### I am getting far too many text messages from SMS Commands. Can I reduce the frequency, or make them stop?
 
 Using SMS commands may generate a lot of automated messages from the **AAPS** phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your **AAPS** phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates.

@@ -15,7 +15,7 @@ This regulation is not restricted just to sales (in the meaning of getting money
 
 That’s why apks aren’t available.
 
-(FAQ-how-to-begin)=
+<a id="FAQ-how-to-begin"></a>
 ### How to begin?
 First of all, you have to **get loopable hardware components**:
 
@@ -35,7 +35,7 @@ If you don't want your preferences to be easily changed then you can password pr
 #### Android Wear Smartwatches
 If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AAPS are not blocked. Confirmation of action comes via notification.
 
-(FAQ-disconnect-pump)=
+<a id="FAQ-disconnect-pump"></a>
 #### Disconnect pump
 If you take your pump off for showering, bathing, swimming, sports or other activities you must let AAPS know that no insulin is delivered to keep IOB correct.
 
@@ -131,7 +131,7 @@ Depending on your job, you may choose to use different treatment factors on work
 
 ### Leisure activities
 
-(FAQ-sports)=
+<a id="FAQ-sports"></a>
 #### Sports
 You have to rework your old sports habits from pre-loop times. If you simply consume one or more sports carbs as before, the closed loop system will recognize them and correct them accordingly.
 

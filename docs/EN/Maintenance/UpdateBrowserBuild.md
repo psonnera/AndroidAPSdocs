@@ -4,17 +4,14 @@
 
 **AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
-```{note}
+::: info
 In case you want to upgrade **AAPS** with a browser for the first time : copy your back-up keystore file to your Google Drive. Then follow the [Browser Build **AAPS** procedure](../SettingUpAaps/BrowserBuild.md) instead of this guide. Instead of creating a new keystore, you must select the one you have copied from your computer.
 This operation will be mandatory only the first time, then for successive upgrades you will be able to follow this guide.
-```
+:::
+
 
 ## Overview for updating to a new version of AAPS with a browser
 
-```{contents} Steps for updating to a new version of AAPS
-:depth: 1
-:local: true
-```
 
 In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
 
@@ -24,13 +21,13 @@ Export your settings from the existing **AAPS** version on your phone. You might
 
 See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
 
-(Update-to-new-version-update-your-repo)=
+<a id="Update-to-new-version-update-your-repo"></a>
 ### Update your GitHub repository
 
-```{admonition} WARNING
-:class: warning
+::: warning WARNING
 Browser Build is available from AAPS version 3.3.2.1.
-```
+:::
+
 
 [Log into GitHub](https://github.com/login).
 

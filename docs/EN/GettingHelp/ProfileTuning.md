@@ -1,10 +1,10 @@
 # Tweaking the AAPS' Profile
 
-```{admonition} This is NOT a medical advice
-:class: warning
+::: warning This is NOT a medical advice
 Please work with your care team for support and advice on your diabetes management.</br>
 Use this guide only once you have [set up your **Profile** correctly](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.md), following all **AAPS** objectives.
-```
+:::
+
 
 This guide explains the logic of the OpenAPS algorithm results with a given __Profile__, and provides information about which values to adjust when certain situations are observed. The suggestions about basal testing below may diverge from what your care team  advises
 
@@ -38,7 +38,7 @@ Don't rush, go slow!
 - If your [basal rate profile](#your-aaps-profile-basal-rates) is correct, when you are on target with COB=0[*](#profiletuning-cob-zero) and IOB=0, you will remain constantly on target whatever your ISF (ISF is only used when you are higher than your target).
 - You need to check the actual IOB but also, the IOB chart to see how the IOB was during the past few hours.
 
-(profiletuning-cob-zero)=
+<a id="profiletuning-cob-zero"></a>
 
 ***COB = 0**
 

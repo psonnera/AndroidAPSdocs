@@ -14,7 +14,7 @@ Disable any active uploader to Nightscout in Juggluco.
 
 ![Disable Nightscout Upload](../images/cgm/juggluco/DisableNightscoutUpload.png)
 
-(juggluco-to-aaps)=
+<a id="juggluco-to-aaps"></a>
 
 ## Juggluco to AAPS
 
@@ -28,7 +28,7 @@ Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS.
 
 ![Juggluco to AAPS](../images/cgm/juggluco/Juggluco-AAPS.png)
 
-(juggluco-to-xdrip)=
+<a id="juggluco-to-xdrip"></a>
 
 ## Juggluco to xDrip+
 

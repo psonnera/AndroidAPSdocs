@@ -92,11 +92,10 @@ When setting up an **Automation**, you can first test it by activating the ‘no
 
 ![Alt text](../images/Automations/automation_2024-02-12_20-55-05.png)
 
-```{admonition} Important note
-:class: note
-
+::: info Important note
 **Automations** are still active when the Loop is disabled!
-```
+:::
+
 
 
 ## Safety limits
@@ -109,11 +108,10 @@ There are safety limits set for **Automations**:
 
 ## Correct use of negative values
 
-```{admonition} Warning
-:class: warning
-
+::: warning Warning
 Please be careful when selecting a negative value in **Automation**
-```
+:::
+
 
 Caution must be taken when selecting a ‘negative value’ within the ‘Condition’ like "less than" in **Automations**. For example:
 
@@ -129,7 +127,7 @@ Trigger an **Automation** for any number which is **greater than** -0.1mmol/l (-
 
 It is important to carefully consider the exact intention of your **Automation** when choosing these conditions and values.  
 
-(automations-automation-triggers)=
+<a id="automations-automation-triggers"></a>
 ## Automation Triggers
 
 ![Automation Triggers](../images/Automations/automation_triggers.png)
@@ -179,7 +177,7 @@ Note that for all age related triggers the equal comparison is unlikely to trigg
 * Reservoir level trigger: Available for all pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
 * Pump battery level trigger: Available for supported pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
 
-(automations-automation-action)=
+<a id="automations-automation-action"></a>
 ## Action
 
 ![Automation Actions](../images/Automations/automation_actions.png)
@@ -208,7 +206,7 @@ Once the ‘Action’ is added,  the default values must be changed to the desir
 
 ![Alt text](../images/Automations/automation_2024-02-12_20-57-07.png)
 
-(Automations-the-order-of-the-automations-in-the-list-matters)=
+<a id="Automations-the-order-of-the-automations-in-the-list-matters"></a>
 ## The order of the **Automations** in the list matters 
  **AAPS** will automate the rules created in the order of preference, starting from the top of the **Automation** list. For example, if the ‘Low’  **Automation** is the most important **Automation**, above all other rules, then this  **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
 
@@ -275,7 +273,7 @@ Here is the screenshot detailing the **Automation** triggers:
 
 ![Alt text](../images/Automations/automation_2024-02-12_21-05-16.png-500x.png)
 
-(automating-preference-settings-export)=
+<a id="automating-preference-settings-export"></a>
 
 ## Automating Preference Settings Export
 

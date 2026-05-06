@@ -53,18 +53,18 @@ activation and make a new initial calibration.
 
 ## 2. Use xDrip+ direct connection
 
-```{admonition} Libre 2 EU only
-:class: warning
+::: warning Libre 2 EU only
 xDrip+ doesn't support direct connection to Libre 2 US and AUS.
 Only Libre 2 and 2+ **EU** models.
-```
+:::
+
 
 - Follow [these instructions](./Libre2MinimalL00per.md) to setup xDrip+ as the original documentation links to an obsolete OOP2  version.
 - Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
 
 -   Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
-(libre2-value-smoothing-raw-values)=
+<a id="libre2-value-smoothing-raw-values"></a>
 
 ### Value smoothing & raw values
 

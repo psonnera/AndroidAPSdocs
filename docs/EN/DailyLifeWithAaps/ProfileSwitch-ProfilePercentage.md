@@ -69,13 +69,13 @@ Once selected, **AAPS** readjusts the default basal rate, and **AAPS** (open or 
 
 The effect of a **Profile** Percentage is summarized in the table below:
 
-| Profile Switch<br>Percentage |    Effect    |    I:C<br>g/UI     | example<br>15g |         ISF<br>mmol/l/UI<br/>mg/dl/UI          | UI to lower<br/>2mmol/l<br/>40mg/dl |
+| Profile Switch<br/>Percentage |    Effect    |    I:C<br/>g/UI     | example<br/>15g |         ISF<br/>mmol/l/UI<br/>mg/dl/UI          | UI to lower<br/>2mmol/l<br/>40mg/dl |
 | :--------------------------: | :----------: | :----------------: | :------------: | :--------------------------------------------: | :---------------------------------: |
-|             90%              |    Weaker    | 5/0.9<br>=**5.55** |     2.7 UI     | 2.2/0.9<br>=**2.4**<br><br>40/0.9<br>=**44.4** |               0.8 UI                |
-|           **100%**           | **Standard** |       **5**        |    **3 UI**    |                 **2.2<br>40**                  |             **0.9** UI              |
-|             130%             |   Stronger   | 5/1.3<br>=**3.85** |     3.9 UI     | 2.2/1.3<br>=**1.7**<br><br>40/1.3<br>=**30.8** |               1.2 UI                |
+|             90%              |    Weaker    | 5/0.9<br/>=**5.55** |     2.7 UI     | 2.2/0.9<br/>=**2.4**<br/><br/>40/0.9<br/>=**44.4** |               0.8 UI                |
+|           **100%**           | **Standard** |       **5**        |    **3 UI**    |                 **2.2<br/>40**                  |             **0.9** UI              |
+|             130%             |   Stronger   | 5/1.3<br/>=**3.85** |     3.9 UI     | 2.2/1.3<br/>=**1.7**<br/><br/>40/1.3<br/>=**30.8** |               1.2 UI                |
 
-(ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
+<a id="ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile"></a>
 ## Time shift of the Circadian Percentage Profile
 
 A ‘time shift’ within a user’s **Profile** feature will move the user’s **Profile’s** settings around the day-to-day clock (‘circadian’) to the desired number of hours entered. This can be helpful for:

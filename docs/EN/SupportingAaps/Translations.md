@@ -5,18 +5,17 @@
 
 * Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
 
-```{admonition} Time for Approval
-:class: note
-
+::: info Time for Approval
 The approval is a manual step. As non profit organization we don't provide SLAs but in general the approval will be done in < 1 day. If not please contact the Doc team via Facebook or Discord.
-```
+:::
+
 
 * When we approve you, click the flag
    ![When we approve you, click the flag](../images/translation_flags.png)
 
 ## Translation of the app
 
-(translations-translate-strings-for-AAPS-app)=
+<a id="translations-translate-strings-for-AAPS-app"></a>
 ### Translate strings for AAPS app
 
 * If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
@@ -45,7 +44,7 @@ The approval is a manual step. As non profit organization we don't provide SLAs 
 
 When a proofreader approves a translation it will be added to the next version of AAPS.
 
-(translations-translation-of-the-documentation)=
+<a id="translations-translation-of-the-documentation"></a>
 ## Translation of the documentation
 
 * Click the name of the docs page you want to translate
@@ -82,12 +81,10 @@ In general this needs 1 - 3 days but might during holiday take a little bit long
 
 ### Translating links
 
-```{admonition} Links are not translated anymore
-:class: note
-
+::: info Links are not translated anymore
 Links are not translated anymore. In the past we had a topic here but this is gone as through migraton to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
+:::
 
-```
 
 You are translating the text which represents the link. Please you have to be careful **not** to remove the link which is represented by a pair of `<0></0>` tags or if their are more in one paragraph other numbers.
 

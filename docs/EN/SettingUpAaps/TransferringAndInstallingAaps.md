@@ -48,10 +48,11 @@ After the installation finished your are done with this step.
 
 you should see the **AAPS** icon and be able to open the app.
 
-```{warning}
+::: warning
 **IMPORTANT SAFETY NOTICE**
 Did you remember to disallow the installation from Google Drive?
-```
+:::
+
 
 Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
 

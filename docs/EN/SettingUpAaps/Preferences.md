@@ -16,12 +16,8 @@
 
 ![Preferences filter](../images/Preferences/Pref2021_Filter.png)
 
-```{contents}
-:backlinks: entry
-:depth: 2
-```
 
-(Preferences-general)=
+<a id="Preferences-general"></a>
 ## General
 
 ![Preferences > General](../images/Preferences/Pref2020_General.png)
@@ -39,7 +35,7 @@
 - If you use different languages, you might sometimes see a language mix. This is due to an android issue where overriding the default android language sometimes doesn't work.
 - Setting hidden in [simple mode](#preferences-simple-mode).
 
-(preferences-simple-mode)=
+<a id="preferences-simple-mode"></a>
 **Simple mode**
 
 The **simple mode** is activated by default when you first install **AAPS**. In **simple mode**, a significant amount of settings is hidden and preferences are replaced by predefined values. [Additional graphs](#AapsScreens-section-g-additional-graphs) on the HomePage are also predefined for you. You should switch off Simple mode once you become familiar with **AAPS** user interface and settings.
@@ -49,7 +45,7 @@ The **simple mode** is activated by default when you first install **AAPS**. In 
 - Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
 - Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
 
-(Preferences-skin)=
+<a id="Preferences-skin"></a>
 ### Skin
 
 Setting hidden in [simple mode](#preferences-simple-mode).
@@ -75,12 +71,12 @@ Difference between the other skins depends on the phone's display orientation:
 
 ![Skins depending on phone's display orientation](../images/Screenshots_Skins.png)
 
-(Preferences-protection)=
+<a id="Preferences-protection"></a>
 ## Protection
 
 ![Preferences > General - Protection](../images/Preferences/Pref2020_General2.png)
 
-(Preferences-master-password)=
+<a id="Preferences-master-password"></a>
 ### Master password
 
 Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7.
@@ -127,7 +123,7 @@ In the **Overview** section, you can define the preferences for the home screen.
 
 Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
 
-(Preferences-buttons)=
+<a id="Preferences-buttons"></a>
 ### Buttons
 
 - Define which buttons are visible on the bottom of your home screen. 
@@ -141,7 +137,7 @@ Option 'Keep screen on' will force Android to keep the screen on at all times. T
 
 ![Preferences > Buttons > Carbs](../images/Preferences/Pref2020_OV_Buttons3.png)
 
-(Preferences-quick-wizard)=
+<a id="Preferences-quick-wizard"></a>
 ### Quick Wizard
 
 Create customized buttons for certain standard meals or snacks which will be displayed on the home screen. Useful for standard meals frequently eaten. 
@@ -159,7 +155,7 @@ The proposal has to be confirmed before insulin is delivered.
 
 Only one QuickWizard button can show up at the same time. If you want to execute a different one : long press on the Quick Wizard button currently showing. It will take you to the list of all Quick Wizard options. To execute one, long press on it. You will have to confirm before execution.
 
-(Preferences-default-temp-targets)=
+<a id="Preferences-default-temp-targets"></a>
 ### Default temp targets
 
 Setting hidden in [simple mode](#preferences-simple-mode).
@@ -184,7 +180,7 @@ If you want to fill the tube or prime cannula through **AAPS** you can do this t
 
 Pre-set values can be defined in this dialogue. Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
 
-(Preferences-range-for-visualization)=
+<a id="Preferences-range-for-visualization"></a>
 ### Range for visualization
 
 Choose the high and low marks for the BG-graph on **AAPS** overview and smartwatch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
@@ -201,7 +197,7 @@ For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc
 
 ![Preferences > Tabs](../images/Preferences/Pref2020_OV_Tabs.png)
 
-(Preferences-show-notes-field-in-treatments-dialogs)=
+<a id="Preferences-show-notes-field-in-treatments-dialogs"></a>
 ### Show notes field in treatments dialogs
 
 Setting hidden in [simple mode](#preferences-simple-mode).
@@ -210,7 +206,7 @@ Gives you the option to add short text notes to your treatments (bolus wizard, c
 
 ![Preferences > Notes in treatment dialogs](../images/Preferences/Pref2020_OV_Notes.png)
 
-(Preferences-status-lights)=
+<a id="Preferences-status-lights"></a>
 ### Status lights
 
 Setting hidden in [simple mode](#preferences-simple-mode).
@@ -231,7 +227,7 @@ The last option allows you to import those settings from Nightscout if defined t
 
 ![Preferences > Status Lights](../images/Preferences/Pref2020_OV_StatusLights2.png)
 
-(Preferences-deliver-this-part-of-bolus-wizard-result)=
+<a id="Preferences-deliver-this-part-of-bolus-wizard-result"></a>
 ### Deliver this part of bolus wizard result
 
 Set the [default percentage](#AapsScreens-section-j) of the bolus calculated when using the bolus wizard.
@@ -262,7 +258,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 % todo
 
-(Preferences-advanced-settings-overview)=
+<a id="Preferences-advanced-settings-overview"></a>
 ### Advanced Settings (Overview)
 
 ![Preferences > Advanced Settings](../images/Preferences/Pref2021_OV_Adv.png)
@@ -279,7 +275,7 @@ Use with caution and do not enable it until you learn what it really does. Basic
 
 ## Treatment safety
 
-(preferences-patient-type)=
+<a id="preferences-patient-type"></a>
 ### Patient type
 
 - Safety limits are set based on the age you select in this setting.
@@ -304,7 +300,7 @@ Use with caution and do not enable it until you learn what it really does. Basic
 
 As of [AAPS version 3.4](#version3400), it is no longer possible to set the loop mode here. See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) to change loop mode now.
 
-(Preferences-minimal-request-change)=
+<a id="Preferences-minimal-request-change"></a>
 ### Minimal request change
 
 When using **Open loop**, you will receive notifications every time **AAPS** recommends adjusting the basal rate.
@@ -324,14 +320,14 @@ As of [**AAPS** version 3.3](#version3300), [Dynamic ISF](../DailyLifeWithAaps/D
 
 All the settings for OpenAPS AMA are described in the dedicated section in [Key AAPS Features > Advanced Meal Assist (AMA)](#Open-APS-features-advanced-meal-assist-ama).
 
-(Preferences-openaps-smb-settings)=
+<a id="Preferences-openaps-smb-settings"></a>
 ### OpenAPS SMB
 
 All the settings for OpenAPS SMB are described in the dedicated section in [Key AAPS Features > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
 ## Absorption settings
 
-(Preferences-min_5m_carbimpact)=
+<a id="Preferences-min_5m_carbimpact"></a>
 ### min_5m_carbimpact
 
 Setting hidden in [simple mode](#preferences-simple-mode).
@@ -375,7 +371,7 @@ The options here will vary depending on which pump driver you have selected in [
 
 More information on the dedicated [Tidepool](../SettingUpAaps/Tidepool.md) page.
 
-(Preferences-nsclient)=
+<a id="Preferences-nsclient"></a>
 ## NSClient
 
 ![NSClient](../images/Preferences/Pref2020_NSClient.png)
@@ -394,11 +390,10 @@ Original communication protocol, can be used with older Nightscout versions.
 
 [New protocol introduced with AAPS 3.2.](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) Safer and more efficient.
 
-```{admonition} V3 data uploaders
-:class: warning
-
+::: warning V3 data uploaders
 When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let **AAPS** upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.
-```
+:::
+
 
 - Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
 - **Make sure that the URL is WITHOUT /api/v1/ at the end.**
@@ -407,7 +402,7 @@ When using NSClientV3, all uploaders must be using the API V3. Since most are no
 - Double check for typos here if you are stuck in Objective 1.
 - Leave Connect to websockets enabled (recommended).
 
-(Preferences-nsclient-synchronization)=
+<a id="Preferences-nsclient-synchronization"></a>
 ### Synchronization
 
 ![Synchronization options](../images/Preferences/Pref2025_NSclient_Synchronization.png)
@@ -437,7 +432,7 @@ You can select which data you want to [upload and download to or from Nightscout
 - Multiple SSIDs can be separated by semicolon.
 - To delete all SSIDs enter a blank space in the field.
 
-(Preferences-advanced-settings-nsclient)=
+<a id="Preferences-advanced-settings-nsclient"></a>
 ### Advanced settings (NSClient)
 
 ![NS Client advanced settings](../images/Preferences/Pref2024_NSClientAdv.png)
@@ -462,7 +457,7 @@ Select which location service shall be used:
 
 Settings should be self-explanatory.
 
-(preferences-maintenance-settings)=
+<a id="preferences-maintenance-settings"></a>
 ## Maintenance settings
 
 ![Maintenance settings](../images/Preferences/Pref2020_Maintenance.png)
@@ -499,7 +494,7 @@ You can find AAPS logs in your phone memory -> Android -> data -> info.nightscou
 
 ![Log files options](../images/Preferences/Pref2020_Maintenance_Logs.png)
 
-(preferences-maintenance-logdirectory)=
+<a id="preferences-maintenance-logdirectory"></a>
 
 ### Setting the local AAPS directory
 
@@ -515,7 +510,7 @@ If you select a subdirectory of AAPS, you will see an error message. Tap "OK" an
 
 ![Local directory location](../images/Preferences/maintenance_settings_wrongdirectory.png)
 
-(preferences-maintenance-cloud)=
+<a id="preferences-maintenance-cloud"></a>
 
 ### Setting a cloud directory
 

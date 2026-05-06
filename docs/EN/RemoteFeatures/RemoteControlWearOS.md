@@ -1,13 +1,14 @@
 # Operation of AAPS via your Wear OS smartwatch
 
-(Watchfaces-aaps-watchfaces)=
+<a id="Watchfaces-aaps-watchfaces"></a>
 
 ## AAPS Watchfaces
 
-```{warning}
+::: warning
 AAPS Watchfaces are available for Wear OS smartwatches with API level 28 to 33.
 Wear OS 5 changes locked the watchfaces: only complications can be used.
-```
+:::
+
 
 There are several watchfaces to choose from that are included in the base build of the AAPS Wear APK. These watchfaces include average delta, IOB, currently active temp basal rate and basal profiles and a CGM readings graph.
 
@@ -55,7 +56,7 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 * **Vibrate on Bolus** (default `On`):
 * **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Used when setting a TT from watch.
 
-(Watchfaces-watchface-settings)=
+<a id="Watchfaces-watchface-settings"></a>
 
 ### Watchface settings
 
@@ -107,7 +108,7 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 * **Wizard Percentage** (default `Off`): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
 
-(Watchfaces-complications)=
+<a id="Watchfaces-complications"></a>
 
 ## Complications
 
@@ -165,7 +166,7 @@ Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpa
   * _None_: Disables tap action on AAPS complications
 * **Unicode in Complications** (default `On`): When `On`, the complication will use Unicode characters for symbols like `Δ` Delta, `⁞` vertical dot separator or `⎍` Basal Rate symbol. Rendering of them depends on the font, and that can be very watchface-specific. This option allows switching Unicode symbols `Off` when needed - if the font used by custom watchface does not support those symbols - to avoid graphical glitches.
 
-(WearOsSmartwatch-wear-os-tiles)=
+<a id="WearOsSmartwatch-wear-os-tiles"></a>
 
 ## Wear OS Tiles
 
@@ -296,7 +297,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * Check [list of tested phones and watches](#Phones-list-of-tested-phones) and [ask community](../GettingHelp/WhereCanIGetHelp.md) for other users experiences and reported battery lifetime.
 * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
 
-(Watchfaces-troubleshooting-the-wear-app)=
+<a id="Watchfaces-troubleshooting-the-wear-app"></a>
 
 ## Troubleshooting the wear app:
 

@@ -4,16 +4,13 @@
 
 **AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
-```{note}
+::: info
 In case you want to build **AAPS** on a new computer : copy your back-up keystore file to the new computer. Then follow the [Initial build **AAPS** procedure](../SettingUpAaps/BuildingAaps.md) instead of this guide. With the only difference that instead of creating a new keystore, you can select the one you have copied on the new computer.
-```
+:::
+
 
 ## Overview for updating to a new version of AAPS with Android Studio
 
-```{contents} Steps for updating to a new version of AAPS
-:depth: 1
-:local: true
-```
 
 In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
 
@@ -27,13 +24,13 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 The minimal version required is described in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file). If your version is older, please [update Android Studio first](#Building-APK-install-android-studio)!
 
-(Update-to-new-version-update-your-local-copy)=
+<a id="Update-to-new-version-update-your-local-copy"></a>
 ### Update your local copy
 
-```{admonition} WARNING
-:class: warning
+::: warning WARNING
 If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../SettingUpAaps/BuildingAaps.md), as this guide will not work for you!
-```
+:::
+
 
 * Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
 
@@ -57,9 +54,10 @@ If you update from versions prior to 2.8.x, please follow the instructions to do
 
 * Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message.
 
-  ```{note}
-  The files that were updated may vary! This is not an indication
-  ```
+::: info
+The files that were updated may vary! This is not an indication
+:::
+
 
    ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
 
@@ -74,20 +72,21 @@ This check is particularly indicated if you have already built a previous versio
 Check in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file) the required version for JVM, matching the **AAPS** version you are now building.
 Then follow the steps described at [Incompatible Gradle JVM](#incompatible-gradle-jvm) to make sure you currently use the correct version.
 
-(Update-to-new-version-build-the-signed-apk)=
+<a id="Update-to-new-version-build-the-signed-apk"></a>
 ### Build the Signed APK
 
 Your sourcecode is now the current released version, and all prerequisites have been checked. It's time to build the signed apk as described in the [build signed apk section](#Building-APK-generate-signed-apk).
 
-(Update-to-new-version-transfer-and-install)=
+<a id="Update-to-new-version-transfer-and-install"></a>
 
 ### Transfer and install the apk
 You need to transfer the apk to your phone so you can install it.
 
-```{note}
+::: info
 If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates.
 For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk. **Make sure to export your settings!**
-```
+:::
+
 
 See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)
 

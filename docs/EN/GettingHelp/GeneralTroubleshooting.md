@@ -1,4 +1,4 @@
-(generaltroubleshooting)=
+<a id="generaltroubleshooting"></a>
 
 # **Troubleshooting**
 
@@ -8,7 +8,7 @@ Additional useful information might also be available in the [FAQ](../UsefulLink
 
 ---
 
-(generaltroubleshooting-aaps-app)=
+<a id="generaltroubleshooting-aaps-app"></a>
 
 ## **AAPS app**
 
@@ -45,7 +45,7 @@ Ignore it: More details, Install anyway.
 
 ---
 
-(generaltroubleshooting-bluetooth-related-issues)=
+<a id="generaltroubleshooting-bluetooth-related-issues"></a>
 
 
 ## **Bluetooth related issues**
@@ -54,7 +54,7 @@ For known issues with Bluetooth connections, dropouts of pump/pods, or activatio
 
 ---
 
-(generaltroubleshooting-android-related-issues)=
+<a id="generaltroubleshooting-android-related-issues"></a>
 
 ## **Android Related Issues**
 
@@ -121,7 +121,7 @@ See this guide for [Huawei bluetooth & battery optimization](../CompatiblePhones
   
 ---
 
-(generaltroubleshooting-cgm)=
+<a id="generaltroubleshooting-cgm"></a>
 
 ## **Continious Glucose Monitor (CGM)**
 
@@ -135,7 +135,7 @@ Useful links to known issues and steps to resolve for CGMs.
 
 ---
 
-(generaltroubleshooting-pumps)=
+<a id="generaltroubleshooting-pumps"></a>
 
 ## **Pumps**
 
@@ -148,7 +148,7 @@ Useful links to known issues and steps to resolve for Pumps
 
 ---
 
-(generaltroubleshooting-phones)=
+<a id="generaltroubleshooting-phones"></a>
 
 ## **Phones**
 
@@ -158,7 +158,7 @@ Useful links to known issues and steps to resolve for Phones
 * [Jelly](../CompatiblePhones/Jelly.md)
 * [Huawei bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
 
-(generaltroubleshooting-smartwatches)=
+<a id="generaltroubleshooting-smartwatches"></a>
 
 ## Smartwatches
 

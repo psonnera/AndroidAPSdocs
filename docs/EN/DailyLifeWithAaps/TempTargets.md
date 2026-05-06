@@ -76,7 +76,7 @@ In closed loop mode, **SMB**:
 - *may be* deactivated (discussed further below); and/or
 - basal may be activated if **AAPS** is in negative **IOB** or <0.
 
-(TempTargets-where-can-i-select-a-temp-target)=
+<a id="TempTargets-where-can-i-select-a-temp-target"></a>
 ## Where can I select a Temp-Target?
 In the **Actions** tab in **AAPS**.
 
@@ -137,7 +137,7 @@ Or in the **Carbs** button
 
 ![Carbs TT](../images/TempTarget5.png)
 
-(TempTargets-hypo-temp-target)=
+<a id="TempTargets-hypo-temp-target"></a>
 ## Hypo Temp-Target
 
 **Temp-Target Hypo** enables **AAPS** to prevent the user from experiencing low blood sugar by reducing insulin intake. If the user predicts their **BG** will go low: usually, **AAPS** should handle it, but much will depend on the stability of the user’s **AAPS'** settings. A **Temp-Target Hypo** enables the user to get ahead of the predicted low and update **AAPS** to reduce insulin.
@@ -152,7 +152,7 @@ Some users wish to avoid **SMBs** being given during **Temp-Target Hypo**. This 
 
 Note: if the user enters carbs with the carb button and your blood glucose is less than 72mg/dl or 4mmol/l, **Temp-Target Hypo** is automatically enabled by **AAPS**.
 
-(TempTargets-activity-temp-target)=
+<a id="TempTargets-activity-temp-target"></a>
 ## Activity Temp-Target
 
 Before and during exercise, the user may require a higher target to prevent hypoglycemia during the activity.
@@ -167,7 +167,7 @@ Advanced, objective 9: users can enable _'High Temp-Targets raises sensitivity'_
 
 Additionally, if _'SMB with high Temp-Target'_ is deactivated, **AAPS** will not deliver **SMBs**, even with COB > 0, _'SMB with Temp-Target-_ or _'SMB always'_ enabled and OpenAPS **SMB** active.
 
-(TempTargets-eating-soon-temp-target)=
+<a id="TempTargets-eating-soon-temp-target"></a>
 ## Eating soon Temp-Target
 
 **Temp-Target -Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating. 

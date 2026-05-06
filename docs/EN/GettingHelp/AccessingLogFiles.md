@@ -1,4 +1,4 @@
-(Accessing-logfiles-accessing-logfiles)=
+<a id="Accessing-logfiles-accessing-logfiles"></a>
 # Accessing logfiles
 
 * Connect phone to a computer in file transfer mode

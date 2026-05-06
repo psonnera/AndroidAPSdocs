@@ -1,13 +1,9 @@
-(troubleshooting_androidstudio-troubleshooting-android-studio)=
+<a id="troubleshooting_androidstudio-troubleshooting-android-studio"></a>
 
 # Troubleshooting Android Studio
 
-```{contents} List of common issues
-:depth: 2
-:local: true
-```
 
-(troubleshooting_androidstudio-lost-keystore)=
+<a id="troubleshooting_androidstudio-lost-keystore"></a>
 ## Lost keystore
 If you use the same keystore when updating **AAPS** you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a safe place.
 
@@ -32,15 +28,11 @@ Gradle Sync can fail for various reasons. When you receive a message saying that
 
 ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
-```{contents} Likely reasons for gradle sync failures are:
-:depth: 1
-:local: true
-```
 
 *Important*:
 After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
 
-(troubleshooting_androidstudio-uncommitted-changes)=
+<a id="troubleshooting_androidstudio-uncommitted-changes"></a>
 ### Uncommitted changes
 
 If you receive a failure message like this one:
@@ -89,7 +81,7 @@ Clone sources again as described in wiki and do not allow gradle update
 
   * Restart Android Studio.
 
-(troubleshooting-android-studio-check-for-uncommitted-changes)=
+<a id="troubleshooting-android-studio-check-for-uncommitted-changes"></a>
 #### Step 2: Check for uncommitted changes.
 
   * In Android Studio, open the 'Commit' tab (1) on the left-hand side.
@@ -134,9 +126,9 @@ Your name needs to be written between quotation marks.
 
 ![Git identification fix](../images/studioTroubleshooting/164_Git_Identify2.png)
 
-(troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
+<a id="troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run"></a>
 
-(incompatible-gradle-jvm)=
+<a id="incompatible-gradle-jvm"></a>
 ### Incompatible Gradle JVM
 
 ![Incompatible Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png)
@@ -178,7 +170,7 @@ If you experience the above error message, you need to download a correct JVM ve
 5.  Close the **Settings** dialog with **OK**.
 6. You now need to restart the Gradle Sync. Follow the instructions at [Gradle Resync](#gradle-resync).
 
-(incompatible-version-of-android-gradle-plugin)=
+<a id="incompatible-version-of-android-gradle-plugin"></a>
 ### Incompatible version of Android Gradle plugin
 
   If you experience the following error message
@@ -190,7 +182,7 @@ If you experience the above error message, you need to download a correct JVM ve
   You are using an outdated version of Android Studio. 
   In the menu, go to Help > Check for updates and install any updates of Android Studio and its plugins that are found.
 
-(troubleshooting_androidstudio-could-not-resolve-no-cached-version)=
+<a id="troubleshooting_androidstudio-could-not-resolve-no-cached-version"></a>
 ### Could not resolve/No cached version
 
   You might get this error message:
@@ -205,7 +197,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
   * Now you need to trigger a [Gradle Resync](#gradle-resync)
 
-(troubleshooting_androidstudio-unable-to-start-daemon-process)=
+<a id="troubleshooting_androidstudio-unable-to-start-daemon-process"></a>
 ### Unable to start daemon process
 
   If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately there is nothing that the **AAPS** developers can do about this!
@@ -214,7 +206,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
   ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
 
-(gradle-resync)=
+<a id="gradle-resync"></a>
 ### Gradle Resync
 
   If you can still see the message that the gradle sync failed, now select the Link "Try again".

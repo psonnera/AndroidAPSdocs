@@ -11,19 +11,15 @@ When there are additional settings available within the module, you can click on
 ![Config Builder boxes and cog wheel](../images/Configuration-Builder/ConfBuild_ConfigBuilder.png)
 
 
-(Config-Builder-tab-or-hamburger-menu)=
+<a id="Config-Builder-tab-or-hamburger-menu"></a>
 ## Tab or hamburger menu
 
 With the checkbox under the eye symbol you can decide how to open the corresponding program section.
 
 ![Tab or hamburger menu](../images/Configuration-Builder/ConfBuild_TabOrHH.png)
 
-```{contents}
-:backlinks: entry
-:depth: 2
-```
 
-(ConfigBuilder_Profile)=
+<a id="ConfigBuilder_Profile"></a>
 
 ## Profile
 
@@ -31,7 +27,7 @@ This module can not be disabled as it is a core part of **AAPS**.
 
 See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
 
-(Config-Builder-insulin)=
+<a id="Config-Builder-insulin"></a>
 ## Insulin
 
 ![Insulin type](../images/Configuration-Builder/ConfBuild_Insulin_AAPS30.png)
@@ -63,7 +59,7 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 * DIA = at least 5.0h
 * Max. peak = 55 minutes after injection (fixed, not adjustable)
 
-(Config-Builder-lyumjev)=
+<a id="Config-Builder-lyumjev"></a>
 #### Lyumjev
 
 ![Insulin type Lyumjev](../images/Configuration-Builder/ConfBuild_Insulin_L.png)
@@ -80,7 +76,7 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 * The DIA is automatically set to 5 hours if it is not specified higher in the profile.
 * This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
-(Config-Builder-bg-source)=
+<a id="Config-Builder-bg-source"></a>
 ## BG Source
 Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
 
@@ -104,7 +100,7 @@ Select the blood glucose source you are using. See [BG Source](../Getting-Starte
 
 See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
-(Config-Builder-pump)=
+<a id="Config-Builder-pump"></a>
 ## Pump
 Select the pump you are using. See [Compatible pumps](../Getting-Started/CompatiblePumps.md) page for more setup information.
 
@@ -128,7 +124,7 @@ Select the pump you are using. See [Compatible pumps](../Getting-Started/Compati
   * as you make you first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
   * for pump which doesn't have any driver yet
 
-(config-builder-sensitivity-detection)=
+<a id="config-builder-sensitivity-detection"></a>
 
 ## Sensitivity Detection
 Select the type of sensitivity detection. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual.  More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).  
@@ -139,7 +135,7 @@ You can view your sensitivity on the homescreen by selecting SEN and watching th
 ### Absorption settings
 If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The value is only used during gaps in **CGM** readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause **AAPS** to decay COB. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
 
-(Config-Builder-aps)=
+<a id="Config-Builder-aps"></a>
 ## APS
 Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
 * OpenAPS AMA
@@ -218,7 +214,7 @@ Choose if you want to have [status lights](#Preferences-status-lights) on overvi
 
 **Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
-(Config-Builder-actions)=
+<a id="Config-Builder-actions"></a>
 ### Actions
 
 A tab offering multiple buttons to take [actions](#screens-action-tab) in **AAPS**.
@@ -227,7 +223,7 @@ A tab offering multiple buttons to take [actions](#screens-action-tab) in **AAPS
 
 A tab for managing your [Automations](../DailyLifeWithAaps/Automations.md), starting at [Objective 10](#objectives-objective10).
 
-(Config-Builder-sms-communicator)=
+<a id="Config-Builder-sms-communicator"></a>
 ### SMS Communicator
 Allows remote caregivers to control some **AAPS** features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.
 
@@ -236,7 +232,7 @@ Displays the food presets defined in the Nightscout food database, see [Nightsco
 
 Note: Entries cannot be used in the **AAPS** calculator. (View only)
 
-(Config-Builder-wear)=
+<a id="Config-Builder-wear"></a>
 ### Wear
 Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 

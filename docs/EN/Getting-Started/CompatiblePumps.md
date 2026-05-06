@@ -4,23 +4,6 @@ AAPS works with a number of insulin pumps.  The following list shows the current
 
 <!-- List of hidden pages to avoid overcrowding the menu -->
 
-```{toctree}
-:hidden:
-
-../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md
-../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md
-../CompatiblePumps/Accu-Chek-Insight-Pump.md
-../CompatiblePumps/DanaR-Insulin-Pump.md
-../CompatiblePumps/DanaRS-Insulin-Pump.md
-../CompatiblePumps/DiaconnG8.md
-../CompatiblePumps/EOPatch2.md
-../CompatiblePumps/Equil5.3.md
-../CompatiblePumps/MedtronicPump.md
-../CompatiblePumps/MedtrumNano.md
-../CompatiblePumps/OmnipodDASH.md
-../CompatiblePumps/OmnipodEros.md
-../CompatiblePumps/Future-possible-Pump-Drivers.md
-```
 
 - [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; see also [Accu-Chek Combo Tips for Basic usage](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md))
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) (Bluetooth)
@@ -40,7 +23,7 @@ AAPS works with a number of insulin pumps.  The following list shows the current
 
 Details of the status of other pumps that may have the potential to work with AAPS are listed on the [Future (possible) Pumps](../CompatiblePumps/Future-possible-Pump-Drivers.md) page.
 
-(CompatiblePumps-additional-communication-device)=
+<a id="CompatiblePumps-additional-communication-device"></a>
 ## Additional communication device
 
 If no additional communication device is mentioned, the communication between insulin pump and **AAPS** is based on the integrated bluetooth stack of Android, without the need of an additional communication device to translate the communication protocol.

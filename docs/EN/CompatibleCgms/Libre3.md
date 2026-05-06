@@ -85,7 +85,7 @@ If the sensor has been started with a Libreview account logged in, it is also po
 
 In order to switch from the Libre 3 app to Juggluco, you need to force-stop Libre 3 app via Android settings and proceed with Step 1 & 2.
 
-(libre3-experiences-and-troubleshooting)=
+<a id="libre3-experiences-and-troubleshooting"></a>
 ## Experiences and Troubleshooting
 
 ### Troubleshooting Libre3 -> Juggluco Connection

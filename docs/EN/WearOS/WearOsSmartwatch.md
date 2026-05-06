@@ -11,7 +11,7 @@ You can also use some of the information for the **AAPSClient** and **PumpContro
 Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV), Easy Fire Tools (described below) or ADB.  
 No limitation in **AAPS Wear** operations.
 
-(BuildingAapsWearOs-WearOS5)=
+<a id="BuildingAapsWearOs-WearOS5"></a>
 
 ### Wear OS 4 and Galaxy watch updated to Wear OS 5
 
@@ -20,22 +20,22 @@ Example: GW4, GW5, GW6
 Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV).  
 No limitation in **AAPS Wear** operations.
 
-```{admonition} Android Wear OS 5
-:class: warning
+::: warning Android Wear OS 5
 **FIRMWARE UPDATES WILL MOST PROBABLY BREAK AAPS WATCHFACES: DISABLE WATCH UPDATES**.
-```
+:::
+
 
 ### Galaxy watch with factory installed Wear OS 5
 
  Example: GW7, GW Ultra
 
-```{admonition} Android Wear OS 5
-:class: warning
-Installing the AAPS Watch Face has to be done with [Wear Installer 2](https://www.youtube.com/watch?v=yef_qGvcCnk) after installing the Wear app.<br>
-Accidental change of the Watch Face to another one requires the procedure above to be repeated.<br>
-Changing the dedicated Watch Face parameters like: Dark, Watchdivider, etc. is not possible.<br><br>
+::: warning Android Wear OS 5
+Installing the AAPS Watch Face has to be done with [Wear Installer 2](https://www.youtube.com/watch?v=yef_qGvcCnk) after installing the Wear app.<br/>
+Accidental change of the Watch Face to another one requires the procedure above to be repeated.<br/>
+Changing the dedicated Watch Face parameters like: Dark, Watchdivider, etc. is not possible.<br/><br/>
 **FIRMWARE UPDATES WILL MOST PROBABLY BREAK AAPS WATCHFACES: DISABLE WATCH UPDATES**.
-```
+:::
+
 
 Consider alternatively [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication.
 
@@ -67,7 +67,7 @@ The app “Galaxy Wearable” also has an instruction manual section in it. Open
 
 You need to make sure that the email account you use to set up the Samsung account has a date-of-birth such that the user is age 13+, as otherwise the Samsung permissions are really difficult to approve. If you have given your child under 13 a Gmail account and are using that email address, you cannot simply change it to an adult account. One way around this is to modify the current date-of-birth to make the current age 12 years and 363 days old. The following day, the account will be converted to an adult account, and you can progress with the setup of the Samsung account. 
 
-(remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
+<a id="remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone"></a>
 
 ## Transferring the **AAPS** Wear app onto your **AAPS** phone
 
@@ -90,10 +90,11 @@ Here we recommend Wear Installer 2, because the instructions and process in the 
 
 Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video.](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
 
-```{tip}
+::: tip
 For Wear OS 5 watches follow [this video](https://www.youtube.com/watch?v=yef_qGvcCnk).
 See troubleshooting tips [below](#BuildingAapsWearOs-WearOS5-TShoot).
-```
+:::
+
 
 This provides all the necessary detail (best to open the video on a separate device so you can watch it whilst setting up the phone). 
 
@@ -138,7 +139,7 @@ STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/0
 ![image](../images/wearos/easyfire07.png)
 
 
-(BuildingAapsWearOs-WearOS5-TShoot)=
+<a id="BuildingAapsWearOs-WearOS5-TShoot"></a>
 
 ### Using the terminal
 Connect your smartwatch and computer to the same Wi-Fi network. 
@@ -168,17 +169,17 @@ You will see a Wi-Fi paring code and IP address and port appearing:
 E.g.
 `adb pair 10.10.1.125:36299`
 - You will be asked for the pairing code. Enter it. 
-- You will see a response:<br>
-`Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
-- In the terminal type: <br>`adb devices`.<br> You should see something like:<br>
-`List of devices attached`<br>
-`10.10.1.125:36299	offline`<br>
-`adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp	device`<br>
+- You will see a response:<br/>
+`Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br/>
+- In the terminal type: <br/>`adb devices`.<br/> You should see something like:<br/>
+`List of devices attached`<br/>
+`10.10.1.125:36299	offline`<br/>
+`adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp	device`<br/>
 
-- Now go to the folder on your computer where the Wear apk is and type<br>
-`adb install wear-full.apk` <br>with wear.apk replaced by the name of your apk file.
-- You will see:<br>
-`Performing Streamed Install`<br> `Success`
+- Now go to the folder on your computer where the Wear apk is and type<br/>
+`adb install wear-full.apk` <br/>with wear.apk replaced by the name of your apk file.
+- You will see:<br/>
+`Performing Streamed Install`<br/> `Success`
 
 
 ### General troubleshooting recommendations for Wear OS 5
@@ -244,7 +245,7 @@ For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Sa
 
 More troubleshooting tips can be found [here](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
 
-(WearOS_changing-to-AAPS-watchface)=
+<a id="WearOS_changing-to-AAPS-watchface"></a>
 
 ## Changing to an AAPS Watchface on your WearOS watch
 

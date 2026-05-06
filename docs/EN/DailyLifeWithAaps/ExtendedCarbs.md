@@ -1,4 +1,4 @@
-(Extended-Carbs-extended-carbs-ecarbs)=
+<a id="Extended-Carbs-extended-carbs-ecarbs"></a>
 # Extended carbs / "eCarbs"
 
 ## What are eCarbs and when are they useful?
@@ -36,12 +36,12 @@ A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the 
 **Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive.
 With low carb, high fat/protein meals it may be enough to only use eCarbs without manual boluses (see the blog post above). When eCarbs are generated, a Careportal note is also created to document all inputs, to make it easier to iterate and improve inputs.
 
-(extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
+<a id="extended-bolus-and-why-they-wont-work-in-closed-loop-environment"></a>
 ## Extended bolus and why they won't work in closed-loop environment?
 
 As mentioned above extended or multiwave boluses do not really work in a closed loop environment. [See below](#why-extended-boluses-wont-work-in-a-closed-loop-environment) for details
 
-(Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
+<a id="Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only"></a>
 ### Extended bolus and switch to open loop - Dana and Insight pump only
 
 Some people were asking for an option to use extended bolus in AAPS anyway as they wanted to treat special foods the way they are used to.
@@ -54,7 +54,7 @@ That's why as of version 2.6 there is an option for an extended bolus for users 
 
 ![Extended bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
 
-(why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
+<a id="why-extended-boluses-won-t-work-in-a-closed-loop-environment"></a>
 ### Why extended boluses won't work in a closed loop environment
 
 1. The loop determines that now 1.55U/h is to be delivered. Whether this is delivered as an extended bolus or TBR does not matter to the algorithm. In fact, some of the pumps use the extended bolus. What should happen then? Most pump drivers then stop the extended bolus -> You didn't even need to start it.

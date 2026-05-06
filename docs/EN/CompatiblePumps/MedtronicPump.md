@@ -24,7 +24,7 @@ You can find out how to check the firmware on the pumps at [OpenAPS docs](https:
 
 A comparison chart for the various Rileylink compatible devices can be found at [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
 
-(MedtronicPump-configuration-of-the-pump)=
+<a id="MedtronicPump-configuration-of-the-pump"></a>
 ## Configuration of the pump
 The following settings should be configured on the pump in order for AAPS to remotely send commands.  The steps necessary to make each change on a Medtronic 715 are shown in brackets for each setting.  The exact steps may vary based on pump type and/or firmware version.
 
@@ -88,13 +88,13 @@ At the bottom of the screen there are three buttons:
 - **Pump History**: Shows pump history (see [below](#MedtronicPump-pump-history))
 - **RL Stats**: Show RL Stats (see [below](#MedtronicPump-rl-status-rileylink-status))
 
-(MedtronicPump-pump-history)=
+<a id="MedtronicPump-pump-history"></a>
 ## Pump History
 ![Pump History Dialog](../images/pump/medtronic/Medtronic03.png)
 
 Pump history is retrieved every 5 minutes and stored locally. Only the previous 24 hours worth of history is stored.  The allows for a convenient way to see pump behaviour should that be required.  The only items stored are those relevenant to AAPS and will not include a configuration function that has no relevance.
 
-(MedtronicPump-rl-status-rileylink-status)=
+<a id="MedtronicPump-rl-status-rileylink-status"></a>
 ## RL Status (RileyLink Status)
 ![RileyLink Status - Settings](../images/pump/medtronic/Medtronic04.png)
 ![RileyLink Status - History](../images/pump/medtronic/Medtronic05.png)
@@ -141,10 +141,10 @@ The GNARL code fully supports all of the functions used by the Medtronic driver 
 
 **Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
 
-(MedtronicPump-faq)=
+<a id="MedtronicPump-faq"></a>
 ## FAQ
 
-(MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
+<a id="MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump"></a>
 ### What to do if I loose connection to RileyLink and/or pump?
 There are a number of options to try and resolve connectivity issues.
 - Use the "Wake Up and Tune" button in the ACT tab as detailed above.

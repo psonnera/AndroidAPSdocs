@@ -1,11 +1,7 @@
 # AAPS screens
 
-```{contents}
-:backlinks: entry
-:depth: 2
-```
 
-(AapsScreens-the-homescreen)=
+<a id="AapsScreens-the-homescreen"></a>
 ## The Homescreen
 
 ![Homescreen V2.7](../images/Home-Screen/Home_Homescreen.png)
@@ -18,7 +14,7 @@ This is the first screen you will come across when you open **AAPS**, and it con
 * Alternatively you can change screens by swiping left or right.
 * Displayed tabs can be selected in the [config builder](#Config-Builder-tab-or-hamburger-menu).
 
-(aaps-screens-profile--target)=
+<a id="aaps-screens-profile--target"></a>
 
 ### Section B - Profile & target
 
@@ -47,7 +43,7 @@ Short press target bar to set a **[Temporary Target](../DailyLifeWithAaps/TempTa
 
 If a temp target is set, the bar turns yellow and the remaining time in minutes is shown in brackets.
 
-(AapsScreens-visualization-of-dynamic-target-adjustment)=
+<a id="AapsScreens-visualization-of-dynamic-target-adjustment"></a>
 #### Visualization of Dynamic target adjustment
 
 ![Visualization of dynamic target adjustment](../images/Home-Screen/Home2020_DynamicTargetAdjustment.png)
@@ -60,7 +56,7 @@ Enable either one or both of the following options in [Preferences > OpenAPS SMB
 
 If **AAPS** detects resistance or sensitivity, the target will change from what is set from profile. When it alters the target glucose, the background will change to green.
 
-(AapsScreens-section-c-bg-loop-status)=
+<a id="AapsScreens-section-c-bg-loop-status"></a>
 ### Section C - BG & loop status
 
 #### Current blood glucose
@@ -79,7 +75,7 @@ The blocks in the middle shows:
 2.  differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
    Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
 
-(AapsScreens-loop-status)=
+<a id="AapsScreens-loop-status"></a>
 #### Loop status
 
 ![Loop status](../images/Home-Screen/Home2020_LoopStatus.png)
@@ -99,7 +95,7 @@ Short press or Long press the icon to open the Loop dialog to switch loop mode (
 
    ![Loop status menu](../images/Home-Screen/Home2020_Loop_Dialog.png)
 
-(aaps-screens-bg-warning-sign)=
+<a id="aaps-screens-bg-warning-sign"></a>
 #### BG warning sign
 
 If for any reason, there are issues in the BG readings **AAPS** receives, you will get a warning signal beneath your BG number on the main screen.
@@ -108,10 +104,10 @@ If for any reason, there are issues in the BG readings **AAPS** receives, you wi
 
 The red warning sign is signaling you to get active immediately: You are receiving **duplicate BG data**, which does avoid the loop to do its work right. Therefore, your loop will be disabled until it is resolved.
 
-```{admonition} Your loop is not running
-:class: note
+::: info Your loop is not running
 Your loop is not running until you solve this issue !
-```
+:::
+
 
   ![Red BG warning](../images/bg_warn_red.png)
 
@@ -170,7 +166,7 @@ The insulin on board figure would be zero if just your standard basal was runnin
   - AS: Autosens value. Shown even if Autosens is disabled (for information only). Also shown when DynISF is activated, although it has no effect.
   - Alg: DynamicISF value (based on TDD). More information on the last line on [DynamicISF](#Open-APS-features-DynamicISF) page.
 
-(aaps-screens-carbs-required)=
+<a id="aaps-screens-carbs-required"></a>
 #### Carbs required
 
 ![Carbs required](../images/Home-Screen/Home2020_CarbsRequired.png)
@@ -202,7 +198,7 @@ Settings can be changed in [Preferences > Overview > Status lights](#Preferences
 
 Depending on the pump you use, you may not have all of these icons.
 
-(aaps-screens-main-graph)=
+<a id="aaps-screens-main-graph"></a>
 ### Section F - Main graph
 
 ![Section F](../images/Home-Screen/Home2020_MainGraph.png)
@@ -221,7 +217,7 @@ This information is also shown on this graph :
 * Loop status: color line at the top of the graph when the status is anything else than closed loop - see [Loop status](#AapsScreens-loop-status) for the colors
 * [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings): blue triangles at the bottom of the graph
 
-(AapsScreens-activate-optional-information)=
+<a id="AapsScreens-activate-optional-information"></a>
 #### Activate optional information
 
 Using the top right arrow, you can switch on these optional information:
@@ -236,7 +232,7 @@ To show this information, click the triangle on the right side of the main graph
 
    ![Main graph setting](../images/Home-Screen/Home2020_MainGraphSetting.png)
 
-(aaps-screens-prediction-lines)=
+<a id="aaps-screens-prediction-lines"></a>
 #### Prediction lines
 
 * **Orange** line: [COB](CobCalculation) (color is used generally to represent COB and carbs)
@@ -279,7 +275,7 @@ The **thin yellow** line shows the activity of Insulin.
 
 It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
 
-(AapsScreens-section-g-additional-graphs)=
+<a id="AapsScreens-section-g-additional-graphs"></a>
 ### Section G - Additional graphs
 
 You can activate up to four additional graphs below the main graph. When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and can not be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
@@ -328,7 +324,7 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 
 Shows the sensitivity as calculated by [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Only populated if you use this feature.
 
-(screen-heart-rate-steps)=
+<a id="screen-heart-rate-steps"></a>
 #### Heart rate & Steps
 
 This data may be available when using a [Wear smartwatch](../WearOS/WearOsSmartwatch.md).
@@ -359,7 +355,7 @@ Other Buttons can be setup in [Preferences > Overview > Buttons](#Preferences-bu
 
 About using the Insulin, Carbs and Calculator buttons : If enabled in the [Preferences > Overview](#Preferences-show-notes-field-in-treatments-dialogs), the **Notes** field allows you to enter text that will show on the main graph, and may be uploaded to Nightscout - depending on your settings for NS client.
 
-(aaps-screens-buttons-insulin)=
+<a id="aaps-screens-buttons-insulin"></a>
 #### Insulin
 
 ![Insulin button](../images/Home-Screen/Home2020_ButtonInsulin.png)
@@ -412,7 +408,7 @@ Easily enter amount of carbs and set calculation basics.
 
 Details are set up in [Preferences > Overview > QuickWizard settings](#Preferences-quick-wizard).
 
-(aaps-screens-bolus-wizard)=
+<a id="aaps-screens-bolus-wizard"></a>
 ## Bolus Wizard
 
 ![Bolus wizard](../images/Home-Screen/Home2020_BolusWizard_v2.png)
@@ -425,7 +421,7 @@ Shows the calculated bolus.
 
 If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
 
-(AapsScreens-section-j)=
+<a id="AapsScreens-section-j"></a>
 ### Section J
 
 BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank.
@@ -466,7 +462,7 @@ For safety reasons the **TT box must be ticked manually**, if you want the bolus
 
 The box near the eye allows you to choose between the detailed view, with the numbers entering the calculation for each item, or the simple view with icons. Pressing on an icon will enable / disable this entry from the calculation.
 
-(AapsScreens-wrong-cob-detection)=
+<a id="AapsScreens-wrong-cob-detection"></a>
 #### Wrong COB detection
 
 ![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
@@ -475,7 +471,7 @@ If you see the warning above after using bolus wizard, **AAPS** has detected tha
 
 For details, see the hints on [COB calculation page](#CobCalculation-detection-of-wrong-cob-values).
 
-(screens-action-tab)=
+<a id="screens-action-tab"></a>
 ## Action tab
 
 ![Actions tab](../images/Home-Screen/Home_Action.png)
@@ -494,7 +490,7 @@ Even though [extended boluses](#extended-bolus-and-why-they-wont-work-in-closed-
    * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
    * Make sure to read the [details](../DailyLifeWithAaps/ExtendedCarbs.md) before using this option.
 
-(aaps-screens-careportal)=
+<a id="aaps-screens-careportal"></a>
 
 ### Careportal - section N
 
@@ -507,7 +503,7 @@ Displays information on:
 
 Less information will be shown if **low resolution skin** is used ([Preferences > General > Skin](#Preferences-skin)).
 
-(screens-sensor-level-battery)=
+<a id="screens-sensor-level-battery"></a>
 #### Sensor level (battery)
 
 Works for CGM with an additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level  information to xDrip+.)
@@ -524,7 +520,7 @@ Section O reflects the Nightscout careportal. So exercise, announcement and ques
 
 ### Tools - section P
 
-(Aapsscreens-site-rotation)=
+<a id="Aapsscreens-site-rotation"></a>
 
 #### Site Rotation
 
@@ -583,7 +579,7 @@ Others prefer range of 32% to 37% of TDD for TBB.
 
 Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
 
-(AapsScreens-insulin-profile)=
+<a id="AapsScreens-insulin-profile"></a>
 ## Insulin Profile
 
 ![Insulin Profile](../images/Screenshot_insulin_profile.png)
@@ -608,7 +604,7 @@ Calculations are run each time the system gets a fresh reading from the CGM.
 
 For more details see [APS section on config builder page](#Config-Builder-aps).
 
-(aaps-screens-profile)=
+<a id="aaps-screens-profile"></a>
 ## Profile
 ![Profile](../images/Screenshots_Profile.png)
 
@@ -634,7 +630,7 @@ Depending on your BG source settings, this tab is named differently.
 
 Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low) or duplicate readings.
 
-(aaps-screens-treatments)=
+<a id="aaps-screens-treatments"></a>
 ## Treatments
 
 This view can be accessed by pressing the 3 dots on the right of the menu, then Treatments. It is not possible to show it in the main menu through the Config Builder.
@@ -653,7 +649,7 @@ In the last column, the data source for each line is displayed in blue. It can b
 * NS for Nightscout : the data comes from or has been recorded to Nightscout
 * PH for Pump History : the data has been processed by the pump
 
-(screens-bolus-carbs)=
+<a id="screens-bolus-carbs"></a>
 ### Bolus & carbs
 
 ![Carbs & bolus](../images/TreatmentsView1.png)
@@ -709,7 +705,7 @@ Deleting the entries only affects your reports in Nightscout and will never actu
 
 You can use the **Clone** button shown on line **1** to make a copy of a **Profile Switch**. See [Your AAPS Profile > Manage your profiles](#your-aaps-profile-clone-profile-switch) for more information.
 
-(AapsScreens-running-mode)=
+<a id="AapsScreens-running-mode"></a>
 ### Running mode
 
 ![Running mode](../images/TreatmentsView6.png)
@@ -722,7 +718,7 @@ This tab shows the history of [loop status](#AapsScreens-loop-status) changes : 
 
 This tab shows all notes and alerts recorded in Nightscout.
 
-(aaps-screens-running-mode)=
+<a id="aaps-screens-running-mode"></a>
 
 ## History Browser
 
@@ -736,7 +732,7 @@ This view can be accessed by pressing the 3 dots on the right of the menu, then 
 
 Gives you statistics about your Time In Range and Total Daily Dose. See the dedicated page [Reviewing your data > Statistics](#reviewing-statistics).
 
-(aaps-screens-profile-helper)=
+<a id="aaps-screens-profile-helper"></a>
 ## Profile Helper
 
 This view can be accessed by pressing the 3 dots on the right of the menu, then Profile Helper. It is not possible to put in the main menu through the Config Builder.

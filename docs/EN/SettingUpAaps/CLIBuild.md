@@ -1,10 +1,9 @@
 # Build instructions for the command-line
 
-```{admonition} For users familiar with the command-line and git
-:class: information
-
+::: info For users familiar with the command-line and git
 The simplest option to build AAPS is the [Browser build](./BrowserBuild.md) alternative.
-```
+:::
+
 
 Tested with Fedora and Debian Linux, other systems should work with minimal adjustments.
 

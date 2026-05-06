@@ -137,13 +137,12 @@ Check the **SMB** tab periodicallu to see whether your **SMBs** are allowed to b
 If not, your tuning efforts will sometimes come to nothing!
 
 
-```{admonition} Boosting **ISF** can become dangerous
-:class: danger
-
+::: danger Boosting **ISF** can become dangerous
 Carefully observe/analyse the **SMB** sizes shortly after your meal commences. Tune in steps, and do not vary more than 1 or 2 parameters at a time.
 
 Your **AAPS'** setting must be sufficiently set up to cope with your (!) variety of meals.
-```
+:::
+
 
 ## Meal detection/your Automations for boosting
 

@@ -28,13 +28,13 @@ Read more in the [article](https://www.diabettech.com/artificial-pancreas/diy-lo
 
 - Adjust settings in xDrip+ according to [xDrip+ settings page](../CompatibleCgms/xDrip.md)
 
-(DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
+<a id="DexcomG6-if-using-g6-with-build-your-own-dexcom-app"></a>
 ## If using G6 with Build Your Own Dexcom App
 
-```{admonition} Old app version
-:class: warning
+::: warning Old app version
 Dexcom G6 BYODA is now a very old version of the app and cannot be updated.
-```
+:::
+
 
 -   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+ (**not for**
     **G5/ONE/G7 sensors!**)
@@ -61,7 +61,7 @@ Dexcom G6 BYODA is now a very old version of the app and cannot be updated.
 -   Command 'start sensor' must be performed in xDrip+ in order to receive values. This will not affect your current sensor controlled by Build Your Own Dexcom App.
 
 
-(DexcomG6-troubleshooting-g6)=
+<a id="DexcomG6-troubleshooting-g6"></a>
 ## Troubleshooting G6 and ONE
 
 ### Dexcom G6/ONE specific troubleshooting

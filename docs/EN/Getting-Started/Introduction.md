@@ -18,7 +18,7 @@ In an aircraft, an autopilot does not do the complete job of the human pilot, th
 
 ![image](../images/autopilot.png)
 
-(Introduction-what-does-hybrid-closed-loop-mean)=
+<a id="Introduction-what-does-hybrid-closed-loop-mean"></a>
 ## What does hybrid closed loop mean?
 
 The best solution for type 1 diabetes would be a “functional cure” (probably an implant of pancreatic cells which are protected from the immune system). While we are waiting for that, a “full closed loop” artificial pancreas is probably the next best thing. This is a tech system that doesn’t need any user input (like bolusing insulin for meals, or announcing exercise), with good regulation of blood glucose levels. At the moment, there are no widely available systems which are “full” closed loop, they all need some user input. The currently available systems are called “hybrid” closed loop, because they use a combination of automated technology and user input. 
@@ -200,7 +200,7 @@ Use original supplies such as inserters, cannulas and insulin containers approve
 
 Do not take SGLT-2 inhibitors (gliflozins) when using **AAPS** as they incalculably lower blood sugar levels. Combining this effect with a system that lowers basal rates in order to increase BG is dangerous, there is more detail about this in the main [safety section](#preparing-safety-first).
 
-(introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)=
+<a id="introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team"></a>
 ## How can I approach discussing AAPS with my clinical team?
 
 Users are encouraged to speak with their clinicians about their intention to use **AAPS**. Please do not be afraid to have an honest conversation with your diabetes team if you intend to use **AAPS** (or any other DIY loop, for that matter). Transparency and trust between patient and doctor is paramount. 
@@ -326,7 +326,7 @@ The above table assumes that the user has access to both continuous gluocse moni
 
 *All data from **AAPS** can be made available to healthcare professionals via data sharing platforms, including Nightscout that provides logging and real time monitoring of CGM data, insulin delivery, carbohydrate entries, predictions and settings. Nightscout records include daily and weekly reports which can aid healthcare professionals' discussions with type 1 patients with more accurate data on glycemic control and any behavioral considerations.
 
-(accessibility-for-users-aaps-who-are-partially-or-completely-blind)=
+<a id="accessibility-for-users-aaps-who-are-partially-or-completely-blind"></a>
 
 ### Accessibility for users AAPS who are partially or completely blind
 

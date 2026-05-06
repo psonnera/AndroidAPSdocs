@@ -57,7 +57,7 @@ We are using markdown for the docs pages. The file have got the suffix ".md".The
 
 PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories.  If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork.  Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
 
-(edit-the-docs-code-syntax)=
+<a id="edit-the-docs-code-syntax"></a>
 ## Code syntax
 
 We are using markdown for the documentation pages. The files have got the suffix ".md".
@@ -158,7 +158,7 @@ Images are located in the images folder for the english language and propagated 
 
 We are not translating images at the moment: images should contain the **minimum possible text** to allow accessibility to non-English readers.
 
-(make-a-PR-image-size)=
+<a id="make-a-PR-image-size"></a>
 Use a reasonable size for the images which must be readable on PC, tablet and mobiles.
 
 * Screenshots from web pages images should be up to **1050 pixels wide**.
@@ -206,28 +206,28 @@ Please use these carefully as the documentation should be as easy to read as pos
 #### Notes
 
 ````
-```{admonition} Note headline
-:class: note
+::: info Note headline
 This is a note.
-```
+:::
+
 ````
-```{admonition} Note headline
-:class: note
+::: info Note headline
 This is a note.
-```
+:::
+
 
 #### Warnings
 
 ````
-```{admonition} Warning
-:class: warning
+::: warning Warning
 This is a warning.
-```
+:::
+
 ````
-```{admonition} Warning headline 
-:class: warning
+::: warning Warning headline
 This is a warning.
-```
+:::
+
 
 #### Collapsing Notes
 
@@ -244,14 +244,15 @@ without it taking up too much space on the page.
 
 
 
-```{admonition} further detailed readings for interested readers
-:class: dropdown
+<details>
+<summary>further detailed readings for interested readers</summary>
+
 This admonition has been collapsed,
 meaning you can add longer form content here,
 without it taking up too much space on the page.
 
+</details>
 
-```
 
 ## Tables
 

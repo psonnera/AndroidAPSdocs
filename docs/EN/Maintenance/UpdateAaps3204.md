@@ -1,6 +1,6 @@
 # Updating to AAPS 3.2.0.4
 
-(update-aaps-3204)=
+<a id="update-aaps-3204"></a>
 
 ## Build yourself instead of download
 
@@ -32,26 +32,26 @@ The Gradle version is linked to the source code, you will always get the correct
     <td class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
-    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <th class="tg-baqh">CPU (Only 64 bit)</th>
+    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br/><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br/><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
     <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">8GB or more</td>
+    <th class="tg-baqh">RAM</th>
+    <td class="tg-baqh" colspan="3">8GB or more</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Disk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
+    <th class="tg-baqh">Disk</th>
+    <td class="tg-baqh" colspan="3">At least 30GB free space. SSD is recommended.</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Resolution</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
+    <th class="tg-baqh">Resolution</th>
+    <td class="tg-baqh" colspan="3">1280 x 800 Minimum <br/></td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Internet</th>
-    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+    <th class="tg-baqh">Internet</th>
+    <td class="tg-baqh" colspan="3">Broadband</td>
   </tr>
 </tbody>
 </table>
@@ -64,16 +64,13 @@ If you run into difficulties in the process of building the **AAPS** app, there 
 
 If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md). 
 
-```{note}
+::: info
 This page provides both example pictures for the **New** and old (**Classic**) Android Studio user interfaces.
-```
+:::
+
 
 ## Overview for updating 3.2.0.x to 3.2.0.4
 
-```{contents} Steps for updating to 3.2.0.4
-:depth: 1
-:local: true
-```
 
 ### Export your current settings
 
@@ -87,7 +84,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
 
-<br>
+<br/>
 
 ![Android Studio - Select Project](https://androidaps.readthedocs.io/en/3.1/_images/01_ProjectSelection.png)
 
@@ -95,7 +92,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
 
-<br>
+<br/>
 
 ![Android Studio Menu - Git - Fetch](https://androidaps.readthedocs.io/en/3.1/_images/02_GitFetch.png)
 
@@ -103,7 +100,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
 
-<br>
+<br/>
 
 ![Android Studio Menu - Git - Fetch successful](https://androidaps.readthedocs.io/en/3.1/_images/03_GitFetchSuccessful.png)
 
@@ -111,7 +108,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
 
-<br>
+<br/>
 
 ![Android Studio Menu - Git - Pull](https://androidaps.readthedocs.io/en/3.1/_images/04_GitPull.png)
 
@@ -119,20 +116,21 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
 
-<br>
+<br/>
 
 ![Android Studio - Git - Pull dialog](https://androidaps.readthedocs.io/en/3.1/_images/05_GitPullOptions.png)
 
 * Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message.
 
-  ```{note}
-  The files that were updated may vary! This is not an indication
-  ```
+::: info
+The files that were updated may vary! This is not an indication
+:::
+
 
 
 ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
 
-<br>
+<br/>
 
 ![Android Studio - Pull successful](https://androidaps.readthedocs.io/en/3.1/_images/06_GitPullSuccess.png)
 
@@ -140,7 +138,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-<br>
+<br/>
 
 ![Android Studio - Gradle Sync](https://androidaps.readthedocs.io/en/3.1/_images/40_BackgroundTasks.png)
 
@@ -150,7 +148,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
 
-<br>
+<br/>
 
 ![Open Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
 
@@ -172,16 +170,16 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Select Download JDK](../images/studioTroubleshooting/17_Checkout.png)
 
-<br>
+<br/>
 
 ![Select Download JDK](../images/studioTroubleshooting/17_CheckoutOld.png)
 
 ### Sync project with Gradle
 
-```{admonition} WARNING!
-:class: warning
+::: warning WARNING!
 **Never update Gradle.** Always sync it with the project.
-```
+:::
+
 
 Use the elephant icon and Sync Project with Gradle Files (or follow [this](#gradle-resync)) for the new UI.
 
@@ -199,10 +197,11 @@ Your sourcecode is now the current released version, and all prerequisites have 
 
 You need to transfer the apk to your phone so you can install it.
 
-```{note}
+::: info
 If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates.
 For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk. **Make sure to export your settings!**
-```
+:::
+
 
 See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)
 

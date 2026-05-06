@@ -4,10 +4,6 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 
 **This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.**
 
-```{contents}
-:backlinks: entry
-:depth: 2
-```
 
 ## Hardware and Software Requirements
 
@@ -93,7 +89,7 @@ Please **swipe left** to the **Omnipod (POD)** tab where you will be able to man
 >
 > ![pod_management](../images/pump/eros/ICONS/omnipod_overview_pod_management.png) Pod Management (Activate, Deactivate, Play test beep, RileyLink Stats and Pod history)
 
-(OmnipodEros-rileylink-setup)=
+<a id="OmnipodEros-rileylink-setup"></a>
 
 ### RileyLink Setup
 
@@ -121,7 +117,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
    > ![RileyLink_Setup_6](../images/pump/eros/RileyLink_Setup_6.png)
 
-(OmnipodEros-activating-a-pod)=
+<a id="OmnipodEros-activating-a-pod"></a>
 
 ### Activating a Pod
 
@@ -281,7 +277,7 @@ The process below will show you how to acknowledge and dismiss pod beeps that oc
 
 4. Go to the **Omnipod (POD)** tab, under the **Active Pod alerts** field, the warning message is no longer displayed and the active pod will no longer issue pod expiration warning beeps.
 
-(OmnipodEros-view-pod-history)=
+<a id="OmnipodEros-view-pod-history"></a>
 
 ### View Pod History
 
@@ -361,7 +357,7 @@ This screen will provide information, status, and settings configuration informa
 > - **Last Device Contact:** Date and time of the last contact the pod made with the pod communication device.
 > - **Refresh button** manually refresh the settings on this page.
 
-(omnipod-eros-rileylink-and-active-pod-history)=
+<a id="omnipod-eros-rileylink-and-active-pod-history"></a>
 #### RileyLink and Active Pod History
 
 This screen provides information in reverse chronological order of each state or action that either the RileyLink or currently connected pod is in or has taken. The entire history is only available for the currently active pod, after a pod change this history will be erased and only events from the newly activated pod will be recorded and shown.
@@ -378,7 +374,7 @@ This screen provides information in reverse chronological order of each state or
 > - **Device:** The device to which the current action or state is referring.
 > - **State or Action:** The current state or action performed by the device.
 
-(OmnipodEros-omnipod-pod-tab)=
+<a id="OmnipodEros-omnipod-pod-tab"></a>
 
 ## Omnipod (POD) Tab
 
@@ -556,7 +552,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
   >
   > > Sends the active pod pulse log to the clipboard
 
-(OmnipodEros-reset-rileylink-config-notes)=
+<a id="OmnipodEros-reset-rileylink-config-notes"></a>
 
 #### *Reset RileyLink Config Notes*
 
@@ -565,7 +561,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 - If this is NOT done then AAPS will need to be restarted after the pod communication device is power cycled.
 - This button **DOES NOT** need to be pressed when switching between different pod communication devices
 
-(OmnipodEros-omnipod-settings)=
+<a id="OmnipodEros-omnipod-settings"></a>
 
 ## Omnipod Settings
 
@@ -713,7 +709,7 @@ Battery level reporting is a setting that can be enabled to return the current b
 > - **SMS** - Returns current battery level as a response when an actual level exists, a value of n/a will not be returned
 > - **Nightscout** - Battery level is reported when an actual level exists, a value of n/a will not be reported
 
-(OmnipodEros-troubleshooting)=
+<a id="OmnipodEros-troubleshooting"></a>
 
 ## Troubleshooting
 
@@ -729,7 +725,7 @@ This failure is related to an incorrect pod state for a command or an error duri
 
 It is recommended that pump unreachable alerts be configured to **120 minutes** by going to the top right-hand side three-dot menu, selecting **Preferences**➜**Local Alerts**➜**Pump unreachable threshold \[min\]** and setting this to **120**.
 
-(OmnipodEros-import-settings-from-previous-aaps)=
+<a id="OmnipodEros-import-settings-from-previous-aaps"></a>
 ### Import Settings from previous AAPS
 
 Please note that importing settings has the possibility to import an outdated Pod status. As a result, you may lose an active Pod. It is therefore strongly recommended that you **do not import settings while on an active Pod session**.
@@ -772,7 +768,7 @@ Below are a few examples of when an uncertain notification can occur.
 
 ## Best Practices
 
-(OmnipodEros-optimal-omnipod-and-rileylink-positioning)=
+<a id="OmnipodEros-optimal-omnipod-and-rileylink-positioning"></a>
 
 ### Optimal Omnipod and RileyLink Positioning
 

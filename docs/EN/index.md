@@ -2,12 +2,10 @@
 
 ![image](./images/basic-outline-of-AAPS.png)
 
-```{admonition} Latest Release
-:class: note
+::: info Latest Release
+xx xxxx 202x : Version 4.0.x.x is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update to a the version.
+:::
 
- xx xxxx 202x : Version 4.0.x.x is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update to a the version.
-
-```
 
 Android APS (**AAPS**) is an open source app for people living with insulin-dependent diabetes. It is an artificial pancreas system (APS) which runs on Android smartphones. **AAPS** uses an OpenAPS software algorithm and aims to do what a real pancreas does: keep blood sugar levels within healthy limits by using automated insulin dosing. To use **AAPS** you need **three** compatible devices: **(1)** an Android phone, **(2)** a continuous glucose monitor (CGM), and **(3)** a FDA/CE approved insulin pump. Optionally you will need cloud services **(4)** to remote control **AAPS**, share your data and store them in a reporting server, then also **(5)** a smartwatch.
 
@@ -45,162 +43,30 @@ Section **11) Resources**, contains archived or additional documentation, includ
 
  ### Interested in getting started with **AAPS**? Read more about **AAPS** in the [Introduction](Getting-Started/Introduction.md). 
 
-```{admonition} SAFETY NOTICE
-:class: danger
+::: danger SAFETY NOTICE
 The safety of **AAPS** relies on the safety features of your hardware (phone, pump, CGM). Only use a fully functioning FDA/CE approved insulin pump and CGM. Do not use broken, modified or self-built insulin pumps or CGM receivers. Only use original consumable supplies (inserters, cannulas and insulin reservoirs) approved by the manufacturer for use with your pump and CGM. Using untested or modified supplies can cause inaccuracy and insulin dosing errors, resulting in significant risk to the user. 
 
-Do not use **AAPS** if you take SGLT-2 inhibitors (gliflozins), as they lower blood sugar levels. You increase the risk diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
-```
+Do not use **AAPS** if you take SGLT-2 inhibitors (gliflozins), as they lower blood sugar levels. You increase the risk diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels.
+:::
 
-```{admonition} Disclaimer
-:class: note
 
+::: info Disclaimer
 - All information and code described here is for informational and educational purposes only. Use [Nightscout](https://nightscout.github.io/) and **AAPS** at your own risk, and do not use the information or code to make medical decisions. Nightscout currently makes no attempt at HIPAA privacy compliance. 
 - Use of code from github.com is without warranty or formal support of any kind. Please review this repository's LICENSE for details.
 - All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
 
 **AAPS** has no association with, and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
+:::
 
-```
 
-(index-aaps-documentation-index)=
+<a id="index-aaps-documentation-index"></a>
 
 ## AAPS Documentation Index
 
-```{toctree}
-:caption: 1) Change language
 
-Change language <./NavigateDoc/ChangeLanguage.md>
-Change version <./NavigateDoc/ChangeVersion.md>
-```
-```{toctree}
-:caption: 2) Getting started
 
-Introduction to AAPS <./Getting-Started/Introduction.md>
-Preparing for AAPS <./Getting-Started/PreparingForAaps.md>
-Component Overview <./Getting-Started/ComponentOverview.md>
-- Compatible pumps <./Getting-Started/CompatiblePumps.md>
-- Compatible CGMs <./Getting-Started/CompatiblesCgms.md>
-- Compatible phones  <./Getting-Started/Phones.md>
-- Compatible watches  <./Getting-Started/Watches.md>
-```
 
-```{toctree}
-:caption: 3) Setting up AAPS
 
-Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
-- Nightscout <./SettingUpAaps/Nightscout.md>
-- Tidepool <./SettingUpAaps/Tidepool.md>
-Building AAPS <./SettingUpAaps/BuildingAaps.md>
-- Browser Build <./SettingUpAaps/BrowserBuild.md>
-- Android Studio Build <./SettingUpAaps/ComputerBuild.md>
-- CLI Build <./SettingUpAaps/CLIBuild.md>
-Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Config Builder <./SettingUpAaps/ConfigBuilder.md>
-- Preferences <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
-```
 
-```{toctree}
-:caption: 4) Daily Life with AAPS
 
-AAPS Screens <./DailyLifeWithAaps/AapsScreens.md>
-Key AAPS Features <./DailyLifeWithAaps/KeyAapsFeatures.md>
-COB calculation <./DailyLifeWithAaps/CobCalculation.md>
-Sensitivity detection <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
-Profile Switch & Profile Percentage <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
-Temp-Targets <./DailyLifeWithAaps/TempTargets.md>
-Extended carbs <./DailyLifeWithAaps/ExtendedCarbs.md>
-Automations <./DailyLifeWithAaps/Automations.md>
-Dynamic ISF <./DailyLifeWithAaps/DynamicISF.md>
-AAPS for children <./DailyLifeWithAaps/AapsForChildren.md>
-Pumps and cannulas <./DailyLifeWithAaps/PumpsAndCannulas.md>
-Timezone traveling & Daylight Saving Time <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
 
-```
-
-```{toctree}
-:caption: 5) Remote AAPS features
-
-Remote monitoring <./RemoteFeatures/RemoteMonitoring.md>
-Remote control <./RemoteFeatures/RemoteControl.md>
-SMS Commands <./RemoteFeatures/SMSCommands.md>
-Following Only <./RemoteFeatures/FollowingOnly.md>
-Android Auto <./RemoteFeatures/AndroidAuto.md>
-
-```
-```{toctree}
-:caption: 6) Wear OS Smartwatches
-
-AAPS for Wear OS <./WearOS/BuildingAapsWearOS.md>
-Use the smartwatch <./WearOS/WearOsSmartwatch.md>
-Remote control <./RemoteFeatures/RemoteControlWearOS.md>
-Custom watchfaces reference <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
-Exchange site custom watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
-
-```
-
-```{toctree}
-:caption: 7) Maintenance of AAPS
-
-Export/Import Settings <./Maintenance/ExportImportSettings.md>
-Reviewing your data <./Maintenance/Reviewing.md>
-AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-Documentation updates <./Maintenance/DocumentationUpdate.md>
-Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update <./Maintenance/UpdateBrowserBuild.md>
-- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
-
-```
-
-```{toctree}
-:caption: 8) Getting Help
-
-Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
-General troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
-- Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
-Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
-Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
-Trobleshooting NSClient <./GettingHelp/TroubleshootingNsClient.md>
-Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
-```
-
-```{toctree}
-:caption: 9) Advanced AAPS options
-
-Full Closed Loop <./AdvancedOptions/FullClosedLoop.md>
-Dev branch <./AdvancedOptions/DevBranch.md>
-Autotune <./AdvancedOptions/Autotune.md>
-Insulin concentration <./AdvancedOptions/InsulinConcentration.md>
-
-```
-```{toctree}
-:caption: 10) How to support AAPS
-
-How to help <./SupportingAaps/HowCanIHelp.md>
-Editing the docs <./SupportingAaps/HowToEditTheDocs.md>
-Translating the app and docs <./SupportingAaps/Translations.md>
-State of translations <./SupportingAaps/StateOfTranslations.md>
-Open Humans Uploader <./SupportingAaps/OpenHumans.md>
-
-```
-```{toctree}
-:hidden:
-
-Sandbox/crowdintest.md
-Sandbox/imageTranslation.md
-Sandbox/sandbox1.md
-```
-
-```{toctree}
-:caption: 11) Resources
-
-Glossary <./UsefulLinks/Glossary.md>
-FAQ <./UsefulLinks/FAQ.md>
-General diabetes and looping resources <./UsefulLinks/BackgroundReading.md>
-Dedicated Google account for AAPS (optional)<./UsefulLinks/DedicatedGoogleAccountForAaps.md>
-For Clinicians (outdated) <./UsefulLinks/ClinicianGuideToAaps.md>
-```

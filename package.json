@@ -1,0 +1,15 @@
+{
+  "name": "aaps-docs",
+  "version": "1.0.0",
+  "description": "AndroidAPS Documentation",
+  "scripts": {
+    "docs:dev": "vitepress dev docs/EN",
+    "docs:build": "vitepress build docs/EN",
+    "docs:preview": "vitepress preview docs/EN",
+    "migrate": "python utils/migrate-myst-to-vitepress.py"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.0",
+    "vitepress-plugin-tabs": "^0.5.0"
+  }
+}

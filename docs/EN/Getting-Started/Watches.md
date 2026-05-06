@@ -96,7 +96,7 @@ These are the basic screens embedded in **AAPS**, there are [more watchfaces](#W
 
 Further details about the watchfaces, and day-to-day use, including how to make (and share) your own customized watchface, can be found in the section [Operation of Wear AAPS on a Smartwatch](../WearOS/WearOsSmartwatch.md).
 
-(Watchfaces-tizen)=
+<a id="Watchfaces-tizen"></a>
 
 ## Samsung Tizen
 
@@ -106,7 +106,7 @@ Please check the dedicated [Facebook group](https://www.facebook.com/groups/gwat
 
 ![G-Watch](../images/G-Watch.png)
 
-(Watchfaces-garmin)=
+<a id="Watchfaces-garmin"></a>
 
 ## Garmin
 
@@ -121,9 +121,7 @@ There are a some watch faces for Garmin that integrate with [AAPS](https://apps.
 
 ## Fitbit
 
-```{Warning}
 Google is phasing out Fitbit products. Custom watchfaces are not available in Europe anymore (you need to use a VPN). Purchasing a Fitbit now is not recommended.
-```
 
 **AAPS** supports sending data to the [Sentinel](http://ryanwchen.com/sentinel.html) watchface.
 

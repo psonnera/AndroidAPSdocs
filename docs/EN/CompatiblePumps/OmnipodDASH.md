@@ -14,7 +14,7 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 - On pod activation, **AAPS** will find and connect to a new DASH pod.
 - Expected range from phone: 5-10 meters (YMMV).
 
-(omnipod-dash-constraints)=
+<a id="omnipod-dash-constraints"></a>
 
 ## Omnipod DASH known AAPS constraints/issues
 - Android 16 requires **AAPS** version 3.3.2.1 or later.
@@ -26,9 +26,9 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 - If alerts are configured, and the pod is about to expire, the pod will keep beeping until alerts are silenced, see [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts) for details.
 - There are a number of known issues with Bluetooth which can cause pod activation problems. See [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md) for the known issue and solutions to these problems.
 
-(hardware-software-requirements)=
+<a id="hardware-software-requirements"></a>
 
-(omnipod-dash-hardware-software-requirements)=
+<a id="omnipod-dash-hardware-software-requirements"></a>
 ## Hardware/Software Requirements
 
 - Omnipod DASH is identified by the blue needle cap.
@@ -92,7 +92,7 @@ Select “DASH” when you reach Pump selection.
 
 When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up **AAPS** (See Option 2).
 
-(omnipod-dash-option-2-config-builder)=
+<a id="omnipod-dash-option-2-config-builder"></a>
 ### Option 2: The Config Builder
 
 On an existing installation you can select the **DASH** pump from the Config builder:
@@ -119,7 +119,7 @@ To verify that you have selected the DASH in **AAPS**, if you have **checked the
 
 ![POD_MGMT_LOGO](../images/pump/dash/POD_MGMT_LOGO.png)	'Pod Management' (Activate, Deactivate, Play test beep, and Pod history)
 
-(omnipod-dash-activate-pod)=
+<a id="omnipod-dash-activate-pod"></a>
 
 ### Activate Pod
 
@@ -193,7 +193,7 @@ Click on the **Next** button.
    ***NOTE:** It is good practice to export settings AFTER activating the pod. Settings should be exported after each pod change and once a month, ensure you copy the exported settings file to a cloud storage location (e.g. Google Drive) or somewhere off your phone in case you loose your phone (see [**Export settings**](../Maintenance/ExportImportSettings.md)).*
 
 
-(omnipod-dash-deactivate-pod)=
+<a id="omnipod-dash-deactivate-pod"></a>
 
 ### Deactivate Pod
 
@@ -234,7 +234,7 @@ To deactivate a pod (either from expiration or from a pod failure):
    ![Deactivate_Pod_8](../images/pump/dash/Enable_Dash/Enable_Dash_4.jpg)
 
 
-(omnipod-dash-resuming-insulin-delivery)=
+<a id="omnipod-dash-resuming-insulin-delivery"></a>
 
 ### Resuming Insulin Delivery
 
@@ -254,7 +254,7 @@ When insulin delivery is suspended you will need to issue a command to instruct 
 
    ![Resume_4](../images/pump/dash/Resume/Resume_4.jpg)
 
-(omnipod-dash-silencing-pod-alerts)=
+<a id="omnipod-dash-silencing-pod-alerts"></a>
 
 ### Silencing Pod Alerts
 
@@ -278,7 +278,7 @@ The process below will show you how to acknowledge and dismiss pod beeps when th
 
 4. Go to the **DASH** tab. Under the **Active Pod alerts** field, the warning message is no longer displayed, and the active pod will no longer issue pod expiration warning beeps.
 
-(omnipod-dash-view-pod-history)=
+<a id="omnipod-dash-view-pod-history"></a>
 
 ### View Pod History
 
@@ -297,7 +297,7 @@ This feature is helpful in verifying boluses, TBRs and basal commands that were 
 
    ![Pod_history_3](../images/pump/dash/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/pump/dash/Pod_History/Pod_history_4.jpg)
 
-(omnipod-dash-tab)=
+<a id="omnipod-dash-tab"></a>
 
 ## DASH Tab
 
@@ -390,7 +390,7 @@ Below is describes the purpose of each icon on the **Pod Management** menu, acce
 | 5      | [**Pod history**](#omnipod-dash-view-pod-history) : Displays the active pod activity history. |
 
 
-(omnipod-dash-settings)=
+<a id="omnipod-dash-settings"></a>
 
 ## Dash Settings
 
@@ -481,17 +481,17 @@ Additional note:
   * **SMS** - Returns value or 50+U for SMS responses
   * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Newer versions will report a value of 50+ when over 50 units.
 
-(omnipod-dash-troubleshooting)=
+<a id="omnipod-dash-troubleshooting"></a>
 
 ## Troubleshooting
 
-(omnipod-dash-delivery-suspended)=
+<a id="omnipod-dash-delivery-suspended"></a>
 
 This section covers common known issues and solutions for Omnipod DASH use with AAPS. There is also [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) section in the documentation that should be reviewed as it covers relevant topics for some Pod issues too.
 
 ---
 
-(omnipod-dash-bluetooth-related-issues)=
+<a id="omnipod-dash-bluetooth-related-issues"></a>
 
 ## **Bluetooth related issues**
 
@@ -628,7 +628,7 @@ Informational alert that the Pod basal **Profile** setting has failed, and you w
 Alert that the **SMB** bolus command success could not be verified, you will need to verify the *Last bolus* field on the DASH tab to see if **SMB** bolus succeeded and if not remove the entry from the Treatments tab.
 - Uncertain if "task bolus/TBR/SMB" completed, please manually verify if it was successful.
 
-(omnipod-dash-where-to-get-help-for-dash)=
+<a id="omnipod-dash-where-to-get-help-for-dash"></a>
 
 ## Where to get help for DASH
 
