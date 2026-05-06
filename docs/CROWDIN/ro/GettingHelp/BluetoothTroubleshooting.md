@@ -1,6 +1,6 @@
 (bluetoothtroubleshooting-bluetooth-related-issues)=
 
-# **Bluetooth related issues**
+# **Probleme legate de Bluetooth**
 
 Some users have been running into issues with Omnipod DASH activation failures, Medtrum Nano connectivity problems, and other pod errors related to Bluetooth. Many of these issues can be traced to one of the following issues.
 
@@ -148,4 +148,4 @@ Only enable the **Bond BT device on Android 15+** option on Android 15, and only
 
 3. If the pump asks for a pairing request, accept it.
 
-4. Restart your phone.
+4. Reporniți telefonul.

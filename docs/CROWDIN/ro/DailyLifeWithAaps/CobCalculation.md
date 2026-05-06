@@ -24,7 +24,7 @@ Carbs will also be absorbed via the methods described below based on which sensi
 
 ## Carbs Sensitivity - Oref1
 
-Unabsorbed carbs are cut off after specified time:
+Carbohidrații neabsorbiți sunt ignorați după timpul specificat:
 
 ![Oref1](../images/cob_oref0_orange_II.png)
 
@@ -40,7 +40,7 @@ Absorption is calculated to have COB = 0 after specified time:
 If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from **BG** deviations, an orange dot appears on the **COB** graph.
 
 (CobCalculation-detection-of-wrong-cob-values)=
-## Detection of wrong COB values
+## Detectarea unor valori COB greșite
 
 **AAPS**  will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. In this case it will give the user an additional hint on the confirmation screen after usage of bolus wizard.
 
@@ -48,11 +48,11 @@ If minimal carbs absorption (min_5m_carbimpact) is used instead of value calcula
 
 Ordinarily __AAPS__ detects carb absorption through **BG** deviations. In case the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](#Preferences-min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). As this method calculates only the minimal carb absorption without considering **BG** deviations, it might lead to incorrect COB values.
 
-![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
+![Sugestie despre o valoare COB greșită](../images/Calculator_SlowCarbAbsorption.png)
 
 In the screenshot above, 58% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. This indicates that the user may have had less **COB** than calculated by the algorithm.
 
-### How to deal with this warning?
+### Cum să vă descurcați cu acest avertisment?
 
 - Consider cancelling the treatment - press ‘Cancel’ instead of OK.
 - Calculate your upcoming meal again with bolus wizard leaving **COB** unticked.
@@ -60,16 +60,16 @@ In the screenshot above, 58% of time the carb absorption was calculated by the m
 - Be careful not to overdose or insulin stacking!
 
 
-### Why does the algorithm not detect COB correctly?
+### De ce algoritmul nu detectează corect COB?
 
 This could be because:
 - Potentially the user overestimated carbs when entering them.
-- Activity / exercise after your previous meal.
-- I:C needs adjustment.
-- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA).
+- Activitate / exerciții fizice după mesele anterioare.
+- Raportul carbohidrați insulină necesită ajustare.
+- Valoarea pentru min_5m_carbimpact este greșită (recomandată este de 8 cu SMB, 3 cu AMA).
 
 
-## Manual correction of carbs entered
+## Corecție manuală a carbohidraților introduși
 
 If carbs are over or underestimated carbs this can be corrected through the Treatments tab and actions tab / menu as described [here](#screens-bolus-carbs).
 

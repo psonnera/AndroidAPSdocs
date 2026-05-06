@@ -1,52 +1,52 @@
-# Component Overview
+# Prezentare generală componentă
 
-**AAPS** is not just a (self-built) application, it is but one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the component documentation.
+**AAPS** nu este doar o aplicație (auto-construită), ci doar unul dintre modulele sistemului dumneavoastră cu buclă închisă. Înainte de a vă decide asupra componentelor, ar fi o idee bună să aruncați o privire către documentația componentelor.
 
-![Components overview](../images/modules.png)
+![Prezentare generală a componentelor](../images/modules.png)
 
 ```{admonition} IMPORTANT SAFETY NOTICE
 :class: important
 
-The foundation of **AAPS** safety features discussed in this documentation is built on the safety features of the hardware used to build your system. For closing an automated insulin dosing loop, it is critically important that you only use an insulin pump and CGM that are tested, fully functioning and approved by the official instances of your country. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, **do not use** these for creating an **AAPS** system.
+Fundamentul caracteristicilor de siguranță **AAPS** discutate în această documentație se bazează pe caracteristicile de siguranță ale hardware-ului utilizat pentru a construi sistemul dumneavoastră. Pentru a închide o buclă automată de dozare a insulinei, este extrem de important să utilizați doar o pompă de insulină și un CGM testate, complet funcționale și aprobate de instanțele oficiale din țara dumneavoastră. Modificările hardware sau software ale acestor componente pot cauza dozări neașteptate de insulină, ce provoacă riscuri semnificative pentru utilizator. Dacă găsiți sau vi se oferă pompe de insulină sau receptoare CGM defecte, modificate sau fabricate de dumneavoastră, **nu le utilizați** pentru a crea un sistem **AAPS**.
 
-Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
+În plus, este la fel de important să se utilizeze numai materiale originale, cum ar fi inseratoarele, canule și recipiente de insulină aprobate de fabricant pentru a fi utilizate cu pompa sau CGM. Utilizarea unor materiale netestate sau modificate poate cauza inexactitate CGM și erori de dozare a insulinei. Insulina este foarte periculoasă atunci când este administrată greșit - vă rugăm să nu vă jucați cu viața prin modificarea consumabilelor.
 
-Last but not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels. The combination with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen. [More information here](#PreparingForAaps-no-sglt-2-inhibitors).
+Nu în ultimul rând, nu trebuie să luați inhibitori ai SGLT-2 (gliflozine), deoarece aceștia scad incalculabil nivelul zahărului din sânge. Asocierea cu un sistem care scade ratele bazale în scopul creșterii glicemiei este deosebit de periculoasă deoarece, datorită administrării glifozinelor, această creștere a valorii glicemiei poate să nu apară și o stare periculoasă de lipsă de insulină poate avea loc. [More information here](#PreparingForAaps-no-sglt-2-inhibitors).
 ```
 
-## Necessary Modules
+## Module necesare
 
-### Good individual dosage algorithm for your diabetes therapy
+### Algoritm de dozaj individual bun pentru tratamentul diabetului dumneavoastră
 
-Even though this is not something to create or buy, this is the 'module' which is probably underestimated the most but essential. When you let an algorithm help manage your diabetes, it needs to know the right settings to not make severe mistakes. Even if you are still missing other modules, you can already verify and adapt your **Profile** in collaboration with your diabetes team.
+Chiar dacă acest lucru nu este ceva de creat sau cumpărat, acesta este "modulul”, care este probabil cel mai subestimat, dar esențial. Când permiteți unui algoritm să ajute la gestionarea diabetului, trebuie să cunoască setările corecte pentru a nu face greșeli grave. Chiar dacă încă vă lipsesc alte module, puteți deja să vă verificați și să vă adaptați **Profilul** în colaborare cu echipa dumneavoastră medicală de diabet.
 
-The **Profile** includes:
+**Profilul** include:
 
-- BR (Basal rates): provides background insulin;
-- ISF (insulin sensitivity factor): how much your blood glucose level will be reduced by 1 unit of insulin;
-- CR (carb ratio): how many grams of carbohydrate are covered by one unit of insulin;
-- DIA (duration of insulin action).
+- RB (Rate bazale): furnizează insulină de fond;
+- ISF (factorul de sensibilitate la insulină): cât de mult va fi redus nivelul glicemiei cu 1 unitate de insulină;
+- CR (raportul carbohidraților): câte grame de carbohidrați sunt acoperite de o unitate de insulină;
+- DAI (durata acțiunii insulinei).
 
-Most loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
+Majoritatea utilizatorilor de buclă utilizează setări circadiene, rate bazale, ISF și CR, care adaptează sensibilitatea hormonală a insulinei în timpul zilei.
 
-More information about your **Profile** [on the dedicated page](../SettingUpAaps/YourAapsProfile.md).
+Mai multe informații despre **profilul**dumneavoastră pe [pagina dedicată](../SettingUpAaps/YourAapsProfile.md).
 
-### Phone
+### Telefon
 
-See the dedicated page [Phones](../Getting-Started/Phones.md).
+Consultați pagina dedicată [telefoanelor](../Getting-Started/Phones.md).
 
-### Insulin pump
+### Pompa de insulină
 
-See the dedicated page [Compatible Pumps](../Getting-Started/CompatiblePumps.md).
+Consultați pagina dedicată [Pompe compatibile](../Getting-Started/CompatiblePumps.md).
 
-**Advantages and disadvantages of some pump models**
+**Avantajele și dezavantajele unor modele de pompă**
 
-The Combo, the Insight and the older Medtronic are solid pumps, and loopable. The Combo has the advantage of many more infusion set types to choose from as it has a standard Luer-Lock. And the battery is a default one you can buy at any gas station, 24-hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-).
+Combo, Insight și modelul mai vechi Medtronic sunt pompe solide și cu funcție de buclă. Combo are avantajul că oferă mult mai multe tipuri de seturi de perfuzie din care puteți alege, deoarece are un conector Luer-Lock standard. Și bateria este una implicită pe care o poți cumpăra de la orice benzinărie, magazin deschis non-stop și, dacă chiar ai nevoie de una, o poți fura/împrumuta de la telecomanda din camera de hotel ;-).
 
-The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice however are:
+Avantajele DanaR/RS și Dana-i față de Combo, ca pompă preferată, sunt însă:
 
-- Initial pairing is simpler with the Dana-i/RS. But you usually only do this once so it only impacts if you want to test a new feature with different pumps.
-- So far the Combo works with screen parsing. In general that works great but it is slow. For looping this does not matter much as everything works in the background. Still there is much more time you need to be connected so more time when the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
+- Asocierea inițială este mai simplă cu Dana-i/RS. Dar, de obicei, faceți asta o singură dată, așa că are impact doar dacă vreți să testați o nouă funcție cu pompe diferite.
+- Până acum, Combo funcționează prin analizarea ecranului. În general, funcționează excelent, dar este lent. Pentru buclă, acest lucru nu contează prea mult, deoarece totul funcționează în fundal. Still there is much more time you need to be connected so more time when the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
 - The Combo vibrates on the end of TBRs, the DanaR vibrates (or beeps) on SMB. At nighttime, you are likely to be using TBRs more than SMB.  The Dana-i/RS is configurable so that it does neither beep nor vibrate.
 - Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon as some CGM values are in.
 - All pumps **AAPS** can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
@@ -67,9 +67,9 @@ The Reporting server is independent of the other modules. If you don’t want to
 
 Additional information on how to set up your reporting server can be found [here](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-## Optional Modules
+## Module opționale
 
-### Smartwatch
+### Ceas inteligent
 
 You can choose any smartwatch with Android WearOS 2.x up to 4.x. **Beware, WearOS 5.x is not always compatible!**
 
@@ -77,12 +77,12 @@ Users are creating a [list of tested phones and watches](#Phones-list-of-tested-
 
 ### xDrip+
 
-Even if you don't need to have the xDrip+ App as **BG Source**, you can still use it for _i.e._ alarms or a different blood glucose display. You can have as many alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found [here](../CompatibleCgms/xDrip.md). Please be aware that the documentations to this app are not always up to date as its progress is quite fast.
+Even if you don't need to have the xDrip+ App as **BG Source**, you can still use it for _i.e._ alarms or a different blood glucose display. You can have as many alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found [here](../CompatibleCgms/xDrip.md). Vă rugăm să rețineți că documentația pentru această aplicație nu este întotdeauna actualizată, deoarece progresul său este destul de rapid.
 
-## What to do while waiting for modules
+## Ce trebuie făcut în timp ce așteptați modulele
 
-It sometimes takes a while to get all the modules for closing the loop. But no worries, there are a lot of things you can do while waiting. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with **AAPS**. Using this mode, **AAPS** gives treatment recommendations you can manually execute.
+It sometimes takes a while to get all the modules for closing the loop. Dar nu vă faceți griji, sunt multe lucruri pe care le puteți face în timp ce așteptați. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with **AAPS**. Using this mode, **AAPS** gives treatment recommendations you can manually execute.
 
 You can keep on reading through the docs here, get in touch with other loopers online or offline, [read](../UsefulLinks/BackgroundReading.md) documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
 
-**Done?** If you have your **AAPS** components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../SettingUpAaps/CompletingTheObjectives.md) before each new Objective and setup up your hardware.
+**Gata?** Dacă aveți componentele **AAPS** împreună (felicitări!) sau cel puțin suficient pentru a începe în modul buclă deschisă, ar trebui să citiți mai întâi [descrierea obiectivului](../SettingUpAaps/CompletingTheObjectives.md) înaintea fiecărui nou obiectiv și să vă configurați echipamentul.

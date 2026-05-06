@@ -2,13 +2,13 @@
 
 În funcție de setările dumneavoastră puteți deschide Configuratorul de Sistem printr-o filă din partea de sus a ecranului **AAPS** sau prin meniul hamburger.
 
-![Deschidere Configurarea sistemului](../images/ConfBuild_Open_AAPS30.png)
+![Deschideți Configurarea sistemului](../images/ConfBuild_Open_AAPS30.png)
 
 **Configuratorul de Sistem** este o secțiune în care puteți porni sau opri diferitele opțiuni modulare. În imaginea de mai jos, casetele din partea stângă (A) îți permit să selectați modulele pe care vreți să le acivați. În mod implicit, la deschiderea Configuratorului de Sistem, secțiunile sunt ascunse pentru a afișa doar modulele active. Apăsați pe săgeată (G) pentru a afișa toate opțiunile disponibile. Casetele din partea dreaptă (C) vă permit să vizualizați modulele active ca o filă (E) în **AAPS**. În cazul în care caseta din dreapta nu este activată, poți ajunge la funcție folosind meniul hamburger (D) din stânga sus a ecranului. Vedeți [Filă sau meniul Hamburger](#tab-or-hamburger-menu) de mai jos.
 
 Când există setări suplimentare disponibile în cadrul modulului, poți face clic pe rotița dințată (B), care te va duce la setările specifice din secțiunea de preferințe.
 
-![Casuta Configurare sistem şi rotita](../images/ConfBuild_ConfigBuilder.png)
+![Casuta Configurare sistem și rotita](../images/ConfBuild_ConfigBuilder.png)
 
 (Config-Builder-tab-or-hamburger-menu)=
 
@@ -52,7 +52,7 @@ Mai multe informații pentru a înțelege Profilul Insulinei așa cum este indic
 
 ![Tip de insulină Oref Acțiune-Rapidă](../images/ConfBuild_Insulin_RAO.png)
 
-* recomandat pentru Humalog, Novolog şi Novorapid
+* recomandat pentru Humalog, Novolog și Novorapid
 * DIA = cel puțin 5 ore
 * Maximum vârf = 75 minute după injectare (fix, nemodificabilă)
 
@@ -102,17 +102,17 @@ Selectați sursa de monitorizare a glicemiei din sânge pe care o folosiți. Ved
 * [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
 * Glicemie aleatorie: generează valori aleatorii ale glicemiei (doar în modul DEMO)
 
-## Smoothing
+## Omogenizare
 
-![Smoothing](../images/ConfBuild_Smoothing.png)
+![Omogenizare](../images/ConfBuild_Smoothing.png)
 
 Vedeți [Netezirea datelor de glicemie](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 (Config-Builder-pump)=
 
-## Pump
+## Pompă
 
-Alegeți tipul de pompă pe care îl folosiți. Vezi pagina [Pompe Compatibile](../Getting-Started/CompatiblePumps.md) pentru mai multe informații despre configurare.
+Alegeți tipul de pompă pe care îl folosiți. Vedeți pagina [Pompe Compatibile](../Getting-Started/CompatiblePumps.md) pentru mai multe informații despre configurare.
 
 ![Selecție pompă pentru configurare](../images/ConfBuild_Pump_AAPS33.png) ![Selecție pompă pentru configurare](../images/ConfBuild_Pump_AAPS33-2.png)
 
@@ -137,11 +137,11 @@ Alegeți tipul de pompă pe care îl folosiți. Vezi pagina [Pompe Compatibile](
 
 Alegeți tipul de detecție a sensibilității. Pentru mai multe detalii despre diferite designuri, vă rugăm să [citiți aici](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Această funcție analizează în timp real datele istorice și face ajustări dacă consideră că reacționați mai sensibil (sau invers, sunteți mai rezistent) la insulină decât de obicei. Mai multe detalii despre Algoritmul de Sensibilitate pot fi citite în [Documentația OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-Vă puteți vedea sensibilitatea pe ecranul principal într-un [grafic adițional](#AapsScreens-section-g-additional-graphs). Vă puteți vedea sensibilitatea la insulină pe ecranul principal prin selectarea SEN și prin urmărirea liniei albe în grafic. Notă, trebuie să fiți în [Obiectivul 8](#objectives-objective8) pentru a permite Detectării Sensibilității /[Autosens](#Open-APS-features-autosens) să ajusteze automat cantitatea de insulină livrată. Înainte de a ajunge la acest obiectiv, procentajul Autosens / linia din grafic este afișată doar pentru informare.
+Vă puteți vedea sensibilitatea pe ecranul principal într-un [grafic adițional](#AapsScreens-section-g-additional-graphs). Vă puteți vedea sensibilitatea la insulină pe ecranul principal prin selectarea SEN și prin urmărirea liniei albe în grafic. Notă, trebuie să fiți în [Obiectivul 8](#objectives-objective8) pentru a permite Detectării Sensibilității /[Autosens](#Open-APS-features-autosens) să ajusteze automat cantitatea de insulină administrată. Înainte de a ajunge la acest obiectiv, procentajul Autosens / linia din grafic este afișată doar pentru informare.
 
 ### Setări absorbție
 
-Dacă utilizați Oref1 cu **SMB** trebuie să schimbați **min_5m_carbimpact** (impactul estimat al carbohidraților la fiecare 5 minute) la 8. Valoarea este utilizată în timpul întreruperii citirilor **CGM** sau atunci când activitatea fizică „folosește” întreaga creștere a glicemiei, care altfel ar determina **AAPS** să scadă COB. În momentele în care [absorbția de carbohidrați](../DailyLifeWithAaps/CobCalculation.md) nu poate fi ajustată dinamic pe baza reacțiilor din sânge, se introduce o degradare implicită a carbohidraților. Practic, este un sistem de siguranță.
+Dacă utilizați Oref1 cu **SMB** trebuie să schimbați **min_5m_carbimpact** (impactul estimat al carbohidraților la fiecare 5 minute) la 8. Valoarea este utilizată în timpul întreruperii citirilor **CGM** sau atunci când activitatea fizică "folosește" întreaga creștere a glicemiei, care altfel ar determina **AAPS** să scadă COB. În momentele în care [absorbția de carbohidrați](../DailyLifeWithAaps/CobCalculation.md) nu poate fi ajustată dinamic pe baza reacțiilor din sânge, se introduce o degradare implicită a carbohidraților. Practic, este un sistem de siguranță.
 
 (Config-Builder-aps)=
 
@@ -171,7 +171,7 @@ Acest modul nu poate fi dezactivat deoarece este o parte de bază a **AAPS**.
 
 Vedeți pagina [Obiective](../SettingUpAaps/CompletingTheObjectives.md) pentru mai multe informații.
 
-## Synchronization
+## Sincronizare
 
 În această secțiune, puteți alege dacă/unde doriți **AAPS** să trimită datele dumnevoastră.
 
@@ -245,11 +245,11 @@ O filă pentru gestionarea <0>Automatizărilor</0>, disponibilă de la <1>Obiect
 
 ### Comunicator SMS
 
-Permite aparținătorilor să controleze de la distanță anumite funcții ale **AAPS**prin SMS, vezi [Comenzi SMS](../RemoteFeatures/SMSCommands.md) pentru mai multe informații privind configurarea.
+Permite aparținătorilor să controleze de la distanță anumite funcții ale **AAPS**prin SMS, vedeți [Comenzi SMS](../RemoteFeatures/SMSCommands.md) pentru mai multe informații privind configurarea.
 
 ### Mâncare
 
-Afișați presetările alimentare definite în baza de date Nightscout, vezi [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) pentru mai multe informații despre configurare.
+Afișați presetările alimentare definite în baza de date Nightscout, vedeți [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) pentru mai multe informații despre configurare.
 
 Notă: Intrările nu pot fi utilizate în calculatorul **AAPS**. (Numai vizualizare)
 
@@ -270,7 +270,7 @@ Prin fila Ceas (Wear) sau prin meniul principal (sus stânga ecranului, dacă fi
 
 ### Autotune
 
-You can enable Autotune, see [here](../AdvancedOptions/Autotune.md).
+Puteți activa Autotune, vedeți [aici](../AdvancedOptions/Autotune.md).
 
 ### Mentenanță
 

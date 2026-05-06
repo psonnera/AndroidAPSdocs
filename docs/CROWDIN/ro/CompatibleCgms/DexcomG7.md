@@ -1,73 +1,73 @@
-# Dexcom G7 and ONE+
+# Dexcom G7 și ONE+
 
 
-## Fundamental in advance
+## Elemente fundamentale în avans
 
-Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. More details about this [here](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
+Trebuie remarcat faptul că sistemele G7 și ONE+, în comparație cu G6, nu filtrează valorile, nici în aplicație, nici în cititor. Mai multe detalii despre acest lucru [aici](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
 ```{admonition} Smoothing method 
-Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggestions to use for Dexcom G7/ONE+/Stelo
+Citiți [metoda de filtrare](../CompatibleCgms/SmoothingBloodGlucoseData.md) sugestiile pentru Dexcom G7/ONE+/Stelo
 ```
 
-## 1. xDrip+ (direct connection to G7 or ONE+)
+## 1. xDrip+ (conectare directă la G7 sau ONE+)
 
-- Follow the instructions here: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-- Select  xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Urmați instrucțiunile de aici: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- Selectați xDrip+ în [Configurator, Sursă de glicemie](#Config-Builder-bg-source).
 
-- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
+- Reglați setările xDrip+ în funcție de explicațiile de pe pagina de setări xDrip+  [Setări xDrip+ ](../CompatibleCgms/xDrip.md)
 
-## 2.  Patched Dexcom G7 App (DiaKEM)
+## 2.  Aplicația Dexcom G7 modificată (DiaKEM)
 
 ```{admonition} No new users
-:class: warning
-Latest Dexcom servers update broke DiaKEM for new installs: the G7 app no longer can get through the login and onboarding process that happens on a fresh install of the app. 
-Existing users do not experience issues for now: do not logout, wipe data, or reinstall the G7 app as that will prevent you from getting the app up and running again. If it is already running, you should be unaffected.
-New users are recommended to use [xDrip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) as **AAPS'** BG data source until this issue has been resolved.
+:class: avertizare
+Cele mai recente actualizări de pe servere Dexcom au stricat DiaKEM pentru instalări noi: aplicația nu mai poate trece prin procesul de autentificare și înregistrare care se întâmplă la o instalare nouă a aplicației. 
+Utilizatorii existenți nu se confruntă deocamdată cu probleme: nu deconectați, nu ștergeți datele, sau reinstalați aplicația G7 deoarece aceasta vă va împiedica să faceți aplicația să ruleze din nou. Dacă rulează deja, nu ar trebui să fiți afectat.
+Utilizatorii noi sunt recomandați să folosească [xDrip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) ca sursă de date glicemice în **AAPS** până când această problemă a fost rezolvată.
 ```
 
-**Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+.**
+**Notă: AAPS 3.2.0.0 sau mai mare este necesar! Nu este disponibil pentru ONE+.**
 
-### Install a new patched (!) G7 app and start the sensor
+### Instalați o nouă aplicație G7 modificată (!) și porniți senzorul
 
 
-A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
+O aplicație Dexcom G7 (DiaKEM) modificată permite accesul la datele Dexcom G7. Aceasta nu este aplicația BYODA deoarece această aplicație nu poate primi date G7 în acest moment.
 
-- Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
+- Dezinstalați aplicația Dexcom originală dacă o utilizați înainte (sesiunea senzorului curent poate fi continuată - țineți cont de codul senzorului înainte de a elimina aplicația!)
 
-- Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
+- Descărcați și instalați patched.apk [aici](https://github.com/authorgambel/g7/releases).
 
-- Enter sensor code in the patched app.
+- Introduceți codul senzorului în aplicația modificată.
 
-- Follow the general recommendations for CGM hygiene and sensor placement found [here](../CompatibleCgms/GeneralCGMRecommendation.md).
+- Urmați recomandările generale pentru igiena și plasarea senzorilor de glicemie găsite [aici](../CompatibleCgms/GeneralCGMRecommendation.md).
 
-- After the warm-up phase, the values are displayed as usual in the G7 app.
+- După faza de încălzire, valorile sunt afișate ca de obicei în aplicația G7.
 
-### Configuration in AAPS
+### Configurarea în AAPS
 
-- Select 'BYODA' in in [ConfigBuilder, BG Source](#Config-Builder-bg-source) - even if it is not the BYODA app!
+- Selectați 'BYODA' în [Configurator, Sursă glicemie](#Config-Builder-bg-source) - chiar dacă nu este aplicația BYODA!
 
-- If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
+- Dacă AAPS nu primește valori, comută la o altă sursă de glicemie și apoi înapoi la "BYODA" pentru a apela interogarea pentru aprobarea schimbului de date între AAPS și BYODA.
 
-## 3. xDrip+ (companion mode)
+## 3. xDrip+ (mod companion)
 
--   Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- As data source in xDrip+ "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
--   Select  xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   Descărcați și instalați xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- Ca sursă de date în xDrip+ "Companion App" trebuie selectată și în Setări Avansate > Setări Bluetooth > "Companion Bluetooth" trebuie activat.
+-   Selectați xDrip+ în [Configurator, Sursă glicemie](#Config-Builder-bg-source).
 
--   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
+-   Reglați setările xDrip+ în funcție de explicațiile de pe pagina de setări xDrip+  [Setări xDrip+ ](../CompatibleCgms/xDrip.md)
 
 ## 4. Juggluco
 
-Version 9.0+ required
+Versiunea 9.0+ necesară
 
-- Disable the app previously connected to the sensor: Uninstall the app or use "Force Stop." Disable "Nearby Devices" permission in app settings. Restrict the app's battery usage.
+- Dezactivați aplicația conectată anterior la senzor: Dezinstalați aplicația sau utilizați "Oprire forțată". Dezactivați permisiunea "Dispozitive apropiate" în setările aplicației. Restricționează utilizarea bateriei de către aplicație.
 
-- Forget the sensor in Bluetooth settings: In Android settings, find the sensor in bonded devices and select "Forget." Dexcom G7 sensor names start with DXCM.
+- Uitați senzorul în setările Bluetooth: În setările Android, găsiți senzorul în dispozitivele asociate și selectați "Uitați". Numele senzorilor Dexcom G7 încep cu DXCM.
 
-- Avoid interference from other sensors: Keep old Dexcom sensors out of Bluetooth range.
+- Evitați interferențele ale altor senzori: Păstrați senzorii Dexcom vechi în afara razei Bluetooth.
 
-- Connect the G7 sensor to Juggluco: Open Juggluco → Left menu → Photo. Scan the data matrix on the G7 sensor's applicator. Wait up to 5 minutes for Juggluco to find the sensor.
+- Conectați senzorul G7 la Juggluco: Deschide Juggluco → Meniul Stânga → Foto. Scanați matricea de date de pe aplicatorul G7 al senzorului. Așteptați până la 5 minute pentru ca Juggluco să găsească senzorul.
 
-- Cerințe de asociere: Acceptați împerecherea senzorului cu Juggluco. Ensure the screen isn’t locked during pairing. If pairing fails, wait 5 minutes before trying again.
+- Cerințe de asociere: Acceptați împerecherea senzorului cu Juggluco. Asigurați-vă că ecranul nu este blocat în timpul asocierii. Dacă asocierea eșuează, așteptați 5 minute înainte de a încerca din nou.
 
-- Exception: Wear OS watches can bond without pressing an agree button.
+- Excepție: Ceasurile cu Wear OS se pot asocia fără a apăsa un buton de acceptare.

@@ -1,6 +1,6 @@
 # Update with Android Studio
 
-## Build yourself instead of download
+## Construiți-vă în loc să descărcați
 
 **AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
@@ -28,7 +28,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 The minimal version required is described in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file). If your version is older, please [update Android Studio first](#Building-APK-install-android-studio)!
 
 (Update-to-new-version-update-your-local-copy)=
-### Update your local copy
+### Actualizați-vă copia locală
 
 ```{admonition} WARNING
 :class: warning
@@ -92,7 +92,7 @@ See the instructions for [transferring and installing AAPS](../SettingUpAaps/Tra
 
 Continue [here](#Update-to-new-version-check-aaps-version-on-phone).
 
-## Troubleshooting
+## Depanare
 
 If anything goes wrong, don't panic.
 

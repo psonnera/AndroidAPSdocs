@@ -54,7 +54,7 @@ Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/wat
 
 ## Basic smartwatch familiarity
 
-After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable" “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
+După configurarea de bază a ceasului conform videoclipului de mai sus, mergeți la Playstore de pe telefon și descărcați următoarele aplicații: "Galaxy Wearable" "Samsung" și "instrumente Easy Fire" sau "Wear Installer 2".
 
 There are plenty of 3rd party YouTube videos which will help you with getting familiar with your new smartwatch, for example:
 
@@ -81,7 +81,7 @@ To side-load AAPS onto the watch You can use either: 1) Wear Installer 2 2) Easy
 
 ### Using Wear Installer 2 to side-load **AAPS** Wear from the phone onto the watch
 
- ![image](../images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
+ ![imagine](../images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
 
 Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video.](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
 
@@ -100,37 +100,37 @@ Alternatively, but not for Wear OS 5, you can:
 
 1)   Download _[Easy Fire Tools](https://play.google.com/store/apps/details?id=de.agondev.easyfiretools&hl=en)_ from the Play Store onto phone
 
-![image](../images/wearos/easyfire01.png)
+![imagine](../images/wearos/easyfire01.png)
 
 2)  Make yourself a developer in the watch (once set up and connected to phone):
 
 Go to settings >about watch (bottom option) -> software info -> software version.
 
-![image](../images/wearos/easyfire02.png)
+![imagine](../images/wearos/easyfire02.png)
 
 Rapidly tap on “ software version” until a notification appears that the watch is now in "developer mode".
 
-![image](../images/wearos/easyfire03.png)
+![imagine](../images/wearos/easyfire03.png)
 
 Return to the top of settings menu, scroll to the bottom and see “developer options” below “about watch”.
 
 In “developer options”, turn on “ADB debugging” and “wireless debugging”. The latter option then reveals the IP address of the watch, the final two digits of which changes each time the watch is paired with a new phone. It will be something like: **192.168.1.214**.5555 (ignore the last 4 digits). Note that the last two digits (here, “20”) of this address will change every time you change to a new phone handset for AAPS.
 
-![image](../images/wearos/easyfire04.png)
+![imagine](../images/wearos/easyfire04.png)
 
 STEP 3)     Enter IP address _e.g._ **192.168.1.214** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address).
 
-![image](../images/wearos/easyfire05.png)
+![imagine](../images/wearos/easyfire05.png)
 
 Then click the plug socket icon on the top right. It will turn green when connected.
 
-![image](../images/wearos/easyfire06.png)
+![imagine](../images/wearos/easyfire06.png)
 
 
 STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  aaps-wear.apk onto the smartwatch using Easy Fire tools
 
 
-![image](../images/wearos/easyfire07.png)
+![imagine](../images/wearos/easyfire07.png)
 
 
 (BuildingAapsWearOs-WearOS5-TShoot)=
@@ -149,7 +149,7 @@ On the watch:
 - Go to Settings → Developer options. Enable **ADB debugging**
 - Go to Settings → Developer options → Wireless debugging → **Pair new device**
 
-You will see a Wi-Fi paring code and IP address and port appearing: ![image](../images/wearos/ADB03.png)
+You will see a Wi-Fi paring code and IP address and port appearing: ![imagine](../images/wearos/ADB03.png)
 
 - In the terminal: `adb pair ipaddress:port` E.g. `adb pair 10.10.1.125:36299`
 - You will be asked for the pairing code. Enter it.
@@ -169,7 +169,7 @@ You will see a Wi-Fi paring code and IP address and port appearing: ![image](../
 - Make sure both watch and phone are on the same network and Wi-Fi device. Especially Wi-Fi repeaters or access points may create problems.
 - Make sure to be near your main router, then restart both phone and watch.
 
-**Pairing :**
+**Asociere:**
 
 - Watch: Wireless Debugging: note the IP address.
 - Wear Installer: Enter the IP on the in Wear Installer app.
@@ -242,26 +242,26 @@ There are a number of watchfaces available in the standard build of the AAPS Wea
 
 5. Check your watch, the "AAPS (Custom)" watchface should now be displaying the skin that you have selected. Give it a few seconds to refresh. You may now customize the complications, etc. by long pressing the watchface and then pressing the "Customize" button on the watchface image.
 
-## AAPSv2 watchface - Legend
+## Fețe de ceas AAPSv2 - Legendă
 
 ![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
 
-A - time since last loop run
+A - timp de la ultima activare a buclei
 
-B - CGM reading
+B - Citire CGM
 
-C - minutes since last CGM reading
+C - minute de la ultima citire CGM
 
-D - change compared to last CGM reading (in mmol or mg/dl)
+D - modificare în comparație cu ultima citire a CGM (în mmol sau mg/dl)
 
-E - average change CGM reading last 15 minutes
+E - variația medie a citirilor CGM din ultimele 15 minute
 
-F - phone battery
+F - bateria telefonului
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+G - rata bazală (indicată în U/h în timpul ratei standard și în % în timpul RBT)
 
-H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H-BGI (interacțiunea glicemiei) -> nivelul la care glicemia "ar trebui" să fie în creștere sau scădere în funcție doar de activitatea insulinei.
 
-I - carbs (carbs on board | e-carbs in the future)
+I - carbohidrați (carbohidrați la bord | carbohidrați extinși din viitor)
 
-J - insulin on board (from bolus | from basal)
+J - insulină la bord (de la bolus | de la bazală)
