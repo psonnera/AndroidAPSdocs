@@ -189,23 +189,23 @@ def resolve_target_markdown_file(source_file: Path, lang_dir: Path, target: str)
         if parts[-1].endswith(".html"):
             parts[-1] = parts[-1][:-5] + ".md"
             candidate = (lang_dir / Path(*parts)).resolve()
-            if candidate.exists():
+            if path_exists_case_sensitive(candidate):
                 return candidate
         return None
 
     local_candidate = resolve_local_target(source_file, lang_dir, target)
-    if local_candidate.suffix.lower() == ".md" and local_candidate.exists():
+    if local_candidate.suffix.lower() == ".md" and path_exists_case_sensitive(local_candidate):
         return local_candidate.resolve()
     if local_candidate.suffix.lower() == ".html":
         md_candidate = local_candidate.with_suffix(".md")
-        if md_candidate.exists():
+        if path_exists_case_sensitive(md_candidate):
             return md_candidate.resolve()
     if local_candidate.suffix == "":
         md_candidate = local_candidate.with_suffix(".md")
-        if md_candidate.exists():
+        if path_exists_case_sensitive(md_candidate):
             return md_candidate.resolve()
         index_candidate = local_candidate / "index.md"
-        if index_candidate.exists():
+        if path_exists_case_sensitive(index_candidate):
             return index_candidate.resolve()
     return None
 
@@ -287,22 +287,46 @@ def parse_markdown_links(markdown_file: Path) -> tuple[list[LinkOccurrence], lis
 def resolve_local_target(source_file: Path, lang_dir: Path, target: str) -> Path:
     decoded = unquote(urlsplit(target).path)
     if decoded.startswith("/"):
-        candidate = (lang_dir / decoded.lstrip("/")).resolve()
+        candidate = lang_dir / decoded.lstrip("/")
     else:
-        candidate = (source_file.parent / decoded).resolve()
+        candidate = source_file.parent / decoded
     return candidate
 
 
+def path_exists_case_sensitive(candidate: Path) -> bool:
+    if not candidate.exists():
+        return False
+
+    # Enforce exact path-component casing even on case-insensitive filesystems.
+    if candidate.is_absolute():
+        current = Path(candidate.anchor)
+        parts = candidate.parts[1:]
+    else:
+        current = Path(".")
+        parts = candidate.parts
+
+    for part in parts:
+        try:
+            names = {child.name for child in current.iterdir()}
+        except (FileNotFoundError, NotADirectoryError, PermissionError):
+            return False
+        if part not in names:
+            return False
+        current = current / part
+
+    return True
+
+
 def target_exists(candidate: Path) -> bool:
-    if candidate.exists():
+    if path_exists_case_sensitive(candidate):
         return True
 
     if candidate.suffix == "":
         md_candidate = candidate.with_suffix(".md")
-        if md_candidate.exists():
+        if path_exists_case_sensitive(md_candidate):
             return True
         index_candidate = candidate / "index.md"
-        if index_candidate.exists():
+        if path_exists_case_sensitive(index_candidate):
             return True
     return False
 
@@ -417,14 +441,14 @@ def run_validation(
                 continue
 
             resolved_link_target = resolved
-            if not resolved_link_target.exists() and resolved_link_target.suffix == "":
+            if not path_exists_case_sensitive(resolved_link_target) and resolved_link_target.suffix == "":
                 for ext in sorted(IMAGE_EXTENSIONS):
                     candidate = resolved_link_target.with_suffix(ext)
-                    if candidate.exists():
+                    if path_exists_case_sensitive(candidate):
                         resolved_link_target = candidate
                         break
 
-            if resolved_link_target.exists() and is_image_target(target, resolved_link_target):
+            if path_exists_case_sensitive(resolved_link_target) and is_image_target(target, resolved_link_target):
                 all_used_local_pictures.add(resolved_link_target.resolve())
                 # No anchor checks for direct image file links.
                 continue
@@ -482,14 +506,14 @@ def run_validation(
                 continue
 
             resolved_final = resolved
-            if not resolved_final.exists() and resolved_final.suffix == "":
+            if not path_exists_case_sensitive(resolved_final) and resolved_final.suffix == "":
                 for ext in sorted(IMAGE_EXTENSIONS):
                     candidate = resolved_final.with_suffix(ext)
-                    if candidate.exists():
+                    if path_exists_case_sensitive(candidate):
                         resolved_final = candidate
                         break
 
-            if resolved_final.exists() and is_image_target(target, resolved_final):
+            if path_exists_case_sensitive(resolved_final) and is_image_target(target, resolved_final):
                 all_used_local_pictures.add(resolved_final.resolve())
 
     for markdown_file, defs in reference_defs_by_file.items():
