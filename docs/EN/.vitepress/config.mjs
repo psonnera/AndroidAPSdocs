@@ -1,7 +1,12 @@
 import { defineConfig } from 'vitepress'
 import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
 
+const rtdVersion = process.env.READTHEDOCS_VERSION
+const rtdLanguage = process.env.READTHEDOCS_LANGUAGE || 'en'
+const docsBase = rtdVersion ? `/${rtdLanguage}/${rtdVersion}/` : '/'
+
 export default defineConfig({
+  base: docsBase,
   title: 'AndroidAPS Wiki',
   description: 'AndroidAPS documentation',
   cleanUrls: false,

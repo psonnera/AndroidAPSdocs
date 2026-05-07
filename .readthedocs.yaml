@@ -2,17 +2,11 @@ version: 2
 
 # Build Container
 build:
-   os: ubuntu-22.04
-   tools:
+  os: ubuntu-22.04
+  tools:
+    nodejs: "20"
     python: "3.11"
-
-# Python
-python:
-  install:
-    - requirements: ./requirements.txt
-
-# Sphinx
-sphinx:
-  builder: html
-  fail_on_warning: false
-  configuration: docs/EN/conf.py
+  jobs:
+    build:
+      - npm ci
+      - npx vitepress build docs/EN --outDir $READTHEDOCS_OUTPUT/html
