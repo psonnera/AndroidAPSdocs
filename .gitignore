@@ -1,6 +1,22 @@
+# Build output
 _build/
 docs/_build/
 docs/EN/_build/
 docs/CROWDIN/fr/_build/
 docs/CROWDIN/de/_build/
 docs/CROWDIN/nl/_build/
+
+# Node
+node_modules/
+package-lock.json
+
+# VitePress cache
+docs/EN/.vitepress/cache/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Migration scripts (one-time use, not needed for ongoing builds)
+utils/migrate-myst-to-vitepress.py

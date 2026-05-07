@@ -110,10 +110,7 @@ https://github.com/nightscout/aaps-ci-preparation/releases/latest
 2.Backup copy hosted on this site:
  - If the external link is also unavailable, you can use this backup file to download.
 <!--crowdin:disable-->
-
-.. raw:: html
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download>  aaps-ci-preparation.html</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download>aaps-ci-preparation.html</a>
 <!--crowdin:enable-->
 :::
 

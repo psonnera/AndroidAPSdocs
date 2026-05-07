@@ -1,0 +1,17 @@
+.VPNavBarTitle .logo {
+  height: 24px !important;
+  width: auto !important;
+  max-height: 24px !important;
+}
+
+.vp-doc img {
+  border: 1px solid #0AB3DE;
+}
+
+.custom-block.info {
+  background-color: #dff3fc;
+}
+
+.dark .custom-block.info {
+  background-color: #0d3a4f;
+}
