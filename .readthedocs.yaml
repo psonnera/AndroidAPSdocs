@@ -7,7 +7,7 @@ build:
     nodejs: "20"
   jobs:
     install:
-      - npm ci
+      - npm install
     build:
       html:
         - npx vitepress build docs/EN --outDir $READTHEDOCS_OUTPUT/html
