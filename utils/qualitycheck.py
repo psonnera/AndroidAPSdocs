@@ -14,8 +14,10 @@ from __future__ import annotations
 import argparse
 import concurrent.futures
 import re
+import subprocess
 import sys
 from dataclasses import dataclass
+from functools import lru_cache
 from pathlib import Path
 from typing import Iterable
 from urllib.parse import unquote, urlsplit
@@ -294,10 +296,33 @@ def resolve_local_target(source_file: Path, lang_dir: Path, target: str) -> Path
 
 
 def path_exists_case_sensitive(candidate: Path) -> bool:
+    """Return True only if *candidate* exists with exactly the right case.
+
+    On Linux this is automatic.  On Windows (case-insensitive filesystem) we
+    compare against the git-index, which stores the exact case that will be
+    present on Linux/CI.  This ensures that case mismatches are caught
+    locally even when the Windows filesystem masks them.
+    """
     if not candidate.exists():
         return False
 
-    # Enforce exact path-component casing even on case-insensitive filesystems.
+    tracked = _git_tracked_paths()
+    if tracked:
+        # Build a repo-root-relative posix path from the candidate.
+        repo_root = Path(__file__).resolve().parent.parent
+        try:
+            # Reconstruct relative path purely from string (avoids on-disk case
+            # normalization that .resolve() performs on Windows).
+            abs_str = str(candidate.resolve())
+            repo_str = str(repo_root)
+            if abs_str.lower().startswith(repo_str.lower()):
+                rel = abs_str[len(repo_str):].lstrip("\\/").replace("\\", "/")
+                return rel in tracked
+        except Exception:
+            pass
+
+    # Fallback for paths outside the git repository: check exact name per
+    # directory level using iterdir().
     if candidate.is_absolute():
         current = Path(candidate.anchor)
         parts = candidate.parts[1:]
@@ -315,6 +340,26 @@ def path_exists_case_sensitive(candidate: Path) -> bool:
         current = current / part
 
     return True
+
+
+@lru_cache(maxsize=1)
+def _git_tracked_paths() -> frozenset[str]:
+    """Return git-tracked file paths as a frozenset of repo-relative posix strings.
+
+    Returns an empty frozenset if git is unavailable or the current directory
+    is not inside a git repository.
+    """
+    try:
+        repo_root = Path(__file__).resolve().parent.parent
+        raw = subprocess.check_output(
+            ["git", "ls-files"],
+            cwd=str(repo_root),
+            text=True,
+            stderr=subprocess.DEVNULL,
+        ).splitlines()
+        return frozenset(raw)
+    except Exception:
+        return frozenset()
 
 
 def target_exists(candidate: Path) -> bool:
