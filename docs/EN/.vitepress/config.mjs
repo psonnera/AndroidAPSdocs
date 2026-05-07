@@ -5,10 +5,17 @@ const rtdVersion = process.env.READTHEDOCS_VERSION
 const rtdLanguage = process.env.READTHEDOCS_LANGUAGE || 'en'
 const docsBase = rtdVersion ? `/${rtdLanguage}/${rtdVersion}/` : '/'
 
+const logoPath = `${docsBase}androidaps-logo.png`
+const faviconIcoPath = `${docsBase}favicon.ico`
+
 export default defineConfig({
   base: docsBase,
   title: 'AndroidAPS Wiki',
   description: 'AndroidAPS documentation',
+  head: [
+    ['link', { rel: 'icon', type: 'image/png', href: logoPath }],
+    ['link', { rel: 'shortcut icon', href: faviconIcoPath }],
+  ],
   cleanUrls: false,
   markdown: {
     config: (md) => {
@@ -16,13 +23,13 @@ export default defineConfig({
     },
   },
   themeConfig: {
-    logo: '/androidaps-logo.png',
+    logo: logoPath,
     nav: [
       { text: 'Home', link: '/' },
     ],
     sidebar: [
       {
-        text: '<img src="/androidaps-logo.png" alt="AAPS" style="max-width:100%; padding: 0.5rem 0;">',
+        text: `<img src="${logoPath}" alt="AAPS" style="max-width:100%; padding: 0.5rem 0;">`,
         link: '/',
         items: [],
       },
