@@ -1,12 +1,13 @@
 version: 2
 
-# Build Container
+# Build with VitePress and publish generated static HTML.
 build:
   os: ubuntu-22.04
   tools:
     nodejs: "20"
-    python: "3.11"
   jobs:
-    build:
+    install:
       - npm ci
-      - npx vitepress build docs/EN --outDir $READTHEDOCS_OUTPUT/html
+    build:
+      html:
+        - npx vitepress build docs/EN --outDir $READTHEDOCS_OUTPUT/html
