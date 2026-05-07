@@ -343,7 +343,7 @@ This can be helpful when about to make major changes to a more extensive **Profi
 
 To do this, however, it is important to clone the whole **database record** consisting of several profiles in the Nightscout editor (blue arrow on the screenshot below). The new database records then carries the current date. After saving, the changed/new **Profile** can be activated in **AAPS** with a regular [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-![Clone database records](../images/Nightscout_Profile_Editor.PNG)
+![Clone database records](../images/Nightscout_Profile_Editor.png)
 
 <a id="your-aaps-profile-compare-profiles"></a>
 ### Compare two Profiles
