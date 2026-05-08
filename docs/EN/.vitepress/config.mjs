@@ -10,7 +10,7 @@ const faviconIcoPath = `${docsBase}favicon.ico`
 
 export default defineConfig({
   base: docsBase,
-  title: 'AndroidAPS Wiki',
+  title: 'AndroidAPS 4.0',
   description: 'AndroidAPS documentation',
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: logoPath }],
