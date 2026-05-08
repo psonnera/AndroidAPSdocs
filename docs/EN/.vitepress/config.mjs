@@ -23,13 +23,13 @@ export default defineConfig({
     },
   },
   themeConfig: {
-    logo: logoPath,
+    logo: 'androidaps-logo.png',
     nav: [
       { text: 'Home', link: '/' },
     ],
     sidebar: [
       {
-        text: `<img src="${logoPath}" alt="AAPS" style="max-width:100%; padding: 0.5rem 0;">`,
+        text: `<img src="androidaps-logo.png" alt="AAPS" style="max-width:100%; padding: 0.5rem 0;">`,
         link: '/',
         items: [],
       },
