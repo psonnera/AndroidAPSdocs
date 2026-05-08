@@ -12,6 +12,16 @@ Se trovi un bug o pensi che sia successo qualcosa di sbagliato quando usi il ram
 
 Una versione Dev ha una data di scadenza. Questo sembra scomodo quando lo usi in modo soddisfacente, ma serve a uno scopo. Quando una singola versione dev è in giro, è più facile tenere traccia degli errori che le persone segnalano. Gli sviluppatori non vogliono essere in una posizione in cui ci sono tre versioni di dev in giro, dove i bug sono risolti in alcuni e non altri, e la gente continua a segnalare quelli fissi.
 
+(branch-ci-test)=
+
+## Test a specific branch (branch-ci)
+
+To build a test branch, select branch-ci, which allows you to choose a specific branch for APK creation. You can use this method when you need to test the dev branch.
+
+![aaps_ci_branch_ci1](../images/Building-the-App/CI/aaps_ci_branch_ci1.png)
+
+![aaps_ci_branch_ci2](../images/Building-the-App/CI/aaps_ci_branch_ci2.png)
+
 (github-pr-test)=
 
 ## Test items in a pull request (GitHub CI actions deploy)

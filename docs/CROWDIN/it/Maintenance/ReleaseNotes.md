@@ -1,23 +1,15 @@
 
 # Release notes
 
-Please follow the instructions in the [update manual](UpdateToNewVersion). The troubleshooting section also addresses the most common difficulties encountered when updating **AAPS** on the update manual page.
+Please follow the instructions in the [update manual](UpdateToNewVersion) to update to a new version. The troubleshooting section also addresses the most common difficulties encountered when updating **AAPS** on the update manual page.
 
-You will receive the information as soon as a new update is available. If you do not update until expiration date **AAPS** will switch to Open Loop.
+You will receive a notification like this when a new update is available:
 
 ![Update info](../images/AAPS_LoopDisable90days.png)
 
-This prompt is important, should not be ignored and is not intended to bug you. New versions of **AAPS** do not only provide new features but also important safety fixes. Therefore it is necessary that every **AAPS** user updates to the latest version a.s.a.p. Unfortunately there are still bug reports from very old versions so this an effort to try to improve the safety for each **AAPS** user and the DIY community. Thank you for your understanding.
+If you do not update until expiration date **AAPS** will switch to Open Loop.
 
-```{admonition} First version of **AAPS**
-:class: note
-
-The first test version started already in 2015. In 2016 has been the first released version.
-
-The chronology of these releases is not available at the moment but as this question is asked several times we document it here.
-
-```
-![AAPS 1.0](../images/update/AAPS1.0.png)
+**Do not ignore the notification.** New versions of **AAPS** provide important safety fixes. Therefore, every **AAPS** user must update to the latest version as soon as possible. This an effort to try to improve the safety for each **AAPS** user and the DIY community. Thank you for your understanding.
 
 (maintenance-android-version-aaps-version)=
 
@@ -61,6 +53,79 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 ```
 
 (latestrelease)=
+
+(version3422)=
+
+## Version 3.4.2.2
+
+- Fixing issues with Equil and Medtronic
+- Improve safety of Medtrum
+
+(version3421)=
+
+## Version 3.4.2.1
+
+- Equil: fix Pairing and progress dialog @MilosKozak
+
+(version3420)=
+
+## Version 3.4.2.0
+
+Release date: 04-02-2026
+
+- Equil: Fix resistance for different models @hhfcvmars
+- Tidepool: Fix session @MilosKozak
+- Medtrum: Fix activation path by preveting double fill @MilosKozak
+- COB: Fix COB calculation (covers dangerous edge case) @MilosKozak
+
+(version3410)=
+
+## Version 3.4.1.0
+
+Release date: 03-08-2026
+
+### Core
+- Fix DST handling @MilosKozak
+- Improve and unify normal target identification (mgdl > 99, mmol > 5.5) @MilosKozak
+- SMS: protect RESTART by PIN @MilosKozak
+- Maintenance: warn if wrong directory selected @MilosKozak
+
+### Pump Driver Improvements
+- **Omnipod Dash**: refactor BLE driver code to omnipod/common module @jwoglom
+- **Omnipod Dash**: try to fix connection state @MilosKozak
+- **Omnipod**: validate profile before pod activation to prevent wasting pods (#4534) @brianV
+- **Medtronic**: fix same encoding type displayed in settings dialog @mifi100
+- **Medtronic**: prepare pump common classes (Tandem preparation) @andy-rozman
+- **RileyLink**: encoding fix (#4519) @mifi100
+- **Equil**: expand insulin pump compatibility by serial number prefix (#4510) @hhfcvmars
+- **Equil**: add logging @MilosKozak
+- **Diaconn G8**: fix log sync bug and add firmware 3.58+ support @miyeongkim
+- **Diaconn**: fix TBR duration unit conversion @miyeongkim
+- **Diaconn**: use commandQueue.loadEvents() for history sync @miyeongkim
+- Allow insulin delivery while loop is suspended but pump is available @cschuijt
+
+### Cloud / Backup
+- Add backup to Google Drive @Angus-repo
+- Notify UI on cloud storage error state change @Angus-repo
+- Allow both local and cloud storage at the same time @Angus-repo
+
+### Tidepool
+- Improve Tidepool OAuth2 migration @MilosKozak
+- Fix indefinite Tidepool BLOCKED state, fix rejecting empty SSIDs @michaeln-synapse
+
+### NSClient
+- NSCv3: improve reconnection @MilosKozak
+
+### Wear OS
+- Display New IOB in Wizard Result if IOB is used in calculations @olorinmaia
+- Fix Wear BolusProgress with Total Amount @Philoul
+
+### UI
+- Improve ic_none icon for Site Rotation @Philoul
+- Fix site rotation manage pump setting not being used @samfundev
+
+### Contributors
+@MilosKozak @Philoul @olorinmaia @jwoglom @mifi100 @andy-rozman @Angus-repo @brianV @cschuijt @hhfcvmars @miyeongkim @samfundev @michaeln-synapse
 
 (version3400)=
 
@@ -931,3 +996,15 @@ Release date: 03-11-2018
 - Option to keep screen on
 - Option to show notification as Android notification
 - Advanced filtering (allowing to always enable SMB and 6h after meals) supported with patched Dexcom app or xDrip with G5 native mode as BG source.
+
+## Version 1.0
+
+```{admonition} First version of **AAPS**
+:class: note
+
+The first test version started in 2015 and the first release was in 2016.
+
+The exact chronology of these releases is not available at the moment but as this question has been asked several times we document it here.
+
+```
+![AAPS 1.0](../images/update/AAPS1.0.png)

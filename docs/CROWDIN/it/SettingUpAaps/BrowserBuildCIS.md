@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 ### Run the Workflow to Build the Signed APK
 
 1. In your GitHub copy of AndroidAPS, select Actions.
@@ -14,7 +10,7 @@ orphan: true
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Select the branch you want to deploy (master), the [variant](#variant) (fullRelease) and tap Run Workflow.
+5. Select the branch you want to deploy (master), the [variant](variant) (fullRelease) and tap Run Workflow.
 
 
 
