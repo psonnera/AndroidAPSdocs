@@ -7,6 +7,7 @@ const docsBase = rtdVersion ? `/${rtdLanguage}/${rtdVersion}/` : '/'
 
 const logoPath = `${docsBase}androidaps-logo.png`
 const faviconIcoPath = `${docsBase}favicon.ico`
+const themeLogoPath = '/androidaps-logo.png'
 
 export default defineConfig({
   base: docsBase,
@@ -23,13 +24,13 @@ export default defineConfig({
     },
   },
   themeConfig: {
-    logo: 'androidaps-logo.png',
+    logo: themeLogoPath,
     nav: [
       { text: 'Home', link: '/' },
     ],
     sidebar: [
       {
-        text: `<img src="androidaps-logo.png" alt="AAPS" style="max-width:100%; padding: 0.5rem 0;">`,
+        text: `<img src="${logoPath}" alt="AAPS" style="max-width:100%; padding: 0.5rem 0;">`,
         link: '/',
         items: [],
       },
