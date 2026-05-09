@@ -6,11 +6,11 @@ Building AAPS with GitHub Actions.
 
 **Minimum AAPS version supported is 3.3.2.1.**
 
-## Build yourself instead of download
+## Costruisci te stesso invece di scaricare
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**L'app AAPS (un file apk) non è disponibile per il download, a causa delle normative sui dispositivi medici. È legale costruire l'app per il proprio uso, ma non devi darne una copia ad altri!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Vedi la pagina [Domande frequenti](../UsefulLinks/FAQ.md) per i dettagli.
 
 <a id="Building-APK-without-a-computer"></a>
 
@@ -117,12 +117,12 @@ AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS)
 
 ::: warning
 Building AAPS with **Option 1** will not allow you to upgrade your existing AAPS. You will need to:
-1. [Export settings](#ExportImportSettings-Automating-Settings-Export) on your phone.
+1. [Esporta le impostazioni](#ExportImportSettings-Automating-Settings-Export) sul tuo telefono.
 2. Copy or upload the settings file from your phone to an external location (i.e. your computer, cloud storage service…).
 3. Generate a new version of the signed apk as described in Option 1 and transfer it to your phone.
-4. Uninstall previous AAPS version on your phone.
-5. Install new AAPS version on your phone.
-6. [Import settings](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
+4. Disinstalla la versione AAPS precedente sul tuo telefono.
+5. Installa la nuova versione AAPS sul tuo telefono.
+6. [Importa le impostazioni](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) per ripristinare gli obiettivi e la configurazione.
 7. Restore your data from Nightscout.
 :::
 
@@ -171,7 +171,7 @@ Skip the next section and continue [here](#aaps-ci-google-drive-auth).
 <details>
 <summary>KEY + PASSWORDS</summary>
 
-![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
+![Memorizza le password](../images/Building-the-App/044_RememberPwd.png)
 
 </details>
 

@@ -8,7 +8,7 @@ Follow the [instructions](https://www.juggluco.nl/Jugglucohelp/introhelp.html) t
 
 ### Disable Nightscout uploader
 
-Starting with AAPS 3.2, you shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
+A partire da AAPS 3.2, non dovresti permettere ad altre app di caricare i dati (glicemia e trattamenti) su Nightscout.
 
 Disable any active uploader to Nightscout in Juggluco.
 

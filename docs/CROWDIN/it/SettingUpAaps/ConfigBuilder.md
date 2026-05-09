@@ -81,7 +81,7 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 
 <a id="Config-Builder-bg-source"></a>
 
-## BG Source
+## Sorgente Glicemia
 Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
 
 ![Config Builder BG source](../images/Configuration-Builder/ConfBuild_BG.png)

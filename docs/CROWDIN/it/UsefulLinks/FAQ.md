@@ -71,7 +71,7 @@ You can fix it.  You can also purchase upper arm bracelets that fix the CGM/FGM 
 
 In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to be connected to the DIA. Now, it means, 'in which time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter any longer.
 
-## Other settings
+## Altre impostazioni
 
 ### Nightscout settings
 
@@ -175,7 +175,7 @@ You are not receiving calls now, nor are you connected to the internet. But the 
 
 Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip+) when phone is in airplane mode. Go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
 
-![xDrip+ Basic Inter-app Settings Identify receiver](../images/cgm/xDrip+/xDrip_InterApp_NS.png)
+![xDrip+ Impostazioni Inter-app di base Identifica il ricevitore](../images/cgm/xDrip+/xDrip_InterApp_NS.png)
 
 
 #### Travelling

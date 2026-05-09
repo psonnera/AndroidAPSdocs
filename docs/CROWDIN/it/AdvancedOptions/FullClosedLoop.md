@@ -1,4 +1,4 @@
-# Full Closed Loop
+# Circuito Chiuso Completo
 
 
 The main attraction of Full Closed Looping **FCL** is that it has the potential to mimic an artificial pancreas and make daily management easier without having the need to bolus for meals.
@@ -7,13 +7,13 @@ Whilst **hybrid closed loop** ('HCL') is algorithm based, it still requires the 
 
 In **FCL** mealsize-related bolus are no longer required: leave it to the algorithm!  **AAPS** may allow without the user giving any bolus, and without making carb inputs, in a mode called ‘un-announced meals’ **(‘UAM’)**. **UAM** allows **AAPS** to better tolerate incorrect carb inputs by being more aggressive.
 
-## What to expect?
+## Cosa aspettarsi?
 
 There are many published studies on the favourable results **FCL** can achieve. For further reading refer to the following:
 
-1) ![NationalLibraryOfMedicine](../images/Logo_of_U.S._National_Library_of_Medicine.png) ![PubMed](../images/US-NLM-PubMed-Logo.png) National Library of Medicine, PubMed [First Use of Open-Source Automated Insulin Delivery AndroidAPS in Full Closed-Loop Scenario: Pancreas4ALL Randomized Pilot Study](https://pubmed.ncbi.nlm.nih.gov/36826996/);
+1) ![NationalLibraryOfMedicine](../images/Logo_of_U.S._National_Library_of_Medicine.png) ![PubMed](../images/US-NLM-PubMed-Logo.png) Biblioteca Nazionale di Medicina, PubMed [Primo uso di AndroidAPS per la somministrazione automatica dell'insulina in Loop Chiusoa scenario: Pancreas4ALL Randomized Pilot Study](https://pubmed.ncbi.nlm.nih.gov/36826996/);
 
-2) ![NationalLibraryOfMedicine](../images/Logo_of_U.S._National_Library_of_Medicine.png) ClinicalTrials.gov National Library of Medicine, Clinical Trial [Feasibility and Safety Study of the Automated Insulin Delivery Closed Loop System Pancreas4ALL (ASAP)](https://www.clinicaltrials.gov/study/NCT04835350?term=Feasibility%20and%20Safety%20Study%20of%20the%20Automated%20Insulin%20Delivery%20Closed%20Loop%20System%20Pancreas4ALL%20(ASAP)&rank=1)
+2) ![NationalLibraryOfMedicine](../images/Logo_of_U.S._National_Library_of_Medicine.png) ClinicalTrials.gov National Library of Medicine, Clinical Trial [ Studio di fattibilità e sicurezza del sistema automatico di somministrazione di insulina in Loop chiusoPancreas4ALL (ASAP) ](https://www.clinicaltrials.gov/study/NCT04835350?term=Feasibility%20and%20Safety%20Study%20of%20the%20Automated%20Insulin%20Delivery%20Closed%20Loop%20System%20Pancreas4ALL%20(ASAP)&rank=1)
 
 Success for **FCL** requires the user to:
 
@@ -32,7 +32,7 @@ Success for **FCL** requires the user to:
 - Difficulties still remain to establish a **FCL** for kids (discussed below).
 
 
-## Well-tuned hybrid closed loop
+## Ciclo chiuso ibrido ben sintonizzato
 
 It is advisable to first establish a well-tuned **HC**L before considering the transition to **FCL**.  Success with **FCL** requires a highly personalised individualised tuning of the user’s setting so that **AAPS** can give insulin to closely mimic YOUR successful hybrid closed loop mode.
 
@@ -40,13 +40,13 @@ It is advisable to first establish a well-tuned **HC**L before considering the t
 
 **FCL is a DIY set up of Automations determined by the user by analysing their data from both their successful HCL and  initial FCL experience when tuning your settings.**
 
-## Fast insulin (Lyumjev, Fiasp)
+## Insulina veloce (Lyumjev, Fiasp)
 
 **FCL** requires fast insulin.  This is so that at the start of meal-related **BG** rise, **FCL** is able to keep **BG** in range (by common definition, under 180 mg/dl (10 mmol/l)).
 
-A modelling study (details see LINK FullLoop V2/March2023; there section 2.2) can show in quantitative terms that *faster insulins*
+Uno studio di modellizzazione (si veda LINK FullLoop V2/marzo23; qui la sezione 2.2) può mostrare in termini quantitativi che le *insuline più veloci*
 
-Source:
+Fonte:
 
 ![IEEEControlSystemsMagazine](../images/IEEE_Control_Systems_Society_Logo_RGB.jpg) ![ResearchGate](../images/researchgate-logo-white.svg)
 
@@ -76,13 +76,13 @@ However, Fiasp or Lyumjev can result in frequent pump occlusions, even after opt
 
 The above will vary depending on your **AAPS** component system and your lifestyle.
 
-## Meal-related limitations
+## Limitazioni legate ai pasti
 
 - Setting up a **FCL** may be easier for people whose diets do not consist of food components with a rapid high effect on **BG**, and meal patterns that do not wildly vary day-to-day. This does not necessarily mean low carb.
 
 - Fat or protein rich diets, or slow digestion/gastroparesis, make things easier rather than harder for **FCL**  because late carbs nicely cover for inevitable “tails” of late action from bolus needed around peak time.
 
-### Glycemic index and effect on blood glucose
+### Indice glicemico ed effetto sulla glicemia
 
 The challenge for the **UAM** mode rises with rising 'Effect on Blood Glucose ('EBG')
 
@@ -91,14 +91,14 @@ The challenge for the **UAM** mode rises with rising 'Effect on Blood Glucose ('
 
 1) **No EBG**: e.g. fresh meat, fish, eggs, bacon, oils, cheese. 2) **Low EBG**: e.g. fresh vegetables and berries, mushrooms, nuts, milk, yoghurt, cottage cheese. 3) **Moderate EBG**: e.g. whole grain bread/noodles, potatoes, wild rice, oats, dried fruits. 4) **High EBG**:e.g. wheat breads, baguette, toast, waffles, cookies, mash potatoes, noodles, rice. 5) **Very High EBG**: e.g. sugar, sweet drinks, fruit juices, cornflakes, candy, sweets, potato chips, salty pretzel sticks.
 
-![Glycemic index and effect on blood glucose](../images/fullClosedLoop01.png)
+![Indice glicemico ed effetto sulla glicemia](../images/fullClosedLoop01.png)
 
 The most difficult meals for **FCL** are those foods exclusively very high and high **EBG** components (see red in the picture): Not only does **BG** shoot up rapidly, but also there is little fat/protein/fibre component to balance the inevitable “tail” of insulin activity that would come with attempts to control the high glucose earlier on.
 
 Erratic consumption of snacks and sweet drinks that are loaded with fast absorbing carbs is problematic for **FCL**.
 
 
-## Preparing for activity/sports
+## Preparazione per attività/sportive
 
 When exercising or being active, with a pump or hybrid closed loop it is recommended that the user reduces **IOB** prior to exercise.
 
@@ -130,17 +130,17 @@ If your basal rate is very low, the resulting **SMB** limits might be too low to
 
 Check the **SMB** tab periodicallu to see whether your **SMBs** are allowed to be sufficient enough to deliver the required insulin needed for the loop around meal starts.
 
-If not, your tuning efforts will sometimes come to nothing!
+In caso contrario, i vostri sforzi di messa a punto a volte non porteranno a nulla!
 
 
 ::: danger Boosting **ISF** can become dangerous
-Carefully observe/analyse the **SMB** sizes shortly after your meal commences. Tune in steps, and do not vary more than 1 or 2 parameters at a time.
+Carefully observe/analyse the **SMB** sizes shortly after your meal commences. Sintonizzare i passaggi e non variare più di uno o due parametri alla volta.
 
 Your **AAPS'** setting must be sufficiently set up to cope with your (!) variety of meals.
 :::
 
 
-## Meal detection/your Automations for boosting
+## Rilevamento dei pasti/le vostre automazioni per il potenziamento
 
 For successful **FCL**, **ISF** is the key tuning parameter. When utilising **AAPS** Master + **Automations**, a **> 100% profile change must automatically be triggered upon meal recognition** (via glucose deltas), and provide the sharpened **ISF**.
 
@@ -280,7 +280,7 @@ Problems can arise with overlapping definitions in **Automations**. Example: The
 
 Also it is very easy and quick to adjust any conditions or actions at any time, within seconds, just on your AAPS smartphone; for instance if you head into a very special eating event. (But don’t forget to set it back to normal on/for the next day).
 
-## Troubleshooting
+## Risoluzione dei problemi
 
 ### How to get back into Hybrid Closed Loop
 

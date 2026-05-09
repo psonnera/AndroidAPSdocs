@@ -89,7 +89,7 @@ When patching is complete, touch Start Safety Check. When the safety check is co
 ### Inserting the needle
 The needle is inserted by holding around the patch and turning the needle action lever more than 100° in the upward direction of the lever. There is a buzzer sound when the needle is inserted correctly. Turn the needle action lever further clockwise to release the lever. Click NEXT.
 
-[Caution]
+[Attenzione]
 
 - If you go to the next step without the buzzer sounding, a needle insertion error warning will appear.
 

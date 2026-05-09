@@ -193,7 +193,7 @@ Note that for all age related triggers the equal comparison is unlikely to trigg
 
 **Options:**
 
-none
+nessuno
 
 **Actions:** **Profile Percentage**
 
@@ -322,13 +322,13 @@ The **Automation** will:
 
 ![Alt text](../images/Automations/automation_2024-02-12_21-05-56.png-500x.png)
 
-## Troubleshooting
+## Risoluzione dei problemi
 
 * Problem: __My automations are not being triggered by AAPS?__
 
 Check the box to the right of **Automation** event is ‘ticked’ to ensure the rule is activated.
 
-## Troubleshooting
+## Risoluzione dei problemi
 
 ![Alt text](../images/Automations/automation_2024-02-12_21-06-12.png-500x.png)
 

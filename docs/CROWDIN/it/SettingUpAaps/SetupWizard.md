@@ -23,7 +23,7 @@ If there is an error in the documentation or you have a better idea for how some
 
 This is just the welcome message which you can skip with the "NEXT" button:
 
-![Welcome](../images/setup-wizard/Wizard01.png)
+![Benvenuto](../images/setup-wizard/Wizard01.png)
 
 ## License agreement
 
@@ -200,7 +200,7 @@ After filling in the password twice, please click the "NEXT" button:
 
 ![Password](../images/setup-wizard/Wizard12.png)
 
-### Import settings
+### Importa le impostazioni
 
 ::: tip
 Import your last settings file if present.</br> You can also do this after completing the wizard.</br> If you already have them ready, importing now will be faster than recreating you profile.
@@ -367,7 +367,7 @@ Select the BG source you are using. Please read the documentation for your [BG s
 As there are several options available, we don't explain the configuration for all of them here. We are using xDrip+ in our example here:
 
 
-![BG Source](../images/setup-wizard/Wizard20.png)
+![Sorgente Glicemia](../images/setup-wizard/Wizard20.png)
 
 
 Enable the visibility in the top level menu by clicking the check box on the right side.
@@ -492,7 +492,7 @@ Your profile has now been set:
 ![Info](../images/setup-wizard/Wizard22-Info.png)
 
 
-## Insulin pump
+## Microinfusore di insulina
 
 
 

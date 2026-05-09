@@ -1,8 +1,8 @@
 # Update with a browser
 
-## Build yourself instead of download
+## Costruisci te stesso invece di scaricare
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** non è disponibile per il download, a causa delle norme relative ai dispositivi medici. È legale costruire l'app per il proprio uso, ma non devi darne una copia ad altri! Vedi la pagina [FAQ](../UsefulLinks/FAQ.md) per i dettagli.
 
 ::: info
 In case you want to upgrade **AAPS** with a browser for the first time : copy your back-up keystore file to your Google Drive. Then follow the [Browser Build **AAPS** procedure](../SettingUpAaps/BrowserBuild.md) instead of this guide. Instead of creating a new keystore, you must select the one you have copied from your computer. This operation will be mandatory only the first time, then for successive upgrades you will be able to follow this guide.
@@ -12,13 +12,13 @@ In case you want to upgrade **AAPS** with a browser for the first time : copy yo
 ## Overview for updating to a new version of AAPS with a browser
 
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
+In caso di problemi, vedi la pagina separata per la [risoluzione dei problemi Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
 
-### Export your settings
+### Esporta le tue impostazioni
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Esporta le tue impostazioni dalla versione **AAPS** installata sul tuo telefono. Potresti non averne bisogno, ma prevenire è meglio che curare.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Vedi la pagina [Esporta & importa le impostazioni](ExportImportSettings.md) se non ti ricordi come farlo.
 
 <a id="Update-to-new-version-update-your-repo"></a>
 
@@ -89,12 +89,12 @@ You have now synchronized (updated) your own copy with the latest release of And
 
 Continue [here](#Update-to-new-version-check-aaps-version-on-phone)
 
-## Troubleshooting
+## Risoluzione dei problemi
 
-If anything goes wrong, don't panic.
+Se qualcosa va storto, non farti prendere dal panico.
 
-Take a breath!
+Fai un respiro!
 
 Then see the [troubleshooting tips](#aaps-ci-preparation) if your problem is already documented!
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+Se hai bisogno di ulteriore aiuto, contatta gli altri utenti **AAPS** su [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) o [Discord](https://discord.gg/4fQUWHZ4Mw).

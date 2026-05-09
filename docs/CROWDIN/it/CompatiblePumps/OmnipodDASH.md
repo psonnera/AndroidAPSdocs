@@ -2,16 +2,16 @@
 
 These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**, available in **AAPS** from version 3.0.
 
-## Omnipod DASH specifications
+## Specifiche Omnipod DASH
 
-These are the specifications of the **Omnipod DASH** ('DASH') and what differentiates it from the **Omnipod EROS** ('EROS'):
+Queste sono le specifiche dell' **Omnipod DASH** ('DASH') e ciò che lo differenzia dall'**Omnipod EROS** ('EROS'):
 
-- The DASH pods are identified by a **blue needle cap** (EROS has a clear needle cap). The pods are otherwise identical in terms of physical dimensions.
-- DASH does not require a BLE link/bridge device (NO RileyLink, OrangeLink, or EmaLink needed).
+- The DASH pods are identified by a **blue needle cap** (EROS has a clear needle cap). I pod sono altrimenti identici in termini di dimensioni fisiche.
+- Non c'è bisogno di un dispositivo separato per fare da ponte da Omnipod a Bluetooth (NO RileyLink, OrangeLink o EmaLink necessari).
 - The DASH's Bluetooth connection is used only when sending a command (e.g a Bolus), and disconnects right after issuing the command.
-- No more "no connection to link device / pod" errors with DASH.
-- **AAPS** will wait for pod's accessibility to send commands.
-- On pod activation, **AAPS** will find and connect to a new DASH pod.
+- Non ci saranno più errori "nessuna connessione dal dispositivo al pod" con DASH.
+- **AAPS** attenderà che il pod sia accessibile per inviare i comandi.
+- Al momento dell'attivazione, **AAPS** troverà e connetterà il nuovo pod DASH.
 - Expected range from phone: 5-10 meters (YMMV).
 
 <a id="omnipod-dash-constraints"></a>
@@ -30,7 +30,7 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 
 <a id="omnipod-dash-hardware-software-requirements"></a>
 
-## Hardware/Software Requirements
+## Requisiti Hardware/Software
 
 - Omnipod DASH is identified by the blue needle cap.
 
@@ -48,7 +48,7 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 
 The instructions below explain how to activate a new pod session using **AAPS**. You should wait for your current Pod to be close expiry, as you will need to activate a new Pod with **AAPS**. Once a pod is de-activated it cannot be reused/re-activated, the de-activation is final.
 
-## Before You Begin
+## Prima di iniziare
 
 Ensure you have read and understand this whole guide, have read and understand the **Before You Begin** section, as well as  **[Omnipod and AAPS Constraints and Issues](#omnipod-dash-constraints)** to avoid running into a known problem.
 
@@ -126,28 +126,28 @@ To verify that you have selected the DASH in **AAPS**, if you have **checked the
 
 1. Navigate to the **DASH** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
 
-   ![Activate_Pod_1](../images/pump/dash/Activate_Pod/Activate_Pod_1.png)
+   ![Attiva_Pod_1](../images/pump/dash/Activate_Pod/Activate_Pod_1.png)
 
-   ![Activate_Pod_2](../images/pump/dash/Activate_Pod/Activate_Pod_2.png)
+   ![Attiva_Pod_2](../images/pump/dash/Activate_Pod/Activate_Pod_2.png)
 
 2. The **Fill Pod** screen is displayed. Fill a new pod with **at least 80 units** of insulin and listen for two beeps indicating that the pod is ready to be primed.
 
    ***NOTE:** When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use about 3-10 units.*
 
-   ![Activate_Pod_3](../images/pump/dash/Activate_Pod/Activate_Pod_3.png)
+   ![Attiva_Pod_3](../images/pump/dash/Activate_Pod/Activate_Pod_3.png)
 
-   ![Activate_Pod_4](../images/pump/dash/Activate_Pod/Activate_Pod_4.jpg)
+   ![Attiva_Pod_4](../images/pump/dash/Activate_Pod/Activate_Pod_4.jpg)
 
    Ensure that the new pod and the phone running **AAPS** are within close proximity of each other and click the **Next** button.
 
    ***NOTE**: if the  error message below pops up _'Could not find an available pod for activation'_ (this can happen), do not panic. Click on the **Retry** button. In most situations activation will continue successfully.*
 
-   ![Activate_Pod_3](../images/pump/dash/Activate_pod_error.png)
+   ![Attiva_Pod_3](../images/pump/dash/Activate_pod_error.png)
 
 3. On the **Initialize Pod** screen, the pod will begin priming (you will hear a click followed by a series of ticking sounds as the pod primes itself).  
    A green checkmark will be shown upon successful priming, and the **Next** button will become enabled. Click on the **Next** button to complete the pod priming initialization and display the **Attach Pod** screen.
 
-   ![Activate_Pod_5](../images/pump/dash/Activate_Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/pump/dash/Activate_Pod/Activate_Pod_6.jpg)
+   ![Attiva_Pod_5](../images/pump/dash/Activate_Pod/Activate_Pod_5.jpg)    ![Attiva_Pod_6](../images/pump/dash/Activate_Pod/Activate_Pod_6.jpg)
 
 4. Next, prepare the infusion site ready to receive the new pod. Wash hands to avoid any risk of infection. Clean the infusion site by either using soap and water or an alcohol wipe to disinfect and let the skin air dry completely before proceeding.   
    If you get skin irritation from the adhesive consider using a Barrier Wipe or Barrier Spray.
@@ -156,30 +156,30 @@ To verify that you have selected the DASH in **AAPS**, if you have **checked the
 
    When finished, click on the **Next** button.
 
-   ![Activate_Pod_8](../images/pump/dash/Activate_Pod/Activate_Pod_8.jpg)
+   ![Attiva_Pod_8](../images/pump/dash/Activate_Pod/Activate_Pod_8.jpg)
 
 6. The **Attach Pod** dialog box will now appear. **click on the OK button ONLY if you are ready to deploy the cannula!**
 
-   ![Activate_Pod_9](../images/pump/dash/Activate_Pod/Activate_Pod_9.jpg)
+   ![Attiva_Pod_9](../images/pump/dash/Activate_Pod/Activate_Pod_9.jpg)
 
 7. After pressing **OK**, it may take some time before the DASH responds and inserts the cannula (1-2 minutes maximum). **Be patient!**
 
    ***NOTE:** Before the cannula is inserted, it is good practice to pinch the skin near the cannula insertion point. This ensures a smooth insertion of the needle and will decrease your chances of developing occlusions.*
 
-   ![Activate_Pod_10](../images/pump/dash/Activate_Pod/Activate_Pod_10.png)    ![Activate_Pod_11](../images/pump/dash/Activate_Pod/Activate_Pod_11.jpg)
+   ![Attiva_Pod_10](../images/pump/dash/Activate_Pod/Activate_Pod_10.png)    ![Attiva_Pod_11](../images/pump/dash/Activate_Pod/Activate_Pod_11.jpg)
 
 8. A green checkmark is shown on the screen, and the **Next** button becomes available to select upon successful cannula insertion.   
    Click on the **Next** button.
 
-   ![Activate_Pod_12](../images/pump/dash/Activate_Pod/Activate_Pod_12.jpg)
+   ![Attiva_Pod_12](../images/pump/dash/Activate_Pod/Activate_Pod_12.jpg)
 
 1. The **Pod activated** screen is displayed.
 
    Click on the green **Finished** button.
 
-   Congratulations! You have now started a new pod session.
+   Complimenti! You have now started a new pod session.
 
-   ![Activate_Pod_13](../images/pump/dash/Activate_Pod/Activate_Pod_13.jpg)
+   ![Attiva_Pod_13](../images/pump/dash/Activate_Pod/Activate_Pod_13.jpg)
 
 2. The **Pod management** menu screen should now display the **Activate Pod (1)** button *disabled* and the **Deactivate Pod (2)** button *enabled*. This is because a pod is now active and you cannot activate an additional pod without deactivating the currently active pod first.
 
@@ -187,9 +187,9 @@ To verify that you have selected the DASH in **AAPS**, if you have **checked the
 
     ***NOTE:** For more details on the information displayed go to the [**DASH Tab**](#omnipod-dash-tab) section of this document.*
 
-   ![Activate_Pod_14](../images/pump/dash/Activate_Pod/Activate_Pod_14.png)
+   ![Attiva_Pod_14](../images/pump/dash/Activate_Pod/Activate_Pod_14.png)
 
-   ![Activate_Pod_15](../images/pump/dash/Activate_Pod/Activate_Pod_15.jpg)
+   ![Attiva_Pod_15](../images/pump/dash/Activate_Pod/Activate_Pod_15.jpg)
 
    ***NOTE:** It is good practice to export settings AFTER activating the pod. Settings should be exported after each pod change and once a month, ensure you copy the exported settings file to a cloud storage location (e.g. Google Drive) or somewhere off your phone in case you loose your phone (see [**Export settings**](../Maintenance/ExportImportSettings.md)).*
 
@@ -204,35 +204,35 @@ To deactivate a pod (either from expiration or from a pod failure):
 
 1. Go to the **DASH** tab, click on the **POD MGMT (1)** button, on the **Pod Management** screen click on the **Deactivate Pod (2)** button.
 
-   ![Deactivate_Pod_1](../images/pump/dash/Deactivate_Pod/Deactivate_Pod_1.jpg)
+   ![Disattiva_Pod_1](../images/pump/dash/Deactivate_Pod/Deactivate_Pod_1.jpg)
 
-   ![Deactivate_Pod_2](../images/pump/dash/Deactivate_Pod/Deactivate_Pod_2.png)
+   ![Disattiva_Pod_2](../images/pump/dash/Deactivate_Pod/Deactivate_Pod_2.png)
 
 2. On the **Deactivate Pod** screen, click on the **Next** button to begin the process of deactivating the pod.
 
    You will receive a confirmation beep from the pod that deactivation was successful.
 
-   ![Deactivate_Pod_3](../images/pump/dash/Deactivate_Pod/Deactivate_Pod_3.jpg)
+   ![Disattiva_Pod_3](../images/pump/dash/Deactivate_Pod/Deactivate_Pod_3.jpg)
 
-   ![Deactivate_Pod_4](../images/pump/dash/Deactivate_Pod/Deactivate_Pod_4.jpg)
+   ![Disattiva_Pod_4](../images/pump/dash/Deactivate_Pod/Deactivate_Pod_4.jpg)
 
 3. A green checkmark will be displayed upon successful deactivation. Click on the **Next** button to display the pod deactivated screen.
 
    You may now remove your pod as the active session has been deactivated.
 
-   ![Deactivate_Pod_5](../images/pump/dash/Deactivate_Pod/Deactivate_Pod_5.jpg)
+   ![Disattiva_Pod_5](../images/pump/dash/Deactivate_Pod/Deactivate_Pod_5.jpg)
 
 4. Click on the green button to return to the **Pod Management** screen.
 
-   ![Deactivate_Pod_6](../images/pump/dash/Deactivate_Pod/Deactivate_Pod_6.jpg)
+   ![Disattiva_Pod_6](../images/pump/dash/Deactivate_Pod/Deactivate_Pod_6.jpg)
 
 5. You are now on the **Pod Management** menu; press the back button on your phone to return to the **DASH** tab.
 
    Verify that the **Pod status:** field displays a **No active Pod** message.
 
-   ![Deactivate_Pod_2](../images/pump/dash/Deactivate_Pod/Deactivate_Pod_2.png)
+   ![Disattiva_Pod_2](../images/pump/dash/Deactivate_Pod/Deactivate_Pod_2.png)
 
-   ![Deactivate_Pod_8](../images/pump/dash/Enable_Dash/Enable_Dash_4.jpg)
+   ![Disattiva_Pod_8](../images/pump/dash/Enable_Dash/Enable_Dash_4.jpg)
 
 
 <a id="omnipod-dash-resuming-insulin-delivery"></a>
@@ -484,7 +484,7 @@ Additional note:
 
 <a id="omnipod-dash-troubleshooting"></a>
 
-## Troubleshooting
+## Risoluzione dei problemi
 
 <a id="omnipod-dash-delivery-suspended"></a>
 
@@ -606,7 +606,7 @@ When on an active Pod, make sure that you have an export for the current pod ses
 
 In most cases there is no need to uninstall. You can do an “in-place” install by starting the installation for the new version. This is also possible when on an active Pod session.
 
-1. Export your settings.
+1. Esporta le tue impostazioni.
 2. Install the new **AAPS** version.
 3. Verify the installation was successful
 4. RESUME the Pod or activate a new pod.

@@ -1,6 +1,6 @@
 <a id="generaltroubleshooting"></a>
 
-# **Troubleshooting**
+# **Risoluzione dei problemi**
 
 You can find troubleshooting info on many pages in the wiki. This page is a collection of links to help you find the information to solve your problem for various known issues.
 
@@ -14,7 +14,7 @@ Additional useful information might also be available in the [FAQ](../UsefulLink
 
 ### **Building & updating**
 
-* [Lost keystore](#troubleshooting_androidstudio-lost-keystore)
+* [Chiave persa](#troubleshooting_androidstudio-lost-keystore)
 * [Troubleshooting AndroidStudio](TroubleshootingAndroidStudio)
 
 ### **Installing**
@@ -149,7 +149,7 @@ Useful links to known issues and steps to resolve for Pumps
 
 <a id="generaltroubleshooting-phones"></a>
 
-## **Phones**
+## **Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)**
 
 Useful links to known issues and steps to resolve for Phones
 

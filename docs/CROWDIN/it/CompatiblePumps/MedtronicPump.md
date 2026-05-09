@@ -111,7 +111,7 @@ When the Medtronic driver is used, two additional actions are added to Actions T
 - **Reset RileyLink Config** - If you reset your RileyLink compatible device you may need to use this action so that device can be reconfigured (frequency set, frequency type set, encoding configured).
 
 
-## Important notes
+## Note importanti
 
 ### Special attention in NS configuration needed
 AAPS is using serial number for synchronization and serial number is exposed to NS. Because knowledge of serial number of old Medtronic pump can be used to control the pump remotely take special care to hardening NS site preventing leakage of SN of your pump. See https://nightscout.github.io/nightscout/security/
