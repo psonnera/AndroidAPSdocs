@@ -58,8 +58,8 @@ A list of definitions exists at the bottom of this document. If you are unfamili
   - [*Step 9: Verify Sensor is connected and delivering data*](#minimallooper-step9)
 
 - *[Notes](#minimallooper-notes)*
-- *[Advantages](#minimallooper-advantages)*
-- *[Disadvantages](#minimallooper-disadvantages)*
+- *[Vantaggi](#minimallooper-advantages)*
+- *[Svantaggi](#minimallooper-disadvantages)*
 - <u>*\[Troubleshooting\](#minimallooper-troubleshooting)*</u>
 
 ## Before You Start
@@ -347,7 +347,7 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 <a id="minimallooper-advantages"></a>
 
-### **Advantages**
+### **Vantaggi**
 
 - **LL patched app no longer required** You no longer need a patched version of the LL app to retrieve values from the FSL2 sensor. While you can use the LL patched app, the official versions of the LL app can start the first NFC initialization scan in the same manner as the patched app. There is no difference as far as NFC initialization scanning to start the sensor is concerned.
 
@@ -374,7 +374,7 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 <a id="minimallooper-disadvantages"></a>
 
-### **Disadvantages**
+### **Svantaggi**
 
 - **Phone Reboot:** Because the Bluetooth process has to start again when your phone reboots, you have to first ensure that you manually disable the LL app (if you did not uninstall it) and be patient for the first readings to come in (3 to 15 min). This means timing phone reboots so they do not occur during critical times like correction boluses or meal and snack times.
 
@@ -396,7 +396,7 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 <a id="minimallooper-definitions"></a>
 
-### **Definitions**
+### **Definizioni**
 
 - **BT** - Bluetooth
 
@@ -425,7 +425,7 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 <a id="minimallooper-troubleshooting"></a>
 
-### Troubleshooting
+### Risoluzione dei problemi
 
 #### Failure to scan the sensor with NFC
 
