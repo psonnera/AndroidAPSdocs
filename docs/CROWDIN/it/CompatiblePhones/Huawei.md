@@ -1,38 +1,38 @@
-# How-to configure a Huawei phone
+# Come configurare un telefono Huawei
 
 | 🕸 This page is obsolete - consider revision or remove it 🕸 |
 | ---------------------------------------------------------- |
 |                                                            |
 
-There are different options, some Android specific, some Huawei specific:
+Ci sono diverse opzioni, alcune specifiche a Android, altre specifiche a Huawei:
 
-* Add AAPS and xdrip+ to apps list which ignore battery optimisations:
-  * Settings / App / Settings / Special autorisations / Ignore battery optimisation / Select "All applications" / Set app to allowed
+* Aggiungi AAPS e xdrip+ alla lista delle app che ignorano le ottimizzazioni della batteria:
+  * Impostazioni / Apps / Impostazioni / Autorizzazioni speciali / Ignora ottimizzazione della batteria / Seleziona "Tutte le app" / Autorizza l'app AAPS
 
-    ![Huawei - ignore battery optimization](../images/phone/Huawei_BatteryOptimization.png)
-
-
-* Set battery option settings:
-  * Settings / App / Select AndroidAPS/xdrip+ / Under Battery / App launch
-   * Make sure to remove "automatic management"
-    * Allow:
-     * Automatic launch
-     * Secondary launch (can be launched from other apps)
-     * Background run
-
-       ![Huawei - battery options](../images/phone/Huawei_BatteryOptions.png)
-
-* Lock App
-  * Go into App recent list and select the lock icon
-
-    ![Huawei - lock app](../images/phone/Huawei_LockApp.png)
+    ![Huawei - ignora l'ottimizzazione della batteria](../images/phone/Huawei_BatteryOptimization.png)
 
 
+* Imposta le opzioni della batteria:
+  * Impostazioni / Apps / Seleziona AndroidAPS/xDrip+ / Batteria / Avvio app
+   * Assicurati di rimuovere "gestione automatica"
+    * Consenti:
+     * Avvio automatico
+     * Avvio secondario (può essere avviato da altre applicazioni)
+     * Esecuzione in background
 
-For xDrip+, you must enable persistent notifications (within xDrip+ app):
-* Settings / less common settings / other misc options / Run Collector in foreground
+       ![Huawei - opzioni batteria](../images/phone/Huawei_BatteryOptions.png)
 
-   ![xdrip+ settings - collector in foreground](../images/cgm/xDrip+/xdrip_collector_foreground.png)
+* Blocca l'app
+  * Vai nella lista delle app recente e seleziona l'icona del lucchetto
+
+    ![Huawei - blocco app](../images/phone/Huawei_LockApp.png)
 
 
-Depending on Android version, these settings are somewhere else. These explanations are for Android 8.1.
+
+Per xDrip+, è necessario abilitare le notifiche persistenti (all'interno dell'app xDrip+):
+* Impostazioni / Impostazioni meno usate / Altre opzioni / Esegui Collettore in primo piano
+
+   ![impostazioni xdrip+ - collettore in primo piano](../images/cgm/xDrip+/xdrip_collector_foreground.png)
+
+
+A seconda della versione di Android, queste impostazioni sono altrove. Queste spiegazioni erano per Android 8.1.
