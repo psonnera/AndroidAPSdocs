@@ -10,4 +10,5 @@ build:
       - npm install
     build:
       html:
-        - npx vitepress build docs/EN --outDir $READTHEDOCS_OUTPUT/html
+        - chmod +x utils/rtd-build.sh
+        - ./utils/rtd-build.sh
