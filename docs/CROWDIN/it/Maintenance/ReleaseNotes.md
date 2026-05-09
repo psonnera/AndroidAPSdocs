@@ -860,7 +860,7 @@ Release date: 26-10-2019
 
 <a id="Releasenotes-important-notes-2-5-0"></a>
 
-### Important notes
+### Note importanti
 
 - Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../SettingUpAaps/BuildingAaps.md) or [update](UpdateToNewVersion).
 - If you are using xDrip [identify receiver](#xdrip-identify-receiver) must be set.
