@@ -16,7 +16,7 @@ Using **closed loop** may make basal  testing easier and may significantly reduc
 3. Keep an eye out for patterns that happen around the same time (almost) everyday.
 4. It's important to do this over several days. Poor results tend to be yielded from using data observed on a single day to make __Profile’s__ adjustment decisions.
 5. After you have observed a repeatable pattern of behavior, e.g. at 1PM you see a spike in __BG__ or a negative __IOB__ value, only then start to make small changes to your __Profile__.
-6. It's important to limit the changes you make to one thing at a time. E.g. increase your basal by 10% around 1PM.
+6. It's important to limit the changes you make to one thing at a time. If this is the case the sensor cannot be calibrated to report useful results. increase your basal by 10% around 1PM.
 7. After every change, it's important to monitor the impact on your __BG__ and __IOB__ for the next few days.
 8. Repeat this pattern, observe, decide, tweak again if needed
 
