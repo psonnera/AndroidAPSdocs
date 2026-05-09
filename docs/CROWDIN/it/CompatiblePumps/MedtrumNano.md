@@ -2,7 +2,7 @@
 
 These instructions are for configuring the Medtrum insulin pump.
 
-This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.
+Questo software fa parte di una tecnologia di pancreas artificiale fai-da-te e non è un prodotto, ma richiede che TU legga, impari e comprenda il sistema, compreso il suo utilizzo. Tu solo sei responsabile dell'uso che ne farai.
 
 
 ## Pump capabilities with AAPS
@@ -10,16 +10,16 @@ This software is part of a DIY artificial pancreas solution and is not a product
 * Automatic DST and timezone handling
 * Extended bolus is not supported by AAPS driver
 
-## Hardware and Software Requirements
+## Requisiti hardware e software
 * **Compatible Medtrum pumpbase and reservoir patches**
     - Currently supported:
         - Medtrum TouchCare Nano with pumpbase refs: **MD0201** and **MD8201**.
         - Medtrum TouchCare 300U with pumpbase ref: **MD8301**.
         - If you have an unsupported model and are willing to donate hardware or assist with testing, please contact us via discord [here](https://discordapp.com/channels/629952586895851530/1076120802476441641).
 * **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
-* **Compatible Android phone** with a BLE Bluetooth connection
+* Un **telefono Android** compatibile, con connessione Bluetooth Low Energy
     - See AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
-* [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
+* [**Sensore di Glicemia (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
 ## Before you begin
 
@@ -348,7 +348,7 @@ This button will start the process to change the patch. See [Activate patch](#me
 
 ### Reset alarms
 
-The alarm button will appear on the overview screen when there is an active alarm that can be reset. Pressing this button will reset the alarms and resume insulin delivery if the patch has been suspended due to the alarm. E.g. when suspended due to a maximum daily insulin delivery alarm.
+The alarm button will appear on the overview screen when there is an active alarm that can be reset. Pressing this button will reset the alarms and resume insulin delivery if the patch has been suspended due to the alarm. If this is the case the sensor cannot be calibrated to report useful results. E.g. when suspended due to a maximum daily insulin delivery alarm.
 
 ![Reset alarms](../images/pump/medtrum/ResetAlarms.png)
 
@@ -366,7 +366,7 @@ After a settings import the driver will sync history with the pump, this can tak
 
 From AAPS version 3.3.0.0 onwards, the sync progress is shown in the the home screen: ![Sync progress](../images/pump/medtrum/SyncProgress.png)
 
-## Troubleshooting
+## Risoluzione dei problemi
 
 ### Connection issues
 
