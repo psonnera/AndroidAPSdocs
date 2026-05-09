@@ -1,10 +1,10 @@
-# Building AAPS
+# Costruire AAPS
 
-## Build yourself instead of download
+## Costruisci te stesso invece di scaricare
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**L'app AAPS (un file apk) non è disponibile per il download, a causa delle normative sui dispositivi medici. È legale costruire l'app per il proprio uso, ma non devi darne una copia ad altri!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Vedi la pagina [Domande frequenti](../UsefulLinks/FAQ.md) per i dettagli.
 
 ---
 
@@ -14,7 +14,7 @@ Three methods are available to build the AAPS app:
 
 You can build the app with your smartphone using GitHub actions, and save it in your Google Drive.
 
-**[Follow these instructions.](./BrowserBuild.md)**
+**[Segui queste istruzioni.](./BrowserBuild.md)**
 
 ----
 
@@ -22,7 +22,7 @@ You can build the app with your smartphone using GitHub actions, and save it in 
 
 You can build the app with your computer using Android Studio. This used to be the only build option, nowadays Android Studio is mostly used by developers who consider making code changes.
 
-**[Follow these instructions.](./ComputerBuild.md)**
+**[Segui queste istruzioni.](./ComputerBuild.md)**
 
 ----
 
@@ -30,4 +30,4 @@ You can build the app with your computer using Android Studio. This used to be t
 
 This option is intended for those who prefer to build AAPS in local command-line, without installing Android Studio.
 
-**[Follow these instructions.](./CLIBuild.md)**
+**[Segui queste istruzioni.](./CLIBuild.md)**
