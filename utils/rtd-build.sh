@@ -36,6 +36,20 @@ fi
 echo "RTD language: ${lang}"
 echo "Building source: ${source_dir}"
 
+shared_source="docs/EN"
+
+# Crowdin language folders don't contain their own VitePress runtime config.
+# Sync the shared site config/theme/public files into the selected source.
+if [[ "${source_dir}" != "${shared_source}" ]]; then
+  mkdir -p "${source_dir}/.vitepress"
+  cp "${shared_source}/.vitepress/config.mjs" "${source_dir}/.vitepress/config.mjs"
+
+  rm -rf "${source_dir}/.vitepress/theme"
+  cp -R "${shared_source}/.vitepress/theme" "${source_dir}/.vitepress/theme"
+
+  rm -rf "${source_dir}/public"
+  cp -R "${shared_source}/public" "${source_dir}/public"
+fi
+
 npx vitepress build "${source_dir}" \
-  --config docs/EN/.vitepress/config.mjs \
   --outDir "${READTHEDOCS_OUTPUT}/html"
