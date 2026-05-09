@@ -1,18 +1,18 @@
-# Compatible CGMs
+# Sensori Compatibili
 
-This section provides a brief overview of all compatible **CGMs/FGMs** with **AAPS**.
+Questa sezione fornisce una breve panoramica di tutti i **sensori CGMs/FGMs** compatibili con **AAPS**.
 
-*Tip*: If you can display your glucose data in xDrip+ app, you can choose xDrip+ as **BG** source in **AAPS**.
+*Suggerimento*: Se è possibile visualizzare i dati del glucosio nell'app xDrip+, puoi scegliere xDrip+ come sorgente dati di **glicemia** in **AAPS**.
 
 <!-- List of hidden pages to avoid overcrowding the table of contents -->
 
 
-* [General recommendations](../CompatibleCgms/GeneralCGMRecommendation.md)
-* [Data Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md)
-* [xDrip+Settings](../CompatibleCgms/xDrip.md)
-* [Nightscout as BG Source](../CompatibleCgms/CgmNightscoutUpload.md): While it's possible to use Nightscout as a BG source for closed-loop insulin delivery, **this method is not recommended** due to its reliance on stable mobile data or Wi-Fi connectivity. This means your **CGM** data would only be received by **AAPS** when you have an online connection to your Nightscout site. For a more reliable set up, using a CGM with local broadcast from the receiver (as listed below) to **AAPS**, is a much better option.
+* [Raccomandazioni generali](../CompatibleCgms/GeneralCGMRecommendation.md)
+* [Lisciamento Dei Dati](../CompatibleCgms/SmoothingBloodGlucoseData.md)
+* [Impostazioni xDrip+](../CompatibleCgms/xDrip.md)
+* [Nightscout come fonte di valori di glicemia](../CompatibleCgms/CgmNightscoutUpload.md): Mentre è possibile utilizzare Nightscout come fonte di glicemia per il rilascio di insulina a circuito chiuso, **questo metodo non è raccomandato** a causa della sua dipendenza da dati mobili stabili o connettività Wi-Fi. Ciò significa che i tuoi dati di **glicemia** saranno ricevuti solo da **AAPS** quando hai una connessione online al tuo sito Nightscout. Per una configurazione più affidabile, utilizzare un sensore con trasmissione locale dal ricevitore (come elencato di seguito) a **AAPS**, è un'opzione molto migliore.
 
-| CGM                                                                         | Available [BG Sources](#Config-Builder-bg-source)                                                                    |
+| Sensore                                                                     | [Sorgente Glicemia](#Config-Builder-bg-source) Disponibile                                                           |
 | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | [Dexcom G7](../CompatibleCgms/DexcomG7.md)                                  | [xDrip+](../CompatibleCgms/xDrip.md) or [Juggluco](../CompatibleCgms/Juggluco.md)                                    |
 | [Dexcom ONE+ and Stelo](../CompatibleCgms/DexcomG7.md)                      | [xDrip+](../CompatibleCgms/xDrip.md)                                                                                 |
@@ -20,7 +20,7 @@ This section provides a brief overview of all compatible **CGMs/FGMs** with **AA
 | [Dexcom ONE](../CompatibleCgms/DexcomG6.md)                                 | [xDrip+](../CompatibleCgms/xDrip.md)                                                                                 |
 | [Libre 3/3+](../CompatibleCgms/Libre3.md)                                   | [Juggluco](../CompatibleCgms/Juggluco.md) (with or without xDrip+)                                                   |
 | [Libre 2/2+](../CompatibleCgms/Libre2.md)                                   | [xDrip+](../CompatibleCgms/xDrip.md) (EU only) or [Juggluco](../CompatibleCgms/Juggluco.md) (with or without xDrip+) |
-| [Libre 1](../CompatibleCgms/Libre1.md)                                      | [xDrip+](../CompatibleCgms/xDrip.md) or Diabox. Need a transmitter                                                   |
+| [Libre 1](../CompatibleCgms/Libre1.md)                                      | [xDrip+](../CompatibleCgms/xDrip.md) or Diabox. Serve un trasmettitore                                               |
 | [Eversense](../CompatibleCgms/Eversense.md)                                 | [xDrip+](../CompatibleCgms/xDrip.md) or ESEL/Eversense patched App                                                   |
 | [Enlite (MM640G/MM630G)](../CompatibleCgms/MM640g.md)                       | [xDrip+](../CompatibleCgms/xDrip.md) or MM640g + 600SeriesAndroidUploader App                                        |
 | [PocTech](../CompatibleCgms/PocTech.md)                                     | PocTech app                                                                                                          |
