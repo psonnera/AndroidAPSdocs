@@ -46,3 +46,22 @@ This script removes all redirect from the project. The script could be used for 
 ``` console
 $ python deleteAllRedirects.py <APIKEY>
 ```
+
+## CROWDIN orphan cleanup
+
+Use this script to remove files that exist in `docs/CROWDIN/<lang>/...` but do not exist in `docs/EN/...` at the same relative path.
+
+- Default mode is dry run and writes a manifest file.
+- Use `--markdown-only` to target only `.md` files.
+- Use `--apply` to actually delete files (tracked files are removed with `git rm`).
+
+```console
+# Dry run, all file types
+python utils/prune_crowdin_orphans.py
+
+# Delete all orphan files and prune empty directories
+python utils/prune_crowdin_orphans.py --apply --prune-empty-dirs
+
+# Delete only orphan markdown files
+python utils/prune_crowdin_orphans.py --apply --markdown-only
+```

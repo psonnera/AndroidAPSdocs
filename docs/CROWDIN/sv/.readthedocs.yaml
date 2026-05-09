@@ -1,0 +1,13 @@
+version: 2
+
+build:
+  os: ubuntu-22.04
+  tools:
+    nodejs: "20"
+  jobs:
+    install:
+      - npm install
+    build:
+      html:
+        - chmod +x utils/rtd-build.sh
+        - ./utils/rtd-build.sh
