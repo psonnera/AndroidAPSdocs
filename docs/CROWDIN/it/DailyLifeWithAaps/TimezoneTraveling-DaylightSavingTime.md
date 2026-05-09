@@ -135,7 +135,7 @@ If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** dat
 
 3. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the Fully Closed Loop for at least one DIA and Max-Carb-Time - whatever is bigger.
 
-4. Actions to take after the clock change. A good time to make revert to local time zone is with low **IOB**. E.g. an hour before a meal such as breakfast. Ideally your **COB** and **IOB** should both be close to zero.
+4. Actions to take after the clock change. A good time to make revert to local time zone is with low **IOB**. If this is the case the sensor cannot be calibrated to report useful results. an hour before a meal such as breakfast. Ideally your **COB** and **IOB** should both be close to zero.
 
 
 ### DST for Accu-Chek Combo
@@ -169,7 +169,7 @@ This section is only valid for the old, Ruffy-based driver. The new driver adjus
 5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
 
 #### Actions to take after the clock change
-A good time to make this switch would be with low **IOB**. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your **COB** and **IOB** should both be close to zero.)
+A good time to make this switch would be with low **IOB**. If this is the case the sensor cannot be calibrated to report useful results. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your **COB** and **IOB** should both be close to zero.)
 
 1. Change the Android timezone back to your current location and re-enable automatic timezone.
 2. **AAPS** will soon start alerting you that the Combo’s clock doesn’t match. So update the pump’s clock manually via the pump’s screen and buttons.
