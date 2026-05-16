@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Smoothing dei dati glicemici
 
 Se i dati di glicemia (**BG**) sono salteggianti/rumorosi, **AAPS** può dosare l’insulina in modo non corretto con conseguenti iper o ipo. Se si osservano errori nei dati del sensore, è imperativo disattivare il circuito chiuso fino a quando il problema non verrà risolto. A seconda del tuo sensore, tali problemi potrebbero essere dovuti alla configurazione CGM in **AAPS** (come spiegato più avanti); o un problema del sito di inserimento del sensore (che potrebbe richiederne la sostituzione).
@@ -33,7 +29,7 @@ Usa questa opzione solo se i tuoi dati CGM vengono correttamente filtrati dalla 
 | G5/G6/ONE     |  If noisy   |           | Recommended |
 | G7/ONE+/Stelo |  If noisy   | If stable |             |
 
-Libre sensors are noisy and can require smoothing. When using xDrip+ direct connection, or the patched app data source (receiving from another app, Juggluco included), smoothing is already done inside the app.
+Libre sensors are noisy and can require smoothing. When using xDrip+ direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
 
 | Sensor / Data source | Juggluco | xDrip+ direct | xDrip+ bridge | xDrip+ patched app |
 | -------------------- |:--------:|:-------------:|:-------------:|:------------------:|

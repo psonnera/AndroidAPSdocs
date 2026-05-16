@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Per gli utilizzatori di Eversense
 
 Ci sono tre metodi diversi per accedere alle letture di Eversense:

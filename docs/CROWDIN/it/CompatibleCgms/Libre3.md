@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # **Libre Freestyle 3** e 3+
 
 Freestyle Libre 3 (FSL3) richiede una configurazione unica per ricevere i valori di glicemia in AAPS. Ci sono due possibili modi per ottenere i valori Freestyle Libre 3 (FSL3) in AAPS.
@@ -17,7 +13,7 @@ All'interno di xDrip+ il sensore può essere calibrato nell'intervallo da -40 mg
 ## Method 1: use 1-minute readings directly
 AndroidAPS is taylored for 5-minute readings. Therefore processing 1-minute values has occasional limitations.
 
-![Juggluco trasmissione a AAPS](.../images/Juggluco_AAPS.png)
+See [here](#juggluco-to-aaps).
 
 
 ## Method 2: convert 1-minute readings into 5-minute values via xDrip
@@ -27,8 +23,6 @@ Questo metodo utilizza Juggluco per ricevere i dati grezzi dal sensore ogni minu
 Scarica e installa l'applicazione Juggluco da [qui](https://www.juggluco.nl/Juggluco/download.html). Segui le istruzioni [qui](https://www.juggluco.nl/Juggluco/libre3/)
 
 Assicurati di inviare i valori di glucosio a xDrip+: Nelle sue impostazioni, puoi configurare Juggluco per inviare il valore di glucosio ad altre applicazioni. Juggluco può usare tre tipi di trasmissioni: La **Patched Libre broadcast** è stata utilizzata originariamente dall'app Librelink patchata e può essere utilizzata per inviare valori di glucosio a xDrip+
-
-![Juggluco trasmissione a xDrip+](../images/Juggluco_xDrip.png)
 
 ### Passo 2: Impostare xDrip
 
@@ -58,10 +52,10 @@ Dopo un cambio di sensore, xDrip+ rileva automaticamente il nuovo sensore ed eli
 
 ### Passo 4: Configurare AndroidAPS
 
-- Seleziona xDrip+ in [Configuratore strutturale, Origine BG](#Config-Builder-bg-source).
+- See [here](#juggluco-to-xdrip) and come back.
 
 - Se AndroidAPS non riceve i valori di glicemia quando il telefono è in modalità aereo, usa "Identifica ricevitore"
-- Disabilita lo smoothing (già fatto in xDrip+)
+- Turn off Smoothing (done in xDrip+ already)
 
 ## Cambiamenti successivi del sensore
 

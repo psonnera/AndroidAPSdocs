@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Raccomandazioni generali sui sensori
 
 ## Manutenzione del sensore

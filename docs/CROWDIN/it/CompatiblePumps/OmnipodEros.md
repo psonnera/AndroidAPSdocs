@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Documentazione del driver AAPS per il microinfusore Omnipod
 
 Queste istruzioni riguardano la configurazione del microinfusore Omnipod Eros (**NON Omnipod Dash**). Il driver per Omnipod è disponibile all'interno di AAPS (AAPS) a partire dalla versione 2.8.
