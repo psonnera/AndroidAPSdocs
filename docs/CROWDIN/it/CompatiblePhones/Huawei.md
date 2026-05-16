@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Come configurare un telefono Huawei
 
 Ci sono diverse opzioni, alcune specifiche a Android, altre specifiche a Huawei:
