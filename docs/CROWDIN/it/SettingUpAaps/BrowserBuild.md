@@ -61,9 +61,9 @@ Scroll down the next screen and tap **Create Fork**.
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
 ```{note}
-You cannot fork and you see this?</br></br>
+Forking a repository allows you to freely experiment with changes without affecting the original project. You cannot fork and you see this?</br></br>
 **`Create a new fork`**</br>
-`A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. View existing forks.`</br>
+`A fork is a copy of a repository. View existing forks.`</br>
 *`Required fields are marked with an asterisk (*).`*</br>
 **`No available destinations to fork this repository.`**</br></br>
 This means you already have an existing fork of AndroidAPS.</br>
@@ -95,7 +95,10 @@ GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab
 ````{admonition} Note
 :class: note
 
-1. If you open this page from within an app (via a web view), the HTML file may not download. Please copy the URL and open it in your browser instead:
+1. If you open this page from within an app (via a web view), the HTML file may not download. raw:: html
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download>  aaps-ci-preparation.html</a>
+```<!--crowdin:enable-->Please copy the URL and open it in your browser instead:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
@@ -106,17 +109,10 @@ https://github.com/nightscout/aaps-ci-preparation/releases/latest
 
 2.Backup copy hosted on this site:
 
- - If the external link is also unavailable, you can use this backup file to download.
-<!--crowdin:disable-->
-
-```{eval-rst}
-.. raw:: html
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download>  aaps-ci-preparation.html</a>
-```
-<!--crowdin:enable-->
+ - If the external link is also unavailable, you can use this backup file to download.<!--crowdin:disable-->```{eval-rst}
+..
 ````
-AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS):
+AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS): - If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
 - If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
 </br>
 
