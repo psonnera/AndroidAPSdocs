@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Per gli utenti di altri sensori caricando in Nightscout
 
 Se hai configurato un altro sensore che può inviare i tuoi dati di glicemia **solo** a [Nightscout](https://nightscout.github.io/).
