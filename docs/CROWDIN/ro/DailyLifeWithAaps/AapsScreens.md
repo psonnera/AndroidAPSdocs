@@ -58,7 +58,7 @@ When using the [SMB algorithm](#Config-Builder-aps) and [Autosens](#Open-APS-fea
 
 Enable either one or both of the following options in [Preferences > OpenAPS SMB settings](#Preferences-openaps-smb-settings):
 
-     * "sensibilitatea ridică ținta" şi/sau 
+     * "sensibilitatea ridică ținta" și/sau 
      * "rezistența scade ținta" 
     
 
@@ -785,9 +785,9 @@ Gives you statistics about your Time In Range and Total Daily Dose. See the dedi
 
 (aaps-screens-profile-helper)=
 
-## Profile Helper
+## Ajutorul de profil
 
 This view can be accessed by pressing the 3 dots on the right of the menu, then Profile Helper. It is not possible to put in the main menu through the Config Builder. The Profile Helper can help you:
 
-* [build a profile from scratch for a kid](#your-aaps-profile-profile-from-scratch-for-a-kid)
+* [să construiți un profil de la zero pentru un copil](#your-aaps-profile-profile-from-scratch-for-a-kid)
 * [comparați două profiluri](#your-aaps-profile-compare-profiles)

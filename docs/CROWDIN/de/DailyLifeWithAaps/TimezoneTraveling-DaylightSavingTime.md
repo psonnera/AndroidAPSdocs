@@ -2,37 +2,37 @@
 
 ## Mit der Pumpe über Zeitzonen hinweg reisen
 
-## Timezone change for Omnipod Dash
+## Zeitzonenwechsel mit Omnipod-Dash
 
-* Refresh the Dash tab
-* Temporarily select a different **Profile** and then switch back to your original or desired **Profile**
+* Aktualisiere den Dash-Tab
+* Wähle temporär ein anderes **Profil** aus und wechsel danach wieder zurück auf Dein Ausgangs- oder Dein gewünschtes **Profil**
 
-## Timezone change for DanaR, Korean DanaR
+## Zeitzonenwechsel mit DanaR, koreanische DanaR
 
 Es gibt keine Probleme beim Zeitzonenwechsel im Smartphone, da die Pumpe keine Historie verwendet
 
-## Timezone change for DanaRv2, DanaRS
+## Zeitzonenwechsel mit DanaRv2, DanaRS
 
-These pumps require special care because **AAPS** uses history from the pump but the records in pump do not have timezone stamp. **This means that if you change time zone in your phone, records will be read with different time zone and will be doubled.**
+Da **AAPS** die Pumpenhistorie nutzt, die Einträge in der Pumpe aber keine Zeitangaben enthalten, benötigen diese Pumpen besondere Aufmerksamkeit. **Wenn Du die Zeitzone auf Deinem Smartphone änderst, bedeutet das, dass die Datensätze mit einer anderen Zeitzone ausgelesen und gedoppelt werden.**
 
 Um dies zu vermeiden, gibt es zwei Möglichkeiten:
 
 ### Option 1: Heimatzeit beibehalten und Time Shift des Profils
 
-* Turn off 'Automatic date and time' in your phone's settings (manual time zone change).
+* Schalte die automatische Einstellung von Datum und Uhrzeit in Deinem Smartphone aus (manueller Zeitzonen-Wechsel).
 
-* Your phone must keep your standard time as at home for the whole travel period.
+* Dein Smartphone muss für die gesamte Reise auf Datum und Zeit Deines Heimatortes eingestellt bleiben.
 
-* Time-shift your **Profile** according to time difference between home time and destination time.
+* Führe einen **Profil**wechsel mit Zeitverschiebung entsprechend dem Zeitunterschied Deines Heimatortes zum Zielort durch.
    
-   * Long-press **Profile** name (middle of top section on homescreen)
-   * Select '**Profile Switch**'
+   * Drücke lang auf den **Profil**namen (oben in der Mitte auf dem Startbildschirm).
+   * Wähle „**Profilwechsel**“
    * Stelle die 'Zeitverschiebung' entsprechend Deines Zielortes ein.
    
    ![Profilwechsel mit Zeitverschiebung](../images/ProfileSwitchTimeShift2.png)
    
-   * i.e. Vienna -> New York: **Profile Switch** +6 hours
-   * i.e. Vienna -> Sydney: **Profile Switch** -8 hours
+   * z.B. Wien -> New York: **Profilwechsel** +6 Stunden
+   * z.B. Wien -> Sydney: **Profilwechsel** -8 Stunden
 
 ### Option 2: Pumpenhistorie löschen
 
@@ -48,17 +48,17 @@ Wenn Du aus dem Flugzeug steigst:
 * schalte das Smartphone an
 * lasse das Smartphone mit der Pumpe verbinden und verfeinere die Zeiteinstellung
 
-## Timezone Change for Insight
+## Zeitzonenwechsel mit Insight
 
 Der Treiber passt die Uhrzeit in der Pumpe automatisch an die Zeit im Smartphone an.
 
-Die Insight dokumentiert auch die historischen Einträge, in denen die Zeit geändert wurde und von welcher (alten) Zeit zu welcher (neuen) Zeit. So the correct time can be determined in **AAPS** despite the time change.
+Die Insight dokumentiert auch die historischen Einträge, in denen die Zeit geändert wurde und von welcher (alten) Zeit zu welcher (neuen) Zeit. So kann die richtige Zeit in **AAPS** trotz der Zeitänderung bestimmt werden.
 
-It may cause inaccuracies in the **TDDs**. Aber es sollte kein Problem sein.
+Es kann zu Ungenauigkeiten in der **TDDs** kommen. Das sollte allerdings unproblematisch sein.
 
 Der Insight-Nutzer muss sich also nicht um Zeitumstellung oder den Wechsel von Zeitzonen kümmern. Es gibt eine Ausnahme zu dieser Regel: Die Insight Pumpe hat eine kleine interne Batterie, um die Zeit immer aktuell zu halten etc. während Du die "normale" Batterie wechselst. Wenn der Batteriewechsel zu lange dauert, kann diese interne Batterie leer werden, die Uhr wird zurückgesetzt und Du wirst gebeten, Zeit und Datum nach dem Einlegen der neuen Batterie neu einzugeben. In diesem Fall werden alle Einträge vor dem Batteriewechsel in der Berechnung in AAPS übersprungen, da die richtige Zeit nicht korrekt erkannt werden kann.
 
-## Timezone Change for Accu-Chek Combo
+## Zeitzonenwechsel mit Accu-Chek Combo
 
 Die neue [Combo-Unterstützung](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (eng. driver) passt die Pumpenzeit automatisch an die Zeit des Smartphones an. Die Combo selbst speichert keine Zeitzonen, sondern lediglich die lokale Zeit. Der neue Treiber setzt genau diese lokale Zeit. Zusätzlich wird die Zeitzone in den lokalen AAPS-Einstellungen hinterlegt, um die lokale Pumpenzeit in einen vollständigen Zeitstempel, der die entsprechende Zeitverschiebung enthält, umzurechnen. Du musst hier also nichts tun. Sollten die Abweichungen zwischen Combo und Smartphone zu groß werden, wird die Pumpenzeit automatisch korrigiert.
 
@@ -72,22 +72,22 @@ Der Treiber passt die Uhrzeit in der Pumpe automatisch an die Zeit im Smartphone
 
 Änderungen der Zeitzone haben ggf. einen Einfluss auf den gespeicherten Gesamtinsulinbedarf (TDD). Die übrige Historie bleibt unberührt. Manuelle Anpassungen der Uhrzeit kann zu Problemen mit der Pumpenhistorie und dem **IOB** führen. Falls Du die Uhrzeit manuell anpasst, überprüfe das **IOB** (aktives Insulin).
 
-When the time zone or time changes running **TBR's** are stopped.
+Wenn sich die Zeitzone oder die Uhrzeit ändert, wird eine laufende **TBR** gestoppt.
 
-## DAYLIGHT SAVING (DST)
+## Zeitumstellung (Sommer-/Winterzeit)
 
-Time adjustment daylight savings time
+Zeitumstellung (Sommer-/Winterzeit)
 
-Depending on your pump and CGM setup, jumps in time can lead to problems with **AAPS** to function correctlyy. For instance with the Combo pump, the pump history is read twice leading to duplicate entries. For some pumps it is better to make time zone adjustments while awake and not during the night.
+Abhängig von Deiner Pumpe und dem CGM Setup können Zeitsprünge zu **AAPS**-Problemen führen. Beispielsweise wird bei der Combo-Pumpe die Pumpenhistorie doppelt ausgelesen, sodass dadurch doppelte Einträge entstehen. Für einige Pumpen ist es besser, Zeitzonenanpassungen während der Wachphase und nicht in der Nacht durchzuführen.
 
-### DST automatic adjustment for most pumps
+### Automatische Sommer-/Winterzeitumstellung für die meisten Pumpen
 
-* This adjustment feature is available for **AAPS** version 2.2 onwards.
-* Howeever, the fully closed Loop will be deactivated for 3 hours AFTER the DST switch (usually 1am onwards) has taken place and **AAPS** will default to background basal as selected in your **Profile**. This is done for safety reasons - **IOB** may be too high due to duplicated bolus prior to DST change.
-* After DST has taken place, select **Profile Switch** to user's desired **Profile** to enable fully closed Loop.
-* You will also receive a notification on **AAPS** main screen prior to DST change that the Fully Closed Loop has been disabled temporarily. This message will appear without beep, vibration or anything.**
+* Diese Umstellungsfunktion ist seit **AAPS**-Version 2.2 verfügbar.
+* Der Closed Loop wird für 3 Stunden NACH der Zeitumstellung (normalerweise 1 Uhr) deaktiviert und **AAPS** wird es für diese Zeit standardmäßig das Basal, wie es in Deinem **Profil** hinterlegt ist, abgeben. Dies geschieht aus Sicherheitsgründen - **IOB** kann wegen doppelter Boli vor der Zeitumstellung zu hoch sein.
+* Nach der Zeitumstellung, führe einen **Profilwechsel** auf Dein gewünschtes **Profil** aus, um den Closed Loop zu aktivieren.
+* Vor der Zeitumstellung wirst Du auf der **AAPS**-Übersicht eine Benachrichtigung erhalten, dass der Closed Loop vorübergehend deaktiviert wurde. Diese Nachricht erscheint ohne Ton, Vibration oder anderes.**
 
-If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** data unless you are sure this data is absolutely correct. Take caution and do not use this feature for a couple of hours after DST switch has taken place.
+Wenn Du den **AAPS**-Bolus-Rechner zum Bolen verwendest, schließe **COB** und **IOB**-Daten aus, es sei denn, Du bist Dir absolut sicher, dass die Daten korrekt sind. Sei vorsichtig und nutze den Bolus-Rechner in den ersten Stunden nach der Zeitumstellung nicht zum Bolen.
 
 ### Zeitumstellung für Accu-Chek Insight
 
@@ -109,26 +109,26 @@ If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** dat
    * Manche Smartphones haben zwei Einstellungen, eine für die automatische Zeiteinstellung (die idealerweise AN bleiben sollte) und eine für den automatischen Zeitzonenwechsel (die Du AUSSCHALTEN musst).
    * Unglücklicherweise haben manche Android-Versionen nur eine Einstellmöglichkeit für beides zusammen. In diesem Fall musst Du eben beide ausschalten.
 
-<img width="576" height="1289" alt="Screenshot_20260329-110315 (1)" src="https://github.com/user-attachments/assets/ca40c1c6-1697-4832-ae10-5cf6a1dc0bce" />
+![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
 
 2. Suche Dir eine Zeitzone, die dieselbe Uhrzeit wie Du hat, aber nicht zwischen Winter- und Sommerzeit wechselt.
    
    * Eine Liste dieser Länder findest Du z.B. auf [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/).
    * Für die Mitteleuropäische Zeit (MEZ) könnte dies z.B. "Brazzaville" (Kongo) sein. Stelle die Zeitzone deines Smartphones manuell auf Kongo.
 
-<img width="576" height="1289" alt="Screenshot_20260329-111830" src="https://github.com/user-attachments/assets/b7b7f738-f91e-40df-ad79-f404fbfb9ae6" />
+![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
 
 3. **AAPS** refresh your pump and switch to your desired **Profile**.
 
 4. Prüfe die **IOB**- und **COB**-Werte in **AAPS**. Deaktiviere den Closed Loop für mindestens die Insulinwirkdauer (DIA) oder „Max-Carb-Time“ (je nachdem welcher Zeitraum länger ist), sofern die Werte falsch sein sollten.
 
-5. Nach der Zeitumstellung notwendige Maßnahmen. Der Zeitpunkt zum Zurückkehren in die lokale Zeitzone ist ideal, wenn der **IOB** niedrig ist. E.g. an hour before a meal such as breakfast. Sowohl Dein **COB**, als auch Dein **IOB** sollten idealerweise dabei nahe Null sein.
+5. Nach der Zeitumstellung notwendige Maßnahmen. Der Zeitpunkt zum Zurückkehren in die lokale Zeitzone ist ideal, wenn der **IOB** niedrig ist. Z. B. eine Stunde vor einer Mahlzeit wie dem Frühstück. Sowohl Dein **COB**, als auch Dein **IOB** sollten idealerweise dabei nahe Null sein.
 
-### DST for Accu-Chek Combo
+### Zeitumstellung für Accu-Chek Combo
 
-This section is only valid for the old, Ruffy-based driver. Der neue Treiber passt Datum und Uhrzeit und Sommer-/Winterzeit automatisch an.
+Dieser Abschnitt ist nur für den alten, auf Ruffy basierenden, Treiber gültig. Der neue Treiber passt Datum und Uhrzeit und Sommer-/Winterzeit automatisch an.
 
-**AAPS** will issue an alarm if the time between pump and phone differs too much. Bei der Zeitumstellung wäre dies unerfreulicherweise mitten in der Nacht. Um dies zu verhindern und stattdessen den Schlaf zu genießen, folge diesen Schritten, so dass Du die Zeitumstellung zu einer Zeit erzwingen kannst, die Dir passt.
+**AAPS** wird Dich alarmieren, wenn die Uhrzeit der Pumpe zu sehr von der des Smartphones abweicht. Bei der Zeitumstellung wäre dies unerfreulicherweise mitten in der Nacht. Um dies zu verhindern und stattdessen den Schlaf zu genießen, folge diesen Schritten, so dass Du die Zeitumstellung zu einer Zeit erzwingen kannst, die Dir passt.
 
 #### Vor der Zeitumstellung notwendige Maßnahmen
 
@@ -155,11 +155,11 @@ This section is only valid for the old, Ruffy-based driver. Der neue Treiber pas
 
 #### Nach der Zeitumstellung notwendige Maßnahmen
 
-A good time to make this switch would be with low **IOB**. Z.B. eine Stunde vor einer Mahlzeit wie dem Frühstück, denn dann werden alle kürzlich abgegebenen Boli in Deiner Pumpenhistorie kleine SMB Korrekturen sein. Your **COB** and **IOB** should both be close to zero.)
+Ein guter Zeitpunkt für diese Umstellung ist bei niedrigem **IOB** Z.B. eine Stunde vor einer Mahlzeit wie dem Frühstück, denn dann werden alle kürzlich abgegebenen Boli in Deiner Pumpenhistorie kleine SMB Korrekturen sein. Sowohl Dein **COB**, als auch Dein **IOB** sollten dabei nahe Null sein.
 
 1. Wechsle die Zeitzone in Deinem Smartphone zurück auf Deine eigene Zeitzone und aktiviere die oben deaktivierte Automatik zur Zeitzoneneinstellung wieder.
-2. **AAPS** will soon start alerting you that the Combo’s clock doesn’t match. Passe die Uhrzeit manuell auf der Pumpe an.
-3. On the **AAPS** “Combo” screen, press Refresh.
+2. **AAPS** wird Dich kurz danach alarmieren, dass die Uhrzeit in der Combo nicht passt. Passe die Uhrzeit manuell auf der Pumpe an.
+3. Klicke im COMBO-Tab von **AAPS** auf „Aktualisieren“.
 4. Prüfe dann auf dem Behandlungs-Tab, ob es Ereignisse in der Zukunft gibt. Es sollte eigentlich keine geben. Falls doch:
    
    * Klicke NICHT auf "lösche alle Behandlungen in der Zukunft". 

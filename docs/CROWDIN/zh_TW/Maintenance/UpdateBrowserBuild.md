@@ -70,7 +70,7 @@
 
 ![運行工作流程](../images/update/CI/GitHubActions2.png)
 
-5. 將分支維持為 master，選擇你想要建置的 AAPS 版本——可以是最新版本或指定的特定版本——再選擇 [variant](variant)（fullRelease），然後點選 Run workflow。
+5. 將分支維持為 master，選擇你想要建置的 AAPS 版本——可以是最新版本或指定的特定版本——再選擇 [variant](#browserbuild-variant)（fullRelease），然後點選 Run workflow。
 
 
 
