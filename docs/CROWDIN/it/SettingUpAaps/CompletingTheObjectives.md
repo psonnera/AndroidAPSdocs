@@ -169,7 +169,7 @@ To complete **Objective 7** you have to close your loop and raise your [maxIOB](
 
 Minimal time to complete this objective: **1 day**. This is a mandatory wait time. It is not possible to proceed to the next **Objective** until this period of time has expired.
 
-- Select **Closed Loop** by pressing and holding the [Loop icon](#AapsScreens-loop-status) in the top right corner of the **Overview** screen. Stay in **Closed Loop** over a period of 1 day.
+- Stay in **Closed Loop** over a period of 1 day. Select **Closed Loop** by pressing and holding the [Loop icon](#AapsScreens-loop-status) in the top right corner of the **Overview** screen.
 
 - Slowly raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
 
