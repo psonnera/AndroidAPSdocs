@@ -41,7 +41,7 @@ Nella sezione **10) [Come supportare AAPS](SupportingAaps/HowToEditTheDocs.md)**
 Sezione **11) Risorse**, contiene documentazione archiviata o aggiuntiva, includendo una sottosezione per i [medici](UsefulLinks/ClinicianGuideToAaps.md) che hanno espresso interesse per la tecnologia del pancreas artificiale open source come **AAPS**, o per i pazienti che vogliono condividere tali informazioni con i loro medici. Questo argomento è anche affrontato nell'introduzione. In questa sezione ci sono altri contenuti sul diabete e il circuito chiuso, riferimenti e risorse. Include il [glossario](./UsefulLinks/Glossary.md), un elenco degli acronimi (o abbreviazioni) utilizzati in **AAPS**. Questo è dove andare per scoprire cosa vogliono dire i termini ISF o TT, per esempio.
 
 
- ### Vuoi iniziare con **AAPS**? Leggi di più su **AAPS** nell' [Introduzione](Getting-Started/Introduction.md).
+ Vuoi iniziare con **AAPS**? Leggi di più su **AAPS** nell' [Introduzione](Getting-Started/Introduction.md).
 
 ```{admonition} SAFETY NOTICE
 :class: danger
