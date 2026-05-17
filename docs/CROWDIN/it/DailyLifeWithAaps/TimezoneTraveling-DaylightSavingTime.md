@@ -127,7 +127,7 @@ If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** dat
 
 3. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the Fully Closed Loop for at least one DIA and Max-Carb-Time - whatever is bigger.
 
-4. Actions to take after the clock change. A good time to make this switch would be with low **IOB**. E.g. an hour before a meal such as breakfast. Your **COB** and **IOB** should both be close to zero.)
+4. Actions to take after the clock change. A good time to make this switch would be with low **IOB**. E.g. E.g. an hour before a meal such as breakfast. Your **COB** and **IOB** should both be close to zero.)
 
 
 ### DST for Accu-Chek Combo
