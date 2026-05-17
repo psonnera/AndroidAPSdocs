@@ -491,7 +491,7 @@ You can find AAPS logs in your phone memory -> Android -> data -> info.nightscou
 
 ### Setting the local AAPS directory
 
-Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files.
+This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files. Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab.
 
 ![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
 

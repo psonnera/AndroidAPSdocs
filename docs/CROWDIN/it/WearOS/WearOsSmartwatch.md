@@ -2,7 +2,7 @@
 
 The instructions below apply to the **AAPS Wear** apk that you need to build. If you haven’t built it yet, see the linked guide [here](../WearOS/BuildingAapsWearOS.md). When building, make sure to use the same keystore file that you used for the phone **AAPS** apk.
 
-You can also use some of the information for the **AAPSClient** and **PumpControl** **Wear** apk. Each **Wear** app will communicate with it's matching phone app. For example: the **AAPSClient Wear** app can be used to display **AAPSClient** data and not **AAPS** data.
+Each **Wear** app will communicate with it's matching phone app. For example: the **AAPSClient Wear** app can be used to display **AAPSClient** data and not **AAPS** data. You can also use some of the information for the **AAPSClient** and **PumpControl** **Wear** apk.
 
 ## Wear OS Versions and compatibility
 
@@ -114,7 +114,7 @@ Rapidly tap on “ software version” until a notification appears that the wat
 
 Return to the top of settings menu, scroll to the bottom and see “developer options” below “about watch”.
 
-In “developer options”, turn on “ADB debugging” and “wireless debugging”. The latter option then reveals the IP address of the watch, the final two digits of which changes each time the watch is paired with a new phone. It will be something like: **192.168.1.214**.5555 (ignore the last 4 digits). Note that the last two digits (here, “20”) of this address will change every time you change to a new phone handset for AAPS.
+In “developer options”, turn on “ADB debugging” and “wireless debugging”. The latter option then reveals the IP address of the watch, the final two digits of which changes each time the watch is paired with a new phone. Note that the last two digits (here, “20”) of this address will change every time you change to a new phone handset for AAPS. It will be something like: **192.168.1.214**.5555 (ignore the last 4 digits).
 
 ![image](../images/wearos/easyfire04.png)
 
@@ -151,7 +151,7 @@ On the watch:
 
 You will see a Wi-Fi paring code and IP address and port appearing: ![image](../images/wearos/ADB03.png)
 
-- In the terminal: `adb pair ipaddress:port` E.g. `adb pair 10.10.1.125:36299`
+- In the terminal: `adb pair ipaddress:port` E.g. `adb pair 10.10.1.125:36299` `adb pair 10.10.1.125:36299`
 - You will be asked for the pairing code. Enter it.
 - You will see a response:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
 - In the terminal type: <br>`adb devices`.<br> You should see something like:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>

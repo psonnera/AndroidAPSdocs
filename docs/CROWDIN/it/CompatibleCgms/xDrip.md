@@ -37,7 +37,7 @@ Anche l'opzione `Allarmi in caso di errori` dovrebbe essere disattivata (10). Al
 
 ### **Impostazioni Inter-App** (Broadcast)
 
-Se vuoi utilizzare AAPS e i dati devono essere inoltrati ad  AAPS, è necessario attivare la trasmissione in xDrip+ nelle impostazioni Inter-App.
+Se vuoi utilizzare AAPS e i dati devono essere inoltrati ad  Se vuoi utilizzare AAPS e i dati devono essere inoltrati ad  AAPS, è necessario attivare la trasmissione in xDrip+ nelle impostazioni Inter-App.
 
 → Menu (1) → Impostazioni (2) → Impostazioni Inter-app (3) → Trasmetti localmente **ON** (4)
 

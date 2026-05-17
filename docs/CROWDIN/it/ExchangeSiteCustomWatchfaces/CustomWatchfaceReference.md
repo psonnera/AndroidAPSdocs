@@ -11,7 +11,7 @@ Custom Watchface is an open format designed for AAPS and associated to the new "
 The Watchface file is a simple zip file, but to be recognized as a Watchface file, the zip file must contain the following files:
 
 - One image file named CustomWatchface (can be bitmap files `CustomWatchface.jpg`, `CustomWatchface.png` or a vector `CustomWatchface.svg`). This file is the little icon used to select the watchface when you click on "Load Watchface" button, and also the image visible within AAPS Wear plugin.
-- One file named `CustomWatchface.json` (see [JSON structure](#cwf-reference-json-structure) below). This second file is the core file that will include all information required to design the watchface. This json file must be valid (it's probably the most tricky point when you edit manually this file within a text editor, because a missing or additional comma is enough to break the json format). This JSON file must also include a `"metadata"` block with a `"name"` key with not empty value. This will be the name of your custom watchface (see [Metadata settings](#cwf-reference-metadata-settings) below)
+- One file named `CustomWatchface.json` (see [JSON structure](#cwf-reference-json-structure) below). This second file is the core file that will include all information required to design the watchface. This json file must be valid (it's probably the most tricky point when you edit manually this file within a text editor, because a missing or additional comma is enough to break the json format). This will be the name of your custom watchface (see [Metadata settings](#cwf-reference-metadata-settings) below) This JSON file must also include a `"metadata"` block with a `"name"` key with not empty value.
 - the size of this zip should be as small as possible (less than about 500kb). If this file is too big, it will just be blocked and not transmitted to the watch.
 
 The zip file can also contain some additional resource files:
@@ -418,7 +418,7 @@ Note: to be able to see the transparency, all these images are on a yellow backg
 
 #### **Background management**
 
-First, concerning BG value image, no choice here, it can only be in the background layer (otherwise it will be in front of the chart view and chart will not be visible!). So we will have to map BG value to the background, and then rotate background image according to BG value.
+So we will have to map BG value to the background, and then rotate background image according to BG value. First, concerning BG value image, no choice here, it can only be in the background layer (otherwise it will be in front of the chart view and chart will not be visible!).
 
 Within `"background"` block, we will include 2 dedicated keys to make this rotation:
 
@@ -1145,7 +1145,7 @@ Let's now take a look on timestamp dynPref block to manage plural:
 **Additional comment concerning formatting feature**
 
 - keep in mind that the only dynamic values available are the one listed [here](#cwf-reference-dyndata-key-values)
-- All `BG` values are in mgdl unit, if you want to use formatting feature to show values in mmol units, you will have to manage mgdl to mmol conversion. Within a `dynData` or `dynPref` block, the key that should be used to name the block that will include `"minValue"`and `"maxValue"` for value conversion should be named `"dynValue": { ...  }`. (see [Dyn Data Keys](#cwf-reference-dyndata-keys))
+- All `BG` values are in mgdl unit, if you want to use formatting feature to show values in mmol units, you will have to manage mgdl to mmol conversion. Within a `dynData` or `dynPref` block, the key that should be used to name the block that will include `"minValue"`and `"maxValue"` for value conversion should be named `"dynValue": { ... }`. (see [Dyn Data Keys](#cwf-reference-dyndata-keys))
 - If within a view you want to use a static formatting string, with `"textvalue"` key to define format, and `"dynValue"` key to define usage of dynamic value, then you will have to also use a `"dynData"` or a `"dynPref"`block (even if empty), to be able to use formatting feature.
 - `"textvalue1"`, `"textvalue2"` to textvalue*n* can be used without formatting feature to replace double value step by a dedicated text label (for example with `"day_name"` key value and  seven steps to define custom name of the dayx of the week, ... )
 
