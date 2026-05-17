@@ -109,11 +109,27 @@ https://github.com/nightscout/aaps-ci-preparation/releases/latest
 
 2.Backup copy hosted on this site:
 
+ - If the external link is also unavailable, you can use this backup file to download.
+<!--crowdin:disable-->
+
+```{eval-rst}
+..
+Please copy the URL and open it in your browser instead:
+```text
+https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
+```
+Or visit the latest release page:
+```text
+https://github.com/nightscout/aaps-ci-preparation/releases/latest
+```
+
+2.Backup copy hosted on this site:
+
  - If the external link is also unavailable, you can use this backup file to download.<!--crowdin:disable-->```{eval-rst}
 ..
 ````
 AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS): - If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
-- If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
+- - If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
 </br>
 
 ```{warning}
