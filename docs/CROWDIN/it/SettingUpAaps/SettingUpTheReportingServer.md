@@ -1,4 +1,4 @@
-# Setting up the Reporting Server
+# Impostazione del server di reportistica
 
 There are currently two reporting servers available for use with **AAPS**:
 
@@ -20,7 +20,7 @@ You can find more information on the [website of the Nightscout project](http://
 
 ### Option 1 - Set up your Nightscout server yourself
 
-Creating your Nightscout reporting server can require one or more web-based applications that will require maintenance. In order to have a completely free service, you may need to migrate your Nightscout site and data, if and when providers remove the free tier.
+La creazione del server di reportistica Nightscout può richiedere una o più applicazioni web-based che richiedono manutenzione. In order to have a completely free service, you may need to migrate your Nightscout site and data, if and when providers remove the free tier.
 
 A description of how you can set up Nightscout with the advantages and disadvantages of the various operating options, including an estimate of the costs, can be found [here](https://nightscout.github.io/nightscout/new_user/#free-diy).
 
