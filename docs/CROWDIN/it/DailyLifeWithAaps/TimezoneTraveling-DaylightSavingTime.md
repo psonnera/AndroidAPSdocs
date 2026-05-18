@@ -159,7 +159,7 @@ This section is only valid for the old, Ruffy-based driver. The new driver adjus
 5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
 
 #### Actions to take after the clock change
-A good time to make revert to local time zone is with low **IOB**. E.g. an hour before a meal such as breakfast. Actions to take after the clock change. Ideally your **COB** and **IOB** should both be close to zero.
+A good time to make revert to local time zone is with low **IOB**. E.g. E.g. an hour before a meal such as breakfast. Actions to take after the clock change. Ideally your **COB** and **IOB** should both be close to zero.
 
 1. Change the Android timezone back to your current location and re-enable automatic timezone.
 2. **AAPS** will soon start alerting you that the Combo’s clock doesn’t match. So update the pump’s clock manually via the pump’s screen and buttons.
