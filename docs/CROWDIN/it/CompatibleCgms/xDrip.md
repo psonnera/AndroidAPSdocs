@@ -78,7 +78,7 @@ Ricordati di disabilitare Importa suoni per evitare che xDrip+ faccia una suoner
 ### Versione xDrip+ a secondo del numero di serie del trasmettitore G6.
 
 * Tutti i trasmettitori G6 prodotti dopo l'autunno/fine 2018 sono chiamati "Firefly". Non consentono il riavvio del sensore senza [rimuovere il trasmettitore](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), non inviano dati grezzi. Si consiglia di utilizzare l'ultimo [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
-* Old rebatteried transmitters and modified transmitters allow sensor life extension and restarts, they also send raw data. È possibile utilizzare l'[ultima APK (stabile)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk).
+* I vecchi trasmettitori con batteria sostituita e i trasmettitori modificati consentono l'estensione della vita del sensore e i riavvii; inviano anche dati grezzi. È possibile utilizzare l'[ultima APK (stabile)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk).
 
 
 ### Impostazioni specifiche Dexcom
@@ -212,7 +212,7 @@ Segui [queste istruzioni](https://navid200.github.io/xDrip/docs/Dexcom/SensorFai
 
 ### Connetti il trasmettitore Libre & avvia il sensore
 
-- If your sensor requires it (Libre 2 EU and Libre 1 US) install the latest out of process algorithm.
+- Se il tuo sensore lo richiede (Libre 2 EU e Libre 1 US) installa l'ultimo algoritmo out of process.
 
 - Il sensore deve essere già avviato utilizzando l'app del fornitore oppure il lettore (xDrip+ non può avviare o fermare i sensori Libre).
 

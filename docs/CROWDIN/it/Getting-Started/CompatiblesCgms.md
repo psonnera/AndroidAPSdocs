@@ -9,7 +9,7 @@ Questa sezione fornisce una breve panoramica di tutti i **sensori CGMs/FGMs** co
 * [Impostazioni xDrip+](../CompatibleCgms/xDrip.md)
 * [Nightscout come fonte di valori di glicemia](../CompatibleCgms/CgmNightscoutUpload.md): Mentre è possibile utilizzare Nightscout come fonte di glicemia per il rilascio di insulina a circuito chiuso, **questo metodo non è raccomandato** a causa della sua dipendenza da dati mobili stabili o connettività Wi-Fi. Ciò significa che i tuoi dati di **glicemia** saranno ricevuti solo da **AAPS** quando hai una connessione online al tuo sito Nightscout. Per una configurazione più affidabile, utilizzare un sensore con trasmissione locale dal ricevitore (come elencato di seguito) a **AAPS**, è un'opzione molto migliore.
 
-| CGM                                                                         | Available [BG Sources](#Config-Builder-bg-source)                                                                    |
+| CGM                                                                         | Sorgenti BG [disponibili](#Config-Builder-bg-source)                                                                 |
 | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | [Dexcom G7](../CompatibleCgms/DexcomG7.md)                                  | [xDrip+](../CompatibleCgms/xDrip.md) or [Juggluco](../CompatibleCgms/Juggluco.md)                                    |
 | [Dexcom ONE+ and Stelo](../CompatibleCgms/DexcomG7.md)                      | [xDrip+](../CompatibleCgms/xDrip.md)                                                                                 |
@@ -31,15 +31,15 @@ Questa sezione fornisce una breve panoramica di tutti i **sensori CGMs/FGMs** co
 
 (GettingStarted-TrustedBGSource)=
 
-## Trusted BG data sources
+## Sorgenti di dati glicemia affidabili
 
-Regulatory approved **CGM**s for commercial hybrid closed loop systems are considered trusted **BG** data sources.
+I **CGM** approvati dagli enti normativi per i sistemi commerciali a circuito chiuso ibrido sono considerati sorgenti di dati **BG** affidabili.
 
-In order for **AAPS** to correctly identify them, the app sending **BG** readings must be able to provide sensor information.
+Affinché **AAPS** possa identificarli correttamente, l'app che invia le letture di **BG** deve essere in grado di fornire informazioni sul sensore.
 
-Trusted data sources allow **SMB** delivery, all the time.
+Le sorgenti dati affidabili consentono sempre l'erogazione di **SMB**.
 
-| Sensor                |                                                        CGM app                                                         |
+| Sensore               |                                                       App CGM                                                          |
 | --------------------- |:----------------------------------------------------------------------------------------------------------------------:|
 | Dexcom G5/G6          |                                              xDrip+ (**Direct, Native**)                                               |
 | Dexcom G7             |                    xDrip+ (**Direct, Native**), </br>Juggluco (**xDrip broadcast** without xDrip+)                     |
@@ -48,4 +48,4 @@ Trusted data sources allow **SMB** delivery, all the time.
 | Libre 2/2+/3/3+       |                    Juggluco (**xDrip broadcast** without xDrip+, or **Patched Libre** with xDrip+)                     |
 | Syai                  |                                                        Syai App                                                        |
 
-**Note: xDrip+ Companion apps and Follower modes (includes 640G/Eversense) are not trusted data sources.**
+**Nota: le app companion di xDrip+ e le modalità follower (incluso 640G/Eversense) non sono sorgenti di dati affidabili.**

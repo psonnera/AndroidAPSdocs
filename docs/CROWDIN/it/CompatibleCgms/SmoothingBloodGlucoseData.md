@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # Smoothing dei dati glicemici
 
 Se i dati di glicemia (**BG**) sono salteggianti/rumorosi, **AAPS** può dosare l’insulina in modo non corretto con conseguenti iper o ipo. Se si osservano errori nei dati del sensore, è imperativo disattivare il circuito chiuso fino a quando il problema non verrà risolto. A seconda del tuo sensore, tali problemi potrebbero essere dovuti alla configurazione CGM in **AAPS** (come spiegato più avanti); o un problema del sito di inserimento del sensore (che potrebbe richiederne la sostituzione).
@@ -10,7 +14,7 @@ A partire dalla versione **AAPS** 3.2, **AAPS** offre la possibilità di fare lo
 
 ### Smoothing esponenziale
 
-In general, this is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value. However, see the table below for other specific recommendations.
+In generale, questa è l'opzione consigliata da cui iniziare, poiché è la più aggressiva nel risolvere il rumore e riscrive il valore più recente. Tuttavia, consulta la tabella di seguito per altre raccomandazioni specifiche.
 
 ### Smoothing medio
 
@@ -29,7 +33,7 @@ Usa questa opzione solo se i tuoi dati CGM vengono correttamente filtrati dalla 
 | G5/G6/ONE     |  If noisy   |           | Recommended |
 | G7/ONE+/Stelo |  If noisy   | If stable |             |
 
-Libre sensors are noisy and can require smoothing. When using xDrip+ direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+I sensori Libre sono rumorosi e possono richiedere lo smoothing. Quando si utilizza la connessione diretta xDrip+ o il sorgente dati dell'app patchata (ricevendo da un'altra app, incluso Juggluco), [lo smoothing viene già effettuato all'interno dell'app](#libre2-value-smoothing-raw-values).
 
 | Sensor / Data source | Juggluco | xDrip+ direct | xDrip+ bridge | xDrip+ patched app |
 | -------------------- |:--------:|:-------------:|:-------------:|:------------------:|

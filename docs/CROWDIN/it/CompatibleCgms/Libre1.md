@@ -18,7 +18,7 @@ Some bridges are still available on the market:
 -   xDrip+ supporta Miaomiao, Bubble, Blucon, Atom e LibreAlarm.
 -   Puoi scaricare tranquillamente l'[ultimo APK (stabile)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) a meno che tu non abbia bisogno di funzionalità più recenti, caso in cui dovresti usare l'ultimo [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
 -   Segui le istruzioni di configurazione nella [pagina delle impostazioni di xDrip+](../CompatibleCgms/xDrip.md).
--    You also need OOP2 for Libre 1 US (and Libre 2 EU).
+-    Hai anche bisogno di OOP2 per Libre 1 US (e Libre 2 EU).
 -   Seleziona xDrip+ in [Configuratore strutturale, Origine BG](#Config-Builder-bg-source).
 
 ## 2. Usando Diabox

@@ -2,7 +2,7 @@
 
 ## Jelly 2
 
-Do not confuse with Jelly Star (below).
+Da non confondere con Jelly Star (sotto).
 
 **Vantaggi**
 
@@ -31,30 +31,30 @@ Puoi abilitare NFC per i sensori Libre.
 
 ## Jelly Star Mini
 
-**Features**
+**Caratteristiche**
 
 * Android 13
 * 8 GB RAM
 
-### Battery life optimization
+### Ottimizzazione della durata della batteria
 
-To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be disabled by selecting 'unrestricted' (and other **DIY apps** like BYODA, xDrip+, OOP2, Juggluco, etc...).
+Per evitare interferenze con **AAPS**, il 'battery usage' (utilizzo batteria) di Jelly Star dovrebbe essere disabilitato selezionando 'non limitato' (e altre **app DIY** come BYODA, xDrip+, OOP2, Juggluco, ecc...).
 
 ![Jelly_BatterY_1ACA756A-2EC4-4623-B8C4-2CEB9D230A93](../images/JellyStarMini1.jpg)
 
-### Intelligent Assistance and App Blocker
+### Assistenza intelligente e blocco app
 
-Like with the Jelly 2 (above), the Jelly Star should have 'Intelligent Assistance' disabled for **DIY apps**. Similarly, 'App Blocker' under 'Settings' must also be switched off to avoid disruption with **AAPS**:
+Come con il Jelly 2 (sopra), nel Jelly Star dovrebbe essere disabilitata la 'Assistenza intelligente' per le **app DIY**. Allo stesso modo, il 'Blocco app' nelle 'Impostazioni' deve essere disattivato per evitare interruzioni con **AAPS**:
 
 ![App Blocker Screenshot 2025-08-03 213400](../images/JellyStarMini2.jpg)
 
 ### Google Play Protect
 
-Remember to disable Google Play Protect.
+Ricordarsi di disabilitare Google Play Protect.
 
-### Remote Connection for Weak apk
+### Connessione remota per APK debole
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use the Jelly 2, **Wear.apk** & **AAPS** remotely via wifi.
+Per alcuni smartwatch, come Samsung Galaxy, la 'Connessione remota' nelle Funzioni avanzate di Samsung Galaxy deve essere attivata per usare Jelly 2, **Wear.apk** e **AAPS** da remoto tramite wifi.
 
 ![MURCIMG-20251007-WA0000](../images/500234283-5db08a08-f256-49a0-8843-46bdd01b33d6.png)
 
