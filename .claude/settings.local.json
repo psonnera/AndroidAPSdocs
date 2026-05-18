@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -command 'Get-ChildItem '\\\\''C:\\\\Data\\\\50 - My Projects\\\\AAPS\\\\AndroidAPSdocs\\\\docs\\\\EN\\\\RemoteFeatures\\\\'\\\\'' | Select-Object Name, @{N='\\\\''Lines'\\\\'';E={\\(Get-Content $_.FullName\\).Count}}')",
+      "Bash(Get-Content \"docs\\\\CROWDIN\\\\it\\\\SettingUpAaps\\\\BrowserBuild.md\" -TotalCount 5)",
+      "Bash(Get-Content \"docs\\\\CROWDIN\\\\it\\\\SettingUpAaps\\\\BrowserBuildO1C.md\" -TotalCount 5)",
+      "Bash(Get-Content \"docs\\\\CROWDIN\\\\it\\\\SettingUpAaps\\\\BrowserBuildO1I.md\" -TotalCount 5)",
+      "Bash(Get-Content \"docs\\\\CROWDIN\\\\it\\\\SettingUpAaps\\\\BrowserBuildO2C.md\" -TotalCount 5)",
+      "Bash(Get-Content \"docs\\\\CROWDIN\\\\it\\\\SettingUpAaps\\\\BrowserBuildCIS.md\" -TotalCount 5)",
+      "Bash(python *)",
+      "Bash(crowdin --version)",
+      "Bash(crowdin status *)",
+      "Bash(echo \"Exit code: $?\")",
+      "Bash(\"/c/Program Files \\(x86\\)/CrowdinCLI/crowdin.bat\" --version)"
+    ]
+  }
+}

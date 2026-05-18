@@ -1,149 +1,154 @@
-# Timezone Change and Daylight Saving
+# Cambio fuso orario e ora legale
 
-## Timezone traveling with pumps
+## Viaggiare con fuso orario diverso con i microinfusori
 
-## Timezone change for Omnipod Dash
+## Cambio fuso orario per Omnipod Dash
 
-* Refresh the Dash tab
-* Temporarily select a different **Profile** and then switch back to your original or desired **Profile**
+* Aggiornare la scheda Dash
+* Selezionare temporaneamente un **Profilo** diverso e poi tornare al **Profilo** originale o desiderato
 
-## Timezone change for DanaR, Korean DanaR
+## Cambio fuso orario per DanaR, Korean DanaR
 
-There is no issue with changing timezone in phone because pump doesn't use history
+Non ci sono problemi nel cambiare il fuso orario nel telefono perché il microinfusore non usa la cronologia.
 
-## Timezone change for DanaRv2, DanaRS
+## Cambio fuso orario per DanaRv2, DanaRS
 
-These pumps require special care because **AAPS** uses history from the pump but the records in pump do not have timezone stamp. **This means that if you change time zone in your phone, records will be read with different time zone and will be doubled.**
+Questi microinfusori richiedono attenzione particolare perché **AAPS** usa la cronologia del microinfusore, ma le registrazioni nel microinfusore non hanno il timestamp del fuso orario. **Ciò significa che se si cambia il fuso orario nel telefono, le registrazioni verranno lette con un fuso orario diverso e verranno duplicate.**
 
-To avoid this there are two possibilities:
+Per evitare ciò esistono due possibilità:
 
-### Option 1: Keep home time and timeshift profile
+### Opzione 1: Mantenere l'ora di casa e sfasamento temporale del Profilo
 
-* Turn off 'Automatic date and time' in your phone's settings (manual time zone change).
+* Disattivare "Data e ora automatiche" nelle impostazioni del telefono (cambio manuale del fuso orario).
 
-* Your phone must keep your standard time as at home for the whole travel period.
+* Il telefono deve mantenere l'ora standard di casa per l'intero periodo di viaggio.
 
-* Time-shift your **Profile** according to time difference between home time and destination time.
-   * Long-press **Profile** name (middle of top section on homescreen)
-   * Select '**Profile Switch**'
-   * Set 'Time shift' according to your destination.
+* Sfasare temporalmente il **Profilo** in base alla differenza di orario tra l'ora di casa e l'ora di destinazione.
+   * Tenere premuto sul nome del **Profilo** (al centro della sezione superiore nella schermata principale)
+   * Selezionare "**Cambio Profilo**"
+   * Impostare lo "Sfasamento temporale" in base alla destinazione.
 
    ![Profile switch with time shift](../images/ProfileSwitchTimeShift2.png)
 
-   * i.e. Vienna -> New York: **Profile Switch** +6 hours
-   * i.e. Vienna -> Sydney: **Profile Switch** -8 hours
+   * Es. Vienna -> New York: **Cambio Profilo** +6 ore
+   * Es. Vienna -> Sydney: **Cambio Profilo** -8 ore
 
-### Option 2: Delete pump history
+### Opzione 2: Eliminare la cronologia del microinfusore
 
-* Turn off 'Automatic date and time' in your phone settings (manual time zone change)
+* Disattivare "Data e ora automatiche" nelle impostazioni del telefono (cambio manuale del fuso orario)
 
-When get out of plane:
+All'uscita dall'aereo:
 
-* turn off pump
-* change timezone on phone
-* turn off phone, turn on pump
-* clear history in pump
-* change time in pump
-* turn on phone
-* let phone connect to the pump and fine-tune time
-
-
-## Timezone Change for Insight
-
-The driver automatically adjusts the time of the pump to the time of the phone.
-
-The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in **AAPS** despite the time change.
-
-It may cause inaccuracies in the **TDDs**. But it shouldn't be a problem.
-
-So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
-
-## Timezone Change for Accu-Chek Combo
-
-The [new Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) automatically adjusts the time of the pump to the time of the phone. The Combo cannot store timezones, only local time, which is precisely what the new driver programs into the pump. In addition, it stores the timezone in the local AAPS preferences to be able to convert the pump's localtime to a full timestamp that has a timezone offset. The user does not have to do anything; if the time on the Combo deviates too much from the phone's current time, the pump's time is automatically adjusted.
-
-Note that this takes some time, however, since it can only be done in the remote-terminal mode, which is generally slow. This is a Combo limitation that cannot be overcome.
-
-The old, Ruffy-based driver does not adjust the time automatically. The user has to do that manually. See below for the steps necessary to do that safely in case the timezone / daylight savings is the reason for the change.
-
-## Timezone Change for Medtrum
-
-The driver automatically adjusts the time of the pump to the time of the phone.
-
-Time zone changes keep the history intact, only TDD may be affected. Manually changing the time on the phone can cause problems with the history and **IOB**. If you change time manually double check the **IOB**.
-
-When the time zone or time changes running **TBR's** are stopped.
+* spegnere il microinfusore
+* cambiare il fuso orario nel telefono
+* spegnere il telefono, accendere il microinfusore
+* cancellare la cronologia nel microinfusore
+* cambiare l'ora nel microinfusore
+* accendere il telefono
+* lasciare che il telefono si connetta al microinfusore e regoli l'ora con precisione
 
 
-## DAYLIGHT SAVING (DST)
-Time adjustment daylight savings time
+## Cambio fuso orario per Insight
 
-Depending on your pump and CGM setup, jumps in time can lead to problems with **AAPS** to function correctlyy. For instance with the Combo pump, the pump history is read twice leading to duplicate entries. For some pumps it is better to make time zone adjustments while awake and not during the night.
+Il driver regola automaticamente l'ora del microinfusore all'ora del telefono.
+
+L'Insight registra anche le voci di cronologia in cui l'ora è stata cambiata e da quale (vecchia) ora a quale (nuova) ora. Quindi in **AAPS** è possibile determinare l'ora corretta nonostante il cambio dell'ora.
+
+Potrebbe causare imprecisioni nei **TDD**. Ma non dovrebbe essere un problema.
+
+Quindi l'utente dell'Insight non deve preoccuparsi dei cambi di fuso orario e dell'ora. C'è un'eccezione a questa regola: il microinfusore Insight ha una piccola batteria interna per alimentare l'orologio, ecc. mentre si sostituisce la batteria "reale". Se la sostituzione della batteria richiede troppo tempo, questa batteria interna si scarica, l'orologio si azzera e viene richiesto di inserire data e ora dopo l'inserimento della nuova batteria. In questo caso, tutte le voci precedenti alla sostituzione della batteria vengono ignorate nel calcolo di AAPS perché l'ora corretta non può essere identificata correttamente.
+
+## Cambio fuso orario per Accu-Chek Combo
+
+Il [nuovo driver Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) regola automaticamente l'ora del microinfusore all'ora del telefono. Il Combo non può memorizzare i fusi orari, solo l'ora locale, che è esattamente ciò che il nuovo driver programma nel microinfusore. Inoltre, memorizza il fuso orario nelle preferenze locali di AAPS per poter convertire l'ora locale del microinfusore in un timestamp completo con offset di fuso orario. L'utente non deve fare nulla; se l'ora del Combo si discosta troppo dall'ora corrente del telefono, l'ora del microinfusore viene regolata automaticamente.
+
+Si noti che ciò richiede un po' di tempo, poiché può essere eseguito solo in modalità terminal remoto, che è generalmente lenta. Questa è una limitazione del Combo che non può essere superata.
+
+Il vecchio driver basato su Ruffy non regola l'ora automaticamente. L'utente deve farlo manualmente. Vedere i passaggi necessari di seguito per farlo in sicurezza nel caso in cui il fuso orario / l'ora legale sia la causa del cambiamento.
+
+## Cambio fuso orario per Medtrum
+
+Il driver regola automaticamente l'ora del microinfusore all'ora del telefono.
+
+I cambi di fuso orario mantengono intatta la cronologia; solo il TDD potrebbe essere influenzato. Modificare manualmente l'ora nel telefono può causare problemi con la cronologia e l'**IOB**. Se si cambia l'ora manualmente, verificare l'**IOB**.
+
+Quando il fuso orario o l'ora cambiano, i **TBR** in esecuzione vengono interrotti.
 
 
-### DST automatic adjustment for most pumps
+## ORA LEGALE (DST)
+Regolazione dell'ora per l'ora legale
 
-* This adjustment feature is available for **AAPS** version 2.2 onwards.
-* Howeever, the fully closed Loop will be deactivated for 3 hours AFTER the DST switch (usually 1am onwards) has taken place and **AAPS** will default to background basal as selected in your **Profile**. This is done for safety reasons - **IOB** may be too high due to duplicated bolus prior to DST change.
-* After DST has taken place, select **Profile Switch** to user's desired **Profile** to enable fully closed Loop.
-* You will also receive a notification on **AAPS** main screen prior to DST change that the Fully Closed Loop has been disabled temporarily. This message will appear without beep, vibration or anything.**
+A seconda della configurazione del microinfusore e del CGM, i salti di orario possono causare problemi nel corretto funzionamento di **AAPS**. Ad esempio, con il microinfusore Combo, la cronologia del microinfusore viene letta due volte, dando luogo a voci duplicate. Per alcuni microinfusori è preferibile apportare le modifiche al fuso orario mentre si è svegli e non di notte.
 
 
-If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** data unless you are sure this data is absolutely correct. Take caution and do not use this feature for a couple of hours after DST switch has taken place.
+### Regolazione automatica dell'ora legale per la maggior parte dei microinfusori
 
-### DST for Accu-Chek Insight
+* Questa funzionalità di regolazione è disponibile a partire dalla versione 2.2 di **AAPS**.
+* Tuttavia, il Loop completamente chiuso verrà disattivato per 3 ore DOPO il cambio dell'ora legale (di solito dall'1:00 in poi) e **AAPS** tornerà alla basale in background selezionata nel **Profilo**. Ciò viene fatto per ragioni di sicurezza: l'**IOB** potrebbe essere troppo alto a causa di un bolo duplicato prima del cambio dell'ora legale.
+* Dopo il cambio dell'ora legale, selezionare **Cambio Profilo** per il **Profilo** desiderato dall'utente per abilitare il Loop completamente chiuso.
+* Riceverai anche una notifica sulla schermata principale di **AAPS** prima del cambio dell'ora legale che indica che il Loop completamente chiuso è stato temporaneamente disabilitato. Questo messaggio apparirà senza segnale acustico, vibrazione o altro.**
 
-* Change to DST is done automatically. No action required.
 
-### DST for Medtrum
+Se esegui un bolo con il calcolatore di **AAPS**, non utilizzare i dati **COB** e **IOB** a meno che tu non sia sicuro che siano assolutamente corretti. Prestare attenzione e non utilizzare questa funzionalità per un paio di ore dopo il cambio dell'ora legale.
 
-* Change to DST is done automatically. No action required.
+### Ora legale per Accu-Chek Insight
 
-### DST for Omnipod Dash
+* Il cambio all'ora legale viene effettuato automaticamente. Non è richiesta alcuna azione.
 
-* Either allow **AAPS** to temporarily default background basal after DST has taken place as explained above.
-* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day prior DST is due to take place to avoid overnight disruption. NOTE THIS OPTION MAY CAUSE YOUR POD TO PREMATURELY EXPIRE. PLEASE HAVE SUPPLIES WITH YOU IF OPTING FOR THE FEATURE BELOW.
+### Ora legale per Medtrum
 
-#### Actions to take before the clock change
-1. Switch OFF any Phone's settings that automatically sets the Phone's time zone, so the user can change to a time zone that does not use DST. How to enable this will depend on your smartphone and Android version.
+* Il cambio all'ora legale viene effettuato automaticamente. Non è richiesta alcuna azione.
 
-   * Some phones have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the time zone (which you must turn OFF).
-   * Unfortunately, some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
+### Ora legale per Omnipod Dash
+
+* Consentire ad **AAPS** di tornare temporaneamente alla basale in background dopo il cambio dell'ora legale come spiegato sopra.
+* In alternativa, se non si desidera che **AAPS** torni temporaneamente alla basale in background durante la notte, è possibile cambiare il fuso orario il giorno prima del cambio dell'ora legale per evitare interruzioni notturne. NOTA: QUESTA OPZIONE POTREBBE CAUSARE LA SCADENZA ANTICIPATA DEL POD. SI PREGA DI AVERE FORNITURE A DISPOSIZIONE SE SI SCEGLIE QUESTA OPZIONE.
+
+#### Azioni da intraprendere prima del cambio dell'ora
+1. Disattivare qualsiasi impostazione del telefono che imposta automaticamente il fuso orario del telefono, in modo da poter cambiare in un fuso orario che non utilizza l'ora legale. Come abilitarlo dipende dallo smartphone e dalla versione Android.
+
+   * Alcuni telefoni hanno due impostazioni, una per l'impostazione automatica dell'ora (che idealmente dovrebbe rimanere attiva) e una per l'impostazione automatica del fuso orario (che bisogna DISATTIVARE).
+   * Purtroppo, alcune versioni di Android hanno un unico interruttore per abilitare l'impostazione automatica sia dell'ora che del fuso orario. Sarà necessario disattivarlo per ora.
 
 
 ![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
 
-2. Find a timezone that has the same time as your current location but doesn't use DST.
+2. Trovare un fuso orario con la stessa ora della posizione attuale ma che non utilizza l'ora legale.
 
-   * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo.
+   * Un elenco di questi paesi è disponibile su [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
+   * Per il Fuso Orario dell'Europa Centrale (CET) potrebbe essere "Brazzaville" (Congo). Cambiare il fuso orario del telefono in Congo.
 
 
 
 
 ![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
 
-3. **AAPS** refresh your pump and switch to your desired **Profile**.
+3. Aggiornare il microinfusore in **AAPS** e passare al **Profilo** desiderato.
 
-3. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the Fully Closed Loop for at least one DIA and Max-Carb-Time - whatever is bigger.
+3. Controllare l'**IOB** e il **COB** di **AAPS** e, se non sono accurati, disabilitare il Loop completamente chiuso per almeno un DIA e il Tempo massimo dei carboidrati, quello che è maggiore.
 
+<<<<<<< Updated upstream
 4. Actions to take after the clock change. A good time to make this switch would be with low **IOB**. E.g. E.g. an hour before a meal such as breakfast. Your **COB** and **IOB** should both be close to zero.)
+=======
+4. Azioni da intraprendere dopo il cambio dell'ora. Un buon momento per tornare al fuso orario locale è con un **IOB** basso. Ad esempio, un'ora prima di un pasto come la colazione. Idealmente sia il **COB** che l'**IOB** dovrebbero essere vicini allo zero.
+>>>>>>> Stashed changes
 
 
-### DST for Accu-Chek Combo
+### Ora legale per Accu-Chek Combo
 
-This section is only valid for the old, Ruffy-based driver. The new driver adjusts date and time and DST automatically.
+Questa sezione è valida solo per il vecchio driver basato su Ruffy. Il nuovo driver regola automaticamente data, ora e ora legale.
 
-**AAPS** will issue an alarm if the time between pump and phone differs too much. In case of DST time adjustment, this would be in the middle of the night. To prevent this and enjoy your sleep instead, follow these steps so that you can force the time change at a time convenient to yourself:
+**AAPS** emetterà un allarme se l'ora tra il microinfusore e il telefono differisce troppo. In caso di regolazione dell'ora legale, ciò avverrebbe nel cuore della notte. Per prevenire questo problema e dormire tranquillamente, seguire questi passaggi per poter forzare il cambio dell'ora in un momento conveniente:
 
-#### Actions to take before the clock change
-1. Switch OFF any setting that automatically sets the timezone, so you can force the time change when you want to. How you can do this will depend on your smartphone and Android version.
+#### Azioni da intraprendere prima del cambio dell'ora
+1. Disattivare qualsiasi impostazione che imposta automaticamente il fuso orario, in modo da poter forzare il cambio dell'ora quando si vuole. Come farlo dipenderà dallo smartphone e dalla versione Android.
 
-   * Some have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the timezone (which you must turn OFF).
-   * Unfortunately some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
+   * Alcuni hanno due impostazioni, una per l'impostazione automatica dell'ora (che idealmente dovrebbe rimanere attiva) e una per l'impostazione automatica del fuso orario (che bisogna DISATTIVARE).
+   * Purtroppo alcune versioni di Android hanno un unico interruttore per abilitare l'impostazione automatica sia dell'ora che del fuso orario. Sarà necessario disattivarlo per ora.
 
    Screenshot_20260329-110315 (1)
 
+<<<<<<< Updated upstream
 2. Find a timezone that has the same time as your current location but doesn't use DST.
 
    * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
@@ -171,12 +176,32 @@ A good time to make revert to local time zone is with low **IOB**. E.g. an hour 
 
 5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
 6. Continue as normal.
+=======
+2. Trovare un fuso orario con la stessa ora della posizione attuale ma che non utilizza l'ora legale.
+>>>>>>> Stashed changes
 
+   * Un elenco di questi paesi è disponibile su [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
+   * Per il Fuso Orario dell'Europa Centrale (CET) potrebbe essere "Brazzaville" (Congo). Cambiare il fuso orario del telefono in Congo.
 
+3. In **AAPS** aggiornare il microinfusore.
 
+4. Controllare la scheda Trattamenti... Se si vedono trattamenti duplicati:
 
+   * NON premere "elimina trattamenti futuri"
+   * Premere "rimuovi" su tutti i trattamenti futuri e quelli duplicati. Questo dovrebbe invalidare i trattamenti anziché rimuoverli, quindi non verranno più considerati per il calcolo dell'IOB.
 
+5. Se non è chiaro quanta IOB/COB sia presente, per sicurezza disabilitare il loop per almeno un DIA e il Tempo massimo dei carboidrati, quello che è maggiore.*
 
+#### Azioni da intraprendere dopo il cambio dell'ora
+Un buon momento per effettuare questo passaggio sarebbe con un **IOB** basso. Ad esempio, un'ora prima di un pasto come la colazione (tutti i boli recenti nella cronologia del microinfusore saranno state piccole correzioni SMB. Il **COB** e l'**IOB** dovrebbero essere entrambi vicini allo zero.)
 
+1. Cambiare il fuso orario Android nuovamente alla propria posizione attuale e riabilitare il fuso orario automatico.
+2. **AAPS** inizierà presto ad avvisare che l'orologio del Combo non corrisponde. Aggiornare quindi manualmente l'orologio del microinfusore tramite lo schermo e i pulsanti del microinfusore.
+3. Nella schermata "Combo" di **AAPS**, premere Aggiorna.
+4. Poi andare alla schermata Trattamenti e cercare eventuali eventi futuri. Non dovrebbero essercene molti.
 
+   * NON premere "elimina trattamenti futuri"
+   * Premere "rimuovi" su tutti i trattamenti futuri e quelli duplicati. Questo dovrebbe invalidare i trattamenti anziché rimuoverli, quindi non verranno più considerati per il calcolo dell'IOB.
 
+5. Se non è chiaro quanta IOB/COB sia presente, per sicurezza disabilitare il loop per almeno un DIA e il Tempo massimo dei carboidrati, quello che è maggiore.*
+6. Continuare normalmente.
