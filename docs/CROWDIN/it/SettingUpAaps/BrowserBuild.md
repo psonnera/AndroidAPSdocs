@@ -95,10 +95,7 @@ GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab
 ````{admonition} Note
 :class: note
 
-1. If you open this page from within an app (via a web view), the HTML file may not download. raw:: html
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download>  aaps-ci-preparation.html</a>
-```<!--crowdin:enable-->Please copy the URL and open it in your browser instead:
+1. If you open this page from within an app (via a web view), the HTML file may not download. Please copy the URL and open it in your browser instead:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
@@ -114,7 +111,10 @@ https://github.com/nightscout/aaps-ci-preparation/releases/latest
 
 ```{eval-rst}
 ..
-Please copy the URL and open it in your browser instead:
+raw:: html
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download>  aaps-ci-preparation.html</a>
+```<!--crowdin:enable-->Please copy the URL and open it in your browser instead:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
@@ -129,7 +129,7 @@ https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ..
 ````
 AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS): - If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
-- - If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
+- - - If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
 </br>
 
 ```{warning}
