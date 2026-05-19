@@ -1,60 +1,60 @@
-# Necessary checks after update coming from AAPS 2.6
+# Controlli necessari dopo l'aggiornamento da AAPS 2.6
 
-- The program code was changed significantly when switching to AAPS 2.7.
-- Therefore it is important that you make some changes or check settings after the update.
-- Please see [release notes](#Releasenotes-version-2-7-0) for details on new and extended features.
+- Il codice del programma è stato modificato significativamente passando ad AAPS 2.7.
+- È quindi importante apportare alcune modifiche o verificare le impostazioni dopo l'aggiornamento.
+- Consulta le [note di rilascio](#Releasenotes-version-2-7-0) per i dettagli sulle funzionalità nuove e ampliate.
 
 ## Check BG source
 
-- Check if BG source is correct after update.
-- Especially when using [xDrip+](../CompatibleCgms/xDrip.md) it might happen, that BG source is changed to Dexcom app (patched).
-- Open [Config builder](#Config-Builder-bg-source) (hamburger menu on top left side of home screen)
-- Scroll down to "BG source".
-- Select correct BG source if changes are necessary.
+- Controlla se la sorgente glicemia è corretta dopo l'aggiornamento.
+- Soprattutto quando si utilizza [xDrip+](../CompatibleCgms/xDrip.md) potrebbe succedere che la sorgente glicemia venga cambiata in app Dexcom (patchata).
+- Apri il [Generatore di configurazione](#Config-Builder-bg-source) (menu hamburger in alto a sinistra nella schermata principale)
+- Scorri verso il basso fino a "Sorgente BG".
+- Seleziona la sorgente BG corretta se sono necessarie modifiche.
 
 ![BG source](../images/ConfBuild_BG.png)
 
-## Finish exam
+## Completa l'esame
 
-- AAPS 2.7 contains new objective 11 (in later versions renumbered to objective 10!) for [automation](../DailyLifeWithAaps/Automations.md).
-- You have to finish exam ([objective 3 and 4](#objectives-objective3)) in order to complete objective 11.
-- If for example you did not finish the exam in [objective 3](#objectives-objective3) yet, you will have to complete the exam before you can start objective 11.
-- This will not effect other objectives you have already finished. You will keep all finished objectives!
+- AAPS 2.7 contiene il nuovo obiettivo 11 (nelle versioni successive rinumerato come obiettivo 10!) per le [automazioni](../DailyLifeWithAaps/Automations.md).
+- Devi completare l'esame ([obiettivo 3 e 4](#objectives-objective3)) per completare l'obiettivo 11.
+- Se ad esempio non hai ancora completato l'esame nell'[obiettivo 3](#objectives-objective3), dovrai completare l'esame prima di poter iniziare l'obiettivo 11.
+- Questo non influirà sugli altri obiettivi che hai già completato. Manterrai tutti gli obiettivi completati!
 
 ## Set master password
 
-- Necessary to be able to [export settings](ExportImportSettings.md) as they are encrypted as of version 2.7.
-- Open Preferences (three-dot-menu on top right of home screen)
-- Click triangle below "General"
-- Click "Master-Password"
-- Enter password, confirm password and click ok.
+- Necessaria per poter [esportare le impostazioni](ExportImportSettings.md) poiché sono criptate dalla versione 2.7.
+- Apri le Preferenze (menu a tre punti in alto a destra della schermata principale)
+- Clicca sul triangolo sotto "Generale"
+- Clicca su "Password Master"
+- Inserisci la password, conferma la password e clicca su OK.
 
 ![Set master password](../images/MasterPW.png)
 
-## Export settings
+## Esporta le impostazioni
 
-- AAPS 2.7 uses a new encrypted backup format.
-- You must [export your settings](ExportImportSettings.md) after updating to version 2.7.
-- Settings files from previous versions can only be imported in AAPS 2.7. Export will be in new format.
-- Make sure to store your exported settings not only on your phone but also in at least one safe place (your pc, cloud storage...).
-- If you build AAPS 2.7 apk with the same keystore than in previous versions you can install new version without deleting the previous version.
-- All settings as well as finished objectives will remain as they were in the previous version.
-- In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the [troubleshooting section](#troubleshooting_androidstudio-lost-keystore).
+- AAPS 2.7 usa un nuovo formato di backup criptato.
+- Devi [esportare le tue impostazioni](ExportImportSettings.md) dopo l'aggiornamento alla versione 2.7.
+- I file di impostazioni delle versioni precedenti possono essere importati solo in AAPS 2.7. L'esportazione sarà nel nuovo formato.
+- Assicurati di memorizzare le impostazioni esportate non solo sul tuo telefono ma anche in almeno un posto sicuro (il tuo PC, cloud storage...).
+- Se compili l'apk di AAPS 2.7 con la stessa chiave delle versioni precedenti, puoi installare la nuova versione senza eliminare la versione precedente.
+- Tutte le impostazioni così come gli obiettivi completati rimarranno come erano nella versione precedente.
+- Nel caso in cui tu abbia perso la tua chiave, compila la versione 2.7 con una nuova chiave e importa le impostazioni dalla versione precedente come descritto nella [sezione di risoluzione dei problemi](#troubleshooting_androidstudio-lost-keystore).
 
-## Autosens (Hint - no action necessary)
+## Autosens (Suggerimento - nessuna azione necessaria)
 
-- Autosens is changed to a dynamic switching model which replicates the reference design.
-- Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive.
-- If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
+- Autosens è stato modificato in un modello di commutazione dinamica che replica il design di riferimento.
+- Autosens ora passa tra una finestra di 24 e 8 ore per calcolare la sensibilità. Sceglierà quella più sensibile.
+- Se gli utenti vengono da oref1, probabilmente noteranno che il sistema potrebbe essere meno dinamico ai cambiamenti, a causa della variazione di 24 o 8 ore di sensibilità.
 
-## Set Pump Password for Dana RS (if using Dana RS)
+## Imposta la password del microinfusore per Dana RS (se si usa Dana RS)
 
-- Pump password for [Dana RS](../CompatiblePumps/DanaRS-Insulin-Pump.md) was not checked in previous versions.
-- Open Preferences (three-dot-menu on top right of screen)
-- Scroll down and click triangle next to "Dana RS".
-- Click "Pump password (v1 only)"
-- Enter pump password ([Default password](#DanaRS-Insulin-Pump-default-password) is different depending on firmware version) and click OK.
+- La password del microinfusore per [Dana RS](../CompatiblePumps/DanaRS-Insulin-Pump.md) non veniva verificata nelle versioni precedenti.
+- Apri le Preferenze (menu a tre punti in alto a destra dello schermo)
+- Scorri verso il basso e clicca sul triangolo accanto a "Dana RS".
+- Clicca su "Password microinfusore (solo v1)"
+- Inserisci la password del microinfusore ([La password predefinita](#DanaRS-Insulin-Pump-default-password) è diversa a seconda della versione del firmware) e clicca su OK.
 
 ![Set Dana RS password](../images/DanaRSPW.png)
 
-To change password on Dana RS follow instructions on [DanaRS page](#DanaRS-Insulin-Pump-change-password-on-pump).
+Per cambiare la password su Dana RS segui le istruzioni nella [pagina DanaRS](#DanaRS-Insulin-Pump-change-password-on-pump).
