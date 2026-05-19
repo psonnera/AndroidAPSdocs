@@ -81,7 +81,7 @@ Anche se non hai bisogno dell'app xDrip+ come **Sorgente Glicemia**, puoi ancora
 
 ## Cosa fare durante l'attesa dei moduli
 
-A volte ci vuole un po' di tempo per ottenere tutti i moduli per chiudere il circuito. Ma nessuna preoccupazione, ci sono un sacco di cose che puoi fare mentre aspetti. È **necessario** controllare e, se necessario, adattare i tassi basali (BR), i rapporti insulina-CHO (IC), i fattori di sensibilità insulinica (ISF) ecc. Il circuito aperto può essere un buon modo per testare il sistema e familiarizzarsi con **AAPS**. Utilizzando questa modalità, **AAPS** fornisce raccomandazioni di trattamento che puoi eseguire manualmente.
+A volte ci vuole un po' di tempo per ottenere tutti i moduli per chiudere il circuito. Ma nessuna preoccupazione, ci sono un sacco di cose che puoi fare mentre aspetti. È **necessario** controllare e, se necessario, adattare i tassi basali (BR), i rapporti insulina-CHO (IC), i fattori di sensibilità insulinica (ISF) ecc. Il circuito aperto può essere un buon modo per testare il sistema e familiarizzarsi con **AAPS**. Il circuito aperto può essere un buon modo per testare il sistema e familiarizzarsi con **AAPS**. Utilizzando questa modalità, **AAPS** fornisce raccomandazioni di trattamento che puoi eseguire manualmente.
 
 Puoi continuare a leggere la documentazione qui, entrare in contatto con altri utenti AAPS online o offline, [leggere altri documenti](../UsefulLinks/BackgroundReading.md) o ciò che altri utenti scrivono (anche se devi fare attenzione, non tutto è corretto o buono da usare per te).
 

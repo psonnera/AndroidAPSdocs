@@ -145,7 +145,7 @@ Le impostazioni di **AAPS** devono essere sufficientemente configurate per far f
 
 Per un **FCL** di successo, l'**ISF** è il parametro chiave di messa a punto. Quando si utilizza **AAPS** Master + **Automazioni**, **un cambio di profilo > 100% deve essere attivato automaticamente al riconoscimento del pasto** (tramite i delta di glucosio), e fornire l'**ISF** potenziato.
 
-The section below provides guidance how to bundle **Automation’s** Conditions and how to tackle situations in which the **AAPS** should increase (or decrease) insulin delivery. As **ISF** cannot directly be tuned, raising **Profile Percentage** over 100% will do the same for our purposes.
+**AAPS** Master consente fino al 130% di **Profilo** temporaneo in modalità **HCL**. Il potenziamento dell'**ISF** viene fatto in 3 passi:
 
 **AAPS** Master consente fino al 130% di **Profilo** temporaneo in modalità **HCL**. Il potenziamento dell'**ISF** viene fatto in 3 passi:
 
@@ -197,7 +197,7 @@ Se le Condizioni si applicano, **AAPS** darebbe 1 o 2 **SMB** nei prossimi 12 mi
 
 La stessa **Automazione** probabilmente si attiverà anche in pasti con più carboidrati, una volta che il forte aumento definito nell'Automazione #1 è terminato.
 
-Both, you with defining your meal spectrum and settings (notably, **iobTH**), and the loop managing the unfolding **BG** curve, must accept certain peak heights for reducing hypo danger towards the end of the **DIAs** from **SMBs**.  If your breakfast substantially deviates in carb content from your average dinner, you may benefit from defining **Automations** that apply in the respective times of day, and have different **iobTH** (possibly also different deltas, and different **Percentage Profile** set).
+Devi "mettere in fila" queste due (+ forse una terza) **Automazioni** per adattarle a ciò che vedi nella tua varietà di pasti => impostare dimensioni di salto appropriate, criteri **IOB** e amplificazioni sarà un processo di messa a punto iterativo.  Inoltre, se includi intervalli di tempo appropriati nelle Condizioni, puoi facilmente fare diverse Automazioni per i diversi orari dei pasti giornalieri (colazione, pranzo, cena).
 
 Devi "mettere in fila" queste due (+ forse una terza) **Automazioni** per adattarle a ciò che vedi nella tua varietà di pasti => impostare dimensioni di salto appropriate, criteri **IOB** e amplificazioni sarà un processo di messa a punto iterativo. Inoltre, se includi intervalli di tempo appropriati nelle Condizioni, puoi facilmente fare diverse Automazioni per i diversi orari dei pasti giornalieri (colazione, pranzo, cena).
 
@@ -258,7 +258,7 @@ Inoltre, è necessaria una Automazione di terminazione #5, "Ferma altoPM", affin
 
 Il problema centrale è che l'**FCL** **UAM** (senza input di carboidrati) **non può avere alcuna idea di quanti g di carboidrati sono ancora disponibili** per l'assorbimento, e potrebbe usare quella insulina "di coda", senza che tu vada in ipoglicemia da essa.
 
-Boosting the **ISF** is done in 3 steps: **AAPS** Master allows up to 130% temporary **Profile** in **HCL** p mode.
+Questo affinché all'inizio dell'aumento della **BG** correlato al pasto, l'**FCL** sia in grado di mantenere la **BG** nell'intervallo (per definizione comune, sotto 180 mg/dl (10 mmol/l)). L'**FCL** richiede insulina veloce.
 
 Usando **SMB** potenziati, l'**FCL** "ha recuperato" ciò che prima facevamo con un bolo pasto. Ma, **alla "coda" dell'attività insulinica, la prevenzione dell'ipoglicemia può diventare un argomento serio**.
 

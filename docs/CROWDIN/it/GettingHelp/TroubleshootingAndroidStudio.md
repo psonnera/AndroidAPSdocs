@@ -246,7 +246,7 @@ Il tuo apk è stato costruito con successo e può essere trasferito sul tuo tele
 
 ## Nessun dato sensore CGM è ricevuto da AAPS
 
-* Se stai usando l'app patchata Dexcom G6: questa app è obsoleta. Usa invece l'app [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
+* Usa invece l'app [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app). Se stai usando l'app patchata Dexcom G6: questa app è obsoleta.
 
 * Se usi xDrip+: identifica il ricevitore come descritto nella pagina delle [impostazioni xDrip+](#xdrip-identify-receiver).
 
@@ -287,7 +287,7 @@ Se nessuno dei suggerimenti sopra ti ha aiutato, considera ricostruire l'apk da 
 
 ## Scenario peggiore
 
-Niente di quello suggerito sopra risolve il problema di build, puoi provare a disinstallare completamente Android Studio e ricostruire da zero.  Alcuni utenti trovano che questo può risolvere il loro problema di compilazione.  Quando disinstalli Android Studio, non eliminare le impostazioni utente Android e **Assicurati di disinstallare tutti i file associati con Android Studio.** Se non rimuovi completamente Android Studio e tutti i file nascosti, la disinstallazione può causare nuovi problemi invece di risolvere quelli esistenti. I manuali per la disinstallazione completa possono essere trovati online ad es.
+I manuali per la disinstallazione completa possono essere trovati online ad es.  Alcuni utenti trovano che questo può risolvere il loro problema di compilazione.  Quando disinstalli Android Studio, non eliminare le impostazioni utente Android e **Assicurati di disinstallare tutti i file associati con Android Studio.** Se non rimuovi completamente Android Studio e tutti i file nascosti, la disinstallazione può causare nuovi problemi invece di risolvere quelli esistenti. Niente di quello suggerito sopra risolve il problema di build, puoi provare a disinstallare completamente Android Studio e ricostruire da zero.
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 

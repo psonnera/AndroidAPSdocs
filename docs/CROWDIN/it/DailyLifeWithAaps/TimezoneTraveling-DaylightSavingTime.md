@@ -152,7 +152,7 @@ Questa sezione è valida solo per il vecchio driver basato su Ruffy. Il nuovo dr
 2. Find a timezone that has the same time as your current location but doesn't use DST.
 
    * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo.
+   * Per il Fuso Orario dell'Europa Centrale (CET) potrebbe essere "Brazzaville" (Congo). Cambiare il fuso orario del telefono in Congo.
 
 3. In **AAPS** refresh your pump.
 
@@ -164,7 +164,7 @@ Questa sezione è valida solo per il vecchio driver basato su Ruffy. Il nuovo dr
 5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
 
 #### Actions to take after the clock change
-A good time to make revert to local time zone is with low **IOB**. E.g. an hour before a meal such as breakfast. Actions to take after the clock change. Ideally your **COB** and **IOB** should both be close to zero.
+Un buon momento per effettuare questo passaggio sarebbe con un **IOB** basso. E.g. E.g. an hour before a meal such as breakfast. Ad esempio, un'ora prima di un pasto come la colazione (tutti i boli recenti nella cronologia del microinfusore saranno state piccole correzioni SMB. Ideally your **COB** and **IOB** should both be close to zero.
 
 1. Change the Android timezone back to your current location and re-enable automatic timezone.
 2. **AAPS** will soon start alerting you that the Combo’s clock doesn’t match. So update the pump’s clock manually via the pump’s screen and buttons.

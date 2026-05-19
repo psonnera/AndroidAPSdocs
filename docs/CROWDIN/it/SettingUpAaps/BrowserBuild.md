@@ -67,7 +67,8 @@ Forking a repository allows you to freely experiment with changes without affect
 Non riesci a fare il fork e vedi questo?</br></br>
 >>>>>>> Stashed changes
 **`Create a new fork`**</br>
-`A fork is a copy of a repository. View existing forks.`</br>
+`A fork is a copy of a repository. <<<<<<< Updated upstream
+Forking a repository allows you to freely experiment with changes without affecting the original project. View existing forks.`</br>
 *`Required fields are marked with an asterisk (*).`*</br>
 **`No available destinations to fork this repository.`**</br></br>
 Ciò significa che hai già un fork esistente di AndroidAPS.</br>
@@ -119,21 +120,10 @@ https://github.com/nightscout/aaps-ci-preparation/releases/latest
  - Se anche il link esterno non è disponibile, puoi utilizzare questo file di backup per il download.
 <!--crowdin:disable-->
 
-```{eval-rst}
-..
-Please copy the URL and open it in your browser instead:
-```text
-https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
-```
-Or visit the latest release page:
-```text
-https://github.com/nightscout/aaps-ci-preparation/releases/latest
-```
-
-2.Backup copy hosted on this site:
-
- - If the external link is also unavailable, you can use this backup file to download.<!--crowdin:disable-->```{eval-rst}
-..
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download>  aaps-ci-preparation.html</a>
+```<!--crowdin:enable-->Please copy the URL and open it in your browser instead:
+=======
+1.
 ````
 <<<<<<< Updated upstream
 AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS): - If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.

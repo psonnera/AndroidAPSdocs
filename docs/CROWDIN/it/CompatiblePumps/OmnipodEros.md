@@ -568,7 +568,7 @@ Le impostazioni del driver Omnipod sono configurabili dal **menu a tendina** in 
 
 **NOTA:** Un modo più rapido per accedere alle **impostazioni Omnipod** è tramite il **menu a 3 punti (1)** nell'angolo in alto a destra della scheda **Omnipod (POD)** e selezionando **Preferenze Omnipod (2)** dal menu a discesa.
 
-![Impostazioni_Omnipod_2](../images/omnipod/Omnipod_Settings_2.png)
+![Conferma_Allarmi_2](../images/omnipod/Omnipod_Settings_2.png)
 
 I gruppi di impostazioni sono elencati di seguito; è possibile abilitarli o disabilitarli tramite un interruttore a levetta per la maggior parte delle voci descritte di seguito:
 
