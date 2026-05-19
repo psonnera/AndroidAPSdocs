@@ -1,4 +1,4 @@
-Compatible with Android (The simplest, recommended as the first choice)
+Compatibile con Android (Il metodo più semplice, consigliato come prima scelta)
 
 <!--crowdin: exclude-->
 
