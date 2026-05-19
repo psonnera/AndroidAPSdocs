@@ -10,8 +10,8 @@ Juggluco può anche mandare i dati a LibreView per la condivisione con il diabet
 
 All'interno di xDrip+ il sensore può essere calibrato nell'intervallo da -40 mg/dl a +20 mg/dl (da -2,2 mmol/l a +1,1 mmol/l) per compensare le differenze tra la lettura manuale con il gluometro e le letture del sensore.
 
-## Method 1: use 1-minute readings directly
-AndroidAPS is taylored for 5-minute readings. Therefore processing 1-minute values has occasional limitations.
+## Metodo 1: usa le letture al minuto direttamente
+AndroidAPS è ottimizzato per letture a 5 minuti. Pertanto l'elaborazione di valori al minuto presenta occasionali limitazioni.
 
 See [here](#juggluco-to-aaps).
 
@@ -55,7 +55,7 @@ Dopo un cambio di sensore, xDrip+ rileva automaticamente il nuovo sensore ed eli
 - See [here](#juggluco-to-xdrip) and come back.
 
 - Se AndroidAPS non riceve i valori di glicemia quando il telefono è in modalità aereo, usa "Identifica ricevitore"
-- Turn off Smoothing (done in xDrip+ already)
+- Disabilita lo smoothing (già fatto in xDrip+)
 
 ## Cambiamenti successivi del sensore
 
@@ -65,7 +65,7 @@ Dopo un cambio di sensore, xDrip+ rileva automaticamente il nuovo sensore ed eli
 
 2. Ora basta eseguire la scansione del nuovo sensore con il lettore NFC del telefono. Juggluco mostrerà un avviso se il processo è stato avviato correttamente.
 3. Quando sei pronto a disattivare il vecchio sensore, poi aprire il menu Juggluco cliccando ovunque nello spazio vuoto nell'angolo in alto a sinistra dello schermo.
-4. Select the expired sensor and tap "Terminate"
+4. Seleziona il sensore scaduto e tocca "Termina"
 
 ![Termina sensore](../images/libre3/step_14.jpg)
 
