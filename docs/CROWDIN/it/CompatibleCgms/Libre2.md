@@ -24,7 +24,7 @@ Ci sono alcune buone ragioni per utilizzare un trasmettitore Bluetooth:
 
 Nota: Il trasmettitore può essere utilizzato in contemporanea con l'applicazione LibreLink senza interferire.
 
-### Start sensor
+### Avvia il sensore
 
 - → Menu (1) → Inizializza sensore (2) → Inizializza sensore (3) → Rispondi con "Non oggi" (4).
 
@@ -34,7 +34,7 @@ Questo non avvia alcun sensore Libre2, né vi interagisce in alcun modo. Questo 
 
 Dopo un cambio di sensore, xDrip+ rileva automaticamente il nuovo sensore ed elimina tutti i parametri di calibrazione vecchi. Dopo l'attivazione è possibile misurare la glicemia con il glucometro ed effettuare una nuova calibrazione iniziale.
 
-### Configure AAPS (for looping only)
+### Configura AAPS (solo per il loop)
 
 -   Su AAPS vai in Configuratore strutturale > Origine BG e seleziona 'xDrip+'.
 
@@ -50,10 +50,10 @@ xDrip+ non supporta la connessione diretta a Libre 2 US e AUS.
 Solo i modelli Libre 2 e 2+ **EU**.
 ```
 
-- Follow [these instructions](./Libre2MinimalL00per.md) to setup xDrip+ as the original documentation links to an obsolete OOP2  version.
+- Segui [queste istruzioni](./Libre2MinimalL00per.md) per configurare xDrip+ poiché la documentazione originale rimanda a una versione OOP2 obsoleta.
 - Segui le istruzioni di configurazione nella [pagina delle impostazioni di xDrip+](../CompatibleCgms/xDrip.md).
 
--   Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   Seleziona xDrip+ nel [Configuratore Strutturale, Origine BG](#Config-Builder-bg-source).
 
 (libre2-value-smoothing-raw-values)=
 
@@ -89,4 +89,4 @@ Puoi calibrare il Libre2 **con una differenza da -40 mg/dl a +20 mg/dL \[-2,2 mm
 
 ## 4. Usa Juggluco
 
-See [here](./Juggluco.md).
+Vedi [qui](./Juggluco.md).
