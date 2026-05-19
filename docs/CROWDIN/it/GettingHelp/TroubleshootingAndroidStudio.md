@@ -27,8 +27,8 @@ Nel caso in cui non sia possibile rintracciare la tua chiave originale o la pass
 8. Controlla le opzioni di ottimizzazione della batteria e disabilitale di nuovo.
 9. Continua con il tuo circuito chiuso.
 
-## Gradle Sync failed
-Gradle Sync può fallire per vari motivi. Se ricevi un messaggio che dice 'gradle sync failed', apri la scheda "Build" (1) nella parte inferiore di Android Studio e controlla quale messaggio di errore (2) viene visualizzato.
+## Sincronizzazione Gradle non riuscita
+La sincronizzazione Gradle può fallire per vari motivi. Se ricevi un messaggio che dice 'gradle sync failed', apri la scheda "Build" (1) nella parte inferiore di Android Studio e controlla quale messaggio di errore (2) viene visualizzato.
 
 ![Gradle Fallito](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
@@ -114,7 +114,7 @@ Clone sources again as described in wiki and do not allow gradle update
 
 Segui le istruzioni di [Risincronizza Gradle](#gradle-resync).
 
-### Git Pull Fallito - Please tell me who you are
+### Git Pull Fallito - Indicami chi sei
 
 Se vedi questo messaggio, Git ha bisogno che ti identifichi te stesso.
 
@@ -149,7 +149,7 @@ The minimum compatible Gradle version is 8.5.
 The maximum compatible Gradle JVM version is 19.
 ```
 
-Or:
+Oppure:
 
 ```
 Cause: error: invalid source release: 21
@@ -163,12 +163,12 @@ Se vedi il messaggio di errore sopra, devi scaricare la versione corretta di JVM
 
 ![Apri Le Impostazioni Gradle](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. L’esempio seguente mostra che JVM 21 è segnato “jbr-21”. Se lo trovi, basta selezionarlo, e hai finito. Se non è disponibile, selezionare 'Scarica JDK'.
+3.  Nel campo **Gradle JDK**, verifica che sia selezionata la versione appropriata (1). In caso contrario, clicca sul campo e controlla se è già disponibile nell’elenco. L’esempio seguente mostra che JVM 21 è segnato “jbr-21”. Se lo trovi, basta selezionarlo, e hai finito. Se non è disponibile, selezionare ‘Scarica JDK’.
 
 
 ![Seleziona Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. In Version (1), seleziona il JDK richiesto per la tua versione **AAPS** (quella che ti sei segnata quando hai controllato la tabella dei requisiti). In Vendor (2) select any Vendor. Location (3): non modificare.
+4. In Version (1), seleziona il JDK richiesto per la tua versione **AAPS** (quella che ti sei segnata quando hai controllato la tabella dei requisiti). In Vendor (2) seleziona qualsiasi Vendor. Location (3): non modificare.
 
 ![Seleziona JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
@@ -187,7 +187,7 @@ Se vedi il messaggio di errore sopra, devi scaricare la versione corretta di JVM
   Stai usando una versione obsoleta di Android Studio. Nel menu, vai a Help > Check for updates e installa gli aggiornamenti di Android Studio e di tutti i plugin che vengono trovati.
 
 (troubleshooting_androidstudio-could-not-resolve-no-cached-version)=
-### Could not resolve/No cached version
+### Impossibile risolvere/Nessuna versione in cache
 
   Potresti ricevere questo messaggio di errore:
 
@@ -206,12 +206,12 @@ Se vedi il messaggio di errore sopra, devi scaricare la versione corretta di JVM
 
   Se vedi un messaggio di errore come quello sotto, probabilmente stai utilizzando un sistema Windows 10 a 32 bit. Non è supportato da Android Studio 3.5.1 e oltre, e purtroppo non c'è nulla che gli sviluppatori **AAPS** possano fare a riguardo!
 
-  There is information on the internet about how to determine whether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
+  Su Internet sono disponibili informazioni su come determinare se hai un sistema operativo a 32 o 64 bit, ad esempio [qui](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
   ![Schermata Impossibile avviare il processo daemon](../images/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
-### Gradle Resync
+### Risincronizzazione Gradle
 
   Se vedi ancora il messaggio che la sincronizzazione del Gradle non è riuscita, seleziona il link "Try again". ![Gradle Sync Non Riuscita](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
@@ -226,7 +226,7 @@ Se vedi il messaggio di errore sopra, devi scaricare la versione corretta di JVM
 
   * Clicca su "Reload Gradle Project" (3)
 
-## Generate Signed APK generated successfully with 0 build variants
+## APK Firmato generato con successo con 0 varianti di build
 
 Quando generi l'apk firmata, potresti avere la notifica che è stata creata correttamente ma che '0 varianti di generazione' sono stati generati:
 
@@ -246,7 +246,7 @@ Il tuo apk è stato costruito con successo e può essere trasferito sul tuo tele
 
 ## Nessun dato sensore CGM è ricevuto da AAPS
 
-* Se stai usando l'app patchata Dexcom G6: questa app è obsoleta. Usa invece l'app [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
+* Usa invece l'app [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app). Se stai usando l'app patchata Dexcom G6: questa app è obsoleta.
 
 * Se usi xDrip+: identifica il ricevitore come descritto nella pagina delle [impostazioni xDrip+](#xdrip-identify-receiver).
 
@@ -287,7 +287,7 @@ Se nessuno dei suggerimenti sopra ti ha aiutato, considera ricostruire l'apk da 
 
 ## Scenario peggiore
 
-Niente di quello suggerito sopra risolve il problema di build, puoi provare a disinstallare completamente Android Studio e ricostruire da zero.  Alcuni utenti trovano che questo può risolvere il loro problema di compilazione.  Quando disinstalli Android Studio, non eliminare le impostazioni utente Android e **Assicurati di disinstallare tutti i file associati con Android Studio.** Se non rimuovi completamente Android Studio e tutti i file nascosti, la disinstallazione può causare nuovi problemi invece di risolvere quelli esistenti. I manuali per la disinstallazione completa possono essere trovati online ad es.
+I manuali per la disinstallazione completa possono essere trovati online ad es.  Alcuni utenti trovano che questo può risolvere il loro problema di compilazione.  Quando disinstalli Android Studio, non eliminare le impostazioni utente Android e **Assicurati di disinstallare tutti i file associati con Android Studio.** Se non rimuovi completamente Android Studio e tutti i file nascosti, la disinstallazione può causare nuovi problemi invece di risolvere quelli esistenti. Niente di quello suggerito sopra risolve il problema di build, puoi provare a disinstallare completamente Android Studio e ricostruire da zero.
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
