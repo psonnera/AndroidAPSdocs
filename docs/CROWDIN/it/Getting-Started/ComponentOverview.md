@@ -48,7 +48,7 @@ I vantaggi di DanaR/RS e Dana-i confrontati a Combo come micro di scelta tuttavi
 - L'accoppiamento iniziale è più semplice con Dana-i/RS. Ma di solito lo fai solo una volta, quindi impatta solo se desideri provare una nuova funzione con micro diversi.
 - Finora Combo funziona con l'analisi dello schermo. In generale funziona bene, ma è lento. Per un circuito chiuso, non importa tanto visto che tutto funziona in sfondo. Tuttavia richiede di essere spesso collegato, quindi la connessione BT potrebbe interrrompersi più facilmente, quando ti allontani dal telefono mentre fai un bolo & stai cucinando.
 - Combo vibra alla fine delle basale temporanee, il DanaR vibra (o bippa) per i micro-boli. Di notte, è probabile che vorrai usare basale temporanee e non SMB.  Dana-i/RS è configurabile in modo da non bippare né vibrare.
-- Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
+- Leggere la cronologia del Dana-i/RS in pochi secondi con i carboidrati rende possibile cambiare telefono facilmente mentre si è offline e continuare il loop non appena alcuni valori CGM sono disponibili.
 - Tutte i micro compatibili con **AAPS** sono impermeabili alla consegna. Solo i micro Dana sono "impermeabili sotto garanzia" grazie al vano batterie sigillato e al sistema di riempimento del serbatoio.
 
 ### Sorgente Glicemia
@@ -71,18 +71,18 @@ Ulteriori informazioni su come configurare il tuo server di rendicontazione sono
 
 ### Smartwatch
 
-You can choose any smartwatch with Android WearOS 1.x up to 4.x. **Beware, WearOS 5.x is not compatible!**
+Puoi scegliere qualsiasi smartwatch con Android WearOS 2.x fino a 4.x. **Attenzione, WearOS 5.x non è sempre compatibile!**
 
 Gli utenti stanno creando un elenco [di telefoni e orologi testati](#Phones-list-of-tested-phones). Ci sono diversi quadranti da usare con **AAPS**, che puoi trovare [qui](../WearOS/WearOsSmartwatch.md).
 
 ### xDrip+
 
-Even if you don't need to have the xDrip+ App as **BG Source**, you can still use it for _i.e._ alarms or a different blood glucose display. Puoi avere tutti gli allarmi che vuoi, specificare il tempo in cui l'allarme deve essere attivo, se può ignorare la modalità silenziosa, ecc. Puoi trovare informazioni su xDrip+ [qui](../CompatibleCgms/xDrip.md). Siate consapevoli che la documentazione di questa applicazione non è sempre aggiornata, in quanto la sua evoluzione è abbastanza veloce.
+Anche se non hai bisogno dell'app xDrip+ come **Sorgente Glicemia**, puoi ancora usarla per _ad es._ allarmi o una diversa visualizzazione della glicemia. Puoi avere tutti gli allarmi che vuoi, specificare il tempo in cui l'allarme deve essere attivo, se può ignorare la modalità silenziosa, ecc. Puoi trovare informazioni su xDrip+ [qui](../CompatibleCgms/xDrip.md). Puoi trovare informazioni su xDrip+ [qui](../CompatibleCgms/xDrip.md). Siate consapevoli che la documentazione di questa applicazione non è sempre aggiornata, in quanto la sua evoluzione è abbastanza veloce.
 
 ## Cosa fare durante l'attesa dei moduli
 
-A volte ci vuole un po' di tempo per ottenere tutti i moduli per chiudere il circuito. Ma nessuna preoccupazione, ci sono un sacco di cose che puoi fare mentre aspetti. È **necessario** controllare e, se necessario, adattare i tassi basali (BR), i rapporti insulina-CHO (IC), i fattori di sensibilità insulinica (ISF) ecc. Il circuito aperto può essere un buon modo per testare il sistema e familiarizzarsi con **AAPS**. Utilizzando questa modalità, **AAPS** fornisce raccomandazioni di trattamento che puoi eseguire manualmente.
+A volte ci vuole un po' di tempo per ottenere tutti i moduli per chiudere il circuito. Ma nessuna preoccupazione, ci sono un sacco di cose che puoi fare mentre aspetti. È **necessario** controllare e, se necessario, adattare i tassi basali (BR), i rapporti insulina-CHO (IC), i fattori di sensibilità insulinica (ISF) ecc. Il circuito aperto può essere un buon modo per testare il sistema e familiarizzarsi con **AAPS**. Il circuito aperto può essere un buon modo per testare il sistema e familiarizzarsi con **AAPS**. Utilizzando questa modalità, **AAPS** fornisce raccomandazioni di trattamento che puoi eseguire manualmente.
 
 Puoi continuare a leggere la documentazione qui, entrare in contatto con altri utenti AAPS online o offline, [leggere altri documenti](../UsefulLinks/BackgroundReading.md) o ciò che altri utenti scrivono (anche se devi fare attenzione, non tutto è corretto o buono da usare per te).
 
-**Done?** If you have your **AAPS** components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../SettingUpAaps/CompletingTheObjectives.md) before each new Objective and setup up your hardware.
+**Fatto?** Se hai tutti i componenti **AAPS** insieme (complimenti!) o almeno abbastanza per iniziare in modalità loop aperto, dovresti prima leggere la [descrizione degli Obiettivi](../SettingUpAaps/CompletingTheObjectives.md) prima di ogni nuovo Obiettivo e configurare il tuo hardware.
