@@ -7,11 +7,11 @@ Con la terapia con microinfusore tradizionale, i boli estesi sono un buon metodo
 
 La necessità di gestire tali pasti esiste comunque. Ecco perché AAPS dalla versione 2.0 supporta i cosiddetti carboidrati estesi o eCarbs.
 
-Gli eCarbs sono carboidrati suddivisi su più ore. Per i pasti standard con più carboidrati che grassi/proteine, inserire i carboidrati in anticipo (e ridurre il bolo iniziale se necessario) è solitamente sufficiente per evitare una somministrazione di insulina troppo precoce. Ma per i pasti ad assorbimento più lento, in cui l'inserimento completo dei carboidrati in anticipo genera troppa IOB dagli SMB, è possibile usare gli eCarbs per simulare più accuratamente come i carboidrati (e qualsiasi equivalente di carboidrati inserito per altri macronutrienti) vengono assorbiti e influenzano la glicemia. Con queste informazioni, il loop può somministrare SMB in modo più graduale per gestire quei carboidrati, il che può essere visto come un bolo esteso dinamico (questo dovrebbe funzionare anche senza SMB, ma probabilmente è meno efficace).
+Gli eCarbs sono carboidrati suddivisi su più ore. Per i pasti standard con più carboidrati che grassi/proteine, inserire i carboidrati in anticipo (e ridurre il bolo iniziale se necessario) è solitamente sufficiente per evitare una somministrazione di insulina troppo precoce.  Ma per i pasti ad assorbimento più lento, in cui l'inserimento completo dei carboidrati in anticipo genera troppa IOB dagli SMB, è possibile usare gli eCarbs per simulare più accuratamente come i carboidrati (e qualsiasi equivalente di carboidrati inserito per altri macronutrienti) vengono assorbiti e influenzano la glicemia. Con queste informazioni, il loop può somministrare SMB in modo più graduale per gestire quei carboidrati, il che può essere visto come un bolo esteso dinamico (questo dovrebbe funzionare anche senza SMB, ma probabilmente è meno efficace).
 
 **Nota:** gli eCarbs non si limitano ai pasti ricchi di grassi/proteine: possono essere usati anche per gestire qualsiasi situazione in cui vi siano influenze che aumentano la glicemia, ad esempio altri farmaci come i corticosteroidi.
 
-## Funzionamento degli eCarbs
+## Mechanics of using eCarbs
 
 Per inserire gli eCarbs, impostare una durata nella finestra di dialogo *Carboidrati* nella scheda panoramica, il totale dei carboidrati e, facoltativamente, uno sfasamento temporale (*i numeri sottostanti sono solo esempi; sarà necessario provare i propri valori per ottenere una risposta glicemica soddisfacente per i propri casi d'uso*):
 
