@@ -1,7 +1,7 @@
-# Vita quotidiana - Microinfusori
+# Daily Life - Pumps
 ## Cambio dei set di infusione: serbatoi di insulina e cannule
 
-La procedura descritta di seguito è applicabile solo ai microinfusori con tubo e non si applica ai microinfusori patch come Omnipod, Medtrum Nano, Accu-Chek Solo, ecc. Questa procedura viene talvolta chiamata "cambio del set", dove un cambio "completo" include il serbatoio di insulina e la cannula, e un cambio "parziale" si riferisce solo alla sostituzione della cannula.
+The procedure described below is for tubed pumps only and does not apply to patch pumps like Omnipod, Medtrum Nano, Accu-Chek Solo etc. La procedura descritta di seguito è applicabile solo ai microinfusori con tubo e non si applica ai microinfusori patch come Omnipod, Medtrum Nano, Accu-Chek Solo, ecc. Questa procedura viene talvolta chiamata "cambio del set", dove un cambio "completo" include il serbatoio di insulina e la cannula, e un cambio "parziale" si riferisce solo alla sostituzione della cannula.
 
 Le sostituzioni fisiche della cartuccia/serbatoio non possono essere eseguite tramite **AAPS** e devono essere effettuate direttamente sul microinfusore. È necessario registrarle manualmente in **AAPS** una volta completate.
 
@@ -31,7 +31,7 @@ Le sostituzioni fisiche della cartuccia/serbatoio non possono essere eseguite tr
 
 Se si è certi di non aver ricevuto insulina per un certo periodo, nonostante **AAPS** registri che è stata somministrata, e si sa esattamente quando è iniziato il problema (_es._ si rimuove la cannula e si vede che era piegata durante l'inserimento), è possibile correggere in **AAPS**, tenendo presente che l'insulina potrebbe in realtà essere stata somministrata ma potrebbe agire lentamente per qualche motivo.
 
-```{admonition} Attenzione - Rischio di ipoglicemia
+```{admonition} Caution - Risk of Hypoglycemia
 :class: danger
 Eliminare le somministrazioni di insulina da **AAPS** con ESTREMA cautela, nel caso in cui l'insulina _sia_ stata effettivamente somministrata, e monitorare attentamente la glicemia nelle successive 24 ore.
 ```
@@ -52,7 +52,7 @@ Per comunicare ad **AAPS** l'insulina erogata dal microinfusore mentre **AAPS** 
 
 Se si utilizza **AAPS** come caregiver, è possibile disconnettere (e riconnettere) il microinfusore da remoto molto facilmente tramite [comando SMS](../RemoteFeatures/SMSCommands.md) usando comandi come "pump disconnect 120" e "pump connect 120". La durata della disconnessione remota va da 1 a 120 minuti (nell'esempio sono 120 minuti). Questo è molto utile se lo smartphone **AAPS** è difficile da raggiungere, nascosto nella cintura del microinfusore di un bambino che corre verso la piscina, o tenuto stretto (o in uso) da un adolescente.
 
-## Riconnessione del microinfusore dopo l'attività
+## Reconnecting the pump after activity
 
 Dopo una lunga disconnessione (1-2 ore), è abbastanza comune che **AAPS** calcoli un IOB negativo. Quando si riconnette il microinfusore, a seconda delle preferenze/livello di glicemia attuale/cibo pianificato o attività successiva, è possibile:
 
