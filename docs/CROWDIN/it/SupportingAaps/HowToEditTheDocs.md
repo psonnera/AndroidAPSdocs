@@ -8,7 +8,7 @@ Per suggerimenti su come formattare il testo (titolo, grassetto...) e impostare 
 
 Per qualsiasi domanda, feedback o nuove idee puoi contattare il team della documentazione tramite [discord](https://discord.gg/4fQUWHZ4Mw).
 
-Ad un certo punto ti verrà suggerito di creare una pull request (PR), che è il modo in cui le tue modifiche alla documentazione vengono effettivamente pubblicate sulle pagine web di AAPS, archiviate su GitHub. In realtà non è troppo difficile fare una PR ed è un ottimo modo per contribuire. Stai leggendo questa documentazione in questo momento perché persone come te hanno fatto PR. Non preoccuparti di fare un errore o di modificare i documenti sbagliati. Le tue modifiche vengono revisionate prima di essere unite nel repository di documentazione "formale" di AAPS. Non puoi rovinare gli originali attraverso eventuali errori nel processo. Il processo generale è:
+Ad un certo punto ti verrà suggerito di creare una pull request (PR), che è il modo in cui le tue modifiche alla documentazione vengono effettivamente pubblicate sulle pagine web di AAPS, archiviate su GitHub.  In realtà non è troppo difficile fare una PR ed è un ottimo modo per contribuire. Stai leggendo questa documentazione in questo momento perché persone come te hanno fatto PR. Non preoccuparti di fare un errore o di modificare i documenti sbagliati. Le tue modifiche vengono revisionate prima di essere unite nel repository di documentazione "formale" di AAPS.  Non puoi rovinare gli originali attraverso eventuali errori nel processo. Il processo generale è:
 
 * Fai modifiche e miglioramenti al codice o alla documentazione modificando il contenuto esistente.
 * Ricontrolla che le tue modifiche siano soddisfacenti.
@@ -32,7 +32,7 @@ Per il nostro esempio effettueremo una modifica ad AndroidAPSdocs. Questo può e
 
 ![RTD io](../images/PR2.png)
 
-3. Una o l'altra delle opzioni nel Passaggio 2 creerà un nuovo branch nel TUO repository dove verranno salvate le tue modifiche. Apporta le tue modifiche al file.
+3. Una o l'altra delle opzioni nel Passaggio 2 creerà un nuovo branch nel TUO repository dove verranno salvate le tue modifiche.  Apporta le tue modifiche al file.
 
 Usiamo markdown per le pagine della documentazione. I file hanno il suffisso ".md". La specifica Markdown non è fissa e al momento usiamo myst_parser per i nostri file markdown. Fai attenzione a usare la sintassi corretta come [descritta di seguito](#code-syntax).
 
@@ -42,7 +42,7 @@ Usiamo markdown per le pagine della documentazione. I file hanno il suffisso ".m
 
 ![preview mode](../images/PR5.png)
 
-5. Quando hai completato le tue modifiche, scorri fino in fondo alla pagina. Nella casella in fondo, fornisci i tuoi commenti nel campo di testo che dice "Aggiungi una descrizione estesa opzionale...". Il titolo predefinito ha il nome del file. Prova a includere una frase che spieghi il __motivo__ della modifica. Indicare il motivo aiuta i revisori a capire cosa stai cercando di fare con la PR.
+5. Quando hai completato le tue modifiche, scorri fino in fondo alla pagina.  Nella casella in fondo, fornisci i tuoi commenti nel campo di testo che dice "Aggiungi una descrizione estesa opzionale...". Il titolo predefinito ha il nome del file. Prova a includere una frase che spieghi il __motivo__ della modifica. Indicare il motivo aiuta i revisori a capire cosa stai cercando di fare con la PR.
 
 ![commit comments](../images/PR4.png)
 
@@ -54,7 +54,7 @@ Usiamo markdown per le pagine della documentazione. I file hanno il suffisso ".m
 
 ![PR tracking](../images/PR7.png)
 
-PS: Il tuo fork e branch rimarranno nel tuo account GitHub personale. Dopo aver ricevuto una notifica che la tua PR è stata unita, puoi eliminare il tuo branch se hai finito (l'area di notifica del Passaggio 8 fornirà un link per eliminare il branch una volta chiuso o unito). Per le modifiche future, se segui questa procedura le modifiche inizieranno sempre con una versione aggiornata dei repository AndroidAPSdocs. Se scegli di usare un altro metodo per avviare una richiesta PR (ad esempio, iniziando le modifiche dal branch master del tuo repository forkato come punto di partenza), dovrai assicurarti che il tuo repository sia aggiornato eseguendo prima un "compare" e unendo tutti gli aggiornamenti avvenuti dall'ultima volta che hai aggiornato il tuo fork. Poiché le persone tendono a dimenticare di aggiornare i loro repository, consigliamo di usare il processo PR descritto sopra fino a quando non hai familiarità con l'esecuzione di "compare".
+PS: Il tuo fork e branch rimarranno nel tuo account GitHub personale. Dopo aver ricevuto una notifica che la tua PR è stata unita, puoi eliminare il tuo branch se hai finito (l'area di notifica del Passaggio 8 fornirà un link per eliminare il branch una volta chiuso o unito). Per le modifiche future, se segui questa procedura le modifiche inizieranno sempre con una versione aggiornata dei repository AndroidAPSdocs.  Se scegli di usare un altro metodo per avviare una richiesta PR (ad esempio, iniziando le modifiche dal branch master del tuo repository forkato come punto di partenza), dovrai assicurarti che il tuo repository sia aggiornato eseguendo prima un "compare" e unendo tutti gli aggiornamenti avvenuti dall'ultima volta che hai aggiornato il tuo fork.  Poiché le persone tendono a dimenticare di aggiornare i loro repository, consigliamo di usare il processo PR descritto sopra fino a quando non hai familiarità con l'esecuzione di "compare".
 
 (edit-the-docs-code-syntax)=
 ## Sintassi del codice
@@ -74,7 +74,7 @@ Markdown non è uno standard fisso al 100% e cerchiamo di rimanere il più possi
 * rimanere flessibili per cambiare gli strumenti markdown se necessario o forzati nell'ulteriore innovazione degli strumenti markdown e dei servizi SaaS markdown e
 * consentirci di usare servizi di traduzione per tradurre la lingua inglese in una lingua di destinazione come il francese o il tedesco. Possono lavorare su markdown ma non su codici di formattazione complessi, perché non riescono a separare il contenuto dal layout, il che potrebbe essere fatale.
 
-### Titoli
+### Headlines
 
 * Titolo 1: `# titolo`
 * Titolo 2: `## titolo`
@@ -138,7 +138,7 @@ Puoi inserire elenchi negli elenchi rientrando il livello successivo con 4 spazi
     1. e un altro elemento
 1. quattro
 1. cinque
-1. sei
+1. six
 
 ### Immagini
 
@@ -208,7 +208,7 @@ Inoltre puoi aggiungere note comprimibili per informazioni dettagliate che altri
 Questa è una nota.
 ```
 ````
-```{admonition} Titolo nota
+```{admonition} Note headline
 :class: note
 Questa è una nota.
 ```
@@ -221,7 +221,7 @@ Questa è una nota.
 Questo è un avviso.
 ```
 ````
-```{admonition} Titolo avviso 
+```{admonition} Warning headline 
 :class: warning
 Questo è un avviso.
 ```
@@ -239,7 +239,7 @@ senza che occupi troppo spazio sulla pagina.
 ```
 ````
 
-```{admonition} letture dettagliate per lettori interessati
+```{admonition} further detailed readings for interested readers
 :class: dropdown
 Questo admonition è stato compresso,
 il che significa che puoi aggiungere contenuto in formato più lungo qui,
@@ -321,7 +321,7 @@ Esempio di un **verbo passivo**:
 - *"L'insulina (soggetto) viene erogata (verbo) dal microinfusore (oggetto)"*
 
 
-*"viene erogata"* è un verbo passivo qui. Il soggetto e l'oggetto vengono scambiati rispetto alla frase con verbo attivo. Abbiamo dovuto allungare la frase introducendo "viene" e "dal". Considera anche di iniziare con il verbo attivo.
+*"viene erogata"* è un verbo passivo qui. Il soggetto e l'oggetto vengono scambiati rispetto alla frase con verbo attivo. Abbiamo dovuto allungare la frase introducendo "viene" e "dal".   Considera anche di iniziare con il verbo attivo.
 
 Invece di: *"Puoi connettere il tuo microinfusore al telefono tramite il menu microinfusore di AAPS, e ci sono una serie di microinfusori disponibili con cui connetterti."*
 
@@ -351,7 +351,7 @@ Ci sono momenti in cui potrebbe essere appropriato usare un passivo.
 
 #### Evita le nominalizzazioni
 
-Una nominalizzazione è il nome di qualcosa che non è un oggetto fisico, come un processo, una tecnica o un'emozione. Le nominalizzazioni sono formate dai verbi.
+Una nominalizzazione è il nome di qualcosa che non è un oggetto fisico, come un processo, una tecnica o un'emozione.  Le nominalizzazioni sono formate dai verbi.
 
 Ad esempio:
 
@@ -379,7 +379,7 @@ Gli elenchi sono eccellenti per suddividere le informazioni. Ci sono due tipi pr
 
 Nell'elenco puntato sopra, ogni punto è una frase completa quindi iniziano tutti con una lettera maiuscola e terminano con un punto. Usa i punti elenco piuttosto che i numeri o le lettere, poiché attirano la tua attenzione su ogni punto senza darti ulteriori informazioni da assorbire.
 
-#### Sfatare i miti
+#### Mythbusting
 
 - Puoi iniziare una frase con **e, ma, perché, quindi o tuttavia**.
 
@@ -508,7 +508,7 @@ Lo scopo di una guida pratica è aiutare l'utente già competente a svolgere cor
       Non inquinare la tua guida pratica con tutto ciò che l'utente potrebbe fare in relazione a x.
 
 
-##### ![Image](../images/styleguide07.png) Spiegazione (es. Scienza alla base del perché gli albumi si solidificano quando li sbatti)
+##### ![Image](../images/styleguide07.png) Explanation (e.g. Science behind why egg whites stiffen when you beat them)
 
 Una spiegazione chiarisce, approfondisce e amplia la comprensione di un argomento da parte del lettore.
 
