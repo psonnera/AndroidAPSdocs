@@ -395,21 +395,21 @@ Di seguito è riportata una spiegazione del layout e del significato delle icone
 - *RileyLink pronto* - il dispositivo di comunicazione con il pod è acceso e sta inizializzando attivamente la connessione Bluetooth.
 - *Connesso* - il dispositivo di comunicazione con il pod è acceso, connesso e in grado di comunicare attivamente via Bluetooth.
 
-- **Velocità basale temporanea:** Visualizza la velocità basale temporanea attualmente in esecuzione nel formato seguente:
+- **Indirizzo pod:** Visualizza l'indirizzo corrente a cui si fa riferimento al pod attivo.
 
-- **LOT:** Visualizza il numero di LOT del pod attivo.
+- **Ora sul pod:** Visualizza l'ora corrente sul pod attivo.
 
 - **TID:** Visualizza il numero di serie del pod.
 
-- **Ultima connessione:** Visualizza l'ultima volta in cui è stata stabilita la comunicazione con il pod attivo.
+- **Versione firmware:** Visualizza la versione firmware del pod attivo.
 
 - **Ultimo bolo:** Visualizza il dosaggio dell'ultimo bolo inviato al pod attivo e quanto tempo fa è stato erogato (tra parentesi).
 
 - **Stato pod:** Visualizza lo stato del pod attivo.
 
-- **Indirizzo pod:** Visualizza l'indirizzo corrente a cui si fa riferimento al pod attivo.
+- **Ultima connessione:** Visualizza l'ultima volta in cui è stata stabilita la comunicazione con il pod attivo.
 
-- **Versione firmware:** Visualizza la versione firmware del pod attivo.
+- **Ultimo bolo:** Visualizza il dosaggio dell'ultimo bolo inviato al pod attivo e quanto tempo fa è stato erogato (tra parentesi).
 
 - *Pochi secondi fa* - meno di 20 secondi fa.
 - *Meno di un minuto fa* - più di 20 secondi ma meno di 60 secondi fa.
