@@ -2,9 +2,9 @@
 
 ## AAPS è gestito interamente da volontari e non ha personale retribuito.
 
-Gli sviluppatori sono genitori, assistenti, persone care e diabetici che lavorano insieme per sviluppare e migliorare una soluzione a un'esigenza molto comune. Gli sviluppatori donano il loro tempo libero gratuitamente, ma è un po' ingiusto aspettarsi che affrontino costi aggiuntivi per rendere qualcosa di così straordinario open source e gratuito per tutti.
+Gli sviluppatori sono genitori, assistenti, persone care e diabetici che lavorano insieme per sviluppare e migliorare una soluzione a un'esigenza molto comune.  Gli sviluppatori donano il loro tempo libero gratuitamente, ma è un po' ingiusto aspettarsi che affrontino costi aggiuntivi per rendere qualcosa di così straordinario open source e gratuito per tutti.
 
-_Per testare completamente un nuovo setup, gli sviluppatori hanno bisogno di un telefono di riserva e una pompa di riserva poiché non può essere utilizzato su un essere umano fino a quando non è stabile. I modelli più recenti richiedono test quando diventano disponibili. Parte del denaro donato è necessario anche per i costi logistici di spedizione di questi materiali tra paesi agli sviluppatori. A volte è bello contribuire anche alle spese degli sviluppatori per lasciare le loro stanze buie e incontrarsi alle conferenze ed eventi per far rimbalzare i loro cervelli creativi e analitici._
+_Per testare completamente un nuovo setup, gli sviluppatori hanno bisogno di un telefono di riserva e una pompa di riserva poiché non può essere utilizzato su un essere umano fino a quando non è stabile.  I modelli più recenti richiedono test quando diventano disponibili.  Parte del denaro donato è necessario anche per i costi logistici di spedizione di questi materiali tra paesi agli sviluppatori.  A volte è bello contribuire anche alle spese degli sviluppatori per lasciare le loro stanze buie e incontrarsi alle conferenze ed eventi per far rimbalzare i loro cervelli creativi e analitici._
 
 ## So scrivere codice! Come posso partecipare?
 
