@@ -1,4 +1,4 @@
-# Calcolo dei carboidrati attivi (COB)
+# COB calculation
 
 ## Come calcola AAPS il valore COB?
 
@@ -76,6 +76,7 @@ Se i carboidrati sono stati sovrastimati o sottostimati, questo può essere corr
 
 ## Correzione carboidrati - come eliminare una voce di carboidrati dai Trattamenti
 
+
 La scheda 'Trattamenti' può essere utilizzata per correggere una voce di carboidrati errata eliminando la voce nei Trattamenti. Questo può essere perché l'utente ha sovrastimato o sottostimato la voce dei carboidrati:
 
 ![COB_Screenshot 2024-10-05 170124](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
@@ -88,3 +89,4 @@ La scheda 'Trattamenti' può essere utilizzata per correggere una voce di carboi
 6. Se i carboidrati non vengono rimossi come previsto e vengono aggiunti ulteriori carboidrati come spiegato in questa sezione, la voce **COB** sarà troppo alta e questo potrebbe portare **AAPS** a somministrare troppa insulina.
 7. Inserisci la quantità corretta di carboidrati tramite il pulsante carboidrati nella schermata principale di **AAPS** e imposta l'ora dell'evento corretto.
 8. Se c'è solo una riga nella scheda Trattamenti che include carboidrati e insulina, l'utente deve aggiungere anche la quantità di insulina. Assicurati di impostare l'ora dell'evento corretto e controlla l'**IOB** nella schermata principale dopo aver confermato la nuova voce.
+
