@@ -4,7 +4,7 @@ Queste istruzioni riguardano la configurazione del microinfusore di insulina Med
 
 Questo software è parte di una soluzione fai-da-te per pancreas artificiale e non è un prodotto finito, ma richiede che sia TU a leggere, imparare e comprendere il sistema, incluso come utilizzarlo. Sei tu solo il responsabile di ciò che ne fai.
 
-```{contents} Indice
+```{contents} Table of contents
 :depth: 1
 :local: true
 ```
@@ -29,25 +29,19 @@ Questo software è parte di una soluzione fai-da-te per pancreas artificiale e n
 
 **LA SICUREZZA PRIMA DI TUTTO** Non tentare questo processo in un ambiente in cui non è possibile recuperare da un errore (patch aggiuntive, insulina e dispositivi di controllo del microinfusore sono indispensabili).
 
-**Il PDM e l'app Medtrum non funzioneranno con una patch attivata da AAPS.**
-In precedenza potresti aver usato il PDM o l'app Medtrum per inviare comandi al microinfusore. Per ragioni di sicurezza è possibile utilizzare la patch attivata solo con il dispositivo o l'app che è stato usato per attivarla.
+**Il PDM e l'app Medtrum non funzioneranno con una patch attivata da AAPS.** In precedenza potresti aver usato il PDM o l'app Medtrum per inviare comandi al microinfusore. Per ragioni di sicurezza è possibile utilizzare la patch attivata solo con il dispositivo o l'app che è stato usato per attivarla.
 
 *Questo NON significa che devi buttare via il tuo PDM. Si consiglia di tenerlo in un posto sicuro come backup in caso di emergenze, ad esempio se il telefono viene perso o AAPS non funziona correttamente.*
 
-**Il microinfusore non smetterà di erogare insulina quando non è connesso ad AAPS**
-Le velocità basali predefinite sono programmate sul microinfusore come definite nel profilo attivo corrente.
-Finché AAPS è operativo, invierà comandi di basale temporanea che durano al massimo 120 minuti. Se per qualche motivo il microinfusore non riceve nuovi comandi (ad esempio perché la comunicazione è stata persa a causa della distanza microinfusore - telefono), il microinfusore tornerà alla velocità basale predefinita programmata al termine della Basale Temporanea.
+**Il microinfusore non smetterà di erogare insulina quando non è connesso ad AAPS** Le velocità basali predefinite sono programmate sul microinfusore come definite nel profilo attivo corrente. Finché AAPS è operativo, invierà comandi di basale temporanea che durano al massimo 120 minuti. Se per qualche motivo il microinfusore non riceve nuovi comandi (ad esempio perché la comunicazione è stata persa a causa della distanza microinfusore - telefono), il microinfusore tornerà alla velocità basale predefinita programmata al termine della Basale Temporanea.
 
-**I Profili di Velocità Basale a 30 min NON sono supportati in AAPS.**
-**Il Profilo AAPS non supporta un intervallo di tempo basale di 30 minuti**
-Se sei nuovo ad AAPS e stai configurando il tuo profilo di velocità basale per la prima volta, tieni presente che le velocità basali che iniziano a mezz'ora non sono supportate e dovrai adattare il profilo di velocità basale in modo che inizi all'ora intera. Ad esempio, se hai una velocità basale di 1,1 unità che inizia alle 09:30 e ha una durata di 2 ore terminando alle 11:30, questo non funzionerà. Dovrai cambiare questa velocità basale di 1,1 unità in un intervallo di tempo di 9:00-11:00 o 10:00-12:00. Anche se l'hardware del microinfusore Medtrum stesso supporta gli incrementi del profilo di velocità basale a 30 min, AAPS attualmente non è in grado di tenerne conto nei suoi algoritmi.
+**I Profili di Velocità Basale a 30 min NON sono supportati in AAPS.** **Il Profilo AAPS non supporta un intervallo di tempo basale di 30 minuti** Se sei nuovo ad AAPS e stai configurando il tuo profilo di velocità basale per la prima volta, tieni presente che le velocità basali che iniziano a mezz'ora non sono supportate e dovrai adattare il profilo di velocità basale in modo che inizi all'ora intera. Ad esempio, se hai una velocità basale di 1,1 unità che inizia alle 09:30 e ha una durata di 2 ore terminando alle 11:30, questo non funzionerà. Dovrai cambiare questa velocità basale di 1,1 unità in un intervallo di tempo di 9:00-11:00 o 10:00-12:00. Anche se l'hardware del microinfusore Medtrum stesso supporta gli incrementi del profilo di velocità basale a 30 min, AAPS attualmente non è in grado di tenerne conto nei suoi algoritmi.
 
-**Le velocità basali del profilo a 0U/h NON sono supportate in AAPS**
-Sebbene il microinfusore Medtrum supporti una velocità basale zero, AAPS usa multipli della velocità basale del profilo per determinare il trattamento automatico e pertanto non può funzionare con una velocità basale zero. Una velocità basale temporanea zero può essere ottenuta tramite la funzione "Disconnetti microinfusore" o tramite una combinazione di Disabilita Loop/Basale Temporanea o Sospendi Loop/Basale Temporanea.
+**Le velocità basali del profilo a 0U/h NON sono supportate in AAPS** Sebbene il microinfusore Medtrum supporti una velocità basale zero, AAPS usa multipli della velocità basale del profilo per determinare il trattamento automatico e pertanto non può funzionare con una velocità basale zero. Una velocità basale temporanea zero può essere ottenuta tramite la funzione "Disconnetti microinfusore" o tramite una combinazione di Disabilita Loop/Basale Temporanea o Sospendi Loop/Basale Temporanea.
 
 ## Configurazione
 
-ATTENZIONE: Quando si attiva una patch con AAPS **DEVI** disabilitare tutti gli altri dispositivi che possono comunicare con la base del microinfusore Medtrum, ad es. PDM attivo e app Medtrum. Assicurati di avere la base del microinfusore e il SN della base pronte per l'attivazione di una nuova patch.
+ATTENZIONE: Quando si attiva una patch con AAPS **DEVI** disabilitare tutti gli altri dispositivi che possono comunicare con la base del microinfusore Medtrum, ad es. PDM attivo e app Medtrum. e.g. active PDM and Medtrum app. Assicurati di avere la base del microinfusore e il SN della base pronte per l'attivazione di una nuova patch.
 
 ### Passaggio 1: Seleziona il microinfusore Medtrum
 
@@ -92,12 +86,11 @@ Questa impostazione cambia il modo in cui il microinfusore ti avviserà in caso 
 
 Nota: In modalità silenziosa AAPS emetterà comunque l'allarme in base alle impostazioni del volume del telefono. Se non si risponde all'allarme, la patch alla fine emetterà un segnale acustico.
 
-#### Notifica in caso di avviso del microinfusore
+#### Notification on pump warning
 
 ***Predefinito: Abilitato.***
 
-Questa impostazione cambia il modo in cui AAPS mostrerà le notifiche sugli avvisi non critici del microinfusore.
-Quando abilitata, verrà mostrata una Notifica sul telefono quando si verifica un avviso del microinfusore, inclusi:
+Questa impostazione cambia il modo in cui AAPS mostrerà le notifiche sugli avvisi non critici del microinfusore. Quando abilitata, verrà mostrata una Notifica sul telefono quando si verifica un avviso del microinfusore, inclusi:
     - Batteria scarica
     - Serbatoio quasi vuoto (20 unità)
     - Avviso di scadenza patch
@@ -113,7 +106,7 @@ Questa impostazione cambia il comportamento della patch. Quando abilitata, la pa
 
 Se questa impostazione è disabilitata, la patch non avviserà e continuerà a funzionare fino all'esaurimento della batteria o del serbatoio della patch.
 
-#### Avviso di scadenza microinfusore
+#### Pump expiry warning
 
 ***Predefinito: 72 ore.***
 
@@ -147,7 +140,7 @@ Abilitare solo in caso di problemi di connessione. Se abilitato, il driver esegu
 
 Vai alle preferenze
 
-#### Microinfusore:
+#### Pump:
 
 ##### BT Watchdog
 
@@ -167,7 +160,7 @@ Vai alle preferenze e seleziona **Avvisi locali**:
 
 ![Local Alerts](../images/medtrum/LocalAlertsSettings.png)
 
-##### Avviso se il microinfusore non è raggiungibile
+##### Alert if pump is unreachable
 
 ***Predefinito: Abilitato.***
 
@@ -198,7 +191,7 @@ Se una patch è già attiva, verrà richiesto di disattivarla prima. vedere [Dis
 
 Seguire le indicazioni per riempire e attivare una nuova patch. Si noti che è importante collegare la base del microinfusore alla patch serbatoio solo quando viene richiesto di farlo. **È necessario applicare il microinfusore sul corpo e inserire la cannula solo quando viene richiesto durante il processo di attivazione (dopo che il riempimento è completo).**
 
-##### Avvio attivazione
+##### Start Activation
 
 ![Start Activation](../images/medtrum/activation/StartActivation.png)
 
@@ -206,7 +199,7 @@ In questo passaggio, verificare il numero di serie e assicurarsi che la base del
 
 Premere **Avanti** per continuare.
 
-##### Riempimento della patch
+##### Fill the patch
 
 ![Fill the patch](../images/medtrum/activation/FillPatch.png)
 
@@ -230,8 +223,7 @@ Una volta completato lo spurgo, premere **Avanti** per continuare.
 
 ![Attach patch](../images/medtrum/activation/AttachPatch.png)
 
-Pulire la pelle, rimuovere gli adesivi e applicare la patch sul corpo.
-Rimuovere il blocco di sicurezza e premere il pulsante ago sulla patch per inserire la cannula.
+Pulire la pelle, rimuovere gli adesivi e applicare la patch sul corpo. Rimuovere il blocco di sicurezza e premere il pulsante ago sulla patch per inserire la cannula.
 
 Premere **Avanti** per attivare la patch.
 
@@ -248,7 +240,7 @@ Premere **OK** per tornare alla schermata principale.
 
 (nano-deactivate-patch)=
 
-### Disattivazione patch
+### Deactivate patch
 
 Per disattivare una patch attualmente attiva, andare alla [SCHEDA Medtrum](#nano-overview) nell'interfaccia AAPS e premere il pulsante **Cambia patch**.
 
@@ -266,7 +258,7 @@ Una volta completata la disattivazione, premere **OK** per tornare alla schermat
 
 (nano-resume-interrupted-activation)=
 
-### Ripresa di un'attivazione interrotta
+### Resume interrupted activation
 
 Se un'attivazione della patch viene interrotta, ad esempio perché la batteria del telefono si esaurisce, è possibile riprendere il processo di attivazione andando alla [SCHEDA Medtrum](#nano-overview) nell'interfaccia AAPS e premendo il pulsante **Cambia patch**.
 
@@ -294,7 +286,7 @@ Mostra lo stato corrente della connessione Bluetooth alla base del microinfusore
 
 Mostra l'ultima volta che il microinfusore è stato connesso ad AAPS.
 
-### Stato microinfusore:
+### Pump state:
 
 Mostra lo stato corrente del microinfusore. Ad esempio:
     - ATTIVO: Il microinfusore è attivato e funziona normalmente
@@ -310,7 +302,7 @@ Mostra la velocità basale corrente.
 
 ### Ultimo bolo:
 
-Mostra l'ultimo bolo erogato.
+This shows the last bolus that was delivered.
 
 ### Bolo attivo:
 
@@ -329,7 +321,7 @@ Mostra il livello corrente del serbatoio.
 
 Mostra la tensione corrente della batteria della patch.
 
-### Tipo microinfusore:
+### Pump type:
 
 Mostra il numero del tipo di microinfusore corrente.
 
@@ -337,7 +329,7 @@ Mostra il numero del tipo di microinfusore corrente.
 
 Mostra la versione corrente del firmware della patch.
 
-### N. patch:
+### patch:
 
 Mostra il numero di sequenza della patch attivata. Questo numero viene incrementato ogni volta che una nuova patch viene attivata.
 
@@ -355,9 +347,9 @@ Questo pulsante avvierà il processo di cambio della patch. Vedere [Attiva patch
 
 (nano-reset-alarms)=
 
-### Ripristino allarmi
+### Reset alarms
 
-Il pulsante allarme apparirà nella schermata di panoramica quando è presente un allarme attivo che può essere ripristinato. Premendo questo pulsante si ripristineranno gli allarmi e si riprenderà l'erogazione di insulina se la patch è stata sospesa a causa dell'allarme. Ad esempio, quando sospesa a causa di un allarme di erogazione massima giornaliera di insulina.
+Il pulsante allarme apparirà nella schermata di panoramica quando è presente un allarme attivo che può essere ripristinato. Premendo questo pulsante si ripristineranno gli allarmi e si riprenderà l'erogazione di insulina se la patch è stata sospesa a causa dell'allarme. E.g. E.g. Ad esempio, quando sospesa a causa di un allarme di erogazione massima giornaliera di insulina.
 
 ![Reset alarms](../images/medtrum/ResetAlarms.png)
 
@@ -373,8 +365,7 @@ Il file delle impostazioni importato deve appartenere alla stessa sessione patch
 
 Dopo l'importazione delle impostazioni, il driver sincronizzerà la cronologia con il microinfusore; questo potrebbe richiedere del tempo a seconda dell'età del file delle impostazioni.
 
-Dalla versione AAPS 3.3.0.0 in poi, il progresso della sincronizzazione è mostrato nella schermata principale:
-![Sync progress](../images/medtrum/SyncProgress.png)
+Dalla versione AAPS 3.3.0.0 in poi, il progresso della sincronizzazione è mostrato nella schermata principale: ![Sync progress](../images/medtrum/SyncProgress.png)
 
 ## Risoluzione dei problemi
 
@@ -388,7 +379,7 @@ Per problemi noti con le connessioni Bluetooth, disconnessioni di microinfusori/
 
 ### Attivazione interrotta
 
-Se il processo di attivazione viene interrotto, ad esempio da una batteria del telefono scarica o un crash del telefono, il processo di attivazione può essere ripreso andando alla schermata di cambio patch e seguendo i passaggi per riprendere l'attivazione come descritto qui: [Ripresa di un'attivazione interrotta](#nano-resume-interrupted-activation)
+If the activation process is interrupted for example by and empty phone battery or phone crash. Se il processo di attivazione viene interrotto, ad esempio da una batteria del telefono scarica o un crash del telefono, il processo di attivazione può essere ripreso andando alla schermata di cambio patch e seguendo i passaggi per riprendere l'attivazione come descritto qui: [Ripresa di un'attivazione interrotta](#nano-resume-interrupted-activation)
 
 ### Prevenzione dei guasti della patch
 
