@@ -41,7 +41,7 @@ Android permette di controllare cosa ogni app può fare o accedere sul tuo telef
 
 Le app in questo elenco sono state discusse in uno o più luoghi nella community come causa di problemi per i dispositivi Omnipod DASH e in alcuni casi anche per Medtrum Nano.
 
-```{admonition} Aggiornamento dell'elenco
+```{admonition} Updating the list
 :class: note
 Contatta @XiTatiON sul canale Discord #omnipod-dash per discutere le app da aggiungere a questo elenco.
 ```
@@ -57,11 +57,11 @@ Contatta @XiTatiON sul canale Discord #omnipod-dash per discutere le app da aggi
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
 ### **Come revocare i permessi "Dispositivi nelle vicinanze" per altre app:**
-Se hai problemi ad attivare un nuovo Pod e stai usando la versione corretta e supportata di **AAPS** per la tua versione di Android, potrebbe essere necessario revocare il permesso ad altre app durante l'attivazione di un nuovo Pod.
+Se hai problemi ad attivare un nuovo Pod e stai usando la versione corretta e supportata di **AAPS** per la tua versione di Android, potrebbe essere necessario revocare il permesso ad altre app durante l'attivazione di un nuovo Pod. It may be necessary to revoked the permission for other apps while activating a new Pod.
 
 Segui questa procedura per revocare il permesso "Dispositivi nelle vicinanze" per tutte le app tranne **AAPS**:
 
-```{admonition} Menu e impostazioni
+```{admonition} Menus and settings
 :class: note
 Gli screenshot e le istruzioni in questa guida si riferiscono a un'installazione Vanilla Android 16 su Google Pixel 8 Pro. Altri produttori e dispositivi probabilmente non corrisponderanno esattamente a questi menu e descrizioni delle impostazioni; adatta i passaggi al tuo dispositivo e, in caso di difficoltà, consulta la sezione [Dove ottenere aiuto per Dash](#omnipod-dash-where-to-get-help-for-dash) per sapere come contattare la community per supporto.
 ```
@@ -88,7 +88,7 @@ Gli screenshot e le istruzioni in questa guida si riferiscono a un'installazione
 
    Per evitare di danneggiare altri Pod, consigliamo a tutti di revocare inizialmente il permesso su tutte le app tranne **AAPS**.
 
-```{admonition} Quale app selezionare?
+```{admonition} Which app to select?
 :class: tip
 Se non sei sicuro di quale app stia causando il problema, disabilitale tutte (ricorda di controllare anche l'elenco delle app problematiche note e inizia con quelle) e, se puoi permetterti di danneggiare qualche Pod nel processo, abilita il permesso su una nuova app prima di ogni nuova attivazione del Pod, finché non riesci a identificare quale app causa specificamente i problemi al tuo Pod. Se identifichi nuove app problematiche, faccelo sapere sul canale Discord #omnipod-dash.
 ```
@@ -115,7 +115,7 @@ Se non sei sicuro di quale app stia causando il problema, disabilitale tutte (ri
 
 3. Per mostrare le app di sistema nascoste premi sulle **Tre linee puntate (Hamburger) (1)**, poi premi su **"Mostra sistema (1)"**. Ora dovresti essere in grado di vedere l'app di sistema nascosta nell'elenco **Android Auto (3)**.
 
-```{admonition} Trova la tua app
+```{admonition} Find your app
 :class: tip
 Se un'app è stata revocata, dovrai scorrere verso il basso finché non vedi l'elenco delle app revocate più in basso nell'elenco.
 ```
@@ -130,7 +130,7 @@ Se un'app è stata revocata, dovrai scorrere verso il basso finché non vedi l'e
 
 ## Android 15 - Frequenti problemi di connessione Bluetooth
 
-Dopo aver aggiornato Android o aver cambiato telefono, **AAPS** perde frequentemente la connessione Bluetooth con il microinfusore. Il problema scompare temporaneamente riavviando il telefono. Se il telefono usa Android 15, abilitare l'impostazione **Collega dispositivo BT su Android 15+** nelle impostazioni di **AAPS** potrebbe aiutare a migliorare la stabilità delle connessioni Bluetooth; segui la guida di seguito per abilitarla:
+Dopo aver aggiornato Android o aver cambiato telefono, **AAPS** perde frequentemente la connessione Bluetooth con il microinfusore. Il problema scompare temporaneamente riavviando il telefono. If the phone runs Android 15. Se il telefono usa Android 15, abilitare l'impostazione **Collega dispositivo BT su Android 15+** nelle impostazioni di **AAPS** potrebbe aiutare a migliorare la stabilità delle connessioni Bluetooth; segui la guida di seguito per abilitarla:
 
 ```{admonition} Android 16
 :class: warning
@@ -146,6 +146,6 @@ Abilita l'opzione **Collega dispositivo BT su Android 15+** solo su Android 15 e
    ![BondBT](../images/troubleshooting/BondBT.png)
 
 
-3. Se il microinfusore richiede un'associazione, accettala.
+3. If the pump asks for a pairing request, accept it.
 
 4. Riavvia il telefono.
