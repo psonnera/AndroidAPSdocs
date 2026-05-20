@@ -31,7 +31,7 @@ Questa sezione fornisce una breve panoramica di tutti i **sensori CGMs/FGMs** co
 
 (GettingStarted-TrustedBGSource)=
 
-## Sorgenti di dati glicemia affidabili
+## Trusted BG data sources
 
 I **CGM** approvati dagli enti normativi per i sistemi commerciali a circuito chiuso ibrido sono considerati sorgenti di dati **BG** affidabili.
 
@@ -39,7 +39,7 @@ Affinché **AAPS** possa identificarli correttamente, l'app che invia le letture
 
 Le sorgenti dati affidabili consentono sempre l'erogazione di **SMB**.
 
-| Sensore               |                                                       App CGM                                                          |
+| Sensore               |                                                        App CGM                                                         |
 | --------------------- |:----------------------------------------------------------------------------------------------------------------------:|
 | Dexcom G5/G6          |                                              xDrip+ (**Direct, Native**)                                               |
 | Dexcom G7             |                    xDrip+ (**Direct, Native**), </br>Juggluco (**xDrip broadcast** without xDrip+)                     |
