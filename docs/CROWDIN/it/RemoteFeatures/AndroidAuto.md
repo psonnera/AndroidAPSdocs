@@ -3,7 +3,7 @@
 **AAPS** è in grado di inviarti informazioni sul tuo stato attuale come messaggio, direttamente in Android Auto nella tua auto.
 
 
-```{admonition} informazioni sulla versione e sull'ultima modifica
+```{admonition} version and last change information
 :class: dropdown
 data dell'ultima modifica: 07/05/2023
 
