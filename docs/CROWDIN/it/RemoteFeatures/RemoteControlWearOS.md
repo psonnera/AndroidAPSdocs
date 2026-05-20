@@ -28,8 +28,7 @@ Se vuoi somministrare boli ecc. dall'orologio, nelle "Impostazioni Wear" devi ab
 
 Tramite la scheda Wear o il menu hamburger (in alto a sinistra dello schermo, se la scheda non è visualizzata) puoi:
 
-* Rinviare tutti i dati.
-  Può essere utile se l'orologio non era connesso per un po' di tempo e vuoi inviare le informazioni all'orologio.
+* Rinviare tutti i dati. Può essere utile se l'orologio non era connesso per un po' di tempo e vuoi inviare le informazioni all'orologio.
 * Aprire le impostazioni sul tuo orologio direttamente dal telefono.
 
 Assicurarsi che le notifiche di AAPS non siano bloccate sull'orologio. La conferma di un'azione (ad esempio bolo, obiettivo temporaneo) arriva tramite una notifica che dovrai scorrere e spuntare.
@@ -38,7 +37,7 @@ Assicurarsi che le notifiche di AAPS non siano bloccate sull'orologio. La confer
 
 Per accedere al menu principale di AAPS puoi usare una delle seguenti opzioni:
 
-* doppio tocco sul valore della tua glicemia
+* double tap on your BG value
 * seleziona l'icona AAPS nel menu delle applicazioni dell'orologio
 * tocca la complicazione AAPS (se configurata per il menu)
 
@@ -90,7 +89,7 @@ La stella piena indica lo stato abilitato (**On**), e l'icona della stella vuota
 
 ![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
 
-#### Quadrante Circle
+#### Circle WF
 
 * **Numeri grandi** (predefinito `Off`): Aumenta la dimensione del testo per migliorare la visibilità
 * **Cronologia ad anello** (predefinito `Off`): Visualizza graficamente la cronologia della glicemia con anelli grigi all'interno dell'anello verde dell'ora
@@ -192,8 +191,7 @@ A seconda della versione Wear OS, del marchio e dello smartphone, ci sono due mo
 2. Sul tuo telefono apri l'app companion per il tuo orologio.
    - Per Samsung apri "Galaxy Wearable", o per altri marchi "Wear OS"
    - Nel clic sulla sezione "Riquadri", seguito dal pulsante "+ Aggiungi"
-   - Trova il riquadro AAPS che vuoi aggiungere selezionandolo.
-     ![Wear phone add tile](../images/wear_companion_app_add_tile.png)
+   - Trova il riquadro AAPS che vuoi aggiungere selezionandolo. ![Wear phone add tile](../images/wear_companion_app_add_tile.png)
    - L'ordine dei riquadri può essere modificato trascinando e rilasciando.
 
 Il contenuto dei riquadri può essere personalizzato premendo a lungo su un riquadro e cliccando il pulsante "Modifica" o "icona ingranaggio".
@@ -206,10 +204,10 @@ Il riquadro azioni può contenere da 1 a 4 pulsanti di azione definiti dall'uten
 Le azioni supportate nel riquadro Azioni possono richiedere all'app AAPS sul telefono:
 
 * **Calc**: esegui un calcolo del bolo, basato sull'input di carboidrati e facoltativamente una percentuale [1]
-* **Insulina**: richiedi l'erogazione di insulina inserendo le unità di insulina
-* **Trattamento**: richiedi sia l'erogazione di insulina che l'aggiunta di carboidrati
+* **Ipo**: per alzare il target durante il trattamento dell'ipoglicemia
+* **Pasto imminente**: per abbassare il target e aumentare l'insulina attiva
 * **Carboidrati**: aggiungi carboidrati (estesi)
-* **TempT**: imposta un obiettivo temporaneo personalizzato e la durata
+* **Annulla**: per fermare l'obiettivo temporaneo corrente
 
 ![Wear action tile, sample calculator](../images/wear_actions.png)
 
@@ -221,10 +219,10 @@ Le azioni supportate nel riquadro Azioni possono richiedere all'app AAPS sul tel
 Il riquadro Obiettivo Temporaneo può richiedere un obiettivo temporaneo basato sui preset del telefono AAPS. Configura il tempo e gli obiettivi preset tramite le impostazioni dell'app del telefono andando in "Preferenze", "Panoramica", ["Obiettivi Temporanei predefiniti"](#Preferences-default-temp-targets) e imposta la durata e gli obiettivi per ciascun preset. Configura le azioni visibili sul riquadro tramite le impostazioni del riquadro. Premi a lungo il riquadro per mostrare le opzioni di configurazione e seleziona da 1 a 4 opzioni:
 
 * **Attività**: per lo sport
-* **Ipo**: per alzare il target durante il trattamento dell'ipoglicemia
-* **Pasto imminente**: per abbassare il target e aumentare l'insulina attiva
+* **Trattamento**: richiedi sia l'erogazione di insulina che l'aggiunta di carboidrati
+* **Insulina**: richiedi l'erogazione di insulina inserendo le unità di insulina
 * **Manuale**: imposta un obiettivo temporaneo personalizzato e la durata
-* **Annulla**: per fermare l'obiettivo temporaneo corrente
+* **TempT**: imposta un obiettivo temporaneo personalizzato e la durata
 
 ![Wear actions tile edit](../images/wear_tile_tempt_edit.png)
 
@@ -244,13 +242,13 @@ La lunga durata della batteria degli smartwatch Android Wear OS è una sfida. Al
 
 Dalla versione 3 di AAPS, possiamo usare una "UI semplificata" durante la modalità sempre attivo. Questa UI contiene solo la glicemia, la direzione e l'ora. Questa UI è ottimizzata per l'energia con aggiornamenti meno frequenti, mostrando meno informazioni e accendendo meno pixel per risparmiare energia sui display OLED.
 
-La modalità UI semplificata è disponibile per i quadranti: AAPS, AAPS V2, Home Big, Digital Style, Steampunk e Cockpit. La UI semplificata è opzionale e viene configurata tramite le impostazioni del quadrante. (Tieni premuto il quadrante e clicca su "modifica" o sull'icona dell'ingranaggio) Seleziona la configurazione "Semplifica UI" e impostala su "Sempre attivo" o "Sempre attivo e in carica".
+La modalità UI semplificata è disponibile per i quadranti: AAPS, AAPS V2, Home Big, Digital Style, Steampunk e Cockpit. La UI semplificata è opzionale e viene configurata tramite le impostazioni del quadrante. (Tieni premuto il quadrante e clicca su "modifica" o sull'icona dell'ingranaggio) Seleziona la configurazione "Semplifica UI" e impostala su "Durante la ricarica" o "Sempre attivo e in carica".
 
 ### Modalità notturna
 
 Durante la ricarica, sarebbe utile se il display potesse rimanere "sempre attivo" e mostrare la tua glicemia durante la notte. Tuttavia, i quadranti standard sono troppo luminosi e hanno troppe informazioni, e i dettagli sono difficili da leggere con occhi assonnati. Pertanto, abbiamo aggiunto un'opzione per il quadrante per semplificare la UI solo durante la ricarica quando impostato nella configurazione.
 
-La modalità UI semplificata è disponibile per i quadranti: AAPS, AAPS V2, Home Big, Digital Style, Steampunk e Cockpit. La UI semplificata è opzionale e viene configurata tramite le impostazioni del quadrante. (Tieni premuto il quadrante e clicca su "modifica" o sull'icona dell'ingranaggio) Seleziona la configurazione "Semplifica UI" e impostala su "Durante la ricarica" o "Sempre attivo e in carica".
+La modalità UI semplificata è disponibile per i quadranti: AAPS, AAPS V2, Home Big, Digital Style, Steampunk e Cockpit. La UI semplificata è opzionale e viene configurata tramite le impostazioni del quadrante. (Tieni premuto il quadrante e clicca su "modifica" o sull'icona dell'ingranaggio) Seleziona la configurazione "Semplifica UI" e impostala su "Sempre attivo" o "Sempre attivo e in carica".
 
 Le opzioni sviluppatore Android consentono all'orologio di rimanere sveglio durante la ricarica. Per rendere disponibili le opzioni sviluppatore, consulta la [documentazione ufficiale](https://developer.android.com/training/wearables/get-started/debugging). Imposta "Rimani sveglio durante la ricarica" su "on" nelle opzioni sviluppatore.
 
@@ -260,7 +258,7 @@ Nota: non tutti i display gestiscono bene la modalità sempre attivo. Può causa
 
 ![Simplified UI](../images/Watchface_simplified_ui.png)
 
-## Scorciatoia silenzia avviso
+## Snooze Alert shortcut
 
 È possibile creare una scorciatoia per silenziare gli avvisi/allarmi di AAPS. Silenziare il suono tramite il tuo orologio è comodo e più veloce senza raggiungere il telefono. Nota: devi ancora controllare il messaggio di allarme sul telefono e gestirlo di conseguenza, ma puoi farlo dopo. Quando il tuo orologio ha due pulsanti, puoi assegnare un tasto al programma `AAPS Silenzia Avviso`.
 
@@ -300,8 +298,8 @@ Poiché non possiamo compromettere la comunicazione (abbiamo bisogno di dati agg
 
 ## Risoluzione dei problemi dell'app Wear:
 
-* Abilita il debug ADB nelle Opzioni sviluppatore (sull'orologio), connetti l'orologio via USB e avvia l'app Wear una volta in Android Studio.
-* Se le Complicazioni non aggiornano i dati, controlla prima se i quadranti AAPS funzionano affatto.
+*  Abilita il debug ADB nelle Opzioni sviluppatore (sull'orologio), connetti l'orologio via USB e avvia l'app Wear una volta in Android Studio.
+*  Se le Complicazioni non aggiornano i dati, controlla prima se i quadranti AAPS funzionano affatto.
 
 ## Quadranti personalizzati AAPS aggiuntivi disponibili
 
@@ -312,3 +310,4 @@ Poiché non possiamo compromettere la comunicazione (abbiamo bisogno di dati agg
 Se vuoi creare il tuo quadrante, segui la [guida qui](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
 
 Una volta creato un quadrante personalizzato, puoi condividere il tuo quadrante personalizzato **AAPS** con altri; il file zip può essere caricato nella cartella "ExchangeSiteCustomWatchfaces" tramite una Pull Request in Github. Durante il merge della pull request, il team di documentazione estrarrà il file CustomWatchface.png e lo prefisserà con il nome del file Zip.
+
