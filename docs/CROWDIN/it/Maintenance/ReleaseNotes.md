@@ -85,7 +85,7 @@ Data di rilascio: 04-02-2026
 Data di rilascio: 03-08-2026
 
 ### Core
-- Correzione gestione ora legale @MilosKozak
+- Fix DST handling @MilosKozak
 - Miglioramento e unificazione dell'identificazione del target normale (mgdl > 99, mmol > 5.5) @MilosKozak
 - SMS: protezione RESTART con PIN @MilosKozak
 - Manutenzione: avviso se directory sbagliata selezionata @MilosKozak
@@ -206,9 +206,9 @@ Data di rilascio: 27-03-2025
 * È richiesta la [versione di Android Studio chiamata "Meerkat"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) o superiore per compilare questa versione. Se hai già compilato una versione 3.3.x, devi aggiornare di nuovo Android Studio.
 
 ### A partire da questa versione, le notifiche e l'applicazione della versione sono state semplificate e ammorbidite e funzionano nel seguente modo:
-* Nessuna scadenza quando il dispositivo è offline (se non c'è connessione a Internet). Significa nessun periodo di grazia di 60 e 90 giorni.
-* Dopo la scadenza viene applicata la modalità LGS
-* Riceverai avvisi/notifiche meno spesso:
+*  Nessuna scadenza quando il dispositivo è offline (se non c'è connessione a Internet). Significa nessun periodo di grazia di 60 e 90 giorni.
+*  Dopo la scadenza viene applicata la modalità LGS
+*  Riceverai avvisi/notifiche meno spesso:
    - 28+ giorni rimanenti: ogni 7 giorni
    - 27-14 giorni rimanenti: ogni 3 giorni
    - poi una volta al giorno
@@ -331,7 +331,7 @@ Data di rilascio: 29-12-2024
 
 ### Modifiche dettagliate
 
-#### CGM e Microinfusori
+#### CGMs and Pumps
 
 * [Abilita "SMB sempre" e "SMB dopo carboidrati"](#Open-APS-features-enable-smb-always) per gli utenti di FreeStyle Libre 2 e Libre 3 @MilosKozak
 * Miglioramenti [driver Medtrum](../CompatiblePumps/MedtrumNano.md) @jbr77rr
@@ -503,7 +503,7 @@ Data di rilascio: 19-07-2022
 - correzione blocco applicazione @MilosKozak
 - corretto driver DASH @avereha
 - corretti driver Dana @MilosKozak
-- enorme miglioramento UI, pulizia e unificazione, migrazione al material design, stili, tema bianco, nuove icone @Andries-Smit @MilosKozak @osodebailar @Philoul
+- enorme miglioramento UI, pulizia e unificazione, migrazione al material design, stili, tema bianco, nuove icone @Andries-Smit @MilosKozak @osodebailar @Philoul @Andries-Smit @MilosKozak @osodebailar @Philoul @Andries-Smit @MilosKozak @osodebailar @Philoul
 - widget @MilosKozak
 - Supporto CGM Aidex @andyrozman @markvader (solo Pumpcontrol)
 - [Tile Wear OS](#WearOsSmartwatch-wear-os-tiles), traduzioni @Andries-Smit
@@ -635,7 +635,7 @@ Data di rilascio: 12-01-2021
 - Miglioramenti e correzioni microinfusore RileyLink, Omnipod e MDT
 - NS_UPLOAD_ONLY forzato
 - correzione per SMB e app Dexcom
-- correzioni quadranti
+- watchface fixes
 - segnalazione crash migliorata
 - gradle ripristinato per consentire l'installazione diretta dei quadranti
 - correzioni automazione
@@ -913,7 +913,7 @@ Data di rilascio: 29-03-2019
 
 ### Principali nuove funzionalità
 
-- [Correzione ora legale](#time-adjustment-daylight-savings-time-dst)
+- [DST fix](#time-adjustment-daylight-savings-time-dst)
 - Aggiornamento Wear
 - Aggiornamento [plugin SMS](../RemoteFeatures/SMSCommands.md)
 - Torna indietro negli obiettivi.
@@ -934,7 +934,7 @@ Data di rilascio: 03-03-2019
 - Supporto sorgente BG G6, Poctech, Tomato, Eversense (Tebbe Ubben e Milos Kozak)
 - Corretta disabilitazione SMB dalle preferenze (Johannes Mockenhaupt)
 
-### Varie
+### Misc
 
 - Se stai usando un valore `smbmaxminutes` non predefinito devi impostare di nuovo questo valore
 
@@ -986,7 +986,7 @@ Data di rilascio: 03-11-2018
 - App Dexcom patchata come sorgente BG
 - Plugin sensibilità oref1
 
-### Varie
+### Misc
 
 - L'app ora usa un drawer per mostrare tutti i plugin; i plugin selezionati come visibili nel config builder vengono mostrati come schede in cima (preferiti)
 - Revisione completa per le schede config builder e obiettivi, con aggiunta di descrizioni
@@ -999,7 +999,7 @@ Data di rilascio: 03-11-2018
 
 ## Versione 1.0
 
-```{admonition} Prima versione di **AAPS**
+```{admonition} First version of **AAPS**
 :class: note
 
 La prima versione di test è iniziata nel 2015 e il primo rilascio è stato nel 2016.
@@ -1007,3 +1007,4 @@ La prima versione di test è iniziata nel 2015 e il primo rilascio è stato nel 
 La cronologia esatta di questi rilasci non è disponibile al momento, ma poiché questa domanda è stata posta più volte la documentiamo qui.
 
 ```
+![AAPS 1.0](../images/update/AAPS1.0.png)
