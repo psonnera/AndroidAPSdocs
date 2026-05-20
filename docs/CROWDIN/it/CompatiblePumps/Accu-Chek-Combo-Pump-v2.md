@@ -1,8 +1,4 @@
-- - -
-orphan: true
-- - -
-
-# Microinfusore Accu-Chek Combo
+# Accu Chek Combo Pump
 
 **Questo software è parte di una soluzione fai-da-te e non è un prodotto finito, ma richiede che sia TU a leggere, imparare e comprendere il sistema, incluso come utilizzarlo. Non è qualcosa che gestisce tutta la tua terapia del diabete al posto tuo, ma ti permette di migliorare il tuo diabete e la tua qualità di vita se sei disposto a dedicarvi il tempo necessario. Non affrettarti, ma concediti il tempo di imparare. Sei tu solo il responsabile di ciò che ne fai.**
 
@@ -34,8 +30,7 @@ Se hai utilizzato il vecchio driver Combo che dipende dall'app Ruffy separata e 
 
 Inoltre, se stai migrando dal vecchio driver, tieni presente che il nuovo driver comunica un comando bolo in modo completamente diverso al Combo ed è molto più veloce, quindi non sorprenderti se un bolo inizia immediatamente indipendentemente dal dosaggio. Inoltre, i suggerimenti generali, trucchi ecc. relativi alla gestione dei problemi di associazione e connessione con Ruffy non si applicano qui, poiché questo è un driver completamente nuovo che non condivide codice con quello vecchio.
 
-Questo nuovo driver è attualmente scritto per supportare le seguenti lingue sul Combo.
-(Questo non è correlato alla lingua in AAPS - è la lingua mostrata sull'LCD del Combo stesso.)
+Questo nuovo driver è attualmente scritto per supportare le seguenti lingue sul Combo. (Questo non è correlato alla lingua in AAPS - è la lingua mostrata sull'LCD del Combo stesso.)
 
 * Inglese
 * Spagnolo
@@ -84,7 +79,7 @@ Questo nuovo driver è attualmente scritto per supportare le seguenti lingue sul
      * Impostare l'allarme cartuccia quasi vuota secondo le proprie preferenze
      * Configurare un bolo massimo adeguato alla propria terapia per proteggersi da eventuali bug del software
      * Analogamente, configurare la durata massima TBR come misura di sicurezza. Consentire almeno 3 ore, poiché l'opzione di disconnettere il microinfusore per 3 ore imposta uno 0% per 3 ore.
-     * Abilitare il blocco tasti sul microinfusore per evitare boli accidentali dal microinfusore, specialmente se il microinfusore è stato usato in precedenza e il bolo rapido era un'abitudine.
+     * Enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and quick bolusing was a habit.
      * Impostare il timeout del display e il timeout del menu al minimo, rispettivamente 5,5 e 5. Ciò consente ad AAPS di recuperare più rapidamente dalle situazioni di errore e riduce la quantità di vibrazioni che possono verificarsi durante tali errori.
 
   ![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
@@ -115,8 +110,7 @@ Questo nuovo driver è attualmente scritto per supportare le seguenti lingue sul
 
   ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-5.png)
 
-* Quando il driver chiede il PIN a 10 cifre mostrato sul Combo e il codice viene inserito in modo errato, viene visualizzato questo:
-  ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
+* Quando il driver chiede il PIN a 10 cifre mostrato sul Combo e il codice viene inserito in modo errato, viene visualizzato questo: ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
 
 * Una volta completata l'associazione, l'interfaccia di associazione viene chiusa premendo il pulsante OK nella schermata che indica il successo dell'associazione. Dopo la chiusura, si torna all'interfaccia delle impostazioni del driver. Il pulsante 'Associa con microinfusore' dovrebbe ora essere disabilitato e in grigio.
 
@@ -128,13 +122,13 @@ Questo nuovo driver è attualmente scritto per supportare le seguenti lingue sul
 
   ![Screenshot of Accu-Chek Combo tab without pairing](../images/combo/combov2-tab-without-pairing.png)
 
-* Per verificare la configurazione (con il microinfusore **disconnesso** da qualsiasi cannula per sicurezza!) usa AAPS per impostare una TBR al 500% per 15 min ed erogare un bolo. Il microinfusore dovrebbe ora avere una TBR attiva e il bolo nella cronologia. Anche AAPS dovrebbe mostrare la TBR attiva e il bolo erogato.
+* Per verificare la configurazione (con il microinfusore **disconnesso** da qualsiasi cannula per sicurezza!) usa AAPS per impostare una TBR al 500% per 15 min ed erogare un bolo. The pump should now have a TBR running and the bolus in the history. Anche AAPS dovrebbe mostrare la TBR attiva e il bolo erogato.
 
 * Sul Combo, si consiglia di abilitare il blocco tasti per evitare boli accidentali dal microinfusore, specialmente se il microinfusore è stato usato in precedenza e l'uso della funzione "bolo rapido" era un'abitudine.
 
 ## Note sull'associazione
 
-L'Accu-Chek Combo è stato sviluppato prima del rilascio di Bluetooth 4.0, e solo un anno dopo il rilascio della primissima versione Android. Questo è il motivo per cui il suo modo di associarsi con altri dispositivi non è compatibile al 100% con come avviene in Android oggi. Per superare completamente questo problema, AAPS avrebbe bisogno di permessi a livello di sistema, disponibili solo per le app di sistema, che vengono installate dai produttori nel telefono e non possono essere installate dagli utenti.
+L'Accu-Chek Combo è stato sviluppato prima del rilascio di Bluetooth 4.0, e solo un anno dopo il rilascio della primissima versione Android. Questo è il motivo per cui il suo modo di associarsi con altri dispositivi non è compatibile al 100% con come avviene in Android oggi. Per superare completamente questo problema, AAPS avrebbe bisogno di permessi a livello di sistema, disponibili solo per le app di sistema, che vengono installate dai produttori nel telefono e non possono essere installate dagli utenti. These are installed by the phone makers into the phone - users cannot install system apps.
 
 La conseguenza è che l'associazione non sarà mai senza problemi al 100%, anche se è notevolmente migliorata in questo nuovo driver. In particolare, durante l'associazione, il dialogo PIN Bluetooth di Android può apparire brevemente e scomparire automaticamente. Ma a volte rimane sullo schermo e chiede un PIN a 4 cifre. (Da non confondere con il PIN di associazione Combo a 10 cifre.) Non inserire nulla, premi semplicemente annulla. Se l'associazione non continua, seguire le istruzioni sullo schermo per riprovare l'associazione.
 
@@ -204,7 +198,7 @@ Certe avvertenze vengono automaticamente respinte dal driver. Queste sono:
 - W2 "batteria scarica": il driver la converte in un avviso "batteria scarica" mostrato nella scheda principale di AAPS
 - W3, W6, W7, W8: queste sono tutte puramente informative per l'utente, quindi è sicuro per il driver respingerle automaticamente
 
-Altre avvertenze _non_ vengono respinte automaticamente. Inoltre, gli errori _non_ vengono mai respinti automaticamente. Entrambi vengono gestiti allo stesso modo: causano la visualizzazione da parte del driver di un dialogo di avviso nell'interfaccia AAPS e causano anche l'interruzione di qualsiasi esecuzione di comando in corso. Il driver passa quindi allo stato "errore" (vedere [la descrizione del contenuto della scheda Accu-Chek Combo sopra](#combov2-tab-contents)). Questo stato non consente l'esecuzione di alcun comando. L'utente deve gestire l'errore sul microinfusore; ad esempio, un errore di occlusione potrebbe richiedere la sostituzione della cannula. Una volta che l'utente si è occupato dell'errore, il normale funzionamento può essere ripreso premendo il pulsante "Aggiorna" sulla scheda Accu-Chek Combo. Il driver si connette quindi al Combo e aggiorna il suo stato, verificando se un errore è ancora mostrato sullo schermo ecc. Inoltre, il driver aggiorna automaticamente lo stato del microinfusore dopo un po', quindi premere manualmente quel pulsante non è obbligatorio.
+Altre avvertenze _non_ vengono respinte automaticamente. Inoltre, gli errori _non_ vengono mai respinti automaticamente. Entrambi vengono gestiti allo stesso modo: causano la visualizzazione da parte del driver di un dialogo di avviso nell'interfaccia AAPS e causano anche l'interruzione di qualsiasi esecuzione di comando in corso. Il driver passa quindi allo stato "errore" (vedere [la descrizione del contenuto della scheda Accu-Chek Combo sopra](#combov2-tab-contents)). Questo stato non consente l'esecuzione di alcun comando. L'utente deve gestire l'errore sul microinfusore; ad esempio, un errore di occlusione potrebbe richiedere la sostituzione della cannula. Una volta che l'utente si è occupato dell'errore, il normale funzionamento può essere ripreso premendo il pulsante "Aggiorna" sulla scheda Accu-Chek Combo. Il driver si connette quindi al Combo e aggiorna il suo stato, verificando se un errore è ancora mostrato sullo schermo ecc. Inoltre, il driver aggiorna automaticamente lo stato del microinfusore dopo un po', quindi premere manualmente quel pulsante non è obbligatorio. Also, the driver auto-refreshes the pump status after a while, so manually pressing that button is not mandatory.
 
 L'erogazione del bolo è un caso speciale. Viene effettuata nella modalità comando del Combo, che non segnala durante un bolo che è comparso un avviso. Di conseguenza, il driver non può respingere automaticamente le avvertenze _durante_ un bolo. Ciò significa che purtroppo il microinfusore continuerà a emettere un segnale acustico fino al termine del bolo. L'avviso di bolo più comune è di solito W1 "serbatoio basso". **Non** respingere manualmente le avvertenze Combo sul microinfusore stesso durante un bolo. Si rischia di interrompere il bolo. Il driver si occuperà dell'avviso una volta terminato il bolo.
 
