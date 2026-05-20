@@ -1,6 +1,6 @@
 # Istruzioni di compilazione da riga di comando
 
-```{admonition} Per gli utenti che hanno familiarità con la riga di comando e git
+```{admonition} For users familiar with the command-line and git
 :class: information
 
 L'opzione più semplice per compilare AAPS è il metodo [Browser build](./BrowserBuild.md).
