@@ -19,16 +19,16 @@ Per i dettagli, consulta la [pagina FAQ](../UsefulLinks/FAQ.md).
 
 * Potrebbe essere necessaria una versione specifica di **[Android Studio](https://developer.android.com/studio/)** per compilare l'apk. Vedere la tabella seguente:
 
-| Versione AAPS            | Versione preferita<br/>Android Studio | Versione alternativa<br/>Android Studio | Gradle | JVM |
-| ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| 2.6.2                   | 3.6.1                                                |                                                        | 5.6.4  | 11  |
-| 2.8.2.1                 | 4.1.1                                                |                                                        | 6.1.1  | 13  |
-| [3.1.0.3](#version3100) | 2020.3.1                                             | fino a Panda 2                                         | 7.3.3  | 17  |
-| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                  | fino a Panda 2                                         | 8.2    | 17  |
-| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                      | fino a Panda 2                                         | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                   | fino a Panda 2                                         | 8.11.1 | 21  |
-| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                   | fino a Panda 2                                         | 8.13   | 21  |
-| [3.4.1](#version3410)   | Panda 2 (2025.32)                                    |                                                        | 9      | 21  |
+| Versione AAPS           | Versione preferita<br/>Android Studio | Versione alternativa<br/>Android Studio | Gradle | JVM |
+| ----------------------- | ------------------------------------------- | --------------------------------------------- | ------ |:--- |
+| 2.6.2                   | 3.6.1                                       |                                               | 5.6.4  | 11  |
+| 2.8.2.1                 | 4.1.1                                       |                                               | 6.1.1  | 13  |
+| [3.1.0.3](#version3100) | 2020.3.1                                    | fino a Panda 2                                | 7.3.3  | 17  |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                         | fino a Panda 2                                | 8.2    | 17  |
+| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)             | fino a Panda 2                                | 8.10   | 21  |
+| [3.3.2](#version3300)   | Meerkat (2024.3.1)                          | fino a Panda 2                                | 8.11.1 | 21  |
+| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                          | fino a Panda 2                                | 8.13   | 21  |
+| [3.4.1](#version3410)   | Panda 2 (2025.32)                           |                                               | 9      | 21  |
 
 La "versione preferita" è già fornita con la versione appropriata di JVM. La versione preferita è anche la versione minima con cui è possibile compilare **AAPS**. **Non** sarà possibile compilare con una versione più vecchia di quella "preferita". Se si utilizza una versione diversa, potrebbero verificarsi problemi relativi alla versione di JVM. Per risolvere questi problemi, consultare la pagina [Risoluzione dei problemi di Android Studio](#troubleshooting_androidstudio-uncommitted-changes). Se la versione attuale di Android Studio non è elencata nella tabella, è necessario aggiornarla prima.
 
@@ -79,13 +79,13 @@ Se si ritiene che qualcosa nelle istruzioni di compilazione sia errato, mancante
 
 ## Guida passo-passo per la compilazione dell'app AAPS
 
-```{admonition} AVVERTENZA
+```{admonition} WARNING
 :class: warning
 Se hai già compilato AAPS in precedenza, non è necessario ripetere tutti i seguenti passaggi.
 Passa direttamente alla [guida all'aggiornamento](../Maintenance/UpdateToNewVersion.md)!
 ```
 
-```{contents} Panoramica dei passaggi per compilare il file apk di **AAPS**
+```{contents} The overall steps for building the **AAPS** apk file
 :depth: 1
 :local: true
 ```
@@ -97,7 +97,7 @@ Poiché **Android Studio** funziona su Windows, Mac OS X e Linux, potrebbero ess
 (install-git-if-you-dont-have-it)=
 ### Installare Git
 
-```{admonition} Perché Git? 
+```{admonition} Why Git? 
 :class: dropdown
 
 Git è noto come "_Sistema di controllo delle versioni_" (VCS).\
@@ -131,14 +131,14 @@ Git è un programma che consente di tracciare le modifiche al codice e di collab
 
 - **Dovrai essere connesso a internet per tutto il tempo durante i seguenti passaggi, poiché Android Studio scarica diversi aggiornamenti**
 
-```{admonition} Cos'è Android Studio?
+```{admonition} What is Android Studio?
 :class: dropdown
 Android Studio è un programma che viene eseguito sul tuo computer. Ti consente di scaricare codice sorgente da internet (usando Git) e di compilare app per smartphone (e smartwatch). Non puoi "danneggiare" una versione di **AAPS** attualmente in esecuzione su uno smartphone compilando un'app nuova o aggiornata sul PC con Android Studio: si tratta di processi completamente separati. 
 ```
 
 Una delle cose più importanti durante l'installazione di Android Studio è **avere pazienza!** Durante l'installazione e la configurazione, Android Studio scarica molti elementi, il che richiede tempo.
 
-```{admonition} Interfaccia utente diversa
+```{admonition} Different UI
 :class: warning
 Nota importante: Android Studio ha cambiato la sua interfaccia nelle ultime versioni. Questa guida mostra i passaggi con la *nuova interfaccia* in "Ladybug". Se utilizzi ancora la vecchia interfaccia, potresti voler passare alla nuova interfaccia seguendo [queste istruzioni](NewUI).
 ```
@@ -209,7 +209,7 @@ Verrà ora visualizzata la schermata di benvenuto di Android Studio.
 (Building-APK-download-AAPS-code)=
 ### Scaricare il codice di AAPS
 
-```{admonition} Perché il download del codice di AAPS può richiedere molto tempo?
+```{admonition} Why can it take a long time to download the AAPS code?
 :class: dropdown
 
 La prima volta che **AAPS** viene scaricato, Android Studio si connetterà a internet al sito GitHub per scaricare il codice sorgente di **AAPS**. Ciò dovrebbe richiedere circa 1 minuto. 
@@ -238,7 +238,7 @@ Indicheremo ora ad Android Studio dove trovare il codice:
 * Verifica che la directory (predefinita) per salvare il codice clonato non esista già sul computer (4). Puoi cambiarla con un'altra directory, ma ricorda dove l'hai salvata!
 * Ora fai clic sul pulsante "Clone" (5).
 
-```{admonition} INFORMAZIONE
+```{admonition} INFORMATION
 :class: information
 Prendi nota della directory. È lì che viene memorizzato il codice sorgente!
 ```
@@ -259,7 +259,7 @@ Solo per gli utenti Windows: se il firewall richiede un'autorizzazione, conceder
 Dopo che il repository è stato clonato con successo, Android Studio aprirà il progetto clonato.
 
 (NewUI)=
-```{admonition} Nuova interfaccia utente
+```{admonition} New UI
 :class: information
 Android Studio ha recentemente aggiornato la propria interfaccia. Le nuove installazioni di Android Studio utilizzano la nuova interfaccia per impostazione predefinita!
 
@@ -277,7 +277,7 @@ Android Studio avvierà automaticamente una "Sincronizzazione progetto Gradle", 
 
 ![AS_download_dependencies](../images/Building-the-App/036_GradleSyncing.png)
 
-```{admonition} NON AGGIORNARE MAI GRADLE!
+```{admonition} NEVER UPDATE GRADLE!
 :class: warning
 
 Android Studio potrebbe raccomandare di aggiornare il sistema Gradle. **Non aggiornare mai Gradle!** Questo causerebbe difficoltà.
@@ -321,7 +321,7 @@ Se **git.exe** non viene trovato automaticamente o se facendo clic su "Test" si 
 (Building-APK-generate-signed-apk)=
 ### Compilare l'APK "firmato" di AAPS
 
-```{admonition} Perché l'app AAPS deve essere "firmata"?
+```{admonition} Why does the AAPS app need to be "signed"?
 :class: dropdown
 
 Android richiede che ogni app sia _firmata_, per garantire che possa essere aggiornata in seguito solo dalla stessa fonte attendibile che ha rilasciato l'app originale. Per ulteriori informazioni su questo argomento, segui [questo link](https://developer.android.com/studio/publish/app-signing.html#generate-key). 
@@ -344,7 +344,7 @@ Selezionare "APK" invece di "Android App Bundle" e fare clic su "Next":
 Nella schermata successiva, assicurarsi che "Module" sia impostato su "AAPS.app" (1).
 
 (Building-APK-wearapk)=
-```{admonition} INFORMAZIONE!
+```{admonition} INFORMATION!
 :class: information
 Se si desidera creare l'apk per lo smartwatch, è necessario selezionare AAPS.wear!
 ```
@@ -352,7 +352,7 @@ Se si desidera creare l'apk per lo smartwatch, è necessario selezionare AAPS.we
 
 Fare clic su "Create new..." (2) per iniziare a creare il keystore.
 
-```{admonition} INFORMAZIONE!
+```{admonition} INFORMATION!
 :class: information
 Sarà necessario creare il keystore una sola volta.
 Se hai già compilato AAPS in precedenza, NON creare un nuovo keystore ma seleziona quello esistente e inserisci le sue password!
@@ -366,7 +366,7 @@ Se hai già compilato AAPS in precedenza, NON creare un nuovo keystore ma selezi
 
   **Non** utilizzare la directory in cui è stato salvato il codice sorgente, ma una directory che verrà trasferita anche su un nuovo computer.
 
-```{admonition} ATTENZIONE!
+```{admonition} WARNING!
 :class: warning
 Assicurarsi di annotare dove viene salvato il keystore. Ne avrai bisogno quando compilerai il prossimo aggiornamento di AndroidAPS!
 ```
@@ -379,7 +379,7 @@ Assicurarsi di annotare dove viene salvato il keystore. Ne avrai bisogno quando 
 
 * Ora è necessaria una password per la chiave. Per semplicità, se lo si desidera, è possibile utilizzare la stessa password del keystore, inserita sopra. Inserire una password (4) e confermarla.
 
-```{admonition} ATTENZIONE!
+```{admonition} WARNING!
 :class: warning
 Annotare queste password! Ne avrai bisogno quando compilerai il prossimo aggiornamento di AAPS!
 ```
@@ -427,5 +427,6 @@ Se pensi di voler utilizzare uno smartwatch Android Wear in futuro, questo è il
 ```
 
 Passa alla fase successiva di [Trasferimento e installazione di **AAPS**](../SettingUpAaps/TransferringAndInstallingAaps.md).
+
 
 
