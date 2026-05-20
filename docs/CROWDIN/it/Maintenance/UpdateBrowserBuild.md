@@ -11,7 +11,7 @@ Questa operazione sarà obbligatoria solo la prima volta; per gli aggiornamenti 
 
 ## Panoramica per l'aggiornamento a una nuova versione di AAPS con un browser
 
-```{contents} Passaggi per aggiornare a una nuova versione di AAPS
+```{contents} Steps for updating to a new version of AAPS
 :depth: 1
 :local: true
 ```
@@ -27,7 +27,7 @@ Consulta la pagina [Esportare e importare le impostazioni](ExportImportSettings.
 (Update-to-new-version-update-your-repo)=
 ### Aggiorna il tuo repository GitHub
 
-```{admonition} ATTENZIONE
+```{admonition} WARNING
 :class: warning
 Browser Build è disponibile dalla versione AAPS 3.3.2.1.
 ```
