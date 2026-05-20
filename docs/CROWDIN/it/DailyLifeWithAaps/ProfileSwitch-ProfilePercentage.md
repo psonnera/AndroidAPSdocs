@@ -10,7 +10,7 @@ Quando si inizia il percorso con **AAPS**, sarà necessario creare un **Profilo*
 
 - I lavoratori su turni notturni o a rotazione - uno sfasamento temporale nel **Profilo** può essere impostato per i lavoratori a turni modificando il numero di ore nel **Profilo** in base a quanto più tardi/prima andrà a letto o si sveglierà l'utente.
 
-Perché usare una **Percentuale del Profilo** invece di una regolazione temporanea della basale? Per essere più efficace nella sua applicazione, una **Percentuale del Profilo** applica una riduzione o un aumento proporzionale su: basale, ISF e I:C. Ciò garantisce un approccio equilibrato calcolato da **AAPS** quando somministra l'insulina dell'utente. Si trae poco beneficio dal **Profilo** in **AAPS** riducendo solo la basale se l'algoritmo continua a erogare gli stessi rapporti per ISF e I:C.
+Perché usare una **Percentuale del Profilo** invece di una regolazione temporanea della basale?  Per essere più efficace nella sua applicazione, una **Percentuale del Profilo** applica una riduzione o un aumento proporzionale su: basale, ISF e I:C. Ciò garantisce un approccio equilibrato calcolato da **AAPS** quando somministra l'insulina dell'utente. Si trae poco beneficio dal **Profilo** in **AAPS** riducendo solo la basale se l'algoritmo continua a erogare gli stessi rapporti per ISF e I:C.
 
 ## Come attivare un Cambio Profilo?
 
@@ -41,7 +41,7 @@ B. Per attivare una **Percentuale del Profilo**:
 - Seguire i passaggi descritti al punto A sopra.
 - Regolare i campi "Durata" e "Percentuale" come necessario, tenendo presente quanto segue. Se il campo "Durata" (mostrato nell'icona 2 di seguito) è:
   * lasciato a "zero", rimarrà attivo nel **Profilo** per un tempo illimitato. Il **Profilo** resterà attivo finché l'utente non seleziona e attiva un nuovo "Cambio Profilo".
-  * inserito con il numero di [x] minuti, questo sarà il periodo di tempo desiderato per il **Profilo**. Alla scadenza del periodo selezionato, il **Profilo** standard tornerà attivo in **AAPS**.
+  * inserito con il numero di [x] minuti, questo sarà il periodo di tempo desiderato per il **Profilo**.  Alla scadenza del periodo selezionato, il **Profilo** standard tornerà attivo in **AAPS**.
 
 ![BB4_Screenshot 2024-06-23 000029](../images/ProfileSwitch4.png)
 
@@ -68,11 +68,11 @@ Una volta selezionato, **AAPS** ricalcola la basale predefinita e **AAPS** (aper
 
 L'effetto di una Percentuale del **Profilo** è riassunto nella tabella seguente:
 
-| Cambio Profilo<br>Percentuale |   Effetto   |    I:C<br>g/UI     | esempio<br>15g |               ISF<br>mmol/l/UI<br/>mg/dl/UI                | UI per abbassare<br/>2mmol/l<br/>40mg/dl |
-|:----------------------------------:|:-----------:|:------------------------:|:--------------------:|:----------------------------------------------------------------------:|:-----------------------------------------------:|
-|                90%                 |   Più debole   | 5/0.9<br>=**5.55** |        2.7 UI        | 2.2/0.9<br>=**2.4**<br><br>40/0.9<br>=**44.4** |                     0.8 UI                      |
-|              **100%**              | **Standard** |          **5**           |       **3 UI**       |                          **2.2<br>40**                           |                   **0.9** UI                    |
-|                130%                |  Più forte   | 5/1.3<br>=**3.85** |        3.9 UI        | 2.2/1.3<br>=**1.7**<br><br>40/1.3<br>=**30.8** |                     1.2 UI                      |
+| Cambio Profilo<br>Percentuale |   Effetto    |    I:C<br>g/UI     | esempio<br>15g |               ISF<br>mmol/l/UI<br/>mg/dl/UI                | UI per abbassare<br/>2mmol/l<br/>40mg/dl |
+|:-----------------------------------:|:------------:|:------------------------:|:--------------------:|:----------------------------------------------------------------------:|:----------------------------------------------------:|
+|                 90%                 |    Weaker    | 5/0.9<br>=**5.55** |        2.7 UI        | 2.2/0.9<br>=**2.4**<br><br>40/0.9<br>=**44.4** |                        0.8 UI                        |
+|              **100%**               | **Standard** |          **5**           |       **3 UI**       |                          **2.2<br>40**                           |                      **0.9** UI                      |
+|                130%                 |  Più forte   | 5/1.3<br>=**3.85** |        3.9 UI        | 2.2/1.3<br>=**1.7**<br><br>40/1.3<br>=**30.8** |                        1.2 UI                        |
 
 (ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
 ## Sfasamento temporale del Profilo Percentuale Circadiano
@@ -85,10 +85,10 @@ Uno "sfasamento temporale" nella funzionalità del **Profilo** dell'utente spost
 
 È sempre una questione di quale ora del **Profilo** dovrebbe sostituire le impostazioni dell'ora corrente. Questo tempo deve essere spostato di x ore. Prestare quindi attenzione alle direzioni come descritto nell'esempio seguente:
   * Ora corrente: 12:00
-  * Sfasamento temporale **positivo**
+  * Sfasamento temporale **negativo**
     * 2:00 **+10 h** -> 12:00
     * Verranno utilizzate le impostazioni delle 2:00 al posto di quelle normalmente usate alle 12:00, a causa dello sfasamento temporale positivo.
-  * Sfasamento temporale **negativo**
+  * Sfasamento temporale **positivo**
     * 22:00 **-10 h** -> 12:00
     * Verranno utilizzate le impostazioni delle 22:00 (10 pm) al posto di quelle normalmente usate alle 12:00, a causa dello sfasamento temporale negativo.
 
