@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Suggerimenti per l'uso base di Accu-Chek Combo
 
 ## Come garantire il corretto funzionamento
@@ -18,7 +14,7 @@ orphan: true
 * In AAPS, andare a **Impostazioni / Allarmi locali** e attivare **allarme quando il microinfusore non è raggiungibile** e impostare **limite microinfusore non raggiungibile [min]** a **31** minuti.
 * Questo darà abbastanza tempo per non attivare l'allarme quando si lascia la stanza mentre il telefono è rimasto sulla scrivania, ma informa se il microinfusore non può essere raggiunto per un tempo superiore alla durata di una basale temporanea.
 
-### Ripristinare la raggiungibilità del microinfusore
+### Restore reachability of the pump
 
 * Quando AAPS segnala un allarme **microinfusore non raggiungibile**, prima rilasciare il blocco tasti e **premere qualsiasi tasto sul microinfusore** (ad es. il pulsante "giù"). Non appena il display del microinfusore si è spento, premere **Aggiorna** nella **scheda Combo** in AAPS. Il più delle volte la comunicazione riprende a funzionare.
 * Se ciò non aiuta, riavviare lo smartphone. Dopo il riavvio, AAPS verrà riattivato e verrà stabilita una nuova connessione con il microinfusore. Se si utilizza il vecchio driver, ruffy verrà riattivato.
@@ -40,13 +36,13 @@ orphan: true
 ## L'annullamento della basale temporanea fallisce
 * Occasionalmente, AAPS non riesce ad annullare automaticamente un avviso **BASALE TEMP ANNULLATA**. In questo caso è necessario premere **AGGIORNA** nella **scheda Combo** di AAPS oppure l'allarme sul microinfusore dovrà essere confermato.
 
-## Considerazioni sulla batteria del microinfusore
+## Pump battery considerations
 
 ### Cambio della batteria
 * Dopo un allarme di **batteria scarica**, la batteria dovrebbe essere cambiata il prima possibile per avere sempre abbastanza energia per una comunicazione Bluetooth affidabile con lo smartphone, anche se il telefono si trova a una distanza maggiore dal microinfusore.
 * Anche dopo un allarme di **batteria scarica**, la batteria potrebbe essere utilizzata per un tempo significativo. Tuttavia, si raccomanda di avere sempre una batteria fresca con sé dopo che è suonato un allarme di "batteria scarica".
 * Prima di cambiare la batteria, premere sul simbolo **Loop** nella schermata principale e selezionare **Sospendi loop per 1h**.
-* Aspettare che il microinfusore comunichi con il telefono e che il logo Bluetooth sul microinfusore sia svanito.
+* Wait for the pump to communicate with the pump and the bluetooth logo on the pump has faded.
 
 ![Bluetooth enabled](../images/combo/combo-tips-compo.png)
 
@@ -59,8 +55,7 @@ orphan: true
 ### Tipo di batteria e cause di breve durata della batteria
 * Poiché la comunicazione Bluetooth intensiva consuma molta energia, utilizzare solo **batterie di alta qualità** come Energizer Ultimate Lithium, le "power one" del "grande" kit di servizio Accu-Chek, o se si opta per una batteria ricaricabile, utilizzare batterie Eneloop.
 
-![Energizer](../images/combo/combo-tips-energizer.jpg)
-![OnePower](../images/combo/combo-tips-power-one.png)
+![Energizer](../images/combo/combo-tips-energizer.jpg) ![OnePower](../images/combo/combo-tips-power-one.png)
 
 Gli intervalli per la durata tipica dei diversi tipi di batteria sono i seguenti:
 * **Energizer Ultimate Lithium**: da 4 a 7 settimane
@@ -82,7 +77,7 @@ L'algoritmo OpenAPS non supporta un bolo esteso parallelo o un bolo multionda. M
 
 ![Disabled loop after multiwave bolus](../images/combo/combo-tips-multiwave-bolus.png)
 
-## Allarmi durante l'erogazione del bolo
+## Alarms at bolus delivery
 * Se AAPS rileva che un bolo identico è stato erogato con successo nello stesso minuto, l'erogazione del bolo verrà impedita con lo stesso numero di unità di insulina. Se si desidera davvero fare lo stesso bolo due volte in rapida successione, attendere altri due minuti e poi erogare di nuovo il bolo. Se il primo bolo è stato interrotto o non è stato erogato per altri motivi, è possibile inviare di nuovo il bolo immediatamente da AAPS 2.0.
 * L'allarme è un meccanismo di sicurezza che legge la cronologia dei boli del microinfusore prima di inviare un nuovo bolo per calcolare correttamente l'insulina attiva (IOB), anche quando un bolo viene erogato direttamente dal microinfusore. Qui le voci indistinguibili devono essere evitate.
 
