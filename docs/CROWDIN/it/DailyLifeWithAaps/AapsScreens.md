@@ -75,12 +75,12 @@ Il colore del valore della glicemia riflette lo stato rispetto al [range](#Prefe
 
 I blocchi al centro mostrano:
 
-1. quanti minuti sono passati dall'ultima lettura **CGM**
-2. differenze con l'ultima lettura: Δ, e con la media degli ultimi 15 e 40 minuti (Δ15 e Δ40).  
+1.  quanti minuti sono passati dall'ultima lettura **CGM**
+2.  differenze con l'ultima lettura: Δ, e con la media degli ultimi 15 e 40 minuti (Δ15 e Δ40).  
    I delta lunghi sono calcolati come valore medio dei delta passati, indicando il cambiamento medio.
 
 (AapsScreens-loop-status)=
-#### Stato del loop
+#### Loop status
 
 ![Loop status](../images/Home2020_LoopStatus.png)
 
@@ -100,7 +100,7 @@ Premere brevemente o tenere premuto sull'icona per aprire la finestra di dialogo
    ![Loop status menu](../images/Home2020_Loop_Dialog.png)
 
 (aaps-screens-bg-warning-sign)=
-#### Avviso glicemia
+#### BG warning sign
 
 Se per qualsiasi motivo ci sono problemi nelle letture della glicemia che **AAPS** riceve, si otterrà un segnale di avviso sotto il numero della glicemia nella schermata principale.
 
@@ -108,7 +108,7 @@ Se per qualsiasi motivo ci sono problemi nelle letture della glicemia che **AAPS
 
 Il segnale di avviso rosso segnala che è necessario intervenire immediatamente: si stanno ricevendo **dati glicemici duplicati**, che impediscono al loop di funzionare correttamente. Di conseguenza, il loop verrà disabilitato finché il problema non viene risolto.
 
-```{admonition} Il loop non è in esecuzione
+```{admonition} Your loop is not running
 :class: note
 Il loop non è in esecuzione finché non si risolve questo problema!
 ```
@@ -126,7 +126,7 @@ Per rimuovere immediatamente l'avviso e far riprendere il loop, è necessario el
 Tuttavia, quando ci sono molti duplicati, potrebbe essere più semplice:
 * [eseguire il backup delle impostazioni](../Maintenance/ExportImportSettings.md),
 * reimpostare il database nel menu di manutenzione e
-* [importare di nuovo le impostazioni](../Maintenance/ExportImportSettings.md)
+* ../Maintenance/ExportImportSettings.md
 
 ##### Avviso giallo
 
@@ -160,7 +160,7 @@ Un'icona con il viso di un bambino in alto a destra di questa sezione indica che
    - L'IOB può essere negativo se ci sono stati periodi recenti di basale ridotta.
    - Premere l'icona per vedere la suddivisione tra insulina da bolo e basale
 
-2. **Grano**: [carboidrati attivi (COB)](../DailyLifeWithAaps/CobCalculation.md) - carboidrati non ancora assorbiti mangiati in precedenza. L'icona lampeggia in rosso se sono richiesti carboidrati (vedere [sotto](#aaps-screens-carbs-required))
+2. Carboidrati necessari
 3. **Linea viola**: basale corrente. L'icona cambia per riflettere le variazioni temporanee della basale (piatta al 100%)
    * Premere l'icona per vedere la basale di base e i dettagli di eventuali basali temporanee (inclusa la durata residua)
 4. **Frecce su e giù**: indica lo stato delle funzionalità di sensibilità dinamica ([Autosens](#Open-APS-features-autosens) o [DynamicISF](#Open-APS-features-DynamicISF)): abilitato o disabilitato. In questa sezione possono essere mostrati diversi valori:
@@ -168,7 +168,7 @@ Un'icona con il viso di un bambino in alto a destra di questa sezione indica che
   - Alg: valore DynamicISF (basato su TDD). Ulteriori informazioni nell'ultima riga della pagina [DynamicISF](#Open-APS-features-DynamicISF).
 
 (aaps-screens-carbs-required)=
-#### Carboidrati necessari
+#### Carbs required
 
 ![Carbs required](../images/Home2020_CarbsRequired.png)
 
@@ -197,7 +197,7 @@ Se viene superata la soglia critica, i valori verranno mostrati in rosso.
 
 Le impostazioni possono essere modificate in [Preferenze > Panoramica > Luci di stato](#Preferences-status-lights).
 
-A seconda del microinfusore utilizzato, alcune di queste icone potrebbero non essere presenti.
+Depending on the pump you use, you may not have all of these icons.
 
 (aaps-screens-main-graph)=
 ### Sezione F - Grafico principale
@@ -305,7 +305,7 @@ L'IOB può essere negativo se non si hanno boli residui e una basale temporanea 
 
 Il decadimento dipende dalle impostazioni del [DIA e del profilo insulinico](../SettingUpAaps/YourAapsProfile.md).
 
-#### Carboidrati attivi (COB)
+#### Carbs On Board
 
 Mostra i carboidrati attivi nel corpo (= carboidrati attivi, non ancora decaduti nel corpo).
 
@@ -579,7 +579,7 @@ Altri preferiscono un intervallo dal 32% al 37% del TDD per il TBB.
 Come la maggior parte di queste regole empiriche, ha una validità reale limitata. Nota: il diabete di ciascuno può variare!
 
 (AapsScreens-insulin-profile)=
-## Profilo Insulinico
+## Insulin Profile
 
 ![Insulin Profile](../images/Screenshot_insulin_profile.png)
 
@@ -589,7 +589,7 @@ La linea **viola** mostra quanta insulina rimane dopo che è stata iniettata men
 
 Vedere [Profilo AAPS > Durata dell'azione dell'insulina](#your-aaps-profile-duration-of-insulin-action) per saperne di più su cos'è e come impostarla.
 
-## Stato del microinfusore
+## Pump Status
 ![Pump Status](../images/Screenshot_PumpStatus.png)
 
 * Varie informazioni sullo stato del microinfusore. Le informazioni visualizzate dipendono dal modello del microinfusore.
@@ -604,7 +604,7 @@ I calcoli vengono eseguiti ogni volta che il sistema riceve una nuova lettura da
 Per ulteriori dettagli vedere la [sezione APS nella pagina del costruttore di configurazione](#Config-Builder-aps).
 
 (aaps-screens-profile)=
-## Profilo
+## Profile
 ![Profile](../images/Screenshots_Profile.png)
 
 Il profilo contiene informazioni sulle impostazioni individuali del diabete, vedere la pagina dettagliata **[Profilo](../SettingUpAaps/YourAapsProfile.md)** per ulteriori informazioni.
@@ -635,9 +635,9 @@ Mostra la cronologia delle letture CGM e offre l'opzione di rimuovere una lettur
 Questa vista è accessibile premendo i 3 punti a destra del menu, quindi Trattamenti. Non è possibile visualizzarla nel menu principale tramite il Costruttore di configurazione. In questa vista, è possibile visualizzare e modificare la cronologia dei seguenti trattamenti:
 
 * Bolo e carboidrati
-* [Bolo esteso](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+* [Extended bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Basale temporanea
-* [Target temporaneo](../DailyLifeWithAaps/TempTargets.md)
+* [Temporary target](../DailyLifeWithAaps/TempTargets.md)
 * [Cambio profilo](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 * Careportal: note inserite tramite la scheda azioni e note nelle finestre di dialogo
 * Modalità in esecuzione: cronologia dello stato del loop
@@ -664,7 +664,7 @@ La scheda trattamenti può essere utilizzata per correggere voci di carboidrati 
 
 1. Verificare e annotare il COB e IOB effettivi nella schermata principale.
 2. A seconda del microinfusore, nella scheda trattamenti i carboidrati potrebbero essere mostrati insieme all'insulina in una riga o come voce separata (ad es. con Dana RS).
-3. Rimuovere la voce con la quantità di carboidrati errata. (Le versioni più recenti hanno un'icona cestino nella schermata trattamenti. Premere l'icona cestino, selezionare le righe da rimuovere, quindi premere di nuovo l'icona cestino per finalizzare.)
+3. Rimuovere la voce con la quantità di carboidrati errata. (Le versioni più recenti hanno un'icona cestino nella schermata trattamenti.  Premere l'icona cestino, selezionare le righe da rimuovere, quindi premere di nuovo l'icona cestino per finalizzare.)
 4. Assicurarsi che i carboidrati siano stati rimossi correttamente controllando di nuovo il COB nella schermata principale.
 5. Fare lo stesso per l'IOB se c'è solo una riga nella scheda trattamenti che include carboidrati e insulina.
 
@@ -673,7 +673,7 @@ La scheda trattamenti può essere utilizzata per correggere voci di carboidrati 
 6. Inserire la quantità corretta di carboidrati tramite il pulsante carboidrati nella schermata principale e assicurarsi di impostare l'orario corretto dell'evento.
 7. Se c'è solo una riga nella scheda trattamenti che include carboidrati e insulina, è necessario aggiungere anche la quantità di insulina. Assicurarsi di impostare l'orario corretto dell'evento e verificare l'IOB nella schermata principale dopo aver confermato la nuova voce.
 
-### Basale temporanea
+### Temp Basal
 
 ![Temp Basal](../images/TreatmentsView2.png)
 
@@ -685,13 +685,13 @@ L'eliminazione delle voci influisce solo sui rapporti in Nightscout e probabilme
 
 A sinistra di una riga, una S rossa significa "Sospeso": accade quando la basale non è attualmente erogata. Questa è una situazione normale durante il processo di cambio del pod, ad esempio.
 
-### Target temporaneo
+### Temporary target
 
 ![Temporary target](../images/TreatmentsView3.png)
 
 La cronologia dei target temporanei può essere vista qui.
 
-### Cambio profilo
+### Profile Switch
 
 ![Profile Switch](../images/TreatmentsView4.png)
 
@@ -702,7 +702,7 @@ L'eliminazione delle voci influisce solo sui rapporti in Nightscout e non cambie
 È possibile utilizzare il pulsante **Clona** mostrato nella riga **1** per fare una copia di un **Cambio profilo**. Vedere [Profilo AAPS > Gestire i profili](#your-aaps-profile-clone-profile-switch) per ulteriori informazioni.
 
 (AapsScreens-running-mode)=
-### Modalità in esecuzione
+### Running mode
 
 ![Running mode](../images/TreatmentsView6.png)
 
