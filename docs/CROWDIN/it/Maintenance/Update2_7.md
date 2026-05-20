@@ -1,14 +1,10 @@
-- - -
-orphan: true
-- - -
-
 # Controlli necessari dopo l'aggiornamento da AAPS 2.6
 
 - Il codice del programma è stato modificato significativamente passando ad AAPS 2.7.
 - È quindi importante apportare alcune modifiche o verificare le impostazioni dopo l'aggiornamento.
 - Consulta le [note di rilascio](#Releasenotes-version-2-7-0) per i dettagli sulle funzionalità nuove e ampliate.
 
-## Controlla la sorgente glicemia
+## Check BG source
 
 - Controlla se la sorgente glicemia è corretta dopo l'aggiornamento.
 - Soprattutto quando si utilizza [xDrip+](../CompatibleCgms/xDrip.md) potrebbe succedere che la sorgente glicemia venga cambiata in app Dexcom (patchata).
@@ -25,7 +21,7 @@ orphan: true
 - Se ad esempio non hai ancora completato l'esame nell'[obiettivo 3](#objectives-objective3), dovrai completare l'esame prima di poter iniziare l'obiettivo 11.
 - Questo non influirà sugli altri obiettivi che hai già completato. Manterrai tutti gli obiettivi completati!
 
-## Imposta la password master
+## Set master password
 
 - Necessaria per poter [esportare le impostazioni](ExportImportSettings.md) poiché sono criptate dalla versione 2.7.
 - Apri le Preferenze (menu a tre punti in alto a destra della schermata principale)
