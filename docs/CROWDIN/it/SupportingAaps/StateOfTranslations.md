@@ -7,19 +7,19 @@ Attenzione: la percentuale di revisione deve essere inferiore alla percentuale d
 È meglio guardare solo la percentuale di traduzione per vedere se c'è lavoro da fare.
 ```
 
-```{admonition} Tempo necessario per la pubblicazione finale
+```{admonition} needed time for final publication
 Dopo la traduzione in Crowdin è prevista una sincronizzazione con Github ogni giorno per trasferire le traduzioni su Github come pull request (PR).
 
 L'accettazione della PR è un'operazione manuale che verrà eseguita il prima possibile.
 ```
 
-## Stato traduzione app
+## state app translation
 
 Stato delle traduzioni dell'**app** per lingua (codice paese, percentuale di traduzione, percentuale di revisione).
 
 ![state app translation](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
 
-## Stato traduzione documentazione
+## state documentation translation
 
 Stato delle traduzioni della **documentazione** per lingua (codice paese, percentuale di traduzione, percentuale di revisione).
 
