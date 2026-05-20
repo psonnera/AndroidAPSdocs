@@ -2,8 +2,7 @@
 
 ## Dona i tuoi dati alla scienza
 
-Puoi aiutare la comunità donando i tuoi dati a progetti di ricerca! Questo aiuta gli scienziati a restituire qualcosa, sviluppare nuove idee scientifiche e ampliare la mentalità aperta dei sistemi open source a circuito chiuso.
-**AAPS** è pronto a sincronizzare i tuoi dati con [Open Humans](https://www.openhumans.org), una piattaforma che ti permette di caricare, collegare e archiviare i tuoi dati personali – come genetica, attività e dati sulla salute.
+Puoi aiutare la comunità donando i tuoi dati a progetti di ricerca! Questo aiuta gli scienziati a restituire qualcosa, sviluppare nuove idee scientifiche e ampliare la mentalità aperta dei sistemi open source a circuito chiuso. **AAPS** è pronto a sincronizzare i tuoi dati con [Open Humans](https://www.openhumans.org), una piattaforma che ti permette di caricare, collegare e archiviare i tuoi dati personali – come genetica, attività e dati sulla salute.
 
 Mantieni il pieno controllo su cosa succede ai tuoi dati e su quali progetti vuoi supportare dandogli accesso. A seconda del progetto a cui ti sei unito, i dati vengono valutati e utilizzati in modi e misura diversi.
 
@@ -11,7 +10,7 @@ I seguenti dati verranno caricati sul tuo account Open Humans:
 
 - Valori di glicemia
 - Eventi Careportal (eccetto le note)
-- Boli estesi
+- Extended boluses
 - Cambi profilo
 - Dosi giornaliere totali
 - Basali temporanee
@@ -74,8 +73,7 @@ Una volta creato un account e avviato il flusso di dati in Open Humans, assicura
 
 ## Termini di utilizzo
 
-Questo è uno strumento open source che copierà i tuoi dati su [Open Humans](https://www.openhumans.org). Non ci riserviamo alcun diritto di condividere i tuoi dati con terze parti senza la tua esplicita autorizzazione. I dati che il progetto e l'app ricevono sono identificati tramite un ID utente casuale e verranno trasmessi in modo sicuro a un account Open Humans solo con la tua autorizzazione di tale processo.
-Puoi interrompere il caricamento ed eliminare i dati caricati in qualsiasi momento tramite [www.openhumans.org](https://www.openhumans.org). Tieni presente che alcuni progetti che ricevono dati potrebbero non supportare questa funzionalità.
+Questo è uno strumento open source che copierà i tuoi dati su [Open Humans](https://www.openhumans.org). Non ci riserviamo alcun diritto di condividere i tuoi dati con terze parti senza la tua esplicita autorizzazione. I dati che il progetto e l'app ricevono sono identificati tramite un ID utente casuale e verranno trasmessi in modo sicuro a un account Open Humans solo con la tua autorizzazione di tale processo. Puoi interrompere il caricamento ed eliminare i dati caricati in qualsiasi momento tramite [www.openhumans.org](https://www.openhumans.org). Tieni presente che alcuni progetti che ricevono dati potrebbero non supportare questa funzionalità.
 
 Vedi anche [Termini di utilizzo di Open Humans](https://www.openhumans.org/terms/).
 
