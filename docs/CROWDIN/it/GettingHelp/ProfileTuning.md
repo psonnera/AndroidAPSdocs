@@ -1,6 +1,6 @@
 # **Ottimizzare il Profilo di AAPS**
 
-```{admonition} Questo NON è un consiglio medico
+```{admonition} This is NOT a medical advice
 :class: warning
 Collabora con il tuo team di cura per supporto e consigli sulla gestione del diabete.</br>
 Usa questa guida solo dopo aver [configurato correttamente il tuo **Profilo**](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.md), seguendo tutti gli obiettivi di **AAPS**.
@@ -17,7 +17,7 @@ L'uso del **circuito chiuso** può rendere più facile il test della basale e pu
 3. Tieni d'occhio i modelli che si ripetono quasi ogni giorno alla stessa ora.
 4. È importante farlo per diversi giorni. I risultati scadenti tendono a derivare dall'uso di dati osservati in un singolo giorno per prendere decisioni di regolazione del __Profilo__.
 5. Dopo aver osservato un modello di comportamento ripetibile, ad esempio all'1:00 PM vedi un picco della __glicemia__ o un valore __IOB__ negativo, solo allora inizia ad apportare piccole modifiche al tuo __Profilo__.
-6. È importante limitare le modifiche a una cosa alla volta. Ad esempio, aumenta la tua basale del 10% circa all'1:00 PM.
+6. È importante limitare le modifiche a una cosa alla volta. E.g. E.g. Ad esempio, aumenta la tua basale del 10% circa all'1:00 PM.
 7. Dopo ogni modifica, è importante monitorare l'impatto sulla tua __glicemia__ e __IOB__ per i giorni successivi.
 8. Ripeti questo schema: osserva, decidi, aggiusta di nuovo se necessario.
 
@@ -79,7 +79,7 @@ Se osservi i seguenti modelli dopo alcuni giorni, considera le seguenti modifich
 
 ## **Osservazioni sull'obiettivo glicemico**
 
-### **Bloccato in alto (Stuck High)**
+### **Stuck High**
 
 - Il valore dell'__ISF__ è alto e non abbastanza forte (l'insulina calcolata è troppo debole)
 
@@ -102,7 +102,7 @@ Se osservi i seguenti modelli dopo alcuni giorni, considera le seguenti modifich
 
 ## **Osservazioni sulla glicemia dopo i pasti**
 
-### **Salita rapida e glicemia alta**
+### **Fast rise and BG going high**
 
 - Il cibo contiene carboidrati ad assorbimento rapido
 - Considera un pre-bolo
@@ -110,7 +110,7 @@ Se osservi i seguenti modelli dopo alcuni giorni, considera le seguenti modifich
 
 ![Rise High](../images/troubleshooting/profiletuning/FastRise.png)
 
-### **Salita rapida e poi glicemia bassa**
+### **Fast rise and then BG going low**
 
 - Considera un pre-bolo; il profilo potrebbe essere troppo aggressivo (correzione eccessiva della salita)
 - Il bolo è troppo forte
@@ -122,8 +122,7 @@ Se osservi i seguenti modelli dopo alcuni giorni, considera le seguenti modifich
 1. Prima di tutto, hai bisogno delle impostazioni basali predefinite corrette nel tuo **Profilo**.
 2. Inizia in target, preferibilmente senza IOB negativo.
 3. Registra l'insulina totale somministrata nella scheda microinfusore (o nella cronologia del microinfusore) e chiamala Insulina iniziale C4. Misura con molta precisione una porzione nota di carboidrati e registra l'ora di inizio e l'IOB iniziale. Poi inserisci i carboidrati e le informazioni sul bolo in AAPS usando il wizard (con il CI attualmente configurato). Non dimenticare di mangiare i carboidrati ;)
-4. Dopo alcune ore, quando COB=0[*](#profiletuning-cob-zero) e sei tornato in target, registra l'ora di fine e annota l'IOB finale; controlla l'insulina totale somministrata come prima e chiamala Insulina finale.
-   *NOTA: l'arco temporale NON è importante, purché sia più lungo della tua digestione*
+4. Dopo alcune ore, quando COB=0[*](#profiletuning-cob-zero) e sei tornato in target, registra l'ora di fine e annota l'IOB finale; controlla l'insulina totale somministrata come prima e chiamala Insulina finale. *NOTA: l'arco temporale NON è importante, purché sia più lungo della tua digestione*
 5. Dalla differenza tra la quantità di Insulina iniziale e finale, sottrai/aggiungi la differenza IOB finale - IOB iniziale. Poi sottrai l'insulina basale calcolata dalle impostazioni del tuo profilo.
 6. Se la __glicemia__ è in target, avrai l'insulina totale usata per "digerire" i tuoi carboidrati. Calcola il tuo **I:C**.
 
