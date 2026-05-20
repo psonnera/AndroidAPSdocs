@@ -10,7 +10,7 @@ Nel caso in cui tu voglia costruire **AAPS** su un nuovo computer: copia il tuo 
 
 ## Panoramica per l'aggiornamento a una nuova versione di AAPS con Android Studio
 
-```{contents} Passaggi per aggiornare a una nuova versione di AAPS
+```{contents} Steps for updating to a new version of AAPS
 :depth: 1
 :local: true
 ```
@@ -30,7 +30,7 @@ La versione minima richiesta è descritta nelle [Istruzioni per la build](#Build
 (Update-to-new-version-update-your-local-copy)=
 ### Aggiorna la tua copia locale
 
-```{admonition} ATTENZIONE
+```{admonition} WARNING
 :class: warning
 Se stai aggiornando da versioni precedenti alla 2.8.x, segui le istruzioni per fare un [Nuovo clone](../SettingUpAaps/BuildingAaps.md), poiché questa guida non funzionerà per te!
 ```
