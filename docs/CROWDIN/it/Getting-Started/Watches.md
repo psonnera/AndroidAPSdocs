@@ -25,14 +25,14 @@ Inoltre, a differenza dei telefoni dei genitori/caregiver follower (che si affid
 
 ## Diversi tipi di interazioni Smartwatch-AAPS
 
-Ci sono attualmente cinque modi principali in cui gli smartwatch vengono utilizzati in combinazione con **AAPS**. Questi sono mostrati nella tabella seguente:
+Ci sono attualmente cinque modi principali in cui gli smartwatch vengono utilizzati in combinazione con **AAPS**. Questi sono mostrati nella tabella seguente: 
 
-| Configurazione orologio   | Funzionalità                          | Requisiti                                                                                                                                                                                                                                            |
-| ------------------------- | ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Standalone                | AAPS senza telefono                   | Smartwatch Android completo (verificare min Android)</br> Esecuzione di **app-fullRelease**                                                                                                                                                          |
-| Controllo remoto completo | La maggior parte delle funz. AAPS     | Orologio Android **Wear OS** (verificare Android/API)</br>Esecuzione di **wear-fullRelease**                                                                                                                                                         |
-| Controllo remoto          | Funzioni AAPSClient                   | Orologio Android **Wear OS** (verificare Android/API)</br>Esecuzione di **[wear-aapsclientRelease](https://github.com/nightscout/AndroidAPS/releases)**                                                                                              |
-| Controllo remoto          | Alcune funzioni AAPSClient            | Alcuni orologi Samsung, Fitbit e Garmin</br>Vedi sotto.                                                                                                                                                                                              |
+| Configurazione orologio   | Funzionalità                             | Requisiti                                                                                                                                                                                                                                          |
+| ------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Standalone                | AAPS senza telefono                      | Smartwatch Android completo (verificare min Android)</br> Esecuzione di **app-fullRelease**                                                                                                                                                        |
+| Controllo remoto completo | La maggior parte delle funz. AAPS        | Orologio Android **Wear OS** (verificare Android/API)</br>Esecuzione di **wear-fullRelease**                                                                                                                                                       |
+| Controllo remoto          | Funzioni AAPSClient                      | Orologio Android **Wear OS** (verificare Android/API)</br>Esecuzione di **[wear-aapsclientRelease](https://github.com/nightscout/AndroidAPS/releases)**                                                                                            |
+| Controllo remoto          | Alcune funzioni AAPSClient               | Alcuni orologi Samsung, Fitbit e Garmin</br>Vedi sotto.                                                                                                                                                                                            |
 | Display                   | Visualizza alcune indicazioni AAPSClient | Molti smartwatch (vedi [qui](https://bigdigital.home.blog/))</br>[xDrip+](https://github.com/nightscoutfoundation/xdrip/releases) e [WatchDrip+](https://bigdigital.home.blog/2022/06/16/watchdrip-a-new-application-for-xdrip-watch-integration/) |
 
 ## Prima di acquistare uno smartwatch…
@@ -49,18 +49,11 @@ Il modo migliore per scegliere uno smartwatch è cercare post relativi agli "oro
 
 ## Android Completo
 
-<<<<<<< Updated upstream
 It sounds like an attractive option, right? However, at present, only a few enthusiasts are experimenting with **AAPS**  on a stand-alone watch. There are a limited number of smartwatches with a reasonable interface which also which work well with standalone use of **AAPS** and your CGM app. You will need to load the watch with the **AAPS** "full" apk (the apk which is usually installed on a smartphone) rather than the **AAPS** "wear" apk. Popular models include the LEMFO LEM.
-=======
-Sembra un'opzione attraente, vero? Tuttavia, al momento, solo pochi appassionati stanno sperimentando con **AAPS** su un orologio standalone. Ci sono un numero limitato di smartwatch con un'interfaccia ragionevole che funzionino bene anche per l'uso standalone di **AAPS** e della tua app CGM. I modelli popolari includono il LEMFO LEM. Dovrai caricare sull'orologio l'apk "completo" di **AAPS** (l'apk che di solito viene installato su uno smartphone) anziché l'apk "wear" di **AAPS**.
->>>>>>> Stashed changes
 
 Sebbene non ci sia una specifica chiara che ti aiuti a sapere se un orologio funzionerà bene per l'uso standalone di **AAPS**, i seguenti parametri ti aiuteranno:
 
-1)	Android 12 o più recente.
-2)	Essere in grado di portare il quadrante fuori dalla modalità "quadrata" per rendere il testo più grande e più facile da leggere.
-3)	Ottima durata della batteria.
-4)	Buon range Bluetooth.
+1)  Android 12 o più recente. 2)  Essere in grado di portare il quadrante fuori dalla modalità "quadrata" per rendere il testo più grande e più facile da leggere. 3)  Ottima durata della batteria. 4)  Buon range Bluetooth.
 
 La maggior parte delle frustrazioni degli orologi **AAPS** standalone derivano dall'interazione con un piccolo schermo e dal fatto che l'attuale interfaccia completa dell'app AAPS non è stata progettata per un orologio. Potresti preferire usare uno stilo per modificare le impostazioni di **AAPS** sull'orologio, a causa delle dimensioni ridotte dello schermo, e alcuni pulsanti di AAPS potrebbero non essere visibili sullo schermo dell'orologio.
 
@@ -117,8 +110,7 @@ Ci sono alcuni quadranti per Garmin che si integrano con [AAPS](https://apps.gar
 
 ![Garmin](../images/Garmin.png)
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) si integra direttamente con **AAPS**. Mostra i dati sullo stato del loop (insulina attiva, basale temporanea) oltre alle letture del glucosio e invia le letture della frequenza cardiaca ad **AAPS**. È disponibile nello store ConnectIQ, il plugin **AAPS** necessario è disponibile solo da **AAPS** 3.2.
-![Screenshot](../images/Garmin_WF-annotated.png)
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) si integra direttamente con **AAPS**. Mostra i dati sullo stato del loop (insulina attiva, basale temporanea) oltre alle letture del glucosio e invia le letture della frequenza cardiaca ad **AAPS**. È disponibile nello store ConnectIQ, il plugin **AAPS** necessario è disponibile solo da **AAPS** 3.2. ![Screenshot](../images/Garmin_WF-annotated.png)
 
 
 
@@ -144,7 +136,7 @@ Tutto apparirà sul grafico della timeline di Nightscout e come valori aggiornat
 
 Ci sono opzioni aggiuntive per gli orologi FitBit che sembrano essere solo per il monitoraggio. Questo include [Glance](https://glancewatchface.com/). Queste opzioni aggiuntive sono descritte nelle [pagine web di Nightscout.](https://nightscout.github.io/nightscout/wearable/#fitbit)
 
-## Solo monitoraggio
+## Following only
 
 Questi smartwatch rifletteranno alcune informazioni di **AAPS**, alcuni richiederanno altre app.
 
@@ -187,3 +179,4 @@ Gli svantaggi riportati sono che non raccoglie sempre una lettura ogni 5 minuti 
 Controlla [Nightscout sul tuo orologio](https://nightscout.github.io/nightscout/wearable/#).
 
 L'Apple watch ora supporta la connessione diretta G7 e può essere usato simultaneamente con **AAPS**.
+

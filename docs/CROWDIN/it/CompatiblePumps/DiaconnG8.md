@@ -1,10 +1,6 @@
-- - -
-orphan: true
-- - -
-
 # Microinfusore di insulina Diaconn G8
 
-## Associazione Bluetooth del microinfusore
+## Insulin Pump Bluetooth Pairing
 
 - Fare clic sul menu hamburger nell'angolo in alto a sinistra.
 
@@ -18,7 +14,7 @@ orphan: true
 
 ![image](../images/DiaconnG8/DiaconnG8_03.jpg)
 
-- Scegliere Microinfusore selezionato.
+- Choose Selected pump.
 
 ![image](../images/DiaconnG8/DiaconnG8_04.jpg)
 
@@ -67,7 +63,7 @@ orphan: true
 
 ![image](../images/DiaconnG8/DiaconnG8_12.jpg)
 
-- Annullare l'associazione.
+- Unpair.
 
 ![image](../images/DiaconnG8/DiaconnG8_13.jpg)
 

@@ -1,6 +1,6 @@
 # Cambio fuso orario e ora legale
 
-## Viaggiare con fuso orario diverso con i microinfusori
+## Timezone traveling with pumps
 
 ## Cambio fuso orario per Omnipod Dash
 
@@ -39,11 +39,11 @@ Per evitare ciò esistono due possibilità:
 
 All'uscita dall'aereo:
 
-* spegnere il microinfusore
+* turn off pump
 * cambiare il fuso orario nel telefono
 * spegnere il telefono, accendere il microinfusore
-* cancellare la cronologia nel microinfusore
-* cambiare l'ora nel microinfusore
+* clear history in pump
+* change time in pump
 * accendere il telefono
 * lasciare che il telefono si connetta al microinfusore e regoli l'ora con precisione
 
@@ -81,7 +81,7 @@ Regolazione dell'ora per l'ora legale
 A seconda della configurazione del microinfusore e del CGM, i salti di orario possono causare problemi nel corretto funzionamento di **AAPS**. Ad esempio, con il microinfusore Combo, la cronologia del microinfusore viene letta due volte, dando luogo a voci duplicate. Per alcuni microinfusori è preferibile apportare le modifiche al fuso orario mentre si è svegli e non di notte.
 
 
-### Regolazione automatica dell'ora legale per la maggior parte dei microinfusori
+### DST automatic adjustment for most pumps
 
 * Questa funzionalità di regolazione è disponibile a partire dalla versione 2.2 di **AAPS**.
 * Tuttavia, il Loop completamente chiuso verrà disattivato per 3 ore DOPO il cambio dell'ora legale (di solito dall'1:00 in poi) e **AAPS** tornerà alla basale in background selezionata nel **Profilo**. Ciò viene fatto per ragioni di sicurezza: l'**IOB** potrebbe essere troppo alto a causa di un bolo duplicato prima del cambio dell'ora legale.
@@ -108,14 +108,14 @@ Se esegui un bolo con il calcolatore di **AAPS**, non utilizzare i dati **COB** 
 1. Disattivare qualsiasi impostazione del telefono che imposta automaticamente il fuso orario del telefono, in modo da poter cambiare in un fuso orario che non utilizza l'ora legale. Come abilitarlo dipende dallo smartphone e dalla versione Android.
 
    * Alcuni telefoni hanno due impostazioni, una per l'impostazione automatica dell'ora (che idealmente dovrebbe rimanere attiva) e una per l'impostazione automatica del fuso orario (che bisogna DISATTIVARE).
-   * Purtroppo, alcune versioni di Android hanno un unico interruttore per abilitare l'impostazione automatica sia dell'ora che del fuso orario. Sarà necessario disattivarlo per ora.
+   * Purtroppo alcune versioni di Android hanno un unico interruttore per abilitare l'impostazione automatica sia dell'ora che del fuso orario. Sarà necessario disattivarlo per ora.
 
 
 ![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
 
-2. Trovare un fuso orario con la stessa ora della posizione attuale ma che non utilizza l'ora legale.
+2. Find a timezone that has the same time as your current location but doesn't use DST.
 
-   * Un elenco di questi paesi è disponibile su [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
+   * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
    * Per il Fuso Orario dell'Europa Centrale (CET) potrebbe essere "Brazzaville" (Congo). Cambiare il fuso orario del telefono in Congo.
 
 
@@ -127,11 +127,7 @@ Se esegui un bolo con il calcolatore di **AAPS**, non utilizzare i dati **COB** 
 
 3. Controllare l'**IOB** e il **COB** di **AAPS** e, se non sono accurati, disabilitare il Loop completamente chiuso per almeno un DIA e il Tempo massimo dei carboidrati, quello che è maggiore.
 
-<<<<<<< Updated upstream
-4. Actions to take after the clock change. A good time to make this switch would be with low **IOB**. E.g. E.g. an hour before a meal such as breakfast. Your **COB** and **IOB** should both be close to zero.)
-=======
-4. Azioni da intraprendere dopo il cambio dell'ora. Un buon momento per tornare al fuso orario locale è con un **IOB** basso. Ad esempio, un'ora prima di un pasto come la colazione. Idealmente sia il **COB** che l'**IOB** dovrebbero essere vicini allo zero.
->>>>>>> Stashed changes
+4. Actions to take after the clock change. A good time to make this switch would be with low **IOB**. 4. E.g. E.g. an hour before a meal such as breakfast. Your **COB** and **IOB** should both be close to zero.)
 
 
 ### Ora legale per Accu-Chek Combo
@@ -144,11 +140,10 @@ Questa sezione è valida solo per il vecchio driver basato su Ruffy. Il nuovo dr
 1. Disattivare qualsiasi impostazione che imposta automaticamente il fuso orario, in modo da poter forzare il cambio dell'ora quando si vuole. Come farlo dipenderà dallo smartphone e dalla versione Android.
 
    * Alcuni hanno due impostazioni, una per l'impostazione automatica dell'ora (che idealmente dovrebbe rimanere attiva) e una per l'impostazione automatica del fuso orario (che bisogna DISATTIVARE).
-   * Purtroppo alcune versioni di Android hanno un unico interruttore per abilitare l'impostazione automatica sia dell'ora che del fuso orario. Sarà necessario disattivarlo per ora.
+   * Purtroppo, alcune versioni di Android hanno un unico interruttore per abilitare l'impostazione automatica sia dell'ora che del fuso orario. Sarà necessario disattivarlo per ora.
 
    Screenshot_20260329-110315 (1)
 
-<<<<<<< Updated upstream
 2. Find a timezone that has the same time as your current location but doesn't use DST.
 
    * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
@@ -175,33 +170,13 @@ Un buon momento per effettuare questo passaggio sarebbe con un **IOB** basso. E.
    * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
 
 5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
-6. Continue as normal.
-=======
-2. Trovare un fuso orario con la stessa ora della posizione attuale ma che non utilizza l'ora legale.
->>>>>>> Stashed changes
-
-   * Un elenco di questi paesi è disponibile su [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * Per il Fuso Orario dell'Europa Centrale (CET) potrebbe essere "Brazzaville" (Congo). Cambiare il fuso orario del telefono in Congo.
-
-3. In **AAPS** aggiornare il microinfusore.
-
-4. Controllare la scheda Trattamenti... Se si vedono trattamenti duplicati:
-
-   * NON premere "elimina trattamenti futuri"
-   * Premere "rimuovi" su tutti i trattamenti futuri e quelli duplicati. Questo dovrebbe invalidare i trattamenti anziché rimuoverli, quindi non verranno più considerati per il calcolo dell'IOB.
-
-5. Se non è chiaro quanta IOB/COB sia presente, per sicurezza disabilitare il loop per almeno un DIA e il Tempo massimo dei carboidrati, quello che è maggiore.*
-
-#### Azioni da intraprendere dopo il cambio dell'ora
-Un buon momento per effettuare questo passaggio sarebbe con un **IOB** basso. Ad esempio, un'ora prima di un pasto come la colazione (tutti i boli recenti nella cronologia del microinfusore saranno state piccole correzioni SMB. Il **COB** e l'**IOB** dovrebbero essere entrambi vicini allo zero.)
-
-1. Cambiare il fuso orario Android nuovamente alla propria posizione attuale e riabilitare il fuso orario automatico.
-2. **AAPS** inizierà presto ad avvisare che l'orologio del Combo non corrisponde. Aggiornare quindi manualmente l'orologio del microinfusore tramite lo schermo e i pulsanti del microinfusore.
-3. Nella schermata "Combo" di **AAPS**, premere Aggiorna.
-4. Poi andare alla schermata Trattamenti e cercare eventuali eventi futuri. Non dovrebbero essercene molti.
-
-   * NON premere "elimina trattamenti futuri"
-   * Premere "rimuovi" su tutti i trattamenti futuri e quelli duplicati. Questo dovrebbe invalidare i trattamenti anziché rimuoverli, quindi non verranno più considerati per il calcolo dell'IOB.
-
-5. Se non è chiaro quanta IOB/COB sia presente, per sicurezza disabilitare il loop per almeno un DIA e il Tempo massimo dei carboidrati, quello che è maggiore.*
 6. Continuare normalmente.
+
+
+
+
+
+
+
+
+

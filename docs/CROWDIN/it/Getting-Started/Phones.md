@@ -21,7 +21,7 @@ Il documento è di sola lettura. Con CTRL-F, puoi cercare nel testo del foglio G
 
 Per registrare il tuo test di una configurazione hardware, compila questo [modulo](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Dopo aver compilato i dati del modulo, il foglio viene aggiornato automaticamente ogni 5 minuti.
 
-Per qualsiasi problema con il foglio di calcolo, contatta il suo responsabile, *@theodoor5137*, su Discord, o vedi la [pagina Dove posso ottenere aiuto?](../GettingHelp/WhereCanIGetHelp.md).
+Per qualsiasi problema con il foglio di calcolo, contatta il suo responsabile, *@theodoor5137*, su Discord, o vedi la [pagina Dove posso ottenere aiuto?](../GettingHelp/WhereCanIGetHelp.md). page</a>.
 
 ## Non ho trovato il mio telefono
 

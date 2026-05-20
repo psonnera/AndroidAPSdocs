@@ -8,10 +8,10 @@ Un target glicemico, in particolare se è solo a breve termine (meno di 4 ore), 
 
 I target temporanei possono essere definiti entro questi limiti:
 
-|         | Target Temporaneo       |
-| ------- | ----------------------- |
-| Minimo  | 4 mmol/l o 72 mg/dL    |
-| Massimo | 15 mmol/l o 225 mg/dL  |
+|         | Target Temporaneo     |
+| ------- | --------------------- |
+| Minimo  | 4 mmol/l o 72 mg/dL   |
+| Massimo | 15 mmol/l o 225 mg/dL |
 
 **AAPS** prevede tre opzioni di **Target Temporaneo** adatte per l'esercizio fisico (**TT-Attività**), i pasti (**TT-Presto pasto**) e l'ipoglicemia prevista (**TT-Ipo**). I **Target Temporanei** si trovano nella **scheda Azioni**.
 
@@ -31,7 +31,7 @@ AAPS punta a raggiungere 8 mmol/l o 144 mg/dl per 40 minuti
 
 **Altre considerazioni che gli utenti potrebbero voler prendere in considerazione quando lo selezionano**:
 
-Questo può essere uno strumento importante per quegli utenti che non eseguono un pre-bolo; tuttavia l'efficacia del **TT-Presto pasto** dipenderà da una serie di fattori, tra cui: le impostazioni dell'utente, se segue una dieta a basso contenuto di carboidrati e se utilizza un'insulina ad azione rapida (come Fiasp o Lyjumjev) per eliminare la necessità del pre-bolo. Di norma, fino a quando gli utenti non acquisiscono esperienza con **AAPS**, dovrebbero prevedere di fare un pre-bolo quando usano **TT-Presto pasto**, in particolare quando si mangia una dieta ad alto contenuto di carboidrati.
+Questo può essere uno strumento importante per quegli utenti che non eseguono un pre-bolo; tuttavia l'efficacia del **TT-Presto pasto** dipenderà da una serie di fattori, tra cui: le impostazioni dell'utente, se segue una dieta a basso contenuto di carboidrati e se utilizza un'insulina ad azione rapida (come Fiasp o Lyjumjev) per eliminare la necessità del pre-bolo. A seconda del livello di **glicemia**, **AAPS** "ridurrà" l'utilizzo dell'insulina per raggiungere il target di **glicemia**.
 
 In modalità loop chiuso, **SMB**:
 
@@ -159,7 +159,7 @@ Prima e durante l'esercizio, l'utente potrebbe aver bisogno di un target più al
 
 Per semplificare il **Target Temporaneo Attività**, l'utente può configurare un **TT-Attività** predefinito per aumentare i livelli di **glicemia** riducendo l'utilizzo dell'insulina in modo da rallentare la caduta della **glicemia** e prevenire l'ipoglicemia.
 
-I nuovi utenti di **AAPS** potrebbero dover sperimentare e personalizzare le impostazioni predefinite del **Target Temporaneo Attività** per ottimizzare questa funzionalità. Ognuno è diverso quando si tratta di raggiungere un controllo stabile della glicemia durante l'esercizio. Vedere anche la [sezione sport nelle FAQ](#FAQ-sports).
+I nuovi utenti di **AAPS** potrebbero dover sperimentare e personalizzare le impostazioni predefinite del **Target Temporaneo Attività** per ottimizzare questa funzionalità. Ognuno è diverso quando si tratta di raggiungere un controllo stabile della glicemia durante l'esercizio. Vedere anche la [sezione sport nelle FAQ](#FAQ-sports). in FAQ.
 
 Alcuni utenti preferiscono attivare anche un **Cambio Profilo** (una riduzione del Profilo < 100% per ridurre la somministrazione di insulina da parte di **AAPS**) prima e mentre il **Target Temporaneo Attività** è attivo.
 
@@ -168,11 +168,11 @@ Avanzato, obiettivo 9: gli utenti possono abilitare _"Target Temporaneo alto aum
 Inoltre, se _"SMB con Target Temporaneo alto"_ è disattivato, **AAPS** non somministrerà **SMB**, anche con COB > 0, _"SMB con Target Temporaneo"_ o _"SMB sempre"_ abilitati e OpenAPS **SMB** attivo.
 
 (TempTargets-eating-soon-temp-target)=
-## Target Temporaneo Presto pasto
+## Eating soon Temp-Target
 
 Il **TT-Presto pasto** può aiutare a ottenere una graduale discesa della **glicemia** e garantire un adeguato **IOB** prima del pasto.
 
-Questo può essere uno strumento importante per quegli utenti che non eseguono un pre-bolo; tuttavia l'efficacia del **TT-Presto pasto** dipenderà da una serie di fattori, tra cui: le impostazioni dell'utente, se segue una dieta a basso contenuto di carboidrati e se utilizza un'insulina ad azione rapida (come Fiasp o Lyjumjev) per eliminare la necessità del pre-bolo. A seconda del livello di **glicemia**, **AAPS** "ridurrà" l'utilizzo dell'insulina per raggiungere il target di **glicemia**.
+Questo può essere uno strumento importante per quegli utenti che non eseguono un pre-bolo; tuttavia l'efficacia del **TT-Presto pasto** dipenderà da una serie di fattori, tra cui: le impostazioni dell'utente, se segue una dieta a basso contenuto di carboidrati e se utilizza un'insulina ad azione rapida (come Fiasp o Lyjumjev) per eliminare la necessità del pre-bolo. Di norma, fino a quando gli utenti non acquisiscono esperienza con **AAPS**, dovrebbero prevedere di fare un pre-bolo quando usano **TT-Presto pasto**, in particolare quando si mangia una dieta ad alto contenuto di carboidrati.
 
 Puoi leggere di più sulla "modalità Presto pasto" nell'articolo ['Come eseguire la modalità "eating soon"'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) o [qui](https://diyps.org/tag/eating-soon-mode/).
 

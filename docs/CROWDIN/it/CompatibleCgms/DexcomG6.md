@@ -31,7 +31,7 @@ Leggi di più nell'[articolo](https://www.diabettech.com/artificial-pancreas/diy
 (DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
 ## Se usi un G6 con Build Your Own Dexcom App
 
-```{admonition} Versione vecchia dell'app
+```{admonition} Old app version
 :class: warning
 Dexcom G6 BYODA è ora una versione molto vecchia dell'app e non può essere aggiornata.
 ```

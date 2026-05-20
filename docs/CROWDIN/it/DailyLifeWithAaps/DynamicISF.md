@@ -5,7 +5,7 @@ Fino ad ora, con **AMA** e **SMB**, l'**ISF** era definito nel **Profilo** ed er
 
 L'**ISF Dinamico** (chiamato anche **DynISF**) serve allo stesso scopo ma è più avanzato poiché può essere utilizzato in qualsiasi momento. È consigliato solo agli utenti avanzati che hanno una buona padronanza dei controlli e del monitoraggio di **AAPS**. Leggere [Cose da considerare prima di attivare l'ISF Dinamico](#dyn-isf-things-to-consider-when-activating-dynamicisf) di seguito prima di provarlo.
 
-```{admonition} ATTENZIONE - Automatismi o cambio percentuale del Profilo
+```{admonition} CAUTION - Automations or Profile Percentage change
 :class: warning
 
 Gli **Automatismi** devono essere sempre usati con cautela. Ciò vale in modo particolare per l'**ISF Dinamico**.
@@ -88,7 +88,7 @@ Come descritto nella pagina [Calcolo del COB](../DailyLifeWithAaps/CobCalculatio
 `carboidrati_assorbiti = deviazione * ic / isf`  
 Quando si utilizza l'**ISF Dinamico**, l'**ISF** usato qui è la media dei valori di ISF Dinamico delle ultime 24 ore.
 
-### ISF nel Calcolatore del bolo
+### ISF in Bolus Wizard
 
 Quando si usa il [Calcolatore del bolo](#aaps-screens-bolus-wizard), l'**ISF** viene utilizzato se la **glicemia** è sopra il target per aggiungere una correzione.
 

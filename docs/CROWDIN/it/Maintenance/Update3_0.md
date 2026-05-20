@@ -1,7 +1,3 @@
-- - -
-orphan: true
-- - -
-
 # Controlli necessari dopo l'aggiornamento ad AAPS 3.0
 
 * **La versione minima di Android è ora 9.0.**
@@ -45,7 +41,7 @@ orphan: true
 * Per Dash: il numero di serie è sempre 4241.
 * Per EROS è anche elencato nella scheda POD come "Numero di sequenza".
 
-## Segnale di avviso sotto la glicemia
+## Warning signal beneath BG
 
 A partire da Android 3.0, potresti ricevere un segnale di avviso sotto il numero della glicemia nella schermata principale.
 
@@ -56,7 +52,7 @@ A partire da Android 3.0, potresti ricevere un segnale di avviso sotto il numero
 Per i dettagli vedi la [pagina schermate AAPS](#aaps-screens-bg-warning-sign).
 
 (update30-failure-message-data-from-different-pump)=
-## Messaggio di errore: Dati da un microinfusore diverso
+## Failure message: Data from different pump
 
    ![Failure message: Data from different pump](../images/Screen_DifferentPump.png)
 

@@ -1,16 +1,6 @@
-- - -
-orphan: true
-- - -
+# Accu-Chek Insight Pump
 
-# Microinfusore Accu-Chek Insight
-
-**Questo software è parte di una soluzione fai-da-te per pancreas artificiale e non è un prodotto finito, ma
-richiede che sia TU a leggere, imparare e comprendere il sistema, incluso come utilizzarlo.
-Non è qualcosa che gestisce tutta la tua terapia del diabete al posto tuo, ma
-ti permette di migliorare il tuo diabete e la tua qualità di vita
-se sei disposto a dedicarvi il tempo necessario. Non affrettarti,
-ma concediti il tempo di imparare. Sei tu solo il responsabile
-di ciò che ne fai.**
+**Questo software è parte di una soluzione fai-da-te per pancreas artificiale e non è un prodotto finito, ma richiede che sia TU a leggere, imparare e comprendere il sistema, incluso come utilizzarlo. Non è qualcosa che gestisce tutta la tua terapia del diabete al posto tuo, ma ti permette di migliorare il tuo diabete e la tua qualità di vita se sei disposto a dedicarvi il tempo necessario. Non affrettarti, ma concediti il tempo di imparare. Sei tu solo il responsabile di ciò che ne fai.**
 
 ---
 ***AVVISO:** Se in passato hai utilizzato Insight con **SightRemote**, aggiorna alla **versione più recente di AAPS** e **disinstalla SightRemote**.*
@@ -30,7 +20,7 @@ Nota: AAPS scriverà i dati sempre nel **primo profilo di velocità basale del m
 * Il microinfusore Insight deve essere connesso a un solo dispositivo alla volta. Se in precedenza hai usato il telecomando Insight (glucometro), devi rimuovere il glucometro dall'elenco dei dispositivi associati al microinfusore: Menu > Impostazioni > Comunicazione > Rimuovi dispositivo
 
    ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
-   
+
 * In [Costruttore di configurazione > Microinfusore](../SettingUpAaps/ConfigBuilder.md), selezionare Accu-Chek Insight.
 
    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
@@ -81,25 +71,16 @@ Nelle impostazioni Insight in AAPS è possibile abilitare le seguenti opzioni:
 * "Abilita emulazione TBR": Il microinfusore Insight può erogare basali temporanee (TBR) solo fino al 250%. Per aggirare questa limitazione, l'emulazione TBR ordinerà al microinfusore di erogare un bolo esteso per l'insulina aggiuntiva se si richiede una TBR superiore al 250%.
 
   **Nota: Usare un solo bolo esteso alla volta, poiché più boli estesi contemporaneamente potrebbero causare errori.**
-  
+
 * "Disabilita vibrazioni durante erogazione bolo manuale": Disabilita le vibrazioni del microinfusore Insight durante l'erogazione di un bolo manuale (o esteso). Questa impostazione è disponibile solo con l'ultima versione del firmware Insight (3.x).
-  
+
 * "Disabilita vibrazioni durante erogazione bolo automatico": Disabilita le vibrazioni del microinfusore Insight durante l'erogazione di un bolo automatico (SMB o basale temporanea con emulazione TBR). Questa impostazione è disponibile solo con l'ultima versione del firmware Insight (3.x).
-  
-* "Durata recupero": Definisce per quanto tempo AAPS attenderà prima di riprovare dopo un tentativo di connessione fallito. È possibile scegliere da 0 a 20 secondi. In caso di problemi di connessione, scegliere un tempo di attesa più lungo.
-    <br><br>Esempio per durata min. recupero = 5 e durata max. recupero = 20
-    <br><br>nessuna connessione -> attendi <b>5</b> sec.
-      <br>  riprova -> nessuna connessione -> attendi <b>6</b> sec.
-      <br>  riprova -> nessuna connessione -> attendi <b>7</b> sec.
-      <br>  riprova -> nessuna connessione -> attendi <b>8</b> sec.
-      <br>...
-      <br>riprova -> nessuna connessione -> attendi <b>20</b> sec.
-      <br>riprova -> nessuna connessione -> attendi <b>20</b> sec.
-      <br>...
-    
+
+* "Durata recupero": Definisce per quanto tempo AAPS attenderà prima di riprovare dopo un tentativo di connessione fallito. È possibile scegliere da 0 a 20 secondi. In caso di problemi di connessione, scegliere un tempo di attesa più lungo. <br><br>Example for min. recovery duration = 5 and max. recovery duration = 20 <br><br>no connection -> wait <b>5</b> sec. <br>  retry -> no connection -> wait <b>6</b> sec. <br>  retry -> no connection -> wait <b>7</b> sec. <br>  retry -> no connection -> wait <b>8</b> sec. <br>... <br>  riprova -> nessuna connessione -> attendi <b>8</b> sec. <br>... <br>riprova -> nessuna connessione -> attendi <b>20</b> sec.
+
 * "Ritardo disconnessione": Definisce per quanto tempo (in secondi) AAPS attenderà prima di disconnettersi dal microinfusore al termine di un'operazione. Il valore predefinito è 5 secondi.
 
-Nei periodi in cui il microinfusore è stato fermato, AAPS registrerà una basale temporanea allo 0%.
+For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
 
 In AAPS, la scheda Accu-Chek Insight mostra lo stato attuale del microinfusore e ha due pulsanti:
 * "Aggiorna": Aggiorna lo stato del microinfusore
@@ -107,7 +88,7 @@ In AAPS, la scheda Accu-Chek Insight mostra lo stato attuale del microinfusore e
 
    ![Screenshot of Insight Status](../images/Insight_Status2.png)
 
-## Impostazioni nel microinfusore
+## Settings in the pump
 
 Configurare gli allarmi nel microinfusore come segue:
 * Menu > Impostazioni > Impostazioni dispositivo > Impostazioni modalità > Silenzioso > Segnale > Suono
@@ -136,7 +117,7 @@ Il microinfusore Insight ha una piccola batteria interna per mantenere le funzio
 (Accu-Chek-Insight-Pump-insight-specific-errors)=
 ## Errori specifici di Insight
 
-### Bolo esteso
+### Extended bolus
 
 Usare un solo bolo esteso alla volta, poiché più boli estesi contemporaneamente potrebbero causare errori.
 
@@ -148,6 +129,7 @@ A volte può succedere che il microinfusore Insight non risponda durante la conf
 
 In questo caso spegnere il Bluetooth sia sul microinfusore che sullo smartphone per circa 10 secondi e poi riaccenderlo.
 
-## Viaggi con cambi di fuso orario con il microinfusore Insight
+## Crossing time zones with Insight pump
 
 Per informazioni sui viaggi attraverso i fusi orari vedere la sezione [Viaggi con cambi di fuso orario con i microinfusori](#timezone-traveling-insight).
+

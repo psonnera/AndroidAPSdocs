@@ -32,7 +32,7 @@ La sincronizzazione Gradle può fallire per vari motivi. Se ricevi un messaggio 
 
 ![Gradle Fallito](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
-```{contents} I motivi probabili per i fallimenti della sincronizzazione di Gradle sono:
+```{contents} Likely reasons for gradle sync failures are:
 :depth: 1
 :local: true
 ```
@@ -40,7 +40,7 @@ La sincronizzazione Gradle può fallire per vari motivi. Se ricevi un messaggio 
 *Importante*: Dopo aver seguito le istruzioni per il tuo problema, devi attivare nuovamente la sincronizzazione del [gradle](#gradle-resync).
 
 (troubleshooting_androidstudio-uncommitted-changes)=
-### Modifiche senza commit
+### Uncommitted changes
 
 Se ricevi un messaggio di errore come questo:
 
@@ -134,7 +134,7 @@ Il tuo nome deve essere scritto tra virgolette.
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
 (incompatible-gradle-jvm)=
-### Gradle JVM incompatibile
+### Incompatible Gradle JVM
 
 ![Incompatible Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png)
 
@@ -202,7 +202,7 @@ Se vedi il messaggio di errore sopra, devi scaricare la versione corretta di JVM
   * Ora devi attivare [Risincronizza Gradle](#gradle-resync)
 
 (troubleshooting_androidstudio-unable-to-start-daemon-process)=
-### Impossibile avviare il processo daemon
+### Unable to start daemon process
 
   Se vedi un messaggio di errore come quello sotto, probabilmente stai utilizzando un sistema Windows 10 a 32 bit. Non è supportato da Android Studio 3.5.1 e oltre, e purtroppo non c'è nulla che gli sviluppatori **AAPS** possano fare a riguardo!
 
@@ -287,7 +287,7 @@ Se nessuno dei suggerimenti sopra ti ha aiutato, considera ricostruire l'apk da 
 
 ## Scenario peggiore
 
-I manuali per la disinstallazione completa possono essere trovati online ad es.  Alcuni utenti trovano che questo può risolvere il loro problema di compilazione.  Quando disinstalli Android Studio, non eliminare le impostazioni utente Android e **Assicurati di disinstallare tutti i file associati con Android Studio.** Se non rimuovi completamente Android Studio e tutti i file nascosti, la disinstallazione può causare nuovi problemi invece di risolvere quelli esistenti. Niente di quello suggerito sopra risolve il problema di build, puoi provare a disinstallare completamente Android Studio e ricostruire da zero.
+I manuali per la disinstallazione completa possono essere trovati online ad es.  Alcuni utenti trovano che questo può risolvere il loro problema di compilazione.  Quando disinstalli Android Studio, non eliminare le impostazioni utente Android e **Assicurati di disinstallare tutti i file associati con Android Studio.** Se non rimuovi completamente Android Studio e tutti i file nascosti, la disinstallazione può causare nuovi problemi invece di risolvere quelli esistenti. I manuali per la disinstallazione completa possono essere trovati online ad es.  Alcuni utenti trovano che questo può risolvere il loro problema di compilazione.
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 

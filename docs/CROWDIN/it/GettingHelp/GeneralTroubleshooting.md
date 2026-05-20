@@ -30,7 +30,7 @@ Ignoralo: Maggiori dettagli, Installa comunque.
 
   ![Error: Basal not aligned to hours](../images/Screen_DifferentPump.png)
 
-* [Microinfusore - dati da microinfusore diverso](#update30-failure-message-data-from-different-pump)
+* [Pump - data from different pump](#update30-failure-message-data-from-different-pump)
 
   ![Failure message: Data from different pump](../images/BasalNotAlignedToHours2.png)
 
@@ -137,7 +137,7 @@ Link utili a problemi noti e passaggi per la risoluzione per i CGM.
 
 (generaltroubleshooting-pumps)=
 
-## **Microinfusori**
+## **Pumps**
 
 Link utili a problemi noti e passaggi per la risoluzione per i microinfusori
 

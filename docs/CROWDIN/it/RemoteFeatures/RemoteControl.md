@@ -1,10 +1,7 @@
 # Controllo remoto di AAPS
 Ci sono quattro strumenti molto efficaci per gestire **AAPS** da remoto:
 
-1) [Comandi SMS](#RemoteControl_SMS-Commands) (il telefono follower può essere Android o iOS),
-2) [AAPSClient](#RemoteControl_aapsclient) (il telefono follower è Android)
-3) [Nightscout](#RemoteControl_nightscout) (Android, iOS o altro computer/dispositivo).
-4) [Smartwatch](#RemoteControl_smartwatches) (Android)
+1) [Comandi SMS](#RemoteControl_SMS-Commands) (il telefono follower può essere Android o iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (il telefono follower è Android) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS o altro computer/dispositivo). 4) [Smartwatch](#RemoteControl_smartwatches) (Android)
 
 I primi tre sono più adatti ai caregiver/genitori, ma gli smartwatch sono molto utili sia per i caregiver/genitori **che** per gli adulti con diabete stessi.
 
@@ -29,8 +26,7 @@ Ci sono 2 versioni dell'apk che possono essere installate, **AAPSClient** e **AA
 
 Se un caregiver necessita di una seconda copia di **AAPSClient** per controllare da remoto un paziente aggiuntivo con un account Nightscout, dovrebbe installare **AAPSClient2** in aggiunta ad **AAPSClient**. **AAPSClient 2** consente a un singolo caregiver di installare l'apk **AAPSClient** due volte sullo stesso telefono follower per avere accesso simultaneo e controllo remoto di due pazienti diversi.
 
-Per distinguere le due app, alcuni elementi hanno un colore di sfondo diverso: giallo per **AAPSClient**, blu per **AAPSClient2**. Questi elementi sono l'icona dell'app, il widget e la sezione stato **AAPS** nell'app stessa.<br/>
-Nota: l'opacità dello sfondo del widget è personalizzabile.
+Per distinguere le due app, alcuni elementi hanno un colore di sfondo diverso: giallo per **AAPSClient**, blu per **AAPSClient2**. Questi elementi sono l'icona dell'app, il widget e la sezione stato **AAPS** nell'app stessa.<br/> Nota: l'opacità dello sfondo del widget è personalizzabile. <br/> Note : opacity of the widget background is customizable.
 
 ![AAPSClient_and_AAPSClient2.png](../images/remote_control_and_following/AAPSClient_and_AAPSClient2.png)
 
@@ -50,11 +46,9 @@ Una volta scaricato, clicca su _mostra nella cartella_ per individuare il file.
 
 L'apk **AAPSClient** ora può essere:
 
-Trasferito tramite cavo USB sul telefono follower; oppure
-Trascinato nella cartella Google Drive e poi aggiunto al telefono follower cliccando sul file "app-AAPSClient-release".
+Trasferito tramite cavo USB sul telefono follower; oppure Trascinato nella cartella Google Drive e poi aggiunto al telefono follower cliccando sul file "app-AAPSClient-release".
 
-Se hai bisogno di **AAPS** per te stesso e di **AAPSClient** per monitorare qualcun altro, dovrai compilare **AAPSClient** tu stesso invece di scaricarlo dal repository Github come descritto sopra. Il motivo è che non puoi installare sia **AAPS** che **AAPSClient** sullo stesso telefono, firmati con chiavi diverse.<br/>
-Per compilare **AAPSClient** tu stesso, segui lo stesso processo della [compilazione regolare di AAPS](../SettingUpAaps/BuildingAaps.md). Nella pagina **Genera Bundle o APK App Firmato**, seleziona **aapsclientRelease** invece di **fullRelease**.
+Se hai bisogno di **AAPS** per te stesso e di **AAPSClient** per monitorare qualcun altro, dovrai compilare **AAPSClient** tu stesso invece di scaricarlo dal repository Github come descritto sopra. Il motivo è che non puoi installare sia **AAPS** che **AAPSClient** sullo stesso telefono, firmati con chiavi diverse.<br/> Per compilare **AAPSClient** tu stesso, segui lo stesso processo della [compilazione regolare di AAPS](../SettingUpAaps/BuildingAaps.md). <br/> To build **AAPSClient** yourself, follow the same process as [regular AAPS build](../SettingUpAaps/BuildingAaps.md). Nella pagina **Genera Bundle o APK App Firmato**, seleziona **aapsclientRelease** invece di **fullRelease**.
 
 ### Sincronizzazione - Configurazione di AAPSClient e AAPS (per la versione 3.2.0.0 e successive)
 
@@ -99,16 +93,15 @@ Se hai difficoltà con **AAPS** v3 ad accettare il 'token di accesso NS' e stai 
 
 ### Funzionalità di AAPSClient:
 
-| Scheda / Hamburger       | Funzionalità                                                                                                                                                                                               |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Scheda **Azione**        | - Cambio Profilo <br>- Cambio Stato Loop <br>- Obiettivo Temporaneo<br>- Controllo glicemia<br>- Inserimento sensore CGM<br>- Nota<br>- Esercizio<br>- Annuncio<br>- Domanda?<br>- Browser cronologia |
-| Scheda **Cibo**          |                                                                                                                                                                                                            |
-| Scheda **Trattamenti**   | - Controlla i trattamenti erogati inclusi bolo e carboidrati inseriti                                                                                                                                      |
-| Scheda **Manutenzione**  | - Esporta e Importa Impostazioni                                                                                                                                                                           |
-| Scheda **Profilo**       | - Creare un nuovo profilo<br>- Cambio profilo                                                                                                                                                              |
+| Scheda / Hamburger      | Funzionalità                                                                                                                                                                                                                                                |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Scheda **Azione**       | - Cambio Profilo <br>- Cambio Stato Loop <br>- Obiettivo Temporaneo<br>- Controllo glicemia<br>- Inserimento sensore CGM<br>- Nota<br>- Esercizio<br>- Annuncio<br>- Domanda?<br>- Browser cronologia |
+| Scheda **Cibo**         |                                                                                                                                                                                                                                                             |
+| Scheda **Trattamenti**  | - Controlla i trattamenti erogati inclusi bolo e carboidrati inseriti                                                                                                                                                                                       |
+| Scheda **Manutenzione** | - Esporta e Importa Impostazioni                                                                                                                                                                                                                            |
+| Scheda **Profilo**      | - Creare un nuovo profilo<br>- Cambio profilo                                                                                                                                                                                                         |
 
-**AAPSClient** consente al caregiver di effettuare molte delle regolazioni consentite direttamente in **AAPS** (esclusi i boli di insulina) da remoto, tramite la rete mobile o Internet. I principali vantaggi di **AAPSClient** sono la velocità e la facilità con cui i caregiver/genitori possono usarlo per controllare da remoto **AAPS**. __AAPSClient__ _può_ essere molto più veloce rispetto all'inserimento dei Comandi SMS, se si invia un comando che richiederebbe l'autenticazione. I comandi inseriti in **AAPSClient** vengono caricati su Nightscout.
-Affinché le azioni eseguite in **AAPSClient** vengano effettivamente eseguite in **AAPS**, le impostazioni di NSClient devono consentire di ricevere tali ordini. Vedi la [sezione Sincronizzazione delle preferenze NSClient](#Preferences-nsclient-synchronization).
+**AAPSClient** consente al caregiver di effettuare molte delle regolazioni consentite direttamente in **AAPS** (esclusi i boli di insulina) da remoto, tramite la rete mobile o Internet. I principali vantaggi di **AAPSClient** sono la velocità e la facilità con cui i caregiver/genitori possono usarlo per controllare da remoto **AAPS**. __AAPSClient__ _può_ essere molto più veloce rispetto all'inserimento dei Comandi SMS, se si invia un comando che richiederebbe l'autenticazione. I comandi inseriti in **AAPSClient** vengono caricati su Nightscout. Affinché le azioni eseguite in **AAPSClient** vengano effettivamente eseguite in **AAPS**, le impostazioni di NSClient devono consentire di ricevere tali ordini. Vedi la [sezione Sincronizzazione delle preferenze NSClient](#Preferences-nsclient-synchronization).
 
 
 
@@ -159,8 +152,7 @@ Dopo aver premuto "salva", l'app tornerà alla schermata principale di Nightscou
 6. Menu "**+**" per inserire trattamenti da inviare ad AAPS.
 7. Seleziona il periodo di tempo diverso da visualizzare
 8. Profilo della basale insulinica
-9. Linea verde = glucosio storico
-   Linee blu = glucosio previsto
+9. Linea verde = glucosio storico Linee blu = glucosio previsto
 
 ![image](../images/remote-control-28.png)
 
@@ -176,7 +168,7 @@ Guardando più in dettaglio il menu in alto a sinistra dell'app Nightscout:
 C'è un'enorme quantità di informazioni sullo stato del sistema **AAPS** nelle schede grigie (e ancora più informazioni vengono rivelate se tocchi la scheda) in questa schermata:
 
 1. Tendenza glicemia ultimi 5 min
-2. Anteprima calcolatore bolo
+2. Bolus wizard preview
 3. Premi su Basale per vedere il tuo profilo attuale e le informazioni sulla basale
 4. Tempo dall'ultima lettura CGM in AAPS
 5. **Microinfusore**: insulina, % batteria e quando AAPS si è connesso l'ultima volta
@@ -210,23 +202,23 @@ Alcuni dei comandi **Nightscout** più utili sono descritti nella tabella seguen
 
 #### Tabella dei comandi Nightscout
 
-| Trattamenti più comunemente usati                               | Funzione, esempio di quando il comando è utile                                                                                                                                                                                   |
-| --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Bolo di correzione**                                          | Consente di annunciare **ma <u>non</u> somministrare** insulina.<br>Molto utile per annullare l'insulina negativa e prevenire un'ipoglicemia,<br>ad esempio nel mezzo della notte, se il profilo è stato troppo aggressivo. |
-| **Correzione carboidrati**                                      | Annuncia carboidrati ora                                                                                                                                                                                                          |
-| **Obiettivo temporaneo**<br>**Annulla obiettivo temporaneo**    | Consente di impostare e annullare obiettivi temporanei.<br>Nota che l'annullamento non funziona sempre;<br>in questo caso puoi impostare un nuovo target per un breve periodo (2 min)<br>che poi tornerà al target normale. |
-| **Cambio profilo**                                              | Consente di controllare il profilo attualmente in esecuzione,<br>e passare a un altro profilo, permanentemente<br>o per un tempo definito (min).                                                                            |
+| Trattamenti più comunemente usati                                  | Funzione, esempio di quando il comando è utile                                                                                                                                                                                                |
+| ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Bolo di correzione**                                             | Consente di annunciare **ma <u>non</u> somministrare** insulina.<br>Molto utile per annullare l'insulina negativa e prevenire un'ipoglicemia,<br>ad esempio nel mezzo della notte, se il profilo è stato troppo aggressivo.       |
+| **Correzione carboidrati**                                         | Annuncia carboidrati ora                                                                                                                                                                                                                      |
+| **Obiettivo temporaneo**<br>**Annulla obiettivo temporaneo** | Consente di impostare e annullare obiettivi temporanei.<br>Nota che l'annullamento non funziona sempre;<br>in questo caso puoi impostare un nuovo target per un breve periodo (2 min)<br>che poi tornerà al target normale. |
+| **Cambio profilo**                                                 | Consente di controllare il profilo attualmente in esecuzione,<br>e passare a un altro profilo, permanentemente<br>o per un tempo definito (min).                                                                                  |
 
 
 
-| Comandi meno usati                                                                                                           | Funzione, esempio di quando il comando è utile                                                                                                                                         |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Controllo glicemia**                                                                                                       | Invia un controllo glicemia ad AAPS.                                                                                                                                                   |
-| **Bolo spuntino**<br>**Bolo pasto**<br>**Bolo combinato**                                                                    | Può annunciare carboidrati (più proteine e grassi)<br> da 60 min nel passato a 60 min nel futuro.<br>Il bolo combinato consente anche l'annuncio dell'insulina contemporaneamente. |
-| **Annuncio**<br>**Nota**<br>**Domanda**<br>**Esercizio**<br>**Open APS offline**<br>**Avviso DAD**                           | Aggiungi queste note informative (DAD = avviso cane diabetico).                                                                                                                        |
-| **Cambio sito microinfusore**<br>**Cambio batteria**<br>**Cambio cartuccia insulina**                                        | Annuncia questi cambi del microinfusore.                                                                                                                                               |
-| **Avvio sensore CGM**<br>**Inserimento sensore CGM**<br>**Stop sensore CGM**                                                 | Annuncia questi cambi del CGM.                                                                                                                                                         |
-| **Inizio basale temporanea**<br>**Fine basale temporanea**                                                                   | Più utile nel loop aperto.                                                                                                                                                             |
+| Comandi meno usati                                                                                                               | Funzione, esempio di quando il comando è utile                                                                                                                                                 |
+| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **BG check**                                                                                                                     | Invia un controllo glicemia ad AAPS.                                                                                                                                                           |
+| **Bolo spuntino**<br>**Bolo pasto**<br>**Bolo combinato**                                                            | Può annunciare carboidrati (più proteine e grassi)<br> da 60 min nel passato a 60 min nel futuro.<br>Il bolo combinato consente anche l'annuncio dell'insulina contemporaneamente. |
+| **Annuncio**<br>**Nota**<br>**Domanda**<br>**Esercizio**<br>**Open APS offline**<br>**Avviso DAD** | Aggiungi queste note informative (DAD = avviso cane diabetico).                                                                                                                                |
+| **Cambio sito microinfusore**<br>**Cambio batteria**<br>**Cambio cartuccia insulina**                                | Announces these pump changes.                                                                                                                                                                  |
+| **Avvio sensore CGM**<br>**Inserimento sensore CGM**<br>**Stop sensore CGM**                                         | Annuncia questi cambi del CGM.                                                                                                                                                                 |
+| **Inizio basale temporanea**<br>**Fine basale temporanea**                                                                 | Più utile nel loop aperto.                                                                                                                                                                     |
 
 Leggi di più sulle opzioni **Nightscout** [qui](https://nightscout.github.io/)
 
@@ -267,7 +259,7 @@ Come breve panoramica, le seguenti funzioni possono essere attivate dallo smartw
 
 * stato
 
-* controllare lo stato del microinfusore
+* check pump status
 
 * controllare lo stato del loop
 
@@ -318,4 +310,15 @@ Poi "salva come" e salva il file in un luogo conveniente sul tuo computer:
 
 
 
-L'apk wear di **AAPSClient** può essere trasferito sul tuo telefono e caricato sull'orologio nello stesso modo dell'app Wear di **AAPS**, come descritto in [Trasferimento dell'app Wear sul tuo telefono AAPS](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)
+
+
+L'apk wear di **AAPSClient** può essere trasferito sul tuo telefono e caricato sull'orologio nello stesso modo dell'app Wear di **AAPS**, come descritto in [Trasferimento dell'app Wear sul tuo telefono AAPS](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)  
+
+
+
+
+
+
+
+
+

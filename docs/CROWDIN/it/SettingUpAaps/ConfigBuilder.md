@@ -12,7 +12,7 @@ Quando nel modulo sono disponibili impostazioni aggiuntive, puoi cliccare sull'i
 
 
 (Config-Builder-tab-or-hamburger-menu)=
-## Scheda o menu hamburger
+## Tab or hamburger menu
 
 Con la casella di controllo sotto il simbolo dell'occhio puoi decidere come aprire la sezione del programma corrispondente.
 
@@ -53,7 +53,7 @@ Ulteriori informazioni per comprendere il Profilo insulinico come mostrato in **
 
 * consigliato per Humalog, Novolog e Novorapid
 * DIA = almeno 5.0h
-* Picco max = 75 minuti dopo l'iniezione (fisso, non regolabile)
+* Max. Picco max = 75 minuti dopo l'iniezione (fisso, non regolabile)
 
 #### Ultra-Rapid Oref
 
@@ -61,7 +61,7 @@ Ulteriori informazioni per comprendere il Profilo insulinico come mostrato in **
 
 * consigliato per FIASP
 * DIA = almeno 5.0h
-* Picco max = 55 minuti dopo l'iniezione (fisso, non regolabile)
+* Max. Picco max = 55 minuti dopo l'iniezione (fisso, non regolabile)
 
 (Config-Builder-lyumjev)=
 #### Lyumjev
@@ -70,7 +70,7 @@ Ulteriori informazioni per comprendere il Profilo insulinico come mostrato in **
 
 * profilo insulinico speciale per Lyumjev
 * DIA = almeno 5.0h
-* Picco max = 45 minuti dopo l'iniezione (fisso, non regolabile)
+* Max. Picco max = 45 minuti dopo l'iniezione (fisso, non regolabile)
 
 #### Free Peak Oref
 
@@ -81,7 +81,7 @@ Ulteriori informazioni per comprendere il Profilo insulinico come mostrato in **
 * Questo profilo di effetto è consigliato se si usa un'insulina non supportata o un mix di insuline diverse.
 
 (Config-Builder-bg-source)=
-## Sorgente glicemia
+## BG Source
 Seleziona la sorgente di glicemia che stai usando. Vedi la pagina [Sorgente glicemia](../Getting-Started/CompatiblesCgms.md) per ulteriori informazioni sulla configurazione.
 
 ![Config Builder BG source](../images/ConfBuild_BG.png)
@@ -98,18 +98,17 @@ Seleziona la sorgente di glicemia che stai usando. Vedi la pagina [Sorgente glic
 * [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
 * Glicemia casuale: genera dati glicemia casuali (solo modalità Demo)
 
-## Smoothing (Livellamento)
+## Smoothing
 
 ![Smoothing](../images/ConfBuild_Smoothing.png)
 
 Vedi [Livellamento dei dati di glicemia](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 (Config-Builder-pump)=
-## Microinfusore
+## Pump
 Seleziona il microinfusore che stai usando. Vedi la pagina [Microinfusori compatibili](../Getting-Started/CompatiblePumps.md) per ulteriori informazioni sulla configurazione.
 
-![Config Builder Pump selection](../images/ConfBuild_Pump_AAPS33.png)
-![Config Builder Pump selection](../images/ConfBuild_Pump_AAPS33-2.png)
+![Config Builder Pump selection](../images/ConfBuild_Pump_AAPS33.png) ![Config Builder Pump selection](../images/ConfBuild_Pump_AAPS33-2.png)
 
 * [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
 * Dana R Coreano (per il microinfusore DanaR domestico)
@@ -131,10 +130,9 @@ Seleziona il microinfusore che stai usando. Vedi la pagina [Microinfusori compat
 (Config-Builder-sensitivity-detection)=
 
 ## Rilevamento sensibilità
-Seleziona il tipo di rilevamento della sensibilità. Per ulteriori dettagli sui diversi modelli [leggi qui](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Analizzerà i dati storici al volo e farà aggiustamenti se rileva che stai reagendo più sensibilmente (o al contrario, più resistente) all'insulina del solito. Ulteriori dettagli sull'algoritmo di sensibilità possono essere letti nella [documentazione OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Seleziona il tipo di rilevamento della sensibilità. Per ulteriori dettagli sui diversi modelli [leggi qui](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Analizzerà i dati storici al volo e farà aggiustamenti se rileva che stai reagendo più sensibilmente (o al contrario, più resistente) all'insulina del solito.  Ulteriori dettagli sull'algoritmo di sensibilità possono essere letti nella [documentazione OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-Puoi visualizzare la tua sensibilità nella schermata principale in un [grafico aggiuntivo](#AapsScreens-section-g-additional-graphs).
-Puoi visualizzare la tua sensibilità nella schermata principale selezionando SEN e guardando la linea bianca. Nota: devi essere nell'[Obiettivo 8](#objectives-objective8) affinché il Rilevamento sensibilità/[Autosens](#Open-APS-features-autosens) regoli automaticamente la quantità di insulina erogata. Prima di raggiungere quell'obiettivo, la percentuale Autosens / la linea nel grafico viene visualizzata solo a scopo informativo.
+Puoi visualizzare la tua sensibilità nella schermata principale in un [grafico aggiuntivo](#AapsScreens-section-g-additional-graphs). Puoi visualizzare la tua sensibilità nella schermata principale selezionando SEN e guardando la linea bianca.  Nota: devi essere nell'[Obiettivo 8](#objectives-objective8) affinché il Rilevamento sensibilità/[Autosens](#Open-APS-features-autosens) regoli automaticamente la quantità di insulina erogata. Prima di raggiungere quell'obiettivo, la percentuale Autosens / la linea nel grafico viene visualizzata solo a scopo informativo.
 
 ### Impostazioni di assorbimento
 Se usi Oref1 con **SMB** devi modificare **min_5m_carbimpact** a 8. Il valore viene usato solo durante le lacune nelle letture del **CGM** o quando l'attività fisica "consuma" tutta la glicemia che altrimenti farebbe decadere il COB da parte di **AAPS**. Nei momenti in cui [l'assorbimento dei carboidrati](../DailyLifeWithAaps/CobCalculation.md) non può essere calcolato dinamicamente in base alle reazioni del sangue, viene inserito un decadimento predefinito per i tuoi carboidrati. In sostanza, è un meccanismo di sicurezza.
@@ -156,7 +154,7 @@ Se si passa dall'algoritmo AMA a SMB, _min_5m_carbimpact_ deve essere modificato
 
 Questo modulo non deve essere disabilitato in quanto è una parte fondamentale di **AAPS**.
 
-## Vincoli
+## Constraints
 
 ### Obiettivi
 
@@ -199,7 +197,7 @@ Trasmette i dati all'app G-Watch Wear di Samsung (SO Tizen).
 
 Connessione al dispositivo Garmin (Fenix, Edge...)
 ## Trattamenti
-Se visualizzi la scheda Trattamenti (Tratt.), puoi vedere i trattamenti che sono stati caricati su Nightscout. Se vuoi modificare o eliminare una voce (es. hai mangiato meno carboidrati del previsto), seleziona 'Rimuovi' e inserisci il nuovo valore (modifica l'orario se necessario) tramite il [pulsante carboidrati nella schermata principale](#screens-bolus-carbs).
+Se visualizzi la scheda Trattamenti (Tratt.), puoi vedere i trattamenti che sono stati caricati su Nightscout.  Se vuoi modificare o eliminare una voce (es. hai mangiato meno carboidrati del previsto), seleziona 'Rimuovi' e inserisci il nuovo valore (modifica l'orario se necessario) tramite il [pulsante carboidrati nella schermata principale](#screens-bolus-carbs).
 
 ## Generale
 
@@ -245,8 +243,7 @@ Se vuoi fare boli ecc. dall'orologio, nelle "Impostazioni Wear" devi abilitare "
 ![Wear settings](../images/ConfBuild_Wear.png)
 
 Tramite la scheda Wear o il menu hamburger (in alto a sinistra dello schermo, se la scheda non è visualizzata) puoi:
-* Inviare di nuovo tutti i dati.
-Può essere utile se l'orologio non è stato connesso per un po' e vuoi inviare le informazioni all'orologio.
+* Inviare di nuovo tutti i dati. Può essere utile se l'orologio non è stato connesso per un po' e vuoi inviare le informazioni all'orologio.
 * Aprire le impostazioni sull'orologio direttamente dal telefono.
 
 ### Autotune

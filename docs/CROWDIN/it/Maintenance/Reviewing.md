@@ -2,7 +2,7 @@
 
 ## **Browser della cronologia di AAPS**
 
-**AAPS** memorizza tutta la cronologia dell'utente (__**glicemia**__, trattamenti, basale, obiettivi, **Cambio Profilo**,…) nel proprio database, che non può essere esportato o copiato e potrebbe richiedere una pulizia dopo un po' di tempo. Per effettuare la pulizia, è necessaria una revisione della "cronologia più vecchia" in **AAPS**. Questo può essere fatto caricando su Nightscout.
+**AAPS** memorizza tutta la cronologia dell'utente (__**glicemia****, trattamenti, basale, obiettivi, **Cambio Profilo**,…) nel proprio database, che non può essere esportato o copiato e potrebbe richiedere una pulizia dopo un po' di tempo. Per effettuare la pulizia, è necessaria una revisione della "cronologia più vecchia" in **AAPS**. Questo può essere fatto caricando su Nightscout.
 
 La cronologia di **AAPS** può essere esaminata utilizzando il browser 'Cronologia', dal menu Panoramica.
 

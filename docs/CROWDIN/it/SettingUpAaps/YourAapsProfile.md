@@ -13,7 +13,7 @@ Le impostazioni del tuo **Profilo** interagiscono tra loro - puoi avere impostaz
 
 Puoi usare [Autotune](https://autotuneweb.azurewebsites.net/) per orientare il tuo pensiero, anche se non va seguito ciecamente: potrebbe non funzionare bene per te o in tutte le circostanze.
 
-```{admonition} Il tuo diabete può variare
+```{admonition} Your diabetes may vary
 :class: information
 I **Profili** variano significativamente da persona a persona.
 
@@ -47,7 +47,7 @@ Letture aggiuntive sull'argomento della durata dell'azione insulinica e perché 
 * [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) e altri articoli su Bionic Wookie, che raccomanda un DIA di 9h per Lyumjev, Fiasp, NovoRapid, Humalog.
 
 
-### Impatto
+### Impact
 
 Un **DIA** troppo breve può portare a glicemie basse. E viceversa.
 
@@ -72,12 +72,12 @@ Il tuo **target glicemia** è un valore fondamentale e tutti i calcoli di **AAPS
 
 I target possono essere definiti entro questi limiti:
 
-|         | Target _basso_          | Target _alto_            |
-|---------|------------------------|------------------------|
+|         | Target _basso_        | Target _alto_         |
+| ------- | --------------------- | --------------------- |
 | Minimo  | 4 mmol/l o 72 mg/dL   | 5 mmol/l o 90 mg/dL   |
 | Massimo | 10 mmol/l o 180 mg/dL | 15 mmol/l o 225 mg/dL |
 
-### Impatto
+### Impact
 
 Se il target nel tuo **Profilo** è molto ampio (diciamo 3 o più mmol/l [50 mg/dl o più] di larghezza), spesso troverai poca azione da parte di **AAPS**. Questo perché si prevede che la **glicemia** si trovi da qualche parte in quell'ampio intervallo, e quindi è improbabile che **AAPS** intervenga con tassi basali temporanei.
 
@@ -89,12 +89,11 @@ La **figura seguente** mostra un esempio di come il target può essere impostato
 
 I target di **glicemia** vengono impostati in base alle tue preferenze e requisiti personali. Ad esempio, se sei preoccupato per le ipoglicemie di notte, potresti impostare il tuo target leggermente più alto a 117 mg/dL (6,5 mmol/L) dalle 21:00 alle 7:00. Se vuoi assicurarti di avere abbastanza insulina attiva (IOB) la mattina prima di fare il bolo per la colazione, potresti impostare un target più basso di 81 mg/dL (4,5 mmol/L) dalle 7:00 alle 8:00.
 
-Quando sei in [Loop Aperto](#KeyAapsFeatures-OpenLoop), specialmente durante i [primi obiettivi](../SettingUpAaps/CompletingTheObjectives.md), usare un target con un intervallo ampio può essere una buona opzione mentre stai imparando come si comporta **AAPS** e stai aggiustando il tuo **Profilo**.<br/>
-Quando sei in [Loop Chiuso](#KeyAapsFeatures-ClosedLoop) (a partire dall'**[Obiettivo 6](#objectives-objective6)**), si raccomanda di ridurre l'intervallo fino ad avere un singolo target per ogni momento della giornata (target _basso_ = target _alto_), per garantire che **AAPS** reagisca prontamente alle fluttuazioni della **glicemia**.
+Quando sei in [Loop Aperto](#KeyAapsFeatures-OpenLoop), specialmente durante i [primi obiettivi](../SettingUpAaps/CompletingTheObjectives.md), usare un target con un intervallo ampio può essere una buona opzione mentre stai imparando come si comporta **AAPS** e stai aggiustando il tuo **Profilo**.<br/> Quando sei in [Loop Chiuso](#KeyAapsFeatures-ClosedLoop) (a partire dall'**[Obiettivo 6](#objectives-objective6)**), si raccomanda di ridurre l'intervallo fino ad avere un singolo target per ogni momento della giornata (target _basso_ = target _alto_), per garantire che **AAPS** reagisca prontamente alle fluttuazioni della **glicemia**.
 
 (your-aaps-profile-basal-rates)=
 
-## Tassi basali
+## Basal rates
 
 ### Descrizione
 
@@ -104,7 +103,7 @@ Il microinfusore eroga piccole quantità di insulina ad azione rapida ogni pochi
 
 La maggior parte degli educatori diabetici per il diabete di tipo 1 (e le persone con diabete di tipo 1!) concordano che dovresti lavorare per impostare correttamente i tuoi tassi basali prima di tentare di ottimizzare ISF e ICR.
 
-### Impatto
+### Impact
 
 I tassi basali accurati ti consentono di svegliarti nell'intervallo e di saltare i pasti - o mangiare - prima o dopo nella giornata, senza andare in iperglicemia o ipoglicemia.
 
@@ -126,9 +125,7 @@ L'impostazione corretta dei tassi basali si fa per tentativi ed errori e dovrebb
 
 Esistono metodi di test basale che di solito prevedono l'osservazione dei tassi basali e dei fabbisogni di insulina durante un <u>digiuno intermittente</u> nell'arco di un periodo di 24 ore. Sebbene sia necessario testare i tassi basali per tutta la giornata, non è consigliabile digiunare per 24 ore consecutive. Questo perché il corpo attiva meccanismi come gli ormoni per compensare. Un modo consigliato è digiunare 3 volte per 8 ore.
 
-Il metodo consigliato è sospendere il loop (per sicurezza puoi impostare AAPS su [**LGS**](#KeyAapsFeatures-LGS) per evitare le ipoglicemie, come fatto per raggiungere l'[obiettivo 6](#objectives-objective6)), che tornerà al tasso basale di fondo predefinito. Osserva come cambia la tua **glicemia**: se sta scendendo, il tasso basale è troppo alto. E viceversa.<br/>
-Un metodo alternativo (può essere più complicato) è mantenere il loop in esecuzione e osservare come cambia l'**IOB**. Se l'**IOB** è negativo, il tuo tasso basale è troppo alto. E viceversa. Tieni presente che questo metodo si basa sull'**ISF** per correggere la **glicemia** e dipende quindi da altre variabili che devono essere impostate ragionevolmente bene affinché sia efficace.<br/>
-Un altro modo per regolare i tassi basali è osservare l'azione del loop durante la notte, quando tutto il COB è decaduto. Questo metodo è particolarmente utile per i bambini, quando il digiuno è difficile o il fabbisogno di insulina cambia spesso. [Il dott. Saleh Adi di Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) fornisce utili indicazioni su come analizzare le linee di glicemia notturna per ottimizzare i tassi basali.
+Il metodo consigliato è sospendere il loop (per sicurezza puoi impostare AAPS su [**LGS**](#KeyAapsFeatures-LGS) per evitare le ipoglicemie, come fatto per raggiungere l'[obiettivo 6](#objectives-objective6)), che tornerà al tasso basale di fondo predefinito. Osserva come cambia la tua **glicemia**: se sta scendendo, il tasso basale è troppo alto. E viceversa.<br/> Un metodo alternativo (può essere più complicato) è mantenere il loop in esecuzione e osservare come cambia l'**IOB**. Se l'**IOB** è negativo, il tuo tasso basale è troppo alto. E viceversa. Tieni presente che questo metodo si basa sull'**ISF** per correggere la **glicemia** e dipende quindi da altre variabili che devono essere impostate ragionevolmente bene affinché sia efficace.<br/> Un altro modo per regolare i tassi basali è osservare l'azione del loop durante la notte, quando tutto il COB è decaduto. Questo metodo è particolarmente utile per i bambini, quando il digiuno è difficile o il fabbisogno di insulina cambia spesso. [Il dott. Saleh Adi di Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) fornisce utili indicazioni su come analizzare le linee di glicemia notturna per ottimizzare i tassi basali.
 
 Vedi [qui](../GettingHelp/ProfileTuning.md) come ottimizzare il tuo profilo basale, analizzando i pattern nel loop chiuso.
 
@@ -142,17 +139,15 @@ Quando si agisce sui risultati del test basale, le modifiche al **Profilo** dovr
 
 Il fattore di sensibilità insulinica (a volte chiamato fattore di correzione) è una misura di quanto il tuo livello di glicemia verrà ridotto da 1 unità di insulina.
 
-**In unità mg/dL:**
-Se hai un **ISF** di 40, ogni unità di insulina ridurrà la tua glicemia di circa 40 mg/dL (ad esempio, la tua glicemia scenderà da 140 mg/dL a 100 mg/dL).
+**In unità mg/dL:** Se hai un **ISF** di 40, ogni unità di insulina ridurrà la tua glicemia di circa 40 mg/dL (ad esempio, la tua glicemia scenderà da 140 mg/dL a 100 mg/dL).
 
-**In unità mmol/L:**
-Se hai un **ISF** di 1,5, ogni unità di insulina ridurrà la tua glicemia di circa 1,5 mmol/L (ad esempio da 8 mmol/L a 6,5 mmol/L).
+**In unità mmol/L:** Se hai un **ISF** di 1,5, ogni unità di insulina ridurrà la tua glicemia di circa 1,5 mmol/L (ad esempio da 8 mmol/L a 6,5 mmol/L).
 
 Da questi esempi puoi vedere che un valore di **ISF** _più piccolo_ significa che sei meno sensibile all'insulina. Quindi se riduci il tuo ISF da 40 a 35 (mg/dl) o da 1,5 a 1,3 (mmol/L), questo viene spesso chiamato rafforzare il tuo **ISF**. Al contrario, aumentare il valore di **ISF** da 40 a 45 (mg/dl) o da 1,5 a 1,8 mmol/L) è indebolire il tuo **ISF**.
 
-### Impatto
+### Impact
 
-Un **ISF più basso / più forte** (es. 40 invece di 50) significa che l'insulina abbassa la tua **glicemia** meno per unità. Questo porta a una correzione più aggressiva / più forte dal loop con **più insulina**. Se il tuo **ISF** è troppo forte (valore piccolo), questo può portare a **glicemia** bassa.
+Un **ICR più basso / più forte** significa meno cibo per unità, cioè si riceve più insulina per una quantità fissa di carboidrati. Può anche essere chiamato 'più aggressivo'. Se il tuo IC è troppo forte, stai ricevendo troppa insulina, questo può portare a **glicemie** basse.
 
 Un **ISF più alto / più debole** (es. 45 invece di 35) significa che l'insulina abbassa la tua **glicemia** di più per unità. Questo porta a una correzione meno aggressiva / più debole dal loop con **meno insulina**. Se il tuo **ISF** è troppo debole (valore grande), questo può portare a **glicemia** alta.
 
@@ -177,7 +172,8 @@ Vedi la **figura seguente** per un esempio di come i valori ISF potrebbero esser
 Un punto di partenza di base per determinare il tuo ISF diurno è basarlo sulla dose giornaliera totale (TDD) usando la regola 1700 (94). Ulteriori dettagli sono dati nel capitolo 7 di ["Think like a Pancreas"](https://amzn.eu/d/iVU0RGe) di Gary Scheiner.
 
 | 1700 (se si misura in mg/dl) o 94 (mmol/L) / TDD = ISF approssimativo.<br/><br/>Esempio: TDD = 40 U<br/>ISF approssimativo (mg/dl) = 1700/40 = 43<br/>ISF approssimativo (mmol/L) = 94/40 = 2,4 |
-| ------------------------------------------------------------ |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                                         |
 
 Assumendo che i tuoi livelli basali siano corretti, puoi testarlo sospendendo il loop, verificando che l'**IOB** sia zero e assumendo qualche compressa di glucosio per raggiungere un livello 'alto' stabile.
 
@@ -202,30 +198,28 @@ Se il tuo **ICR** è più debole (valore più alto), ad esempio 1:20, avresti bi
 È comune avere **ICR** diversi in diversi momenti della giornata a causa dei livelli ormonali e dell'attività fisica. Molte persone trovano di avere l'**ICR** più basso/più forte intorno all'ora della colazione perché tendono ad essere più insulino-resistenti. Ad esempio, l'**ICR** di un utente adulto potrebbe essere 1:8 per la colazione, 1:10 per il pranzo e 1:10 per la cena, ma questi schemi non sono universali e alcune persone sono più insulino-resistenti all'ora di cena e richiedono un **ICR** più forte/più piccolo allora.
 
 > **NOTA:**
->
+> 
 > In alcuni paesi europei le unità pane venivano usate per determinare quanta insulina è necessaria per il cibo. Inizialmente 1 unità pane era equivalente a 12 g di carboidrati, in seguito alcuni sono passati a 10 g di carboidrati.
->
+> 
 > In questo modello la quantità di carboidrati era fissa e la quantità di insulina era variabile. ("Quanta insulina è necessaria per coprire un'unità pane?")
->
+> 
 > Quando si usa l'**ICR** la quantità di insulina è fissa e la quantità di carboidrati è variabile. ("Quanti g di carboidrati possono essere coperti da una unità di insulina?")
->
+> 
 > Esempio:
->
-> Fattore unità pane (UP = 12g di carboidrati): 2,4 U/UP
-> -> Hai bisogno di 2,4 unità di insulina quando mangi un'unità pane.
->
-> **ICR** corrispondente: 12g / 2,4 U = 5,0 g/U
-> -> 5,0 g di carboidrati possono essere coperti con una unità di insulina.
->
+> 
+> Fattore unità pane (UP = 12g di carboidrati): 2,4 U/UP -> Hai bisogno di 2,4 unità di insulina quando mangi un'unità pane.
+> 
+> **ICR** corrispondente: 12g / 2,4 U = 5,0 g/U -> 5,0 g di carboidrati possono essere coperti con una unità di insulina.
+> 
 > Fattore UP 2,4 U / 12g ===> IC = 12g / 2,4 U = 5,0 g/U
->
+> 
 > Le tabelle di conversione sono disponibili online es. [qui](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
-### Impatto
-
-Un **ICR più basso / più forte** significa meno cibo per unità, cioè si riceve più insulina per una quantità fissa di carboidrati. Può anche essere chiamato 'più aggressivo'. Se il tuo IC è troppo forte, stai ricevendo troppa insulina, questo può portare a **glicemie** basse.
+### Impact
 
 Un **ICR più alto / più debole** = più cibo per unità, cioè si riceve meno insulina per una quantità fissa di carboidrati. Può anche essere chiamato 'meno aggressivo'. Se il tuo IC è troppo debole, stai ricevendo meno insulina di quanto necessario, questo può portare a **glicemie** alte.
+
+Un **ISF più basso / più forte** (es. 40 invece di 50) significa che l'insulina abbassa la tua **glicemia** meno per unità. Questo porta a una correzione più aggressiva / più forte dal loop con **più insulina**. Can also be called ‘less aggressive’. If your IC is too weak, you are getting less insulin than you need, this can lead to high **BGs**.
 
 ### Come impostarlo
 
@@ -239,7 +233,7 @@ Assumendo che i tuoi tassi basali siano corretti, puoi testarlo verificando che 
 
 ## Domande frequenti relative al Profilo
 
-```{contents} Domande frequenti relative al Profilo
+```{contents} Common questions related to the Profile
 :depth: 1
 :local: true
 ```
@@ -255,8 +249,7 @@ Se stai iniziando con **AAPS** dopo aver usato un diverso sistema di pump a loop
 Se stai passando dalle iniezioni (MDI) a **AAPS**, è una buona idea informarsi su come effettuare il passaggio da MDI alla pompa prima, e pianificare e fare il trasferimento con cura in consultazione con il tuo team diabetologico. ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) di John Walsh & Ruth Roberts e ["Think like a Pancreas"](https://amzn.eu/d/iVU0RGe) di Gary Scheiner sono molto utili.
 
 ### Cosa causa picchi post-prandiali elevati in loop chiuso?
-Prima di tutto, controlla il tuo tasso basale e fai un test basale senza carboidrati. Se è corretto e la tua **glicemia** sta scendendo per raggiungere il target dopo che i carboidrati sono stati completamente assorbiti, prova a impostare un obiettivo temporaneo 'eating soon' in **AAPS** qualche tempo prima del pasto o pensa a un tempo di pre-bolo appropriato con il tuo endocrinologo. <br/>
-Se la tua **glicemia** è troppo alta dopo il pasto e ancora troppo alta dopo che i carboidrati sono stati completamente assorbiti, considera di ridurre il tuo **ICR** con il tuo endocrinologo. Se la tua **glicemia** è troppo alta mentre il **COB** è presente e troppo bassa dopo che i carboidrati sono stati completamente assorbiti, pensa ad aumentare il tuo **ICR** e a un tempo di pre-bolo appropriato con il tuo endocrinologo.
+Prima di tutto, controlla il tuo tasso basale e fai un test basale senza carboidrati. Se è corretto e la tua **glicemia** sta scendendo per raggiungere il target dopo che i carboidrati sono stati completamente assorbiti, prova a impostare un obiettivo temporaneo 'eating soon' in **AAPS** qualche tempo prima del pasto o pensa a un tempo di pre-bolo appropriato con il tuo endocrinologo. <br/> Se la tua **glicemia** è troppo alta dopo il pasto e ancora troppo alta dopo che i carboidrati sono stati completamente assorbiti, considera di ridurre il tuo **ICR** con il tuo endocrinologo. Se la tua **glicemia** è troppo alta mentre il **COB** è presente e troppo bassa dopo che i carboidrati sono stati completamente assorbiti, pensa ad aumentare il tuo **ICR** e a un tempo di pre-bolo appropriato con il tuo endocrinologo.
 
 ### Sono bloccato in alto e il loop non mi abbassa
 I possibili motivi per cui **AAPS** non dà abbastanza insulina sono:
@@ -276,7 +269,7 @@ Ecco alcuni motivi per cui potresti avere un IOB negativo e quale azione intrapr
 
 ## Gestire i tuoi Profili
 
-```{contents} Operazioni che puoi eseguire sui tuoi **Profili** in **AAPS**
+```{contents} Operations that you can perform on your **Profiles** in **AAPS**
 :depth: 1
 :local: true
 ```

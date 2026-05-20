@@ -2,18 +2,13 @@
 
 Le istruzioni seguenti si applicano all'apk **AAPS Wear** che devi compilare. Se non lo hai ancora fatto, consulta la guida collegata [qui](../WearOS/BuildingAapsWearOS.md). Durante la compilazione, assicurati di usare lo stesso file keystore che hai usato per il telefono **AAPS** apk.
 
-<<<<<<< Updated upstream
 For example: the **AAPSClient Wear** app can be used to display **AAPSClient** data and not **AAPS** data. You can also use some of the information for the **AAPSClient** and **PumpControl** **Wear** apk. Each **Wear** app will communicate with it's matching phone app.
-=======
-Puoi anche usare alcune delle informazioni per l'apk **AAPSClient** e **PumpControl** **Wear**. Ogni app **Wear** comunicherà con la corrispondente app del telefono. Ad esempio: l'app **AAPSClient Wear** può essere usata per visualizzare i dati di **AAPSClient** e non i dati di **AAPS**.
->>>>>>> Stashed changes
 
 ## Versioni Wear OS e compatibilità
 
 ### Wear OS 3
 
-Installa l'apk **AAPS Wear** usando [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV), Easy Fire Tools (descritto di seguito) o ADB.
-Nessuna limitazione nelle operazioni di **AAPS Wear**.
+Nel terminale digita: <br>`adb devices`.<br> Dovresti vedere qualcosa come:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`
 
 (BuildingAapsWearOs-WearOS5)=
 
@@ -21,8 +16,7 @@ Nessuna limitazione nelle operazioni di **AAPS Wear**.
 
 Esempio: GW4, GW5, GW6
 
-Installa l'apk **AAPS Wear** usando [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV).
-Nessuna limitazione nelle operazioni di **AAPS Wear**.
+In the terminal: `adb pair ipaddress:port` E.g. `adb pair 10.10.1.125:36299` `adb pair 10.10.1.125:36299` `adb pair 10.10.1.125:36299`
 
 ```{admonition} Android Wear OS 5
 :class: warning
@@ -31,7 +25,7 @@ Nessuna limitazione nelle operazioni di **AAPS Wear**.
 
 ### Galaxy Watch con Wear OS 5 installato di fabbrica
 
-Esempio: GW7, GW Ultra
+ Esempio: GW7, GW Ultra
 
 ```{admonition} Android Wear OS 5
 :class: warning
@@ -45,8 +39,7 @@ Considera in alternativa [GlucoDataHandler](https://play.google.com/store/apps/d
 
 ### Pixel watch con Wear OS 5
 
-Non compatibile con il quadrante AAPS.
-Considera [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) con una complicazione.
+Non compatibile con il quadrante AAPS. Considera [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) con una complicazione.
 
 ## Come configurare un Samsung Galaxy 4 smartwatch con **AAPS**
 
@@ -118,11 +111,7 @@ Tocca rapidamente "versione software" fino a quando appare una notifica che l'or
 
 Torna in cima al menu impostazioni, scorri verso il basso e vedi "opzioni sviluppatore" sotto "informazioni sull'orologio".
 
-<<<<<<< Updated upstream
 In “developer options”, turn on “ADB debugging” and “wireless debugging”. The latter option then reveals the IP address of the watch, the final two digits of which changes each time the watch is paired with a new phone. Note that the last two digits (here, “20”) of this address will change every time you change to a new phone handset for AAPS. It will be something like: **192.168.1.214**.5555 (ignore the last 4 digits).
-=======
-In "opzioni sviluppatore", attiva "debug ADB" e "debug wireless". Quest'ultima opzione rivela l'indirizzo IP dell'orologio, le cui ultime due cifre cambiano ogni volta che l'orologio viene abbinato a un nuovo telefono. Sarà qualcosa come: **192.168.1.214**.5555 (ignora le ultime 4 cifre). Nota che le ultime due cifre (qui, "20") di questo indirizzo cambieranno ogni volta che passi a un nuovo telefono per AAPS.
->>>>>>> Stashed changes
 
 ![image](../images/wearos/easyfire04.png)
 
@@ -159,17 +148,10 @@ Sull'orologio:
 
 Vedrai apparire un codice di abbinamento Wi-Fi, indirizzo IP e porta: ![image](../images/wearos/ADB03.png)
 
-<<<<<<< Updated upstream
-- In the terminal: `adb pair ipaddress:port` E.g. `adb pair 10.10.1.125:36299` `adb pair 10.10.1.125:36299` `adb pair 10.10.1.125:36299`
+- In the terminal: `adb pair ipaddress:port` E.g. `adb pair 10.10.1.125:36299` `adb pair 10.10.1.125:36299` `adb pair 10.10.1.125:36299` `adb pair 10.10.1.125:36299` `adb pair 10.10.1.125:36299`
 - You will be asked for the pairing code. Enter it.
 - You will see a response:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
-- In the terminal type: <br>`adb devices`.<br> You should see something like:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
-=======
-- Nel terminale: `adb pair indirizzoip:porta` Es. `adb pair 10.10.1.125:36299`
-- Ti verrà chiesto il codice di abbinamento. Inseriscilo.
-- Vedrai una risposta:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
-- Nel terminale digita: <br>`adb devices`.<br> Dovresti vedere qualcosa come:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
->>>>>>> Stashed changes
+- - In the terminal type: <br>`adb devices`.<br> You should see something like:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
 
 - Ora vai nella cartella del tuo computer dove si trova il Wear apk e digita<br> `adb install wear-full.apk` <br>sostituendo wear.apk con il nome del tuo file apk.
 - Vedrai:<br> `Performing Streamed Install`<br> `Success`

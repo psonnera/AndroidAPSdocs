@@ -35,13 +35,13 @@ Se non vuoi che le tue preferenze vengano modificate facilmente, puoi proteggere
 Se prevedi di usare l'app Android Wear per fare boli o modificare le impostazioni, devi assicurarti che le notifiche di AAPS non siano bloccate. La conferma dell'azione avviene tramite notifica.
 
 (FAQ-disconnect-pump)=
-#### Disconnessione del microinfusore
+#### Disconnect pump
 Se togli il microinfusore per fare la doccia, il bagno, nuotare, praticare sport o per altre attività, devi comunicare ad AAPS che non viene erogata insulina per mantenere corretto l'IOB.
 
 Il microinfusore può essere disconnesso usando l'icona di Stato Loop nella [Schermata principale di AAPS](#AapsScreens-loop-status).
 
 #### Le raccomandazioni non si basano su una sola lettura CGM
-Per sicurezza, le raccomandazioni si basano non su una sola lettura CGM ma sulla media delta. Pertanto, se si perdono alcune letture, potrebbe volerci un po' di tempo dopo aver ricevuto di nuovo i dati prima che AAPS riprenda il loop.
+Per sicurezza, le raccomandazioni si basano non su una sola lettura CGM ma sulla media delta.  Pertanto, se si perdono alcune letture, potrebbe volerci un po' di tempo dopo aver ricevuto di nuovo i dati prima che AAPS riprenda il loop.
 
 #### Ulteriori letture
 Ci sono diversi blog con buoni consigli per aiutarti a capire le implicazioni pratiche del loop:
@@ -51,16 +51,16 @@ Ci sono diversi blog con buoni consigli per aiutarti a capire le implicazioni pr
   * [Ormoni e autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
 ### Qual è l'equipaggiamento di emergenza consigliato da portare con sé?
-Devi avere con te lo stesso equipaggiamento di emergenza come ogni altro T1D con terapia con microinfusore. Quando si fa loop con AAPS, si consiglia vivamente di avere il seguente equipaggiamento aggiuntivo con sé o nelle vicinanze:
+Devi avere con te lo stesso equipaggiamento di emergenza come ogni altro T1D con terapia con microinfusore.  Quando si fa loop con AAPS, si consiglia vivamente di avere il seguente equipaggiamento aggiuntivo con sé o nelle vicinanze:
 
 * Batteria esterna e cavi per caricare lo smartphone, l'orologio e (se necessario) il lettore BT o il dispositivo Link
-* Batterie per il microinfusore
+* Pump batteries
 * [APK](../SettingUpAaps/BuildingAaps.md) attuale e [file delle preferenze](../Maintenance/ExportImportSettings.md) per AAPS e qualsiasi altra app in uso (ad es. xDrip+, BYO Dexcom) sia localmente che nel cloud (Dropbox, Google Drive).
 
 ### Come si può attaccare il CGM/FGM in modo sicuro?
-Si può usare il nastro adesivo. Ci sono diversi "sovrapatch" pre-forati per i comuni sistemi CGM disponibili (cerca su Google, eBay o Amazon). Alcuni loopers usano il meno costoso nastro kinesiologico standard o rocktape.
+Si può usare il nastro adesivo.  Ci sono diversi "sovrapatch" pre-forati per i comuni sistemi CGM disponibili (cerca su Google, eBay o Amazon). Alcuni loopers usano il meno costoso nastro kinesiologico standard o rocktape.
 
-Si può fissare. Si possono anche acquistare braccialetti per il braccio superiore che fissano il CGM/FGM con una fascia (cerca su Google, eBay o Amazon).
+Si può fissare.  Si possono anche acquistare braccialetti per il braccio superiore che fissano il CGM/FGM con una fascia (cerca su Google, eBay o Amazon).
 
 ## Algoritmo APS
 ### Perché mostra "dia:3" nella scheda "OPENAPS AMA" anche se ho un DIA diverso nel mio profilo?
@@ -81,18 +81,18 @@ In AAPSClient controlla le 'Impostazioni di connessione'. Forse non sei effettiv
 #### Perché AAPS dice 'La sorgente BG non supporta il filtraggio avanzato'?
 Se si usa un CGM/FGM diverso da Dexcom G5 o G6 in modalità nativa xDrip, si riceverà questo avviso nella scheda AAPS OpenAPS. Vedere [Uniformazione dei dati di glicemia](../CompatibleCgms/SmoothingBloodGlucoseData.md) per maggiori dettagli.
 
-### Microinfusore
+### Pump
 
-#### Dove posizionare il microinfusore?
+#### Where to place the pump?
 Ci sono innumerevoli possibilità di posizionare il microinfusore. Non importa se si fa loop o no.
 
 #### Batterie
-Il loop può scaricare la batteria del microinfusore più velocemente del normale perché il sistema interagisce tramite Bluetooth molto di più rispetto a un utente manuale. È consigliabile cambiare la batteria al 25% poiché la comunicazione diventa difficile in quel momento. È possibile impostare avvisi di avvertimento per la batteria del microinfusore usando la variabile PUMP_WARN_BATT_P nel sito Nightscout. Consigli per aumentare la durata della batteria includono:
+Il loop può scaricare la batteria del microinfusore più velocemente del normale perché il sistema interagisce tramite Bluetooth molto di più rispetto a un utente manuale.  È consigliabile cambiare la batteria al 25% poiché la comunicazione diventa difficile in quel momento.  È possibile impostare avvisi di avvertimento per la batteria del microinfusore usando la variabile PUMP_WARN_BATT_P nel sito Nightscout.  Consigli per aumentare la durata della batteria includono:
 * ridurre il tempo in cui l'LCD rimane acceso (nel menu delle impostazioni del microinfusore)
 * ridurre il tempo in cui la retroilluminazione rimane accesa (nel menu delle impostazioni del microinfusore)
 * selezionare le impostazioni di notifica con un segnale acustico anziché vibrazione (nel menu delle impostazioni del microinfusore)
 * premere i pulsanti sul microinfusore solo per ricaricare, usare AAPS per visualizzare tutta la cronologia, il livello della batteria e il volume del serbatoio.
-* L'app AAPS potrebbe essere spesso chiusa per risparmiare energia o liberare RAM su alcuni telefoni. Quando AAPS viene reinizializzato a ogni avvio, stabilisce una connessione Bluetooth con il microinfusore e rilegge la velocità basale corrente e la cronologia dei boli. Ciò consuma batteria. Per vedere se questo sta accadendo, vai a Preferenze > NSClient e abilita 'Registra avvio app su NS'. Nightscout riceverà un evento ad ogni riavvio di AAPS, il che rende facile tracciare il problema. Per ridurre questo accadimento, metti in whitelist l'app AAPS nelle impostazioni della batteria del telefono per impedire al monitor di risparmio energetico dell'app di chiuderla.
+* L'app AAPS potrebbe essere spesso chiusa per risparmiare energia o liberare RAM su alcuni telefoni. Quando AAPS viene reinizializzato a ogni avvio, stabilisce una connessione Bluetooth con il microinfusore e rilegge la velocità basale corrente e la cronologia dei boli. Ciò consuma batteria. Per vedere se questo sta accadendo, vai a Preferenze > NSClient e abilita 'Registra avvio app su NS'. Nightscout riceverà un evento ad ogni riavvio di AAPS, il che rende facile tracciare il problema.  Per ridurre questo accadimento, metti in whitelist l'app AAPS nelle impostazioni della batteria del telefono per impedire al monitor di risparmio energetico dell'app di chiuderla.
 
    Ad esempio, per mettere in whitelist su un telefono Samsung con Android Pie:
    * Vai a Impostazioni -> Assistenza dispositivo -> Batteria
@@ -102,7 +102,7 @@ Il loop può scaricare la batteria del microinfusore più velocemente del normal
    * Scorri fino ad AAPS e assicurati che sia deselezionato.
 
 * pulire i terminali della batteria con un tampone di alcol per garantire che non rimangano cera/grasso di fabbricazione.
-* per i [microinfusori Dana R/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md) la procedura di avvio attira una corrente elevata attraverso la batteria per rompere intenzionalmente il film di passivazione (previene la perdita di energia durante lo stoccaggio) ma non sempre funziona per romperlo al 100%. Rimuovere e reinserire la batteria 2-3 volte finché non mostra il 100% sullo schermo, o usare la chiave della batteria per cortocircuitarla brevemente prima dell'inserimento applicandola su entrambi i terminali per un istante.
+* per i [microinfusori Dana R/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md) la procedura di avvio attira una corrente elevata attraverso la batteria per rompere intenzionalmente il film di passivazione (previene la perdita di energia durante lo stoccaggio) ma non sempre funziona per romperlo al 100%.  Rimuovere e reinserire la batteria 2-3 volte finché non mostra il 100% sullo schermo, o usare la chiave della batteria per cortocircuitarla brevemente prima dell'inserimento applicandola su entrambi i terminali per un istante.
 * vedere anche più consigli per [particolari tipi di batteria](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
 
 #### Cambio di serbatoio e cannula
@@ -112,7 +112,7 @@ Il cambio della cartuccia non può essere effettuato tramite AAPS ma deve essere
 * Anche il riempimento del tubo e della cannula può essere eseguito direttamente sul microinfusore. In questo caso usa il [pulsante INNESCO/RIEMPI](#screens-action-tab) nella scheda azioni solo per registrare il cambio.
 * Una volta riconnesso al microinfusore, continua il loop tenendo premuto su 'Sospeso (X m)'.
 
-Il cambio di una cannula tuttavia non usa la funzione "riempi set di infusione" del microinfusore, ma riempie il set di infusione e/o la cannula usando un bolo che non appare nella cronologia dei boli. Ciò significa che non interrompe una basale temporanea attualmente in corso. Nella scheda Azioni (Azi), usa il [pulsante INNESCO/RIEMPI](#screens-action-tab) per impostare la quantità di insulina necessaria per riempire il set di infusione e iniziare il riempimento. Se la quantità non è sufficiente, ripeti il riempimento. Puoi impostare i pulsanti di quantità predefinita in Preferenze > Altro > Quantità insulina standard riempimento/innesco. Consulta il libretto delle istruzioni nella scatola della cannula per quante unità devono essere innestate in base alla lunghezza dell'ago e alla lunghezza del tubo.
+Il cambio di una cannula tuttavia non usa la funzione "riempi set di infusione" del microinfusore, ma riempie il set di infusione e/o la cannula usando un bolo che non appare nella cronologia dei boli. Ciò significa che non interrompe una basale temporanea attualmente in corso.  Nella scheda Azioni (Azi), usa il [pulsante INNESCO/RIEMPI](#screens-action-tab) per impostare la quantità di insulina necessaria per riempire il set di infusione e iniziare il riempimento. Se la quantità non è sufficiente, ripeti il riempimento.  Puoi impostare i pulsanti di quantità predefinita in Preferenze > Altro > Quantità insulina standard riempimento/innesco.  Consulta il libretto delle istruzioni nella scatola della cannula per quante unità devono essere innestate in base alla lunghezza dell'ago e alla lunghezza del tubo.
 
 ### Sfondo
 
@@ -120,13 +120,13 @@ Puoi trovare lo sfondo AAPS per il tuo telefono nella [pagina dei telefoni](#Pho
 
 ### Utilizzo quotidiano
 
-#### Igiene
+#### Hygiene
 
 ##### Cosa fare quando si fa la doccia o il bagno?
 Puoi rimuovere il microinfusore mentre fai la doccia o il bagno. Per questo breve periodo potresti non averne bisogno, ma dovresti dire ad AAPS che ti sei disconnesso in modo che i calcoli IOB siano corretti. Vedi [la descrizione sopra](#FAQ-disconnect-pump).
 
 #### Lavoro
-A seconda del tuo lavoro, potresti scegliere di usare diversi fattori di trattamento nei giorni lavorativi. Come looper dovresti considerare un [cambio profilo](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) per la tipica giornata lavorativa. Ad esempio, potresti passare a un profilo superiore al 100% se hai un lavoro meno impegnativo (ad es. seduto a una scrivania), o inferiore al 100% se sei attivo e in piedi tutto il giorno. Potresti anche considerare un target temporaneo alto o basso o uno [spostamento temporale del profilo](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) quando lavori molto prima o dopo il solito, o se lavori su turni diversi. Puoi anche creare un secondo profilo (ad es. 'casa' e 'giorno lavorativo') e fare un cambio profilo quotidiano verso il profilo di cui hai effettivamente bisogno.
+A seconda del tuo lavoro, potresti scegliere di usare diversi fattori di trattamento nei giorni lavorativi. Come looper dovresti considerare un [cambio profilo](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) per la tipica giornata lavorativa.  Ad esempio, potresti passare a un profilo superiore al 100% se hai un lavoro meno impegnativo (ad es. seduto a una scrivania), o inferiore al 100% se sei attivo e in piedi tutto il giorno.  Potresti anche considerare un target temporaneo alto o basso o uno [spostamento temporale del profilo](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) quando lavori molto prima o dopo il solito, o se lavori su turni diversi. Puoi anche creare un secondo profilo (ad es. 'casa' e 'giorno lavorativo') e fare un cambio profilo quotidiano verso il profilo di cui hai effettivamente bisogno.
 
 ### Attività ricreative
 
@@ -148,7 +148,7 @@ Se fai sport regolarmente alla stessa ora (cioè lezione di sport in palestra) p
 La percentuale del cambio profilo, il valore per il target temporaneo di attività e il momento migliore per le modifiche sono individuali. Inizia dal lato sicuro se stai cercando il valore giusto per te (inizia con una percentuale più bassa e un TT più alto).
 
 #### Sesso
-Puoi rimuovere il microinfusore per essere 'libero', ma dovresti dirlo ad AAPS in modo che i calcoli IOB siano corretti. Vedi [la descrizione sopra](#FAQ-disconnect-pump).
+Puoi rimuovere il microinfusore per essere 'libero', ma dovresti dirlo ad AAPS in modo che i calcoli IOB siano corretti.  Vedi [la descrizione sopra](#FAQ-disconnect-pump).
 
 #### Consumo di alcol
 Il consumo di alcol è rischioso in modalità loop chiuso perché l'algoritmo non riesce a prevedere correttamente l'influenza dell'alcol sulla BG. Devi trovare il tuo metodo per gestire questo usando le seguenti funzioni in AAPS:
@@ -298,23 +298,13 @@ La cosa critica è che lo "stato" del microinfusore (che include il suo indirizz
 
 ### Procedura che seguo in questo:
 
-1) Sospendi il microinfusore DASH. Ciò garantisce che non ci siano comandi in esecuzione o in coda attivi quando DASH perde la connessione
-2) Metti il telefono in modalità aereo per disabilitare BT (così come WiFi e dati mobili). In questo modo è garantito che AAPS e DASH non possano comunicare.
-3) Esporta le impostazioni (che includono lo stato DASH)
-4) Copia il file delle impostazioni appena esportato dal telefono (poiché è in modalità aereo e non vogliamo cambiare questo, il modo più semplice è usare il cavo USB)
-5) Copia il file delle impostazioni sul telefono alternativo.
-6) Importa le impostazioni sull'AAPS del telefono alternativo.
-7) Controlla la scheda DASH per verificare che stia vedendo il Pod.
-8) Riprendi la sospensione del Pod.
-9) Controlla la scheda DASH e conferma che sta comunicando con il Pod (usa il pulsante di aggiornamento)
+1) Sospendi il microinfusore DASH. Ciò garantisce che non ci siano comandi in esecuzione o in coda attivi quando DASH perde la connessione 2) Metti il telefono in modalità aereo per disabilitare BT (così come WiFi e dati mobili). In questo modo è garantito che AAPS e DASH non possano comunicare. 3) Esporta le impostazioni (che includono lo stato DASH) 4) Copia il file delle impostazioni appena esportato dal telefono (poiché è in modalità aereo e non vogliamo cambiare questo, il modo più semplice è usare il cavo USB) 5) Copia il file delle impostazioni sul telefono alternativo. 6) Importa le impostazioni sull'AAPS del telefono alternativo. 7) Controlla la scheda DASH per verificare che stia vedendo il Pod. 8) Riprendi la sospensione del Pod. 9) Controlla la scheda DASH e conferma che sta comunicando con il Pod (usa il pulsante di aggiornamento)
 
 Congratulazioni: ce l'hai fatta!
 
 _Aspetta!_ Hai ancora il telefono principale che pensa di potersi riconnettere allo stesso DASH:
 
-1) Sul telefono principale scegli "disattiva". Questo è sicuro perché il telefono non ha modo di comunicare con DASH per disattivare effettivamente il Pod (è ancora in modalità aereo)
-2) La disattivazione risulterà in un errore di comunicazione - questo è previsto.
-3) Premi "riprova" un paio di volte finché AAPS non offre l'opzione di "Scartare" il Pod.
+1) Sul telefono principale scegli "disattiva". Questo è sicuro perché il telefono non ha modo di comunicare con DASH per disattivare effettivamente il Pod (è ancora in modalità aereo) 2) La disattivazione risulterà in un errore di comunicazione - questo è previsto. 3) Premi "riprova" un paio di volte finché AAPS non offre l'opzione di "Scartare" il Pod.
 
 Quando scartato, verifica che AAPS riporti "Nessun Pod Attivo". Ora puoi disabilitare la modalità aereo in sicurezza.
 
@@ -324,4 +314,5 @@ Puoi solo importare impostazioni (in AAPS v3) che sono state esportate usando AA
 
 Se usi la stessa chiave per compilare v2.8 e v3, non dovrai nemmeno importare le impostazioni. Puoi installare v3 sopra v2.8.
 
-Sono stati aggiunti alcuni nuovi obiettivi. Dovrai validarli.
+Sono stati aggiunti alcuni nuovi obiettivi. Dovrai validarli. 
+

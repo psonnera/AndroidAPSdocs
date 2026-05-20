@@ -67,8 +67,7 @@ Forking a repository allows you to freely experiment with changes without affect
 Non riesci a fare il fork e vedi questo?</br></br>
 >>>>>>> Stashed changes
 **`Create a new fork`**</br>
-`A fork is a copy of a repository. <<<<<<< Updated upstream
-Forking a repository allows you to freely experiment with changes without affecting the original project. View existing forks.`</br>
+`A fork is a copy of a repository. View existing forks.`</br>
 *`Required fields are marked with an asterisk (*).`*</br>
 **`No available destinations to fork this repository.`**</br></br>
 Ciò significa che hai già un fork esistente di AndroidAPS.</br>
@@ -97,16 +96,10 @@ GitHub ora mostra la tua copia personale di AndroidAPS. Lascia questa scheda del
 
 - Scarica il file di preparazione da qui: [aaps-ci-preparation.html](https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
 
-````{admonition} Nota
+````{admonition} Note
 :class: note
 
-<<<<<<< Updated upstream
-1. If you open this page from within an app (via a web view), the HTML file may not download. raw:: html
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download>  aaps-ci-preparation.html</a>
-```<!--crowdin:enable-->Please copy the URL and open it in your browser instead:
-=======
-1. Se apri questa pagina dall'interno di un'app (tramite web view), il file HTML potrebbe non scaricarsi. Copia l'URL e aprilo nel browser:
+1. If you open this page from within an app (via a web view), the HTML file may not download. Copia l'URL e aprilo nel browser:
 >>>>>>> Stashed changes
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
@@ -117,24 +110,38 @@ https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 
 2.Copia di backup ospitata su questo sito:
+
  - Se anche il link esterno non è disponibile, puoi utilizzare questo file di backup per il download.
-<!--crowdin:disable-->
+Please copy the URL and open it in your browser instead:
+```text
+https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
+```
+Or visit the latest release page:
+```text
+https://github.com/nightscout/aaps-ci-preparation/releases/latest
+```
+
+2.Backup copy hosted on this site:
+
+ - If the external link is also unavailable, you can use this backup file to download.<!--crowdin:disable-->```{eval-rst}
+.. raw:: html
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download>  aaps-ci-preparation.html</a>
 ```<!--crowdin:enable-->Please copy the URL and open it in your browser instead:
-=======
-1.
+```text
+https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
+```
+Or visit the latest release page:
+```text
+https://github.com/nightscout/aaps-ci-preparation/releases/latest
+```
+
+2.Backup copy hosted on this site:
+
+ - If the external link is also unavailable, you can use this backup file to download.
 ````
-<<<<<<< Updated upstream
-AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS): - If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
-- - If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
-=======
-
-La compilazione di AndroidAPS richiede chiavi private memorizzate in un Java KeyStore (JKS):
-
-- Se è la prima volta che compili AAPS (o non hai un JKS di Android Studio), segui [AAPS-CI Opzione 1 – Genera JKS](#aaps-ci-option1) per completare la configurazione.
-
->>>>>>> Stashed changes
+<<<<<<< Updated upstream AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS): - If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
+- - - - If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
 </br>
 
 ```{warning}

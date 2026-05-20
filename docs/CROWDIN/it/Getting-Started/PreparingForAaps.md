@@ -21,7 +21,7 @@ Molti dettagli legati all'esperienza nella documentazione di **AAPS** hanno più
 Gli [Obiettivi](../SettingUpAaps/CompletingTheObjectives.md) sono stati progettati per ottenere la migliore introduzione possibile ad **AAPS**, tenendo conto degli errori tipici e delle tendenze generali che gli sviluppatori di **AAPS** hanno osservato nei nuovi utenti. Possono verificarsi errori perché il principiante è inesperto e troppo desideroso di iniziare con **AAPS**, o ha trascurato punti chiave. Gli [Obiettivi](../SettingUpAaps/CompletingTheObjectives.md) mirano a ridurre al minimo questi problemi.
 
 ### Sicurezza medica
-```{admonition} Evita danni permanenti e dolorosi ai tuoi occhi e nervi
+```{admonition} Avoid permanent and painful damage to your eyes and nerves
 :class: danger
 Si consiglia cautela riguardo ai rapidi miglioramenti nel controllo della glicemia e alla riduzione dell'HbA1c 
 ```
@@ -34,11 +34,7 @@ Questo danno può includere **perdita della vista e neuropatia permanente (dolor
 
 Uno [studio](https://pubmed.ncbi.nlm.nih.gov/1464975/) retrospettivo su 76 pazienti ha riportato che il rischio di progressione della retinopatia aumentava di 1,6 volte, 2,4 volte e 3,8 volte se l'HbA1C scendeva rispettivamente dell'1%, 2% o 3% nell'arco di un periodo di 6 mesi. Hanno suggerito che la **"diminuzione del valore di HbA1c in qualsiasi periodo di 6 mesi dovrebbe essere limitata a meno del 2% per prevenire la progressione della retinopatia....Una diminuzione troppo rapida all'inizio del controllo glicemico potrebbe causare una grave o transitoria esacerbazione della progressione della retinopatia."**
 
-<<<<<<< Updated upstream
-N.B. N.B. N.B. N.B. If you use different HbA1c units (mmol/mol rather than %), click [here](https://www.diabetes.co.uk/hba1c-units-converter.html) for a HbA1c calculator tool.
-=======
-N.B. Se usi unità HbA1c diverse (mmol/mol anziché %), fai clic [qui](https://www.diabetes.co.uk/hba1c-units-converter.html) per uno strumento di conversione HbA1c.
->>>>>>> Stashed changes
+N.B. N.B. N.B. N.B. N.B. N.B. If you use different HbA1c units (mmol/mol rather than %), click [here](https://www.diabetes.co.uk/hba1c-units-converter.html) for a HbA1c calculator tool.
 
 In un'altra [valutazione](https://academic.oup.com/brain/article/138/1/43/337923) retrospettiva su 954 pazienti, i ricercatori hanno osservato che:
 
@@ -51,16 +47,16 @@ Un [commento](https://academic.oup.com/brain/article/138/1/2/340563) su questo l
 (PreparingForAaps-no-sglt-2-inhibitors)=
 ### No agli inibitori SGLT-2
 
-```{admonition} NESSUN inibitore SGLT-2
+```{admonition} NO SGLT-2 inhibitors
 :class: danger
-Gli inibitori SGLT-2, chiamati anche gliflozine, inibiscono il riassorbimento del glucosio nel rene. Le gliflozine abbassano incalcolabilmente i livelli di zucchero nel sangue, quindi NON DEVI assumerle mentre usi un sistema a circuito chiuso come AAPS! Vi sarebbe un rischio significativo di chetoacidosi e/o ipoglicemia! La combinazione di questo farmaco con un sistema che abbassa la basale per aumentare la glicemia è particolarmente pericolosa.
+Gli inibitori SGLT-2, chiamati anche gliflozine, inibiscono il riassorbimento del glucosio nel rene. Le gliflozine abbassano incalcolabilmente i livelli di zucchero nel sangue, quindi NON DEVI assumerle mentre usi un sistema a circuito chiuso come AAPS! Vi sarebbe un rischio significativo di chetoacidosi e/o ipoglicemia! La combinazione di questo farmaco con un sistema che abbassa la basale per aumentare la glicemia è particolarmente pericolosa. 
 
 In sintesi:
 - **Esempio 1: rischio di Ipo**
 >Durante il pranzo, usi **AAPS** per fare un bolo basato sul consumo di 45g di glucosio. Il problema è che, a insaputa di AAPS, gli inibitori fanno sì che il corpo elimini alcuni dei carboidrati, con il risultato che il tuo corpo ha troppa insulina rispetto ai Carboidrati assorbiti, causando ipoglicemia.
 
 - **Esempio 2: rischio di Chetoacidosi**
->Gli inibitori eliminano alcuni dei carboidrati in background causando una riduzione della tua glicemia. **AAPS** istruirà automaticamente il micro a ridurre l'assunzione di insulina, inclusa la basale. Nel tempo questo può far sì che la tua glicemia rimanga al di sotto del valore target al punto in cui il corpo non ha abbastanza insulina di fondo per assorbire i carboidrati con conseguente Chetoacidosi. Normalmente, la Chetoacidosi si sviluppa nei pazienti T1D perché il loro micro si guasta, il che attiverebbe avvisi sul telefono e sarebbe evidente a causa di un valore di glicemia elevato. Tuttavia, il pericolo con le Gliflozine è che non ci sarebbero avvisi AAPS poiché il micro rimane operativo e la glicemia rimane potenzialmente entro il target.
+>Gli inibitori eliminano alcuni dei carboidrati in background causando una riduzione della tua glicemia. **AAPS** istruirà automaticamente il micro a ridurre l'assunzione di insulina, inclusa la basale. Nel tempo questo può far sì che la tua glicemia rimanga al di sotto del valore target al punto in cui il corpo non ha abbastanza insulina di fondo per assorbire i carboidrati con conseguente Chetoacidosi. Normalmente, la Chetoacidosi si sviluppa nei pazienti T1D perché il loro micro si guasta, il che attiverebbe avvisi sul telefono e sarebbe evidente a causa di un valore di glicemia elevato. Tuttavia, il pericolo con le Gliflozine è che non ci sarebbero avvisi AAPS poiché il micro rimane operativo e la glicemia rimane potenzialmente entro il target.  
 
 I nomi commerciali comuni degli inibitori SGLT-2 includono: Invokana, Farxiga, Jardiance, Glyxambi, Synjardy, Steglatro, e Xigduo XR, e altri.
 ```
@@ -106,7 +102,7 @@ Un "keystore" (file .jks) è un file crittografato con password univoco per la t
 
 Questo garantirà che tu possa usare quello stesso file keystore ogni volta che viene creata una versione aggiornata di **AAPS**. In media, saranno necessari 2 aggiornamenti di **AAPS** all'anno.
 
-Inoltre, **AAPS** offre la possibilità di [esportare tutte le impostazioni di configurazione](../Maintenance/ExportImportSettings.md). Questo garantisce che tu possa recuperare in modo sicuro il tuo sistema cambiando telefono, aggiornando/reinstallando l'applicazione con minime interruzioni.
+Inoltre, **AAPS** offre la possibilità di [esportare tutte le impostazioni di configurazione](../Maintenance/ExportImportSettings.md). Questo garantisce che tu possa recuperare in modo sicuro il tuo sistema cambiando telefono, aggiornando/reinstallando l'applicazione con minime interruzioni. 
 
 #### Risoluzione dei problemi
 
@@ -115,6 +111,7 @@ Non esitare a contattare la comunità AAPS se c'è qualcosa di cui ti senti ince
 ##### [Chiedi nel gruppo Facebook AAPS](https://www.facebook.com/groups/AndroidAPSUsers/)
 
 ##### [Chiedi nel canale Discord AAPS](https://discord.gg/4fQUWHZ4Mw)
+
 
 
 
@@ -142,7 +139,7 @@ Oltre ai tre componenti hardware di base (telefono, micro, sensore di glucosio),
 
 ### 2) Un server di rendicontazione: NightScout (Tidepool*)
 
-Per sfruttare appieno **AAPS**, devi configurare un server Nightscout. Puoi [farlo tu stesso](https://nightscout.github.io/nightscout/new_user/#free-diy) oppure pagare una piccola tariffa per un [servizio Nightscout gestito](https://nightscout.github.io/#nightscout-as-a-service) che venga configurato per te. Nightscout viene usato per raccogliere i dati da **AAPS** nel tempo e può generare rapporti dettagliati che correlano i modelli CGM e di insulina. È anche possibile per i caregiver usare Nightscout per comunicare da remoto con l'applicazione **AAPS**, per supervisionare la gestione diabetologica del loro bambino. Tali funzionalità di comunicazione remota includono il monitoraggio in tempo reale dei livelli di glucosio e di insulina, il bolo remoto di insulina (tramite SMS) e gli annunci dei pasti. Tentare di analizzare le prestazioni del tuo diabete guardando i dati CGM separatamente dai dati del micro è come guidare una macchina in cui il guidatore è cieco e il passeggero descrive la scena. Tidepool è anche disponibile come alternativa a Nightscout, per le versioni AAPS 3.2 e successive.
+Per sfruttare appieno **AAPS**, devi configurare un server Nightscout. Puoi [farlo tu stesso](https://nightscout.github.io/nightscout/new_user/#free-diy) oppure pagare una piccola tariffa per un [servizio Nightscout gestito](https://nightscout.github.io/#nightscout-as-a-service) che venga configurato per te. Nightscout viene usato per raccogliere i dati da **AAPS** nel tempo e può generare rapporti dettagliati che correlano i modelli CGM e di insulina. È anche possibile per i caregiver usare Nightscout per comunicare da remoto con l'applicazione **AAPS**, per supervisionare la gestione diabetologica del loro bambino. Tali funzionalità di comunicazione remota includono il monitoraggio in tempo reale dei livelli di glucosio e di insulina, il bolo remoto di insulina (tramite SMS) e gli annunci dei pasti. Tentare di analizzare le prestazioni del tuo diabete guardando i dati CGM separatamente dai dati del micro è come guidare una macchina in cui il guidatore è cieco e il passeggero descrive la scena.  Tidepool è anche disponibile come alternativa a Nightscout, per le versioni AAPS 3.2 e successive.
 
 ### 3) App per il sensore CGM
 
@@ -163,27 +160,27 @@ Alcuni degli obiettivi richiedono un determinato numero di giorni affinché tu c
 
 Ecco una tempistica approssimativa:
 
-| Attività                                                                      |          Tempo approssimativo          |
-| ----------------------------------------------------------------------------- |:--------------------------------------:|
-| Lettura iniziale della documentazione                                         |               1-2 giorni              |
-| Installazione/configurazione del PC per consentire la compilazione            |               2-8 ore                 |
-| Configurazione di un server di rendicontazione                                |               1 ora                   |
-| Installazione di un'app CGM (xDrip+, BYODA, ...)                             |               1 ora                   |
-| Configurazione iniziale CGM → xDrip+ → AAPS                                  |               1 ora                   |
-| Configurazione iniziale AAPS → micro                                          |               1 ora                   |
-| Configurazione AAPS → Nightscout/Tidepool (solo rendicontazione)              |               1 ora                   |
-| Opzionale: Configurazione NightScout ↔ **AAPS** e NSFollowers                |               1 ora                   |
-| Obiettivo 1: Impostazione della visualizzazione e del monitoraggio            |               1 ora                   |
-| Obiettivo 2: Imparare a controllare AAPS                                      |               2 ore                   |
-| Obiettivo 3: Dimostrare le proprie conoscenze                                 |           Fino a 14 giorni            |
-| Obiettivo 4: Iniziare con un loop aperto                                      |           Minimo 7 giorni             |
-| Obiettivo 5: Comprendere il loop aperto                                       |               7 giorni                |
-| Obiettivo 6: Iniziare a chiudere il loop (Low Glucose Suspend)                |     Minimo 5, fino a 14 giorni        |
-| Obiettivo 7: Messa a punto del loop chiuso                                    |   Minimo 1 giorno, fino a 7 giorni    |
-| Obiettivo 8: Regolare le basali e i rapporti, abilitare Autosens              |   Minimo 7 giorni, fino a 14 giorni   |
-| Obiettivo 9: Abilitazione del Super Micro Bolo (SMB)                          |           Minimo 28 giorni            |
-| Obiettivo 10: Automazione                                                     |           Minimo 28 giorni            |
-| Obiettivo 11: ISF Dinamico                                                    |           Minimo 28 giorni            |
+| Attività                                                           |       Tempo approssimativo        |
+| ------------------------------------------------------------------ |:---------------------------------:|
+| Lettura iniziale della documentazione                              |            1-2 giorni             |
+| Installazione/configurazione del PC per consentire la compilazione |              2-8 ore              |
+| Configurazione di un server di rendicontazione                     |               1 ora               |
+| Installazione di un'app CGM (xDrip+, BYODA, ...)                   |               1 ora               |
+| Configurazione iniziale CGM → xDrip+ → AAPS                        |               1 ora               |
+| Configurazione iniziale AAPS → micro                               |               1 ora               |
+| Configurazione AAPS → Nightscout/Tidepool (solo rendicontazione)   |               1 ora               |
+| Opzionale: Configurazione NightScout ↔ **AAPS** e NSFollowers      |               1 ora               |
+| Obiettivo 1: Impostazione della visualizzazione e del monitoraggio |               1 ora               |
+| Obiettivo 2: Imparare a controllare AAPS                           |               2 ore               |
+| Obiettivo 3: Dimostrare le proprie conoscenze                      |         Fino a 14 giorni          |
+| Obiettivo 4: Iniziare con un loop aperto                           |          Minimo 7 giorni          |
+| Obiettivo 5: Comprendere il loop aperto                            |             7 giorni              |
+| Obiettivo 6: Iniziare a chiudere il loop (Low Glucose Suspend)     |    Minimo 5, fino a 14 giorni     |
+| Obiettivo 7: Messa a punto del loop chiuso                         | Minimo 1 giorno, fino a 7 giorni  |
+| Obiettivo 8: Regolare le basali e i rapporti, abilitare Autosens   | Minimo 7 giorni, fino a 14 giorni |
+| Obiettivo 9: Abilitazione del Super Micro Bolo (SMB)               |         Minimo 28 giorni          |
+| Obiettivo 10: Automazione                                          |         Minimo 28 giorni          |
+| Obiettivo 11: ISF Dinamico                                         |         Minimo 28 giorni          |
 
 Una volta che sei completamente operativo su **AAPS**, dovrai ancora regolare regolarmente le tue impostazioni per migliorare la gestione complessiva del tuo diabete.
 
@@ -213,27 +210,24 @@ Questa documentazione mira a ridurre al minimo assoluto le competenze tecniche r
 
 #### AAPS e versioni Android
 
-La versione corrente di **AAPS** (3.4) richiede uno smartphone Android con Google **Android 12.0 o superiore**. Se stai pensando di acquistare un nuovo telefono, (a partire da gennaio 2026), è preferibile Android 16, Android 15 non è consigliato.<br/>
-Gli utenti sono fortemente incoraggiati a mantenere aggiornata la propria versione di **AAPS** per motivi di sicurezza. Tuttavia, per gli utenti che non possono usare un dispositivo con Android 12.0 o più recente, le versioni precedenti di **AAPS** compatibili con le versioni Android più vecchie rimangono disponibili, vedi: [Note di rilascio](#maintenance-android-version-aaps-version).
+La versione corrente di **AAPS** (3.4) richiede uno smartphone Android con Google **Android 12.0 o superiore**. Se stai pensando di acquistare un nuovo telefono, (a partire da gennaio 2026), è preferibile Android 16, Android 15 non è consigliato.<br/> Gli utenti sono fortemente incoraggiati a mantenere aggiornata la propria versione di **AAPS** per motivi di sicurezza. Tuttavia, per gli utenti che non possono usare un dispositivo con Android 12.0 o più recente, le versioni precedenti di **AAPS** compatibili con le versioni Android più vecchie rimangono disponibili, vedi: [Note di rilascio](#maintenance-android-version-aaps-version).
 
 #### Scelta del modello di smartphone
 Il modello esatto che acquisti dipende dalle funzioni desiderate. Puoi trovare nella [pagina Telefoni](../Getting-Started/Phones.md) raccomandazioni e feedback degli utenti sulle configurazioni funzionanti.
 
 Gli utenti sono incoraggiati a mantenere aggiornata la versione Android del telefono, inclusi i parametri di sicurezza. Tuttavia, se sei nuovo con **AAPS** o non sei un esperto tecnico, potresti voler ritardare l'aggiornamento del telefono fino a quando altri l'hanno fatto e confermato che è sicuro farlo, sui nostri vari forum.
 
-```{admonition} Ritardare gli aggiornamenti dei telefoni Samsung
+```{admonition} delaying Samsung phones updates
 :class: warning
 <<<<<<< Updated upstream
 Samsung has an unfortunate track record of forcing updates of their phones which cause bluetooth connectivity issues. Open developer options and scroll to find auto system update and turn it off To disable these forced updates you need to switch the phone to "developer mode" by:
+ go to settings and about then software information, then tap build number until it confirms you have unlocked developer mode. Open developer options and scroll to find auto system update and turn it off To disable these forced updates you need to switch the phone to "developer mode" by:
  go to settings and about then software information, then tap build number until it confirms you have unlocked developer mode. To disable these forced updates you need to switch the phone to "developer mode" by:
- go to settings and about then software information, then tap build number until it confirms you have unlocked developer mode. Got back to main settings menu and you should see a new developer options menu item.
-=======
-Samsung ha uno spiacevole precedente di forzare gli aggiornamenti dei loro telefoni, causando problemi di connettività Bluetooth. Per disabilitare questi aggiornamenti forzati è necessario mettere il telefono in "modalità sviluppatore" seguendo questi passaggi:
- vai in impostazioni, poi informazioni e poi informazioni sul software, poi tocca il numero di build finché non conferma che hai sbloccato la modalità sviluppatore. Torna al menu principale delle impostazioni e dovresti vedere una nuova voce del menu opzioni sviluppatore. Apri le opzioni sviluppatore e scorri per trovare l'aggiornamento automatico del sistema e disattivalo
->>>>>>> Stashed changes
+ go to settings and about then software information, then tap build number until it confirms you have unlocked developer mode.
 ```
 
-```{admonition} Potenziale problema con Google Play Protect
+```{admonition} Google Play Protect potential Issue
 :class: warning
 Ci sono state diverse segnalazioni di **AAPS** che viene chiuso arbitrariamente da Google Play Protect ogni mattina. Se questo accade dovrai andare nelle opzioni di Google Play e disabilitare "Google Play Protect". Non tutti i modelli di telefono o tutte le versioni Android sono interessati.
 ```
+

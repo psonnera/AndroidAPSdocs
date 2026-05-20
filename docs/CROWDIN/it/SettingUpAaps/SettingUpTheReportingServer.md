@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-# Impostazione del server di reportistica
-=======
 # Configurare il server di reportistica
->>>>>>> Stashed changes
 
 Attualmente sono disponibili due server di reportistica per l'uso con **AAPS**:
 
@@ -24,11 +20,7 @@ Ulteriori informazioni sono disponibili sul [sito web del progetto Nightscout](h
 
 ### Opzione 1 - Configura il tuo server Nightscout da solo
 
-<<<<<<< Updated upstream
 La creazione del server di reportistica Nightscout può richiedere una o più applicazioni web-based che richiedono manutenzione. In order to have a completely free service, you may need to migrate your Nightscout site and data, if and when providers remove the free tier.
-=======
-La creazione del tuo server di reportistica Nightscout può richiedere una o più applicazioni web che richiedono manutenzione. Per avere un servizio completamente gratuito, potrebbe essere necessario migrare il tuo sito Nightscout e i dati, se e quando i provider rimuovono il piano gratuito.
->>>>>>> Stashed changes
 
 Una descrizione di come puoi configurare Nightscout con i vantaggi e gli svantaggi delle varie opzioni operative, inclusa una stima dei costi, può essere trovata [qui](https://nightscout.github.io/nightscout/new_user/#free-diy).
 
@@ -50,7 +42,7 @@ Una volta che la tua istanza Nightscout è attiva e funzionante, consulta la [pa
 
 Tidepool è disponibile in **AAPS** solo dalla versione 3.2, rilasciata alla fine del 2023.
 
-```{admonition} Tidepool con **AAPS** è solo per la reportistica
+```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger  
 Poiché c'è un ritardo di tre ore tra l'acquisizione dei dati e la loro reportistica quando si usa **AAPS**, Tidepool non è adatto per condividere informazioni in tempo reale con i caregiver.  
 D'altra parte, Tidepool può essere un'ottima soluzione per condividere report con l'endocrinologo del paziente se Nightscout non è una soluzione accettata.  
@@ -60,11 +52,11 @@ Tidepool è un progetto [open source](https://github.com/tidepool-org). Offre la
 
 Ulteriori informazioni sulla configurazione di Tidepool con AAPS [qui](../SettingUpAaps/Tidepool.md).
 
-```{admonition} **AAPS** ha integrato l'uploader per Tidepool
+```{admonition} **AAPS** has a the uploader for Tidepool integrated
 :class: note
 **Non** è necessario usare l'app uploader per Tidepool: **AAPS** caricherà glicemia, trattamenti e basale per te. È sufficiente avere un account personale con Tidepool. Non caricare i tuoi dati con lo strumento uploader Tidepool separato poiché questo porterà a valori duplicati.  
 ```
 
 ## Passo successivo
 
-Una volta configurato il server di reportistica, puoi ora configurare un [account Google dedicato per l'uso con AAPS](../UsefulLinks/DedicatedGoogleAccountForAaps.md), oppure passare direttamente alla [costruzione dell'app AAPS](../SettingUpAaps/BuildingAaps.md).
+Una volta configurato il server di reportistica, puoi ora configurare un [account Google dedicato per l'uso con AAPS](../UsefulLinks/DedicatedGoogleAccountForAaps.md), oppure passare direttamente alla [costruzione dell'app AAPS](../SettingUpAaps/BuildingAaps.md). 

@@ -37,7 +37,7 @@ Nel caso in cui il tuo telefono principale con **AAPS** venga perso o danneggiat
 
 ### File delle impostazioni di AAPS (denominato anche 'Preferenze')
 
-```{admonition} Dove vengono archiviate le preferenze sul mio telefono?
+```{admonition} Where are preferences stored on my phone?
 :class: tip
 Troverai le tue impostazioni nella **Directory AAPS** che hai selezionato durante la [configurazione di AAPS](#SetupWizard-StoragePermission).</br>
 Puoi anche modificare la **Directory AAPS** in Preferenze > [Impostazioni di manutenzione](#preferences-maintenance-settings).
@@ -70,7 +70,7 @@ L'esportazione delle impostazioni di AAPS su file ti permette di ripristinare la
 
 ## Esportazione delle impostazioni
 
-```{admonition} Dove vengono archiviate le preferenze sul mio telefono?
+```{admonition} Where are preferences stored on my phone?
 :class: tip
 Troverai le tue impostazioni nella **Directory AAPS** che hai selezionato durante la [configurazione di AAPS](#SetupWizard-StoragePermission).</br>
 Puoi anche modificare la **Directory AAPS** in Preferenze > [Impostazioni di manutenzione](#preferences-maintenance-settings).
@@ -99,7 +99,7 @@ _**Nota:** All'importazione delle impostazioni l'utente deve sempre inserire la 
 (ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps)=
 ## Ripristino dai backup su un nuovo telefono o installazione ex-novo di AAPS
 
-```{admonition} Dove vengono archiviate le preferenze sul mio telefono?
+```{admonition} Where are preferences stored on my phone?
 :class: tip
 Troverai le tue impostazioni nella **Directory AAPS** che hai selezionato durante la [configurazione di AAPS](#SetupWizard-StoragePermission).</br>
 Puoi anche modificare la **Directory AAPS** in Preferenze > [Impostazioni di manutenzione](#preferences-maintenance-settings).
@@ -113,7 +113,7 @@ Se stai aggiornando **AAPS** dopo aver perso o sostituito il tuo keystore origin
 
 Se necessario, [configura il tuo sensore CGM](../Getting-Started/CompatiblesCgms.md) prima dei passaggi elencati di seguito
 
-```{admonition} Utenti di microinfusori tubeless (Omnipod e Medtrum)
+```{admonition} Tubeless pumps (Omnipod and Medtrum) users
 :class: warning
 L'importazione di un file **Preferenze** disattiverà il tuo pod corrente se quelle **Preferenze** sono state esportate durante una sessione di pod attivo diversa. 
 ```

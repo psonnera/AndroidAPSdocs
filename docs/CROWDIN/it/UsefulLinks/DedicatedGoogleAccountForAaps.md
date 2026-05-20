@@ -4,13 +4,13 @@ Alcuni utenti di **AAPS** preferiscono usare il proprio account email principale
 
 Se non si vuole configurare un account Gmail dedicato ad **AAPS**, si può passare direttamente alla sezione successiva, [compilazione di AAPS](../SettingUpAaps/BuildingAaps.md).
 
-```{admonition} Vantaggi di un account Google dedicato per AAPS
+```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
 - Lo spazio Google Drive dedicato significa che non si rischia di riempire il limite del Google Drive personale con le **Esportazioni Preferenze**.
 - Ogni versione di **AAPS** (e delle app di supporto come xDrip+, BYODA, ecc.) sarà archiviata in un unico posto indipendente dall'hardware del computer. Se il PC o il telefono vengono rubati/persi/rotti, si avrà ancora accesso a tutto.
 - Armonizzando la configurazione, il supporto online sarà più semplice tra utenti con strutture di cartelle simili.
-- A seconda della configurazione (vedere di seguito), si avrà un'identità separata come alias per comunicare all'interno della comunità che può proteggere la privacy.
+- A seconda della configurazione (vedere di seguito), si avrà un'identità separata come alias per comunicare all'interno della comunità che può proteggere la privacy. 
 - I bambini con T1D possono preservare il proprio account email "quotidiano" da minorenni, utilizzando **AAPS** e le funzionalità associate che richiedono un account adulto.
 - Gmail consente di registrare fino a 4 account con lo stesso numero di telefono.
 ```
@@ -26,7 +26,7 @@ Requisiti:
 * Si dispone di un PC Windows (Windows 10 o versione successiva) e di uno smartphone Android (Android 9 o versione successiva) che ospiterà l'app **AAPS**. Entrambi hanno tutti gli ultimi aggiornamenti di sicurezza, accesso a Internet e privilegi di amministratore, poiché alcuni passaggi richiedono il download e l'installazione di programmi.
 * Lo smartphone Android è già configurato con il proprio indirizzo email personale "quotidiano", ad esempio un account Gmail.
 
-```{admonition} Cose da considerare quando si configura il nuovo account
+```{admonition} Things to consider when setting up your new account
 :class: dropdown
 - Si potrebbe usare un nome diverso dal proprio, che abbia rilevanza per l'account (come t1dsuperstar) per ragioni di privacy. È quindi possibile usarlo nei forum pubblici di **AAPS** mantenendo privata la propria identità. Poiché Google richiede un'email e un numero di telefono di recupero, è ancora tracciabile.
 - Il nuovo account **AAPS** utilizzerà lo stesso numero di telefono per la verifica del proprio account "_quotidiano_". Utilizzerà l'indirizzo email "quotidiano" per la verifica;
@@ -37,32 +37,30 @@ Requisiti:
 ```
 
 
-```{admonition}  Video guidato!
+```{admonition}  Video Walkthrough! 
 :class: Note
 Clicca [qui](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) per una guida video su come configurare un account Google dedicato.
 ```
 
  Questi sono i passaggi descritti nel video:
 
-In questo esempio:
+In questo esempio: 
 - Il tuo account Google "_Quotidiano_" esistente è <donald.muck42@gmail.com> ; ![](../images/Building-the-App/building_0002.png)
 - Il tuo nuovo account Gmail "_AAPS_" sarà: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 
-### Vai su <https://account.google.com>
+### Vai su <https://account.google.com> 
 
-Se sei già connesso a Google, si verrà indirizzati alla pagina "My Account" "_Quotidiana_".
-(1) Fai clic in alto a destra della pagina sulla foto del profilo (in questo caso, un semplice ![](../images/Building-the-App/building_0002.png)
-(2) seleziona "_aggiungi un altro account_".
+ Se sei già connesso a Google, si verrà indirizzati alla pagina "My Account" "_Quotidiana_". (1) Fai clic in alto a destra della pagina sulla foto del profilo (in questo caso, un semplice ![](../images/Building-the-App/building_0002.png) (2) seleziona "_aggiungi un altro account_".
 
 ![](../images/Building-the-App/building_0005.png)
 
 
-### Inserisci i dettagli del NUOVO account dedicato:
+### Inserisci i dettagli del NUOVO account dedicato: 
 
-- Inserisci il nuovo account:
+- Inserisci il nuovo account: 
 - Crea Account
-- per uso personale.
+- per uso personale. 
 
 
 ### Inserisci il tuo personaggio:

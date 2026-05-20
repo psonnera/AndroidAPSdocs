@@ -6,7 +6,7 @@ Tuttavia, non è obbligatorio avere tutto completamente configurato alla prima e
 
 Durante, e subito dopo l'uso della **Procedura guidata di configurazione**, potresti non notare cambiamenti osservabili significativi in **AAPS**. Per abilitare il tuo loop **AAPS**, devi seguire gli **Obiettivi** per abilitare funzionalità dopo funzionalità. Inizierai l'**Obiettivo 1** alla fine della Procedura guidata di configurazione. Sei tu il padrone di **AAPS**, non il contrario.
 
-```{admonition} Anteprima degli Obiettivi
+```{admonition} Preview Objectives
 :class: note
 Se sei curioso di conoscere la struttura degli obiettivi, leggi [Completare gli obiettivi](../SettingUpAaps/CompletingTheObjectives.md) ma poi torna qui per eseguire prima la Procedura guidata di configurazione.
 
@@ -16,7 +16,7 @@ Dall'esperienza precedente, siamo consapevoli che i nuovi utenti spesso si metto
 
 Quindi, prenditi il tuo tempo per configurare il tuo loop; i vantaggi di un loop **AAPS** ben funzionante sono enormi.
 
-```{admonition} Chiedi aiuto
+```{admonition} Ask for Help
 :class: note
 Se c'è un errore nella documentazione o hai un'idea migliore su come spiegare qualcosa, puoi chiedere aiuto alla community come spiegato in [Connettiti con altri utenti](../GettingHelp/WhereCanIGetHelp.md).
 ```
@@ -46,7 +46,7 @@ In questa schermata, cerchiamo di fornire alcune informazioni aggiuntive di sfon
 
 ![Permissions](../images/setup-wizard/Wizard03.png)
 
-### Notifiche
+### Notifications
 
 Android richiede un'autorizzazione speciale per le app se vogliono inviarti notifiche.
 
@@ -121,7 +121,7 @@ Segui questi passaggi su Android 16; le altre versioni varieranno leggermente da
 
    ![bluetooth_settings_apps_12](../images/setup-wizard/app_bluetooth_unrestricted_12-14.png)    ![bluetooth_settings_apps_15](../images/setup-wizard/app_bluetooth_allow_background.png)
 
-6. Su Android 16 seleziona ``Senza restrizioni``
+6. Su Android 16 seleziona `Senza restrizioni`
 
    ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background_unrestrict.png)
 
@@ -160,7 +160,7 @@ Clicca il pulsante "AVANTI":
 
 ![Finish Permissions](../images/setup-wizard/Wizard08.png)
 
-### Posizione
+### Location
 
 Android collega l'uso della comunicazione Bluetooth alla capacità di usare i servizi di localizzazione. Forse l'hai visto anche con altre app. È comune dover richiedere il permesso di localizzazione se vuoi accedere al Bluetooth.
 
@@ -226,7 +226,7 @@ Seleziona se i tuoi valori di glucosio sono in mg/dL o mmol/L, poi clicca il pul
 
 ## Impostazioni di visualizzazione
 
-Qui selezioni l'intervallo per la visualizzazione del glucosio del sensore, che verrà mostrato come "nell'intervallo" tra i valori che hai impostato. Puoi lasciarlo ai valori predefiniti per ora e modificarlo in seguito.
+ Qui selezioni l'intervallo per la visualizzazione del glucosio del sensore, che verrà mostrato come "nell'intervallo" tra i valori che hai impostato. Puoi lasciarlo ai valori predefiniti per ora e modificarlo in seguito.
 
 I valori scelti riguardano solo la presentazione grafica del diagramma, e nient'altro.
 
@@ -251,7 +251,7 @@ Se selezioni un elemento qui nella casella di spunta a sinistra, a destra puoi p
 
 In questo esempio selezioniamo Nightscout come server di reportistica e lo configureremo.
 
-```{admonition}  Versione **NSClient**
+```{admonition}  **NSClient** version
 :class: Note
 
 Clicca [qui](#version3200) per le note di rilascio di **AAPS** 3.2.0.0 che spiegano le differenze tra l'opzione superiore **NSClient** (questa è "v1", anche se non è esplicitamente etichettata) e la seconda opzione, **NSClient v3**.
@@ -351,7 +351,7 @@ Seleziona il tipo di insulina usata nel microinfusore.
 
 I nomi dell'insulina dovrebbero essere autoesplicativi.
 
-```{admonition} Non usare il "Free-Peak Oref" a meno che tu non sappia cosa stai facendo
+```{admonition} Don't use the "Free-Peak Oref" unless you know what you are doing
 :class: danger
 Per gli utenti avanzati o per studi medici esiste la possibilità di definire con "Free-Peak Oref" un profilo personalizzato di come agisce l'insulina. Non utilizzarlo a meno che tu non sia un esperto; di solito i valori predefiniti funzionano bene per ogni insulina di marca.
 ```
@@ -393,13 +393,13 @@ Ora stiamo entrando in una parte molto importante della Procedura guidata di con
 
 Leggi la documentazione sui [profili](../SettingUpAaps/YourAapsProfile.md) prima di provare a inserire i dettagli del tuo profilo nella schermata seguente.
 
-```{admonition} Profilo funzionante richiesto - nessuna eccezione!
+```{admonition} Working profile required - no exceptions here !
 :class: danger
 Un profilo accurato è necessario per controllare l'azione sicura di **AAPS**.
 
 È necessario che tu abbia determinato e discusso il tuo profilo con il tuo medico, e che sia stato dimostrato funzionante da test di successo del tasso basale, ISF e IC!
 
-Se un robot ha un input errato, fallirà - costantemente. **AAPS** può funzionare solo con le informazioni che gli vengono fornite. Se il tuo profilo è troppo forte, rischi l'ipoglicemia; se è troppo debole, rischi l'iperglicemia.
+Se un robot ha un input errato, fallirà - costantemente. **AAPS** può funzionare solo con le informazioni che gli vengono fornite. Se il tuo profilo è troppo forte, rischi l'ipoglicemia; se è troppo debole, rischi l'iperglicemia. 
 ```
 
 Premi "AVANTI" per andare alla schermata successiva. Inserisci un "nome profilo":
@@ -409,7 +409,7 @@ Premi "AVANTI" per andare alla schermata successiva. Inserisci un "nome profilo"
 
 Se necessario, puoi avere diversi profili a lungo termine. Ne creiamo solo uno qui.
 
-```{admonition} Profilo solo per il tutorial - non per il tuo uso
+```{admonition} Profile only for tutorial - not for your usage
 :class: information
 Il profilo di esempio qui serve solo per mostrare come inserire i dati.
 
@@ -453,7 +453,7 @@ Salva il profilo cliccando su "SALVA":
 
 Dopo il salvataggio, appare un nuovo pulsante "Attiva profilo".
 
-```{admonition} Diversi profili definiti ma solo uno attivo
+```{admonition} Several defined but only one active profile
 :class: information
 Puoi avere diversi profili definiti, ma solo un profilo attivato in esecuzione in qualsiasi momento.
 ```
@@ -465,9 +465,10 @@ Premi "Attiva profilo":
 
 
 
+
 Il dialogo del cambio profilo appare. In questo caso lascialo come preimpostato.
 
-```{admonition} Diversi profili definiti ma solo uno attivo
+```{admonition} Several defined but only one active profile
 :class: information
 Imparerai in seguito come usare questo dialogo generale per gestire situazioni come malattia o sport, in cui devi cambiare il tuo profilo in modo appropriato alle circostanze.
 ```
@@ -520,15 +521,11 @@ In questo esempio selezioniamo "Microinfusore virtuale".
 
 ## Algoritmo APS
 
-<<<<<<< Updated upstream
 Use the OpenAPS SMB algorithm as your APS algorithm. OpenAPS SMB is newer and in general better compared to the OpenAPS AMA anyway. Despite the name the SMB feature of the algorithm is disabled until you are familiar with AAPS and already worked through the first objectives.
-=======
-Usa l'algoritmo OpenAPS SMB come tuo algoritmo APS. Nonostante il nome, la funzionalità SMB dell'algoritmo è disabilitata finché non hai familiarità con AAPS e hai già lavorato attraverso i primi obiettivi. OpenAPS SMB è più recente e in generale migliore rispetto a OpenAPS AMA comunque.
->>>>>>> Stashed changes
 
 Il motivo per cui SMB è disabilitato all'inizio è che la funzionalità SMB consente una reazione più rapida all'aumento della glicemia attraverso il Super Micro Bolus invece di aumentare la percentuale del tasso basale. Poiché all'inizio il tuo profilo non è generalmente così buono come dopo un po' di esperienza, la funzionalità è disabilitata all'inizio.
 
-```{admonition} Usa il vecchio algoritmo **OpenAPS AMA** solo se sai cosa stai facendo
+```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
 :class: information
 OpenAPS AMA è l'algoritmo più basilare che non supporta i micro bolus per correggere i valori alti. Potrebbero esserci circostanze in cui è meglio usare questo algoritmo ma non è la raccomandazione.
 ```

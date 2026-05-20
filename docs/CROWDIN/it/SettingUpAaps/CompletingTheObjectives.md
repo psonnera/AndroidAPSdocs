@@ -14,7 +14,7 @@ Oltre a progredire attraverso gli **Obiettivi**, se necessario, puoi anche rimuo
 
 ## Fai il backup delle tue impostazioni
 
-```{admonition} Nota
+```{admonition} Note
 :class: note
 
 Si raccomanda di esportare le impostazioni di **AAPS** dopo aver completato ogni **Obiettivo**!
@@ -44,9 +44,7 @@ Nota - *Potrebbe essere necessario attendere la prossima lettura del sensore di 
 (objectives-objective2)=
 ## Obiettivo 2: Impara a controllare AAPS
 
-L'**Obiettivo 2** richiede che vengano eseguite diverse 'attività' come mostrato nello screenshot qui sotto.
-Clicca sul testo arancione "Non ancora completato" per accedere alle cose da fare.
-Verranno forniti link per guidarti, nel caso in cui non hai ancora familiarità con un'azione specifica.
+L'**Obiettivo 2** richiede che vengano eseguite diverse 'attività' come mostrato nello screenshot qui sotto. Clicca sul testo arancione "Non ancora completato" per accedere alle cose da fare. Verranno forniti link per guidarti, nel caso in cui non hai ancora familiarità con un'azione specifica.
 
 ![Screenshot objective 2](../images/Objective2_V2_5.png)
 
@@ -84,7 +82,7 @@ Per procedere con l'**Obiettivo 3**, clicca sul testo arancione "**Non ancora co
 
 Per ogni domanda, potrebbe esserci più di una risposta corretta! Se viene selezionata una risposta errata, la domanda verrà bloccata per 1 ora prima di poter tornare a risponderla di nuovo. Tieni presente che l'ordine delle risposte potrebbe essere cambiato quando provi di nuovo a rispondere; questo per assicurarti di leggerle attentamente e di capire davvero la validità (o meno) di ciascuna risposta.
 
-```{admonition}  __Cosa succede se vengono aggiunte nuove domande a un Obiettivo quando aggiorno a una versione più recente di AAPS?__
+```{admonition}  __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
 :class: Note
 Di tanto in tanto vengono aggiunte nuove funzionalità ad **AAPS** che potrebbero richiedere l'aggiunta di una nuova domanda agli **Obiettivi**, in particolare all'**Obiettivo 3**. Di conseguenza, qualsiasi nuova domanda aggiunta all'**Obiettivo 3** sarà contrassegnata come "incompleta" perché **AAPS** richiederà di eseguire questa azione. Non preoccuparti, poiché ogni **Obiettivo** è indipendente, **non perderai la funzionalità esistente di AAPS**, a condizione che gli altri **Obiettivi** rimangano completati.
 ```
@@ -100,12 +98,11 @@ Tempo minimo per completare questo obiettivo: **7 giorni**. Questo è un tempo d
 - Usa gli [**Obiettivi Temporanei**](../DailyLifeWithAaps/TempTargets.md) quando necessario. Dopo aver trattato un'ipoglicemia, usa l'"obiettivo temporaneo per ipo" predefinito per evitare che il sistema corregga eccessivamente il rimbalzo.
 - Se sei ancora in [Modalità Semplice](#preferences-simple-mode) a questo punto, ora è probabilmente un buon momento per disattivarla.
 
-Per ridurre il numero di modifiche del tasso basale proposte mentre sei in Loop Aperto, puoi ancora usare i suggerimenti descritti nell'[**Obiettivo 3**](#objective-3-prove-your-knowledge).
-Inoltre, puoi modificare la percentuale minima per le modifiche del tasso basale raccomandate. Più alto è il valore, meno notifiche di modifica riceverai.
+Per ridurre il numero di modifiche del tasso basale proposte mentre sei in Loop Aperto, puoi ancora usare i suggerimenti descritti nell'[**Obiettivo 3**](#objective-3-prove-your-knowledge). Inoltre, puoi modificare la percentuale minima per le modifiche del tasso basale raccomandate. Più alto è il valore, meno notifiche di modifica riceverai.
 
 ![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
 
-```{admonition} Nota
+```{admonition} Note
 :class: Note
 
 Non devi eseguire ogni singola raccomandazione del sistema!
@@ -117,14 +114,13 @@ Come parte dell'**Obiettivo 5** inizierai a capire come vengono derivate le racc
 
 Tempo stimato per completare questo obiettivo: **7 giorni**.
 
-Questo **Obiettivo** richiede di determinare e impostare il valore "U/h max a cui può essere impostata una basale temporanea" (max-basal) come descritto in [Funzionalità OpenAPS](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). Questo valore può essere impostato in [Preferenze > OpenAPS SMB](#Preferences-openaps-smb-settings).
-Se stai ancora usando un microinfusore virtuale, assicurati che questa impostazione di sicurezza sia impostata sia in **AAPS** che nel tuo microinfusore.
+Questo **Obiettivo** richiede di determinare e impostare il valore "U/h max a cui può essere impostata una basale temporanea" (max-basal) come descritto in [Funzionalità OpenAPS](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). Questo valore può essere impostato in [Preferenze > OpenAPS SMB](#Preferences-openaps-smb-settings). Se stai ancora usando un microinfusore virtuale, assicurati che questa impostazione di sicurezza sia impostata sia in **AAPS** che nel tuo microinfusore.
 
 Potresti voler impostare il tuo [target glicemia del **Profilo**](#profile-glucose-targets) più alto del solito fino a quando non ti senti a tuo agio con i calcoli e le impostazioni di **AAPS**. Potresti voler sperimentare aggiustando il tuo **target glicemia** nel tuo **Profilo** in un intervallo più stretto (diciamo 1 mmol/l [20 mg/dl] o meno di larghezza) e osservare il comportamento risultante.
 
 ![Stop sign](../images/sign_stop.png)
 
-```{admonition} Se hai usato un microinfusore virtuale, passa ora a un microinfusore reale!
+```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
 Se stai facendo loop aperto con un microinfusore virtuale **fermati qui**. Clicca su verifica alla fine di questo **Obiettivo** solo dopo aver cambiato all'uso di un microinfusore "reale" che eroga insulina.
@@ -137,7 +133,7 @@ Se stai facendo loop aperto con un microinfusore virtuale **fermati qui**. Clicc
 ## Obiettivo 6: Iniziare a chiudere il loop con la Sospensione per Glicemia Bassa
 
 ![Warning sign](../images/sign_warning.png)
-```{admonition}  Il loop chiuso non correggerà i valori di **glicemia** alti nell'**Obiettivo 6** poiché è limitato solo alla **Sospensione per Glicemia Bassa**!
+```{admonition}  Closed loop will not correct high **BG** values in **Objective 6** as it is limited to **Low Glucose Suspend** only!
 :class: Note
 Dovrai ancora correggere i valori di glicemia alti da solo (manualmente con correzioni tramite microinfusore o penna)!
 ```
@@ -173,11 +169,7 @@ Per completare l'**Obiettivo 7** devi chiudere il loop e aumentare il tuo [maxIO
 
 Tempo minimo per completare questo obiettivo: **1 giorno**. Questo è un tempo di attesa obbligatorio. Non è possibile procedere al prossimo **Obiettivo** fino a quando questo periodo di tempo non è scaduto.
 
-<<<<<<< Updated upstream
-- Stay in **Closed Loop** over a period of 1 day. Select **Closed Loop** by pressing and holding the [Loop icon](#AapsScreens-loop-status) in the top right corner of the **Overview** screen.
-=======
-- Seleziona **Loop Chiuso** premendo e tenendo premuta l'[icona Loop](#AapsScreens-loop-status) nell'angolo in alto a destra della schermata **Panoramica**. Rimani in **Loop Chiuso** per un periodo di 1 giorno.
->>>>>>> Stashed changes
+- - Stay in **Closed Loop** over a period of 1 day. - Stay in **Closed Loop** over a period of 1 day.
 
 - Aumenta lentamente il tuo 'IOB totale massimo che OpenAPS non può superare' (in OpenAPS chiamato 'max-iob') sopra 0, fino a quando non trovi le impostazioni che funzionano meglio per te.
 
@@ -200,7 +192,7 @@ Come parte di questo **obiettivo**, rivisiterai le prestazioni del tuo **Profilo
 
 Tempo minimo per completare questo obiettivo: **7 giorni**. Questo è un tempo di attesa obbligatorio. Non è possibile procedere al prossimo **Obiettivo** fino a quando questo periodo di tempo non è scaduto.
 
-Abilita [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) per un periodo di 7 giorni e osserva la [linea bianca del grafico **Panoramica**](#AapsScreens-section-g-additional-graphs) che mostra la tua sensibilità insulinica aumentare o diminuire a causa dell'esercizio fisico o degli ormoni ecc. Tieni d'occhio la scheda del report OpenAPS che mostra **AAPS** che regola la sensibilità, le basali e i target di conseguenza.
+Abilita [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) per un periodo di 7 giorni e osserva la [linea bianca del grafico **Panoramica**](#AapsScreens-section-g-additional-graphs) che mostra la tua sensibilità insulinica aumentare o diminuire a causa dell'esercizio fisico o degli ormoni ecc. Tieni d'occhio la scheda del report OpenAPS che mostra **AAPS** che regola la sensibilità, le basali e i target di conseguenza. Keep an eye on the OpenAPS report tab which shows **AAPS** adjusting the sensitivity, basals and targets accordingly.
 
 Questo è un buon momento per rivedere le impostazioni per il [Rilevamento Sensibilità](#Config-Builder-sensitivity-detection). Puoi visualizzare la tua sensibilità nella schermata principale in un [grafico aggiuntivo](#AapsScreens-section-g-additional-graphs).
 
@@ -214,8 +206,7 @@ Nell'**Obiettivo 9**, affronterai e userai il **"Super Micro Bolus (SMB)"** come
 Tempo minimo per completare questo obiettivo: **28 giorni**. Questo è un tempo di attesa obbligatorio. Non puoi procedere al prossimo Obiettivo prima che questo tempo sia scaduto.
 
 - La [sezione SMB in questa documentazione](#Open-APS-features-super-micro-bolus-smb) e la [copertura oref1 nella documentazione openAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) sono letture obbligatorie per comprendere **SMB** e il concetto di **zero-temping**.
-- Una volta fatto, puoi [aumentare maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) per far funzionare gli **SMB** in modo più efficace. maxIOB ora include tutto l'**IOB**, non solo la basale accumulata. Questa soglia mette in pausa gli **SMB** finché l'IOB non scende sotto questo valore (_es._ **maxIOB** è impostato a 7U e viene somministrato un bolo di 8U per coprire un pasto: gli SMB verranno messi in pausa e non somministrati finché l'**IOB** non scende sotto 7U).
-  Un buon punto di partenza è impostare **maxIOB** = **bolo pasto medio + 3x basale giornaliera massima** dove "basale giornaliera massima" è il valore orario massimo in qualsiasi segmento di tempo della giornata. Vedi l'[obiettivo 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) come riferimento.
+- Una volta fatto, puoi [aumentare maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) per far funzionare gli **SMB** in modo più efficace. maxIOB ora include tutto l'**IOB**, non solo la basale accumulata. Questa soglia mette in pausa gli **SMB** finché l'IOB non scende sotto questo valore (_es._ **maxIOB** è impostato a 7U e viene somministrato un bolo di 8U per coprire un pasto: gli SMB verranno messi in pausa e non somministrati finché l'**IOB** non scende sotto 7U). Un buon punto di partenza è impostare **maxIOB** = **bolo pasto medio + 3x basale giornaliera massima** dove "basale giornaliera massima" è il valore orario massimo in qualsiasi segmento di tempo della giornata. Vedi l'[obiettivo 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) come riferimento.
 - Valuta il tasso di assorbimento dei carboidrati e considera di modificare il parametro "min_5m_carbimpact" in [Preferenze > Impostazioni di assorbimento > min_5m_carbimpact](#Preferences-min_5m_carbimpact) se lo trovi troppo lento o troppo veloce.
 
 (objectives-objective10)=
@@ -241,13 +232,12 @@ Configura la regola di automazione più semplice; ad esempio attiva una notifica
   - clicca "Notifica" per modificare il messaggio, inserisci qualcosa come "La mia prima automazione"
 - Attendi che l'orario attivi la notifica (nota che a seconda del tuo telefono, potrebbe essere in ritardo di qualche minuto)
 
-Puoi poi sperimentare configurando un'**Automazione** più utile.
-La pagina di documentazione fornisce alcuni esempi e puoi cercare screenshot di "Automazione" nel gruppo [Facebook](https://www.facebook.com/groups/AndroidAPSUsers). C'è anche un canale dedicato nella community [Discord](https://discord.gg/4fQUWHZ4Mw).
+Puoi poi sperimentare configurando un'**Automazione** più utile. La pagina di documentazione fornisce alcuni esempi e puoi cercare screenshot di "Automazione" nel gruppo [Facebook](https://www.facebook.com/groups/AndroidAPSUsers). C'è anche un canale dedicato nella community [Discord](https://discord.gg/4fQUWHZ4Mw).
 
 Ad esempio, se mangi la stessa cosa a colazione alla stessa ora ogni mattina prima di scuola/lavoro, puoi creare un'**Automazione** come "target-pre-colazione" per impostare un **Obiettivo Temporaneo** leggermente più basso 30 minuti prima di fare colazione. In tal caso, la tua condizione includerà probabilmente "orario ricorrente" che consiste nel selezionare giorni specifici della settimana (lunedì, martedì, mercoledì, giovedì, venerdì) e un orario specifico (06:30). L'azione consisterà in "Avvia obiettivo temporaneo" con un valore target più basso del solito e una durata di 30 minuti.
 
 (CompletingTheObjectives-go-back-in-objectives)=
-## Torna indietro negli obiettivi
+## Go back in objectives
 
 Se vuoi tornare indietro negli **Obiettivi** per qualsiasi motivo puoi farlo cliccando su "cancella completato".
 

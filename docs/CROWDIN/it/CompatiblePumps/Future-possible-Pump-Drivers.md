@@ -1,12 +1,8 @@
-- - -
-orphan: true
-- - -
-
 # Driver futuri (possibili) per Microinfusori
 
 Questo è un elenco di alcuni microinfusori disponibili sul mercato, con lo stato del supporto per i sistemi di loop e poi lo stato in AAPS. Alla fine ci sono alcune informazioni su cosa è necessario affinché un microinfusore sia "compatibile con il loop".
 
-## Microinfusori compatibili con il loop
+## Pumps that are Loopable
 
 ### Kaleido ([Homepage](https://www.hellokaleido.com/))
 
@@ -50,21 +46,21 @@ In attesa del rilascio di t:mobi in Europa (gli altri due non sono ancora stati 
 
 **Commenti:** Fine del supporto marzo 2025.
 
-## Microinfusori non compatibili con il loop
+## Pumps that aren't Loopable
 
 ### Medtronic Bluetooth
 
-**Commenti:** Medtronic si è [ritirata](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+**Commenti:** Nessun successo della comunità nel comunicare con il microinfusore Solo.
 
 ### Accu-Chek Solo
 
-**Commenti:** Nessun successo della comunità nel comunicare con il microinfusore Solo.
+**Commenti:** Medtronic si è [ritirata](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
 
 ### Ypsomed Pump
 
 **Commenti:** Ypso ha aggiunto una crittografia di terze parti molto pesante.
 
-## Requisiti per la compatibilità con il loop
+## Requirements for pumps being loopable
 
 **Prerequisito**
 - Il microinfusore deve supportare qualche tipo di controllo remoto. (BT, radiofrequenza, ecc.)
@@ -78,7 +74,7 @@ In attesa del rilascio di t:mobi in Europa (gli altri due non sono ancora stati 
 **Per oref1(SMB) o il bolo:**
 - Imposta il bolo
 
-**Utile avere**
+**Good to have**
 - Annulla il bolo
 - Ottieni il profilo basale (quasi requisito)
 - Imposta il profilo basale (bello avere)
@@ -90,6 +86,6 @@ In attesa del rilascio di t:mobi in Europa (gli altri due non sono ancora stati 
 - Leggi la cronologia
 - Leggi il TDD
 
-### Supporto per altri microinfusori
+### Other pumps support
 
 Se hai altri microinfusori di cui vorresti vedere lo stato, contattaci su Discord.

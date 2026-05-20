@@ -34,4 +34,4 @@ Nel processo di compilazione dell'app **AAPS** 3.2 completa (e in realtà di qua
 
 `C:\Users\Il Tuo Nome\AndroidStudioProjects\AndroidAPS\app\aapsclient\release.`
 
-Elimina o sposta il file .json non necessario dalla cartella. Poi prova a compilare di nuovo l'app **AAPS** wear. Se non funziona, la [guida alla risoluzione dei problemi](../GettingHelp/TroubleshootingAndroidStudio.md) più dettagliata ti aiuterà a identificare il file specifico che causa il problema, che potrebbe essere anche il tuo file keystore.
+Elimina o sposta il file .json non necessario dalla cartella. Poi prova a compilare di nuovo l'app **AAPS** wear. Se non funziona, la [guida alla risoluzione dei problemi](../GettingHelp/TroubleshootingAndroidStudio.md) più dettagliata ti aiuterà a identificare il file specifico che causa il problema, che potrebbe essere anche il tuo file keystore. 

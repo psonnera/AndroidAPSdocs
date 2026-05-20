@@ -1,19 +1,15 @@
-- - -
-orphan: true
-- - -
-
 # Microinfusore DanaRS e Dana-i
 
 _Queste istruzioni riguardano la configurazione dell'app e del microinfusore per chi possiede un DanaRS dal 2017 in poi o il più recente Dana-i. Visitare [Microinfusore DanaR](./DanaR-Insulin-Pump.md) se si possiede il DanaR originale._
 
-**Il nuovo firmware DanaRS v3 può essere utilizzato dalla versione 2.7 di AAPS in poi.**
-
 **Il nuovo Dana-i può essere utilizzato dalla versione 3.0 di AAPS in poi.**
+
+**Il nuovo firmware DanaRS v3 può essere utilizzato dalla versione 2.7 di AAPS in poi.**
 
 * Nel microinfusore DanaRS/i, l'app utilizza "BASALE A". I dati esistenti vengono sovrascritti.
 
 (DanaRS-Insulin-Pump-pairing-pump)=
-## Associazione del microinfusore
+## Pairing pump
 
 * Nella schermata principale di AAPS fare clic sul menu hamburger nell'angolo in alto a sinistra e andare al Costruttore di configurazione.
 * Nella sezione microinfusore selezionare 'Dana-i/RS'.
@@ -25,7 +21,7 @@ _Queste istruzioni riguardano la configurazione dell'app e del microinfusore per
 * Selezionare il menu preferenze toccando i 3 punti in alto a destra.
 * Selezionare 'Preferenze Dana-i/RS'.
 * Fare clic su "Microinfusore selezionato".
-* Nella finestra di associazione fare clic sulla voce del proprio microinfusore.
+* In the pairing window click on the entry for your pump.
 
   ![AAPS pair Dana-i/RS](../images/DanaRS_i_Pairing.png)
 
@@ -42,7 +38,7 @@ _Queste istruzioni riguardano la configurazione dell'app e del microinfusore per
 * Selezionare Velocità bolo per cambiare la velocità predefinita del bolo (12 sec per 1U, 30 sec per 1U o 60 sec per 1U).
 * Impostare il passo basale del microinfusore a 0,01 U/h usando il menu Medici (vedere il manuale utente del microinfusore).
 * Impostare il passo bolo del microinfusore a 0,05 U/h usando il menu Medici (vedere il manuale utente del microinfusore).
-* Abilitare i boli estesi sul microinfusore
+* Enable extended boluses on pump
 
 (DanaRS-Insulin-Pump-default-password)=
 
@@ -100,7 +96,7 @@ In caso di perdita della connessione tra AAPS e Dana RS durante l'erogazione del
 ![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
 
 * Nella maggior parte dei casi si tratta solo di un problema di comunicazione e la quantità corretta di insulina viene erogata.
-* Controllare nella cronologia del microinfusore (o sul microinfusore o tramite la scheda Dana > cronologia microinfusore > boli) se è stato somministrato il bolo corretto.
+* Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
 * Eliminare la voce di errore nella [scheda trattamenti](#screens-bolus-carbs) se si desidera.
 * La quantità reale viene letta e registrata alla prossima connessione. Per forzarlo premere l'icona BT nella scheda Dana o aspettare la prossima connessione.
 

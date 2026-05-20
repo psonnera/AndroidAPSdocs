@@ -1,4 +1,4 @@
-# Automazione
+# Automation
 
 ## Cos'è un'Automazione?
 
@@ -91,7 +91,7 @@ Quando si imposta un'**Automazione**, è possibile testarla prima attivando l'op
 
 ![Alt text](../images/automation_2024-02-12_20-55-05.png)
 
-```{admonition} Nota importante
+```{admonition} Important note
 :class: note
 
 Le **Automazioni** sono ancora attive quando il Loop è disabilitato!
@@ -108,7 +108,7 @@ Sono impostati limiti di sicurezza per le **Automazioni**:
 
 ## Uso corretto dei valori negativi
 
-```{admonition} Avvertenza
+```{admonition} Warning
 :class: warning
 
 Prestare attenzione quando si seleziona un valore negativo nell'**Automazione**
@@ -129,7 +129,7 @@ Un'**Automazione** per qualsiasi numero **maggiore di** -0,1 mmol/l (-2 mg/dl). 
 È importante considerare attentamente l'intenzione precisa dell'**Automazione** quando si scelgono queste condizioni e valori.
 
 (automations-automation-triggers)=
-## Trigger Automazione
+## Automation Triggers
 
 ![Automation Triggers](../images/automation_triggers.png)
 
@@ -144,7 +144,7 @@ Ci sono vari "Trigger" che possono essere selezionati dall'utente. I trigger son
 * "O"
 * "O esclusivo" (che significa che se una - e solo una delle - condizioni si applica, verrà eseguita/i l'azione/i)
 
-**Trigger:** ora vs. ora ricorrente
+**Trigger:** ora vs.
 
 **Opzioni:**
 
@@ -238,7 +238,7 @@ Questa **Automazione** attiva automaticamente un "Target Temporaneo Ipo" quando 
 
 ![Alt text](../images/automation_2024-02-12_21-04-25.png-500x.png)
 
-Questa **Automazione** è stata creata per un utente che mangia il pranzo al lavoro all'incirca alla stessa ora ogni giorno feriale, ma si attiva solo se l'utente si trova in una "posizione" impostata. Quindi se l'utente non è al lavoro un giorno, questa **Automazione** verrà attivata.
+Questa **Automazione** è stata creata per un utente che mangia il pranzo al lavoro all'incirca alla stessa ora ogni giorno feriale, ma si attiva solo se l'utente si trova in una "posizione" impostata.  Quindi se l'utente non è al lavoro un giorno, questa **Automazione** verrà attivata.
 
 Questa **Automazione** imposta un basso **Target Temporaneo** (Presto pasto) alle 13:00 per portare la "glicemia" a 90 mg (o 5 mmol/l) in preparazione al pranzo.
 
@@ -338,4 +338,4 @@ Verificare l'ordine di priorità delle regole come discusso sopra.
 
 ## Alternative alle Automazioni
 
-Per gli utenti avanzati, esistono altre possibilità per automatizzare le attività utilizzando IFTTT o un'app Android di terze parti chiamata Automate.
+Per gli utenti avanzati, esistono altre possibilità per automatizzare le attività utilizzando IFTTT o un'app Android di terze parti chiamata Automate. 

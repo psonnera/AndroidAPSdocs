@@ -79,7 +79,7 @@ Tramite il **menu a tendina** nell'angolo in alto a sinistra, in **Generatore di
 
 ### Verifica della selezione del driver Omnipod
 
-*Nota: Se si è usciti dalla Configurazione guidata prima di selezionare il RileyLink, il driver Omnipod è abilitato ma sarà comunque necessario selezionare il RileyLink. È possibile che la scheda Omnipod (POD) appaia come mostrato di seguito*
+*Nota: Se si è usciti dalla Configurazione guidata prima di selezionare il RileyLink, il driver Omnipod è abilitato ma sarà comunque necessario selezionare il RileyLink.  È possibile che la scheda Omnipod (POD) appaia come mostrato di seguito*
 
 Per verificare di aver abilitato il driver Omnipod in AAPS **scorri verso sinistra** dalla scheda **Panoramica**, dove ora sarà visibile una scheda **Omnipod** o **POD**.
 
@@ -129,7 +129,7 @@ Prima di poter attivare un pod, assicurarsi di aver configurato e connesso corre
 
 *PROMEMORIA: La comunicazione con il pod avviene a distanze limitate durante l'abbinamento per l'attivazione del pod, per misure di sicurezza. Prima dell'abbinamento il segnale radio del pod è più debole, ma dopo l'abbinamento funzionerà alla piena potenza del segnale. Durante queste procedure, assicurarsi che il pod sia* [nelle vicinanze](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm o meno) ma non sopra o accanto al RileyLink.*
 
-01. Navigare nella scheda **Omnipod (POD)** e cliccare sul pulsante **GEST. POD (1)**, poi cliccare su **Attiva pod (2)**.
+01. Guasti del pod
 
     > ![Attiva_Pod_1](../images/omnipod/Activate_Pod_1.png) ![Attiva_Pod_2](../images/omnipod/Activate_Pod_2.png)
 
@@ -189,7 +189,7 @@ In condizioni normali, la vita di un pod dura tre giorni (72 ore) più ulteriori
 
 Per disattivare un pod (per scadenza o per un guasto del pod):
 
-1. Andare alla scheda **Omnipod (POD)**, cliccare sul pulsante **GEST. POD (1)**, nella schermata **Gestione pod** cliccare sul pulsante **Disattiva pod (2)**.
+1. L'intera cronologia è disponibile solo per il pod attualmente attivo; dopo il cambio del pod, questa cronologia verrà cancellata e verranno registrati e mostrati solo gli eventi del pod appena attivato.
 
    > ![Disattiva_Pod_1](../images/omnipod/Deactivate_Pod_1.png) ![Disattiva_Pod_2](../images/omnipod/Deactivate_Pod_2.png)
 
@@ -267,7 +267,7 @@ Il processo seguente mostra come riconoscere e ignorare i segnali acustici del p
 
    > ![Conferma_Allarmi_1](../images/omnipod/Acknowledge_Alerts_1.png) ![Conferma_Allarmi_2](../images/omnipod/Acknowledge_Alerts_2.png)
 
-2. Andare alla scheda **Omnipod (POD)** e premere il pulsante **CONF. AVVISI (2)** (conferma avvisi). Il RileyLink invia il comando al pod per disattivare i segnali acustici di avviso di scadenza del pod e aggiorna il campo **Stato pod (1)** con **CONFERMA AVVISI**.
+2. Andare alla scheda **Omnipod (POD)** e premere il pulsante **GEST. POD (1)** per accedere al menu **Gestione pod**, poi premere il pulsante **Statistiche RileyLink (2)** per visualizzare le impostazioni del **RileyLink (3)** e del **Dispositivo (4)** pod attivo.
 
    > ![Conferma_Allarmi_3](../images/omnipod/Acknowledge_Alerts_3.png)
 
@@ -284,14 +284,14 @@ Il processo seguente mostra come riconoscere e ignorare i segnali acustici del p
 (OmnipodEros-view-pod-history)=
 
 ### Visualizzare la cronologia pod
-### Visualizzare la cronologia pod
+
 Questa sezione mostra come visualizzare la cronologia del pod attivo e filtrare per diverse categorie di azioni. Lo strumento cronologia pod consente di visualizzare le azioni e i risultati applicati al pod attualmente attivo durante la sua vita di tre giorni (72-80 ore).
-Questa sezione mostra come visualizzare la cronologia del pod attivo e filtrare per diverse categorie di azioni.
+
 Questa funzionalità è utile per verificare boli, TBR, modifiche basali che sono stati somministrati ma di cui non si è sicuri se siano stati completati. Le categorie rimanenti sono utili in generale per la risoluzione dei problemi.
 
 *NOTA:* I comandi **Incerti** appariranno nella cronologia del pod, tuttavia per loro natura non è possibile garantirne l’accuratezza.
 
-1. Andare alla scheda **Omnipod (POD)** e premere il pulsante **GEST. POD (1)** per accedere al menu **Gestione pod**, poi premere il pulsante **Cronologia pod (2)** per accedere alla schermata della cronologia pod.
+1. Visualizzare la cronologia pod
 
    > ![Storico_Pod_1](../images/omnipod/Pod_History_1.png) ![Storico_Pod_2](../images/omnipod/Pod_History_2.png)
 
@@ -309,11 +309,11 @@ Nel caso in cui il pulsante **AGGIORNA** non ripristini la connessione al dispos
 
 #### Ristabilire manualmente la comunicazione Bluetooth del dispositivo di comunicazione con il pod
 
-1. Dalla scheda **Omnipod (POD)**, quando lo **Stato RileyLink: (1)** riporta **RileyLink irraggiungibile**, premere il pulsante **GEST. POD (2)** per navigare nel menu **Gestione pod**. Nel menu verrà visualizzata una notifica di ricerca attiva; premere il pulsante **Statistiche RileyLink (3)** per accedere alla schermata **Impostazioni RileyLink**.
+1. Accedere al menu **Selezione RileyLink** selezionando il **menu a 3 punti (1)** nell'angolo in alto a destra della scheda **Omnipod (POD)** e selezionando **Preferenze Omnipod (2)** dal menu a discesa. Nel menu **Impostazioni Omnipod** sotto **Configurazione RileyLink (3)** premere il testo **Non impostato** (se non è selezionato alcun dispositivo) o **Indirizzo MAC** (se è presente un dispositivo) per aprire il menu **Selezione RileyLink**.
 
    > ![Reset_RileyLink_Bluetooth_1](../images/omnipod/RileyLink_Bluetooth_Reset_1.png) ![Reset_RileyLink_Bluetooth_2](../images/omnipod/RileyLink_Bluetooth_Reset_2.png)
 
-2. Nella schermata **Impostazioni RileyLink (1)**, nella sezione **RileyLink (2)**, è possibile confermare lo stato della connessione Bluetooth nei campi **Stato connessione ed errore: (3)**. Avviare la riconnessione Bluetooth manuale premendo il pulsante **aggiorna (4)** in basso a destra.
+2. Nella schermata **Impostazioni RileyLink (1)**, nella sezione **RileyLink (2)**, è possibile confermare lo stato della connessione Bluetooth nei campi **Stato connessione ed errore: (3)**. A *Bluetooth Error* and *RileyLink unreachable* status should be shown. Avviare la riconnessione Bluetooth manuale premendo il pulsante **aggiorna (4)** in basso a destra.
 
    > ![Reset_RileyLink_Bluetooth_3](../images/omnipod/RileyLink_Bluetooth_Reset_3.png)
    > 
@@ -334,7 +334,7 @@ Nel caso in cui il pulsante **AGGIORNA** non ripristini la connessione al dispos
 
 Questa schermata fornisce informazioni, stato e configurazione delle impostazioni sia per il dispositivo di comunicazione con il pod attualmente configurato che per il pod Omnipod Eros attualmente attivo.
 
-1. Andare alla scheda **Omnipod (POD)** e premere il pulsante **GEST. POD (1)** per accedere al menu **Gestione pod**, poi premere il pulsante **Statistiche RileyLink (2)** per visualizzare le impostazioni del **RileyLink (3)** e del **Dispositivo (4)** pod attivo.
+1. Impostazioni_Omnipod_3
 
    > ![Impostazioni_Statistiche_RileyLink_1](../images/omnipod/RileyLink_Statistics_Settings_1.png) ![Impostazioni_Statistiche_RileyLink_2](../images/omnipod/RileyLink_Statistics_Settings_2.png)
    > 
@@ -363,9 +363,9 @@ Questa schermata fornisce informazioni, stato e configurazione delle impostazion
 (omnipod-eros-rileylink-and-active-pod-history)=
 #### Cronologia RileyLink e pod attivo
 
-L'intera cronologia è disponibile solo per il pod attualmente attivo; dopo il cambio del pod, questa cronologia verrà cancellata e verranno registrati e mostrati solo gli eventi del pod appena attivato.
+This screen provides information in reverse chronological order of each state or action that either the RileyLink or currently connected pod is in or has taken. The entire history is only available for the currently active pod, after a pod change this history will be erased and only events from the newly activated pod will be recorded and shown.
 
-1. Andare alla scheda **Omnipod (POD)** e premere il pulsante **GEST. POD (1)** per accedere al menu **Gestione pod**, poi premere il pulsante **Cronologia pod (2)** per visualizzare la schermata **Impostazioni** e **Cronologia**. Cliccare sul testo **CRONOLOGIA (3)** per visualizzare l'intera cronologia del RileyLink e della sessione pod attualmente attiva.
+1. Andare alla scheda **Omnipod (POD)**, cliccare sul pulsante **GEST. POD (1)**, nella schermata **Gestione pod** cliccare sul pulsante **Disattiva pod (2)**.
 
    > ![Storico_Statistiche_RileyLink_1](../images/omnipod/RileyLink_Statistics_History_1.png) ![Storico_Statistiche_RileyLink_2](../images/omnipod/RileyLink_Statistics_History_2.png)
    > 
@@ -395,32 +395,32 @@ Di seguito è riportata una spiegazione del layout e del significato delle icone
 - *RileyLink pronto* - il dispositivo di comunicazione con il pod è acceso e sta inizializzando attivamente la connessione Bluetooth.
 - *Connesso* - il dispositivo di comunicazione con il pod è acceso, connesso e in grado di comunicare attivamente via Bluetooth.
 
-- **Indirizzo pod:** Visualizza l'indirizzo corrente a cui si fa riferimento al pod attivo.
+- **Velocità basale temporanea:** Visualizza la velocità basale temporanea attualmente in esecuzione nel formato seguente:
 
 - **LOT:** Visualizza il numero di LOT del pod attivo.
 
 - **TID:** Visualizza il numero di serie del pod.
 
-- **Versione firmware:** Visualizza la versione firmware del pod attivo.
+- **Ultima connessione:** Visualizza l'ultima volta in cui è stata stabilita la comunicazione con il pod attivo.
 
-- **Ora sul pod:** Visualizza l'ora corrente sul pod attivo.
-
-- **Scadenza pod:** Visualizza la data e l'ora in cui scadrà il pod attivo.
+- **Ultimo bolo:** Visualizza il dosaggio dell'ultimo bolo inviato al pod attivo e quanto tempo fa è stato erogato (tra parentesi).
 
 - **Stato pod:** Visualizza lo stato del pod attivo.
 
-- **Ultima connessione:** Visualizza l'ultima volta in cui è stata stabilita la comunicazione con il pod attivo.
+- **Indirizzo pod:** Visualizza l'indirizzo corrente a cui si fa riferimento al pod attivo.
+
+- **Versione firmware:** Visualizza la versione firmware del pod attivo.
 
 - *Pochi secondi fa* - meno di 20 secondi fa.
 - *Meno di un minuto fa* - più di 20 secondi ma meno di 60 secondi fa.
 - *1 minuto fa* - più di 60 secondi ma meno di 120 secondi (2 min).
 - *XX minuti fa* - più di 2 minuti fa, come definito dal valore di XX.
 
-- **Ultimo bolo:** Visualizza il dosaggio dell'ultimo bolo inviato al pod attivo e quanto tempo fa è stato erogato (tra parentesi).
+- **Scadenza pod:** Visualizza la data e l'ora in cui scadrà il pod attivo.
 
 - **Velocità basale base:** Visualizza la velocità basale programmata per l'orario corrente dal profilo della velocità basale.
 
-- **Velocità basale temporanea:** Visualizza la velocità basale temporanea attualmente in esecuzione nel formato seguente:
+- **Ora sul pod:** Visualizza l'ora corrente sul pod attivo.
 
 - Unità / ora @ ora di emissione TBR (minuti eseguiti / minuti totali di esecuzione TBR).
 - *Esempio:* 0.00U/h @18:25 ( 90/120 minutes)
@@ -445,13 +445,13 @@ Di seguito è riportata una spiegazione del layout e del significato delle icone
   > 
   > Consultare la [sezione Risoluzione dei problemi](#OmnipodEros-troubleshooting) di seguito per ulteriori informazioni.
 
-- **GEST. POD:**
+- **POD MGMT:**
 
   > ![gestione_pod](../images/omnipod/ICONS/omnipod_overview_pod_management.png)
   > 
   > Naviga nel menu Gestione pod.
 
-- **CONF. AVVISI:**
+- **RIPRENDI EROGAZIONE:**
 
   > ![conferma_allarmi](../images/omnipod/ICONS/omnipod_overview_ack_alerts.png)
   > 
@@ -471,7 +471,7 @@ Di seguito è riportata una spiegazione del layout e del significato delle icone
   > 
   > Sospende il pod attivo.
 
-- **RIPRENDI EROGAZIONE:**
+- **RESUME DELIVERY:**
 
   > ![riprendi](../images/omnipod/ICONS/omnipod_overview_resume.png)
   > 
@@ -501,13 +501,13 @@ Di seguito è riportata una spiegazione del layout e del significato delle icone
   > 
   > Se il pulsante è disabilitato (grigio) usare il pulsante Scarta pod.
 
-- **Emetti BIP di prova**
+- **Play test beep**
 
   > ![esegui_BIP_di_prova](../images/omnipod/ICONS/omnipod_overview_pod_management_play_test_beep.png)
   > 
   > Emette un singolo segnale acustico di prova sul pod quando premuto.
 
-- **Scarta pod**
+- **Discard pod**
 
   > ![scarta_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_discard_pod.png)
   > 
@@ -540,7 +540,7 @@ Di seguito è riportata una spiegazione del layout e del significato delle icone
   > 
   > Quando si preme questo pulsante, viene reimpostata la configurazione del dispositivo di comunicazione con il pod attualmente connesso.
   > 
-  > > - Quando la comunicazione viene avviata, vengono inviati e impostati dati specifici nel RileyLink > - Vengono impostati i registri di memoria > - Vengono impostati i protocolli di comunicazione > - Viene impostata la frequenza radio sintonizzata
+  > > - Quando la comunicazione viene avviata, vengono inviati e impostati dati specifici nel RileyLink > - Vengono impostati i registri di memoria > - Vengono impostati i protocolli di comunicazione > - Viene impostata la frequenza radio sintonizzata 
   > > - Consultare le [note aggiuntive](#OmnipodEros-reset-rileylink-config-notes) alla fine di questa tabella.
 
 - **Leggi log pulse:**
@@ -572,7 +572,7 @@ Le impostazioni del driver Omnipod sono configurabili dal **menu a tendina** in 
 
 I gruppi di impostazioni sono elencati di seguito; è possibile abilitarli o disabilitarli tramite un interruttore a levetta per la maggior parte delle voci descritte di seguito:
 
-![Impostazioni_Omnipod_3](../images/omnipod/Omnipod_Settings_3.png)
+![Conferma_Allarmi_2](../images/omnipod/Omnipod_Settings_3.png)
 
 *NOTA: Un asterisco (\*) indica che l'impostazione predefinita è abilitata.*
 
@@ -587,7 +587,7 @@ Consente la scansione di un dispositivo di comunicazione con il pod. Il driver O
 - Abilitato - Riporta il livello di batteria corrente per i dispositivi di comunicazione con il pod supportati.
 - Disabilitato - Riporta un valore n/d.
 
-- **Abilita registrazione cambio batteria nelle Azioni:** Nel menu Azioni, il pulsante di cambio batteria è abilitato SE si è abilitata questa impostazione E quella di segnalazione della batteria sopra. Alcuni dispositivi di comunicazione con il pod ora dispongono della possibilità di utilizzare batterie ordinarie sostituibili. Questa opzione consente di registrare la sostituzione e reimpostare i timer di vita della batteria.
+- **Abilita registrazione cambio batteria nelle Azioni:** Nel menu Azioni, il pulsante di cambio batteria è abilitato SE si è abilitata questa impostazione E quella di segnalazione della batteria sopra.  Alcuni dispositivi di comunicazione con il pod ora dispongono della possibilità di utilizzare batterie ordinarie sostituibili.  Questa opzione consente di registrare la sostituzione e reimpostare i timer di vita della batteria.
 
 ### Segnali acustici di conferma
 
@@ -598,7 +598,7 @@ Fornisce segnali acustici di conferma dal pod per bolo, basale, SMB e modifiche/
 - **\*Segnali acustici SMB abilitati:** Abilita o disabilita i segnali acustici di conferma quando viene erogato un SMB.
 - **Segnali acustici TBR abilitati:** Abilita o disabilita i segnali acustici di conferma quando viene impostato o annullato un TBR.
 
-### Avvisi
+### Notifiche
 
 Fornisce avvisi AAPS e notifiche Nightscout per la scadenza del pod, lo spegnimento e il serbatoio esaurito in base alle unità soglia definite.
 
@@ -610,7 +610,7 @@ Fornisce avvisi AAPS e notifiche Nightscout per la scadenza del pod, lo spegnime
 - **Numero di unità:** Il numero di unità al quale attivare l'avviso di serbatoio esaurito del pod.
 - **Conferma automaticamente gli avvisi pod:** Quando abilitata, verrà comunque inviata una notifica, ma immediatamente dopo il primo contatto di comunicazione con il pod da quando l'avviso è stato emesso, verrà automaticamente confermato e l'avviso verrà ignorato.
 
-### Notifiche
+### Avvisi
 
 Fornisce notifiche AAPS e avvisi sonori del telefono quando è incerto se gli eventi TBR, SMB o bolo siano stati completati con successo.
 
@@ -629,19 +629,19 @@ Fornisce impostazioni avanzate per assistere nel debugging.
 - **Mostra pulsante Statistiche RileyLink nel menu Gestione pod:** Nascondi o visualizza il pulsante Statistiche RileyLink nel menu **Gestione pod**.
 - **\*Rilevamento DST/fuso orario abilitato:** consente di rilevare automaticamente le modifiche del fuso orario se il telefono viene utilizzato in un'area in cui è in vigore l'ora legale.
 
-### Cambio o rimozione di un dispositivo di comunicazione con il pod attivo (RileyLink)
+### Switching or Removing an Active Pod Communication Device (RileyLink)
 
 Con molti modelli alternativi al RileyLink originale disponibili (come OrangeLink o EmaLink) o la necessità di avere versioni multiple/di backup dello stesso dispositivo di comunicazione con il pod (RileyLink), diventa necessario cambiare o rimuovere il dispositivo di comunicazione con il pod (RileyLink) selezionato dalla configurazione delle impostazioni Omnipod.
 
-I passi seguenti mostrano come **Rimuovere** un dispositivo di comunicazione con il pod (RileyLink) esistente e come **Aggiungerne** uno nuovo. Eseguire sia i passaggi **Rimuovi** che **Aggiungi** permette di cambiare il dispositivo.
+I passi seguenti mostrano come **Rimuovere** un dispositivo di comunicazione con il pod (RileyLink) esistente e come **Aggiungerne** uno nuovo.  Eseguire sia i passaggi **Rimuovi** che **Aggiungi** permette di cambiare il dispositivo.
 
-1. Accedere al menu **Selezione RileyLink** selezionando il **menu a 3 punti (1)** nell'angolo in alto a destra della scheda **Omnipod (POD)** e selezionando **Preferenze Omnipod (2)** dal menu a discesa. Nel menu **Impostazioni Omnipod** sotto **Configurazione RileyLink (3)** premere il testo **Non impostato** (se non è selezionato alcun dispositivo) o **Indirizzo MAC** (se è presente un dispositivo) per aprire il menu **Selezione RileyLink**.
+1. Navigare nella scheda **Omnipod (POD)** e cliccare sul pulsante **GEST. POD (1)**, poi cliccare su **Attiva pod (2)**.
 
    > ![Impostazioni_Omnipod_2](../images/omnipod/Omnipod_Settings_2.png) ![Configurazione_RileyLink_2](../images/omnipod/RileyLink_Setup_2.png)
 
-### Rimozione del dispositivo di comunicazione con il pod attualmente selezionato (RileyLink)
+### Cambio o rimozione di un dispositivo di comunicazione con il pod attivo (RileyLink)
 
-Questo processo mostra come rimuovere il dispositivo di comunicazione con il pod attualmente selezionato (RileyLink) dalle impostazioni del driver Omnipod.
+Questo processo mostra come aggiungere un nuovo dispositivo di comunicazione con il pod alle impostazioni del driver Omnipod.
 
 1. In **Configurazione RileyLink** premere il testo **Indirizzo MAC (1)** per aprire il menu **Selezione RileyLink**.
 
@@ -655,13 +655,13 @@ Questo processo mostra come rimuovere il dispositivo di comunicazione con il pod
 
    > ![Configurazione_RileyLink_Rimuovi_3](../images/omnipod/RileyLink_Setup_Remove_3.png)
 
-4. Si torna al menu **Impostazioni Omnipod** dove in **Configurazione RileyLink** il dispositivo risulterà ora **Non impostato (5)**. Congratulazioni, il dispositivo di comunicazione con il pod selezionato è stato rimosso con successo.
+4. Si torna al menu **Impostazioni Omnipod** dove in **Configurazione RileyLink** il dispositivo risulterà ora **Non impostato (5)**.  Congratulazioni, il dispositivo di comunicazione con il pod selezionato è stato rimosso con successo.
 
    > ![Configurazione_RileyLink_Rimuovi_4](../images/omnipod/RileyLink_Setup_Remove_4.png)
 
-### Aggiunta del dispositivo di comunicazione con il pod attualmente selezionato (RileyLink)
+### Rimozione del dispositivo di comunicazione con il pod attualmente selezionato (RileyLink)
 
-Questo processo mostra come aggiungere un nuovo dispositivo di comunicazione con il pod alle impostazioni del driver Omnipod.
+Questo processo mostra come rimuovere il dispositivo di comunicazione con il pod attualmente selezionato (RileyLink) dalle impostazioni del driver Omnipod.
 
 1. In **Configurazione RileyLink** premere il testo **Non impostato (1)** per aprire il menu **Selezione RileyLink**.
 
@@ -671,7 +671,7 @@ Questo processo mostra come aggiungere un nuovo dispositivo di comunicazione con
 
    > ![Configurazione_RileyLink_Aggiungi_2](../images/omnipod/RileyLink_Setup_Add_2.png)
 
-3. Selezionare **il proprio RileyLink (3)** dall'elenco dei dispositivi disponibili e si tornerà al menu **Impostazioni Omnipod** che mostra l'**Indirizzo MAC (4)** del dispositivo appena selezionato. Congratulazioni, il dispositivo di comunicazione con il pod è stato selezionato con successo.
+3. Selezionare **il proprio RileyLink (3)** dall'elenco dei dispositivi disponibili e si tornerà al menu **Impostazioni Omnipod** che mostra l'**Indirizzo MAC (4)** del dispositivo appena selezionato.  Congratulazioni, il dispositivo di comunicazione con il pod è stato selezionato con successo.
 
    > ![Configurazione_RileyLink_Aggiungi_3](../images/omnipod/RileyLink_Setup_Add_3.png) ![Configurazione_RileyLink_Aggiungi_4](../images/omnipod/RileyLink_Setup_Add_4.png)
 
@@ -688,16 +688,16 @@ Questa scheda è ben documentata nella documentazione principale di AAPS, ma ci 
 
 **Livello insulina**
 
-La segnalazione della quantità di insulina nel pod Omnipod Eros non è precisa. Questo perché non si sa esattamente quanta insulina è stata inserita nel pod, ma solo che quando vengono emessi 2 segnali acustici durante il riempimento del pod sono state iniettate più di 85 unità. Un pod può contenere un massimo di 200 unità. Anche la preparazione introduce varianza poiché non è un processo esatto. Con entrambi questi fattori, il driver Omnipod è stato scritto per fornire la migliore approssimazione dell'insulina rimanente nel serbatoio.
+La segnalazione della quantità di insulina nel pod Omnipod Eros non è precisa.  Questo perché non si sa esattamente quanta insulina è stata inserita nel pod, ma solo che quando vengono emessi 2 segnali acustici durante il riempimento del pod sono state iniettate più di 85 unità. Un pod può contenere un massimo di 200 unità. Anche la preparazione introduce varianza poiché non è un processo esatto.  Con entrambi questi fattori, il driver Omnipod è stato scritto per fornire la migliore approssimazione dell'insulina rimanente nel serbatoio.
 
 > - **Oltre 50 unità** - Riporta un valore di 50+U quando nel serbatoio sono presenti più di 50 unità.
 > - **Sotto 50 unità** - Riporta un valore calcolato approssimativo dell'insulina rimanente nel serbatoio.
 > - **SMS** - Restituisce il valore o 50+U per le risposte SMS.
-> - **Nightscout** - Carica il valore 50 quando ci sono più di 50 unità su Nightscout (versione 14.07 e precedenti). Le versioni più recenti riporteranno un valore di 50+ quando ci sono più di 50 unità.
+> - **Nightscout** - Carica il valore 50 quando ci sono più di 50 unità su Nightscout (versione 14.07 e precedenti).  Le versioni più recenti riporteranno un valore di 50+ quando ci sono più di 50 unità.
 
 **Livello batteria**
 
-La segnalazione del livello di batteria è un'impostazione che può essere abilitata per restituire il livello di batteria corrente dei dispositivi di comunicazione con il pod, come OrangeLink, EmaLink o DiaLink. L'hardware RileyLink non è in grado di segnalare il livello di batteria. Il livello di batteria viene segnalato dopo ogni comunicazione con il pod, quindi durante la carica potrebbe non essere osservato un aumento lineare. Un aggiornamento manuale aggiornerà il livello di batteria corrente. Quando un dispositivo di comunicazione con il pod supportato viene disconnesso, verrà riportato un valore dello 0%.
+La segnalazione del livello di batteria è un'impostazione che può essere abilitata per restituire il livello di batteria corrente dei dispositivi di comunicazione con il pod, come OrangeLink, EmaLink o DiaLink.  L'hardware RileyLink non è in grado di segnalare il livello di batteria.  Il livello di batteria viene segnalato dopo ogni comunicazione con il pod, quindi durante la carica potrebbe non essere osservato un aumento lineare.  Un aggiornamento manuale aggiornerà il livello di batteria corrente.  Quando un dispositivo di comunicazione con il pod supportato viene disconnesso, verrà riportato un valore dello 0%.
 
 > - **L'hardware RileyLink NON è in grado di segnalare il livello di batteria**
 > - **L'impostazione "Mostra livello batteria riportato da OrangeLink/EmaLink/DiaLink" DEVE essere abilitata nelle impostazioni Omnipod per segnalare i valori del livello di batteria**
@@ -710,7 +710,7 @@ La segnalazione del livello di batteria è un'impostazione che può essere abili
 
 ## Risoluzione dei problemi
 
-### Guasti del pod
+### Pod Failures
 
 I pod si guastano occasionalmente a causa di vari problemi, inclusi problemi hardware del pod stesso. Si sconsiglia di segnalarlo a Insulet poiché AAPS non è un caso d'uso approvato. Un elenco dei codici di guasto si trova [qui](https://github.com/openaps/openomni/wiki/Fault-event-codes) per aiutare a determinare la causa.
 
@@ -718,7 +718,7 @@ I pod si guastano occasionalmente a causa di vari problemi, inclusi problemi har
 
 Questo guasto è correlato a uno stato errato del pod per un comando o un errore durante un comando di erogazione di insulina. Si raccomanda agli utenti di passare al client Nightscout in modalità *solo caricamento (Disabilita sincronizzazione)* in **Generatore di configurazione**➜**Generale**➜**NSClient**➜**ingranaggio**➜**Impostazioni avanzate** per prevenire possibili guasti.
 
-### Avvisi di microinfusore irraggiungibile
+### Pump Unreachable Alerts
 
 Si raccomanda di configurare gli avvisi di microinfusore irraggiungibile a **120 minuti** andando nel menu a tre punti in alto a destra, selezionando **Preferenze**➜**Avvisi locali**➜**Soglia microinfusore irraggiungibile [min]** e impostando questo valore a **120**.
 

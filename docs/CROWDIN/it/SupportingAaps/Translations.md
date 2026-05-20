@@ -5,7 +5,7 @@
 
 * Invia una richiesta di adesione al team della documentazione. Per farlo clicca sulla bandiera della lingua desiderata e poi sul pulsante "Join" in alto a destra nella pagina successiva. Specifica la lingua, fornisci alcune informazioni su di te e sulla tua esperienza con AAPS e se vuoi essere traduttore o revisore (solo persone esperte in traduzione + utenti AAPS avanzati).
 
-```{admonition} Tempo di approvazione
+```{admonition} Time for Approval
 :class: note
 
 L'approvazione è un passaggio manuale. In quanto organizzazione no-profit non forniamo SLA, ma in generale l'approvazione verrà effettuata in meno di 1 giorno. In caso contrario contatta il team di documentazione tramite Facebook o Discord.
@@ -81,7 +81,7 @@ In generale questo richiede 1-3 giorni, ma durante le vacanze potrebbe richieder
 
 ### Traduzione dei link
 
-```{admonition} I link non vengono più tradotti
+```{admonition} Links are not translated anymore
 :class: note
 
 I link non vengono più tradotti. In passato avevamo un argomento qui, ma è scomparso perché con la migrazione a Markdown e myst_parser creiamo esplicitamente etichette nel testo inglese e propaghiamo queste etichette automaticamente alle lingue.
@@ -92,7 +92,7 @@ Stai traducendo il testo che rappresenta il link. Devi fare attenzione a **non**
 
 È compito dei revisori prestare particolare attenzione a questo!
 
-### Revisione
+### Proofreading
 
 * I revisori devono passare alla modalità di revisione
 
