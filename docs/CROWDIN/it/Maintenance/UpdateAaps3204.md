@@ -12,9 +12,9 @@ Consulta la [pagina FAQ](../UsefulLinks/FAQ.md) per i dettagli.
 
 * Potrebbe essere richiesta una versione specifica di **[Android Studio](https://developer.android.com/studio/)** per costruire l'APK.
 
-| Versione AAPS           | Versione preferita<br/>Android Studio<br/> | Versione alternativa<br/>Android Studio<br/> | Gradle | JVM |
-| ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                                  | fino a Meerkat                                         | 8.2    | 17  |
+| Versione AAPS           | Versione preferita<br/>Android Studio | Versione alternativa<br/>Android Studio | Gradle | JVM |
+| ----------------------- | ------------------------------------------- | --------------------------------------------- | ------ |:--- |
+| [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                         | fino a Meerkat                                | 8.2    | 17  |
 
 La "versione preferita" è fornita con la versione JVM appropriata. La versione preferita è anche la versione minima che puoi usare per costruire **AAPS**. **NON** potrai costruire con una versione più vecchia di quella "preferita". Se usi una versione diversa, potresti riscontrare problemi relativi alla versione JVM. Consulta la pagina [Risoluzione dei problemi di Android Studio](#troubleshooting_androidstudio-uncommitted-changes) per risolvere questi problemi. Se la tua versione corrente di Android Studio non è elencata nella tabella, devi prima aggiornarla.
 
@@ -69,7 +69,7 @@ Questa pagina fornisce immagini di esempio sia per la **nuova** interfaccia uten
 
 ## Panoramica per l'aggiornamento da 3.2.0.x a 3.2.0.4
 
-```{contents} Passaggi per aggiornare a 3.2.0.4
+```{contents} Steps for updating to 3.2.0.4
 :depth: 1
 :local: true
 ```
@@ -177,7 +177,7 @@ Consulta la pagina [Esportare e importare le impostazioni](ExportImportSettings.
 
 ### Sincronizza il progetto con Gradle
 
-```{admonition} ATTENZIONE!
+```{admonition} WARNING!
 :class: warning
 **Non aggiornare mai Gradle.** Sincronizzalo sempre con il progetto.
 ```
@@ -208,3 +208,4 @@ Consulta le istruzioni per [trasferire e installare AAPS](../SettingUpAaps/Trans
 ### Verifica la versione AAPS 3.2.0.4 sul telefono
 
 Dopo aver installato il nuovo APK, puoi verificare la versione di AAPS sul tuo telefono cliccando sul menu a tre punti in alto a destra e poi su "Informazioni". Dovresti vedere la versione corrente.
+
