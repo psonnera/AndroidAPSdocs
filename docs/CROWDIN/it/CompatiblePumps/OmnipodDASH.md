@@ -36,10 +36,9 @@ Queste sono le specifiche dell' **Omnipod DASH** ('DASH') e ciò che lo differen
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
 - **Uno smartphone Android compatibile** con Bluetooth Low Energy (BLE) (vedere [Telefoni](../Getting-Started/Phones.md) per maggiori informazioni); le seguenti informazioni aiuteranno anche a orientarsi su altre considerazioni chiave per attivare e usare con successo il DASH su un telefono compatibile:
-    - Il driver Omnipod Dash di **AAPS** si connette al Pod DASH tramite Bluetooth.
-      **AAPS** stabilirà automaticamente una nuova connessione Bluetooth al Pod ogni volta che ha bisogno di inviare un comando (ad es. un Bolo); dopo l'invio del comando la connessione Bluetooth viene immediatamente disconnessa.
+    -  Il driver Omnipod Dash di **AAPS** si connette al Pod DASH tramite Bluetooth. **AAPS** stabilirà automaticamente una nuova connessione Bluetooth al Pod ogni volta che ha bisogno di inviare un comando (ad es. un Bolo); dopo l'invio del comando la connessione Bluetooth viene immediatamente disconnessa.
        - **NOTA:**
-         - La connessione Bluetooth può essere interrotta/disturbata da altri dispositivi Bluetooth collegati al telefono che esegue **AAPS**, come auricolari ecc. Dispositivi di questo tipo possono causare errori di connessione o problemi di attivazione del pod su alcuni modelli di telefono. È buona idea rivedere l'elenco delle [configurazioni hardware testate](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) prima di impegnarsi con una nuova configurazione basata su Omnipod DASH.
+         - La connessione Bluetooth può essere interrotta/disturbata da altri dispositivi Bluetooth collegati al telefono che esegue **AAPS**, come auricolari ecc. Dispositivi di questo tipo possono causare errori di connessione o problemi di attivazione del pod su alcuni modelli di telefono. Devices like this can cause connection errors or pod activation issues on some models of phones. È buona idea rivedere l'elenco delle [configurazioni hardware testate](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) prima di impegnarsi con una nuova configurazione basata su Omnipod DASH.
          - Ci sono diversi problemi noti con il Bluetooth che possono causare problemi di attivazione del pod (vedere [Risoluzione dei problemi](#troubleshooting) per consigli su altri problemi Bluetooth), in particolare la sezione [Problemi relativi al Bluetooth](#omnipod-dash-bluetooth-related-issues).
     - Per **Android 15** o versioni precedenti: **DEVI** usare la **Versione 3.0 o successiva di AAPS** seguendo le istruzioni [**Compilazione APK**](../SettingUpAaps/BuildingAaps.md); tuttavia è consigliabile usare l'ultima versione rilasciata.
     - Per **Android 16**: **DEVI** usare la **Versione 3.3.2.1 o successiva di AAPS** seguendo le istruzioni [**Compilazione APK**](../SettingUpAaps/BuildingAaps.md), poiché Android 16 ha cambiato il funzionamento del Bluetooth. Qualsiasi versione precedente alla 3.3.2.1 potrebbe causare guasti del pod e/o [problemi](https://github.com/nightscout/AndroidAPS/issues/3471) di attivazione.
@@ -65,18 +64,13 @@ Assicurarsi di aver letto e compreso questa intera guida, di aver letto e compre
 - **NON buttare via il PDM!** Si consiglia di tenerlo a portata di mano come backup e per le emergenze, ad esempio quando il telefono viene perso o **AAPS** non funziona correttamente.
 
 ### Il pod **NON** si fermerà nell'erogare insulina quando non è connesso ad AAPS.
-Le velocità basali predefinite sono programmate sul pod all'attivazione come definite nel [**Profilo**](../SettingUpAaps/YourAapsProfile.md) attivo corrente.
-Finché **AAPS** è operativo, invierà comandi di regolazione della velocità basale che durano al massimo 120 minuti.
-Quando per qualche motivo il pod non riceve nuovi comandi (ad esempio perché la comunicazione è stata persa a causa della distanza Pod ➜ telefono), il pod tornerà automaticamente alle velocità basali predefinite definite nel tuo [**Profilo**](../SettingUpAaps/YourAapsProfile.md).
+Le velocità basali predefinite sono programmate sul pod all'attivazione come definite nel [**Profilo**](../SettingUpAaps/YourAapsProfile.md) attivo corrente. Finché **AAPS** è operativo, invierà comandi di regolazione della velocità basale che durano al massimo 120 minuti. Quando per qualche motivo il pod non riceve nuovi comandi (ad esempio perché la comunicazione è stata persa a causa della distanza Pod ➜ telefono), il pod tornerà automaticamente alle velocità basali predefinite definite nel tuo [**Profilo**](../SettingUpAaps/YourAapsProfile.md).
 
 ### **I Profili AAPS non supportano intervalli di tempo basali di 30 minuti**
-Se sei nuovo ad **AAPS** e stai configurando il tuo [**Profilo**](../SettingUpAaps/YourAapsProfile.md) di velocità basale per la prima volta, tieni presente che le velocità basali che iniziano a mezz'ora non sono supportate. Ad esempio, se sul tuo PDM Omnipod hai una velocità basale di 1,1 unità che inizia alle 09:30 e ha una durata di 2 ore fino alle 11:30, non è possibile replicare questo esatto **Profilo** basale in **AAPS**.
-Dovrai cambiare questa velocità basale di 1,1 unità in un intervallo di tempo di 9:00-11:00 o 10:00-12:00. Anche se l'hardware DASH stesso supporta gli incrementi di 30 minuti del **Profilo** di velocità basale, **AAPS** NON supporta questa funzione.
+Se sei nuovo ad **AAPS** e stai configurando il tuo [**Profilo**](../SettingUpAaps/YourAapsProfile.md) di velocità basale per la prima volta, tieni presente che le velocità basali che iniziano a mezz'ora non sono supportate. Ad esempio, se sul tuo PDM Omnipod hai una velocità basale di 1,1 unità che inizia alle 09:30 e ha una durata di 2 ore fino alle 11:30, non è possibile replicare questo esatto **Profilo** basale in **AAPS**. Dovrai cambiare questa velocità basale di 1,1 unità in un intervallo di tempo di 9:00-11:00 o 10:00-12:00. Anche se l'hardware DASH stesso supporta gli incrementi di 30 minuti del **Profilo** di velocità basale, **AAPS** NON supporta questa funzione.
 
 ### **Le velocità basali del Profilo a 0 U/h NON sono supportate in AAPS**
-Sebbene il DASH supporti una velocità basale zero, **AAPS** usa multipli della velocità basale del **Profilo** dell'utente per determinare il trattamento automatico; non può funzionare con una velocità basale zero.
-In alternativa, una velocità basale temporanea zero può essere ottenuta tramite la funzione "Disconnetti microinfusore", o tramite una combinazione di Disabilita Loop/Basale Temporanea o Sospendi Loop/Basale Temporanea.
-**NOTA:** La velocità basale minima consentita dal DASH in **AAPS** è 0,05 U/h.
+Sebbene il DASH supporti una velocità basale zero, **AAPS** usa multipli della velocità basale del **Profilo** dell'utente per determinare il trattamento automatico; non può funzionare con una velocità basale zero. In alternativa, una velocità basale temporanea zero può essere ottenuta tramite la funzione "Disconnetti microinfusore", o tramite una combinazione di Disabilita Loop/Basale Temporanea o Sospendi Loop/Basale Temporanea. **NOTA:** La velocità basale minima consentita dal DASH in **AAPS** è 0,05 U/h.
 
 ## Selezione di Dash in AAPS
 
@@ -84,8 +78,7 @@ Ci sono **due** opzioni disponibili per configurare Omnipod in **AAPS**:
 
 ### Opzione 1: Nuove installazioni
 
-Quando si installa **AAPS** per la prima volta, la **Procedura guidata di configurazione** guiderà i nuovi utenti attraverso le funzionalità chiave e i requisiti di installazione di **AAPS**.
-Selezionare "DASH" quando si arriva alla selezione del Microinfusore.
+Quando si installa **AAPS** per la prima volta, la **Procedura guidata di configurazione** guiderà i nuovi utenti attraverso le funzionalità chiave e i requisiti di installazione di **AAPS**. Selezionare "DASH" quando si arriva alla selezione del Microinfusore.
 
 ![Enable_Dash_1](../images/DASH_images/Enable_Dash/Enable_Dash_1.png)
 
@@ -98,7 +91,7 @@ Su un'installazione esistente è possibile selezionare il microinfusore **DASH**
 
 Nel **menu hamburger** in alto a sinistra selezionare **Costruttore di configurazione (1)** ➜ **Microinfusore** ➜ **Dash** ➜ **Ingranaggio Impostazioni (3)** selezionando il **pulsante radio (2)** intitolato **Dash**.
 
-Selezionando la **casella di controllo (4)** accanto all'**Ingranaggio Impostazioni (3)** si consente la visualizzazione del menu DASH come scheda nell'interfaccia **AAPS** con il titolo **DASH**. Selezionare questa casella faciliterà l'accesso ai comandi DASH durante l'utilizzo di **AAPS**.
+Selezionare questa casella faciliterà l'accesso ai comandi DASH durante l'utilizzo di **AAPS**. Selezionando la **casella di controllo (4)** accanto all'**Ingranaggio Impostazioni (3)** si consente la visualizzazione del menu DASH come scheda nell'interfaccia **AAPS** con il titolo **DASH**.
 
 **NOTA:** Un modo più veloce per accedere alle [**impostazioni Dash**](#omnipod-dash-settings) è disponibile nella sezione impostazioni DASH di questo documento.
 
@@ -116,7 +109,7 @@ Per verificare di aver selezionato il DASH in **AAPS**, se hai **selezionato la 
 
 ![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png) 'Aggiorna' la connettività e lo stato del pod, possibilità di silenziare gli avvisi del pod quando suona
 
-![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) 'Gestione Pod' (Attiva, Disattiva, Suona segnale acustico di test e Cronologia pod)
+![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png)   'Gestione Pod' (Attiva, Disattiva, Suona segnale acustico di test e Cronologia pod)
 
 (omnipod-dash-activate-pod)=
 
@@ -142,13 +135,11 @@ Per verificare di aver selezionato il DASH in **AAPS**, se hai **selezionato la 
 
    ![Activate_Pod_3](../images/DASH_images/Activate_pod_error.png)
 
-3. Nella schermata **Inizializza Pod**, il pod inizierà l'innesco (si sentirà un clic seguito da una serie di ticchettii mentre il pod si innescha da solo).
-   Quando l'innesco è riuscito apparirà un segno di spunta verde e il pulsante **Avanti** diventerà disponibile. Fare clic sul pulsante **Avanti** per completare l'inizializzazione dell'innesco del pod e visualizzare la schermata **Applica Pod**.
+3. Quando l'innesco è riuscito apparirà un segno di spunta verde e il pulsante **Avanti** diventerà disponibile. Nella schermata **Inizializza Pod**, il pod inizierà l'innesco (si sentirà un clic seguito da una serie di ticchettii mentre il pod si innescha da solo).
 
    ![Activate_Pod_5](../images/DASH_images/Activate_Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/DASH_images/Activate_Pod/Activate_Pod_6.jpg)
 
-4. Preparare il sito di infusione per ricevere il nuovo pod. Lavarsi le mani per evitare qualsiasi rischio di infezione. Pulire il sito di infusione con acqua e sapone o un tampone di alcol per disinfettare e lasciare asciugare completamente la pelle prima di procedere.
-   Se si ha irritazione della pelle dall'adesivo, considerare l'uso di una Barriera protettiva.
+4. Preparare il sito di infusione per ricevere il nuovo pod. Lavarsi le mani per evitare qualsiasi rischio di infezione. Pulire il sito di infusione con acqua e sapone o un tampone di alcol per disinfettare e lasciare asciugare completamente la pelle prima di procedere. Se si ha irritazione della pelle dall'adesivo, considerare l'uso di una Barriera protettiva.
 
    Rimuovere il cappuccio ago blu di plastica del pod. Se si vede qualcosa che sporge dal pod o se ha un aspetto insolito, **INTERROMPERE** il processo e iniziare con un nuovo pod. Se tutto sembra **a posto**, procedere a rimuovere il supporto di carta bianco dall'adesivo e applicare il pod sul sito selezionato sul corpo.
 
@@ -166,8 +157,7 @@ Per verificare di aver selezionato il DASH in **AAPS**, se hai **selezionato la 
 
    ![Activate_Pod_10](../images/DASH_images/Activate_Pod/Activate_Pod_10.png)    ![Activate_Pod_11](../images/DASH_images/Activate_Pod/Activate_Pod_11.jpg)
 
-8. Sullo schermo apparirà un segno di spunta verde e il pulsante **Avanti** diventerà disponibile dopo un inserimento riuscito della cannula.
-   Fare clic sul pulsante **Avanti**.
+8. Alla disattivazione riuscita verrà visualizzato un segno di spunta verde. Fare clic sul pulsante **Avanti** per visualizzare la schermata di pod disattivato.
 
    ![Activate_Pod_12](../images/DASH_images/Activate_Pod/Activate_Pod_12.jpg)
 
@@ -214,7 +204,7 @@ Per disattivare un pod (sia per scadenza che per guasto del pod):
 
    ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
 
-3. Alla disattivazione riuscita verrà visualizzato un segno di spunta verde. Fare clic sul pulsante **Avanti** per visualizzare la schermata di pod disattivato.
+3. Sullo schermo apparirà un segno di spunta verde e il pulsante **Avanti** diventerà disponibile dopo un inserimento riuscito della cannula. Fare clic sul pulsante **Avanti**.
 
    È ora possibile rimuovere il pod poiché la sessione attiva è stata disattivata.
 
@@ -261,9 +251,7 @@ Il processo seguente mostrerà come confermare e ignorare i segnali acustici del
 
 ***NOTA**: Il pulsante **SILENZIA AVVISI (3)** è disponibile solo nella scheda **DASH** quando è stato attivato l'avviso di scadenza del pod o di serbatoio basso. Se il pulsante **SILENZIA AVVISI** non è visibile e si sentono segnali acustici dal pod, provare ad 'Aggiornare lo stato del pod'.*
 
-1. Quando viene raggiunto il limite di tempo di avviso **Ore prima dello spegnimento** definito, il pod emetterà segnali acustici di avviso per informare che si sta avvicinando alla scadenza e sarà presto necessario un cambio pod.
-   È possibile verificarlo nella scheda **DASH**: il campo **Pod scade: (1)** mostrerà l'ora esatta di scadenza del pod (72 ore dopo l'attivazione) e il testo diventerà **rosso** dopo che questo tempo è trascorso.
-   Sotto il campo **Avvisi pod attivi (2)** viene visualizzato il messaggio di stato **Il pod scadrà presto**. Questo attiverà anche la visualizzazione del pulsante **SILENZIA AVVISI (3)**.
+1. **AAPS** invia il comando al pod per disattivare i segnali acustici di avviso di scadenza del pod e aggiorna il campo **Stato pod (1)** con **CONFERMA AVVISI**. Questo attiverà anche la visualizzazione del pulsante **SILENZIA AVVISI (3)**.
 
    ![ACK_alerts_1](../images/DASH_images/ACK_Alerts/ACK_ALERTS_1.png)
 
@@ -289,7 +277,7 @@ Questa funzionalità è utile per verificare boli, TBR e comandi basali inviati 
 
 1. Andare alla scheda **DASH** e premere il pulsante **GESTIONE POD (1)** per accedere al menu **Gestione pod**, quindi premere il pulsante **Cronologia pod (2)** per accedere alla schermata della cronologia del pod.
 
-   ![Pod_history_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
+   ![Pod_history_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)  
    ![Pod_history_2](../images/DASH_images/Pod_History/Pod_history_2.jpg)
 
 2. Nella schermata **Cronologia pod**, la categoria predefinita **Tutto (1)** è visualizzata, mostrando la **Data e Ora (2)** di tutte le **Azioni (3)** e i **Risultati (4)** del pod in ordine cronologico inverso. Utilizzare il **tasto Indietro del telefono 2 volte** per tornare alla scheda **DASH** nell'interfaccia principale di **AAPS**.
@@ -359,14 +347,14 @@ Di seguito è riportata una spiegazione del layout e del significato delle icone
 
   - *Vedere la sezione [Risoluzione dei problemi](#omnipod-dash-troubleshooting) di seguito per informazioni aggiuntive.*
 
-![POD_MGMT_Icon](../images/DASH_images/POD_MGMT_LOGO.png) Naviga al menu di Gestione pod.
+![POD_MGMT_Icon](../images/DASH_images/POD_MGMT_LOGO.png)   Naviga al menu di Gestione pod.
 
 ![ack_alert_logo](../images/DASH_images/ack_alert_logo.png) Quando premuto, disabiliterà i segnali acustici e le notifiche di avviso del pod (scadenza, serbatoio basso...).
 
   - *Il pulsante viene visualizzato solo quando il tempo del pod ha superato il tempo di avviso di scadenza.*
-  - *Dopo l'eliminazione riuscita, questa icona non apparirà più.*
+  -  *Dopo l'eliminazione riuscita, questa icona non apparirà più.*
 
-![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png) Riprende l'erogazione di insulina attualmente sospesa nel pod attivo.
+![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png)    Riprende l'erogazione di insulina attualmente sospesa nel pod attivo.
 
 
 
@@ -380,20 +368,20 @@ Di seguito è descritta la funzione di ogni icona nel menu **Gestione Pod**, acc
 
 **La tabella seguente descrive ogni pulsante e la sua funzione:**
 
-| Pulsante | Funzione                                                                                                 |
-| -------- | -------------------------------------------------------------------------------------------------------- |
-| 1        | Accede alle impostazioni di Gestione Pod                                                                 |
-| 2        | [**Attiva Pod**](#omnipod-dash-activate-pod): Innescare e attiva un nuovo pod.                           |
-| 3        | [**Disattiva Pod**](#omnipod-dash-deactivate-pod): Disattiva il pod attualmente attivo.                  |
-| 4        | **Suona segnale acustico di test**: Suona un singolo segnale acustico di test sul pod quando premuto.    |
-| 5        | [**Cronologia pod**](#omnipod-dash-view-pod-history): Mostra la cronologia delle attività del pod attivo.|
+| Pulsante | Funzione                                                                                                  |
+| -------- | --------------------------------------------------------------------------------------------------------- |
+| 1        | Accede alle impostazioni di Gestione Pod                                                                  |
+| 2        | [**Attiva Pod**](#omnipod-dash-activate-pod): Innescare e attiva un nuovo pod.                            |
+| 3        | [**Disattiva Pod**](#omnipod-dash-deactivate-pod): Disattiva il pod attualmente attivo.                   |
+| 4        | **Suona segnale acustico di test**: Suona un singolo segnale acustico di test sul pod quando premuto.     |
+| 5        | [**Cronologia pod**](#omnipod-dash-view-pod-history): Mostra la cronologia delle attività del pod attivo. |
 
 
 (omnipod-dash-settings)=
 
 ## Impostazioni Dash
 
-Le impostazioni del driver Dash sono configurabili dal **menu hamburger** in alto a sinistra sotto **Costruttore di configurazione (1)** ➜ **Microinfusore** **Dash** ➜ **Ingranaggio Impostazioni (3)** selezionando il **pulsante radio (2)** intitolato **Dash**. Selezionando la **casella di controllo (4)** accanto all'**Ingranaggio Impostazioni (3)** si consente la visualizzazione del menu Dash come scheda nell'interfaccia **AAPS** con il titolo **DASH**.
+Selezionando la **casella di controllo (4)** accanto all'**Ingranaggio Impostazioni (3)** si consente la visualizzazione del menu Dash come scheda nell'interfaccia **AAPS** con il titolo **DASH**. Le impostazioni del driver Dash sono configurabili dal **menu hamburger** in alto a sinistra sotto **Costruttore di configurazione (1)** ➜ **Microinfusore** **Dash** ➜ **Ingranaggio Impostazioni (3)** selezionando il **pulsante radio (2)** intitolato **Dash**.
 
 ![Dash_settings_1](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
@@ -478,7 +466,7 @@ La scheda panoramica DASH verrà visualizzata come descritto di seguito:
 
 Nota aggiuntiva:
   * **SMS** - Restituisce il valore o 50+ U per le risposte SMS
-  * **Nightscout** - Carica il valore di 50 quando supera le 50 unità su Nightscout (versione 14.07 e precedenti). Le versioni più recenti segnaleranno un valore di 50+ quando supera le 50 unità.
+  * **Nightscout** - Carica il valore di 50 quando supera le 50 unità su Nightscout (versione 14.07 e precedenti).  Le versioni più recenti segnaleranno un valore di 50+ quando supera le 50 unità.
 
 (omnipod-dash-troubleshooting)=
 
@@ -497,7 +485,7 @@ Questa sezione copre i problemi noti comuni e le soluzioni per l'uso di Omnipod 
 Per problemi noti con le connessioni Bluetooth, disconnessioni di microinfusori/pod, o problemi di attivazione e connessione vedere [Risoluzione problemi Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
-### Erogazione sospesa
+### Delivery suspended
 
   - Non c'è più un pulsante di sospensione. Se si vuole "sospendere" il pod, è possibile impostare una **TBR** zero per x minuti.
   - Durante i **Cambi Profilo**, il DASH deve sospendere l'erogazione prima di impostare il nuovo **Profilo** basale. Se la comunicazione fallisce tra i due comandi, l'erogazione può rimanere sospesa. Quando ciò accade:
@@ -509,10 +497,10 @@ Per problemi noti con le connessioni Bluetooth, disconnessioni di microinfusori/
      - Se **AAPS** non riesce a riprendere l'erogazione da solo (questo accade se il pod non è raggiungibile, il suono è disattivato ecc.), il pod inizierà a emettere 4 segnali acustici ogni minuto per 3 minuti, poi ripetuti ogni 15 minuti se l'erogazione è ancora sospesa per più di 20 minuti.
   - Per i comandi non confermati, "aggiorna stato pod" dovrebbe confermarli/negarli.
 
-*****NOTA:** Quando si sentono segnali acustici dal pod, non dare per scontato che l'erogazione continuerà senza controllare il telefono; l'erogazione potrebbe rimanere sospesa, ***quindi è necessario controllare!******
+********NOTE:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, ***so you need to check !*********
 
 ---
-### Guasti del Pod
+### Pod Failures
 
 - I pod si guastano occasionalmente a causa di vari problemi, inclusi problemi hardware del Pod stesso.
 - È buona pratica non aprire casi di supporto/sostituzione con Insulet, poiché AAPS non è un metodo approvato per l'utilizzo dei Pod.
@@ -525,7 +513,7 @@ Questo guasto è correlato a uno stato del pod errato per un comando o a un erro
 
 ---
 
-### Avvisi microinfusore non raggiungibile
+### Pump Unreachable Alerts
 
 Quando non è possibile stabilire comunicazione con il pod per un tempo preconfigurato, verrà generato un avviso "Microinfusore non raggiungibile". Gli avvisi di microinfusore non raggiungibile possono essere configurati andando al menu a tre punti in alto a destra, selezionando **Preferenze** ➜ **Avvisi locali** ➜ **Soglia microinfusore non raggiungibile [min]**. Il valore consigliato è un avviso dopo **120** minuti.
 
@@ -543,8 +531,7 @@ Copiare regolarmente (dopo ogni esportazione preferibilmente) le impostazioni es
 ---
 ### Importa Impostazioni
 
-**AVVISO**: Si noti che l'importazione delle impostazioni potrebbe importare uno stato del Pod obsoleto (a seconda di quando è stata effettuata l'ultima esportazione/backup).
-Di conseguenza, c'è il **rischio di perdere il Pod attivo!** (vedere **Esportazione Impostazioni**).
+**AVVISO**: Si noti che l'importazione delle impostazioni potrebbe importare uno stato del Pod obsoleto (a seconda di quando è stata effettuata l'ultima esportazione/backup). Di conseguenza, c'è il **rischio di perdere il Pod attivo!** (vedere **Esportazione Impostazioni**).
 1. Tentare l'importazione solo quando non sono disponibili altre opzioni.
 2. Quando si importano impostazioni con un Pod attivo, assicurarsi che l'esportazione sia stata effettuata con il pod attualmente attivo.
 
