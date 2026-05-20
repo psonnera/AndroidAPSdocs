@@ -18,9 +18,9 @@ Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggesti
 
 ## 2.  App Dexcom G7 Patchata (DiaKEM)
 
-```{admonition} Nessun nuovo utente
+```{admonition} No new users
 :class: warning
-L'ultimo aggiornamento dei server Dexcom ha interrotto DiaKEM per le nuove installazioni: l'app G7 non riesce più a completare il processo di accesso e configurazione iniziale che avviene durante una nuova installazione.
+L'ultimo aggiornamento dei server Dexcom ha interrotto DiaKEM per le nuove installazioni: l'app G7 non riesce più a completare il processo di accesso e configurazione iniziale che avviene durante una nuova installazione. 
 Gli utenti esistenti non riscontrano problemi per ora: non effettuare il logout, non cancellare i dati e non reinstallare l'app G7 in quanto ciò impedirebbe di far funzionare nuovamente l'app. Se è già in esecuzione, non dovresti essere influenzato.
 Si consiglia ai nuovi utenti di usare [xDrip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) come sorgente dati **BG** di **AAPS** fino a quando questo problema non sarà risolto.
 ```
