@@ -4,7 +4,7 @@ Oltre alle possibilità disponibili per controllare _e_ seguire **AAPS** da remo
 
 Una buona panoramica delle numerose opzioni disponibili per seguire **AAPS** si trova nella pagina [Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#).
 
-```{contents} Indice
+```{contents} Table of contents
 :depth: 1
 :local: true
 ```
@@ -13,7 +13,7 @@ Le strategie più comuni usate in combinazione con **AAPS** sono spiegate in det
 
 ## App per smartphone
 
-```{contents} Queste sono alcune delle principali app "follower" usate dagli utenti di **AAPS**. Tutte queste app sono "gratuite": 
+```{contents} These are some of the main “follower” apps used by **AAPS** users. All of these apps are “free”: 
 :depth: 1
 :local: true
 ```
@@ -38,14 +38,7 @@ Devi installare l'app Dexcom ufficiale, inviare l'invito e poi disinstallare l'a
 
 I passaggi da seguire sono i seguenti:
 
-1) Installa l'app "Dexcom" ufficiale su _qualsiasi_ smartphone (Android/iPhone); può essere il telefono del follower, se è più comodo.
-2) Accedi con il tuo nome utente e password Dexcom; questi sono gli stessi dati di accesso che useresti per Dexcom Clarity, se sei già un cliente Dexcom/Clarity. Se non hai un account Dexcom, c'è la possibilità di crearne uno nuovo in questo momento.
-3) Scorri i menu di introduzione.
-4) Aggiungi "nessun codice" per il codice del sensore.
-5) In Numero di serie trasmettitore seleziona "inserisci manualmente" e inserisci qualsiasi codice trasmettitore valido (usa uno dei tuoi codici trasmettitore scaduti, se ne conosci uno, in modo da non interferire con il funzionamento del tuo trasmettitore attuale; seguono un formato specifico di certi numeri e lettere: "NLNNNL" e usano solo certe combinazioni, quindi è più facile usarne uno che sai già essere valido).
-6) Una volta che l'app sta cercando il trasmettitore e il sensore, potrai invitare i follower: seleziona i tre piccoli puntini in alto a sinistra dell'app e aggiungi un nuovo follower. Puoi usarlo anche se uno dei tuoi follower ha cambiato telefono e ha bisogno di un nuovo invito; qui puoi eliminarlo dalla lista dei follower e inviare nuovamente una email di invito da usare sul loro nuovo telefono.
-7) Sul telefono del Follower, installa Dexcom Follow scaricandolo dall'App Store (iPhone) o da Play (Android). Configura l'app Dexcom Follow e ti verrà chiesto di aprire la tua email per trovare l'invito a diventare Follower.
-8) Ora puoi eliminare l'app Dexcom G6 ufficiale.
+1) Installa l'app "Dexcom" ufficiale su _qualsiasi_ smartphone (Android/iPhone); può essere il telefono del follower, se è più comodo. 2) Accedi con il tuo nome utente e password Dexcom; questi sono gli stessi dati di accesso che useresti per Dexcom Clarity, se sei già un cliente Dexcom/Clarity. Se non hai un account Dexcom, c'è la possibilità di crearne uno nuovo in questo momento. 3) Scorri i menu di introduzione. 4) Aggiungi "nessun codice" per il codice del sensore. 5) In Numero di serie trasmettitore seleziona "inserisci manualmente" e inserisci qualsiasi codice trasmettitore valido (usa uno dei tuoi codici trasmettitore scaduti, se ne conosci uno, in modo da non interferire con il funzionamento del tuo trasmettitore attuale; seguono un formato specifico di certi numeri e lettere: "NLNNNL" e usano solo certe combinazioni, quindi è più facile usarne uno che sai già essere valido). 6) Una volta che l'app sta cercando il trasmettitore e il sensore, potrai invitare i follower: seleziona i tre piccoli puntini in alto a sinistra dell'app e aggiungi un nuovo follower. Puoi usarlo anche se uno dei tuoi follower ha cambiato telefono e ha bisogno di un nuovo invito; qui puoi eliminarlo dalla lista dei follower e inviare nuovamente una email di invito da usare sul loro nuovo telefono. 7) Sul telefono del Follower, installa Dexcom Follow scaricandolo dall'App Store (iPhone) o da Play (Android). Configura l'app Dexcom Follow e ti verrà chiesto di aprire la tua email per trovare l'invito a diventare Follower. 8) Ora puoi eliminare l'app Dexcom G6 ufficiale.
 
 Per Dexcom Follow, i dati del sensore vengono poi esportati dal telefono **AAPS** direttamente da BYODA o da xDrip+, a seconda dell'app che stai usando.
 
@@ -121,9 +114,9 @@ Se la sorgente dati **AAPS** non è xDrip+ ma puoi visualizzare i dati glicemici
 
 xDripSwift è stato creato portando l'app xDrip originale su iOS ed è evoluto in "xDrip per iOS" scritto **xDrip4iOS**.
 
-```{admonition} Ulteriori dettagli su come tentare di ottenere l'app originale **xDrip4iOS**
+```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
-Il [gruppo Facebook xDrip4iOS](https://www.facebook.com/groups/853994615056838/announcements) è il principale supporto della community per xDrip4iOS e Shuggah. **xDrip4iOS** può connettersi a molti sistemi e trasmettitori CGM diversi e visualizzare valori di glicemia, grafici e statistiche, oltre a fornire allarmi. Può anche caricare su Nightscout o agire come [app follower per Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/).
+Il [gruppo Facebook xDrip4iOS](https://www.facebook.com/groups/853994615056838/announcements) è il principale supporto della community per xDrip4iOS e Shuggah. **xDrip4iOS** può connettersi a molti sistemi e trasmettitori CGM diversi e visualizzare valori di glicemia, grafici e statistiche, oltre a fornire allarmi. Può anche caricare su Nightscout o agire come [app follower per Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/). 
 
 "Come posso ottenere **xDrip4iOS** sul mio iPhone?"
 Ci sono due opzioni:
@@ -139,8 +132,7 @@ Se vuoi, puoi poi diventare un "releaser" e [condividere una Personal Testflight
 
 ![image](../images/fae3ec63-2c2c-4152-ab42-97f9744a8f36.png)
 
-"Cos'è **Shuggah**?"
-Un gruppo di sviluppatori ucraini ha copiato il codice del progetto xDrip4iOS (condiviso pubblicamente su GitHub) e lo ha pubblicato sull'App Store con un account aziendale. La versione Shuggah non è in alcun modo gestita dagli sviluppatori di xDrip4iOS.
+"Cos'è **Shuggah**?" Un gruppo di sviluppatori ucraini ha copiato il codice del progetto xDrip4iOS (condiviso pubblicamente su GitHub) e lo ha pubblicato sull'App Store con un account aziendale. La versione Shuggah non è in alcun modo gestita dagli sviluppatori di xDrip4iOS.
 
 Il [gruppo Facebook xDrip4iOS](https://www.facebook.com/groups/853994615056838/announcements) supporta xDrip4iOS e le app abbinate per Apple Watch.
 
@@ -151,8 +143,7 @@ Il [gruppo Facebook xDrip4iOS](https://www.facebook.com/groups/853994615056838/a
 ![image](../images/21b83c41-85c6-4619-a702-a65450768855.png)
 
 
-[Sugarmate](https://sugarmate.io/) è disponibile per il download su iPhone dall'App Store.
-Sugarmate è compatibile con:
+[Sugarmate](https://sugarmate.io/) è disponibile per il download su iPhone dall'App Store. Sugarmate è compatibile con:
 * Apple iPhone (richiede la versione software 13.0 o successiva)
 * Apple iPad (richiede la versione software 13.0 o successiva)
 * Google Android (salva l'app web sulla schermata principale)
@@ -175,7 +166,7 @@ Vedi [qui](../Getting-Started/Watches.md).
 
 ## Dispositivi per seguire AAPS
 
-```{contents} I dispositivi includono:
+```{contents} Devices include:
 :depth: 1
 :local: true
 ```
@@ -188,8 +179,7 @@ L'M5Stack è una piccola scatola che può essere programmata per molte applicazi
 
 ### Sugarpixel
 
-SugarPixel è un dispositivo per il sistema di avvisi del display secondario del glucosio per il monitoraggio continuo del glucosio che si connette all'app Dexcom o Nightscout sullo smartphone dell'utente. Il dispositivo visualizza le letture della glicemia in tempo reale.
-Questo monitor CGM hardware beneficia di avvisi audio a tono casuale (incredibilmente forti), avvisi vibrazione per le persone con problemi di udito, opzioni di visualizzazione personalizzabili e monitoraggio multi-utente nativo.
+SugarPixel è un dispositivo per il sistema di avvisi del display secondario del glucosio per il monitoraggio continuo del glucosio che si connette all'app Dexcom o Nightscout sullo smartphone dell'utente. Il dispositivo visualizza le letture della glicemia in tempo reale. Questo monitor CGM hardware beneficia di avvisi audio a tono casuale (incredibilmente forti), avvisi vibrazione per le persone con problemi di udito, opzioni di visualizzazione personalizzabili e monitoraggio multi-utente nativo.
 
 ![image](../images/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
 
