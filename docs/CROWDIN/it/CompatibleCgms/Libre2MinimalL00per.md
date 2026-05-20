@@ -4,7 +4,7 @@ Trasferito da [MinimalL00per](https://www.minimallooper.com/post/how-to-setup-fr
 
 Un elenco di definizioni è disponibile alla fine di questo documento. Se non hai familiarità con alcuni termini o abbreviazioni, *[vai in fondo](#minimallooper-definitions)* per chiarimenti.
 
- 
+ 
 
 ## Configurazione
 
@@ -40,13 +40,13 @@ Un elenco di definizioni è disponibile alla fine di questo documento. Se non ha
 
 - **NOTA: i nuovi sensori richiedono un'app OOP2 aggiornata; si raccomanda di usare almeno l'ultima versione rilasciata di xDrip+ (Stable), corrispondente all'ultimo OOP2.**
 
- 
+ 
 
 ## Processo
 
 - *Prima scarica e installa le app qui sotto*
 - *Disinstalla le app potenzialmente conflittuali*
-- *Come avviare un sensore FSL2 in modalità Bluetooth nativa usando LL e xDrip+*
+- Come avviare un sensore FSL2 in modalità Bluetooth nativa usando LL e xDrip+
   - [*Passo 1: Installazione e configurazione dell'applicazione*](#minimallooper-step1)
   - [*Passo 2: Configurazione delle impostazioni xDrip+*](#minimallooper-step2)
   - [*Passo 3: Inserire fisicamente il sensore*](#minimallooper-step3)
@@ -154,7 +154,7 @@ Molte persone hanno chiesto se questo metodo può essere utilizzato con un senso
 
 Puoi configurare xDrip+ usando il codice QR qui sotto. Devi scansionarlo (o caricare l'immagine) in xDrip+ -> Auto Configure.
 
-```{admonition} Codice QR
+```{admonition} QR Code
 :class: dropdown
 
 ![Setup Bluetooth](../images/minimal00per/qr_libre2direct-nocalib.png)
@@ -169,7 +169,7 @@ Dopo aver scansionato il codice QR sopra, se hai un telefono Samsung (ma questo 
 - *Trust Auto-Connect*: **off**
 - *Use Background Scans*: **off**
 
-```{admonition} Codice QR
+```{admonition} QR Code
 :class: dropdown
 
 ![Setup Bluetooth](../images/minimal00per/qr_libre2direct_samsung.png)
@@ -177,7 +177,7 @@ Dopo aver scansionato il codice QR sopra, se hai un telefono Samsung (ma questo 
 
 ![xDrip+ BT settings](../images/minimal00per/xdripBT3.png)
 
-**Advanced settings for FSL2** (*opzionale ma utile*)
+**Extra Logging Settings** (*necessario per il debug in caso di malfunzionamento*)
 
 - *show Raw values in Graph*: **on**
 
@@ -185,7 +185,7 @@ Dopo aver scansionato il codice QR sopra, se hai un telefono Samsung (ma questo 
 
 ![xDrip+ BT settings](../images/minimal00per/xdripAS.png)
 
-**Extra Logging Settings** (*necessario per il debug in caso di malfunzionamento*)
+**Advanced settings for FSL2** (*opzionale ma utile*)
 
 - *Extra tags for logging*: inserisci questo valore
 
@@ -273,7 +273,7 @@ Tra 3 e 15 minuti vengono raccolti abbastanza dati per visualizzare i primi valo
 
 Se usi un Samsung (o molti telefoni di marca cinese) e hai problemi a ricevere dati, scansiona il codice QR qui sotto, in xDrip+ -> Auto Configure.
 
-```{admonition} Codice QR
+```{admonition} QR Code
 :class: dropdown
 
 ![Setup Bluetooth](../images/minimal00per/qr_libre2direct_samsung.png)
@@ -337,7 +337,7 @@ Nella schermata **BT Device** (scorrere a sinistra) puoi verificare ulteriori de
 
 - **Uso della modalità aereo:** Ci sono alcune situazioni che richiedono di attivare la modalità aereo (quando si prende un volo ;-), dormire di notte e non si desidera avere segnali WIFI o connessione Mobile operativi con il telefono vicino alla testa) e questo può causare problemi con la comunicazione Bluetooth durante l'attivazione della modalità aereo. Quando si attiva la modalità aereo sul telefono seguita dall'attivazione del Bluetooth, le letture di glicemia vengono perse. L'unica soluzione è riavviare il collettore in xdrip+ -> System Status -> Classic Status Page. Dopo aver riavviato il collettore le letture di glicemia sono riapparse.
 
- 
+ 
 
 (minimallooper-advantages)=
 
@@ -374,12 +374,12 @@ Nella schermata **BT Device** (scorrere a sinistra) puoi verificare ulteriori de
 
 &nbsp;
 
-- **Non puoi eseguire LL e xDrip+ in parallelo insieme per le letture Bluetooth.** LL cercherà sempre di "rubare" la connessione Bluetooth al sensore e abbinarsi. Se ciò accade, sei bloccato con LL per il resto della vita del sensore. Quindi eseguire le app contemporaneamente non funziona sempre. Come menziono di seguito, puoi abilitare l'app LL e fare una scansione NFC per ottenere la lettura LL (se hai bisogno di confrontare, vuoi recuperare la cronologia per te stesso o per le relazioni dell'endocrinologo) tuttavia dovresti disabilitarla non appena hai la tua lettura e non cercare di farlo entro un minuto da quando xDrip+ recupererà la sua lettura Bluetooth. Non sono sicuro di come funziona l'uso del lettore FSL2 mentre si fa questo ma lo testerò in un secondo momento.
+- **Non puoi eseguire LL e xDrip+ in parallelo insieme per le letture Bluetooth.** LL cercherà sempre di "rubare" la connessione Bluetooth al sensore e abbinarsi. LL will always try to "steal" the Bluetooth connection to the sensor and bond. Se ciò accade, sei bloccato con LL per il resto della vita del sensore. Quindi eseguire le app contemporaneamente non funziona sempre. Come menziono di seguito, puoi abilitare l'app LL e fare una scansione NFC per ottenere la lettura LL (se hai bisogno di confrontare, vuoi recuperare la cronologia per te stesso o per le relazioni dell'endocrinologo) tuttavia dovresti disabilitarla non appena hai la tua lettura e non cercare di farlo entro un minuto da quando xDrip+ recupererà la sua lettura Bluetooth. Non sono sicuro di come funziona l'uso del lettore FSL2 mentre si fa questo ma lo testerò in un secondo momento.
 - Diversi utenti hanno segnalato che l'app LL può essere riavviata dopo aver avviato correttamente il sensore e ricevuto letture in xDrip+. Nelle autorizzazioni Android dell'app LL devi semplicemente disattivare l'impostazione **Allow Location**. Una volta fatto questo dovresti essere in grado di usare l'app LL e xDrip+ contemporaneamente. Ti consiglio di non selezionare un'app predefinita per la scansione NFC e di scegliere quale app vuoi usare per leggere il sensore con una scansione NFC. Inoltre, NON DIMENTICARE, al tuo prossimo cambio di sensore di chiudere forzatamente l'app LL dopo la scansione NFC di riscaldamento iniziale sul nuovo sensore. Dopo che il sensore è configurato e riceve letture in xDrip+ puoi riavviare l'app LL.
 
 &nbsp;
 
-- **I dispositivi di scansione NFC di terze parti possono ancora essere usati.** Sì, l'ho elencato come svantaggio ma volevo anche sottolineare che se qualcosa va storto con il sensore e LL cattura il controllo di esso, puoi sempre ripiegare sull'utilizzo di un dispositivo di scansione NFC sul sensore per ottenere letture in xDrip+. Puoi anche usare questo dispositivo invece di una connessione Bluetooth diretta se sei più a tuo agio con una configurazione che consiste in un dispositivo di scansione NFC di terze parti (Miaomiao, Bubble, Blucon). A volte certi telefoni non funzionano bene con il binding nativo del sensore Bluetooth e il recupero dei dati. Puoi usare questi dispositivi come backup o come utilizzo normale, in ogni caso hai ancora questa opzione.
+- **I dispositivi di scansione NFC di terze parti possono ancora essere usati.** Sì, l'ho elencato come svantaggio ma volevo anche sottolineare che se qualcosa va storto con il sensore e LL cattura il controllo di esso, puoi sempre ripiegare sull'utilizzo di un dispositivo di scansione NFC sul sensore per ottenere letture in xDrip+. Yes, I listed this as a disadvantage but I also wanted to point out that if something goes wrong with the sensor and LL captures control of it, you can always fall back to placing an NFC scanning device on the sensor to get readings in xDrip+. Puoi anche usare questo dispositivo invece di una connessione Bluetooth diretta se sei più a tuo agio con una configurazione che consiste in un dispositivo di scansione NFC di terze parti (Miaomiao, Bubble, Blucon). A volte certi telefoni non funzionano bene con il binding nativo del sensore Bluetooth e il recupero dei dati. Puoi usare questi dispositivi come backup o come utilizzo normale, in ogni caso hai ancora questa opzione.
 - Se hai intenzione di usare il **FSL Reader** come dispositivo di scansione NFC per prendere letture, DEVI avviare il sensore FSL2 con la **PRIMA scansione NFC** per riscaldare il sensore con il **READER PER PRIMO**.
 
 &nbsp;
@@ -415,7 +415,7 @@ Nella schermata **BT Device** (scorrere a sinistra) puoi verificare ulteriori de
 
 - **OOP2** - Out of Process Algorithm versione 2, l'app di terze parti che riceve dati crittografati consegnati dal sensore FSL 2 (via Bluetooth o scansione NFC) e poi decrittografa i dati crittografati. Una volta decrittografati, i dati vengono inviati a xDrip+.
 
- 
+ 
 
 (minimallooper-troubleshooting)=
 
