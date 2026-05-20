@@ -39,8 +39,7 @@
 - Se usi lingue diverse, potresti a volte vedere una combinazione di lingue. Ciò è dovuto a un problema Android in cui la sostituzione della lingua Android predefinita a volte non funziona.
 - Impostazione nascosta in [modalità semplice](#preferences-simple-mode).
 
-(preferences-simple-mode)=
-**Modalità semplice**
+(preferences-simple-mode)= **Modalità semplice**
 
 La **modalità semplice** è attivata per impostazione predefinita quando installi **AAPS** per la prima volta. In **modalità semplice**, una quantità significativa di impostazioni è nascosta e le preferenze vengono sostituite da valori predefiniti. I [grafici aggiuntivi](#AapsScreens-section-g-additional-graphs) nella schermata principale sono anch'essi predefiniti. Dovresti disattivare la modalità semplice una volta che ti sei familiarizzato con l'interfaccia utente e le impostazioni di **AAPS**.
 
@@ -50,7 +49,7 @@ La **modalità semplice** è attivata per impostazione predefinita quando instal
 - Visualizzato nel [Watchface Dual](../WearOS/WearOsSmartwatch.md).
 
 (Preferences-skin)=
-### Aspetto grafico
+### Skin
 
 Impostazione nascosta in [modalità semplice](#preferences-simple-mode).
 
@@ -76,7 +75,7 @@ La differenza tra gli altri aspetti dipende dall'orientamento dello schermo del 
 ![Skins depending on phone's display orientation](../images/Screenshots_Skins.png)
 
 (Preferences-protection)=
-## Protezione
+## Protection
 
 ![Preferences > General - Protection](../images/Pref2020_General2.png)
 
@@ -125,7 +124,7 @@ Nella sezione **Panoramica**, puoi definire le preferenze per la schermata princ
 
 ### Mantieni schermo acceso
 
-L'opzione 'Mantieni schermo acceso' costringerà Android a mantenere sempre acceso lo schermo. Questo è utile per le presentazioni ecc. Ma consuma molta energia della batteria. Pertanto, si raccomanda di collegare lo smartphone a un cavo del caricabatterie.
+L'opzione 'Mantieni schermo acceso' costringerà Android a mantenere sempre acceso lo schermo. Questo è utile per le presentazioni ecc. Ma consuma molta energia della batteria. But it consumes a lot of battery power. Pertanto, si raccomanda di collegare lo smartphone a un cavo del caricabatterie.
 
 (Preferences-buttons)=
 ### Pulsanti
@@ -142,12 +141,11 @@ L'opzione 'Mantieni schermo acceso' costringerà Android a mantenere sempre acce
 ![Preferences > Buttons > Carbs](../images/Pref2020_OV_Buttons3.png)
 
 (Preferences-quick-wizard)=
-### Calcolatore rapido
+### Quick Wizard
 
 Crea pulsanti personalizzati per determinati pasti standard o snack che verranno visualizzati nella schermata principale. Utile per pasti standard consumati frequentemente.
 
-Per ogni pulsante, definisci i carboidrati e il metodo di calcolo per il bolo.
-Poi definisci durante quale periodo di tempo il pulsante sarà visibile nella tua schermata principale - solo un pulsante per periodo. Il pulsante non sarà visibile se è al di fuori dell'intervallo di tempo specificato o se hai abbastanza IOB per coprire i carboidrati definiti nel pulsante Calcolatore rapido. Se vengono specificati orari diversi per i diversi pasti, avrai sempre il pulsante del pasto standard appropriato nella schermata principale, a seconda dell'ora del giorno.
+Per ogni pulsante, definisci i carboidrati e il metodo di calcolo per il bolo. Poi definisci durante quale periodo di tempo il pulsante sarà visibile nella tua schermata principale - solo un pulsante per periodo. Il pulsante non sarà visibile se è al di fuori dell'intervallo di tempo specificato o se hai abbastanza IOB per coprire i carboidrati definiti nel pulsante Calcolatore rapido. Se vengono specificati orari diversi per i diversi pasti, avrai sempre il pulsante del pasto standard appropriato nella schermata principale, a seconda dell'ora del giorno.
 
 ![Preferences > Quick Wizard Button Setup](../images/Pref2020_OV_QuickWizard.png)
 
@@ -232,7 +230,7 @@ L'ultima opzione ti permette di importare quelle impostazioni da Nightscout se d
 ![Preferences > Status Lights](../images/Pref2020_OV_StatusLights2.png)
 
 (Preferences-deliver-this-part-of-bolus-wizard-result)=
-### Eroga questa parte del risultato del calcolatore bolo
+### Deliver this part of bolus wizard result
 
 Imposta la [percentuale predefinita](#AapsScreens-section-j) del bolo calcolato quando si usa il calcolatore bolo.
 
@@ -240,13 +238,11 @@ Il valore predefinito è 100%: nessuna correzione. Anche impostando un valore di
 
 Quando si usano gli [SMB](#objectives-objective9), molte persone non somminstrano il 100% dell'insulina necessaria per il pasto, ma solo una parte di essa (es. 75%) e lasciano che gli SMB con UAM (Rilevamento pasti non presidiati) facciano il resto. Usare un valore inferiore al 100% qui può essere utile:
 * per le persone con digestione lenta: inviare tutto il bolo in anticipo può causare ipoglicemia perché l'azione insulinica è più rapida della digestione.
-* per lasciare più spazio ad **AAPS** per gestire da solo l'**aumento della glicemia**.
-In entrambi i casi, **AAPS** compenserà la parte mancante del bolo con gli SMB, se/quando ritenuto adeguato.
+* per lasciare più spazio ad **AAPS** per gestire da solo l'**aumento della glicemia**. In entrambi i casi, **AAPS** compenserà la parte mancante del bolo con gli SMB, se/quando ritenuto adeguato.
 
 ### Soglia di tempo per glicemia vecchia
 
-Se l'ultima **glicemia** ricevuta è più vecchia di questa soglia, il calcolatore bolo offrirà per impostazione predefinita una dose al 100% invece dell'impostazione **Eroga questa parte del risultato del calcolatore bolo** sopra.
-Il motivo è che quando la **glicemia** manca, **AAPS** non sarà in grado di inviare la parte rimanente del bolo in seguito (il loop non è in esecuzione), il che porterebbe a una **glicemia** alta.
+Se l'ultima **glicemia** ricevuta è più vecchia di questa soglia, il calcolatore bolo offrirà per impostazione predefinita una dose al 100% invece dell'impostazione **Eroga questa parte del risultato del calcolatore bolo** sopra. Il motivo è che quando la **glicemia** manca, **AAPS** non sarà in grado di inviare la parte rimanente del bolo in seguito (il loop non è in esecuzione), il che porterebbe a una **glicemia** alta.
 
 ### Consulente bolo abilitato
 
@@ -271,7 +267,7 @@ Impostazione nascosta in [modalità semplice](#preferences-simple-mode).
 
 Impostazione nascosta in [modalità semplice](#preferences-simple-mode).
 
-Opzione per abilitare il super bolo nel calcolatore bolo.
+Option to enable superbolus in bolus wizard.
 
 Il [Super bolo](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) è un concetto per "prendere in prestito" un po' di insulina dalla basale nelle due ore successive per prevenire picchi. È diverso dal *super micro bolus*!
 
@@ -307,9 +303,7 @@ A partire dalla [versione AAPS 3.4](#version3400), non è più possibile imposta
 (Preferences-minimal-request-change)=
 ### Modifica minima richiesta
 
-Quando si usa il **Loop Aperto**, riceverai notifiche ogni volta che **AAPS** raccomanda di aggiustare il tasso basale.
-Per ridurre il numero di notifiche puoi usare un [intervallo target glicemia più ampio](#profile-glucose-targets) o aumentare la percentuale della modifica minima richiesta.
-Questo definisce la modifica relativa necessaria per attivare una notifica.
+Quando si usa il **Loop Aperto**, riceverai notifiche ogni volta che **AAPS** raccomanda di aggiustare il tasso basale. Per ridurre il numero di notifiche puoi usare un [intervallo target glicemia più ampio](#profile-glucose-targets) o aumentare la percentuale della modifica minima richiesta. Questo definisce la modifica relativa necessaria per attivare una notifica.
 
 ## Advanced Meal Assist (AMA) o Super Micro Bolus (SMB)
 
@@ -329,7 +323,7 @@ Tutte le impostazioni per OpenAPS AMA sono descritte nella sezione dedicata in [
 
 Tutte le impostazioni per OpenAPS SMB sono descritte nella sezione dedicata in [Funzionalità chiave di AAPS > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
-## Impostazioni di assorbimento
+## Absorption settings
 
 (Preferences-min_5m_carbimpact)=
 ### min_5m_carbimpact
@@ -340,7 +334,7 @@ L'algoritmo usa BGI (impatto sulla glicemia) per determinare quando i [carboidra
 
 Nei momenti in cui l'assorbimento dei carboidrati non può essere calcolato dinamicamente in base alle reazioni del sangue, **AAPS** inserisce un decadimento predefinito per i tuoi carboidrati. In sostanza, è un meccanismo di sicurezza. Questo valore viene usato solo durante le lacune nelle letture del **CGM** o quando l'attività fisica "consuma" tutta la glicemia che altrimenti farebbe decadere il COB da parte di **AAPS**.
 
-In parole semplici: L'algoritmo "sa" come dovrebbero *comportarsi* le glicemie quando sono influenzate dalla dose di insulina corrente ecc. Ogni volta che c'è una deviazione positiva dal comportamento previsto, alcuni carboidrati vengono assorbiti/decaduti. Grande cambiamento = molti carboidrati ecc.
+In parole semplici: L'algoritmo "sa" come dovrebbero *comportarsi* le glicemie quando sono influenzate dalla dose di insulina corrente ecc. Ogni volta che c'è una deviazione positiva dal comportamento previsto, alcuni carboidrati vengono assorbiti/decaduti. Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Grande cambiamento = molti carboidrati ecc.
 
 Il min_5m_carbimpact definisce l'impatto predefinito sull'assorbimento dei carboidrati per 5 minuti. Per ulteriori dettagli vedi la [documentazione OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
 
@@ -361,15 +355,15 @@ Se mangi spesso pasti ad alto contenuto di grassi o proteine, dovrai aumentare i
 - Definisci il rapporto minimo e massimo di [autosens](#Open-APS-features-autosens).
 - Normalmente i valori standard (max. 1,2 e min. 0,7) non dovrebbero essere modificati.
 
-## Microinfusore
+## Pump
 
 ### BT Watchdog
 
 Attiva BT watchdog se necessario (es. per i microinfusori Dana). Disattiva il Bluetooth per un secondo se non è possibile alcuna connessione al microinfusore. Questo può aiutare su alcuni telefoni dove lo stack Bluetooth si blocca.
 
-## Impostazioni microinfusore
+## Pump settings
 
-Le opzioni qui varieranno a seconda del driver del microinfusore selezionato in [Generatore di configurazione > Microinfusore](#Config-Builder-pump). Accoppia e configura il tuo microinfusore secondo le [istruzioni relative al microinfusore](../Getting-Started/CompatiblePumps.md).
+Le opzioni qui varieranno a seconda del driver del microinfusore selezionato in [Generatore di configurazione > Microinfusore](#Config-Builder-pump).  Accoppia e configura il tuo microinfusore secondo le [istruzioni relative al microinfusore](../Getting-Started/CompatiblePumps.md).
 
 ## Tidepool
 
@@ -394,7 +388,7 @@ Protocollo di comunicazione originale, può essere usato con le versioni più ve
 
 [Nuovo protocollo introdotto con AAPS 3.2.](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) Più sicuro ed efficiente.
 
-```{admonition} Caricatori dati V3
+```{admonition} V3 data uploaders
 :class: warning
 
 Quando si usa NSClientV3, tutti i caricatori devono usare l'API V3. Poiché la maggior parte non è ancora compatibile, ciò significa **devi lasciare che **AAPS** carichi tutti i dati** (glicemia, trattamenti, ...) su Nightscout e disabilitare tutti gli altri caricatori se non sono conformi alla V3.
@@ -416,7 +410,7 @@ Le scelte di sincronizzazione dipenderanno dal modo in cui vuoi usare **AAPS**.
 
 Puoi selezionare quali dati vuoi [caricare e scaricare su o da Nightscout](#Nightscout-aaps-settings).
 
-### Opzioni di allarme
+### Alarm options
 
 ![Alarm options](../images/Pref2024_NSClient_Alarms.png)
 
@@ -456,18 +450,18 @@ Seleziona quale servizio di localizzazione usare:
 - Usa localizzazione di rete: Posizione del tuo Wi-Fi
 - Usa localizzazione GPS (Attenzione! Potrebbe causare un consumo eccessivo della batteria!)
 
-## Allarmi locali
+## Local alerts
 
 ![Local alerts](../images/Pref2020_LocalAlerts.png)
 
 Le impostazioni sono autoesplicative.
 
 (preferences-maintenance-settings)=
-## Impostazioni di manutenzione
+## Maintenance settings
 
 ![Maintenance settings](../images/Pref2020_Maintenance.png)
 
-**Destinatario email**: Il destinatario standard dei log è <mailto:logs@aaps.app>.
+**Destinatario email**: Il destinatario standard dei log è <logs@aaps.app>.
 
 **Scelte dati**
 
@@ -475,11 +469,9 @@ Le impostazioni sono autoesplicative.
 
 Puoi aiutare a sviluppare ulteriormente **AAPS** inviando report di crash agli sviluppatori.
 
-**Esportazioni impostazioni non presidiate**<br/>
-Abilitando questa funzione, consenti ad **AAPS** di eseguire esportazioni delle impostazioni senza l'intervento dell'utente. Per questo la password master viene archiviata in modo sicuro sul tuo telefono (solo) alla successiva esportazione manuale. La password archiviata verrà usata per un massimo di 4 settimane.
-Dopo 4 settimane riceverai una notifica che la password sta per scadere. Durante un periodo di grazia di 1 settimana, la password può essere aggiornata eseguendo manualmente l'esportazione delle impostazioni dal menu di manutenzione.
+**Esportazioni impostazioni non presidiate**<br/> Abilitando questa funzione, consenti ad **AAPS** di eseguire esportazioni delle impostazioni senza l'intervento dell'utente. Per questo la password master viene archiviata in modo sicuro sul tuo telefono (solo) alla successiva esportazione manuale. La password archiviata verrà usata per un massimo di 4 settimane. Dopo 4 settimane riceverai una notifica che la password sta per scadere. Durante un periodo di grazia di 1 settimana, la password può essere aggiornata eseguendo manualmente l'esportazione delle impostazioni dal menu di manutenzione.
 
-Dopo che il periodo di grazia di 1 settimana è scaduto, la password archiviata scade e qualsiasi esportazione automatica delle impostazioni verrà interrotta mentre viene notificato l'utente, chiedendo di reinserire la password. Le [(**esportazioni automatiche delle impostazioni**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) verranno registrate negli elenchi 'Careportal' e 'Inserimento utente' di **AAPS** in Trattamenti.
+Dopo che il periodo di grazia di 1 settimana è scaduto, la password archiviata scade e qualsiasi esportazione automatica delle impostazioni verrà interrotta mentre viene notificato l'utente, chiedendo di reinserire la password.  Le [(**esportazioni automatiche delle impostazioni**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) verranno registrate negli elenchi 'Careportal' e 'Inserimento utente' di **AAPS** in Trattamenti.
 
 Dopo aver abilitato questa opzione, assicurati di eseguire un'esportazione manuale delle impostazioni, dove ti verrà chiesta la password, in modo che **AAPS** possa archiviarla.
 
@@ -499,11 +491,7 @@ Puoi trovare i log di AAPS nella memoria del telefono -> Android -> data -> info
 
 ### Impostazione della directory locale AAPS
 
-<<<<<<< Updated upstream
 This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files. Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab.
-=======
-Le impostazioni di manutenzione includono anche la directory **AAPS**, che si trova direttamente sotto la scheda Manutenzione. Questa impostazione consente all'utente di scegliere una directory sul proprio telefono dove **AAPS** memorizzerà preferenze, log e altri file.
->>>>>>> Stashed changes
 
 ![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
 
@@ -521,7 +509,7 @@ Se selezioni una sottodirectory di AAPS, vedrai un messaggio di errore. Tocca "O
 
 Puoi esportare le impostazioni, i log e i dati CSV su un servizio cloud.
 
-1. Seleziona Directory cloud
+1.  Seleziona Directory cloud
 2. Seleziona il tuo servizio cloud
 3. Abilita esportazione cloud
 
