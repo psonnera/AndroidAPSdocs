@@ -503,7 +503,7 @@ Data di rilascio: 19-07-2022
 - correzione blocco applicazione @MilosKozak
 - corretto driver DASH @avereha
 - corretti driver Dana @MilosKozak
-- enorme miglioramento UI, pulizia e unificazione, migrazione al material design, stili, tema bianco, nuove icone @Andries-Smit @MilosKozak @osodebailar @Philoul @Andries-Smit @MilosKozak @osodebailar @Philoul @Andries-Smit @MilosKozak @osodebailar @Philoul @Andries-Smit @MilosKozak @osodebailar @Philoul
+- enorme miglioramento UI, pulizia e unificazione, migrazione al material design, stili, tema bianco, nuove icone @Andries-Smit @MilosKozak @osodebailar @Philoul @Andries-Smit @MilosKozak @osodebailar @Philoul @Andries-Smit @MilosKozak @osodebailar @Philoul @Andries-Smit @MilosKozak @osodebailar @Philoul @Andries-Smit @MilosKozak @osodebailar @Philoul
 - widget @MilosKozak
 - Supporto CGM Aidex @andyrozman @markvader (solo Pumpcontrol)
 - [Tile Wear OS](#WearOsSmartwatch-wear-os-tiles), traduzioni @Andries-Smit
