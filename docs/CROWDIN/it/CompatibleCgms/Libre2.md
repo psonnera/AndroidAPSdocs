@@ -15,7 +15,7 @@ Ci sono alcune buone ragioni per utilizzare un trasmettitore Bluetooth:
 -   Puoi scegliere diverse strategie di calibrazione OOP2 (1): avere i valori del lettore utilizzando “nessuna calibrazione”, oppure calibrare il sensore come un Libre 1 utilizzando “calibrazione basata su dati grezzi” o infine calibrare i valori del lettore con “calibrazione basata sul glucosio”.  
   Assicurati di lasciare OOP1 disabilitato (2).
 
-    → Menu → Impostazioni → Impostazioni meno usate → Altre opzioni opzioni opzioni opzioni opzioni opzioni
+    → Menu → Impostazioni → Impostazioni meno usate → Altre opzioni opzioni opzioni opzioni opzioni opzioni opzioni
 
 ![Calibrazione OOP2](../images/Libre2_OOP2Calibration.png)
 
