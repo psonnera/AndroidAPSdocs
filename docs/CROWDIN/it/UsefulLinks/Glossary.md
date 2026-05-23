@@ -26,7 +26,7 @@ __BG__ = glicemia (blood glucose).
 
 __BGI__ = impatto sulla glicemia (blood glucose impact). Il grado in cui la __BG__ 'dovrebbe' salire o scendere basandosi solo sull'attività dell'insulina.
 
-__Rumore del sensore__ = termine usato per descrivere le letture instabili del __CGM__ che portano a valori di __BG__ "saltellanti". Ulteriori informazioni → Wiki - 'rumore del sensore'.
+__Sorgente BG__ = la sorgente dei valori di __BG__ dell'utente derivati da __CGM__ o __FGM__ tramite un software di integrazione come __BYODA__, __xDrip+__ ecc. Ulteriori informazioni → Wiki - 'Sorgente BG'  Further info → Wiki - 'sensor noise'. Further info → Wiki - 'temp targets'.
 
 __Bridge__ = dispositivo aggiuntivo che trasforma __FGM__ in __CGM__.
 
@@ -119,7 +119,7 @@ __SEN__ = spia di stato cambio sensore nella schermata principale Preferenze, Sc
 
 __Rilevamento della Sensibilità__ = calcolo della sensibilità all'insulina come risultato di esercizio, ormoni ecc. vedere anche → DIABETTECH - 'Autosens'.
 
-__TT__ = target temporaneo (temporary target): aumento/diminuzione temporanea del target (intervallo) di __BG__ dell'utente, ad es. per attività di pasto o sportive.  Ulteriori informazioni → Wiki - 'target temporanei'.
+__Rumore del sensore__ = termine usato per descrivere le letture instabili del __CGM__ che portano a valori di __BG__ "saltellanti".  Ulteriori informazioni → Wiki - 'rumore del sensore'.
 
 __SMB__ = Super Micro Bolo (Super Micro Bolus). Funzionalità di __AAPS__ per un'erogazione più rapida di insulina al fine di regolare la __BG__.  Ulteriori informazioni → Wiki - '__SMB__' e vedere anche __UAM__.
 
@@ -131,7 +131,7 @@ __TBR__ = basale temporanea (temporary basal rate) → vedere anche __TBB__ / __
 
 __TDD__ = dose giornaliera totale (bolo + basale al giorno) → vedere anche __TBB__ / __TBR__.
 
-__Sorgente BG__ = la sorgente dei valori di __BG__ dell'utente derivati da __CGM__ o __FGM__ tramite un software di integrazione come __BYODA__, __xDrip+__ ecc. Ulteriori informazioni → Wiki - 'Sorgente BG'  Further info → Wiki - 'sensor noise'.  Further info → Wiki - 'temp targets'.
+__TT__ = target temporaneo (temporary target): aumento/diminuzione temporanea del target (intervallo) di __BG__ dell'utente, ad es. per attività di pasto o sportive.  Ulteriori informazioni → Wiki - 'target temporanei'.
 
 __UAM__ = Pasti non annunciati (unannounced meals). Rilevamento di un aumento significativo dei livelli di __BG__ dovuto a pasti, adrenalina o altre influenze e tentativo di correzione.  Ulteriori informazioni → Wiki - 'UAM' e vedere anche __SMB__.
 

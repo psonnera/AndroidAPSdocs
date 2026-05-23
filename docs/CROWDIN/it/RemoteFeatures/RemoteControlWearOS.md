@@ -204,8 +204,8 @@ Il riquadro azioni può contenere da 1 a 4 pulsanti di azione definiti dall'uten
 Le azioni supportate nel riquadro Azioni possono richiedere all'app AAPS sul telefono:
 
 * **Calc**: esegui un calcolo del bolo, basato sull'input di carboidrati e facoltativamente una percentuale [1]
-* **Ipo**: per alzare il target durante il trattamento dell'ipoglicemia
-* **Pasto imminente**: per abbassare il target e aumentare l'insulina attiva
+* **Trattamento**: richiedi sia l'erogazione di insulina che l'aggiunta di carboidrati
+* **Insulina**: richiedi l'erogazione di insulina inserendo le unità di insulina
 * **Carboidrati**: aggiungi carboidrati (estesi)
 * **Annulla**: per fermare l'obiettivo temporaneo corrente
 

@@ -91,7 +91,7 @@ Su un'installazione esistente è possibile selezionare il microinfusore **DASH**
 
 Nel **menu hamburger** in alto a sinistra selezionare **Costruttore di configurazione (1)** ➜ **Microinfusore** ➜ **Dash** ➜ **Ingranaggio Impostazioni (3)** selezionando il **pulsante radio (2)** intitolato **Dash**.
 
-Selezionare questa casella faciliterà l'accesso ai comandi DASH durante l'utilizzo di **AAPS**. Selezionando la **casella di controllo (4)** accanto all'**Ingranaggio Impostazioni (3)** si consente la visualizzazione del menu DASH come scheda nell'interfaccia **AAPS** con il titolo **DASH**.
+Selezionando la **casella di controllo (4)** accanto all'**Ingranaggio Impostazioni (3)** si consente la visualizzazione del menu Dash come scheda nell'interfaccia **AAPS** con il titolo **DASH**. Le impostazioni del driver Dash sono configurabili dal **menu hamburger** in alto a sinistra sotto **Costruttore di configurazione (1)** ➜ **Microinfusore** **Dash** ➜ **Ingranaggio Impostazioni (3)** selezionando il **pulsante radio (2)** intitolato **Dash**.
 
 **NOTA:** Un modo più veloce per accedere alle [**impostazioni Dash**](#omnipod-dash-settings) è disponibile nella sezione impostazioni DASH di questo documento.
 
@@ -99,7 +99,7 @@ Selezionare questa casella faciliterà l'accesso ai comandi DASH durante l'utili
 
 ### Verifica della selezione del driver Omnipod
 
-Per verificare di aver selezionato il DASH in **AAPS**, se hai **selezionato la casella (4)**, **scorri verso sinistra** dalla scheda **Panoramica** e vedrai ora una scheda **DASH** in **AAPS**. Se questa casella è lasciata deselezionata, troverai la scheda DASH nel menu hamburger in alto a sinistra.
+Selezionando la **casella di controllo (4)** accanto all'**Ingranaggio Impostazioni (3)** si consente la visualizzazione del menu DASH come scheda nell'interfaccia **AAPS** con il titolo **DASH**. Selezionare questa casella faciliterà l'accesso ai comandi DASH durante l'utilizzo di **AAPS**.
 
 ![Enable_Dash_4](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
@@ -135,7 +135,7 @@ Per verificare di aver selezionato il DASH in **AAPS**, se hai **selezionato la 
 
    ![Activate_Pod_3](../images/DASH_images/Activate_pod_error.png)
 
-3. Quando l'innesco è riuscito apparirà un segno di spunta verde e il pulsante **Avanti** diventerà disponibile. Nella schermata **Inizializza Pod**, il pod inizierà l'innesco (si sentirà un clic seguito da una serie di ticchettii mentre il pod si innescha da solo).
+3. Nella schermata **Inizializza Pod**, il pod inizierà l'innesco (si sentirà un clic seguito da una serie di ticchettii mentre il pod si innescha da solo). Quando l'innesco è riuscito apparirà un segno di spunta verde e il pulsante **Avanti** diventerà disponibile.
 
    ![Activate_Pod_5](../images/DASH_images/Activate_Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/DASH_images/Activate_Pod/Activate_Pod_6.jpg)
 
@@ -157,7 +157,7 @@ Per verificare di aver selezionato il DASH in **AAPS**, se hai **selezionato la 
 
    ![Activate_Pod_10](../images/DASH_images/Activate_Pod/Activate_Pod_10.png)    ![Activate_Pod_11](../images/DASH_images/Activate_Pod/Activate_Pod_11.jpg)
 
-8. Alla disattivazione riuscita verrà visualizzato un segno di spunta verde. Fare clic sul pulsante **Avanti** per visualizzare la schermata di pod disattivato.
+8. Sullo schermo apparirà un segno di spunta verde e il pulsante **Avanti** diventerà disponibile dopo un inserimento riuscito della cannula. Fare clic sul pulsante **Avanti**.
 
    ![Activate_Pod_12](../images/DASH_images/Activate_Pod/Activate_Pod_12.jpg)
 
@@ -255,7 +255,7 @@ Il processo seguente mostrerà come confermare e ignorare i segnali acustici del
 
    ![ACK_alerts_1](../images/DASH_images/ACK_Alerts/ACK_ALERTS_1.png)
 
-2. Andare alla scheda **DASH** e premere il pulsante **SILENZIA AVVISI (2)**. **AAPS** invia il comando al pod per disattivare i segnali acustici di avviso di scadenza del pod e aggiorna il campo **Stato pod (1)** con **CONFERMA AVVISI**.
+2. Questo attiverà anche la visualizzazione del pulsante **SILENZIA AVVISI (3)**. **AAPS** invia il comando al pod per disattivare i segnali acustici di avviso di scadenza del pod e aggiorna il campo **Stato pod (1)** con **CONFERMA AVVISI**.
 
    ![ACK_alerts_2](../images/DASH_images/ACK_Alerts/ACK_ALERTS_2.png)
 
@@ -497,7 +497,7 @@ Per problemi noti con le connessioni Bluetooth, disconnessioni di microinfusori/
      - Se **AAPS** non riesce a riprendere l'erogazione da solo (questo accade se il pod non è raggiungibile, il suono è disattivato ecc.), il pod inizierà a emettere 4 segnali acustici ogni minuto per 3 minuti, poi ripetuti ogni 15 minuti se l'erogazione è ancora sospesa per più di 20 minuti.
   - Per i comandi non confermati, "aggiorna stato pod" dovrebbe confermarli/negarli.
 
-********NOTE:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, ***so you need to check !*********
+***********NOTE:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, ***so you need to check !************
 
 ---
 ### Pod Failures
