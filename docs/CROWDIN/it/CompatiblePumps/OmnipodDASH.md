@@ -99,7 +99,7 @@ Selezionando la **casella di controllo (4)** accanto all'**Ingranaggio Impostazi
 
 ### Verifica della selezione del driver Omnipod
 
-Selezionando la **casella di controllo (4)** accanto all'**Ingranaggio Impostazioni (3)** si consente la visualizzazione del menu Dash come scheda nell'interfaccia **AAPS** con il titolo **DASH**. Selezionare questa casella faciliterà l'accesso ai comandi DASH durante l'utilizzo di **AAPS**.
+Selezionando la **casella di controllo (4)** accanto all'**Ingranaggio Impostazioni (3)** si consente la visualizzazione del menu Dash come scheda nell'interfaccia **AAPS** con il titolo **DASH**. Le impostazioni del driver Dash sono configurabili dal **menu hamburger** in alto a sinistra sotto **Costruttore di configurazione (1)** ➜ **Microinfusore** **Dash** ➜ **Ingranaggio Impostazioni (3)** selezionando il **pulsante radio (2)** intitolato **Dash**.
 
 ![Enable_Dash_4](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
@@ -381,7 +381,7 @@ Di seguito è descritta la funzione di ogni icona nel menu **Gestione Pod**, acc
 
 ## Impostazioni Dash
 
-Le impostazioni del driver Dash sono configurabili dal **menu hamburger** in alto a sinistra sotto **Costruttore di configurazione (1)** ➜ **Microinfusore** **Dash** ➜ **Ingranaggio Impostazioni (3)** selezionando il **pulsante radio (2)** intitolato **Dash**. Selezionando la **casella di controllo (4)** accanto all'**Ingranaggio Impostazioni (3)** si consente la visualizzazione del menu Dash come scheda nell'interfaccia **AAPS** con il titolo **DASH**.
+Selezionare questa casella faciliterà l'accesso ai comandi DASH durante l'utilizzo di **AAPS**. Selezionando la **casella di controllo (4)** accanto all'**Ingranaggio Impostazioni (3)** si consente la visualizzazione del menu Dash come scheda nell'interfaccia **AAPS** con il titolo **DASH**.
 
 ![Dash_settings_1](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
@@ -497,7 +497,7 @@ Per problemi noti con le connessioni Bluetooth, disconnessioni di microinfusori/
      - Se **AAPS** non riesce a riprendere l'erogazione da solo (questo accade se il pod non è raggiungibile, il suono è disattivato ecc.), il pod inizierà a emettere 4 segnali acustici ogni minuto per 3 minuti, poi ripetuti ogni 15 minuti se l'erogazione è ancora sospesa per più di 20 minuti.
   - Per i comandi non confermati, "aggiorna stato pod" dovrebbe confermarli/negarli.
 
-**************NOTE:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, ***so you need to check !***************
+*****************NOTE:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, ***so you need to check !******************
 
 ---
 ### Pod Failures
