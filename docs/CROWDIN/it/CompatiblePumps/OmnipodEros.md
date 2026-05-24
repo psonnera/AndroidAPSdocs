@@ -397,13 +397,13 @@ Di seguito è riportata una spiegazione del layout e del significato delle icone
 
 - **Indirizzo pod:** Visualizza l'indirizzo corrente a cui si fa riferimento al pod attivo.
 
-- **Ora sul pod:** Visualizza l'ora corrente sul pod attivo.
+- **Scadenza pod:** Visualizza la data e l'ora in cui scadrà il pod attivo.
 
 - **TID:** Visualizza il numero di serie del pod.
 
 - **Versione firmware:** Visualizza la versione firmware del pod attivo.
 
-- **Ultimo bolo:** Visualizza il dosaggio dell'ultimo bolo inviato al pod attivo e quanto tempo fa è stato erogato (tra parentesi).
+- **Ora sul pod:** Visualizza l'ora corrente sul pod attivo.
 
 - **Stato pod:** Visualizza lo stato del pod attivo.
 
@@ -416,7 +416,7 @@ Di seguito è riportata una spiegazione del layout e del significato delle icone
 - *1 minuto fa* - più di 60 secondi ma meno di 120 secondi (2 min).
 - *XX minuti fa* - più di 2 minuti fa, come definito dal valore di XX.
 
-- **Scadenza pod:** Visualizza la data e l'ora in cui scadrà il pod attivo.
+- **Ultimo bolo:** Visualizza il dosaggio dell'ultimo bolo inviato al pod attivo e quanto tempo fa è stato erogato (tra parentesi).
 
 - **Velocità basale base:** Visualizza la velocità basale programmata per l'orario corrente dal profilo della velocità basale.
 
