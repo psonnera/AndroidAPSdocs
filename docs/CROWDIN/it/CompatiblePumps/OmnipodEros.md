@@ -403,7 +403,7 @@ Di seguito è riportata una spiegazione del layout e del significato delle icone
 
 - **Versione firmware:** Visualizza la versione firmware del pod attivo.
 
-- **Ora sul pod:** Visualizza l'ora corrente sul pod attivo.
+- **Scadenza pod:** Visualizza la data e l'ora in cui scadrà il pod attivo.
 
 - **Stato pod:** Visualizza lo stato del pod attivo.
 
