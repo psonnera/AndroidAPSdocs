@@ -409,7 +409,7 @@ Di seguito è riportata una spiegazione del layout e del significato delle icone
 
 - **Ultima connessione:** Visualizza l'ultima volta in cui è stata stabilita la comunicazione con il pod attivo.
 
-- **Ultimo bolo:** Visualizza il dosaggio dell'ultimo bolo inviato al pod attivo e quanto tempo fa è stato erogato (tra parentesi).
+- **Scadenza pod:** Visualizza la data e l'ora in cui scadrà il pod attivo.
 
 - *Pochi secondi fa* - meno di 20 secondi fa.
 - *Meno di un minuto fa* - più di 20 secondi ma meno di 60 secondi fa.
