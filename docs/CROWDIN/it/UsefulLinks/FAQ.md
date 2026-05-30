@@ -151,7 +151,7 @@ La percentuale del cambio profilo, il valore per il target temporaneo di attivit
 Puoi rimuovere il microinfusore per essere 'libero', ma dovresti dirlo ad AAPS in modo che i calcoli IOB siano corretti.  Vedi [la descrizione sopra](#FAQ-disconnect-pump).
 
 #### Consumo di alcol
-Il consumo di alcol è rischioso in modalità loop chiuso perché l'algoritmo non riesce a prevedere correttamente l'influenza dell'alcol sulla BG. Devi trovare il tuo metodo per gestire questo usando le seguenti funzioni in AAPS:
+Il consumo di alcol è rischioso in modalità loop chiuso perché l'algoritmo non riesce a prevedere correttamente l'influenza dell'alcol sulla glicemia. Devi trovare il tuo metodo per gestire questo usando le seguenti funzioni in AAPS:
 
 * Disattivare la modalità loop chiuso e trattare il diabete manualmente oppure
 * impostare target temporanei alti e disattivare UAM per evitare che il loop aumenti l'IOB a causa di un pasto non annunciato oppure
@@ -162,7 +162,7 @@ Quando si consuma alcol, è sempre necessario tenere d'occhio il CGM per evitare
 #### Dormire
 
 ##### Come posso fare loop durante la notte senza radiazioni da cellulare e WIFI?
-Molti utenti mettono il telefono in modalità aereo di notte. Se vuoi che il loop ti supporti mentre dormi, procedi come segue (funzionerà solo con una sorgente BG locale come xDrip+ o ['Costruisci la tua app Dexcom'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app), NON funzionerà se ricevi le letture BG tramite Nightscout):
+Molti utenti mettono il telefono in modalità aereo di notte. Se vuoi che il loop ti supporti mentre dormi, procedi come segue (funzionerà solo con una sorgente BG locale come xDrip+ o ['Costruisci la tua app Dexcom'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app), NON funzionerà se ricevi le letture glicemia tramite Nightscout):
 
 1. Attiva la modalità aereo sul cellulare.
 2. Attendi che la modalità aereo sia attiva.
@@ -170,7 +170,7 @@ Molti utenti mettono il telefono in modalità aereo di notte. Se vuoi che il loo
 
 Non stai ricevendo chiamate e non sei connesso a Internet. Ma il loop è ancora in esecuzione.
 
-Alcune persone hanno riscontrato problemi con la trasmissione locale (AAPS non riceve valori BG da xDrip+) quando il telefono è in modalità aereo. Vai a Impostazioni > Impostazioni inter-app > Identifica il ricevitore e inserisci `info.nightscout.androidaps`.
+Alcune persone hanno riscontrato problemi con la trasmissione locale (AAPS non riceve valori glicemia da xDrip+) quando il telefono è in modalità aereo. Vai a Impostazioni > Impostazioni inter-app > Identifica il ricevitore e inserisci `info.nightscout.androidaps`.
 
 ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
@@ -284,11 +284,11 @@ Se desideri monitorare/controllare AAPS tramite l'app AAPSClient remote Wear, av
 
 I triangoli rossi e gialli sono una funzione di sicurezza in AAPS v3.
 
-Il triangolo rosso significa che hai glicemie duplicate e AAPS non riesce a calcolare con precisione i delta. Non puoi chiudere il loop. È necessario eliminare una BG di ciascun valore duplicato per cancellare il triangolo rosso. Vai alla scheda BYODA o xDRIP, tieni premuta una riga che vuoi eliminare, spunta una di ciascuna riga duplicata (o tramite il menu a 3 punti ed Elimina, a seconda della versione di AAPS). Potrebbe essere necessario reimpostare i database AAPS se ci sono troppe BG doppie. In questo caso, perderai anche le statistiche, IOB, COB, il profilo selezionato.
+Il triangolo rosso significa che hai glicemie duplicate e AAPS non riesce a calcolare con precisione i delta. Non puoi chiudere il loop. È necessario eliminare una glicemia di ciascun valore duplicato per cancellare il triangolo rosso. Vai alla scheda BYODA o xDRIP, tieni premuta una riga che vuoi eliminare, spunta una di ciascuna riga duplicata (o tramite il menu a 3 punti ed Elimina, a seconda della versione di AAPS). Potrebbe essere necessario reimpostare i database AAPS se ci sono troppe glicemia doppie. In questo caso, perderai anche le statistiche, IOB, COB, il profilo selezionato.
 
-Possibile origine del problema: xDrip e/o NS che riempiono le BG retroattivamente.
+Possibile origine del problema: xDrip e/o NS che riempiono le glicemia retroattivamente.
 
-Il triangolo giallo significa ritardo instabile tra ogni lettura BG. Non ricevi BG ogni 5 minuti regolarmente o mancano BG. È spesso un problema di Libre. Accade anche quando si cambia il trasmettitore G6. Se il triangolo giallo è correlato al cambio del trasmettitore G6, scomparirà da solo dopo alcune ore (circa 24 ore). In caso di Libre, il triangolo giallo rimarrà. Il loop può essere chiuso e funziona correttamente.
+Il triangolo giallo significa ritardo instabile tra ogni lettura glicemia. Non ricevi glicemia ogni 5 minuti regolarmente o mancano glicemia. È spesso un problema di Libre. Accade anche quando si cambia il trasmettitore G6. Se il triangolo giallo è correlato al cambio del trasmettitore G6, scomparirà da solo dopo alcune ore (circa 24 ore). In caso di Libre, il triangolo giallo rimarrà. Il loop può essere chiuso e funziona correttamente.
 
 
 ### Posso spostare un Pod DASH attivo su altro hardware?
