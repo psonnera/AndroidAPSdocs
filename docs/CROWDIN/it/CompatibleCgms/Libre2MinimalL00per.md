@@ -319,7 +319,7 @@ Nella schermata **BT Device** (scorrere a sinistra) puoi verificare ulteriori de
 
 &nbsp;
 
-- **Riavvio del telefono**: Dopo il riavvio e dopo aver disabilitato o chiuso forzatamente l'app, RICORDA di verificare che l'app LL NON sia in esecuzione. Suggerisco di testare un riavvio per vedere se LL si avvia di nuovo automaticamente. Puoi guardare nelle impostazioni dell'app LL nelle impostazioni dell'applicazione Android sul tuo telefono. Se è ancora abilitata, disabilita di nuovo l'app LL; potrebbe essere necessario disinstallare l'app LL per evitarlo. Questo serve a impedire a LL di rubare accidentalmente il binding BT. Inoltre, dopo il riavvio ci vorranno gli stessi 3-15 minuti per ottenere letture BT dal sensore, quindi sii paziente e pianifica questo se stai riavviando in prossimità di momenti in cui hai bisogno di una lettura BG per effettuare boli, pasti, ecc.
+- **Riavvio del telefono**: Dopo il riavvio e dopo aver disabilitato o chiuso forzatamente l'app, RICORDA di verificare che l'app LL NON sia in esecuzione. Suggerisco di testare un riavvio per vedere se LL si avvia di nuovo automaticamente. Puoi guardare nelle impostazioni dell'app LL nelle impostazioni dell'applicazione Android sul tuo telefono. Se è ancora abilitata, disabilita di nuovo l'app LL; potrebbe essere necessario disinstallare l'app LL per evitarlo. Questo serve a impedire a LL di rubare accidentalmente il binding BT. Inoltre, dopo il riavvio ci vorranno gli stessi 3-15 minuti per ottenere letture BT dal sensore, quindi sii paziente e pianifica questo se stai riavviando in prossimità di momenti in cui hai bisogno di una lettura glicemia per effettuare boli, pasti, ecc.
 
 &nbsp;
 
