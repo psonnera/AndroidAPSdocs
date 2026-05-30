@@ -252,7 +252,7 @@ I colori sono specificati con un campo di testo che inizia con `#` seguito dai v
 È anche possibile usare il keyvalue specifico `"bgColor"` per usare automaticamente `"highColor"`, `"midColor"`, `"lowColor"` specificati nei parametri generali in base al valore glicemia:
 
 - `"fontColor": "bgColor",` imposterà automaticamente il colore del font della vista in base al valore glicemia
-- Nota che le viste `sgv` (per il valore glicemia) e `direction` (per la freccia di tendenza) applicano automaticamente i colori BG impostati nei parametri generali (per queste 2 viste, se si vogliono colori diversi, occorre usare la funzionalità avanzata [dynData](#cwf-reference-dyndata-feature) con un colore a passo singolo...)
+- Nota che le viste `sgv` (per il valore glicemia) e `direction` (per la freccia di tendenza) applicano automaticamente i colori glicemici impostati nei parametri generali (per queste 2 viste, se si vogliono colori diversi, occorre usare la funzionalità avanzata [dynData](#cwf-reference-dyndata-feature) con un colore a passo singolo...)
 
 Per maggiori informazioni sulle ImageView e sulla chiave `"color":`, vedere il capitolo dedicato [Regolare il colore dell'immagine](#cwf-reference-tune-image-color) sotto.
 
