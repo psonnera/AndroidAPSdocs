@@ -625,7 +625,7 @@ Per la risoluzione dei problemi vedere questa [pagina](../GettingHelp/Troublesho
 ## Fonte BG - xDrip+, BYODA...
 ![BG Source tab - here Nightscout](../images/Screenshots_BGSource.png)
 
-A seconda delle impostazioni della fonte BG, questa scheda ha un nome diverso.
+A seconda delle impostazioni dell'origine BG, questa scheda ha un nome diverso.
 
 Mostra la cronologia delle letture CGM e offre l'opzione di rimuovere una lettura in caso di errore (ad es. bassa per compressione) o letture duplicate.
 
