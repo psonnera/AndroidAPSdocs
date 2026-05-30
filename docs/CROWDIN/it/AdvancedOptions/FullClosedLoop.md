@@ -27,7 +27,7 @@ Il successo dell'**FCL** richiede che l'utente:
 L'**FCL** non è per tutti:
 
 - Alcuni utenti **FCL** raggiungono un TIR (70-180) intorno al 90% e HbA1c sotto il 6%, tuttavia altri utenti preferiscono un controllo più stretto. In particolare, minimizzare i valori sopra 140 mg/dl con diete con carboidrati a rapido assorbimento richiede probabilmente un pre-bolo.
-- La messa a punto di **AAPS** può essere impegnativa. Non è adatta agli utenti che si sentono sopraffatti da AAPS.  Sarà necessario dedicare alcune settimane per regolare e mettere a punto l'**FCL**. Investire tale tempo può portare a risultati migliori e a un miglior controllo della **BG**.
+- La messa a punto di **AAPS** può essere impegnativa. Non è adatta agli utenti che si sentono sopraffatti da AAPS.  Sarà necessario dedicare alcune settimane per regolare e mettere a punto l'**FCL**. Investire tale tempo può portare a risultati migliori e a un miglior controllo della **glicemia**.
 - La gestione dei pasti può diventare più facile, tuttavia l'esercizio fisico può essere ancora difficile nell'**FCL**. La maggior parte di noi vorrebbe limitare gli spuntini sportivi nel tentativo di controllare il peso corporeo.
 - Rimangono ancora difficoltà nell'stabilire un **FCL** per i bambini (discusso di seguito).
 
@@ -42,7 +42,7 @@ L'**FCL** richiede che l'utente configuri e metta a punto le proprie **Automazio
 
 ## Insulina veloce (Lyumjev, Fiasp)
 
-Con l'**FCL**, l'algoritmo è sintonizzato per rilevare **UAM** e somministrare automaticamente insulina per contrastare gli aumenti di **BG**.  Un **Target Temporaneo** alto e una **Percentuale Profilo** più bassa (già efficace intorno all'inizio del pasto) dovrebbero essere impostati ben prima di qualsiasi attività.
+Con l'**FCL**, l'algoritmo è sintonizzato per rilevare **UAM** e somministrare automaticamente insulina per contrastare gli aumenti di **glicemia**.  Un **Target Temporaneo** alto e una **Percentuale Profilo** più bassa (già efficace intorno all'inizio del pasto) dovrebbero essere impostati ben prima di qualsiasi attività.
 
 Uno studio di modellizzazione (si veda LINK FullLoop V2/marzo23; qui la sezione 2.2) può mostrare in termini quantitativi che le *insuline più veloci*
 
@@ -54,9 +54,9 @@ Fonte:
 
 IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
 
-- porteranno a picchi di **BG** significativamente più bassi rispetto alle insuline più lente;
+- porteranno a picchi di **glicemia** significativamente più bassi rispetto alle insuline più lente;
 - tollerano un bolo anticipato di qualche minuto prima del primo pasto senza incorrere in altezze inaccettabili dei picchi; e
-- minimizzano l'effetto sul picco di **BG** da diversi carichi di carboidrati (dimensioni del pasto).
+- minimizzano l'effetto sul picco di **glicemia** da diversi carichi di carboidrati (dimensioni del pasto).
 
 L'**FCL** difficilmente sarà efficace con un'insulina diversa da Lyumjev o Fiasp, a meno che l'utente non segua una dieta a carboidrati molto moderati o bassi.
 
@@ -64,9 +64,9 @@ Tuttavia, Fiasp o Lyumjev possono causare frequenti occlusioni del microinfusore
 
 ## Prerequisiti
 
-I valori di **BG** e la connettività Bluetooth stabile sono necessari per garantire che **AAPS** possa operare in modo ottimale senza perdere tempo prezioso. L'**FCL** richiede un sistema tecnicamente stabile 24/7:
+I valori di **glicemia** e la connettività Bluetooth stabile sono necessari per garantire che **AAPS** possa operare in modo ottimale senza perdere tempo prezioso. L'**FCL** richiede un sistema tecnicamente stabile 24/7:
 
-- le prestazioni del tuo **CGM**. Il CGM non dovrebbe produrre valori di **BG** irregolari che potrebbero essere interpretati erroneamente dall'**FCL** come segno di un pasto iniziato. Allo stesso modo, le calibrazioni del **CGM** possono produrre risultati irregolari.
+- le prestazioni del tuo **CGM**. Il CGM non dovrebbe produrre valori di **glicemia** irregolari che potrebbero essere interpretati erroneamente dall'**FCL** come segno di un pasto iniziato. Allo stesso modo, le calibrazioni del **CGM** possono produrre risultati irregolari.
 - come e dove viene eseguita qualsiasi uniformazione del **CGM**, e cosa questo potrebbe implicare per la tua messa a punto. In particolare come viene definito il delta, e AAPS che lo riconosce come segno di un pasto iniziato.
 - stabilità Bluetooth per il microinfusore e il CGM;
 - evitare (o almeno il riconoscimento precoce di) occlusioni del microinfusore;
@@ -78,7 +78,7 @@ Quanto sopra varierà a seconda del sistema di componenti **AAPS** e del tuo sti
 
 ## Limitazioni legate ai pasti
 
-- Configurare un **FCL** potrebbe essere più facile per le persone le cui diete non consistono di alimenti con un effetto rapido e alto sulla **BG**, e schemi alimentari che non variano selvaggiamente di giorno in giorno. Questo non significa necessariamente una dieta a bassi carboidrati.
+- Configurare un **FCL** potrebbe essere più facile per le persone le cui diete non consistono di alimenti con un effetto rapido e alto sulla **glicemia**, e schemi alimentari che non variano selvaggiamente di giorno in giorno. Questo non significa necessariamente una dieta a bassi carboidrati.
 
 - Le diete ricche di grassi o proteine, o la digestione lenta/gastroparesi, rendono le cose più facili piuttosto che più difficili per l'**FCL** perché i carboidrati tardivi coprono piacevolmente le inevitabili "code" dell'azione tardiva del bolo necessario attorno al momento del picco.
 
@@ -93,7 +93,7 @@ La sfida per la modalità **UAM** aumenta con l'aumentare dell'"Effetto sulla Gl
 
 ![Glycemic index and effect on blood glucose](../images/fullClosedLoop01.png)
 
-I pasti più difficili per l'**FCL** sono quelli con componenti esclusivamente ad alto e molto alto **EBG** (vedere il rosso nell'immagine): Non solo la **BG** sale rapidamente, ma c'è anche poco componente di grasso/proteine/fibre per bilanciare l'inevitabile "coda" dell'attività insulinica che verrebbe con i tentativi di controllare il glucosio alto prima.
+I pasti più difficili per l'**FCL** sono quelli con componenti esclusivamente ad alto e molto alto **EBG** (vedere il rosso nell'immagine): Non solo la **glicemia** sale rapidamente, ma c'è anche poco componente di grasso/proteine/fibre per bilanciare l'inevitabile "coda" dell'attività insulinica che verrebbe con i tentativi di controllare il glucosio alto prima.
 
 Il consumo irregolare di spuntini e bevande dolci cariche di carboidrati a rapido assorbimento è problematico per l'**FCL**.
 
@@ -104,7 +104,7 @@ Quando si fa esercizio o si è attivi, con un microinfusore o un loop chiuso ibr
 
 La sezione seguente fornisce una guida su come raggruppare le Condizioni delle **Automazioni** e come affrontare le situazioni in cui **AAPS** dovrebbe aumentare (o diminuire) l'erogazione di insulina.  Poiché l'**ISF** non può essere direttamente sintonizzato, aumentare la **Percentuale Profilo** sopra il 100% farà lo stesso ai nostri scopi.
 
-I livelli di attività fisica insoliti o irregolari presentano difficoltà per l'**FCL**. La pianificazione anticipata è necessaria per l'esercizio (specialmente se si vuole ridurre il bisogno di carboidrati di soccorso/spuntini durante le ipoglicemie sportive). Dopo una giornata attiva si raccomanda di impostare una **Percentuale Profilo** inferiore per la notte dopo che il pasto serale è completamente digerito: impostare nelle **Automazioni** un target di **BG** elevato (>100 mg/dl), con "nessun **SMB** a target elevato" selezionato nelle preferenze di **AAPS**.
+I livelli di attività fisica insoliti o irregolari presentano difficoltà per l'**FCL**. La pianificazione anticipata è necessaria per l'esercizio (specialmente se si vuole ridurre il bisogno di carboidrati di soccorso/spuntini durante le ipoglicemie sportive). Dopo una giornata attiva si raccomanda di impostare una **Percentuale Profilo** inferiore per la notte dopo che il pasto serale è completamente digerito: impostare nelle **Automazioni** un target di **glicemia** elevato (>100 mg/dl), con "nessun **SMB** a target elevato" selezionato nelle preferenze di **AAPS**.
 
 ## Ostacoli per i bambini
 
@@ -112,7 +112,7 @@ L'**FCL** può presentare sfide aggiuntive per i bambini che includono:
 
 - Lyumjev o Fiasp potrebbero non essere disponibili o ben tollerati.
 - La velocità basale oraria potrebbe essere molto bassa, fornendo una base scadente per grandi **SMB**.
-- La dieta potrebbe essere ricca di componenti dolci. Con il tipico basso volume di sangue di un corpo piccolo, forte tendenza verso picchi di **BG** molto alti.
+- La dieta potrebbe essere ricca di componenti dolci. Con il tipico basso volume di sangue di un corpo piccolo, forte tendenza verso picchi di **glicemia** molto alti.
 - Gli ormoni della crescita e il passaggio attraverso marcati cambiamenti di sensibilità all'insulina rendono difficile mantenere l'**FCL** accuratamente sintonizzato.
 
 
@@ -124,7 +124,7 @@ I loopers **FCL** non hanno più bisogno di dare un bolo considerevole all'inizi
 
 Se stai operando con **AAPS** nella versione Master, si suggerisce che le Preferenze di **AAPS** siano configurate con la dimensione massima **SMB** consentita affinché l'**FCL** possa somministrare (maxUAMSMBBasalMinutes=120, cioè 2 ore di basale in quel momento della giornata).
 
-Se la velocità basale è molto bassa, i limiti **SMB** risultanti potrebbero essere troppo bassi per consentire un controllo sufficiente per affrontare gli aumenti postprandiali di **BG**. Una possibile soluzione è evitare diete che causano forti picchi di **BG** e passare successivamente a una variante dev di **AAPS** che offre un nuovo parametro nelle impostazioni di erogazione **SMB**: smb_max_range_extension. Questo espanderà il massimo standard di 2 ore di basale di un fattore > 1. (Inoltre, il rapporto di erogazione **SMB** predefinito del 50% potrebbe essere aumentato nelle varianti dev). variants).
+Se la velocità basale è molto bassa, i limiti **SMB** risultanti potrebbero essere troppo bassi per consentire un controllo sufficiente per affrontare gli aumenti postprandiali di **glicemia**. Una possibile soluzione è evitare diete che causano forti picchi di **glicemia** e passare successivamente a una variante dev di **AAPS** che offre un nuovo parametro nelle impostazioni di erogazione **SMB**: smb_max_range_extension. Questo espanderà il massimo standard di 2 ore di basale di un fattore > 1. (Inoltre, il rapporto di erogazione **SMB** predefinito del 50% potrebbe essere aumentato nelle varianti dev). variants).
 
 **Seguire le istruzioni per consentire ad AAPS di simulare i tuoi boli tramite un paio di SMB**.
 
@@ -159,13 +159,13 @@ Caselle da spuntare in alto. Hai la possibilità:
 
 - Per ogni regola di **Automazione** puoi spuntare la casella per Azione utente => le Azioni definite non verranno eseguite automaticamente quando si applicano le Condizioni. Invece, la schermata principale di **AAPS** ti avviserà ogni volta che il tuo **FCL** darebbe automaticamente un **SMB**. Hai allora la possibilità di dire 'sì' o 'no'. Questo è estremamente utile nella fase di messa a punto.
 
-Questa funzionalità può essere utile per alcune situazioni come la sindrome "piede a terra" dove c'è un improvviso aumento della **BG** al mattino alzandosi, ma l'utente vuole prevenire una risposta completamente automatica di "colazione iniziata".
+Questa funzionalità può essere utile per alcune situazioni come la sindrome "piede a terra" dove c'è un improvviso aumento della **glicemia** al mattino alzandosi, ma l'utente vuole prevenire una risposta completamente automatica di "colazione iniziata".
 
 Il potenziamento dell'**ISF** viene fatto in 3 passi: **AAPS** Master consente fino al 130% di **Profilo** temporaneo in modalità **HCL**. **AAPS** Master consente fino al 130% di **Profilo** temporaneo in modalità **HCL**.
 
-### SMB grandi automatizzati all'aumento della BG
+### SMB grandi automatizzati all'aumento della glicemia
 
-La chiave per un **FCL** di successo è **all'inizio degli aumenti di BG dai pasti, devono essere dati dal loop il prima possibile SMB automatici molto grandi** "per recuperare" l'**IOB** necessario (paragonare con il tipico bolo somministrato per un pasto simile in **HCL**!)
+La chiave per un **FCL** di successo è **all'inizio degli aumenti di glicemia dai pasti, devono essere dati dal loop il prima possibile SMB automatici molto grandi** "per recuperare" l'**IOB** necessario (paragonare con il tipico bolo somministrato per un pasto simile in **HCL**!)
 
 Per raggiungere questo obiettivo, i dati dall'**HCL** devono essere analizzati per determinare quali **delta** potrebbero non essere correlati al pasto e quelli che potrebbero esserlo.
 
@@ -173,13 +173,13 @@ Per raggiungere questo obiettivo, i dati dall'**HCL** devono essere analizzati p
 - Se fai tipi di pasti molto diversi (ad es. una colazione abbastanza ricca di carboidrati, ma un pranzo a basso contenuto di carboidrati) puoi scegliere di fare due diversi set di **Automazioni** per ciascuno degli intervalli di tempo.
 - Escludi le notti se vedi salti occasionali da bassi da compressione
 - Di solito, usare solo il delta degli ultimi 5 minuti è sufficiente.
-- Ma puoi anche usare uno dei delta medi. Confrontando i delta nelle condizioni delle tue **Automazioni** potresti persino definire azioni di diversa aggressività a seconda che la **BG** salga in modo accelerato o meno.
+- Ma puoi anche usare uno dei delta medi. Confrontando i delta nelle condizioni delle tue **Automazioni** potresti persino definire azioni di diversa aggressività a seconda che la **glicemia** salga in modo accelerato o meno.
 
-> (delta – short avg delta) > n è un termine che potrebbe essere usato per il rilevamento dell'accelerazione, per attivare il primo **SMB** al primo segno di **BG** in aumento. Attenzione: non è possibile usarlo con valori **CGM** scadenti o altamente uniformati!
+> (delta – short avg delta) > n è un termine che potrebbe essere usato per il rilevamento dell'accelerazione, per attivare il primo **SMB** al primo segno di **glicemia** in aumento. Attenzione: non è possibile usarlo con valori **CGM** scadenti o altamente uniformati!
 
 Un **CGM** con dati irregolari mette l'utente in una brutta posizione perché, per stare al sicuro, devi "sabbiare" la tua definizione di quale delta è certamente un segno di un pasto iniziato. Ciò significa:
 
-- L'**FCL** perde ulteriore tempo, risultando in picchi di **BG** più alti e %**TIR** più bassa;
+- L'**FCL** perde ulteriore tempo, risultando in picchi di **glicemia** più alti e %**TIR** più bassa;
 - non puoi usare un delta precedente o più piccolo che potrebbe attivare, anche senza un pasto, gli **SMB** che dovrebbero compensare un bolo dell'utente in **FCL**.
 
 Inoltre, i primi aumenti dopo un pasto sono caratterizzati da **IOB basso** presente. Tenendo questo a mente, un'Automazione (#1) per una cena potrebbe apparire così:
@@ -188,7 +188,7 @@ Inoltre, i primi aumenti dopo un pasto sono caratterizzati da **IOB basso** pres
 
 Automazione #1
 
-Se le Condizioni si applicano, **AAPS** darebbe 1 o 2 **SMB** nei prossimi 12 minuti, usando un **ISF** potenziato secondo la **Percentuale Profilo** elevata impostata (nell'esempio, un potenziamento del 30% dell'insulinReq). Finché queste Condizioni si applicano, la regola **Automazione** si estende di altri 12 minuti. Un pasto a basso contenuto di carboidrati potrebbe avere caratteristiche di aumento della **BG** più lente. Beneficerebbe di un'altra Automazione (#2) che si attiva a un delta più basso e dà un potenziamento insulinico più debole.
+Se le Condizioni si applicano, **AAPS** darebbe 1 o 2 **SMB** nei prossimi 12 minuti, usando un **ISF** potenziato secondo la **Percentuale Profilo** elevata impostata (nell'esempio, un potenziamento del 30% dell'insulinReq). Finché queste Condizioni si applicano, la regola **Automazione** si estende di altri 12 minuti. Un pasto a basso contenuto di carboidrati potrebbe avere caratteristiche di aumento della **glicemia** più lente. Beneficerebbe di un'altra Automazione (#2) che si attiva a un delta più basso e dà un potenziamento insulinico più debole.
 
 ![>=5mg jump 115%, iob<5.5](../images/fullClosedLoop03.png)
 
@@ -200,7 +200,7 @@ Nota che, ancora nella fase di aumento (!), l'"eccesso" di **IOB** deve essere b
 
 Con pasti abbondanti c'è **a volte un secondo aumento**. A quel punto, di solito anche l'IOB è sceso un po', e le Automazioni più aggressive diventano nuovamente efficaci. (Controlla che la tua condizione IOB nell'Automazione #2 non sia impostata troppo in basso perché ciò accada).
 
-Subito dopo che vengono dati alcuni **SMB** iniziali arriva una **fase equilibrata** dove un'erogazione moderata di insulina dovrebbe coprire i carboidrati aggiuntivi assorbiti. (Tranne nei pasti a basso contenuto di carboidrati, dove il loop potrebbe vedere un aumento di **BG** troppo debole e passare subito al zero-temping già ora).
+Subito dopo che vengono dati alcuni **SMB** iniziali arriva una **fase equilibrata** dove un'erogazione moderata di insulina dovrebbe coprire i carboidrati aggiuntivi assorbiti. (Tranne nei pasti a basso contenuto di carboidrati, dove il loop potrebbe vedere un aumento di **glicemia** troppo debole e passare subito al zero-temping già ora).
 
 La schermata principale di **AAPS** (dove vedi cob=0 nel loop completo **UAM**) potrebbe in questa fase chiedere altri carboidrati necessari. In modalità **UAM** questo significa semplicemente che potresti fare un controllo di plausibilità molto approssimativo: È probabile che quella quantità di carboidrati sia nel tuo corpo, non ancora assorbita dal pasto circa un'ora fa (del quale non hai dato alcuna informazione al loop)?
 
@@ -227,15 +227,15 @@ Dice al loop che sopra la tua soglia **IOB** impostata è meglio non usare più 
 **Attenzione: l'Automazione #3 funziona solo quando non c'è un TT attivo.** Quindi, nel caso in cui tu abbia lavorato con EatingSoonTT, deve essere terminato entro quel momento, che di solito dovrebbe essere 30-40 minuti dopo l'inizio del pasto.
 
 Un modo per farlo è impostare una Condizione **Automazione** che termina un eventuale EatingSoonTT in esecuzione sotto la Condizione **IOB** > 65% * sogliaiob.
-> Modi per lavorare con EatingSoonTT: Alcuni loopers impostano (premendo il pulsante TT, o automatizzato tramite un target **BG** del **Profilo** abbassato se gli orari dei pasti sono abbastanza fissi) un EatingSoonTT circa un'ora o più prima dell'inizio del pasto, solo per garantire una **BG** di partenza bassa e un **IOB** leggermente aumentato. Ma, assumendo che l'**FCL** sia sempre in rotta verso il target, questo potrebbe non dare molto e potresti preferire definire un'**Automazione** che imposta un EatingSoonTT al riconoscimento dell'inizio del pasto (delta di glucosio, o accelerazione = delta > delta medio). Un **TT** basso è importante in questa fase perché qualsiasi **SMB** viene calcolato dal tuo loop usando (glucosio previsto meno TT)/sens, quindi un TT piccolo rende l'insulinReq risultante più grande.
+> Modi per lavorare con EatingSoonTT: Alcuni loopers impostano (premendo il pulsante TT, o automatizzato tramite un target **glicemia** del **Profilo** abbassato se gli orari dei pasti sono abbastanza fissi) un EatingSoonTT circa un'ora o più prima dell'inizio del pasto, solo per garantire una **glicemia** di partenza bassa e un **IOB** leggermente aumentato. Ma, assumendo che l'**FCL** sia sempre in rotta verso il target, questo potrebbe non dare molto e potresti preferire definire un'**Automazione** che imposta un EatingSoonTT al riconoscimento dell'inizio del pasto (delta di glucosio, o accelerazione = delta > delta medio). Un **TT** basso è importante in questa fase perché qualsiasi **SMB** viene calcolato dal tuo loop usando (glucosio previsto meno TT)/sens, quindi un TT piccolo rende l'insulinReq risultante più grande.
 
 Dopo che i primi **SMB** potenziati sono stati dati, la tua soglia iob impostata e l'**Automazione** #3 dovrebbero raggiungere un buon equilibrio tra limitare il picco di glucosio, ma anche non portare a un'ipoglicemia dopo il pasto.
 
-Se la tua colazione differisce sostanzialmente in contenuto di carboidrati dalla tua cena media, potresti beneficiare della definizione di **Automazioni** che si applicano nei rispettivi orari del giorno, e hanno diverse **sogliaiob** (possibilmente anche diversi delta e diversa **Percentuale Profilo** impostata). Entrambi, tu nel definire lo spettro dei tuoi pasti e le impostazioni (in particolare la **sogliaiob**), e il loop nella gestione della curva **BG** che si sviluppa, devono accettare certe altezze di picco per ridurre il pericolo di ipoglicemia verso la fine delle **DIA** degli **SMB**.
+Se la tua colazione differisce sostanzialmente in contenuto di carboidrati dalla tua cena media, potresti beneficiare della definizione di **Automazioni** che si applicano nei rispettivi orari del giorno, e hanno diverse **sogliaiob** (possibilmente anche diversi delta e diversa **Percentuale Profilo** impostata). Entrambi, tu nel definire lo spettro dei tuoi pasti e le impostazioni (in particolare la **sogliaiob**), e il loop nella gestione della curva **glicemia** che si sviluppa, devono accettare certe altezze di picco per ridurre il pericolo di ipoglicemia verso la fine delle **DIA** degli **SMB**.
 
-### Stagnazione a valori BG alti
+### Stagnazione a valori di glicemia alti
 
-Nel caso in cui, dopo un pasto "abbondante", si veda una lunga stagnazione con **BG** alta, l'**Automazione** #6 (di seguito, a sinistra),"alto post-pasto", aiuta a gestire la resistenza agli acidi grassi: Dopo pasti a più portate, grandi pizze untuose, serate di raclette, la curva del glucosio può formare due gobbe o, molto spesso, un lungo plateau alto.
+Nel caso in cui, dopo un pasto "abbondante", si veda una lunga stagnazione con **glicemia** alta, l'**Automazione** #6 (di seguito, a sinistra),"alto post-pasto", aiuta a gestire la resistenza agli acidi grassi: Dopo pasti a più portate, grandi pizze untuose, serate di raclette, la curva del glucosio può formare due gobbe o, molto spesso, un lungo plateau alto.
 
 ![iob >5.5...111 TT = SMBs off 16m](../images/fullClosedLoop05.png)
 
@@ -264,7 +264,7 @@ Per prevenire l'ipoglicemia nelle ore 3-5 post-pasto, riduci l'aggressività pri
 - Become milder and milder with the **ISF** already during the glucose rise, as in Automation examples #1 and #2 given.
 - Define the iob threshold, from which **AAPS** is made significantly more cautious (Automation #3, above). Note this **iob** can be exceeded, by the last **SMB** before it went into effect; and then further by TBRs if the loop sees insulinReq Carbs getting absorbed will provide a counter-movement towards lower iob.
 - The iob threshold could be differentiated according to meals: By cloning the automations, you could easily differentiate for breakfast, lunch, and dinner time slots (or even for geo-locations, like company cafeteria, or at mother-in-law etc) > You could differentiate within these time slots even further by setting different TTs for low carb vs.
-> > > > > > > > > fast carb, etc., and thus be able to “code for” different meal classes that may occur at this time of day, and call them up with **Automations** specially tuned for them. This is probably not necessary, unless your diet habits do vary a lot.
+> > > > > > > > > > fast carb, etc., and thus be able to “code for” different meal classes that may occur at this time of day, and call them up with **Automations** specially tuned for them. This is probably not necessary, unless your diet habits do vary a lot.
 
 Prima di una sfida di pasto speciale, puoi aumentare la tua soglia **IOB**, o apportare un'altra modifica in qualsiasi tua Automazione entro meno di 5 secondi, direttamente dalla tua schermata principale AAPS (hamburger in alto a sinistra; o scheda **Automazioni**, a seconda di come hai configurato il tuo **AAPS**).
 
@@ -323,9 +323,9 @@ Ad esempio, è perfettamente possibile, senza nessun passaggio extra dopo che le
     - Il rapporto di erogazione SMB probabilmente può essere impostato più piccolo. Nota che in questo caso, funziona in tutti i sensi per tutti gli **SMB** (tutte le fasce orarie)
 - Problemi con la "coda" dell'insulina dopo i pasti
     - Potresti dover fare uno spuntino (vedendo la previsione di ipoglicemia) o compresse di glucosio (se già in zona ipo). Ma nota che la quantità di carboidrati richiesta che il loop potrebbe dirti in un certo momento è molto probabilmente esagerata poiché il loop non ha assolutamente zero informazioni sul tuo apporto di carboidrati (mentre tu potresti essere in grado di stimare quanto altro, incluso da grassi e proteine) è ancora in attesa di essere assorbito.
-    - Un'informazione preziosa sarebbe se il problema ha origine principalmente già nella fase di aumento della BG. Allora impostare una sogliaiob più bassa potrebbe essere un rimedio semplice.
-    - Se la necessità di carboidrati aggiuntivi accade frequentemente, nota quanti grammi erano necessari (senza contare quello che eventualmente hai preso in eccesso e che ha richiesto insulina extra di nuovo).  Poi usa il valore IC del tuo profilo per stimare quanto meno insulina avrebbe dovuto erogare l'**SMB**, e usa questa informazione nella tua messa a punto (riguardo alla **Percentuale Profilo** nelle **Automazioni**, o forse anche la tua sogliaiob impostata). Questo potrebbe riguardare gli **SMB** dati quando il glucosio era alto, o anche estendersi riguardo agli **SMB** durante l'aumento della **BG**.
-    - Potrebbe anche essere che devi semplicemente accettare picchi di **BG** più alti per non andare in basso. O cambiare dieta con qualcosa con quantità inferiori di carboidrati e quantità maggiori di proteine e grassi.
+    - Un'informazione preziosa sarebbe se il problema ha origine principalmente già nella fase di aumento della glicemia. Allora impostare una sogliaiob più bassa potrebbe essere un rimedio semplice.
+    - Se la necessità di carboidrati aggiuntivi accade frequentemente, nota quanti grammi erano necessari (senza contare quello che eventualmente hai preso in eccesso e che ha richiesto insulina extra di nuovo).  Poi usa il valore IC del tuo profilo per stimare quanto meno insulina avrebbe dovuto erogare l'**SMB**, e usa questa informazione nella tua messa a punto (riguardo alla **Percentuale Profilo** nelle **Automazioni**, o forse anche la tua sogliaiob impostata). Questo potrebbe riguardare gli **SMB** dati quando il glucosio era alto, o anche estendersi riguardo agli **SMB** durante l'aumento della **glicemia**.
+    - Potrebbe anche essere che devi semplicemente accettare picchi di **glicemia** più alti per non andare in basso. O cambiare dieta con qualcosa con quantità inferiori di carboidrati e quantità maggiori di proteine e grassi.
 
 
 ### Ulteriori informazioni
