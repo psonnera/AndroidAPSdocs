@@ -1,28 +1,28 @@
-# Accu-Chek Combo Tips for basic usage
+# Suggerimenti per l'uso base di Accu-Chek Combo
 
-## How to ensure smooth operations
+## Come garantire il corretto funzionamento
 
-* Always **carry the smartphone with you**, leave it next to your bed at night. As your pump may lay behind or under you body while you sleep, a higher position (on a shelf or board) works best.
-* Always make sure that the pump battery is as full as possible. See the battery section for tipps regarding the battery.
-* Whenever possible, only operate the pump via the AAPS app. To facilitate this, activate the key lock on the pump under **PUMP SETTINGS / KEY LOCK / ON**. Only when changing the battery or the cartridge, it is necessary to use the pump's keys. 
+* Portare sempre **lo smartphone con sé**, lasciarlo vicino al letto di notte. Poiché il microinfusore potrebbe trovarsi dietro o sotto il corpo durante il sonno, una posizione più alta (su uno scaffale o una tavola) funziona meglio.
+* Assicurarsi sempre che la batteria del microinfusore sia il più carica possibile. Vedere la sezione batteria per suggerimenti sulla batteria.
+* Quando possibile, operare il microinfusore solo tramite l'app AAPS. Per facilitare ciò, attivare il blocco tasti sul microinfusore in **IMPOSTAZIONI MICROINFUSORE / BLOCCO TASTI / ON**. Solo quando si cambia la batteria o la cartuccia è necessario utilizzare i tasti del microinfusore.
 
 ![Keylock](../images/combo/combo-tips-keylock.png)
 
-## Pump not reachable. What to do?
+## Microinfusore non raggiungibile. Cosa fare?
 
-### Activate pump unreachable alarm
-* In AAPS, go to **Settings / Local Alarms** and activate **alarm when pump is unreachable** and set **pump not reachable limit [Min]** to **31** minutes.
-* This will give you enough time to not trigger the alarm when leaving the room while your phone is left on the desk, but informs you if the pump cannot be reached for a time that exceeds the duration of a temporary basal rate.
+### Attivare l'allarme microinfusore non raggiungibile
+* In AAPS, andare a **Impostazioni / Allarmi locali** e attivare **allarme quando il microinfusore non è raggiungibile** e impostare **limite microinfusore non raggiungibile [min]** a **31** minuti.
+* Questo darà abbastanza tempo per non attivare l'allarme quando si lascia la stanza mentre il telefono è rimasto sulla scrivania, ma informa se il microinfusore non può essere raggiunto per un tempo superiore alla durata di una basale temporanea.
 
 ### Restore reachability of the pump
 
-* When AAPS reports a **pump unreachable** alarm, first release the keylock and **press any key on the pump** (e.g. "down" button). As soon as the pump display has turned off, press **Refresh** on the **Combo Tab** in AAPS. Mostly then the communication works again.
-* If that does not help, reboot your smartphone. After the restart, AAPS will be reactivated and a new connection will be established with the pump. If you are using the old driver, ruffy will be reactivated as well.
+* Quando AAPS segnala un allarme **microinfusore non raggiungibile**, prima rilasciare il blocco tasti e **premere qualsiasi tasto sul microinfusore** (ad es. il pulsante "giù"). Non appena il display del microinfusore si è spento, premere **Aggiorna** nella **scheda Combo** in AAPS. Il più delle volte la comunicazione riprende a funzionare.
+* Se ciò non aiuta, riavviare lo smartphone. Dopo il riavvio, AAPS verrà riattivato e verrà stabilita una nuova connessione con il microinfusore. Se si utilizza il vecchio driver, ruffy verrà riattivato.
 
-* The tests with different smartphones have shown that certain smartphones trigger the "pump unreachable" error more often than others. See [AAPS Phones](#Phones-list-of-tested-phones) for successfully tested smartphones. 
+* I test con diversi smartphone hanno mostrato che alcuni smartphone attivano l'errore "microinfusore non raggiungibile" più spesso di altri. Vedere [AAPS Telefoni](#Phones-list-of-tested-phones) per smartphone testati con successo.
 
-### Root causes and consequences of frequent communication errors
-* On phones with **low memory** (or **aggressive power-saving** settings), AAPS is often shut down. You can tell by the fact that the Bolus and Calculator buttons on the Home screen are not shown when opening AAPS because the system is initializing. This can trigger "pump unreachable alarms" at startup. In the **Last Connection** field of the Combo tab, you can check when AAPS last communicated with the pump.
+### Cause e conseguenze di frequenti errori di comunicazione
+* Sui telefoni con **poca memoria** (o con impostazioni di **risparmio energetico aggressivo**), AAPS viene spesso chiuso. È possibile riconoscerlo dal fatto che i pulsanti Bolo e Calcolatore nella schermata principale non vengono mostrati all'apertura di AAPS perché il sistema si sta inizializzando. Ciò può attivare "allarmi microinfusore non raggiungibile" all'avvio. Nel campo **Ultima connessione** della scheda Combo, è possibile verificare quando AAPS ha comunicato l'ultima volta con il microinfusore.
 
 ![Pump unreachable](../images/combo/combo-tips-pump-unreachable.png)
 
@@ -30,60 +30,59 @@
 
 ![No connection to pump (as shown in the new driver's tab)](../images/combo/combov2-tips-no-connection-to-pump.png)
 
-* This error can drain the pump's battery faster because the basal profile is read from the pump when the app is restarted.
-* It also increases the likelihood of causing the error that causes the pump to reject all incoming connections until a button on the pump is pressed. 
+* Questo errore può scaricare la batteria del microinfusore più velocemente perché il profilo basale viene letto dal microinfusore quando l'app viene riavviata.
+* Aumenta anche la probabilità di causare l'errore che fa rifiutare al microinfusore tutte le connessioni in entrata finché non viene premuto un pulsante sul microinfusore.
 
-## Cancellation of temporary basal rate fails
-* Occasionally, AAPS can not automatically cancel a **TBR CANCELED** alert. Then you have to either press **UPDATE** in the AAPS **Combo tab** or the alarm on the pump will need to be confirmed.
+## L'annullamento della basale temporanea fallisce
+* Occasionalmente, AAPS non riesce ad annullare automaticamente un avviso **BASALE TEMP ANNULLATA**. In questo caso è necessario premere **AGGIORNA** nella **scheda Combo** di AAPS oppure l'allarme sul microinfusore dovrà essere confermato.
 
 ## Pump battery considerations
 
-### Changing the battery
-* After a **low battery** alarm, the battery should be changed as soon as possible to always have enough energy for a reliable Bluetooth communication with the smartphone, even if the phone is within a wider distance of the pump.
-* Even after a **low battery** alarm, the battery might be used for a significant amount of time. However, it is recommended to always have a fresh battery with you after a "low battery" alarm rang.
-* Before changing the battery, press on the **Loop** symbol on the main screen and select **Suspend loop for 1h**. 
+### Cambio della batteria
+* Dopo un allarme di **batteria scarica**, la batteria dovrebbe essere cambiata il prima possibile per avere sempre abbastanza energia per una comunicazione Bluetooth affidabile con lo smartphone, anche se il telefono si trova a una distanza maggiore dal microinfusore.
+* Anche dopo un allarme di **batteria scarica**, la batteria potrebbe essere utilizzata per un tempo significativo. Tuttavia, si raccomanda di avere sempre una batteria fresca con sé dopo che è suonato un allarme di "batteria scarica".
+* Prima di cambiare la batteria, premere sul simbolo **Loop** nella schermata principale e selezionare **Sospendi loop per 1h**.
 * Wait for the pump to communicate with the pump and the bluetooth logo on the pump has faded.
 
 ![Bluetooth enabled](../images/combo/combo-tips-compo.png)
 
-* Release the key lock on the pump, put the pump into stop mode, confirm a possibly canceled temporary basal rate, and change the battery quickly.
-* When using the old driver, if the clock on the pump did not survive the battery change, re-set the date and time on the pump to exactly the date/time on your phone running AAPS. (The new driver automatically updates the pump's date and time.)
-* Then put the pump back in run mode select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
-* AAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value.
+* Rilasciare il blocco tasti sul microinfusore, mettere il microinfusore in modalità stop, confermare un'eventuale basale temporanea annullata e cambiare la batteria rapidamente.
+* Quando si utilizza il vecchio driver, se l'orologio sul microinfusore non ha sopravvissuto al cambio batteria, reimpostare data e ora sul microinfusore esattamente alla data/ora del telefono su cui è in esecuzione AAPS. (Il nuovo driver aggiorna automaticamente data e ora del microinfusore.)
+* Poi rimettere il microinfusore in modalità di esecuzione e selezionare **Riprendi** premendo sull'icona **Loop sospeso** nella schermata principale.
+* AAPS reimposterà una basale temporanea necessaria con l'arrivo del prossimo valore di glicemia.
 
 (Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)=
-### Battery type and causes of short battery life
-* As intensive Bluetooth communication consumes a lot of energy, only use **high-quality batteries** like Energizer Ultimate Lithium, the "power one"s from the "large" Accu-Chek service pack, or if you are going for a rechargeable battery, use Eneloop batteries. 
+### Tipo di batteria e cause di breve durata della batteria
+* Poiché la comunicazione Bluetooth intensiva consuma molta energia, utilizzare solo **batterie di alta qualità** come Energizer Ultimate Lithium, le "power one" del "grande" kit di servizio Accu-Chek, o se si opta per una batteria ricaricabile, utilizzare batterie Eneloop.
 
-![Energizer](../images/combo/combo-tips-energizer.jpg)
-![OnePower](../images/combo/combo-tips-power-one.png)
+![Energizer](../images/combo/combo-tips-energizer.jpg) ![OnePower](../images/combo/combo-tips-power-one.png)
 
-Ranges for typical life time of the different battery types are as follows:
-* **Energizer Ultimate Lithium**: 4 to 7 weeks
-* **Power One Alkaline** (Varta) from the service pack: 2 to 4 weeks
-* **Eneloop rechargeable** batteries (BK-3MCCE): 1 to 3 weeks
+Gli intervalli per la durata tipica dei diversi tipi di batteria sono i seguenti:
+* **Energizer Ultimate Lithium**: da 4 a 7 settimane
+* **Power One Alkaline** (Varta) dal kit di servizio: da 2 a 4 settimane
+* **Batterie ricaricabili Eneloop** (BK-3MCCE): da 1 a 3 settimane
 
-If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
-* There are some variants of the screw-on battery cap of the Combo pump, which partially short circuit the batteries and drain them quickly. The caps without this problem can be recognized by the golden metal contacts.
-* If the pump clock does not "survive" a short battery change, it is likely that the capacitor is broken which keeps the clock running during a brief power outage. In this case, a replacement of the pump by Roche might help, which is not a problem during the warranty period. 
-* The smart phone hardware and software (Android operating system and bluetooth stack) also impact the battery lifetime of the pump, even though the exact factors are not completely known yet. If you have the opportunity, try another smartphone and compare battery lifetimes.
+Se la durata della batteria è significativamente inferiore agli intervalli indicati sopra, verificare le seguenti possibili cause:
+* Esistono alcune varianti del cappuccio a vite della batteria del microinfusore Combo che cortocircuitano parzialmente le batterie e le scaricano rapidamente. I cappucci senza questo problema possono essere riconosciuti dai contatti metallici dorati.
+* Se l'orologio del microinfusore non "sopravvive" a un rapido cambio di batteria, è probabile che il condensatore che mantiene in funzione l'orologio durante una breve interruzione dell'alimentazione sia rotto. In questo caso, potrebbe essere utile una sostituzione del microinfusore da parte di Roche, che non è un problema durante il periodo di garanzia.
+* L'hardware e il software dello smartphone (sistema operativo Android e stack Bluetooth) influiscono anche sulla durata della batteria del microinfusore, anche se i fattori esatti non sono ancora completamente noti. Se se ne ha la possibilità, provare un altro smartphone e confrontare le durate della batteria.
 
-## Extended bolus, multiwave bolus
-The OpenAPS algorithm does not support a parallel extended bolus or multiwave bolus. But a similar treatment can be achieved by the following alternatives:
-* Use **e-Carbs** when entering carbs or using the Calculator by entering the carbs of the full meal and the duration you expect the carbs to arrive as glucose in you blood. The system will then calculate small carbs equally distributed over the whole duration which will cause th algorithm to provide equivalent insulin dosing while still permanently checking the overall rise/decrease of the blood glucose level. For a multiwave bolus approach, you can also combine a smaller immediate bolus with e-carbs.  
-* Before eating, on the **Actions tab** in AAPS set as a temporary **Eating Soon** goal with target glucose 80 for several hours. The duration should be based on the interval you would choose for an extended bolus. This will keep your target lower than usual and therefore increase the amount of insulin delivered.
-* Then use the **CALCULATOR** to enter the full carbs of the meal, but do not directly apply the values suggested by the bolus calculator. If a multiwave-like bolus is to be delivered, correct the insulin dosage down. Depending on the meal, the algorithm now has to deliver additional SMBs or higher temporary basal rates to counteract the increase in blood sugar. Here, the safety limitation of the basal rate (Max IE / h, Maximum basal IOB) should be very carefully experimented with and, if necessary, temporarily changed. 
+## Bolo esteso, bolo multionda
+L'algoritmo OpenAPS non supporta un bolo esteso parallelo o un bolo multionda. Ma un trattamento simile può essere ottenuto con le seguenti alternative:
+* Utilizzare i **Carboidrati estesi** quando si inseriscono carboidrati o si usa il Calcolatore inserendo i carboidrati dell'intero pasto e la durata prevista per l'assorbimento dei carboidrati nel sangue. Il sistema calcolerà quindi piccole quantità di carboidrati distribuite uniformemente per l'intera durata, il che farà sì che l'algoritmo fornisca un dosaggio insulinico equivalente controllando continuamente l'aumento/diminuzione complessivo del livello di glicemia. Per un approccio simile al bolo multionda, è anche possibile combinare un bolo immediato più piccolo con i carboidrati estesi.
+* Prima di mangiare, nella **scheda Azioni** in AAPS impostare un obiettivo temporaneo **Presto pasto** con target glicemico 80 per diverse ore. La durata dovrebbe essere basata sull'intervallo che si sceglierebbe per un bolo esteso. Questo manterrà il target più basso del solito e quindi aumenterà la quantità di insulina erogata.
+* Poi utilizzare il **CALCOLATORE** per inserire i carboidrati totali del pasto, ma non applicare direttamente i valori suggeriti dal calcolatore del bolo. Se si deve erogare un bolo simile al multionda, correggere il dosaggio di insulina verso il basso. A seconda del pasto, l'algoritmo ora deve erogare SMB aggiuntivi o basali temporanee più elevate per contrastare l'aumento della glicemia. Qui, il limite di sicurezza della basale (Max UI/h, IOB basale massimo) dovrebbe essere sperimentato molto attentamente e, se necessario, temporaneamente modificato.
 
-* If you are tempted to just use the extended or multiwave bolus directly on the pump, AAPS will penalize you with disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
+* Se si è tentati di utilizzare semplicemente il bolo esteso o multionda direttamente sul microinfusore, AAPS penalizzerà disabilitando il loop chiuso per le successive sei ore per garantire che non venga calcolato un dosaggio di insulina eccessivo.
 
 ![Disabled loop after multiwave bolus](../images/combo/combo-tips-multiwave-bolus.png)
 
 ## Alarms at bolus delivery
-* If AAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical number of insulin units. If your really want to bolus the same insulin twice in short succession, just wait two more minutes and then deliver the bolus again. If the fist bolus has been interrupted or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
-* The alarm is a safety mechanism that reads the pump's bolus history before submitting a new bolus to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump. Here indistinguishable entries must be prevented.
+* Se AAPS rileva che un bolo identico è stato erogato con successo nello stesso minuto, l'erogazione del bolo verrà impedita con lo stesso numero di unità di insulina. Se si desidera davvero fare lo stesso bolo due volte in rapida successione, attendere altri due minuti e poi erogare di nuovo il bolo. Se il primo bolo è stato interrotto o non è stato erogato per altri motivi, è possibile inviare di nuovo il bolo immediatamente da AAPS 2.0.
+* L'allarme è un meccanismo di sicurezza che legge la cronologia dei boli del microinfusore prima di inviare un nuovo bolo per calcolare correttamente l'insulina attiva (IOB), anche quando un bolo viene erogato direttamente dal microinfusore. Qui le voci indistinguibili devono essere evitate.
 
 ![Double bolus](../images/combo/combo-tips-doppelbolus.png)
 
-* This mechanism is also responsible for a second cause of the error: If during the use of the bolus calculator another bolus is delivered via the pump and thereby the bolus history changes, the basis of the bolus calculation is wrong and the bolus is aborted. 
+* Questo meccanismo è anche responsabile di una seconda causa dell'errore: se durante l'utilizzo del calcolatore del bolo viene erogato un altro bolo tramite il microinfusore e quindi la cronologia dei boli cambia, la base del calcolo del bolo è errata e il bolo viene annullato.
 
 ![Canceled bolus](../images/combo/combo-tips-history-changed.png)
