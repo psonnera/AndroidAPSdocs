@@ -23,12 +23,12 @@ Per i dettagli, consulta la [pagina FAQ](../UsefulLinks/FAQ.md).
 | ----------------------- | ------------------------------------------- | --------------------------------------------- | ------ |:--- |
 | 2.6.2                   | 3.6.1                                       |                                               | 5.6.4  | 11  |
 | 2.8.2.1                 | 4.1.1                                       |                                               | 6.1.1  | 13  |
-| [3.1.0.3](#version3100) | 2020.3.1                                    | fino a Panda 2                                | 7.3.3  | 17  |
-| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                         | fino a Panda 2                                | 8.2    | 17  |
-| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)             | fino a Panda 2                                | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                          | fino a Panda 2                                | 8.11.1 | 21  |
-| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                          | fino a Panda 2                                | 8.13   | 21  |
-| [3.4.1](#version3410)   | Panda 2 (2025.32)                           |                                               | 9      | 21  |
+| [3.1.0.3](#version3100) | 2020.3.1                                    | up to Panda 4                                 | 7.3.3  | 17  |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                         | up to Panda 4                                 | 8.2    | 17  |
+| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)             | up to Panda 4                                 | 8.10   | 21  |
+| [3.3.2](#version3300)   | Meerkat (2024.3.1)                          | up to Panda 4                                 | 8.11.1 | 21  |
+| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                          | up to Panda 4                                 | 8.13   | 21  |
+| [3.4.2.2](#version3422) | Panda 2 (2025.32)                           | up to Panda 4                                 | 9      | 21  |
 
 La "versione preferita" è già fornita con la versione appropriata di JVM. La versione preferita è anche la versione minima con cui è possibile compilare **AAPS**. **Non** sarà possibile compilare con una versione più vecchia di quella "preferita". Se si utilizza una versione diversa, potrebbero verificarsi problemi relativi alla versione di JVM. Per risolvere questi problemi, consultare la pagina [Risoluzione dei problemi di Android Studio](#troubleshooting_androidstudio-uncommitted-changes). Se la versione attuale di Android Studio non è elencata nella tabella, è necessario aggiornarla prima.
 
