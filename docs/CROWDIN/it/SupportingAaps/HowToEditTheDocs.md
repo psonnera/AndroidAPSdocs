@@ -268,9 +268,9 @@ Evita di usare tabelle con testi lunghi poiché il contenuto è difficile da imp
 
 Usa un inglese semplice ovunque possibile. Questo aiuta i lettori non madrelingua e aiuta anche la traduzione dei documenti AAPS in altre lingue. Scrivi in modo colloquiale con l'utente, immagina di essere seduto di fronte alla persona per cui stai scrivendo. Ricorda - la maggior parte degli utenti AAPS non ha background di programmazione. Anche il diabete ha molto gergo e abbreviazioni. Tieni presente che alcune persone potrebbero essere state diagnosticate di recente, potrebbero non essere così esperte come te nel diabete, o potrebbero aver ricevuto una formazione diversa sul diabete. Se usi abbreviazioni o sigle, scrivile per esteso la prima volta che le usi, indicando l'abbreviazione direttamente dopo di essa tra parentesi, come "super micro bolo (SMB)". Collega anche al glossario. I termini tecnici che potrebbero non essere familiari al lettore possono essere aggiunti anche tra parentesi.
 
-Invece di: *"Cosa causa picchi elevati di BG postprandiali nel circuito chiuso?"*
+Invece di: *"Cosa causa picchi elevati di glicemia postprandiali nel circuito chiuso?"*
 
-Usa: *"Cosa causa un picco BG elevato **dopo pranzo** (postprandiale) nel circuito chiuso?"*
+Usa: *"Cosa causa un picco glicemia elevato **dopo pranzo** (postprandiale) nel circuito chiuso?"*
 
 ##### Usa parole semplici che tutti possono capire
 
