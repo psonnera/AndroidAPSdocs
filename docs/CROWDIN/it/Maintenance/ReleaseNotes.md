@@ -421,7 +421,7 @@ Data di rilascio: 23-10-2023
 - I websocket nel plugin v3 funzionano in modo simile al plugin v1. Senza websocket abilitati AAPS pianifica regolarmente i download da NS che dovrebbe portare a un minor consumo di energia poiché NS non è connesso in modo permanente. D'altra parte significa ritardi nello scambio di dati. Leggi [qui](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) i commenti importanti del team di sviluppo prima di usarlo!
 - Se stai usando xdrip come sorgente CGM devi selezionarlo di nuovo dopo l'aggiornamento a causa di modifiche interne
 - Tidepool può essere usato come sostituto di NS per superare il primo obiettivo
-- Se invii a xDrip+ devi configurare il plugin di sincronizzazione xDrip. Per ricevere BG da AAPS in xDrip, "xDrip+ Sync Follower" deve essere selezionato come sorgente
+- Se invii a xDrip+ devi configurare il plugin di sincronizzazione xDrip. Per ricevere glicemia da AAPS in xDrip, "xDrip+ Sync Follower" deve essere selezionato come sorgente
 - Se vuoi passare al driver ComboV2, Ruffy deve essere disinstallato e il microinfusore abbinato di nuovo ad AAPS
 - Per usare il plugin DynISF devi avviare l'Obiettivo 11 (tutti i precedenti devono essere nello stato completato per consentire l'avvio dell'11)
 
@@ -483,7 +483,7 @@ IMPOSTAZIONE CONSIGLIATA
 - per tutti i motivi sopra elencati dovresti scegliere un solo metodo e usarlo su tutti i dispositivi (ricorda che tutti gli altri uploader al momento della stesura di questo documento usano v1). Se decidi di passare a v3, seleziona v3 in AAPS e in tutti gli AAPSClient
 - v3 è preferito per via dell'efficienza
 - l'uso o meno dei websocket con v3 dipende dalle tue preferenze
-- è ALTAMENTE consigliato lasciare che AAPS raccolga tutti i dati e poi li carichi su NS come unico uploader. Tutti gli altri dispositivi/applicazioni dovrebbero solo leggere da NS. Facendo questo si evitano conflitti ed errori di sincronizzazione. Questo vale anche per ottenere i dati BG su NS usando il connettore Dexcom Share ecc.
+- è ALTAMENTE consigliato lasciare che AAPS raccolga tutti i dati e poi li carichi su NS come unico uploader. Tutti gli altri dispositivi/applicazioni dovrebbero solo leggere da NS. Facendo questo si evitano conflitti ed errori di sincronizzazione. Questo vale anche per ottenere i dati glicemia su NS usando il connettore Dexcom Share ecc.
 
 (version3100)=
 
@@ -893,7 +893,7 @@ Data di rilascio: 25-04-2019
 - Controllo per GIT e avviso sull'aggiornamento gradle
 - Più test automatici
 - Correzione potenziale crash nel servizio AlarmSound (grazie @lee-b!)
-- Correzione broadcast dei dati BG (ora funziona indipendentemente dal permesso SMS!)
+- Correzione broadcast dei dati glicemia (ora funziona indipendentemente dal permesso SMS!)
 - Nuovo Controllo Versione
 
 ## Versione 2.2.2
@@ -992,7 +992,7 @@ Data di rilascio: 03-11-2018
 - Revisione completa per le schede config builder e obiettivi, con aggiunta di descrizioni
 - Nuova icona app
 - Molti miglioramenti e correzioni bug
-- Avvisi indipendenti da Nightscout se il microinfusore non è raggiungibile per un lungo periodo (es. batteria del microinfusore scarica) e letture BG mancate (vedi *Avvisi locali* nelle impostazioni)
+- Avvisi indipendenti da Nightscout se il microinfusore non è raggiungibile per un lungo periodo (es. batteria del microinfusore scarica) e letture glicemia mancate (vedi *Avvisi locali* nelle impostazioni)
 - Opzione per mantenere lo schermo acceso
 - Opzione per mostrare la notifica come notifica Android
 - Filtraggio avanzato (che permette di abilitare sempre SMB e 6h dopo i pasti) supportato con app Dexcom patchata o xDrip con G5 in modalità nativa come sorgente BG.
