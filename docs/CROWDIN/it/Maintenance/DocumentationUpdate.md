@@ -67,7 +67,7 @@ La documentazione di AAPS 3.1 è disponibile [qui](https://androidaps.readthedoc
 
 ## Febbraio 2022
 
-- [Segnale di avviso qualità BG](#aaps-screens-bg-warning-sign) @tanja
+- [Segnale di avviso qualità glicemia](#aaps-screens-bg-warning-sign) @tanja
 - [Aggiornamento microinfusore Medtronic](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
 - [Controlli necessari dopo l'aggiornamento ad AAPS 3.0](Update3_0.md) @tanja
 - [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
