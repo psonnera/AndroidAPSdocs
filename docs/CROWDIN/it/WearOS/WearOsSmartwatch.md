@@ -210,7 +210,7 @@ Per alcuni smartwatch, come il Samsung Galaxy, la "Connessione remota" nelle Fun
 2.  Verifica che lo smartwatch sia connesso a Internet (e non solo collegato al telefono tramite Bluetooth).
 3.  Verifica che il telefono **AAPS** e lo smartwatch siano abbinati o collegati nell'app Samsung.
 4.  Potrebbe anche essere utile eseguire un riavvio forzato del telefono e dello smartwatch (spegnere e riaccendere il telefono).
-5.  Supponendo che tu abbia riuscito a scaricare Wear.apk sul tuo telefono ma non stai ricevendo dati BG, _verifica_ di aver installato tramite side-loading la versione corretta dell'**AAPS** apk sull'orologio. Se la versione wear.apk di AAPS è elencata come uno dei seguenti: a) "wear-AAPSClient-release"; b) "wear-full-release.aab"; o c) la parola "debug" appare nel titolo, non hai selezionato la versione corretta di Wear OS apk durante la compilazione.
+5.  Supponendo che tu abbia riuscito a scaricare Wear.apk sul tuo telefono ma non stai ricevendo dati glicemia, _verifica_ di aver installato tramite side-loading la versione corretta dell'**AAPS** apk sull'orologio. Se la versione wear.apk di AAPS è elencata come uno dei seguenti: a) "wear-AAPSClient-release"; b) "wear-full-release.aab"; o c) la parola "debug" appare nel titolo, non hai selezionato la versione corretta di Wear OS apk durante la compilazione.
 6.  Verifica che il tuo router non isoli i dispositivi l'uno dall'altro.
 
 Ulteriori suggerimenti per la risoluzione dei problemi possono essere trovati [qui](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.).
@@ -257,7 +257,7 @@ F - batteria del telefono
 
 G - velocità basale (mostrata in U/h durante la velocità standard e in % durante TBR)
 
-H - BGI (blood glucose interaction) -> il grado in cui la BG "dovrebbe" salire o scendere basandosi solo sull'attività dell'insulina.
+H - BGI (blood glucose interaction) -> il grado in cui la glicemia "dovrebbe" salire o scendere basandosi solo sull'attività dell'insulina.
 
 I - carboidrati (carboidrati attivi | e-carbs in futuro)
 
