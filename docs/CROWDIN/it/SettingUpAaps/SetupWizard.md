@@ -380,7 +380,7 @@ Dopo aver effettuato la selezione, premi "AVANTI" per andare alla schermata succ
 
 Clicca sul pulsante ingranaggio per accedere alle impostazioni.
 
-Abilita "Carica dati BG su NS" e "Registra cambio sensore su NS".
+Abilita "Carica dati glicemia su NS" e "Registra cambio sensore su NS".
 
 Torna indietro e premi "AVANTI" per andare alla schermata successiva:
 
