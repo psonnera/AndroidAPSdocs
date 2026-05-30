@@ -264,7 +264,7 @@ Per prevenire l'ipoglicemia nelle ore 3-5 post-pasto, riduci l'aggressività pri
 - Become milder and milder with the **ISF** already during the glucose rise, as in Automation examples #1 and #2 given.
 - Define the iob threshold, from which **AAPS** is made significantly more cautious (Automation #3, above). Note this **iob** can be exceeded, by the last **SMB** before it went into effect; and then further by TBRs if the loop sees insulinReq Carbs getting absorbed will provide a counter-movement towards lower iob.
 - The iob threshold could be differentiated according to meals: By cloning the automations, you could easily differentiate for breakfast, lunch, and dinner time slots (or even for geo-locations, like company cafeteria, or at mother-in-law etc) > You could differentiate within these time slots even further by setting different TTs for low carb vs.
-> > > > > > > > fast carb, etc., and thus be able to “code for” different meal classes that may occur at this time of day, and call them up with **Automations** specially tuned for them. This is probably not necessary, unless your diet habits do vary a lot.
+> > > > > > > > > fast carb, etc., and thus be able to “code for” different meal classes that may occur at this time of day, and call them up with **Automations** specially tuned for them. This is probably not necessary, unless your diet habits do vary a lot.
 
 Prima di una sfida di pasto speciale, puoi aumentare la tua soglia **IOB**, o apportare un'altra modifica in qualsiasi tua Automazione entro meno di 5 secondi, direttamente dalla tua schermata principale AAPS (hamburger in alto a sinistra; o scheda **Automazioni**, a seconda di come hai configurato il tuo **AAPS**).
 
