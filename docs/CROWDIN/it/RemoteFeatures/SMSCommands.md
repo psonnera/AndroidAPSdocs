@@ -178,7 +178,7 @@ Le **Tabelle Comandi SMS** di seguito mostrano tutti i possibili comandi SMS. I 
 (authentication-or-not)=
 ### Autenticazione o no?
 
-Alcuni comandi SMS danno una risposta immediata, e alcuni comandi SMS richiedono una **autenticazione** forte tramite l'app Authenticator. Una semplice richiesta come "**BG**" (che richiede un aggiornamento sulla glicemia attuale) è rapida da digitare, non necessita di autenticazione e restituisce le informazioni sullo stato **AAPS** mostrate di seguito:
+Alcuni comandi SMS danno una risposta immediata, e alcuni comandi SMS richiedono una **autenticazione** forte tramite l'app Authenticator. Una semplice richiesta come "**glicemia**" (che richiede un aggiornamento sulla glicemia attuale) è rapida da digitare, non necessita di autenticazione e restituisce le informazioni sullo stato **AAPS** mostrate di seguito:
 
 ![image](../images/remote-control-06.png)
 
@@ -259,14 +259,14 @@ Il bolo remoto non è consentito entro 15 min (questo valore è modificabile sol
 (SMSCommands-other)=
 ### Altro
 
-| Comando            | Auth | Funzione e *Risposta*                                                                                                                                                                                                                           |
-| ------------------ | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| TREATMENTS REFRESH | No   | Aggiorna i trattamenti da NS                                                                                                                                                                                                                    |
-| AAPSCLIENT RESTART | No   | Utile se noti un problema di comunicazione<br/>con Nightscout o **AAPSClient**                                                                                                                                                            |
-| RESTART            | No   | Riavvia AAPS. Utile se hai problemi che normalmente vengono risolti con un riavvio.                                                                                                                                                             |
-| SMS DISABLE/STOP   | No   | Per disabilitare il servizio SMS remoto rispondi con il codice Qualsiasi.<br/>Tieni presente che potrai riattivarlo direttamente<br/>solo dallo smartphone master **AAPS**.                                                         |
-| HELP               | No   | Restituisce tutte le funzioni disponibili per la consultazione:<br/>BG, LOOP, TREATMENTS, ....<br/>Invia ulteriore comando ***HELP ***FUNZIONE****** per elencare<br/>tutte le opzioni disponibili in questa sezione. |
-| HELP BOLUS         |      | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                                                            |
+| Comando            | Auth | Funzione e *Risposta*                                                                                                                                                                                                                                 |
+| ------------------ | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| TREATMENTS REFRESH | No   | Aggiorna i trattamenti da NS                                                                                                                                                                                                                          |
+| AAPSCLIENT RESTART | No   | Utile se noti un problema di comunicazione<br/>con Nightscout o **AAPSClient**                                                                                                                                                                  |
+| RESTART            | No   | Riavvia AAPS. Utile se hai problemi che normalmente vengono risolti con un riavvio.                                                                                                                                                                   |
+| SMS DISABLE/STOP   | No   | Per disabilitare il servizio SMS remoto rispondi con il codice Qualsiasi.<br/>Tieni presente che potrai riattivarlo direttamente<br/>solo dallo smartphone master **AAPS**.                                                               |
+| HELP               | No   | Restituisce tutte le funzioni disponibili per la consultazione:<br/>glicemia, LOOP, TREATMENTS, ....<br/>Invia ulteriore comando ***HELP ***FUNZIONE****** per elencare<br/>tutte le opzioni disponibili in questa sezione. |
+| HELP BOLUS         |      | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                                                                  |
 
 (SMSCommands-troubleshooting)=
 ## Risoluzione dei problemi e FAQ
