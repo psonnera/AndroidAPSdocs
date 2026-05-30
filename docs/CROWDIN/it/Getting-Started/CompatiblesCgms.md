@@ -33,9 +33,9 @@ Questa sezione fornisce una breve panoramica di tutti i **sensori CGMs/FGMs** co
 
 ## Trusted BG data sources
 
-I **CGM** approvati dagli enti normativi per i sistemi commerciali a circuito chiuso ibrido sono considerati sorgenti di dati **BG** affidabili.
+I **CGM** approvati dagli enti normativi per i sistemi commerciali a circuito chiuso ibrido sono considerati sorgenti di dati **glicemia** affidabili.
 
-Affinché **AAPS** possa identificarli correttamente, l'app che invia le letture di **BG** deve essere in grado di fornire informazioni sul sensore.
+Affinché **AAPS** possa identificarli correttamente, l'app che invia le letture di **glicemia** deve essere in grado di fornire informazioni sul sensore.
 
 Le sorgenti dati affidabili consentono sempre l'erogazione di **SMB**.
 
