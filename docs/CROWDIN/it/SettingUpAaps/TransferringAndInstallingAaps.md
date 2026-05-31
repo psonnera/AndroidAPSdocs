@@ -1,67 +1,67 @@
-# Transferring and Installing AAPS on your smartphone
+# Trasferire e installare AAPS sullo smartphone
 
-In the previous section, [building **AAPS**](../SettingUpAaps/BuildingAaps.md), you built the **AAPS** app (which is an .apk file) on a computer. 
+Nella sezione precedente, [costruire **AAPS**](../SettingUpAaps/BuildingAaps.md), hai costruito l'app **AAPS** (che è un file .apk) su un computer.
 
-The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, xDrip+ or another CGM receiver app) to your Android smartphone, and then **install** the app(s). 
+I passi successivi sono **trasferire** il file APK di **AAPS** (e altre app che potrebbe essere necessario, come BYODA, xDrip+ o un'altra app ricevitore CGM) sul tuo smartphone Android, e poi **installare** le app.
 
-Following installation of **AAPS** on the smartphone, you will then be able to move onto [**configuring the AAPS loop**](../SettingUpAaps/SetupWizard.md).
+Dopo l'installazione di **AAPS** sullo smartphone, potrai passare alla [**configurazione del loop AAPS**](../SettingUpAaps/SetupWizard.md).
 
-There are several ways to transfer the **AAPS** APK file from your computer to the smartphone. Here we explain two different ways: 
+Esistono diversi modi per trasferire il file APK di **AAPS** dal computer allo smartphone. Qui spieghiamo due metodi diversi:
 
-* Option 1 -  Use your Google drive (Gdrive)
-* Option 2 -  Use a USB cable
+* Opzione 1 - Usa Google Drive (Gdrive)
+* Opzione 2 - Usa un cavo USB
 
-Please note that transfer by email might cause difficulties, and is discouraged.
+Tieni presente che il trasferimento via email potrebbe causare difficoltà e non è consigliato.
 
-## Option 1. Use Google drive to transfer files
+## Opzione 1. Usa Google Drive per trasferire i file
 
-Open [Google.com](https://www.google.com/) in your web browser and login to your Google Account.
+Apri [Google.com](https://www.google.com/) nel tuo browser web e accedi al tuo account Google.
 
-On the right upper side select the Drive app in the Google menu.
+In alto a destra seleziona l'app Drive nel menu Google.
 
 ![Start Drive App](../images/GoogleDriveInWebbrowser.png)
 
-Right click in the free area below the files and folders in the Google Drive app and select "Upload File".
+Fai clic con il tasto destro nell'area libera sotto i file e le cartelle nell'app Google Drive e seleziona "Carica file".
 
 ![Upload apk file with Google Drive App](../images/GoogleDriveUploadFile.png)
 
-The apk file should now be uploaded on Google Drive.
+Il file APK dovrebbe ora essere caricato su Google Drive.
 
 
-### Use the Google Drive app to execute the apk file for installation
+### Usa l'app Google Drive per eseguire il file APK per l'installazione
 
-Switch to your mobile and start the Google Drive app. It is a preinstalled app and can be found where the other Google apps are located or with search for the name of the app.
+Passa al tuo smartphone e avvia l'app Google Drive. È un'app preinstallata e si trova dove si trovano le altre app Google oppure cercandola per nome.
 
 ![start the Google Drive app](../images/GoogleDriveMobileAPPLaunch.png)
 
-Launch the apk installation by double click on the filename in the Google Drive App on the mobile.
+Avvia l'installazione dell'APK facendo doppio clic sul nome del file nell'app Google Drive sul cellulare.
 
 ![launch the apk installation](../images/GoogleDriveMobileUploadedAPK.png)
 
-In case you get a security notice that you are not allowed to install apps from Google Driver at the moment please allow it for that short moment and disallow it afterwards as it is a security risk when you let it enable all the time.
+Nel caso in cui ricevi un avviso di sicurezza che non ti è attualmente consentito installare app da Google Drive, consentilo per quel breve momento e disabilitalo subito dopo, poiché è un rischio per la sicurezza lasciarlo abilitato in modo permanente.
 
 ![Security Notice Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
 
 ![Security Notice Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
 
-After the installation finished your are done with this step.
+Al termine dell'installazione hai completato questo passaggio.
 
-you should see the **AAPS** icon and be able to open the app.
+Dovresti vedere l'icona di **AAPS** e poter aprire l'app.
 
 ```{warning}
-**IMPORTANT SAFETY NOTICE**
-Did you remember to disallow the installation from Google Drive?
+**AVVISO IMPORTANTE DI SICUREZZA**
+Ricorda di disabilitare l'installazione da Google Drive?
 ```
 
-Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
+Prosegui con la [configurazione del loop AAPS](../SettingUpAaps/SetupWizard.md).
 
-## Option 2. Use a USB cable to transfer files
-The second way to transfer the AAPS apk file is with a  [USB cable](https://support.google.com/android/answer/9064445?hl=en).
+## Opzione 2. Usa un cavo USB per trasferire i file
+Il secondo modo per trasferire il file APK di AAPS è con un [cavo USB](https://support.google.com/android/answer/9064445?hl=en).
 
-Transfer the file from its location on your computer to the "downloads" folder on the phone. 
+Trasferisci il file dalla sua posizione sul computer alla cartella "download" del telefono.
 
-On your phone, you will have to allow installation from unknown sources. Explanations of how to do this can be found on the internet (_e.g._ [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
+Sul tuo telefono, dovrai consentire l'installazione da fonti sconosciute. Le spiegazioni su come farlo si trovano su internet (_es._ [qui](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) o [qui](https://www.androidcentral.com/unknown-sources)).
 
-Once you have transferred the file by dragging it across, to install it, open the "downloads" folder on the phone, press the AAPS apk and select "install". You can then proceed to the next step, [Setup Wizard](../SettingUpAaps/SetupWizard.md), which will help you setup the **AAPS** app and loop on your smartphone.    
+Dopo aver trascinato il file, per installarlo apri la cartella "download" sul telefono, premi sull'APK di AAPS e seleziona "installa". Puoi poi passare al passo successivo, la [Procedura guidata di configurazione](../SettingUpAaps/SetupWizard.md), che ti aiuterà a configurare l'app **AAPS** e il loop sul tuo smartphone.
 
-Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
+Prosegui con la [configurazione del loop AAPS](../SettingUpAaps/SetupWizard.md).

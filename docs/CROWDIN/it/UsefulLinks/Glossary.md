@@ -1,170 +1,146 @@
-# Glossary
+# Glossario
 
- __AAPS__ =  AndroidAPS is the name of the Android app.
+ __AAPS__ = AndroidAPS è il nome dell'app Android.
 
-__AAPSClient__ (or __NSClient__) = a remote control feature that can be used by caregivers via a follower phone to follow a user’s __AAPS__ by connecting to the user’s __Nightscout's__ site. Further info → Wiki - 'NS Client'. Objectives learning program within __AAPS__ provides step by step guidance. Further info → Wiki - 'objectives'.
+__AAPSClient__ (o __NSClient__) = funzionalità di controllo remoto che può essere usata dai caregiver tramite un telefono di sorveglianza per seguire __AAPS__ di un utente connettendosi al sito __Nightscout__ dell'utente. Ulteriori informazioni → Wiki - 'NS Client'. Il programma di apprendimento Obiettivi all'interno di __AAPS__ fornisce una guida passo passo. Ulteriori informazioni → Wiki - 'obiettivi'.
 
-__APS__ = Artificial Pancreas System.
+__APS__ = Sistema di Pancreas Artificiale (Artificial Pancreas System).
 
-__AMA__ = Advanced Meal Assist.
-An algorithm which allows __AAPS__ to increase the user’s basal more aggressively after a meal bolus. Further info → Wiki - 'AMA'.
+__AMA__ = Advanced Meal Assist. Un algoritmo che permette ad __AAPS__ di aumentare la basale dell'utente in modo più aggressivo dopo un bolo pasto. Ulteriori informazioni → Wiki - 'AMA'.
 
-__Adjustment Factor__ = used within **DynamicISF** and is a value set within a user's **Preferences** between 1% and 300%. This acts as a multiplier on the **TDD** value.
-- increasing the **Adjustment Factor** value above 100 % makes **DynamicISF** more aggressive: the **ISF** values become smaller (i.e. more insulin required to decrease **BG** levels a small amount)
-- lowering the **Adjustment Factor** value under 100% makes **DynamicISF** less aggressive: the **ISF** values become larger (i.e. less insulin required to decrease **BG** levels a small amount).
+__Fattore di Aggiustamento__ = utilizzato all'interno del **DynamicISF** ed è un valore impostato nelle **Preferenze** dell'utente tra 1% e 300%. Agisce come moltiplicatore sul valore **TDD**.
+- aumentare il valore del **Fattore di Aggiustamento** sopra il 100% rende il **DynamicISF** più aggressivo: i valori **ISF** diventano più piccoli (cioè è necessaria più insulina per diminuire i livelli di **glicemia** di una piccola quantità)
+- abbassare il valore del **Fattore di Aggiustamento** sotto il 100% rende il **DynamicISF** meno aggressivo: i valori **ISF** diventano più grandi (cioè è necessaria meno insulina per diminuire i livelli di **glicemia** di una piccola quantità).
 
-__Android Auto__ = a system used to host certain functions of an Android smartphone’s features, including __AAPS__, within a car's display. Further info → Wiki - 'android auto'.
+__Android Auto__ = sistema usato per ospitare alcune funzioni delle funzionalità dello smartphone Android, incluso __AAPS__, nel display di un'auto. Ulteriori informazioni → Wiki - 'android auto'.
 
-__APK__ = Android application Package. 
-A software installation file.  Further info → Wiki - 'Building APK'.
+__APK__ = Pacchetto applicazione Android (Android application Package). Un file di installazione software.  Ulteriori informazioni → Wiki - 'Compilazione APK'.
 
-__Autosens__ = calculation of sensitivity to insulin between a period of a 24 and 8 hour window etc. Further info → DIABETTECH - __Autosens__.
+__DIA__ = Durata dell'Azione dell'Insulina (Duration of Insulin Action). Ulteriori informazioni → Wiki - 'tipi di insulina' e vedere anche → DIABETTECH - 'DIA'.
 
-__Azure__ = cloud computing platform to host __Nightscout__ web app Azure → see also __Nightscout__.
+__Azure__ = piattaforma cloud per ospitare l'app web __Nightscout__ Azure → vedere anche __Nightscout__.
 
-__BAT__ = status light low battery on __AAPS’__ home screen __Preferences__, Screenshots → see also __CAN__ / __RES__ / __SEN__.
+__BAT__ = spia di stato batteria scarica nella schermata principale di __AAPS__ nelle __Preferenze__, Screenshot → vedere anche __CAN__ / __RES__ / __SEN__.
 
-__BG__ =  blood glucose.
+__glicemia__ = glicemia (blood glucose).
 
-__BGI__ = blood glucose impact.
-The degree to which __BG__ 'should' rise or fall based on insulin activity alone.
+__BGI__ = impatto sulla glicemia (blood glucose impact). Il grado in cui la __glicemia__ 'dovrebbe' salire o scendere basandosi solo sull'attività dell'insulina.
 
-__BG source__ = the source of the user’s __BG__ values derived from either __CGM__ or __FGM__ through a system integration software like __BYODA__, __xDrip+__ etc. Further info → Wiki - 'BG source'
+__Sorgente BG__ = la sorgente dei valori di __glicemia__ dell'utente derivati da __CGM__ o __FGM__ tramite un software di integrazione come __BYODA__, __xDrip+__ ecc. Ulteriori informazioni → Wiki - 'Sorgente BG'  Further info → Wiki - 'sensor noise'. Further info → Wiki - 'temp targets'.
 
-__Bridge__ = an additional device transforming __FGM__ to __CGM__.  
+__Bridge__ = dispositivo aggiuntivo che trasforma __FGM__ in __CGM__.
 
-__BR__ =  Basal Rate. 
-The amount of insulin in a given time block to maintain __BG__ at a stable level. → see also __IC__ / __ISF__.
+__BR__ = Velocità Basale (Basal Rate). La quantità di insulina in un determinato intervallo di tempo per mantenere la __glicemia__ a un livello stabile. → vedere anche __IC__ / __ISF__.
 
-__BYODA__ = Build Your Own Dexcom App. 
-A way to generate the user’s own Dexcom App for reading out the sensor data Dexcom G6.
+__BYODA__ = Costruisci la tua app Dexcom (Build Your Own Dexcom App). Un modo per generare la propria app Dexcom per leggere i dati del sensore Dexcom G6.
 
-__CAGE__ = Cannula AGE.
-Displayed on __AAPS’__ homescreen and Nightscout providing the user’s information entered in the Actions tab / menu → see also __Nightscout__.
+__CAGE__ = Età Cannula (Cannula AGE). Visualizzato nella schermata principale di __AAPS__ e Nightscout fornendo le informazioni dell'utente inserite nella scheda/menu Azioni → vedere anche __Nightscout__.
 
-__CAN__ = status light overdue cannula change on the __AAPS’__ homescreen __Preferences'__ → see also __BAT__ / __RES__ / __SEN__.
+__CAN__ = spia di stato cambio cannula in scadenza nella schermata principale di __AAPS__ nelle __Preferenze'__ → vedere anche __BAT__ / __RES__ / __SEN__.
 
-__CGM__ = Continuous Glucose Monitor → see also __FGM__.
+__CGM__ = Monitor Continuo del Glucosio (Continuous Glucose Monitor) → vedere anche __FGM__.
 
-__Closed Loop__ = a closed loop system which makes automatic adjustments to the user’s basal delivery based on an __AAPS’s__ algorithm and the user’s __Profile__ settings without requiring the user’s-approval. Further info → Wiki - 'closed loop'.
+__Closed Loop__ = sistema a loop chiuso che apporta correzioni automatiche all'erogazione basale dell'utente basandosi sull'algoritmo di __AAPS__ e le impostazioni del __Profilo__ dell'utente senza richiedere l'approvazione dell'utente. Ulteriori informazioni → Wiki - 'closed loop'.
 
-__COB__ = Carbs On Board. 
-This is the amount of carbohydrates currently available for the user's digestion → see also IOB.
+__COB__ = Carboidrati Attivi (Carbs On Board). È la quantità di carboidrati attualmente disponibile per la digestione dell'utente → vedere anche IOB.
 
-__CSF__ =Carbs Sensitivity Factor.
-i.e. how much does the user’s __BG__ increase for 1g of carbs absorbed.
+__CSF__ = Fattore di Sensibilità ai Carboidrati (Carbs Sensitivity Factor). Ovvero quanto aumenta la __glicemia__ dell'utente per 1g di carboidrati assorbiti.
 
-__DIA__ = Duration of Insulin Action.  Further info →  Wiki - 'insulin types' and see also →  DIABETTECH - 'DIA'.
+__Tempo di picco__ = tempo dell'effetto massimo dell'insulina somministrata.  Ulteriori informazioni → Wiki - 'costruttore di configurazione'.
 
-__DST__ = Daylight Savings Time Wiki DST.
+__DST__ = Ora Legale (Daylight Savings Time) Wiki DST.
 
-__Dynamic ISF (or DynISF)__ =  a feature within **AAPS** that adapts the insulin sensitivity factor (**ISF**) dynamically based on the user’s:
-- Total Daily Dose of insulin (**TDD**); and
-- current and predicted **BG** values.
+__ISF Dinamico (o DynISF)__ = funzionalità di **AAPS** che adatta dinamicamente il fattore di sensibilità all'insulina (**ISF**) basandosi su:
+- Dose Totale Giornaliera di insulina (**TDD**); e
+- valori **glicemia** correnti e previsti.
 
 
-__eCarbs__ = extended Carbs.
-Carbs split up over several hours to accommodate/protein and permits __AAPS__ to deliver extended boluses.  Further info →  Wiki - 'eCarbs', 'eCarbs use'.
+__eCarbs__ = Carboidrati Estesi (extended Carbs). Carboidrati distribuiti su diverse ore per gestire proteine e permettere ad __AAPS__ di erogare boli estesi.  Ulteriori informazioni → Wiki - 'eCarbs', 'utilizzo eCarbs'.
 
-__FGM__ = Flash Glucose Monitor manufactured by Freestyle Libre.
- Further info →  Wiki - 'BG source' and see also 'CGM'.
+__FGM__ = Flash Glucose Monitor prodotto da Freestyle Libre. Ulteriori informazioni → Wiki - 'Sorgente BG' e vedere anche 'CGM'.
 
-__git__ = a tool used store and download the __AAPS’__ source code.  
+__git__ = strumento usato per archiviare e scaricare il codice sorgente di __AAPS__.
 
-__GitHub__ = a web-based hosting service and build process for the __AAPS’__ software version-control system for tracking changes in computer files and coordinating work on those files especially for teams. 
-It is also necessary for __APK__ updates.  Further info →  Wiki - 'update APK'.
+__GitHub__ = servizio di hosting web e processo di compilazione per il sistema di controllo versione del software di __AAPS__ per tracciare le modifiche nei file del computer e coordinare il lavoro su quei file specialmente per i team. È necessario anche per gli aggiornamenti __APK__.  Ulteriori informazioni → Wiki - 'aggiornamento APK'.
 
-__Glimp__ = an app to collect values from Freestyle Libre Glimp.
+__Glimp__ = app per raccogliere i valori da Freestyle Libre Glimp.
 
-__IC (or I:C)__ = Insulin to Carb ratio. 
-(i.e. how many carbs are covered by one unit of insulin?).
+__IC (o I:C)__ = Rapporto Insulina-Carboidrati (Insulin to Carb ratio). (ovvero quanti carboidrati sono coperti da un'unità di insulina?).
 
-__IOB__ = Insulin On Board.
-Insulin active in the user’s body.
+__IOB__ = Insulina Attiva (Insulin On Board). Insulina attiva nel corpo dell'utente.
 
-__ISF__ = Insulin Sensitivity Factor.
-The expected decrease in BG as a result of one unit of insulin.
+lowering the **Adjustment Factor** value under 100% makes **DynamicISF** less aggressive: the **ISF** values become larger (i.e. less insulin required to decrease **BG** levels a small amount).
 
-__Keystore (or JKS)__ = a Java Key Store which is an encrypted file where your personal developer certificates and keys will be stored required for your __AAPS'__ build (and rebuid).
+__Keystore (o JKS)__ = Java Key Store che è un file crittografato dove vengono memorizzati i certificati e le chiavi del tuo sviluppatore personale necessari per la compilazione (e ricompilazione) di __AAPS__.
 
-__LGS__ = Low Glucose Suspend. 
-__AAPS__ will reduce basal if __BG__ is dropping and if __BG__ is rising, then it will only increase basal if  __IOB__ is negative (from a previous __LGS__), otherwise basal rates will remain the same as the user’s selected __Profile__. The user may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound. → see also objective 6.
+__LGS__ = Sospensione per Glucosio Basso (Low Glucose Suspend). __AAPS__ ridurrà la basale se la __glicemia__ sta scendendo e se la __glicemia__ sta salendo, aumenterà la basale solo se l'__IOB__ è negativo (da un precedente __LGS__), altrimenti le velocità basali rimarranno le stesse del __Profilo__ selezionato dall'utente. L'utente potrebbe temporaneamente sperimentare picchi dopo la gestione di un'ipoglicemia senza la possibilità di aumentare la basale nel rimbalzo. → vedere anche obiettivo 6.
 
-__LineageOS__ = free and open-source operating system for smartphones etc. 
-(When using Accu-Chek Combo see Wiki - Combo pump).
+__LineageOS__ = sistema operativo libero e open-source per smartphone ecc. (Quando si usa Accu-Chek Combo vedere Wiki - Pompa Combo).
 
-__Log files__ = __AAPS’__ records of the user's actions (useful for troubleshooting and debugging). Further info →  Wiki - 'log files'.
+__File di log__ = registrazioni di __AAPS__ delle azioni dell'utente (utili per la risoluzione dei problemi e il debug). Ulteriori informazioni → Wiki - 'file di log'.
 
-__maxIOB__ = maximum total IOB.
-This is a safety feature and prevents __AAPS__ delivering insulin over the user’s settings.  Further info →  Wiki - 'SMB'.
+__maxIOB__ = IOB totale massimo. Questa è una funzione di sicurezza e impedisce ad __AAPS__ di erogare insulina oltre le impostazioni dell'utente.  Ulteriori informazioni → Wiki - 'SMB'.
 
-__min_5m_carbimpact__ = safety feature that is a calculation of default carb decay when carb absorption cannot be determined based on the user’s blood’s reactions. 
-This is a safety feature.  Further info →  Wiki - 'config builder'.
+__min_5m_carbimpact__ = funzione di sicurezza che è un calcolo del decadimento predefinito dei carboidrati quando l'assorbimento dei carboidrati non può essere determinato in base alle reazioni del sangue dell'utente. Questa è una funzione di sicurezza.  Ulteriori informazioni → Wiki - 'costruttore di configurazione'.
 
-__Nightscout__ = open source project to access and report __CGM__ data. 
-The central data hub for the user’ __AAPS__ data and can generate reports to view the user’s historical __NIghtscout__ data expected HbA1c, time in range) or search for patterns in the data via percentile chart etc. 
+__Nightscout__ = progetto open source per accedere e segnalare i dati __CGM__. Il centro dati principale per i dati __AAPS__ dell'utente e può generare rapporti per visualizzare i dati storici __Nightscout__ dell'utente (HbA1c previsto, tempo nel range) o cercare schemi nei dati tramite grafici percentili ecc.
 
-__Nightscout__ → see also __Nightscout Reporter__. This is particularly useful for parents following their child's diabetes management.
+__Nightscout__ → vedere anche __Nightscout Reporter__. Questo è particolarmente utile per i genitori che seguono la gestione del diabete del proprio figlio.
 
-__Nightscout Reporter Tool__ = a tool which generates PDFs reports from Nightscout web app data. See 'Nightscout Reporter', 'NS Reporter' @ Facebook.
+__Strumento Nightscout Reporter__ = strumento che genera rapporti PDF dai dati dell'app web Nightscout. Vedere 'Nightscout Reporter', 'NS Reporter' @ Facebook.
 
-__NSClient__ ( or __‘AAPSClient’)__ = see __AAPSClient__.
+__NSClient__ (o __'AAPSClient'__) = vedere __AAPSClient__.
 
-__OpenAPS__ = Open Artificial Pancreas System.
+__OpenAPS__ = Sistema di Pancreas Artificiale Open Source (Open Artificial Pancreas System).
 
-__Open Loop system__ = an __AAPS__ feature that will recommend adjustments and which must be performed manually by the user on __AAPS__.  Further info →  Wiki - 'config builder'.
+__Sistema Open Loop__ = funzionalità di __AAPS__ che raccomanda correzioni che devono essere eseguite manualmente dall'utente su __AAPS__.  Ulteriori informazioni → Wiki - 'costruttore di configurazione'.
 
-__Oref0 / Oref1__ = sensitivity detection and "reference design implementation version 0/1". It is the key algorithm behind OpenAPS Wiki - sensitivity detection.
+__Oref0 / Oref1__ = rilevamento della sensibilità e "implementazione del design di riferimento versione 0/1". È l'algoritmo principale alla base di OpenAPS Wiki - rilevamento della sensibilità.
 
-__Peak time__ = time of maximum effect of insulin given. Further info → Wiki - 'config builder'.
+__TT__ = temporary target temporary increase/decrease of the user’s __glicemia__ target (range) e.g. for eating or sport activities. Further info → Wiki - 'temp targets'.
 
-__PH__ = Pump History. 
-This can be accessed in __AAPS’__ treatments which are located on the 3 dot menu on the right side of __AAPS__ main screen Screenshots.
+__PH__ = Cronologia Microinfusore (Pump History). È accessibile nei trattamenti di __AAPS__ che si trovano nel menu a 3 punti sul lato destro della schermata principale di __AAPS__ Screenshot.
 
-__Predictions__ = predictions for __BG__ in the future based on different calculations. Further info → Wiki - 'prediction lines'.
+__Previsioni__ = previsioni per la __glicemia__ nel futuro basate su calcoli diversi. Ulteriori informazioni → Wiki - 'linee di previsione'.
 
-__Profile__ = the user’s basic treatment settings (basal rate, __DIA__, __IC__, __ISF__, __BG__ target).
-AAPSv3 only supports local profiles created within __AAPS__ but __Nightscout__ __Profiles__ can be copied (synchronised) to __AAPS__. Further info → Wiki - 'profile'.
+__Profilo__ = le impostazioni di trattamento di base dell'utente (velocità basale, __DIA__, __IC__, __ISF__, target __glicemia__). AAPSv3 supporta solo i profili locali creati all'interno di __AAPS__ ma i __Profili__ di __Nightscout__ possono essere copiati (sincronizzati) su __AAPS__. Ulteriori informazioni → Wiki - 'profilo'.
 
-__Profile switch__ = (temporary) switch  of the user’ __Profile__ to a different __Profile__ saved within __AAPS__.
+__Cambio Profilo__ = cambio (temporaneo) del __Profilo__ dell'utente con un __Profilo__ diverso salvato in __AAPS__.
 
-__Profile Percentage__ = a (temporary_ percentage increase or decrease applied to a user’s __Profile__ for a selected time period.
+__Percentuale Profilo__ = aumento o diminuzione percentuale (temporanea) applicata al __Profilo__ di un utente per un periodo di tempo selezionato.
 
-__RES__ = status light overdue reservoir change on the __AAPS’__ homescreen Preferences, Screenshots → see also __BAT__ / __CAN__ / __SEN__.
+__RES__ = spia di stato cambio serbatoio in scadenza nella schermata principale di __AAPS__ Preferenze, Screenshot → vedere anche __BAT__ / __CAN__ / __SEN__.
 
-__RileyLink__ = open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz (used for old Medtronic pumps) or 433MHz (used for Omnipod Eros pumps) wireless communication RileyLink.
+__RileyLink__ = dispositivo hardware open source per collegare Bluetooth Low Energy (BLE) a comunicazioni wireless a 916 MHz (usato per vecchi microinfusori Medtronic) o 433 MHz (usato per microinfusori Omnipod Eros) RileyLink.
 
-__SAGE__ = sensor age. 
-This is displayed on the homescreen of __AAPS__ and in __Nightscout__ if information was entered in the Actions tab / menu → see also __Nightscout__.
+__SAGE__ = Età Sensore (sensor age). Viene visualizzato nella schermata principale di __AAPS__ e in __Nightscout__ se le informazioni sono state inserite nella scheda/menu Azioni → vedere anche __Nightscout__.
 
-__SEN__ = status light sensor change on home screen Preferences, Screenshots → see also __BAT__ / __CAN__ / __RES__.
+__SEN__ = spia di stato cambio sensore nella schermata principale Preferenze, Screenshot → vedere anche __BAT__ / __CAN__ / __RES__.
 
-__Sensivity detection__ = calculation of sensitivity to insulin as a result of exercise, hormones etc.  see also → DIABETTECH - 'Autosens'.
+__Rilevamento della Sensibilità__ = calcolo della sensibilità all'insulina come risultato di esercizio, ormoni ecc. vedere anche → DIABETTECH - 'Autosens'.
 
-__Sensor noise__ = a term used to describe the unstable __CGM’s__ readings leading to "jumping" __BG__ values.  Further info → Wiki - 'sensor noise'.
+__Rumore del sensore__ = termine usato per descrivere le letture instabili del __CGM__ che portano a valori di __glicemia__ "saltellanti".  Ulteriori informazioni → Wiki - 'rumore del sensore'.
 
-__SMB__ = Super Micro Bolus.
-An __AAPS__ feature for faster insulin delivery in order to adjust __BG__.  Further info → Wiki - '__SMB__' and  see also __UAM__.
+__SMB__ = Super Micro Bolo (Super Micro Bolus). Funzionalità di __AAPS__ per un'erogazione più rapida di insulina al fine di regolare la __glicemia__.  Ulteriori informazioni → Wiki - '__SMB__' e vedere anche __UAM__.
 
-__Super bolus__ = shift of basal to bolus insulin for faster __BG__ adjustment.
+__Super bolo__ = spostamento di insulina dalla basale al bolo per una regolazione più rapida della __glicemia__.
 
-__TBB__ = total base basal (sum of basal rate within 24 hours) → see also __TBR__ / __TDD__.
+__TBB__ = basale di base totale (somma della velocità basale nelle 24 ore) → vedere anche __TBR__ / __TDD__.
 
-__TBR__ = temporary basal rate→ see also __TBB__ / __TDD__.
+__TBR__ = basale temporanea (temporary basal rate) → vedere anche __TBB__ / __TDD__.
 
-__TDD__ = total daily dose (bolus + basal per day) → see also __TBB__ / __TBR__.
+__TDD__ = dose giornaliera totale (bolo + basale al giorno) → vedere anche __TBB__ / __TBR__.
 
-__TT__ = temporary target temporary increase/decrease of the user’s __BG__ target (range) e.g. for eating or sport activities.  Further info → Wiki - 'temp targets'.
+__TT__ = target temporaneo (temporary target): aumento/diminuzione temporanea del target (intervallo) di __glicemia__ dell'utente, ad es. per attività di pasto o sportive.  Ulteriori informazioni → Wiki - 'target temporanei'.
 
-__UAM__ = unannounced meals. 
-Detection of significant increase in __BG__ levels due to meals, adrenaline or other influences and attempt to adjust this.  Further info → Wiki - 'UAM' and see also __SMB__.
+__UAM__ = Pasti non annunciati (unannounced meals). Rilevamento di un aumento significativo dei livelli di __glicemia__ dovuto a pasti, adrenalina o altre influenze e tentativo di correzione.  Ulteriori informazioni → Wiki - 'UAM' e vedere anche __SMB__.
 
-__Virtual pump__ = an __AAPS__ feature which allows the user to try __AAPS’__ functions or for PWD using a pump model with no __AAPS__ driver for looping → see also __Open Loop__.
+__Microinfusore virtuale__ = funzionalità di __AAPS__ che permette all'utente di provare le funzioni di __AAPS__ o per le persone con diabete che usano un modello di microinfusore senza driver __AAPS__ per il loop → vedere anche __Open Loop__.
 
-__Wallpaper__ = __AAPS__ background image see phones page.
+__Sfondo__ = immagine di sfondo di __AAPS__ vedere la pagina dei telefoni.
 
-__xDrip+__ = open source software to read __CGM__ systems xDrip+.
+__xDrip+__ = software open source per leggere i sistemi __CGM__ xDrip+.
 
-__Zero-temp__ = temporary basal rate with 0% (no basal insulin delivery).
+__Zero-temp__ = basale temporanea con 0% (nessuna erogazione di insulina basale).
 
-→ see also [the OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html)
+→ vedere anche [la documentazione OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html)

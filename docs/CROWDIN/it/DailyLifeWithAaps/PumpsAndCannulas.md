@@ -1,66 +1,66 @@
 # Daily Life - Pumps
-## Changing infusion sets: insulin reservoirs and cannulas
+## Cambio dei set di infusione: serbatoi di insulina e cannule
 
-The procedure described below is for tubed pumps only and does not apply to patch pumps like Omnipod, Medtrum Nano, Accu-Chek Solo etc. This procedure is sometimes referred to as a “set change”, with a “full” set change including the insulin reservoir and cannula, and a “partial” set change referring to a change of cannula only. 
+The procedure described below is for tubed pumps only and does not apply to patch pumps like Omnipod, Medtrum Nano, Accu-Chek Solo etc. La procedura descritta di seguito è applicabile solo ai microinfusori con tubo e non si applica ai microinfusori patch come Omnipod, Medtrum Nano, Accu-Chek Solo, ecc. Questa procedura viene talvolta chiamata "cambio del set", dove un cambio "completo" include il serbatoio di insulina e la cannula, e un cambio "parziale" si riferisce solo alla sostituzione della cannula.
 
-Physical cartridge/reservoir changes cannot be done via **AAPS** and have to be carried out via the pump directly. These need to be logged in **AAPS** manually, once completed.
+Le sostituzioni fisiche della cartuccia/serbatoio non possono essere eseguite tramite **AAPS** e devono essere effettuate direttamente sul microinfusore. È necessario registrarle manualmente in **AAPS** una volta completate.
 
-### Guide for changing both the pump reservoir and cannula
+### Guida per la sostituzione del serbatoio e della cannula del microinfusore
 
-1)	In **AAPS**, disconnect the pump: Long press “Open Loop”/”Closed Loop” icon on the **AAPS** Home Screen and select ‘Disconnect pump - 1 hour”. The pump icon will change to a grey icon, indicating that the pump is disconnected.
+1)  In **AAPS**, disconnettere il microinfusore: premere a lungo l'icona "Open Loop"/"Closed Loop" nella schermata principale di **AAPS** e selezionare "Disconnetti microinfusore - 1 ora". L'icona del microinfusore diventerà grigia, indicando che il microinfusore è disconnesso.
 
-2)	Physically change the insulin reservoir: physically disconnect your pump from the body, and change the reservoir/cartridge and cannula as per manufacturer's instructions.
+2)  Sostituire fisicamente il serbatoio di insulina: disconnettere fisicamente il microinfusore dal corpo e sostituire il serbatoio/la cartuccia e la cannula seguendo le istruzioni del produttore.
 
-3)	Prime/fill the tubing and cannula: this can be done directly on the pump. Be sure to eliminate any bubbles in the tubing.
+3)  Adescare/riempire il tubo e la cannula: questa operazione può essere eseguita direttamente sul microinfusore. Assicurarsi di eliminare eventuali bolle d'aria nel tubo.
 
-4)	Attach the new cannula to the body. Once the cannula is inserted and the needle is removed, the attached cannula now has a small air gap which also needs to be primed. To announce this in **AAPS** and prime the site: select the PRIME/FILL button in the **AAPS** actions tab and tick “Pump site change” and/or “Insulin Cartridge Change” as appropriate to record the change. Now press the default insulin cannula prime amount (it is usually around 0.3 U, but check this value is correct for your cannula) and select “OK”. Read the summary message, and confirm to execute the priming by tapping “OK”. 
+4)  Collegare la nuova cannula al corpo. Una volta inserita la cannula e rimosso l'ago, la cannula collegata presenta un piccolo spazio d'aria che deve essere anch'esso adescato. Per comunicarlo in **AAPS** e adescare il sito: selezionare il pulsante PRIME/FILL nella scheda azioni di **AAPS** e spuntare "Cambio sito microinfusore" e/o "Cambio cartuccia insulina" secondo le necessità. Premere quindi la quantità predefinita di insulina per l'adescamento della cannula (di solito circa 0,3 U, ma verificare il valore corretto per la propria cannula) e selezionare "OK". Leggere il messaggio di riepilogo e confermare l'esecuzione dell'adescamento toccando "OK".
 
-5)	Reconnect the pump in **AAPS**: Press the grey disconnected pump symbol and select ‘Reconnect pump’ to continue looping.
+5)  Riconnettere il microinfusore in **AAPS**: premere il simbolo del microinfusore grigio disconnesso e selezionare "Riconnetti microinfusore" per riprendere il loop.
 
-### Useful information concerning insulin/cannula changes
+### Informazioni utili riguardanti le sostituzioni di insulina/cannula
 
-●	Logging a pump site change resets Autosens to 100%. It also resets the corresponding cannula/insulin status lights and ages on the **AAPS** Home screen. 
+●   La registrazione di un cambio del sito del microinfusore reimposta Autosens al 100%. Reimposta anche le spie di stato e le età della cannula/insulina corrispondenti nella schermata principale di **AAPS**.
 
-●	You can set/adjust the default prime amount in Preferences > Overview > Fill/Prime standard insulin amounts. See your instruction booklet in your cannula box for how many units (depending on needle length and tubing length) should be primed for your cannula.
+●   È possibile impostare/regolare la quantità di adescamento predefinita in Preferenze > Panoramica > Quantità standard insulina per adescamento. Consultare il foglio illustrativo nella confezione della cannula per conoscere quante unità (a seconda della lunghezza dell'ago e del tubo) devono essere utilizzate per l'adescamento.
 
-●	Insulin delivered using the prime function is not taken into account by **AAPS** when calculating insulin on board (IOB), and is marked in the **AAPS** treatments menu as “Prime”. 
+●   L'insulina somministrata tramite la funzione di adescamento non viene presa in considerazione da **AAPS** nel calcolo dell'insulina attiva (IOB), ed è indicata nel menu trattamenti di **AAPS** come "Prime".
 
-●	Any insulin bolused from the pump during a pump disconnection will also not be taken into account by **AAPS**. If you happen to bolus directly from the pump while **AAPS** is disconnected, once you reconnect the pump you can announce this insulin (without bolusing it) under the “insulin” tab (see link to below ”to announce delivered insulin without actually bolusing” for more details). 
+●   Qualsiasi bolo erogato dal microinfusore durante la disconnessione non verrà preso in considerazione da **AAPS**. Se si eroga un bolo direttamente dal microinfusore mentre **AAPS** è disconnesso, una volta riconnesso è possibile comunicare questa insulina (senza erogarla) nella scheda "insulina" (vedere il link sottostante "per comunicare l'insulina somministrata senza effettuare un bolo" per maggiori dettagli).
 
-### Cannula, infusion site, tubing and/or pump issues
+### Problemi con la cannula, il sito di infusione, il tubo e/o il microinfusore
 
-If you are confident that you haven’t received any insulin for a period of time, despite **AAPS** recording that you have, and you know exactly when the issue started (_e.g._ you remove the cannula and see that the cannula was kinked during the insertion process) you can correct this in **AAPS**, while being aware that the insulin may in fact have been delivered but may be slow to act for some reason.
+Se si è certi di non aver ricevuto insulina per un certo periodo, nonostante **AAPS** registri che è stata somministrata, e si sa esattamente quando è iniziato il problema (_es._ si rimuove la cannula e si vede che era piegata durante l'inserimento), è possibile correggere in **AAPS**, tenendo presente che l'insulina potrebbe in realtà essere stata somministrata ma potrebbe agire lentamente per qualche motivo.
 
 ```{admonition} Caution - Risk of Hypoglycemia
 :class: danger
-Only delete insulin delivery from **AAPS** with EXTREME caution, in case insulin _has_ actually been delivered, and monitor BG closely for the next 24 h.
+Eliminare le somministrazioni di insulina da **AAPS** con ESTREMA cautela, nel caso in cui l'insulina _sia_ stata effettivamente somministrata, e monitorare attentamente la glicemia nelle successive 24 ore.
 ```
 
-To remove boluses and SMBs which you know have not been delivered, open the Treatments tab and conservatively delete the logged bolus information from > carbs and bolus starting from the point the incident happened. This will correct the “insulin on board” (IOB) value which is key for **AAPS**’ calculations, if you now return to the homescreen you will see that the IOB has now reduced. Be aware that you cannot delete basal insulin which **AAPS** calculates to have been delivered, so that will still be taken into account by **AAPS**. 
+Per rimuovere boli e SMB che si sa non essere stati somministrati, aprire la scheda Trattamenti ed eliminare in modo conservativo le informazioni sui boli registrati > carboidrati e bolo a partire dal momento in cui si è verificato l'incidente. In questo modo si correggerà il valore di "insulina attiva" (IOB) fondamentale per i calcoli di **AAPS**; tornando alla schermata principale si vedrà che l'IOB è ora diminuito. Tenere presente che non è possibile eliminare la basale che **AAPS** calcola come somministrata, che verrà quindi ancora presa in considerazione da **AAPS**.
 
-In less obvious cases of insulin delivery problems  _e.g._ leakages, occlusions or tunneling where either you are not sure when the issue started, or think some of the insulin was delivered, you need to be careful. You may detect these issues either by “smelling” the insulin, seeing a wet adhesive, encountering high glucose values or by getting an alarm. As you will never know how much insulin you got into your skin (which might be starting to work after a while) it will be hard to determine the correct amount of insulin which needs be deducted from the current “insulin on board” (IOB) value. One strategy is to pause looping for 5 hours (or your specific duration of insulin action) after you resolved the insulin delivery problem, and resume looping afterwards. This will ensure that IOB is correct once you restart looping.
+In casi meno evidenti di problemi di somministrazione di insulina _es._ perdite, occlusioni o tunneling, in cui non si è certi di quando sia iniziato il problema o si ritiene che parte dell'insulina sia stata somministrata, è necessario prestare attenzione. È possibile rilevare questi problemi "annusando" l'insulina, vedendo un cerotto bagnato, riscontrando valori di glicemia elevati o ricevendo un allarme. Poiché non si sa mai quanta insulina è entrata nella pelle (che potrebbe iniziare ad agire dopo un po'), sarà difficile determinare la quantità corretta di insulina da sottrarre dall'attuale valore di "insulina attiva" (IOB). Una strategia consiste nel mettere in pausa il loop per 5 ore (o per la durata specifica dell'azione insulinica) dopo aver risolto il problema di somministrazione dell'insulina, e poi riprendere il loop. In questo modo si garantirà che l'IOB sia corretto quando si riavvia il loop.
 
-## Disconnecting the pump for showering or activity
+## Disconnessione del microinfusore per doccia o attività
 
-If you take your pump off for showering, bathing, swimming, contact sports or other activities you must let **AAPS** know that no insulin is being delivered, to keep the IOB correct. The pump can be disconnected using the Loop Status icon on the **AAPS** Home Screen.
+Se si rimuove il microinfusore per fare la doccia, il bagno, nuotare, praticare sport da contatto o altre attività, è necessario comunicarlo ad **AAPS** affinché non venga erogata insulina, per mantenere corretto l'IOB. Il microinfusore può essere disconnesso utilizzando l'icona di stato del loop nella schermata principale di **AAPS**.
 
-As you are not getting any insulin while the pump is disconnected, you should reconnect every two hours to catch up for the missing basal. You can do this by connecting, bolusing the missing basal amounts (_e.g._ of the last two hours) before disconnecting again. This should help to avoid a severe lack of insulin which could result in diabetic ketoacidosis (DKA). If it is inconvenient to reconnect the pump during activity (cannula site is covered by wearing a wetsuit _etc._), consider a pen injection instead. This manual injection can be logged in **AAPS**, and doesn’t have to be logged at the time of injection (just make a note of the time of injection) since you can announce the insulin and backdate the time the insulin was actually given when you reconnect the pump.  
+Poiché non si riceve insulina mentre il microinfusore è disconnesso, è consigliabile riconnettersi ogni due ore per compensare la basale mancante. È possibile farlo collegandosi ed erogando i valori di basale mancanti (_es._ delle ultime due ore) prima di disconnettersi nuovamente. Questo dovrebbe aiutare a evitare una grave carenza di insulina che potrebbe portare a chetoacidosi diabetica (DKA). Se è scomodo riconnettersi durante l'attività (il sito della cannula è coperto da una muta, _ecc._), considerare un'iniezione con la penna. Questa iniezione manuale può essere registrata in **AAPS** e non deve necessariamente essere registrata al momento dell'iniezione (annotare l'orario dell'iniezione), poiché è possibile comunicare l'insulina e retrodatare l'orario effettivo di somministrazione quando si riconnette il microinfusore.
 
-## To announce delivered insulin without actually bolusing
+## Per comunicare l'insulina somministrata senza effettuare un bolo
 
-To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections to **AAPS**: select the “insulin” tab, enter the amount in units and select “do not bolus, record only”. When you select this option, a “time offset” tab will appear. You can ignore this if the injection was given recently, but if the bolus was given some time ago, you can add a minus sign in front of the time (_e.g._ - 30 min) to record the actual time of the bolus. **AAPS** will then take into account the duration of insulin action and calculate the remaining insulin still in the system accordingly. 
+Per comunicare ad **AAPS** l'insulina erogata dal microinfusore mentre **AAPS** era disconnesso, o da iniezioni con penna: selezionare la scheda "insulina", inserire la quantità in unità e selezionare "non somministrare bolo, registra solo". Selezionando questa opzione, apparirà una scheda "offset temporale". Se l'iniezione è stata somministrata di recente si può ignorarla, ma se il bolo è stato somministrato qualche tempo fa, è possibile aggiungere un segno meno davanti al tempo (_es._ - 30 min) per registrare l'orario effettivo del bolo. **AAPS** terrà quindi conto della durata dell'azione insulinica e calcolerà di conseguenza l'insulina residua ancora nel sistema.
 
-If you are using **AAPS** as a careiver, you can remotely disconnect (and reconnect) the pump very easily by [SMS command](../RemoteFeatures/SMSCommands.md) using commands such as “pump disconnect 120” and “pump connect 120”. The range of duration for remote disconnect is from 1 - 120 min, (in this example it is 120 minutes). This is very useful if the **AAPS** handset is inconvenient for you to access, buried in a pump belt on a kid who is running off towards the swimming complex, or being closely guarded (or in use) by a teenager.  
+Se si utilizza **AAPS** come caregiver, è possibile disconnettere (e riconnettere) il microinfusore da remoto molto facilmente tramite [comando SMS](../RemoteFeatures/SMSCommands.md) usando comandi come "pump disconnect 120" e "pump connect 120". La durata della disconnessione remota va da 1 a 120 minuti (nell'esempio sono 120 minuti). Questo è molto utile se lo smartphone **AAPS** è difficile da raggiungere, nascosto nella cintura del microinfusore di un bambino che corre verso la piscina, o tenuto stretto (o in uso) da un adolescente.
 
 ## Reconnecting the pump after activity
 
-After a long disconnection (1 - 2 hours) it is fairly common for **AAPS** to calculate that you now have negative IOB. When you reconnect the pump, depending on preference/current glucose level/planned food or subsequent activity, you can either: 
+Dopo una lunga disconnessione (1-2 ore), è abbastanza comune che **AAPS** calcoli un IOB negativo. Quando si riconnette il microinfusore, a seconda delle preferenze/livello di glicemia attuale/cibo pianificato o attività successiva, è possibile:
 
-a) Just reconnect the pump in **AAPS** (grey-to-green, for closed loop) and leave it up to **AAPS** to start to deliver insulin again 
+a) Semplicemente riconnettere il microinfusore in **AAPS** (dal grigio al verde, per il loop chiuso) e lasciare che **AAPS** ricomincia a somministrare insulina
 
-_or_ 
+_oppure_
 
-b) If you want to be more aggressive (for example, you are heading for hyperglycemia), you can navigate to the calculator and bolus for zero carbs, to immediately deliver the calculated missing insulin as a bolus. 
+b) Se si desidera essere più aggressivi (ad esempio, si prevede un'iperglicemia), è possibile accedere al calcolatore e calcolare un bolo per zero carboidrati, per somministrare immediatamente l'insulina mancante calcolata come bolo.
 
 
-Which strategy you prefer is highly personal, and is best determined by trial and error.    
+La strategia preferita è altamente personale ed è meglio determinata tramite tentativi.    
