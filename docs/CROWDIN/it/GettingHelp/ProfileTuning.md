@@ -17,7 +17,7 @@ L'uso del **circuito chiuso** può rendere più facile il test della basale e pu
 3. Tieni d'occhio i modelli che si ripetono quasi ogni giorno alla stessa ora.
 4. È importante farlo per diversi giorni. I risultati scadenti tendono a derivare dall'uso di dati osservati in un singolo giorno per prendere decisioni di regolazione del __Profilo__.
 5. Dopo aver osservato un modello di comportamento ripetibile, ad esempio all'1:00 PM vedi un picco della __glicemia__ o un valore __IOB__ negativo, solo allora inizia ad apportare piccole modifiche al tuo __Profilo__.
-6. È importante limitare le modifiche a una cosa alla volta. E.g. E.g. E.g. E.g. E.g. increase your basal by 10% around 1PM.
+6. È importante limitare le modifiche a una cosa alla volta. E.g. E.g. E.g. E.g. E.g. E.g. increase your basal by 10% around 1PM.
 7. Dopo ogni modifica, è importante monitorare l'impatto sulla tua __glicemia__ e __IOB__ per i giorni successivi.
 8. Ripeti questo schema: osserva, decidi, aggiusta di nuovo se necessario.
 
