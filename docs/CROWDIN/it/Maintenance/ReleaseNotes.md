@@ -681,7 +681,7 @@ Data di rilascio: 24-09-2020
 
 **Assicurati di controllare e regolare le impostazioni dopo l'aggiornamento a 2.7 come descritto** [qui](../Maintenance/Update2_7.md).
 
-Devi almeno avviare l'[obiettivo 11 (nelle versioni successive obiettivo 10!)](#objectives-objective10) per continuare a usare la [funzionalità Automazione](../DailyLifeWithAaps/Automations.md) (tutti gli obiettivi precedenti devono essere completati altrimenti l'avvio dell'Obiettivo 11 non è possibile). You will keep all finished objectives! If for example you did not finish the exam in [objective 3](#objectives-objective3) yet, you will have to complete the exam before you can start objective 11. This will not effect other objectives you have already finished.
+Devi almeno avviare l'[obiettivo 11 (nelle versioni successive obiettivo 10!)](#objectives-objective10) per continuare a usare la [funzionalità Automazione](../DailyLifeWithAaps/Automations.md) (tutti gli obiettivi precedenti devono essere completati altrimenti l'avvio dell'Obiettivo 11 non è possibile). This will not effect other objectives you have already finished. You will keep all finished objectives! If for example you did not finish the exam in [objective 3](#objectives-objective3) yet, you will have to complete the exam before you can start objective 11.
 
 ### Principali nuove funzionalità
 
