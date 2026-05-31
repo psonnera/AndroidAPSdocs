@@ -1,29 +1,29 @@
 # Equil
 
-These instructions are for configuring the Equil insulin pump. 
+Queste istruzioni riguardano la configurazione del microinfusore Equil.
 
-## Pump capabilities with AAPS
+## Funzionalità del microinfusore con AAPS
 
 §todo
 
-## Hardware and Software Requirements
-* **Compatible Equil hardware**
+## Requisiti Hardware e Software
+* **Hardware Equil compatibile**
 
-  Currently Equil 5.3 and 5.4 is supported
+  Attualmente sono supportati Equil 5.3 e 5.4
 
-* [Version 3.3.0.0](#version3300) or newer of AAPS
+* [Versione 3.3.0.0](#version3300) o più recente di AAPS
 
 ### Select Equil pump
 
-In [Config Builder > Pump](#Config-Builder-pump), switch to **Equil 5.3**.
+In [Costruttore di configurazione > Microinfusore](#Config-Builder-pump), passare a **Equil 5.3**.
 
-### Settings
+### Impostazioni
 
 ![settings.png](../images/Equil/settings.png)
 
-### Activate patch
+### Attivare il patch
 
-Navigate to the Equil Tab and press **Pair Equil Patch Pump**.
+Navigare alla scheda Equil e premere **Associa Equil Patch Pump**.
 
 ![overview.png](../images/Equil/overview.png)
 
@@ -33,5 +33,4 @@ Navigate to the Equil Tab and press **Pair Equil Patch Pump**.
 
 ![activate3.png](../images/Equil/activate3.png)
 
-If you set different password than default 0000 (recommended for your safety), do not forget to store this password on a safe place. This password is stored to the pump. Then this password is asked 
-on every next pairing attempt until you do proper unpairing in AAPS. This makes the pump also unusable with original PDA until you unpair pump from AAPS.
+Se si imposta una password diversa da quella predefinita 0000 (consigliato per la propria sicurezza), non dimenticare di conservare questa password in un posto sicuro. Questa password viene memorizzata nel microinfusore. La password viene richiesta a ogni successivo tentativo di associazione finché non si esegue una corretta dissociazione in AAPS. Questo rende il microinfusore inutilizzabile anche con il PDA originale finché non viene dissociato da AAPS.
