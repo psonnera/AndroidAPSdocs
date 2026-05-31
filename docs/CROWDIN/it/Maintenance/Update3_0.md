@@ -1,59 +1,59 @@
-# Controlli necessari dopo l'aggiornamento ad AAPS 3.0
+# Necessary checks after update to AAPS 3.0
 
-* **La versione minima di Android è ora 9.0.**
-* **I dati non vengono migrati al nuovo database.**
+* **Minimum Android version is 9.0 now.**
+* **Data is not migrated to new database.**
 
-  Non lamentarti, il cambiamento è così enorme che semplicemente non è possibile. Pertanto dopo l'aggiornamento IOB, COB, trattamenti ecc. saranno azzerati. Devi creare un nuovo [cambio di profilo](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) e iniziare con IOB e COB pari a zero.
+  Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) and start with zero IOB and COB.
 
-  Pianifica attentamente l'aggiornamento!!! Il momento migliore è quando non c'è insulina attiva e carboidrati.
+  Plan the update carefully!!! Best in situation without active insulin and carbs
 
-* Consulta le [Note di Rilascio](../Maintenance/ReleaseNotes.md) per i dettagli sulle funzionalità nuove e modificate.
+* Please see the [Release Notes](../Maintenance/ReleaseNotes.md) for details on new and changed features.
 
 
-## Controlla le automazioni
+## Check automations
 
-* Sono state introdotte nuove restrizioni. Controlla le tue automazioni, in particolare se le condizioni sono ancora valide.
-* Se manca una delle condizioni, devi aggiungerla di nuovo.
-* Le automazioni in rosso contengono azioni non valide; modificale e ripristinale a valori validi.
+* New restrictions were introduced. Check your automations, especially if your conditions are still valid.
+* If one of the conditions is missing, you need to add it again.
+* Red automations contain invalid actions, go and edit them and reset to valid values
 
-  Esempio: Prima era consentito un cambio di profilo al 140%, ma ora è limitato al 130%.
+  Example: A profile change to 140% was allowed earlier but is now restricted to 130%.
 
-## Controlla le impostazioni di nsclient e imposta le complicazioni di sincronizzazione
+## Check your nsclient settings and set the synchronization complications
 
-* L'implementazione del plugin nsclient è cambiata completamente.
-* Vai alla scheda nsclient e apri le impostazioni nel menu a destra. È ora disponibile una nuova preferenza "Sincronizzazione".
-* Ora puoi fare una selezione dettagliata di quali elementi devono essere sincronizzati con il tuo sito Nightscout.
+* The implementation of the nsclient plugin has changed completely.
+* Go to the nsclient tab and open the settings in the right-hand menu. A new preference "Synchronization" is available now.
+* You can now make a detailed selection about which items shall be synchronized with your Nightscout site.
 
 (Update3_0-nightscout-profile-cannot-be-pushed)=
-## Il profilo Nightscout non può essere inviato
-* Il profilo Nightscout è sparito, riposa in pace!
-* Per copiare il tuo profilo Nightscout attuale in un profilo locale, vai alla pagina dei trattamenti (ora da aprire nel menu a destra).
-* Cerca un cambio di profilo al 100% e premi clona.
-* Viene aggiunto un nuovo profilo locale, valido dalla data corrente.
-* Per aggiornare il profilo dal lato NS usa "Clona" (record!!, non profilo) e salva le modifiche. Dovresti vedere "Profilo valido dal:" impostato alla data corrente.
+## Nightscout profile cannot be pushed
+* The nightscout profile is gone, rest in peace!
+* To copy your current nightscout profile into a local profile, go to the treatments page (now to be opened in the right-hand menu).
+* Search for a profile switch with 100% and press clone.
+* A new local profile is added, valid from the current date.
+* To update profile from NS side use "Clone" (record!!, not profile) and save changes. You should see "Profile valid from:" set to current date.
 
 (Update3_0-reset-master-password)=
-## Reimposta la password master
-* Ora puoi reimpostare la tua password master nel caso in cui l'hai dimenticata.
-* Devi aggiungere un file denominato `PasswordReset` nella directory `/AAPS/extra` nel filesystem del tuo telefono.
-* Riavvia AAPS.
-* La nuova password sarà il numero di serie del tuo microinfusore attivo.
-* Per Dash: il numero di serie è sempre 4241.
-* Per EROS è anche elencato nella scheda POD come "Numero di sequenza".
+## Reset master password
+* You can now reset your master password in case you have forgotten it.
+* You need to add a file named ```PasswordReset``` to the ```/AAPS/extra``` directory on your phones filesystem.
+* Restart AAPS.
+* The new password will be the serial number of your active pump.
+* For Dash: The serial number is always 4241.
+* For EROS it is also listed on the POD tab as "Sequence Number"
 
 ## Warning signal beneath BG
 
-A partire da Android 3.0, potresti ricevere un segnale di avviso sotto il numero della glicemia nella schermata principale.
+Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
 
   ![Red BG warning](../images/bg_warn_red.png)
 
   ![Yellow BG warning](../images/bg_warn_yellow.png)
 
-Per i dettagli vedi la [pagina schermate AAPS](#aaps-screens-bg-warning-sign).
+For details see [AAPS screens page](#aaps-screens-bg-warning-sign)
 
 (update30-failure-message-data-from-different-pump)=
 ## Failure message: Data from different pump
 
    ![Failure message: Data from different pump](../images/Screen_DifferentPump.png)
 
-Per risolvere questo problema vai al [generatore di configurazione](#Config-Builder-pump). Cambia il microinfusore in virtuale e poi torna al microinfusore reale. Questo reimposterà lo stato del microinfusore.
+To resolve this issue go to [config builder](#Config-Builder-pump). Change pump to virtual pump and back to your actual pump. This will reset the pump state.

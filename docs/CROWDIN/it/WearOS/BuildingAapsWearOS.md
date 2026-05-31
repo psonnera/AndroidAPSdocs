@@ -1,37 +1,37 @@
-# Compilare l'app Wear AAPS
+# Building the Wear AAPS app
 
-L'app Wear OS di **AAPS** ("Wear OS apk") necessaria per lo smartwatch è stata separata dalla build "completa" di **AAPS** per il telefono Android. Pertanto è necessario generare un secondo file di installazione, o apk, per installare **AAPS** wear sull'orologio (operazione eseguita tramite side-loading dal telefono). Si raccomanda vivamente di compilare il file **AAPS** Wear apk immediatamente dopo aver compilato per la prima volta il full **AAPS** apk per il telefono. Non solo è molto rapido da fare se stai [compilando **AAPS** per la prima volta](../SettingUpAaps/BuildingAaps.md), ma eviterà potenziali problemi di compatibilità quando tenterai di configurare la comunicazione orologio-telefono. L'**AAPS** Wear apk sull'orologio difficilmente sarà compatibile con l'**AAPS** phone apk se sono stati compilati con versioni diverse di Android Studio, o se sono passati mesi dalla build iniziale di **AAPS**.
+The Wear OS App of **AAPS**  (“Wear OS apk”) required for the smartwatch has been separated from the "full" **AAPS** build for the Android phone. Therefore you have to generate a second installation file, or apk, to install **AAPS** wear onto the watch (which is done by side-loading it from the phone). It is strongly recommended that the **AAPS** Wear apk file is built immediately after first building the full **AAPS** apk for the phone. Not only is this very quick to do if you are [building **AAPS** for the first time](../SettingUpAaps/BuildingAaps.md), but it will avoid any potential compatibility issues when you try to set up the watch-phone communication. The **AAPS** Wear apk on the watch is unlikely to be compatible with the **AAPS** phone apk if they have been built in different versions of Android Studio, or if months have past since the initial **AAPS** build. 
 
-Se stai già usando **AAPS** su un telefono e non hai compilato entrambi gli apk per telefono e orologio (wear) contemporaneamente, per garantire il successo è meglio effettuare una nuova compilazione di entrambi i file apk contemporaneamente. Compila gli apk per telefono e orologio AAPS allo stesso tempo, usando lo stesso **file keystore**.
+If you are already using **AAPS** on a phone and you did not build both the phone and watch (wear) **AAPS** apks at the same time, to ensure success it is therefore best to do a fresh build of both apk files at the same time. Build the AAPS phone and watch apks at the same time, using the same **keystore file**.
 
-## Versioni Wear OS supportate
+## Supported Wear OS versions
 
-AAPS richiede almeno Wear OS API level 28 (Android 9).
+AAPS requires at least Wear OS API level 28 (Android 9).
 
 ```{warning}
-I quadranti AAPS sono disponibili per gli smartwatch Wear OS con API level da 28 a 33.<br>
-Wear OS 5 ha [limitazioni](BuildingAapsWearOs-WearOS5).
+AAPS Watchfaces are available for Wear OS smartwatches with API level 28 to 33.<br>
+Wear OS 5 has [limitations](#BuildingAapsWearOs-WearOS5).
 ```
 
-## Compilare l'**AAPS** Wear apk
+## Building the **AAPS** Wear apk
 
-Il processo di compilazione per il Wear apk è simile a quello per il phone apk "completo".
+The build process for the Wear apk is similar to that for the "full" phone apk.
 
-- Segui le istruzioni per [Compilare AAPS](../SettingUpAaps/BuildingAaps.md).
-- Quando raggiungi la [selezione del modulo](#Building-APK-wearapk) in "Compila l'AAPS signed apk", assicurati di selezionare **`AndroidAPS.wear`**.
+- Follow the instructions for [Building AAPS](../SettingUpAaps/BuildingAaps.md).
+- When you reach [module selection](#Building-APK-wearapk) in "Build the AAPS signed apk", make sure to select **`AndroidAPS.wear`**.
 
 ![Wear module](../images/Building-the-App/wear_build1.png)
 
-Seleziona "**fullRelease**" per generare il file **AAPS** Wear apk.
+Select "**fullRelease**" to generate the **AAPS** Wear apk file. 
 
 ![Wear module](../images/Building-the-App/wear_build2.png)
 
-Se preferisci, puoi compilare **"pumpcontrolRelease"** dal menu a tendina, che ti permetterà di controllare il microinfusore da remoto ma senza il loop.
+If you prefer, you can build **“pumpcontrolRelease”** instead, from the drop-down menu, which will allow you to just remotely control the pump but without looping. 
 
-## Risoluzione dei problemi
+## Troubleshooting
 
-Nel processo di compilazione dell'app **AAPS** 3.2 completa (e in realtà di qualsiasi app firmata), Android Studio genera un file .json nella stessa cartella. Questo causa poi errori con [modifiche non salvate (uncommitted changes)](#troubleshooting_androidstudio-uncommitted-changes) quando tenti di compilare la prossima app firmata, come l'app **AAPS** wear. Il modo più rapido per risolvere questo problema è navigare nella cartella in cui è stata compilata l'app AAPS completa; la tua cartella probabilmente è qualcosa come:
+In the process of building the 3.2 full **AAPS** app (and in fact any signed app), Android Studio generates a .json file in the same folder. This then causes errors with [uncommitted changes](#troubleshooting_androidstudio-uncommitted-changes) when you try to build the next signed app, like the **AAPS** wear app. The quickest way to resolve this is to navigate to the folder where the full AAPS app has been built, your folder is probably something like: 
 
-`C:\Users\Il Tuo Nome\AndroidStudioProjects\AndroidAPS\app\aapsclient\release.`
+`C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\aapsclient\release. `
 
-Elimina o sposta il file .json non necessario dalla cartella. Poi prova a compilare di nuovo l'app **AAPS** wear. Se non funziona, la [guida alla risoluzione dei problemi](../GettingHelp/TroubleshootingAndroidStudio.md) più dettagliata ti aiuterà a identificare il file specifico che causa il problema, che potrebbe essere anche il tuo file keystore. 
+Either delete, or move the unneeded .json file out of the folder. Then try to build the **AAPS** wear app again. If that doesn't work, the more detailed [troubleshooting guide](../GettingHelp/TroubleshootingAndroidStudio.md) will help you to identify the specific file causing the issue, which could also be your keystore file. 

@@ -1,16 +1,16 @@
-# Microinfusore di insulina Diaconn G8
+# Diaconn G8 Insulin Pump
 
 ## Insulin Pump Bluetooth Pairing
 
-- Fare clic sul menu hamburger nell'angolo in alto a sinistra.
+- Click on the hamburger menu in the top left corner.
 
 ![image](../images/DiaconnG8/DiaconnG8_01.jpg)
 
-- Fare clic su Costruttore di configurazione.
+- Click on Config Builder.
 
 ![image](../images/DiaconnG8/DiaconnG8_02.jpg)
 
-- Dopo aver selezionato il Microinfusore Diaconn G8, fare clic sull'icona Impostazioni (ingranaggio).
+- After selecting the Diaconn G8 Pump click on the Settings icon (cog wheel).
 
 ![image](../images/DiaconnG8/DiaconnG8_03.jpg)
 
@@ -18,48 +18,48 @@
 
 ![image](../images/DiaconnG8/DiaconnG8_04.jpg)
 
-- Selezionare il numero di modello del microinfusore di insulina una volta che appare nell'elenco.
+- Select your insulin pump’s model number once it appears in the list.
 
 ![image](../images/DiaconnG8/DiaconnG8_05.jpg)
 
-- Ci sono due opzioni per controllare il numero di modello:
+- There are two options to check your model number:
 
-1. Le ultime 5 cifre del numero SN sul retro del microinfusore.
-2. Fare clic sul pulsante O > Informazioni > BLE > Ultime 5 cifre.
+1. The last 5 digits of the SN number on the back of the pump.
+2. Click on O button > Information > BLE > Last 5 digits.
 
 ![image](../images/DiaconnG8/DiaconnG8_06.jpg)
 
-- Una volta selezionato il microinfusore, appare una finestra che richiede un codice PIN. Inserire il numero PIN visualizzato sul microinfusore per completare la connessione.
+- Once you select your pump, a window appears asking for a pin code. Enter the pin number displayed on your pump to complete the connection.
 
  ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
 
-## Controllo dello stato del microinfusore e sincronizzazione dei log
+## Pump status check and log synchronization
 
-- Una volta connesso il microinfusore, fare clic sul simbolo Bluetooth per controllare lo stato e sincronizzare i log.
+- Once your pump is connected, click on the Bluetooth symbol to check the status and to synchronize logs.
 
 ![image](../images/DiaconnG8/DiaconnG8_08.jpg)
 
-## Risoluzione dei problemi Bluetooth
+## Bluetooth Troubleshooting
 
-**Cosa fare in caso di connessione Bluetooth instabile con il microinfusore.**
+**What to do in the case of an unstable Bluetooth connection with the pump.**
 
-### Metodo 1) Controllare di nuovo il microinfusore dopo che l'applicazione AAPS è stata completata.
+### Method 1 ) Check the pump again after AAPS application is completed.
 
-- Fare clic sul pulsante con i 3 punti in alto a destra.
+- Click on the 3 dots button on the top right.
 
 ![image](../images/DiaconnG8/DiaconnG8_09.jpg)
 
-- Fare clic su Esci.
+- Click on Exit.
 
 ![image](../images/DiaconnG8/DiaconnG8_10.jpg)
 
-### Metodo 2) Se il primo metodo non funziona, disconnettere il Bluetooth e poi riconnettere.
+### Method 2) If the first method doesn’t work, disconnect Bluetooth and then reconnect.
 
-- Tenere premuto il pulsante Bluetooth in alto per circa 3 secondi.
+- Press and hold the Bluetooth button at the top for about 3 seconds.
 
 ![image](../images/DiaconnG8/DiaconnG8_11.jpg)
 
-- Fare clic sul pulsante Impostazioni sul microinfusore di insulina Diaconn G8 associato.
+- Click on the Setting button on the paired Diaconn G8 Insulin pump.
 
 ![image](../images/DiaconnG8/DiaconnG8_12.jpg)
 
@@ -67,25 +67,25 @@
 
 ![image](../images/DiaconnG8/DiaconnG8_13.jpg)
 
-- Ripetere il processo di associazione Bluetooth per il microinfusore (vedere sopra).
+- Repeat the Bluetooth pairing process for the pump (see above).
 
-## Ulteriori informazioni
+## Further Information
 
-### Impostazione delle opzioni del microinfusore di insulina Diaconn G8
+### Diaconn G8 Insulin pump option setting
 
-- Gestore configurazione > microinfusore > Diaconn G8 > Impostazioni
-- DIACONN G8 in alto > pulsante 3 punti in alto a destra > Preferenze Diaconn G8
+- Config manager > pump > Diaconn G8 > Settings
+- DIACONN G8 at the top> 3 dots button on the top right > Diaconn G8 Preferences
 
 ![Diaconn G8 pump options](../images/DiaconnG8/DiaconnG8_14.jpg)
 
-- Se l'opzione **Registra cambio serbatoio** è attivata, i dettagli rilevanti vengono caricati automaticamente nel careportal quando si verifica un evento "Cambio insulina".
-- Se l'opzione **Registra cambio ago** è attivata, i dettagli rilevanti vengono caricati automaticamente nel careportal quando si verifica un evento "Cambio sito".
-- Se l'opzione **Registra cambio tubo** è attivata, i dettagli rilevanti vengono caricati automaticamente nel careportal quando si verifica un evento "Cambio tubo".
-- Se l'opzione **Registra cambio batteria** è attivata, i dettagli rilevanti vengono caricati automaticamente nel careportal quando si verifica un evento "Cambio batteria" e il pulsante CAMBIO BATTERIA MICROINFUSORE nella scheda AZIONI viene disattivato. (Nota: per cambiare la batteria, si prega di interrompere tutte le funzioni di iniezione in corso prima di procedere.)
+- If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an “Insulin Change” event occurs.
+- If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a “Site Change” event occurs.
+- If the **Log tube change** option is activated, the relevant details are automatically uploaded to the careportal when a “Tube Change” event occurs.
+- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a “Battery Change” event occurs, and the PUMP BATTERY CHANGE button in the ACTION tab is deactivated. (Note: To change the battery, please stop all in-progress injection functions before proceeding.)
 
 ![Diaconn G8 actions menu](../images/DiaconnG8/DiaconnG8_15.jpg)
 
-### Funzione Bolo Esteso
+### Extended Bolus function
 
-- Se si utilizza il bolo esteso verrà disabilitato il loop chiuso.
-- Vedere [questa pagina](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) per i dettagli sul motivo per cui il bolo esteso non funziona in un ambiente con loop chiuso.
+- If you use extended bolus it will disable closed loop.
+- See [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.

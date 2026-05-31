@@ -1,4 +1,4 @@
-# Ramo sviluppatori (Dev)
+# Development branch 
 
 ```{warning}
 Dev branch is for the further development of AAPS only. It should be used on a separate phone for testing <font color="#FF0000">**not for actual looping!**</font>
@@ -16,9 +16,9 @@ A dev version has an expiration date. This seems inconvenient when using it sati
 
 (branch-ci-test)=
 
-## Testare un ramo specifico (branch-ci)
+## Test a specific branch (branch-ci)
 
-Per compilare un ramo di test, selezionare branch-ci, che consente di scegliere un ramo specifico per la creazione dell'APK. Puoi usare questo metodo quando hai bisogno di testare il ramo dev.
+To build a test branch, select branch-ci, which allows you to choose a specific branch for APK creation. You can use this method when you need to test the dev branch.
 
 ![aaps_ci_branch_ci1](../images/Building-the-App/CI/aaps_ci_branch_ci1.png)
 
@@ -26,11 +26,11 @@ Per compilare un ramo di test, selezionare branch-ci, che consente di scegliere 
 
 (github-pr-test)=
 
-## Testare elementi in una pull request (azioni CI di GitHub deploy)
+## Test items in a pull request (GitHub CI actions deploy)
 
 Available from 3.3.2.1.dev
 
- - Adatto per tester o per coloro che aiutano nel testing.
+ - Suitable for testers or those helping with testing.
 
 ```{eval-rst}
 .. raw:: html
@@ -50,18 +50,18 @@ Available from 3.3.2.1.dev
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_pr_ci.png)
 
-- Numero PR: Inserire il numero della PR che si vuole testare.
+- PR number: Please enter the PR number that you want to test.
 
-- Tipi di riferimento PR: I tipi di riferimento PR includono due opzioni:
+- PR reference types: PR reference types include two options:
 
   - head:
-    - Recupera il contenuto effettivo dal ramo dell'autore della PR (cioè, la cronologia dei commit originale senza operazioni di merge).
-    - Equivale allo stato originale del ramo PR, come se fosse recuperato direttamente da un fork o da un ramo di funzionalità.
+    - Fetches the actual content from the PR author’s branch (i.e., the original commit history without any merge operations).
+    - This is equivalent to the original state of the PR branch, as if it were fetched directly from a fork or feature branch.
 
   - merge:
-    - Recupera il risultato del merge pre-simulato di GitHub della PR nel ramo di destinazione (ad es. dev).
-    - Si tratta di un commit di merge virtuale creato automaticamente da GitHub.
-    - Questo commit esiste solo quando la PR non ha conflitti e può essere sottoposta a merge.
+    - Fetches the result of GitHub’s pre-simulated merge of the PR into the target branch (e.g., dev).
+    - This is a virtual merge commit automatically created by GitHub.
+    - This commit only exists when the PR has no conflicts and is mergeable.
 
   - variant:
     - Please refer to [variant](#browserbuild-variant)

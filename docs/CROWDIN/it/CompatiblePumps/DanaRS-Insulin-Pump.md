@@ -1,121 +1,121 @@
-# Microinfusore DanaRS e Dana-i
+# DanaRS and Dana-i Pump
 
-_Queste istruzioni riguardano la configurazione dell'app e del microinfusore per chi possiede un DanaRS dal 2017 in poi o il più recente Dana-i. Visitare [Microinfusore DanaR](./DanaR-Insulin-Pump.md) se si possiede il DanaR originale._
+_These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards or the newer Dana-i. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead._
 
-**Il nuovo Dana-i può essere utilizzato dalla versione 3.0 di AAPS in poi.**
+**New Dana RS firmware v3 can be used from AAPS version 2.7 onwards.**
 
-**Il nuovo firmware DanaRS v3 può essere utilizzato dalla versione 2.7 di AAPS in poi.**
+**New Dana-i can be used from AAPS version 3.0 onwards.**
 
-* Nel microinfusore DanaRS/i, l'app utilizza "BASALE A". I dati esistenti vengono sovrascritti.
+* In DanaRS/i pump "BASAL A" is used by the app. Existing data gets overwritten.
 
 (DanaRS-Insulin-Pump-pairing-pump)=
 ## Pairing pump
 
-* Nella schermata principale di AAPS fare clic sul menu hamburger nell'angolo in alto a sinistra e andare al Costruttore di configurazione.
-* Nella sezione microinfusore selezionare 'Dana-i/RS'.
-* Fare clic sull'ingranaggio per accedere direttamente alle impostazioni del microinfusore o tornare alla schermata principale.
+* On AAPS homescreen click hamburger menu on the top left corner and go to Config Builder.
+* In pump section select 'Dana-i/RS'.
+* Click on gear wheel to get directly to the pump settings or return to homescreen.
 
   ![AAPS config builder Dana-i/RS](../images/DanaRS_i_ConfigB.png)
 
-* Andare alla scheda 'DANA-i/RS'.
-* Selezionare il menu preferenze toccando i 3 punti in alto a destra.
-* Selezionare 'Preferenze Dana-i/RS'.
-* Fare clic su "Microinfusore selezionato".
+* Go to 'DANA-i/RS' tab.
+* Select preferences menu by tapping the 3 dots in the top right. 
+* Select 'Dana-i/RS Preferences'.
+* Click on "Selected pump".
 * In the pairing window click on the entry for your pump.
 
   ![AAPS pair Dana-i/RS](../images/DanaRS_i_Pairing.png)
 
-* **È necessario confermare l'associazione sul microinfusore!** Esattamente come si è abituati ad altre associazioni Bluetooth (ad es. smartphone e autoradio).
+* **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
 
   ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
 
-* Seguire il processo di associazione in base al tipo e firmware del microinfusore:
+* Follow the pairing process based on the type and firmware of your pump:
 
-   * Per DanaRS v1 selezionare la password del microinfusore nelle preferenze e impostare la propria password.
-   * Per DanaRS v3 è necessario digitare 2 sequenze di numeri e lettere visualizzate sul microinfusore nella finestra di dialogo di associazione AAPS.
-   * Per Dana-i appare la finestra di dialogo standard di associazione Android ed è necessario inserire il numero a 6 cifre visualizzato sul microinfusore.
+   * For DanaRS v1 select pump password in preferences and set your password.
+   * For DanaRS v3 you have to type 2 sequences of numbers and letters displayed on pump to AAPS pairing dialog.
+   * For Dana-i standard Android pairing dialog appear and you have to enter 6-digit number displayed on pump.
 
-* Selezionare Velocità bolo per cambiare la velocità predefinita del bolo (12 sec per 1U, 30 sec per 1U o 60 sec per 1U).
-* Impostare il passo basale del microinfusore a 0,01 U/h usando il menu Medici (vedere il manuale utente del microinfusore).
-* Impostare il passo bolo del microinfusore a 0,05 U/h usando il menu Medici (vedere il manuale utente del microinfusore).
+* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
+* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide).
+* Set bolus step on pump to 0.05 U/h using Doctors menu (see pump user guide).
 * Enable extended boluses on pump
 
 (DanaRS-Insulin-Pump-default-password)=
 
-### Password predefinita
+### Default password
 
-* Per DanaRS con firmware v1 e v2 la password predefinita è 1234.
-* Per DanaRS con firmware v3 o Dana-i la password predefinita è derivata dalla data di produzione e si calcola come MMGG dove MM è il mese e GG è il giorno di produzione del microinfusore (ad es. '0124' che rappresenta il mese 01 e il giorno 24).
+* For DanaRS with firmware v1 and v2 the default password is 1234.
+* For DanaRS with firmware v3 or Dana-i the default password is derived from the manufacturing date and calculates as MMDD where MM is the month and DD is the day, the pump was produced (i.e. '0124' representing month 01 and day 24). 
 
-  * Dal MENU PRINCIPALE selezionare REVISIONE e poi aprire INFORMAZIONI SPEDIZIONE dal sottomenu
-  * Il numero 3 è la data di produzione.
-  * Per v3/i questa password viene utilizzata solo per bloccare il menu sul microinfusore. Non viene utilizzata per la comunicazione e non è necessario inserirla in AAPS.
+  * From MAIN MENU select REVIEW then open SHIPPING INFORMATION from the sub menu
+  * Number 3 is manifacturing date. 
+  * For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AAPS.
 
 (DanaRS-Insulin-Pump-change-password-on-pump)=
-## Cambiare la password sul microinfusore
+## Change password on pump
 
-* Premere il pulsante OK sul microinfusore
-* Nel menu principale selezionare "OPZIONE" (spostarsi a destra premendo più volte il tasto freccia)
+* Press OK button on pump
+* In main menu select "OPTION" (move right by pressing arrow button several times)
 
   ![DanaRS Main Menu](../images/DanaRSPW_01_MainMenu.png)
 
-* Nel menu opzioni selezionare "OPZIONE UTENTE"
+* In options menu select "USER OPTION"
 
   ![DanaRS Option Menu](../images/DanaRSPW_02_OptionMenu.png)
-
-* Usare il tasto freccia per scorrere verso il basso fino a "11. password"
+  
+* Use arrow button to scroll down to "11. password"
 
   ![DanaRS 11. Password](../images/DanaRSPW_03_11PW.png)
+  
+* Press OK to enter old password.
 
-* Premere OK per inserire la vecchia password.
-
-* Inserire la **vecchia password** (password predefinita vedere [sopra](#default-password)) e premere OK
+* Enter **old password** (Default password see [above](#DanaRS-Insulin-Pump-default-password)) and press OK
 
   ![DanaRS Enter old password](../images/DanaRSPW_04_11PWenter.png)
 
-* Se viene inserita la password sbagliata, non verrà mostrato alcun messaggio di errore!
-* Impostare la **nuova password** (cambiare i numeri con i pulsanti + e - / spostarsi a destra con il tasto freccia).
+* If wrong password is entered here there will be no message indicating failure!
+* Set **new password** (Change numbers with + & - buttons / Move right with arrow button).
 
   ![DanaRS New password](../images/DanaRSPW_05_PWnew.png)
-
-* Confermare con il pulsante OK.
-* Premere OK per salvare l'impostazione.
+  
+* Confirm with OK button.
+* Press OK to save setting.
 
   ![DanaRS Save new password](../images/DanaRSPW_06_PWnewSave.png)
-
-* Scorrere verso il basso fino a "14. USCITA" e premere OK per uscire.
+  
+* Move down to "14. EXIT" and press OK to exit.
 
   ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
 
 (DanaRS-Insulin-Pump-dana-rs-specific-errors)=
-## Errori specifici del Dana RS
+## Dana RS specific errors
 
-### Errore durante l'erogazione dell'insulina
-In caso di perdita della connessione tra AAPS e Dana RS durante l'erogazione del bolo insulinico (ad es. ci si allontana dal telefono mentre Dana RS sta erogando insulina), verrà visualizzato il seguente messaggio e si sentirà un suono di allarme.
+### Error during insulin delivery
+In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
 
 ![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
 
-* Nella maggior parte dei casi si tratta solo di un problema di comunicazione e la quantità corretta di insulina viene erogata.
+* In most cases this is just a communication issue and the correct amount of insulin is delivered.
 * Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
-* Eliminare la voce di errore nella [scheda trattamenti](#screens-bolus-carbs) se si desidera.
-* La quantità reale viene letta e registrata alla prossima connessione. Per forzarlo premere l'icona BT nella scheda Dana o aspettare la prossima connessione.
+* Delete error entry in [treatments tab](#screens-bolus-carbs) if you wish.
+* Real amount is read and recorded on next connect. To force this press BT icon on dana tab or just wait for next connect.
 
-## Nota speciale quando si cambia telefono
+## Special note when switching phone
 
-Quando si passa a un nuovo telefono i seguenti passaggi sono necessari:
-* [Esportare le impostazioni](../Maintenance/ExportImportSettings.md) sul vecchio telefono
-* Trasferire le impostazioni dal vecchio al nuovo telefono
+When switching to a new phone the following steps are necessary:
+* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
+* Transfer settings from old to new phone
 
 ### DanaRS v1
-* **Associare manualmente** Dana RS con il nuovo telefono
-* Poiché le impostazioni di connessione del microinfusore vengono anche importate, AAPS sul nuovo telefono "conoscerà" già il microinfusore e quindi non avvierà una scansione Bluetooth. Pertanto il nuovo telefono e il microinfusore devono essere associati manualmente.
-* Installare AAPS sul nuovo telefono.
-* [Importare le impostazioni](../Maintenance/ExportImportSettings.md) sul nuovo telefono
+* **Manually pair** Dana RS with the new phone
+* As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
+* Install AAPS on the new phone.
+* [Import settings](../Maintenance/ExportImportSettings.md) on your new phone
 
 ### DanaRS v3, Dana-i
-* Avviare la procedura di associazione come descritto [sopra](#pairing-pump).
-* A volte potrebbe essere necessario cancellare le informazioni di associazione in AAPS tenendo premuta l'icona BT nella scheda Dana-i/RS.
+* Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
+* Sometimes it may be necessary to clear pairing information in AAPS by long-click BT icon on Dana-i/RS tab.
 
-## Viaggi con cambi di fuso orario con il microinfusore Dana RS
+## Timezone traveling with Dana RS pump
 
-Per informazioni sui viaggi attraverso i fusi orari vedere la sezione [Viaggi con cambi di fuso orario con i microinfusori](#timezone-traveling-danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).

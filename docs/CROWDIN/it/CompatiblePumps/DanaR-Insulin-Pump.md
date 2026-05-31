@@ -1,25 +1,25 @@
 # DanaR Pump
 
-_Queste istruzioni riguardano la configurazione dell'app e del microinfusore per chi possiede un DanaR.  Visitare [Microinfusore DanaRS](./DanaRS-Insulin-Pump.md) se si possiede il DanaRS lanciato nel 2017._
+_These instructions are for configuring the app and your pump if you have a DanaR.  Visit [DanaRS Insulin Pump](./DanaRS-Insulin-Pump.md) if you have the DanaRS launched in 2017 instead._
 
-* Nel microinfusore andare al Menu Principale > Impostazioni > Opzione Utente
-* Attivare "8. Bolo Esteso"
+* In the pump go to Main Menu > Setting > User Option
+* Turn on "8. Extended Bolus"
 
 ![DanaR pump](../images/danar1.png)
 
-* Andare al Menu Principale > Impostazioni > Discovery
-* Nelle impostazioni del telefono andare al Bluetooth, cercare i dispositivi nelle vicinanze, selezionare il numero seriale del DanaR e inserire la password (la password di associazione è 0000).  Se il DanaR non appare nella ricerca, riavviare il telefono, rimuovere e reinserire la batteria del DanaR e ripetere questi due passaggi.
+* Go to Main Menu > Setting > Discovery
+* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is  0000).  If DanaR is not showing in scan then restart phone and take DanaR battery out, replace and start these two steps again.
 
-* In AAPS andare al Costruttore di configurazione e selezionare il tipo di DanaR (DanaR, DanaR Korean, DanaRv2)
-* Selezionare il Menu toccando i 3 punti in alto a destra. Selezionare Preferenze.
-* Selezionare Dispositivo Bluetooth DanaR e fare clic sul numero seriale del DanaR.
-* Selezionare Password microinfusore e inserire la password. (La password predefinita è 1234)
-* Se si desidera che AAPS permetta una basale superiore al 200%, abilitare Usa boli estesi per >200%. Nota: questo significa che non è possibile fare loop con TBR elevate durante l'utilizzo di boli estesi per i pasti.
-* Nelle Preferenze sotto le impostazioni del microinfusore DanaR è possibile cambiare la velocità predefinita del bolo (12 sec per 1U, 30 sec per 1U o 60 sec per 1U).
-* Impostare il passo basale del microinfusore a 0,01 U/h
-* Impostare il passo bolo del microinfusore a 0,1 U/h
+* In AAPS go to Config Builder and select the type of DanaR you have (DanaR, DanaR Korean, DanaRv2)
+* Select Menu by tapping the 3 dots in the top right. Select Preferences.
+* Select DanaR Bluetooth device, and click your DanaR serial number.
+* Select Pump password, and input your password. (Default password is 1234)
+* If you want AAPS to allow basal rate above 200%, enable Use extended boluses for >200%. Note this means you cannot loop with high TBRs whilst using extended boluses for food.
+* In Preferences under DanaR pump settings you can change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
+* Set basal step on pump to 0.01 U/h
+* Set bolus step on pump to 0.1 U/h
 * Enable extended boluses on pump
 
-## Viaggi con cambi di fuso orario con il microinfusore Dana R
+## Timezone traveling with Dana R pump
 
-Per informazioni sui viaggi attraverso i fusi orari vedere la sezione [Viaggi con cambi di fuso orario con i microinfusori](#timezone-traveling-danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
