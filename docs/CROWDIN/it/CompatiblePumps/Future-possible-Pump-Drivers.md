@@ -1,40 +1,40 @@
-# Future (possible) Pump Drivers
+# Driver futuri (possibili) per Microinfusori
 
-This is list of some Pumps floating around there, and status of support for them in any of Looping systems and then status in AAPS. On end there is some info, what is required for a pump to be "Loop capable".
+Questo è un elenco di alcuni microinfusori disponibili sul mercato, con lo stato del supporto per i sistemi di loop e poi lo stato in AAPS. Alla fine ci sono alcune informazioni su cosa è necessario affinché un microinfusore sia "compatibile con il loop".
 
 ## Pumps that are Loopable
 
-### Kaleido ([Homepage](https://www.hellokaleido.com/)) 
+### Kaleido ([Homepage](https://www.hellokaleido.com/))
 
-**Loop status:** Pump is a Loop candidate, but protocol is unknown at the time. No interest in open source from the vendor.
+**Stato loop:** Il microinfusore è un candidato al loop, ma il protocollo è sconosciuto al momento. Nessun interesse all'open source da parte del produttore.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Requisito hardware per AAPS:** Nessuno. Sembra essere abilitato al Bluetooth.
 
 ### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
 
-**Loop status:** Not yet loopable.
+**Stato loop:** Non ancora compatibile con il loop.
 
-While in the past company has decided not to allow their pumps to be controlled by external devices, it seems that last few years have been a game changer. Company decided to upgrade their t:slim X2 pump to be able to be controlled remotely (via t:connect app), which means that avenues are opened that we might be able to look forward to have control of pump via AAPS in the future. New pump firmware is planned to be released soon (this or next year, before their tubeless pump t:sport comes out). There are no details yet, what operations will be possible from t:connect (Bolus definitely, everything else unknown).
+Sebbene in passato l'azienda abbia deciso di non consentire il controllo dei propri microinfusori da dispositivi esterni, sembra che gli ultimi anni abbiano cambiato le carte in tavola. L'azienda ha deciso di aggiornare il microinfusore t:slim X2 per poter essere controllato da remoto (tramite l'app t:connect), il che significa che sono state aperte strade che potrebbero permetterci di controllare il microinfusore tramite AAPS in futuro. È previsto il rilascio a breve di un nuovo firmware del microinfusore (quest'anno o l'anno prossimo, prima dell'uscita del loro microinfusore tubeless t:sport). Non ci sono ancora dettagli su quali operazioni saranno possibili da t:connect (Bolo sicuramente, tutto il resto è sconosciuto).
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Requisito hardware per AAPS:** Nessuno. Sembra essere abilitato al Bluetooth.
 
 ### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Loop status:** All 3 pumps will be Loop candidates. 
+**Stato loop:** Tutti e 3 i microinfusori saranno candidati al loop.
 
-Awaiting release of t:mobi in Europe (other two are not yet released anywhere). Development of AAPS t:mobi support has already started and should be available by end of 2025 (see more info on Discord).
+In attesa del rilascio di t:mobi in Europa (gli altri due non sono ancora stati rilasciati da nessuna parte). Lo sviluppo del supporto AAPS per t:mobi è già iniziato e dovrebbe essere disponibile entro la fine del 2025 (vedi ulteriori informazioni su Discord).
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Requisito hardware per AAPS:** Nessuno. Sembra essere abilitato al Bluetooth.
 
 ### Willcare Insulin pump ([Homepage](http://shinmyungmedi.com/en/))
 
-**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands). 
+**Stato loop:** Al momento non è un candidato al loop, ma siamo stati contattati dal loro staff e sono interessati ad estendere il loro microinfusore per renderlo compatibile con il loop (al momento penso che manchino solo i comandi get/set profilo).
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Requisito hardware per AAPS:** Nessuno. Sembra essere abilitato al Bluetooth.
 
-**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+**Commenti:** Poiché l'azienda è interessata all'integrazione con AAPS, potrebbe fare l'implementazione da sola.
 
-## Pumps no longer sold (companies no longer operating)
+## Microinfusori non più venduti (aziende non più operative)
 
 ### Animas Vibe
 
@@ -44,48 +44,48 @@ Awaiting release of t:mobi in Europe (other two are not yet released anywhere). 
 
 ### Accu-Chek Insight
 
-**Comments:** End of support March 2025.
+**Commenti:** Fine del supporto marzo 2025.
 
 ## Pumps that aren't Loopable
 
 ### Medtronic Bluetooth
 
-**Comments:** Medtronic [withdrew](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+**Commenti:** Nessun successo della comunità nel comunicare con il microinfusore Solo.
 
 ### Accu-Chek Solo
 
-**Comments:** No community success in communicating with the Solo pump.
+**Commenti:** Medtronic si è [ritirata](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
 
 ### Ypsomed Pump
 
-**Comments:** Ypso added very heavy 3rd party encryption.
+**Commenti:** Ypso ha aggiunto una crittografia di terze parti molto pesante.
 
 ## Requirements for pumps being loopable
 
-**Prerequisite** 
-- Pump has to support some kind of remote control. (BT, Radio frequency, etc)
-- Protocol is hacked/documented/etc.
+**Prerequisito**
+- Il microinfusore deve supportare qualche tipo di controllo remoto. (BT, radiofrequenza, ecc.)
+- Il protocollo è stato hackerato/documentato/ecc.
 
-**Minimal requirement** 
-- Set Temporary Basal Rate
-- Get Status
-- Cancel Temporary Basal Rate
+**Requisito minimo**
+- Imposta la basale temporanea
+- Ottieni lo stato
+- Annulla la basale temporanea
 
-**For oref1(SMB) or Bolusing:**
-- Set Bolus
+**Per oref1(SMB) o il bolo:**
+- Imposta il bolo
 
 **Good to have**
-- Cancel Bolus
-- Get Basal Profile (almost requirement)
-- Set Basal Profile (nice to have)
-- Read History 
+- Annulla il bolo
+- Ottieni il profilo basale (quasi requisito)
+- Imposta il profilo basale (bello avere)
+- Leggi la cronologia
 
-**Other (not required but good to have)**
-- Set Extended Bolus
-- Cancel Extended Bolus
-- Read History
-- Read TDD
+**Altro (non richiesto ma utile avere)**
+- Imposta il bolo esteso
+- Annulla il bolo esteso
+- Leggi la cronologia
+- Leggi il TDD
 
 ### Other pumps support
 
-If you have any other pumps you would like to see status on, please contact us on discord.
+Se hai altri microinfusori di cui vorresti vedere lo stato, contattaci su Discord.

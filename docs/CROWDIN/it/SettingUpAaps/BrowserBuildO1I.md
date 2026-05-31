@@ -1,4 +1,4 @@
-Compatible with iOS (using iPad as an example)
+Compatibile con iOS (usando un iPad come esempio)
 <!--crowdin: exclude-->
 
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">

@@ -1,87 +1,86 @@
 # Accu Chek Combo Pump
 
-**This software is part of a DIY solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you, but allows you to improve your diabetes and your quality of life if you're willing to put in the time required. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
+**Questo software è parte di una soluzione fai-da-te e non è un prodotto finito, ma richiede che sia TU a leggere, imparare e comprendere il sistema, incluso come utilizzarlo. Non è qualcosa che gestisce tutta la tua terapia del diabete al posto tuo, ma ti permette di migliorare il tuo diabete e la tua qualità di vita se sei disposto a dedicarvi il tempo necessario. Non affrettarti, ma concediti il tempo di imparare. Sei tu solo il responsabile di ciò che ne fai.**
 
-## Hardware and software requirements
+## Requisiti hardware e software
 
-* A Roche Accu-Chek Combo (any firmware, they all work).
-* A Smartpix or Realtyme device together with the 360 Configuration Software to configure the pump. (Roche sends out Smartpix devices and the configuration software free of charge to their customers upon request.)
-* A compatible phone. Android 9 (Pie) or newer is a must. If using LineageOS, the minimum supported version is 16.1. See [release notes](#maintenance-android-version-aaps-version) for details.
-* The AndroidAPS app installed on your phone.
+* Un Roche Accu-Chek Combo (qualsiasi firmware, tutti funzionano).
+* Un dispositivo Smartpix o Realtyme insieme al Software di Configurazione 360 per configurare il microinfusore. (Roche invia i dispositivi Smartpix e il software di configurazione gratuitamente ai propri clienti su richiesta.)
+* Un telefono compatibile. Android 9 (Pie) o versioni successive è obbligatorio. Se si utilizza LineageOS, la versione minima supportata è 16.1. Vedere le [note di rilascio](#maintenance-android-version-aaps-version) per i dettagli.
+* L'app AndroidAPS installata sul telefono.
 
-Some phones may work better than others, depending on their quality of Bluetooth support and whether or not they have additional, very aggressive power saving logic. A list of phones can be found in the [AAPS Phones](#Phones-list-of-tested-phones) document. Please be aware that this is not complete list and reflects personal user experience. You are encouraged to also enter your experience and thereby help others (these projects are all about paying it forward).
+Alcuni telefoni potrebbero funzionare meglio di altri, a seconda della qualità del supporto Bluetooth e del fatto che abbiano o meno una logica di risparmio energetico particolarmente aggressiva. Un elenco di telefoni è disponibile nel documento [Telefoni AAPS](#Phones-list-of-tested-phones). Tieni presente che non si tratta di un elenco completo e riflette l'esperienza personale degli utenti. Sei incoraggiato a inserire anche la tua esperienza e in questo modo aiutare gli altri (questi progetti si basano sul dare e ricevere aiuto).
 
 (combov2-before-you-begin)=
-## Before you begin
+## Prima di iniziare
 
-**SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error. Keep your Smartpix / Realtyme device handy, along with the 360 Configuration Software. Plan on spending about an hour for setting everything up and checking that everything is working properly.
+**LA SICUREZZA PRIMA DI TUTTO** - non tentare questo processo in un ambiente in cui non è possibile recuperare da un errore. Tieni a portata di mano il dispositivo Smartpix / Realtyme insieme al Software di Configurazione 360. Prevedi di dedicare circa un'ora per configurare tutto e verificare che funzioni correttamente.
 
-Be aware of the following limitations:
+Tieni presente le seguenti limitazioni:
 
-* Extended bolus and multiwave bolus are currently not supported (you can use [Extended Carbs](../DailyLifeWithAaps/ExtendedCarbs.md) instead).
-* Only one basal profile (the first one) is supported.
-* The loop is disabled if the currently active profile on the pump isn't profile no. 1. This continues until profile no. 1 is made the active one; when that is done, the next time AAPS connects (either on its own after a while or because the user presses the Refresh button in the combov2 user interface), it will notice that profile no. 1 is the current one, and enable the loop again.
-* If the loop requests a running TBR to be cancelled, the Combo will set a TBR of 90% or 110% for 15 minutes instead. This is because actually cancelling a TBR causes an alert on the pump which causes a lot of vibrations, and these vibrations cannot be disabled.
-* Bluetooth connection stability varies with different phones, causing "pump unreachable" alerts, where no connection to the pump is established anymore. If that error occurs, make sure Bluetooth is enabled, press the Refresh button in the Combo tab to see if this was caused by an intermitted issue and if still no connection is established, reboot the phone which should usually fix this.
-* There is another issue were a restart doesn't help but a button on the pump must be pressed (which resets the pump's Bluetooth stack), before the pump accepts connections from the phone again.
-* Setting a TBR on the pump is to be avoided since the loop assumes control of TBRs. Detecting a new TBR on the pump might take up to 20 minutes and the TBR's effect will only be accounted from the moment it is detected, so in the worst case there might be 20 minutes of a TBR that is not reflected in IOB.
+* Il bolo esteso e il bolo multionda non sono attualmente supportati (è possibile usare i [Carboidrati estesi](../DailyLifeWithAaps/ExtendedCarbs.md) in alternativa).
+* È supportato un solo profilo basale (il primo).
+* Il loop viene disabilitato se il profilo attualmente attivo sul microinfusore non è il profilo n. 1. Questa situazione continua finché il profilo n. 1 non viene reso attivo; quando ciò accade, la volta successiva che AAPS si connette (da solo dopo un po' o perché l'utente preme il pulsante Aggiorna nell'interfaccia combov2), rileverà che il profilo n. 1 è quello corrente e abiliterà nuovamente il loop.
+* Se il loop richiede l'annullamento di una TBR in corso, il Combo imposterà invece una TBR al 90% o al 110% per 15 minuti. Questo perché l'annullamento effettivo di una TBR causa un avviso sul microinfusore che produce molte vibrazioni, e queste non possono essere disabilitate.
+* La stabilità della connessione Bluetooth varia con i diversi telefoni, causando avvisi "microinfusore non raggiungibile" in cui non viene più stabilita nessuna connessione con il microinfusore. Se si verifica tale errore, assicurarsi che il Bluetooth sia abilitato, premere il pulsante Aggiorna nella scheda Combo per vedere se l'errore era intermittente e, se la connessione non viene ancora stabilita, riavviare il telefono, il che di solito risolve il problema.
+* Esiste un altro problema in cui un riavvio non è sufficiente, ma è necessario premere un pulsante sul microinfusore (che ripristina lo stack Bluetooth del microinfusore) prima che il microinfusore accetti di nuovo connessioni dal telefono.
+* È preferibile non impostare una TBR direttamente sul microinfusore poiché il loop assume il controllo delle TBR. Il rilevamento di una nuova TBR sul microinfusore può richiedere fino a 20 minuti e l'effetto della TBR verrà considerato solo dal momento in cui viene rilevata, quindi nel caso peggiore ci potrebbero essere 20 minuti di TBR non riflessa nell'IOB.
 
-If you have been using the old Combo driver that depends on the separate Ruffy app, and want to move to this new one, note that the pairing has to be done again - Ruffy and the new Combo driver are not able to share pairing information. Also, make sure that Ruffy is _not_ running. If in doubt, long-press the Ruffy app icon to bring up a context menu. In that menu, press on "App Info". In the UI that just opened up, press "Force stop". That way, it is ensured that an active Ruffy instance cannot interfere with the new driver.
+Se hai utilizzato il vecchio driver Combo che dipende dall'app Ruffy separata e vuoi passare a questo nuovo, tieni presente che l'associazione deve essere rifatta - Ruffy e il nuovo driver Combo non sono in grado di condividere le informazioni di associazione. Inoltre, assicurati che Ruffy _non_ sia in esecuzione. In caso di dubbio, tieni premuta l'icona dell'app Ruffy per visualizzare un menu contestuale. In quel menu, premi su "Informazioni app". Nell'interfaccia che si apre, premi "Forza arresto". In questo modo si garantisce che un'istanza attiva di Ruffy non possa interferire con il nuovo driver.
 
-Also, if you are migrating from the old driver, be aware that the new driver communicates a bolus command in an entirely different way to the Combo that is much faster, so don't be surprised when a bolus starts immediately regardless of the dosage. Furthermore, the general suggestions, tips and tricks etc. about dealing with Ruffy pairing and connection problems do not apply here, since this is an entirely new driver that shares no code with the old one.
+Inoltre, se stai migrando dal vecchio driver, tieni presente che il nuovo driver comunica un comando bolo in modo completamente diverso al Combo ed è molto più veloce, quindi non sorprenderti se un bolo inizia immediatamente indipendentemente dal dosaggio. Inoltre, i suggerimenti generali, trucchi ecc. relativi alla gestione dei problemi di associazione e connessione con Ruffy non si applicano qui, poiché questo è un driver completamente nuovo che non condivide codice con quello vecchio.
 
-This new driver is currently written to support the following languages on the Combo.
-(This is unrelated to the language in AAPS - it is the language shown on the Combo's LCD itself.)
+Questo nuovo driver è attualmente scritto per supportare le seguenti lingue sul Combo. (Questo non è correlato alla lingua in AAPS - è la lingua mostrata sull'LCD del Combo stesso.)
 
-* English
-* Spanish
-* French
-* Italian
-* Russian
-* Turkish
-* Polish
-* Czech
-* Hungarian
-* Slovak
-* Romanian
-* Croatian
-* Dutch
-* Greek
-* Finnish
-* Norwegian
-* Portuguese
-* Swedish
-* Danish
-* German
-* Slovenian
-* Lithuanian
+* Inglese
+* Spagnolo
+* Francese
+* Italiano
+* Russo
+* Turco
+* Polacco
+* Ceco
+* Ungherese
+* Slovacco
+* Rumeno
+* Croato
+* Olandese
+* Greco
+* Finlandese
+* Norvegese
+* Portoghese
+* Svedese
+* Danese
+* Tedesco
+* Sloveno
+* Lituano
 
-**Important**: If your pump is set to a language that is not part of this list, please contact the developers, and set the pump's language to one in this list. Otherwise, the driver won't work properly.
+**Importante**: Se il microinfusore è impostato in una lingua non inclusa in questo elenco, contattare gli sviluppatori e impostare la lingua del microinfusore su una di quelle presenti nell'elenco. Altrimenti, il driver non funzionerà correttamente.
 
-## Phone setup
+## Configurazione del telefono
 
-It is very important to make sure that battery optimizations are turned off. AAPS already auto-detects when it is subject to these optimizations, and requests in its UI that these be turned off. But, on modern Android phones, Bluetooth _itself_ is an app (a system app). And, usually, that "Bluetooth app" is run _with battery optimizations on by default_. As a result, Bluetooth can refuse to respond when the phone aims to save power because it kills off the Bluetooth app. This means that in that Bluetooth system app's settings, battery optimizations must be turned off as well. Unfortunately, how one can find that Bluetooth system app differs between phones. In stock Android, go to Settings -> Apps -> See all N apps (N = the number of apps on your phone). Then, open the menu to the top right corner, tap on "Show system" or "Show system apps" or "All apps". Now, in the newly expanded list of apps, look for a "Bluetooth" app. Select it, and on its "App info" UI, tap on "Battery". There, disable battery optimizations (sometimes called "battery usage").
+È molto importante assicurarsi che le ottimizzazioni della batteria siano disattivate. AAPS rileva già automaticamente quando è soggetto a queste ottimizzazioni e richiede nell'interfaccia che vengano disattivate. Ma sui moderni telefoni Android, il Bluetooth _stesso_ è un'app (un'app di sistema). E, di solito, quella "app Bluetooth" viene eseguita _con le ottimizzazioni della batteria attive per impostazione predefinita_. Di conseguenza, il Bluetooth può rifiutarsi di rispondere quando il telefono cerca di risparmiare energia perché termina il processo dell'app Bluetooth. Ciò significa che nelle impostazioni dell'app di sistema Bluetooth, le ottimizzazioni della batteria devono essere disattivate. Sfortunatamente, il modo per trovare quell'app di sistema Bluetooth varia tra i telefoni. In Android standard, vai in Impostazioni -> App -> Visualizza tutte le N app (N = numero di app sul telefono). Poi apri il menu in alto a destra e tocca "Mostra sistema" o "Mostra app di sistema" o "Tutte le app". Ora, nell'elenco di app ampliato, cerca un'app "Bluetooth". Selezionala e nell'interfaccia "Informazioni app", tocca "Batteria". Lì, disabilita le ottimizzazioni della batteria (a volte chiamate "utilizzo batteria").
 
-## Combo setup
+## Configurazione del Combo
 
-* Configure the pump using the Accu-Chek 360 Configuration Software. If you do not have the software, please contact your Accu-Chek hotline. They usually send registered users a CD with the "360° Pump Configuration Software" and a SmartPix USB-infrared connection device (the Realtyme device also works if you have that).
+* Configura il microinfusore usando il Software di Configurazione Accu-Chek 360. Se non hai il software, contatta il numero verde Accu-Chek. Di solito inviano agli utenti registrati un CD con il "Software di Configurazione 360° Microinfusore" e un dispositivo di connessione USB infrarossi SmartPix (il dispositivo Realtyme funziona anch'esso se lo hai).
 
-  - **Required settings** (marked green in screenshots):
+  - **Impostazioni obbligatorie** (evidenziate in verde negli screenshot):
 
-     * Set/leave the menu configuration as "Standard", this will show only the supported menus/actions on the pump and hide those which are unsupported (extended/multiwave bolus, multiple basal rates), which cause the loop functionality to be restricted when used because it's not possible to run the loop in a safe manner when used.
-     * Verify the _Quick Info Text_ is set to "QUICK INFO" (without the quotes, found under _Insulin Pump Options_).
-     * Set TBR _Maximum Adjustment_ to 500%
-     * Disable _Signal End of Temporary Basal Rate_
-     * Set TBR _Duration increment_ to 15 min
-     * Enable Bluetooth
+     * Impostare/lasciare la configurazione del menu come "Standard", in modo che vengano mostrati solo i menu/azioni supportati sul microinfusore e nascosti quelli non supportati (bolo esteso/multionda, velocità basali multiple), che causano limitazioni alle funzionalità del loop quando vengono usati perché non è possibile eseguire il loop in modo sicuro.
+     * Verificare che il _Testo Info Rapida_ sia impostato su "QUICK INFO" (senza virgolette, si trova in _Opzioni Microinfusore di Insulina_).
+     * Impostare la _Regolazione Massima_ TBR al 500%
+     * Disabilitare _Segnale Fine Basale Temporanea_
+     * Impostare l'_Incremento Durata_ TBR a 15 min
+     * Abilitare Bluetooth
 
-  - **Recommended settings** (marked blue in screenshots)
+  - **Impostazioni consigliate** (evidenziate in blu negli screenshot)
 
-     * Set low cartridge alarm to your liking
-     * Configure a max bolus suited for your therapy to protect against bugs in the software
-     * Similarly, configure maximum TBR duration as a safeguard. Allow at least 3 hours, since the option to disconnect the pump for 3 hours sets a 0% for 3 hours.
+     * Impostare l'allarme cartuccia quasi vuota secondo le proprie preferenze
+     * Configurare un bolo massimo adeguato alla propria terapia per proteggersi da eventuali bug del software
+     * Analogamente, configurare la durata massima TBR come misura di sicurezza. Consentire almeno 3 ore, poiché l'opzione di disconnettere il microinfusore per 3 ore imposta uno 0% per 3 ore.
      * Enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and quick bolusing was a habit.
-     * Set display timeout and menu timeout to the minimum of 5.5 and 5 respectively. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
+     * Impostare il timeout del display e il timeout del menu al minimo, rispettivamente 5,5 e 5. Ciò consente ad AAPS di recuperare più rapidamente dalle situazioni di errore e riduce la quantità di vibrazioni che possono verificarsi durante tali errori.
 
   ![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
 
@@ -91,15 +90,15 @@ It is very important to make sure that battery optimizations are turned off. AAP
 
   ![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
 
-## Activating the driver and pairing it with the Combo
+## Attivazione del driver e associazione con il Combo
 
-* Select the "Accu-Chek Combo" driver in [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md). **Important**: There is the old driver, called "Accu-Chek Combo (Ruffy)", in that list as well. Do _not_ select that one.
+* Selezionare il driver "Accu-Chek Combo" in [Costruttore di configurazione > Microinfusore](../SettingUpAaps/ConfigBuilder.md). **Importante**: In quell'elenco è presente anche il vecchio driver, chiamato "Accu-Chek Combo (Ruffy)". _Non_ selezionare quello.
 
   ![Screenshot of Config Builder Combo](../images/combo/combov2-config-builder.png)
 
-* Tap the cog-wheel to open the driver settings.
+* Toccare l'ingranaggio per aprire le impostazioni del driver.
 
-* In the settings user interface, tap on the button 'Pair with pump' at the top of the screen. This opens the Combo pairing user interface. Follow the instructions shown on screen to start pairing. When Android asks for permission to make the phone visible to other Bluetooth devices, press "allow". Eventually, the Combo will show a custom 10-digit pairing PIN on its screen, and the driver will request it. Enter that PIN in the corresponding field.
+* Nell'interfaccia delle impostazioni, toccare il pulsante 'Associa con microinfusore' nella parte superiore dello schermo. Si apre l'interfaccia di associazione Combo. Seguire le istruzioni mostrate sullo schermo per avviare l'associazione. Quando Android chiede il permesso di rendere il telefono visibile ad altri dispositivi Bluetooth, premere "consenti". Alla fine, il Combo mostrerà sul suo schermo un PIN di associazione personalizzato a 10 cifre, e il driver lo richiederà. Inserire quel PIN nel campo corrispondente.
 
   ![Screenshot of Combo Pairing UI 1](../images/combo/combov2-pairing-screen-1.png)
 
@@ -111,116 +110,115 @@ It is very important to make sure that battery optimizations are turned off. AAP
 
   ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-5.png)
 
-* When the driver asks for the 10-digit PIN that is shown on the Combo, and the code is entered incorrectly, this is shown:
-  ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
+* Quando il driver chiede il PIN a 10 cifre mostrato sul Combo e il codice viene inserito in modo errato, viene visualizzato questo: ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
 
-* Once pairing is done, the pairing user interface is closed by pressing the OK button in the screen that states that pairing succeeded. After it is closed, you return to the driver settings user interface. The 'Pair with pump' button should now be greyed out and disabled.
+* Una volta completata l'associazione, l'interfaccia di associazione viene chiusa premendo il pulsante OK nella schermata che indica il successo dell'associazione. Dopo la chiusura, si torna all'interfaccia delle impostazioni del driver. Il pulsante 'Associa con microinfusore' dovrebbe ora essere disabilitato e in grigio.
 
-  The Accu-Chek Combo tab looks like this after successfully pairing:
+  La scheda Accu-Chek Combo ha questo aspetto dopo un'associazione riuscita:
 
   ![Screenshot of Accu-Chek Combo tab with pairing](../images/combo/combov2-tab-with-pairing.png)
 
-  if however there is no pairing with the Combo, the tab looks like this instead:
+  Se invece non c'è associazione con il Combo, la scheda ha invece questo aspetto:
 
   ![Screenshot of Accu-Chek Combo tab without pairing](../images/combo/combov2-tab-without-pairing.png)
 
-* To verify your setup (with the pump **disconnected** from any cannula to be safe!) use AAPS to set a TBR of 500% for 15 min and issue a bolus. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
+* Per verificare la configurazione (con il microinfusore **disconnesso** da qualsiasi cannula per sicurezza!) usa AAPS per impostare una TBR al 500% per 15 min ed erogare un bolo. The pump should now have a TBR running and the bolus in the history. Anche AAPS dovrebbe mostrare la TBR attiva e il bolo erogato.
 
-* On the Combo, it is recommended to enable the key lock to prevent bolusing from the pump, esp. when the pump was used before and using the "quick bolus" feature was a habit.
+* Sul Combo, si consiglia di abilitare il blocco tasti per evitare boli accidentali dal microinfusore, specialmente se il microinfusore è stato usato in precedenza e l'uso della funzione "bolo rapido" era un'abitudine.
 
-## Notes about pairing
+## Note sull'associazione
 
-The Accu-Chek Combo was developed before Bluetooth 4.0 was released, and just one year after the very first Android version was released. This is why its way of pairing with other devices is not 100% compatible with how it is done in Android today. To fully overcome this, AAPS would need system level permissions, which are only available for system apps. These are installed by the phone makers into the phone - users cannot install system apps.
+L'Accu-Chek Combo è stato sviluppato prima del rilascio di Bluetooth 4.0, e solo un anno dopo il rilascio della primissima versione Android. Questo è il motivo per cui il suo modo di associarsi con altri dispositivi non è compatibile al 100% con come avviene in Android oggi. Per superare completamente questo problema, AAPS avrebbe bisogno di permessi a livello di sistema, disponibili solo per le app di sistema, che vengono installate dai produttori nel telefono e non possono essere installate dagli utenti. These are installed by the phone makers into the phone - users cannot install system apps.
 
-The consequence of this is that pairing will never be 100% without problems, though it is greatly improved in this new driver. In particular, during pairing, Android's Bluetooth PIN dialog can briefly show up and automatically go away. But sometimes, it stays on screen, and asks for a 4-digit PIN. (This is not to be confused with the 10-digit Combo pairing PIN.) Do not enter anything, just press cancel. If pairing does not continue, follow the instructions on screen to retry the pairing attempt.
+La conseguenza è che l'associazione non sarà mai senza problemi al 100%, anche se è notevolmente migliorata in questo nuovo driver. In particolare, durante l'associazione, il dialogo PIN Bluetooth di Android può apparire brevemente e scomparire automaticamente. Ma a volte rimane sullo schermo e chiede un PIN a 4 cifre. (Da non confondere con il PIN di associazione Combo a 10 cifre.) Non inserire nulla, premi semplicemente annulla. Se l'associazione non continua, seguire le istruzioni sullo schermo per riprovare l'associazione.
 
 (combov2-tab-contents)=
-## Accu-Chek Combo tab contents
+## Contenuto della scheda Accu-Chek Combo
 
-The tab shows the following information when a pump was paired (items are listed from top to bottom):
+La scheda mostra le seguenti informazioni quando un microinfusore è associato (gli elementi sono elencati dall'alto verso il basso):
 
 ![Screenshot of Accu-Chek Combo tab with pairing](../images/combo/combov2-tab-with-pairing.png)
 
-1. _Driver state_: The driver can be in one of the following states:
-   - "Disconnected" : There is no Bluetooth connection; the driver is in this state most of the time, and only connects to the pump when needed - this saves power
-   - "Connecting"
-   - "Checking pump" : the pump is connected, but the driver is currently performing safety checks to ensure that everything is OK and up to date
-   - "Ready" : the driver is ready to accept commands from AAPS
-   - "Suspended" : the pump is suspended (shown as "stopped" in the Combo)
-   - "Executing command" : an AAPS command is being executed
-   - "Error" : an error occurred; the connection was terminated, any ongoing command was aborted
-2. _Last connection_: How many minutes ago did the driver successfully connect to the Combo; if this goes beyond 30 minutes, this item is shown with a red color
-3. _Current activity_: Additional detail about what the pump is currently doing; this is also where a thin progress bar can show a command's execution progress, like setting a basal profile
-4. _Battery_: Battery level; the Combo only indicates "full", "low", "empty" battery, and does not offer anything more accurate (like a percentage), so only these three levels are shown here
-5. _Reservoir_: How many IU are currently in the Combo's reservoir
-6. _Last bolus_: How many minutes ago the last bolus was delivered; if none was delivered yet after AAPS was started, this is empty
-7. _Temp basal_: Details about the currently active temporary basal; if none is currently active, this is empty
-8. _Base basal rate_: Currently active base basal rate ("base" means the basal rate without any active TBR influencing the basal rate factor)
-9. _Serial number_: Combo serial number as indicated by the pump (this corresponds to the serial number shown on the back of the Combo)
-10. _Bluetooth address_: The Combo's 6-byte Bluetooth address, shown in the `XX:XX:XX:XX:XX:XX` format
+1. _Stato driver_: Il driver può trovarsi in uno dei seguenti stati:
+   - "Disconnesso": Non c'è connessione Bluetooth; il driver si trova in questo stato per la maggior parte del tempo e si connette al microinfusore solo quando necessario - risparmia energia
+   - "Connessione in corso"
+   - "Controllo microinfusore": il microinfusore è connesso, ma il driver sta eseguendo controlli di sicurezza per assicurarsi che tutto sia OK e aggiornato
+   - "Pronto": il driver è pronto ad accettare comandi da AAPS
+   - "Sospeso": il microinfusore è sospeso (mostrato come "fermato" nel Combo)
+   - "Esecuzione comando": un comando AAPS è in esecuzione
+   - "Errore": si è verificato un errore; la connessione è stata interrotta, qualsiasi comando in corso è stato annullato
+2. _Ultima connessione_: Quanti minuti fa il driver si è connesso correttamente al Combo; se supera i 30 minuti, questo elemento viene mostrato in rosso
+3. _Attività corrente_: Dettaglio aggiuntivo su cosa sta facendo attualmente il microinfusore; qui può anche apparire una barra di avanzamento che mostra il progresso dell'esecuzione di un comando, come l'impostazione di un profilo basale
+4. _Batteria_: Livello batteria; il Combo indica solo "piena", "scarica", "esaurita" e non offre nulla di più preciso (come una percentuale), quindi vengono mostrati solo questi tre livelli
+5. _Serbatoio_: Quante UI sono attualmente nel serbatoio del Combo
+6. _Ultimo bolo_: Quanti minuti fa è stato erogato l'ultimo bolo; se nessuno è stato erogato dopo l'avvio di AAPS, questo è vuoto
+7. _Basale temporanea_: Dettagli sulla basale temporanea attualmente attiva; se nessuna è attualmente attiva, questo è vuoto
+8. _Velocità basale di base_: Velocità basale di base attualmente attiva ("base" significa la velocità basale senza alcuna TBR attiva che influenzi il fattore di velocità basale)
+9. _Numero di serie_: Numero di serie del Combo come indicato dal microinfusore (corrisponde al numero di serie mostrato sul retro del Combo)
+10. _Indirizzo Bluetooth_: L'indirizzo Bluetooth a 6 byte del Combo, mostrato nel formato `XX:XX:XX:XX:XX:XX`
 
-The Combo can be operated through Bluetooth in the _remote-terminal_ mode or in the _command_ mode. The remote-terminal mode corresponds to the "remote control mode" on the Combo's meter, which mimics the pump's LCD and four buttons. Some commands have to be performed in this mode by the driver, since they have no counterpart in the command mode. That latter mode is much faster, but, as said, limited in scope. When the remote-terminal mode is active, the current remote-terminal screen is shown in the field that is located just above the Combo drawing at the bottom. When the driver switches to the command mode however, that field is left blank.
+Il Combo può essere operato tramite Bluetooth in modalità _terminale remoto_ o in modalità _comando_. La modalità terminale remoto corrisponde alla "modalità telecomando" sul glucometro del Combo, che simula l'LCD e i quattro pulsanti del microinfusore. Alcuni comandi devono essere eseguiti in questa modalità dal driver, poiché non hanno equivalenti nella modalità comando. Quest'ultima modalità è molto più veloce, ma, come detto, limitata nell'ambito. Quando la modalità terminale remoto è attiva, la schermata del terminale remoto corrente viene mostrata nel campo situato sopra il disegno del Combo in basso. Quando il driver passa alla modalità comando, quel campo viene lasciato vuoto.
 
-(The user does not influence this; the driver fully decides on its own what mode to use. This is merely a note for users to know why sometimes they can see Combo frames in that field.)
+(L'utente non influenza questo; il driver decide autonomamente quale modalità usare. Questa è semplicemente una nota per gli utenti per spiegare perché a volte possono vedere schermate Combo in quel campo.)
 
-At the very bottom, there is the "Refresh" button. This triggers an immediate pump status update. It also is used to let AAPS know that a previously discovered error is now fixed and that AAPS can check again that everything is OK (more on that below in [the section about alerts](#combov2-alerts)).
+In fondo, c'è il pulsante "Aggiorna". Questo attiva un aggiornamento immediato dello stato del microinfusore. Viene usato anche per comunicare ad AAPS che un errore precedentemente rilevato è ora risolto e che AAPS può verificare di nuovo che tutto sia OK (maggiori dettagli nella [sezione sugli avvisi](#combov2-alerts)).
 
-## Preferences
+## Preferenze
 
-These preferences are available for the combo driver (items are listed from top to bottom):
+Queste preferenze sono disponibili per il driver combo (gli elementi sono elencati dall'alto verso il basso):
 
 ![Screenshot of Accu-Chek Combo preferences](../images/combo/combov2-preferences.png)
 
-1. _Pair with pump_: This is a button that can be pressed to pair with a Combo. It is disabled if a pump is already paired.
-2. _Unpair pump_: Unpairs a paired Combo; the polar opposite of item no. 1. It is disabled if no pump is paired.
-3. _Discovery duration (in seconds)_: When pairing, the drivers makes the phone discoverable by the pump. This controls how long that discoverability lasts. By default, the maximum (300 seconds = 5 minutes) is selected. Android does not allow for discoverability to last indefinitely, so a duration has to be chosen.
-4. _Autodetect and automatically enter insulin reservoir change_: If enabled, the "reservoir change" action that is normally done by the user through the "prime/fill" button in the Action tab. This is explained [in further detail below](#combov2-autodetections).
-5. _Autodetect and automatically enter battery change_: If enabled, the "battery change" action that is normally done by the user through the "pump battery change" button in the Action tab. This is explained [in further detail below](#combov2-autodetections).
-6. _Enable verbose Combo logging_: This greatly expands the amount of logging done by the driver. **CAUTION**: Do not enable this unless asked to by a developer. Otherwise, this can add a lot of noise to AndroidAPS logs and lessen their usefulness.
+1. _Associa con microinfusore_: Questo è un pulsante che può essere premuto per associare un Combo. È disabilitato se un microinfusore è già associato.
+2. _Disassocia microinfusore_: Disassocia un Combo associato; il contrario esatto dell'elemento n. 1. È disabilitato se nessun microinfusore è associato.
+3. _Durata discovery (in secondi)_: Durante l'associazione, il driver rende il telefono rilevabile dal microinfusore. Questo controlla per quanto tempo dura quella rilevabilità. Per impostazione predefinita, viene selezionato il massimo (300 secondi = 5 minuti). Android non consente che la rilevabilità duri indefinitamente, quindi è necessario scegliere una durata.
+4. _Rileva automaticamente e registra il cambio serbatoio insulina_: Se abilitata, l'azione "cambio serbatoio" normalmente eseguita dall'utente tramite il pulsante "riempimento/innesco" nella scheda Azioni. Questo è spiegato [in maggiore dettaglio di seguito](#combov2-autodetections).
+5. _Rileva automaticamente e registra il cambio batteria_: Se abilitata, l'azione "cambio batteria" normalmente eseguita dall'utente tramite il pulsante "cambio batteria microinfusore" nella scheda Azioni. Questo è spiegato [in maggiore dettaglio di seguito](#combov2-autodetections).
+6. _Abilita logging dettagliato Combo_: Questo aumenta notevolmente la quantità di log prodotti dal driver. **ATTENZIONE**: Non abilitarlo a meno che non venga richiesto da uno sviluppatore. Altrimenti, può aggiungere molto rumore ai log di AndroidAPS e ridurne l'utilità.
 
-Most users only ever use the top two items, the _Pair with pump_ and _Unpair pump_ buttons.
+La maggior parte degli utenti usa solo i primi due elementi, i pulsanti _Associa con microinfusore_ e _Disassocia microinfusore_.
 
 (combov2-autodetections)=
-## Autodetecting and automatically entering battery and reservoir changes
+## Rilevamento automatico e registrazione dei cambi di batteria e serbatoio
 
-The driver is capable of detecting battery and reservoir changes by keeping track of the battery and reservoir levels. If the battery level was reported by the Combo as low the last time the pump status was updated, and now, during the new pump status update, the battery level shows up as normal, then the driver concludes that the user must have replaced the battery. The same logic is used for the reservoir level: If it now is higher than before, this is interpreted as a reservoir change.
+Il driver è in grado di rilevare i cambi di batteria e serbatoio tenendo traccia dei livelli di batteria e serbatoio. Se il livello della batteria è stato riportato dal Combo come scarico l'ultima volta che lo stato del microinfusore è stato aggiornato, e ora, durante il nuovo aggiornamento dello stato del microinfusore, il livello della batteria risulta normale, il driver conclude che l'utente deve aver sostituito la batteria. La stessa logica viene usata per il livello del serbatoio: se ora è più alto di prima, viene interpretato come un cambio serbatoio.
 
-This only works if the battery and reservoir are replaced when these levels are reported as low _and_ the battery and reservoir are sufficiently filled.
+Questo funziona solo se la batteria e il serbatoio vengono sostituiti quando questi livelli vengono riportati come bassi _e_ la batteria e il serbatoio vengono sufficientemente riempiti.
 
-These autodetections can be turned off in the Preferences UI.
+Questi rilevamenti automatici possono essere disattivati nell'interfaccia delle Preferenze.
 
 (combov2-alerts)=
-## Alerts (warnings and errors) and how they are handled
+## Avvisi (avvertenze ed errori) e come vengono gestiti
 
-The Combo shows alerts as remote-terminal screens. Warnings are shown with a "Wx" code (x is a digit), along with by a short description. One example is "W7", "TBR OVER". Errors are similar, but show up with an "Ex" code instead.
+Il Combo mostra gli avvisi come schermate di terminale remoto. Le avvertenze vengono mostrate con un codice "Wx" (x è una cifra), insieme a una breve descrizione. Un esempio è "W7", "TBR OVER". Gli errori sono simili, ma vengono mostrati con un codice "Ex".
 
-Certain warnings are automatically dismissed by the driver. These are:
+Certe avvertenze vengono automaticamente respinte dal driver. Queste sono:
 
-- W1 "reservoir low" : the driver turns this into a "low reservoir" warning that is shown on the AAPS main tab
-- W2 "battery low" : the driver turns this into a "low battery" warning that is shown on the AAPS main tab
-- W3, W6, W7, W8 : these are all purely informational for the user, so it is safe for the driver to auto-dismiss them
+- W1 "serbatoio basso": il driver la converte in un avviso "serbatoio basso" mostrato nella scheda principale di AAPS
+- W2 "batteria scarica": il driver la converte in un avviso "batteria scarica" mostrato nella scheda principale di AAPS
+- W3, W6, W7, W8: queste sono tutte puramente informative per l'utente, quindi è sicuro per il driver respingerle automaticamente
 
-Other warnings are _not_ automatically dismissed. Also, errors are _never_ automatically dismissed. Both of these are handled the same way: They cause the driver to produce an alert dialog on top of the AAPS UI, and also cause it to abort any ongoing command execution. The driver then switches to the "error" state (see [the Accu-Chek Combo tab contents description above](#combov2-tab-contents)). This state does not allow for any command execution. The user has to handle the error on the pump; for example, an occlusion error may require replacing the cannula. Once the user took care of the error, normal operation can be resumed by pressing the "Refresh" button on the Accu-Chek Combo tab. The driver then connects to the Combo and updates its status, checking for whether an error is still shown on screen etc. Also, the driver auto-refreshes the pump status after a while, so manually pressing that button is not mandatory.
+Altre avvertenze _non_ vengono respinte automaticamente. Inoltre, gli errori _non_ vengono mai respinti automaticamente. Entrambi vengono gestiti allo stesso modo: causano la visualizzazione da parte del driver di un dialogo di avviso nell'interfaccia AAPS e causano anche l'interruzione di qualsiasi esecuzione di comando in corso. Il driver passa quindi allo stato "errore" (vedere [la descrizione del contenuto della scheda Accu-Chek Combo sopra](#combov2-tab-contents)). Questo stato non consente l'esecuzione di alcun comando. L'utente deve gestire l'errore sul microinfusore; ad esempio, un errore di occlusione potrebbe richiedere la sostituzione della cannula. Una volta che l'utente si è occupato dell'errore, il normale funzionamento può essere ripreso premendo il pulsante "Aggiorna" sulla scheda Accu-Chek Combo. Il driver si connette quindi al Combo e aggiorna il suo stato, verificando se un errore è ancora mostrato sullo schermo ecc. Inoltre, il driver aggiorna automaticamente lo stato del microinfusore dopo un po', quindi premere manualmente quel pulsante non è obbligatorio. Also, the driver auto-refreshes the pump status after a while, so manually pressing that button is not mandatory.
 
-Bolusing is a special case. It is done in the Combo's command mode, which does not report mid-bolus that an alert appeared. As a consequence, the driver cannot automatically dismiss warnings _during_ a bolus. This means that unfortunately, the pump will be beeping until the bolus is finished. The most common mid-bolus alert typically is W1 "reservoir low". **Don't** dismiss Comnbo warnings on the pump itself manually during a bolus. You risk interrupting the bolus. The driver will take care of the warning once the bolus is over.
+L'erogazione del bolo è un caso speciale. Viene effettuata nella modalità comando del Combo, che non segnala durante un bolo che è comparso un avviso. Di conseguenza, il driver non può respingere automaticamente le avvertenze _durante_ un bolo. Ciò significa che purtroppo il microinfusore continuerà a emettere un segnale acustico fino al termine del bolo. L'avviso di bolo più comune è di solito W1 "serbatoio basso". **Non** respingere manualmente le avvertenze Combo sul microinfusore stesso durante un bolo. Si rischia di interrompere il bolo. Il driver si occuperà dell'avviso una volta terminato il bolo.
 
-Alerts that happen while the driver is not connected to the Combo will not be noticed by the driver. The Combo has no way of automatically pushing that alert to the phone; it is always the phone that has to initiate the connection. As a consequence, the alert will persist until the driver connects to the pump. Users can press the "Refresh" button to trigger a connection and let the driver handle the alert right then and there (instead of waiting until AAPS itself decides to initiate a connection).
+Gli avvisi che si verificano mentre il driver non è connesso al Combo non verranno notati dal driver. Il Combo non ha modo di inviare automaticamente quell'avviso al telefono; è sempre il telefono che deve avviare la connessione. Di conseguenza, l'avviso persisterà finché il driver non si connetterà al microinfusore. Gli utenti possono premere il pulsante "Aggiorna" per attivare una connessione e consentire al driver di gestire l'avviso subito (invece di aspettare che AAPS decida autonomamente di avviare una connessione).
 
-**IMPORTANT**: If an error occurs, or a warning shows up that isn't one of those that are automatically dismissed, the driver enters the error state. In that state, the loop **WILL BE BLOCKED** until the pump status is refreshed! It is unblocked after the pump status is updated (either by manual "Refresh" button press or by the driver's eventual auto-update) and no error is shown anymore.
+**IMPORTANTE**: Se si verifica un errore o compare un'avvertenza che non è tra quelle respinte automaticamente, il driver entra nello stato di errore. In quello stato, il loop **SARÀ BLOCCATO** finché lo stato del microinfusore non viene aggiornato! Viene sbloccato dopo che lo stato del microinfusore viene aggiornato (sia premendo manualmente "Aggiorna" sia tramite l'auto-aggiornamento automatico del driver) e nessun errore viene più mostrato.
 
-## Things to be careful about when using the Combo
+## Cose a cui prestare attenzione quando si usa il Combo
 
-* Keep in mind that this is not a product, esp. in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. It is strongly advised NOT to use this system when the person using it is not able to fully understand the system.
-* Due to the way the Combo's remote control functionality works, several operations (especially setting a basal profile) are slow compared to other pumps. This is an unfortunate limitation of the Combo that cannot be overcome.
-* Don't set or cancel a TBR on the pump. The loop assumes control of TBRs and cannot work reliably otherwise, since it's not possible to determine the start time of a TBR that was set by the user on the pump.
-* Don't press any buttons on the pump while AAPS communicates with the pump (the Bluetooth logo is shown on the pump while it is connected to AAPS). Doing that will interrupt the Bluetooth connection. Only do that if there are problems with establishing a connection (see [the "Before you begin" section above](#combov2-before-you-begin)).
-* Don't press any buttons while the pump is bolusing. In particular, don't try to dismiss alerts by pressing buttons. See [the section about alerts](#combov2-alerts) for a more detailed explanation why.
+* Tieni presente che questo non è un prodotto, specialmente all'inizio l'utente deve monitorare e comprendere il sistema, le sue limitazioni e come può fallire. È fortemente consigliato NON utilizzare questo sistema quando la persona che lo usa non è in grado di comprenderlo completamente.
+* A causa del modo in cui funziona la funzionalità di telecomando del Combo, alcune operazioni (in particolare l'impostazione di un profilo basale) sono lente rispetto ad altri microinfusori. Questa è una limitazione del Combo che non può essere superata.
+* Non impostare o annullare una TBR sul microinfusore. Il loop assume il controllo delle TBR e non può funzionare in modo affidabile altrimenti, poiché non è possibile determinare l'ora di inizio di una TBR impostata dall'utente sul microinfusore.
+* Non premere nessun pulsante sul microinfusore mentre AAPS comunica con il microinfusore (il logo Bluetooth viene mostrato sul microinfusore mentre è connesso ad AAPS). In questo modo si interromperebbe la connessione Bluetooth. Farlo solo se ci sono problemi nello stabilire una connessione (vedere [la sezione "Prima di iniziare" sopra](#combov2-before-you-begin)).
+* Non premere nessun pulsante mentre il microinfusore sta erogando un bolo. In particolare, non cercare di respingere gli avvisi premendo i pulsanti. Vedere [la sezione sugli avvisi](#combov2-alerts) per una spiegazione più dettagliata.
 
-## Checklist for when no connection can be established with the Combo
+## Lista di controllo per quando non è possibile stabilire una connessione con il Combo
 
-The driver does its best to connect to the Combo, and uses a couple of tricks to maximize reliability. Still, sometimes, connections aren't established. Here are some steps to take for trying to remedy this situation.
+Il driver fa del suo meglio per connettersi al Combo e usa alcuni trucchi per massimizzare l'affidabilità. A volte però le connessioni non vengono stabilite. Ecco alcuni passaggi da seguire per cercare di rimediare a questa situazione.
 
-1. Press a button on the Combo. Sometimes, the Combo's Bluetooth stack becomes non-responsive, and does not accept connections anymore. By pressing a button on the Combo and making the LCD show something, the Bluetooth stack is reset. Most of the time, this is the only step that's needed to fix the connection issues.
-2. Restart the phone. This may be needed if there is an issue with the phone's Bluetooth stack itself.
-3. If the Combo's battery cap is old, consider replacing it. Old battery caps can cause issues with the Combo's power supply, which affect Bluetooth.
-4. If connection attempts still keep failing, consider unpairing and then re-pairing the pump.
+1. Premere un pulsante sul Combo. A volte, lo stack Bluetooth del Combo diventa non responsivo e non accetta più connessioni. Premendo un pulsante sul Combo e facendo mostrare qualcosa all'LCD, lo stack Bluetooth viene ripristinato. La maggior parte delle volte, questo è l'unico passaggio necessario per risolvere i problemi di connessione.
+2. Riavviare il telefono. Potrebbe essere necessario se c'è un problema con lo stack Bluetooth del telefono stesso.
+3. Se il cappuccio della batteria del Combo è vecchio, considerare di sostituirlo. I cappucci vecchi possono causare problemi con l'alimentazione del Combo, che influiscono sul Bluetooth.
+4. Se i tentativi di connessione continuano a fallire, considerare di disassociare e poi riassociare il microinfusore.
