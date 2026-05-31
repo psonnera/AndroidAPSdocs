@@ -1,347 +1,341 @@
 # Automation
 
-## What is an Automation?
+## Cos'è un'Automazione?
 
-"**Automation**" is a feature which can automate task for AAPS.
+L'"**Automazione**" è una funzionalità che consente di automatizzare le attività in AAPS.
 
-Automations performs specific actions based on one or more conditions or triggers. Triggers can include irregular events like low or high blood glucose (BG) levels, or a set amount of negative insulin on board (IOB). Automations can also handle recurring events, such as meals or exercise at certain times of day, or when the user is within a specific distance of a GPS location or a WIFI SSID area. Automation can execute AAPS settings backups based on a schedule or on every Pod change.
+Le Automazioni eseguono azioni specifiche in base a una o più condizioni o trigger. I trigger possono includere eventi irregolari come livelli di glicemia bassi o alti, o una quantità impostata di insulina attiva negativa (IOB). Le Automazioni possono gestire anche eventi ricorrenti, come i pasti o l'esercizio fisico a determinate ore del giorno, o quando l'utente si trova a una distanza specifica da una posizione GPS o da un'area WiFi SSID. L'Automazione può eseguire backup delle impostazioni di AAPS in base a una pianificazione o ad ogni cambio di Pod.
 
-Automations rules are created and modified from the Automations tab. Each rule is defined by two properties:
+Le regole di Automazione vengono create e modificate dalla scheda Automazioni. Ogni regola è definita da due proprietà:
 
-- One or more conditions or 'triggers' that start an action.
+- Una o più condizioni o "trigger" che avviano un'azione.
 
-    Think of a certain time schedule, an event or properties value in AAPS
+    Ad esempio una determinata pianificazione temporale, un evento o il valore di una proprietà in AAPS.
 
-- One or more actions to perform.
+- Una o più azioni da eseguire.
 
-    Such as an alarm or settings a profile percentage or exporting the AAPS settings on Pod change.
+    Come un allarme, l'impostazione di una percentuale del profilo o l'esportazione delle impostazioni di AAPS ad ogni cambio di Pod.
 
 
-There are a wide range of Automation options, and users are encouraged to study these within the AAPS app, in the Automation section.
-You can also search the AAPS user groups on [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) and [**Discord**](https://discord.gg/4fQUWHZ4Mw) for Automation examples from other users. 
+Esiste un'ampia gamma di opzioni di Automazione; gli utenti sono incoraggiati a studiarle nell'app AAPS, nella sezione Automazione. Puoi anche cercare nei gruppi utenti AAPS su ![**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) e ![**Discord**](https://discord.gg/4fQUWHZ4Mw) esempi di Automazione di altri utenti.
 
-## How Automation can help
+## Come può aiutare l'Automazione
 
-1. **Automate reoccurring tasks:** Automatically executing programmed actions without user interaction.
+1. **Automatizzare le attività ricorrenti:** Eseguire automaticamente azioni programmate senza interazione dell'utente.
 
-1. **Decreasing decision fatigue:** The primary benefit of **Automations** is to relieve the user from the burden of having to make manual interventions in **AAPS**. [Research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) estimates that an average of 180 additional daily decisions have to be made by those living with Type 1 diabetes. **Automations** can lessen the mental load, freeing up the user’s mental energy for other aspects of life.
+1. **Ridurre l'affaticamento decisionale:** Il principale vantaggio delle **Automazioni** è sollevare l'utente dall'onere di dover effettuare interventi manuali in **AAPS**. Una [ricerca](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) stima che chi vive con il diabete di tipo 1 deve prendere in media 180 decisioni aggiuntive al giorno. Le **Automazioni** possono alleggerire il carico mentale, liberando l'energia mentale dell'utente per altri aspetti della vita.
 
-1. **Potentially improving glycemic control:** for example, **Automations** can help ensure **Temp Targets** are always set when needed, even during busy schedules or periods of forgetfulness. For example, if a child with diabetes has sports scheduled at school on Tuesdays at 10am and Thursdays at 2pm and requires a high Temp Target ('TT') actioned 30 minutes before the sports activity, the **Temp Target** can be enabled by way of an **Automation**. 
+1. **Migliorare potenzialmente il controllo glicemico:** ad esempio, le **Automazioni** possono contribuire a garantire che i **Target Temporanei** vengano sempre impostati quando necessario, anche durante le giornate frenetiche o i periodi di dimenticanza. Ad esempio, se un bambino con diabete ha lo sport a scuola ogni martedì alle 10:00 e giovedì alle 14:00 e necessita di un Target Temporaneo alto ("TT") attivato 30 minuti prima dell'attività sportiva, il **Target Temporaneo** può essere abilitato tramite un'**Automazione**.
 
-1. **Enabling AAPS to be highly customised** to be more or less aggressive in specific situations, according to a user's preference. For example, triggering a temporary reduced **Profile** % for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing **Profile** may be too strong. 
+1. **Consentire ad AAPS di essere altamente personalizzato** per essere più o meno aggressivo in situazioni specifiche, in base alle preferenze dell'utente. Ad esempio, attivare un **Profilo** % temporaneamente ridotto per un periodo di tempo impostato se si sviluppa un **IOB** negativo nel mezzo della notte, indicando che il **Profilo** esistente potrebbe essere troppo forte.
 
-The example below illustrates how an **Automation** can enable steps to be eliminated.
+L'esempio seguente illustra come un'**Automazione** può eliminare alcuni passaggi manuali.
 
-User exercises every morning at 6 am: he needs to remember to manually set a "Temp Target-Activity" in AAPS at 5am, before exercising.
+L'utente si esercita ogni mattina alle 6:00: deve ricordare di impostare manualmente un "Target Temporaneo-Attività" in AAPS alle 5:00, prima di esercitarsi.
 
 ![Alt text](../images/automation_2024-02-12_20-54-50.png)
 
-The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
+L'utente ha impostato un'**Automazione** per attivare un "Target Temporaneo-Attività" alle 5:00, per garantire che la **glicemia** e l'**IOB** siano ottimali in preparazione all'esercizio delle 6:00:
 
 ![Alt text](../images/automation_2024-02-12_20-54-49.png)
 
-## Key considerations before starting with Automations
+## Considerazioni chiave prima di iniziare con le Automazioni
 
-1. Before setting up certain Automations, you should have reasonable **BG** control with **AAPS**. Automations should not be used to compensate for sub-optimal basal, **ISF** or **CR** settings (discussed further below). Avoid setting an automated **Profile switch** to compensate for **BG** rises due to _e.g._ food, these are better dealt with via other strategies (SMBs etc). 
+1. Prima di impostare determinate Automazioni, dovresti avere un ragionevole controllo della **glicemia** con **AAPS**. Le Automazioni non devono essere usate per compensare impostazioni non ottimali di basale, **ISF** o **I:C** (discusse più avanti). Evitare di impostare un **Cambio Profilo** automatico per compensare gli aumenti di **glicemia** dovuti _es._ al cibo; questi sono gestiti meglio tramite altre strategie (SMB, ecc.).
 
-1. As with any technology, **CGMs**, **Pumps** and phones can malfunction: Technical issues or sensor errors can disrupt the **Automation** actions, and manual intervention may be needed. 
+1. Come con qualsiasi tecnologia, i **CGM**, i **Microinfusori** e i telefoni possono malfunzionare: i problemi tecnici o gli errori del sensore possono interrompere le azioni dell'**Automazione** e potrebbe essere necessario un intervento manuale.
 
-1. **Requirements for **Automations** are likely to change as routines change**. When changing between work/school/holiday periods, set a reminder in your calendar to review which **Automations** are currently active (they are easy to activate and de-activate). For example, if you go on holiday, and no longer need a Automation set up for school sports or daily exercise, or need to adjust the timings.
+1. **I requisiti per le **Automazioni** cambieranno probabilmente al cambiare delle routine**. Quando si cambia tra periodi di lavoro/scuola/vacanza, impostare un promemoria nel calendario per verificare quali **Automazioni** sono attualmente attive (è facile attivarle e disattivarle). Ad esempio, se si va in vacanza e non si ha più bisogno di un'Automazione impostata per lo sport scolastico o l'esercizio quotidiano, o se è necessario regolare i tempi.
 
-1. **Automations** may conflict with each other, and it is good to review any new **Automation(s)** setting carefully in a safe environment, and understand why an **Automation** may or may not have triggered in the way you expect. 
+1. Le **Automazioni** possono conflittare tra loro, ed è opportuno esaminare attentamente qualsiasi nuova impostazione di **Automazione** in un ambiente sicuro, e capire perché un'**Automazione** potrebbe o non potrebbe essersi attivata nel modo previsto.
 
-1. If using Autosens, try to use **Temp Targets** instead of **Profile Switches**. **Temp Targets** do not reset Autosens back to 0. **Profile Switches** reset Autosens. 
+1. Se si utilizza Autosens, cercare di usare i **Target Temporanei** invece dei **Cambi Profilo**. I **Target Temporanei** non azzerano Autosens a 0. I **Cambi Profilo** azzerano Autosens.
 
-1. Most **Automations** should only be set for a **limited time duration**, after which **AAPS** can re-evaluate and repeat the **Automation**, if necessary, and if the condition is still met. For example, "start temp target of 7.0 mmol/l for 30 min" or "start **Profile** 110% for 10 min" _and_ "start temp target of 5.0 mmol/l for 10 min". Using **Automations** to create permanent changes (e.g. to stronger %profile) risks hypoglycemia.  
+1. La maggior parte delle **Automazioni** dovrebbe essere impostata solo per una **durata di tempo limitata**, dopo di che **AAPS** può rivalutare e ripetere l'**Automazione**, se necessario, e se la condizione è ancora soddisfatta. Ad esempio, "avvia target temporaneo di 7,0 mmol/l per 30 min" o "avvia **Profilo** 110% per 10 min" _e_ "avvia target temporaneo di 5,0 mmol/l per 10 min". Usare le **Automazioni** per creare cambiamenti permanenti (es. profilo % più forte) rischia di causare ipoglicemia.
 
-## When can I start using Automation?
+## Quando posso iniziare a usare l'Automazione?
 
-**Automations** can be started in **objective 10**. 
+Le **Automazioni** possono essere avviate nell'**obiettivo 10**.
 
-## Where are Automations located in AAPS?
+## Dove si trovano le Automazioni in AAPS?
 
-Depending on your [Config builder > General](../SettingUpAaps/ConfigBuilder.md) settings, **Automation** is located either in the ‘hamburger’ menu or as a tab with **AAPS**.
+A seconda delle impostazioni di [Config Builder > Generale](../SettingUpAaps/ConfigBuilder.md), l'**Automazione** si trova nel menu "hamburger" o come scheda in **AAPS**.
 
-## How can I set up an Automation?
+## Come posso impostare un'Automazione?
 
-To set up an **Automation** create a ‘rule’ with **AAPS** as follows:
+Per impostare un'**Automazione** creare una "regola" in **AAPS** come segue:
 
 ![Automation create](../images/automation_create.png)
 
-* give your ‘rule’ a title;
-* select at least one ‘Condition’;
+* assegnare un titolo alla "regola";
+* selezionare almeno una "Condizione";
 
 ![Automation condition](../images/automation_condition.png)
 
-* select one ‘Action’;
+* selezionare un'"Azione";
 
 ![Automation action](../images/automation_action.png)
 
-* check the right box to the **Automation** event is ‘ticked’ to activate the **Automation**:
+* spuntare la casella a destra dell'evento **Automazione** per "attivare" l'**Automazione**:
 
 ![Automation](../images/automation_2024-10-26_17-48-05.png)
 
 
 
-To deactivate an **Automation** rule, untick the box left of the name of the **Automation**. The example below shows an **Automation** entitled ‘Low Glucose TT’ as either activated (‘ticked') or deactivated (‘unticked’).
+Per disattivare una regola **Automazione**, deselezionare la casella a sinistra del nome dell'**Automazione**. L'esempio seguente mostra un'**Automazione** intitolata "Target Temporaneo Glicemia Bassa" come attivata ("spuntata") o disattivata ("non spuntata").
 
 ![Alt text](../images/automation_2024-02-12_20-56-08.png)
 
 
-When setting up an **Automation**, you can first test it by activating the ‘notification’ option under "Actions". This triggers **AAPS** to first display a notification rather than actually automating an action. When you are comfortable that the notification has been triggered at the correct time/conditions, the **Automation** rule can be updated to replace the ‘Notification’ with an ‘Action’.
+Quando si imposta un'**Automazione**, è possibile testarla prima attivando l'opzione "notifica" sotto "Azioni". Questo fa sì che **AAPS** mostri prima una notifica invece di automatizzare effettivamente un'azione. Quando si è certi che la notifica sia stata attivata al momento/nelle condizioni corrette, la regola **Automazione** può essere aggiornata per sostituire la "Notifica" con un'"Azione".
 
 ![Alt text](../images/automation_2024-02-12_20-55-05.png)
 
 ```{admonition} Important note
 :class: note
 
-**Automations** are still active when the Loop is disabled!
+Le **Automazioni** sono ancora attive quando il Loop è disabilitato!
 ```
 
 
-## Safety limits
+## Limiti di sicurezza
 
-There are safety limits set for **Automations**:
+Sono impostati limiti di sicurezza per le **Automazioni**:
 
-* The **glucose** value has to be between 72 and 270 mg/dl (or 4 and 15 mmol/l).
-* The **Profile Percentage** has to be between 70% and 130%.
-* There is a 5 minute time limit between executions of  **Automation** (and first execution).
+* Il valore di **glicemia** deve essere compreso tra 72 e 270 mg/dl (o 4 e 15 mmol/l).
+* La **Percentuale del Profilo** deve essere compresa tra il 70% e il 130%.
+* C'è un limite di 5 minuti tra le esecuzioni dell'**Automazione** (e la prima esecuzione).
 
-## Correct use of negative values
+## Uso corretto dei valori negativi
 
 ```{admonition} Warning
 :class: warning
 
-Please be careful when selecting a negative value in **Automation**
+Prestare attenzione quando si seleziona un valore negativo nell'**Automazione**
 ```
 
-Caution must be taken when selecting a ‘negative value’ within the ‘Condition’ like "less than" in **Automations**. For example:
+È necessaria cautela quando si seleziona un "valore negativo" nella "Condizione" come "minore di" nelle **Automazioni**. Ad esempio:
 
 ![Alt text](../images/automation_2024-02-12_20-56-25.png-500x.png)
 
-**Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/l" (or "-2mg/dl") will:
+**Esempio 1:** Creare una Condizione **"è minore di"** "-0,1 mmol/l" (o "-2 mg/dl") attiverà:
 
-Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. Remember that -0.1 (-2) itself **is not** included in this condition. (The condition "is equal or lesser than -0.1mmol/l (-2 mg/dl)" _would_ include -0.1 mmol/l or -2 mg/dl). 
+Un'**Automazione** per qualsiasi numero **strettamente minore di** -0,1 (-2). Questo include numeri come -0,2, -0,3, -0,4 (-4, -6, -8) e così via. Ricordare che -0,1 (-2) stesso **non** è incluso in questa condizione. (La condizione "è uguale o minore di -0,1 mmol/l (-2 mg/dl)" _includerebbe_ -0,1 mmol/l o -2 mg/dl).
 
-**Example 2:** Creating a Condition "is greater than" -0.1mmol/l (-2mg/dl) will:
+**Esempio 2:** Creare una Condizione "è maggiore di" -0,1 mmol/l (-2 mg/dl) attiverà:
 
-Trigger an **Automation** for any number which is **greater than** -0.1mmol/l (-2mg/dl). This includes numbers like 0, 0.2, 0.4mmol/l, (0, 4, 8mg/dl) and any other positive number.
+Un'**Automazione** per qualsiasi numero **maggiore di** -0,1 mmol/l (-2 mg/dl). Questo include numeri come 0, 0,2, 0,4 mmol/l, (0, 4, 8 mg/dl) e qualsiasi altro numero positivo.
 
-It is important to carefully consider the exact intention of your **Automation** when choosing these conditions and values.  
+È importante considerare attentamente l'intenzione precisa dell'**Automazione** quando si scelgono queste condizioni e valori.
 
 (automations-automation-triggers)=
 ## Automation Triggers
 
 ![Automation Triggers](../images/automation_triggers.png)
 
-There are various ‘Triggers’ that can be selected by the user. Triggers are the conditions that must be met in order for the automation to execute. The list below is non-exhaustive:
+Ci sono vari "Trigger" che possono essere selezionati dall'utente. I trigger sono le condizioni che devono essere soddisfatte affinché l'automazione venga eseguita. L'elenco seguente non è esaustivo:
 
-**Trigger:** connect conditions
+**Trigger:** connessione di condizioni
 
-**Options:** 
+**Opzioni:**
 
-Several conditions can be linked with
-* “And”
-* “Or”
-* “Exclusive or” (which means that if one - and only one of the - conditions applies, the action(s) will happen)
+È possibile collegare più condizioni con
+* "E"
+* "O"
+* "O esclusivo" (che significa che se una - e solo una delle - condizioni si applica, verrà eseguita/i l'azione/i)
 
-**Trigger:** time vs. recurring time
+**Trigger:** ora vs.
 
-**Options:** 
+**Opzioni:**
 
-* time = single time event
-* recurring time = something that happens regularly (i.e. once a week, every working day etc.)
+* ora = evento una tantum
+* ora ricorrente = qualcosa che accade regolarmente (es. una volta alla settimana, ogni giorno feriale, ecc.)
 
-**Trigger:** location
+**Trigger:** posizione
 
-**Options:**
+**Opzioni:**
 
-* in the **config builder** (Automation), the user can select their required location service.
+* nel **config builder** (Automazione), l'utente può selezionare il servizio di posizione richiesto.
 
-**Trigger:** location service
+**Trigger:** servizio di posizione
 
-**Options:**
+**Opzioni:**
 
-* Use passive location: **AAPS** only takes locations when other apps are requesting it.
-* Use network location: Location of your Wi-Fi.
-* Use GPS location (Attention! This can cause excessive battery drain!)
+* Usa posizione passiva: **AAPS** acquisisce la posizione solo quando altre app la richiedono.
+* Usa posizione di rete: Posizione del WiFi.
+* Usa posizione GPS (Attenzione! Può causare un eccessivo consumo della batteria!)
 
-**Triggers** : pump and sensor data
+**Trigger:** dati del microinfusore e del sensore
 
-* Cannula age trigger: Available for all pumps
-* Insulin age trigger: Available for supported pumps
-* Battery age trigger: Available for supported pumps
-* Sensor age trigger: always available
-* Pod Activation trigger: Available for patch pumps
+* Trigger età cannula: Disponibile per tutti i microinfusori
+* Trigger età insulina: Disponibile per i microinfusori supportati
+* Trigger età batteria: Disponibile per i microinfusori supportati
+* Trigger età sensore: sempre disponibile
+* Trigger attivazione Pod: Disponibile per i microinfusori patch
 
-Note that for all age related triggers the equal comparison is unlikely to trigger, so in that case two triggers are required to create a range
+Si noti che per tutti i trigger relativi all'età, il confronto di uguaglianza difficilmente si attiva; in quel caso sono necessari due trigger per creare un intervallo.
 
-* Reservoir level trigger: Available for all pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
-* Pump battery level trigger: Available for supported pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
+* Trigger livello serbatoio: Disponibile per tutti i microinfusori, il confronto "NON_DISPONIBILE" non funziona per questo trigger poiché il valore è sempre compilato in **AAPS**
+* Trigger livello batteria microinfusore: Disponibile per i microinfusori supportati, il confronto "NON_DISPONIBILE" non funziona per questo trigger poiché il valore è sempre compilato in **AAPS**
 
 (automations-automation-action)=
-## Action
+## Azione
 
 ![Automation Actions](../images/automation_actions.png)
 
-**Actions:** start **Temp Target**
+**Azioni:** avvia **Target Temporaneo**
 
-**Options:** 
+**Opzioni:**
 
-* **BG** must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
-* **TT** works only if there is no previous Temp Target
+* La **glicemia** deve essere compresa tra 72 mg/dl e 270 mg/dl (4 mmol/l e 15 mmol/l)
+* Il **TT** funziona solo se non c'è un Target Temporaneo precedente
 
-**Actions:** stop **Temp Target**
+**Azioni:** interrompi **Target Temporaneo**
 
-**Options:**
+**Opzioni:**
 
-none
+nessuna
 
-**Actions:** **Profile Percentage**
+**Azioni:** **Percentuale Profilo**
 
-**Options:**
+**Opzioni:**
 
-* **Profile** must be between 70% and 130%
-* works only if the previous Percentage is 100%
+* Il **Profilo** deve essere compreso tra il 70% e il 130%
+* funziona solo se la Percentuale precedente è 100%
 
-Once the ‘Action’ is added,  the default values must be changed to the desired number by clicking and adjusting the default values.
+Una volta aggiunta l'"Azione", i valori predefiniti devono essere modificati con il numero desiderato facendo clic e regolando i valori predefiniti.
 
 ![Alt text](../images/automation_2024-02-12_20-57-07.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
-## The order of the **Automations** in the list matters 
- **AAPS** will automate the rules created in the order of preference, starting from the top of the **Automation** list. For example, if the ‘Low’  **Automation** is the most important **Automation**, above all other rules, then this  **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
+## L'ordine delle **Automazioni** nell'elenco è importante
+ **AAPS** automatizzerà le regole create nell'ordine di preferenza, a partire dall'inizio dell'elenco **Automazioni**. Ad esempio, se l'**Automazione** "Bassa" è l'**Automazione** più importante, al di sopra di tutte le altre regole, questa **Automazione** dovrebbe apparire in cima all'elenco **Automazioni** dell'utente come mostrato di seguito:
 
 
 ![Alt text](../images/automation_2024-02-12_20-57-48.png-500x.png)
 
-To reprioritize the **Automation** rules, click and hold the four-lines-button on the right side of the screen. Reorder the  **Automations** by moving the rules up or down.
+Per riordinare le regole di **Automazione**, fare clic e tenere premuto il pulsante con quattro linee sul lato destro dello schermo. Riordinare le **Automazioni** spostando le regole su o giù.
 
 ![Alt text](../images/automation_2024-02-12_20-58-00.png-500x.png)
 
-## How to delete Automation rules
+## Come eliminare le regole di Automazione
 
-To delete an **Automation** rule click on the trash icon.
+Per eliminare una regola **Automazione** fare clic sull'icona del cestino.
 
 ![Alt text](../images/automation_2024-02-12_20-58-26.png-500x.png)
 
-## Examples of Automations
+## Esempi di Automazioni
 
-Below are examples of **Automations**. Further discussion on **Automations** and how users have individualised their  **Automation** can be found in Facebook discussions groups or on Discord. The examples below should not be replicated without the user having a good understanding of how the **Automation** will work.
+Di seguito sono riportati esempi di **Automazioni**. Ulteriori discussioni sulle **Automazioni** e su come gli utenti le hanno personalizzate si trovano nei gruppi di discussione Facebook o su Discord. Gli esempi seguenti non devono essere replicati senza che l'utente abbia una buona comprensione di come funzionerà l'**Automazione**.
 
-### Low Glucose Temp Target
+### Target Temporaneo Glicemia Bassa
 
-This **Automation**  triggers an automatic ‘Temp Target Hypo’ when low **BG** is at a certain threshold. 
+Questa **Automazione** attiva automaticamente un "Target Temporaneo Ipo" quando la **glicemia** è bassa a una certa soglia.
 
 ![Alt text](../images/automation_2024-02-12_21-04-01.png-500x.png)
 
-### Lunch Time Temp Target (with ‘Location’)
+### Target Temporaneo ora di pranzo (con "Posizione")
 
 ![Alt text](../images/automation_2024-02-12_21-04-25.png-500x.png)
 
-This **Automation** has been created for a user who eats their lunch at work around the same time every weekday but triggered only if the user is situated within a set ‘location’.  So if the user is not at work one day, this **Automation** will be activated.
+Questa **Automazione** è stata creata per un utente che mangia il pranzo al lavoro all'incirca alla stessa ora ogni giorno feriale, ma si attiva solo se l'utente si trova in una "posizione" impostata.  Quindi se l'utente non è al lavoro un giorno, questa **Automazione** verrà attivata.
 
-This **Automation** will set a low **Temp Target** (Eating Soon) at 13:00 to drive ‘BG, to 90mg (or 5 mmol/l) in preparation for lunch. 
+Questa **Automazione** imposta un basso **Target Temporaneo** (Presto pasto) alle 13:00 per portare la "glicemia" a 90 mg (o 5 mmol/l) in preparazione al pranzo.
 
-The ‘Trigger’ location is set by inputting the latitude and longitude GPS coordinates as below:
+La "posizione" del Trigger viene impostata inserendo le coordinate GPS di latitudine e longitudine come segue:
 
 ![Alt text](../images/automation_2024-02-12_21-04-40.png-500x.png)
 
-Because of the ‘And’ connection, the **Automation** only happens during the ‘chosen time’ and if the user is at the selected location. 
+A causa della connessione "E", l'**Automazione** avviene solo durante l'"ora scelta" e se l'utente si trova nella posizione selezionata.
 
-The **Automation** will not be triggered on any other time at this location or on this time outside of 50 meters set GPS coordinates.
+L'**Automazione** non verrà attivata in nessun altro momento in questa posizione o in questo momento al di fuori delle coordinate GPS impostate a 50 metri.
 
-### WIFI SSID Location Automation
+### Automazione Posizione WiFi SSID
 
-Using WIFI SSID is a good option to trigger an **Automation** while within range of a specific wifi network (than compared with GPS), it is fairly precise, uses less battery and works in enclosed spaces where GPS and other location services might not be available.   
+Utilizzare il WiFi SSID è una buona opzione per attivare un'**Automazione** mentre ci si trova nel raggio di una rete WiFi specifica (rispetto al GPS), è abbastanza preciso, usa meno batteria e funziona in spazi chiusi dove il GPS e altri servizi di posizione potrebbero non essere disponibili.
 
-Here is another example of setting up a **Temp Target** for work days only before breakfast(1). 
-
-
-The **Automation** will trigger at 05:30am only on Monday-Friday(2)  
-and while being connected to a home wifi network (3).
+Ecco un altro esempio di impostazione di un **Target Temporaneo** solo per i giorni lavorativi prima della colazione (1).
 
 
-It will then set a **Temp Target**  of 75mg/dl for 30 minutes (4). 
-One of the advantages of including the location is that it will not trigger if the user is travelling on vacation for instance. 
+L'**Automazione** si attiverà alle 05:30 solo dal lunedì al venerdì (2)  
+e mentre si è connessi a una rete WiFi di casa (3).
+
+
+Imposterà quindi un **Target Temporaneo** di 75 mg/dl per 30 minuti (4). Uno dei vantaggi dell'inclusione della posizione è che non si attiverà se l'utente è in viaggio per le vacanze, ad esempio.
 
 ![Alt text](../images/automation_2024-02-12_21-05-02.png-500x.png)
 
-Here is the screenshot detailing the **Automation** triggers:
+Ecco lo screenshot che mostra in dettaglio i trigger dell'**Automazione**:
 
-1) Under the main “AND” (both conditions need to be met to trigger)
-1) Recurring time = M,T,W,T,F At 5:30am  
-1) WIFI SSID = My_Home_WiFi_Name
+1) Nell'"E" principale (entrambe le condizioni devono essere soddisfatte per attivarsi): 1) Ora ricorrente = L,M,M,G,V alle 5:30  
+1) WiFi SSID = My_Home_WiFi_Name
 
 ![Alt text](../images/automation_2024-02-12_21-05-16.png-500x.png)
 
 (automating-preference-settings-export)=
 
-## Automating Preference Settings Export
+## Automazione dell'esportazione delle impostazioni delle Preferenze
 
-### Unattended Exports: scheduled (daily)
+### Esportazioni automatiche: pianificate (giornaliere)
 
-Screenshots detailing the Automation triggers:
+Screenshot con i dettagli dei trigger dell'Automazione:
 
-1) Condition: Recurring time = M,T,W,T,F At 8:00am
-1) Action: Settings Export (For "Text in treatments" enter "Daily")
+1) Condizione: Ora ricorrente = L,M,M,G,V alle 8:00 1) Azione: Esporta impostazioni (Per "Testo nei trattamenti" inserire "Giornaliero")
 
 ![Scheduled exports](../images/Automations/automation_settingsexport_scheduled_400px.png)
 
-Note: Export execution will be logged on Careportal
+Nota: L'esecuzione dell'esportazione verrà registrata nel Careportal.
 
-### Unattended Exports: Pod Activation (patch pump only)
+### Esportazioni automatiche: Attivazione Pod (solo microinfusore patch)
 
-Screenshots detailing the Automation triggers:
+Screenshot con i dettagli dei trigger dell'Automazione:
 
-1) Condition: Pod Activation
-1) Action: Settings Export (For "Text in treatments" enter "Pod Activation: settings export")
+1) Condizione: Attivazione Pod 1) Azione: Esporta impostazioni (Per "Testo nei trattamenti" inserire "Attivazione Pod: esportazione impostazioni")
 
 ![Export on Pod activation](../images/Automations/automation_settingsexport_podactivation_400px.png)
 
-Note: Export execution will be logged on Careportal.
-Note : Automation will not trigger **at all** if you have not done a manual settings export before. See [Preferences > Maintenance](#preferences-maintenance-settings) for proper activation of unattended settings export.
+Nota: L'esecuzione dell'esportazione verrà registrata nel Careportal. Nota: L'Automazione **non** si attiverà affatto se non è stata eseguita un'esportazione manuale delle impostazioni in precedenza. Vedere [Preferenze > Manutenzione](#preferences-maintenance-settings) per la corretta attivazione dell'esportazione automatica delle impostazioni.
 
 
-## Automation Logs
+## Log delle Automazioni
 
-**AAPS** has a log of the most recent **Automation** triggered at the bottom of the screen under the **Automation** tab. 
+**AAPS** ha un registro delle **Automazioni** più recenti attivate nella parte inferiore dello schermo sotto la scheda **Automazioni**.
 
-In the example below the logs indicate:
+Nell'esempio seguente i log indicano:
 
-(1) at 01:58 am, the “Low BG triggers temp hypo profile” is activated 
-* glucose value is less than 75mg/dl;
-* delta is negative (ie: the BG is going down);
-* time is within 01:00 am and 06:00 am.
+(1) alle 01:58, è attivata la "Glicemia bassa attiva profilo ipo temporaneo"
+* il valore glicemico è inferiore a 75 mg/dl;
+* il delta è negativo (cioè la glicemia sta scendendo);
+* l'ora è compresa tra le 01:00 e le 06:00.
 
-The **Automation** will:
-* set a **Temp Target** to 110mg/dl for 40 minutes;
-* start a temporary **Profile** at 50% for 40 minutes.
+L'**Automazione** eseguirà:
+* imposta un **Target Temporaneo** a 110 mg/dl per 40 minuti;
+* avvia un **Profilo** temporaneo al 50% per 40 minuti.
 
-(2) at 03:38 am,  the “High carb after low at night” is triggered
-* time is between 01:05 am and 06:00 am;
-* glucose value is greater than 110mg/dl.
+(2) alle 03:38, si attiva "Carboidrati alti dopo ipoglicemia notturna"
+* l'ora è compresa tra le 01:05 e le 06:00;
+* il valore glicemico è superiore a 110 mg/dl.
 
-The **Automation** will:
-* change **Profile** to LocalProfile1 (ie: cancel the temporary profile if any)
-* stop **Temp Target** (if any)
+L'**Automazione** eseguirà:
+* cambia **Profilo** in LocalProfile1 (cioè annulla il profilo temporaneo se presente)
+* interrompe il **Target Temporaneo** (se presente)
 
 ![Alt text](../images/automation_2024-02-12_21-05-56.png-500x.png)
 
-## Troubleshooting
+## Risoluzione dei problemi
 
-* Problem: __My automations are not being triggered by AAPS?__
+* Problema: __Le mie automazioni non vengono attivate da AAPS?__
 
-Check the box to the right of **Automation** event is ‘ticked’ to ensure the rule is activated.
+Verificare che la casella a destra dell'evento **Automazione** sia "spuntata" per assicurarsi che la regola sia attivata.
 
-## Troubleshooting
+## Risoluzione dei problemi
 
 ![Alt text](../images/automation_2024-02-12_21-06-12.png-500x.png)
 
-* Problem: __My automations are being triggered in the wrong order.__
+* Problema: __Le mie automazioni vengono attivate nell'ordine sbagliato.__
 
-Check your rule prioritisation order as discussed above here.
+Verificare l'ordine di priorità delle regole come discusso sopra.
 
-## Alternatives to Automations
+## Alternative alle Automazioni
 
-For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. 
+Per gli utenti avanzati, esistono altre possibilità per automatizzare le attività utilizzando IFTTT o un'app Android di terze parti chiamata Automate. 
