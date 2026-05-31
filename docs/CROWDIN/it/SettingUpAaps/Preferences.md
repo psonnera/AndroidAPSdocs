@@ -1,18 +1,18 @@
-# Preferences
+# Preferenze
 
-- **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
+- **Apri le preferenze** cliccando il menu a tre punti in alto a destra nella schermata principale.
 
 ![Open preferences](../images/Pref2020_Open2.png)
 
-- You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and clicking Plugin preferences.
+- Puoi passare direttamente alle preferenze per una determinata scheda (es. scheda microinfusore) aprendo quella scheda e cliccando su Preferenze plugin.
 
 ![Open plugin preferences](../images/Pref2020_OpenPlugin2.png)
 
-- **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
+- I **sottomenu** possono essere aperti cliccando sul triangolo sotto il titolo del sottomenu.
 
 ![Open submenu](../images/Pref2020_Submenu2.png)
 
-- With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
+- Con il **filtro** nella parte superiore della schermata delle preferenze puoi accedere rapidamente a determinate preferenze. Inizia semplicemente a digitare parte del testo che stai cercando.
 
 ![Preferences filter](../images/Pref2021_Filter.png)
 
@@ -22,56 +22,55 @@
 ```
 
 (Preferences-general)=
-## General
+## Generale
 
 ![Preferences > General](../images/Pref2020_General.png)
 
-**Units**
+**Unità**
 
-- Set units to mmol/l or mg/dl depending on your preferences.
+- Imposta le unità su mmol/l o mg/dl in base alle tue preferenze.
 
-**Language**
+**Lingua**
 
-- New option to use phone's default language (recommended).
+- Nuova opzione per usare la lingua predefinita del telefono (consigliata).
 
-- In case you want **AAPS** in a different language than your standard phone language, you can choose from a broad variety.
+- Nel caso in cui tu voglia **AAPS** in una lingua diversa dalla lingua standard del tuo telefono, puoi scegliere tra una vasta varietà.
 
-- If you use different languages, you might sometimes see a language mix. This is due to an android issue where overriding the default android language sometimes doesn't work.
-- Setting hidden in [simple mode](#preferences-simple-mode).
+- Se usi lingue diverse, potresti a volte vedere una combinazione di lingue. Ciò è dovuto a un problema Android in cui la sostituzione della lingua Android predefinita a volte non funziona.
+- Impostazione nascosta in [modalità semplice](#preferences-simple-mode).
 
-(preferences-simple-mode)=
-**Simple mode**
+(preferences-simple-mode)= **Modalità semplice**
 
-The **simple mode** is activated by default when you first install **AAPS**. In **simple mode**, a significant amount of settings is hidden and preferences are replaced by predefined values. [Additional graphs](#AapsScreens-section-g-additional-graphs) on the HomePage are also predefined for you. You should switch off Simple mode once you become familiar with **AAPS** user interface and settings.
+La **modalità semplice** è attivata per impostazione predefinita quando installi **AAPS** per la prima volta. In **modalità semplice**, una quantità significativa di impostazioni è nascosta e le preferenze vengono sostituite da valori predefiniti. I [grafici aggiuntivi](#AapsScreens-section-g-additional-graphs) nella schermata principale sono anch'essi predefiniti. Dovresti disattivare la modalità semplice una volta che ti sei familiarizzato con l'interfaccia utente e le impostazioni di **AAPS**.
 
-**Patient name**
+**Nome paziente**
 
-- Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
-- Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
+- Può essere usato se devi differenziare tra più configurazioni (es. due bambini T1D nella tua famiglia).
+- Visualizzato nel [Watchface Dual](../WearOS/WearOsSmartwatch.md).
 
 (Preferences-skin)=
 ### Skin
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Impostazione nascosta in [modalità semplice](#preferences-simple-mode).
 
-You can choose from four types of skins:
+Puoi scegliere tra quattro tipi di aspetto grafico:
 
 ![Select skin](../images/Pref2021_SkinWExample.png)
 
-'Low resolution skin' comes with shorter labels and age/level removed to have more available space on a very low resolution screen.
+L'aspetto 'Low resolution' ha etichette più brevi e rimuove età/livello per avere più spazio disponibile su uno schermo a bassissima risoluzione.
 
-Difference between the other skins depends on the phone's display orientation:
+La differenza tra gli altri aspetti dipende dall'orientamento dello schermo del telefono:
 
-#### Portrait orientation
+#### Orientamento verticale
 
-- **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
-- **Large Display** has an increased height for all graphs compared to other skins
+- **Aspetto originale** e **I pulsanti sono sempre visualizzati in fondo allo schermo** sono identici
+- **Display grande** ha un'altezza aumentata per tutti i grafici rispetto agli altri aspetti
 
-#### Landscape orientation
+#### Orientamento orizzontale
 
-- Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
+- Usando **Aspetto originale** e **Display grande**, devi scorrere verso il basso per vedere i pulsanti in fondo allo schermo
 
-- **Large Display** has an increased height for all graphs compared to other skins
+- **Display grande** ha un'altezza aumentata per tutti i grafici rispetto agli altri aspetti
 
 ![Skins depending on phone's display orientation](../images/Screenshots_Skins.png)
 
@@ -81,61 +80,61 @@ Difference between the other skins depends on the phone's display orientation:
 ![Preferences > General - Protection](../images/Pref2020_General2.png)
 
 (Preferences-master-password)=
-### Master password
+### Password master
 
-Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7.
+Obbligatoria per poter [esportare le impostazioni](../Maintenance/ExportImportSettings.md) poiché sono criptate dalla versione 2.7.
 
-**Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
+**La protezione biometrica potrebbe non funzionare sui telefoni OnePlus. Questo è un problema noto di OnePlus su alcuni telefoni.**
 
 ![Set master password](../images/MasterPW.png)
 
-### Settings protection
+### Protezione delle impostazioni
 
-- Protect your settings with a password or phone's biometric authentication (i.e. [child is using **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). If you enable this feature, you will be prompted for authentication each time you want to access any Preferences related view.
+- Proteggi le tue impostazioni con una password o l'autenticazione biometrica del telefono (es. [il bambino sta usando **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). Se abiliti questa funzionalità, ti verrà richiesta l'autenticazione ogni volta che vuoi accedere a qualsiasi vista relativa alle Preferenze.
 
-- Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md), and use a different one for editing the preferences.
+- La password personalizzata dovrebbe essere usata se vuoi usare la password master solo per proteggere le [impostazioni esportate](../Maintenance/ExportImportSettings.md) e usarne una diversa per modificare le preferenze.
 
-- If you are using a custom password click on line "Settings password" to set password as described [above](#Preferences-master-password).
+- Se usi una password personalizzata, clicca sulla riga "Password impostazioni" per impostare la password come descritto [sopra](#Preferences-master-password).
 
 ![Protection](../images/Pref2020_Protection.png)
 
-### Application protection
+### Protezione dell'applicazione
 
-If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**.
+Se l'app è protetta, devi inserire la password o usare l'autenticazione biometrica del telefono per aprire **AAPS**.
 
-**AAPS** will shut down immediately if a wrong password is entered - but will still run in background if it was previously opened successfully.
+**AAPS** si chiuderà immediatamente se viene inserita una password errata - ma continuerà a girare in background se era stata aperta con successo in precedenza.
 
-### Bolus protection
+### Protezione del bolo
 
-- Bolus protection might be useful if **AAPS** is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
+- La protezione del bolo potrebbe essere utile se **AAPS** è usato da un bambino piccolo e [i boli vengono somministrati via SMS](../RemoteFeatures/SMSCommands.md).
 
-- In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter thr master password.
+- Nell'esempio qui sotto vedi la richiesta di protezione biometrica. Se l'autenticazione biometrica non funziona, clicca nello spazio sopra la richiesta bianca e inserisci la password master.
 
 ![Prompt biometric protection](../images/Pref2020_PW.png)
 
-### Password and PIN retention
+### Conservazione della password e del PIN
 
-Define how long (in seconds), the preferences or bolus functionalities remain unlocked after you successfully enter the password.
+Definisci per quanto tempo (in secondi) le preferenze o le funzionalità di bolo rimangono sbloccate dopo aver inserito correttamente la password.
 
-## Overview
+## Panoramica
 
-In the **Overview** section, you can define the preferences for the home screen.
+Nella sezione **Panoramica**, puoi definire le preferenze per la schermata principale.
 
 ![Preferences > Overview](../images/Pref2020_OverviewII.png)
 
-### Keep screen on
+### Mantieni schermo acceso
 
-Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
+L'opzione 'Mantieni schermo acceso' costringerà Android a mantenere sempre acceso lo schermo. Questo è utile per le presentazioni ecc. Ma consuma molta energia della batteria. But it consumes a lot of battery power. Pertanto, si raccomanda di collegare lo smartphone a un cavo del caricabatterie.
 
 (Preferences-buttons)=
-### Buttons
+### Pulsanti
 
-- Define which buttons are visible on the bottom of your home screen. 
-- Setting hidden in [simple mode](#preferences-simple-mode).
+- Definisci quali pulsanti sono visibili nella parte inferiore della tua schermata principale.
+- Impostazione nascosta in [modalità semplice](#preferences-simple-mode).
 
 ![Preferences > Buttons](../images/Pref2020_OV_Buttons.png)
 
-- The **Increment** options allow you to define the amount for the three buttons in the carb and insulin dialogues, for easy entry.
+- Le opzioni **Incremento** ti permettono di definire la quantità per i tre pulsanti nei dialoghi carboidrati e insulina, per un inserimento facile.
 
 ![Preferences > Buttons > Insulin](../images/Pref2020_OV_Buttons2.png)
 
@@ -144,401 +143,390 @@ Option 'Keep screen on' will force Android to keep the screen on at all times. T
 (Preferences-quick-wizard)=
 ### Quick Wizard
 
-Create customized buttons for certain standard meals or snacks which will be displayed on the home screen. Useful for standard meals frequently eaten. 
+Crea pulsanti personalizzati per determinati pasti standard o snack che verranno visualizzati nella schermata principale. Utile per pasti standard consumati frequentemente.
 
-For each button, you define the carbs and calculation method for the bolus.
-Then, you define during which time period the button will be visible on your home screen - just one button per period. The button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+Per ogni pulsante, definisci i carboidrati e il metodo di calcolo per il bolo. Poi definisci durante quale periodo di tempo il pulsante sarà visibile nella tua schermata principale - solo un pulsante per periodo. Il pulsante non sarà visibile se è al di fuori dell'intervallo di tempo specificato o se hai abbastanza IOB per coprire i carboidrati definiti nel pulsante Calcolatore rapido. Se vengono specificati orari diversi per i diversi pasti, avrai sempre il pulsante del pasto standard appropriato nella schermata principale, a seconda dell'ora del giorno.
 
 ![Preferences > Quick Wizard Button Setup](../images/Pref2020_OV_QuickWizard.png)
 
-If you click the quick wizard button **AAPS** will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
+Se clicchi sul pulsante del calcolatore rapido, **AAPS** calcolerà e proporrà un bolo per quei carboidrati in base ai tuoi rapporti correnti (tenendo conto del valore di glicemia o dell'insulina attiva se configurato).
 
-The proposal has to be confirmed before insulin is delivered.
+La proposta deve essere confermata prima che l'insulina venga erogata.
 
 ![Preferences > Quick Wizard Button](../images/Pref2020_OV_QuickWizard2.png)
 
-Only one QuickWizard button can show up at the same time. If you want to execute a different one : long press on the Quick Wizard button currently showing. It will take you to the list of all Quick Wizard options. To execute one, long press on it. You will have to confirm before execution.
+Solo un pulsante Calcolatore rapido può essere visualizzato alla volta. Se vuoi eseguirne uno diverso: tieni premuto il pulsante Calcolatore rapido attualmente visualizzato. Ti porterà all'elenco di tutte le opzioni del Calcolatore rapido. Per eseguirne uno, tieni premuto su di esso. Dovrai confermare prima dell'esecuzione.
 
 (Preferences-default-temp-targets)=
-### Default temp targets
+### Obiettivi temporanei predefiniti
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Impostazione nascosta in [modalità semplice](#preferences-simple-mode).
 
-[Temporary targets (TT)](../DailyLifeWithAaps/TempTargets.md) allow you to change your blood glucose target for a certain time period. When setting a default TT, you can easily change your target for activity, eating soon etc.
+Gli [Obiettivi Temporanei (TT)](../DailyLifeWithAaps/TempTargets.md) ti permettono di cambiare il tuo target di glicemia per un determinato periodo di tempo. Quando imposti un TT predefinito, puoi facilmente cambiare il tuo target per attività, eating soon ecc.
 
-Here you can change the target and the duration for each predefined TT. Preset values are:
+Qui puoi modificare il target e la durata per ogni TT predefinito. I valori preimpostati sono:
 
-* Eating soon: target 72 mg/dL / 4.0 mmol/l, duration 45 min
-* Activity: target 140 mg/dL / 7.8 mmol/l, duration 90 min
-* Hypo: target 125 mg/dL / 6.9 mmol/l, duration 45 min
+* Eating soon: target 72 mg/dL / 4,0 mmol/l, durata 45 min
+* Attività: target 140 mg/dL / 7,8 mmol/l, durata 90 min
+* Ipo: target 125 mg/dL / 6,9 mmol/l, durata 45 min
 
 ![Preferences > Default temp targets](../images/Pref2020_OV_DefaultTT.png)
 
-Learn how to [activate Temp Targets here](#TempTargets-where-can-i-select-a-temp-target).
+Scopri come [attivare gli Obiettivi Temporanei qui](#TempTargets-where-can-i-select-a-temp-target).
 
-### Fill/Prime standard insulin amounts
+### Quantità standard di insulina per riempimento/preparazione
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Impostazione nascosta in [modalità semplice](#preferences-simple-mode).
 
-If you want to fill the tube or prime cannula through **AAPS** you can do this through the [**Actions** tab](#screens-action-tab).
+Se vuoi riempire il tubo o preparare la cannula tramite **AAPS**, puoi farlo tramite la [scheda **Azioni**](#screens-action-tab).
 
-Pre-set values can be defined in this dialogue. Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
+I valori preimpostati possono essere definiti in questa finestra di dialogo. Scegli le quantità predefinite dei tre pulsanti nella finestra di dialogo riempimento/preparazione, a seconda della lunghezza del tuo catetere.
 
 (Preferences-range-for-visualization)=
-### Range for visualization
+### Intervallo per la visualizzazione
 
-Choose the high and low marks for the BG-graph on **AAPS** overview and smartwatch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
+Scegli i valori alti e bassi per il grafico glicemia nella panoramica di **AAPS** e nello smartwatch. È solo la visualizzazione, non l'intervallo target per la tua glicemia. Esempio: 70 - 180 mg/dl o 3,9 - 10 mmol/l
 
 ![Preferences > Range for visualization](../images/Pref2020_OV_Range2.png)
 
-### Shorten tab titles
+### Abbrevia i titoli delle schede
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Impostazione nascosta in [modalità semplice](#preferences-simple-mode).
 
-Useful to see more tab titles on screen.
+Utile per vedere più titoli di schede sullo schermo.
 
-For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
+Ad esempio, la scheda 'OpenAPS AMA' diventa 'OAPS', 'OBIETTIVI' diventa 'OBJ' ecc.
 
 ![Preferences > Tabs](../images/Pref2020_OV_Tabs.png)
 
 (Preferences-show-notes-field-in-treatments-dialogs)=
-### Show notes field in treatments dialogs
+### Mostra campo note nei dialoghi di trattamento
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Impostazione nascosta in [modalità semplice](#preferences-simple-mode).
 
-Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
+Ti dà la possibilità di aggiungere brevi note di testo ai tuoi trattamenti (calcolatore bolo, carboidrati, insulina...)
 
 ![Preferences > Notes in treatment dialogs](../images/Pref2020_OV_Notes.png)
 
 (Preferences-status-lights)=
-### Status lights
+### Indicatori di stato
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Impostazione nascosta in [modalità semplice](#preferences-simple-mode).
 
-Status lights give a visual warning for:
+Gli indicatori di stato danno un avviso visivo per:
 
-- Sensor age
-- Sensor battery level for certain smart readers (see [screenshots page](#screens-sensor-level-battery) for details).
-- Insulin age (days reservoir is used)
-- Reservoir level (units)
-- Cannula age
-- Pump battery age
-- Pump battery level (%)
+- Età sensore
+- Livello batteria del sensore per certi lettori intelligenti (vedi [pagina schermate](#screens-sensor-level-battery) per i dettagli).
+- Età insulina (giorni di utilizzo del serbatoio)
+- Livello serbatoio (unità)
+- Età cannula
+- Età batteria microinfusore
+- Livello batteria microinfusore (%)
 
-If the warning threshold is exceeded, values will be shown in yellow. If the critical threshold is exceeded, values will be shown in red.
+Se la soglia di avviso viene superata, i valori verranno mostrati in giallo. Se la soglia critica viene superata, i valori verranno mostrati in rosso.
 
-The last option allows you to import those settings from Nightscout if defined there. See [Nightscout documentation](https://nightscout.github.io/nightscout/setup_variables/#age-pills) for more information.
+L'ultima opzione ti permette di importare quelle impostazioni da Nightscout se definite lì. Vedi la [documentazione Nightscout](https://nightscout.github.io/nightscout/setup_variables/#age-pills) per ulteriori informazioni.
 
 ![Preferences > Status Lights](../images/Pref2020_OV_StatusLights2.png)
 
 (Preferences-deliver-this-part-of-bolus-wizard-result)=
 ### Deliver this part of bolus wizard result
 
-Set the [default percentage](#AapsScreens-section-j) of the bolus calculated when using the bolus wizard.
+Imposta la [percentuale predefinita](#AapsScreens-section-j) del bolo calcolato quando si usa il calcolatore bolo.
 
-Default is 100%: no correction. Even when setting a different value here, you can still change each time you use the bolus wizard. If this setting is 75 % and you had to bolus 10U, the bolus wizard will propose a meal bolus of only 7.5 units.
+Il valore predefinito è 100%: nessuna correzione. Anche impostando un valore diverso qui, puoi comunque cambiarlo ogni volta che usi il calcolatore bolo. Se questa impostazione è al 75% e dovevi fare un bolo di 10U, il calcolatore bolo proporrà un bolo pasto di sole 7,5 unità.
 
-When using [SMB](#objectives-objective9), many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (Unattended Meal Detection) do the rest. Using a value lower than 100% here can be useful:
-* for people with slow digestion: sending all the bolus upfront can cause hypo because the insulin action is faster than the digestion.
-* to leave more room to **AAPS** to deal by itself with **BG rise**.
-In both cases, **AAPS** will compensate for the missing part of the bolus with SMBs, if/when deemed adequate.
+Quando si usano gli [SMB](#objectives-objective9), molte persone non somminstrano il 100% dell'insulina necessaria per il pasto, ma solo una parte di essa (es. 75%) e lasciano che gli SMB con UAM (Rilevamento pasti non presidiati) facciano il resto. Usare un valore inferiore al 100% qui può essere utile:
+* per le persone con digestione lenta: inviare tutto il bolo in anticipo può causare ipoglicemia perché l'azione insulinica è più rapida della digestione.
+* per lasciare più spazio ad **AAPS** per gestire da solo l'**aumento della glicemia**. In entrambi i casi, **AAPS** compenserà la parte mancante del bolo con gli SMB, se/quando ritenuto adeguato.
 
-### Old glycemia time threshold
+### Soglia di tempo per glicemia vecchia
 
-If the last **BG** received is older than this threshold, then the bolus wizard will by default offer a 100% dose instead of the **Deliver this part of bolus wizard result** setting above.
-The reason for this is that when **BG** is missing, **AAPS** will not be able to send the remaining part of the bolus afterward (the loop is not running), which would result in high **BG**.
+Se l'ultima **glicemia** ricevuta è più vecchia di questa soglia, il calcolatore bolo offrirà per impostazione predefinita una dose al 100% invece dell'impostazione **Eroga questa parte del risultato del calcolatore bolo** sopra. Il motivo è che quando la **glicemia** manca, **AAPS** non sarà in grado di inviare la parte rimanente del bolo in seguito (il loop non è in esecuzione), il che porterebbe a una **glicemia** alta.
 
-### Enabled bolus advisor
+### Consulente bolo abilitato
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Impostazione nascosta in [modalità semplice](#preferences-simple-mode).
 
 ![Bolus Advisor](../images/BolusAdvisor.png)
 
-When enabled, when you use the bolus wizard as you are in hyperglycemia, you will get a warning, prompting you if you wish to pe-bolus and eat later, when your **BG** gets back in range.
+Quando abilitato, quando usi il calcolatore bolo mentre sei in iperglicemia, riceverai un avviso che ti chiede se vuoi fare un pre-bolo e mangiare più tardi, quando la tua **glicemia** torna nell'intervallo.
 
-### Enabled bolus reminder
+### Promemoria bolo abilitato
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Impostazione nascosta in [modalità semplice](#preferences-simple-mode).
 
 % todo
 
 (Preferences-advanced-settings-overview)=
-### Advanced Settings (Overview)
+### Impostazioni avanzate (Panoramica)
 
 ![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
 
-#### Superbolus
+#### Super bolo
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Impostazione nascosta in [modalità semplice](#preferences-simple-mode).
 
-Option to enable superbolus in bolus wizard. 
+Option to enable superbolus in bolus wizard.
 
-[Superbolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes. It is different from *super micro bolus*!
+Il [Super bolo](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) è un concetto per "prendere in prestito" un po' di insulina dalla basale nelle due ore successive per prevenire picchi. È diverso dal *super micro bolus*!
 
-Use with caution and do not enable it until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB **AAPS** looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Usare con cautela e non abilitarlo fino a quando non si capisce cosa fa veramente. In sostanza, la basale per le successive due ore viene aggiunta al bolo e viene attivato uno zero-temp di due ore. **Le funzioni di loop di AAPS saranno disabilitate - usare con cautela! Se usi SMB, le funzioni di loop di **AAPS** saranno disabilitate in base alle tue impostazioni in ["Minuti massimi di basale per limitare SMB a"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to); se non usi SMB, le funzioni di loop saranno disabilitate per due ore.** I dettagli sul super bolo si trovano [qui](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
-## Treatment safety
+## Sicurezza dei trattamenti
 
 (preferences-patient-type)=
-### Patient type
+### Tipo di paziente
 
-- Safety limits are set based on the age you select in this setting.
-- If you start hitting these hard limits (like max bolus) it's time to move one step up.
-- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal dot, for example).
-- If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../DailyLifeWithAaps/KeyAapsFeatures.md).
+- I limiti di sicurezza vengono impostati in base all'età che selezioni in questa impostazione.
+- Se inizi a raggiungere questi limiti fissi (come il bolo massimo), è il momento di fare un passo avanti.
+- È una cattiva idea selezionare un'età superiore a quella reale perché può portare a sovradosaggio inserendo il valore sbagliato nella finestra di dialogo dell'insulina (saltando il punto decimale, per esempio).
+- Se vuoi conoscere i numeri effettivi per questi limiti di sicurezza codificati, scorri fino alla funzionalità dell'algoritmo che stai usando in [questa pagina](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
-### Max allowed bolus
+### Bolo massimo consentito
 
-- Defines the maximum amount of bolus insulin, in insulin units, that **AAPS** is allowed to deliver at once.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose.
-- This restriction is also applied to the results of the bolus calculator.
+- Definisce la quantità massima di insulina in bolo, in unità di insulina, che **AAPS** è autorizzato a erogare in una volta sola.
+- Questa impostazione esiste come limite di sicurezza per prevenire l'erogazione di un bolo massiccio a causa di un inserimento accidentale o di un errore dell'utente.
+- Si raccomanda di impostarlo su una quantità ragionevole che corrisponda approssimativamente alla quantità massima di insulina in bolo di cui potresti aver bisogno per un pasto o una dose di correzione.
+- Questa restrizione si applica anche ai risultati del calcolatore bolo.
 
-### Max allowed carbs
+### Carboidrati massimi consentiti
 
-- Defines the maximum amount of carbs, in grams, that **AAPS** bolus calculator is allowed to dose for.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+- Definisce la quantità massima di carboidrati, in grammi, per cui il calcolatore bolo di **AAPS** è autorizzato a dosare.
+- Questa impostazione esiste come limite di sicurezza per prevenire l'erogazione di un bolo massiccio a causa di un inserimento accidentale o di un errore dell'utente.
+- Si raccomanda di impostarlo su una quantità ragionevole che corrisponda approssimativamente alla quantità massima di carboidrati di cui potresti aver bisogno per un pasto.
 
 ## Loop
 
-As of [AAPS version 3.4](#version3400), it is no longer possible to set the loop mode here. See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) to change loop mode now.
+A partire dalla [versione AAPS 3.4](#version3400), non è più possibile impostare la modalità loop qui. Vedi [Schermate AAPS > La schermata principale > Stato loop](#AapsScreens-loop-status) per cambiare la modalità loop ora.
 
 (Preferences-minimal-request-change)=
-### Minimal request change
+### Modifica minima richiesta
 
-When using **Open loop**, you will receive notifications every time **AAPS** recommends adjusting the basal rate.
-To reduce the number of notifications you can either use a [wider bg target range](#profile-glucose-targets) or increase the percentage of the minimal request rate. 
-This defines the relative change required to trigger a notification.
+Quando si usa il **Loop Aperto**, riceverai notifiche ogni volta che **AAPS** raccomanda di aggiustare il tasso basale. Per ridurre il numero di notifiche puoi usare un [intervallo target glicemia più ampio](#profile-glucose-targets) o aumentare la percentuale della modifica minima richiesta. Questo definisce la modifica relativa necessaria per attivare una notifica.
 
-## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
+## Advanced Meal Assist (AMA) o Super Micro Bolus (SMB)
 
-Depending on your settings in [Config builder > APS](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
+A seconda delle impostazioni in [Generatore di configurazione > APS](../SettingUpAaps/ConfigBuilder.md) puoi scegliere tra due algoritmi:
 
-- [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - stato dell'algoritmo nel 2017
+- [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - algoritmo più recente consigliato per i principianti
 
-As of [**AAPS** version 3.3](#version3300), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved as part of OpenAPS SMB.
+A partire dalla [**versione AAPS 3.3**](#version3300), la funzionalità [ISF Dinamico](../DailyLifeWithAaps/DynamicISF.md) è stata spostata come parte di OpenAPS SMB.
 
 ### OpenAPS AMA
 
-All the settings for OpenAPS AMA are described in the dedicated section in [Key AAPS Features > Advanced Meal Assist (AMA)](#Open-APS-features-advanced-meal-assist-ama).
+Tutte le impostazioni per OpenAPS AMA sono descritte nella sezione dedicata in [Funzionalità chiave di AAPS > Advanced Meal Assist (AMA)](#Open-APS-features-advanced-meal-assist-ama).
 
 (Preferences-openaps-smb-settings)=
 ### OpenAPS SMB
 
-All the settings for OpenAPS SMB are described in the dedicated section in [Key AAPS Features > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
+Tutte le impostazioni per OpenAPS SMB sono descritte nella sezione dedicata in [Funzionalità chiave di AAPS > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
 ## Absorption settings
 
 (Preferences-min_5m_carbimpact)=
 ### min_5m_carbimpact
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Impostazione nascosta in [modalità semplice](#preferences-simple-mode).
 
-The algorithm uses BGI (blood glucose impact) to determine when [carbs are absorbed](../DailyLifeWithAaps/CobCalculation.md).
+L'algoritmo usa BGI (impatto sulla glicemia) per determinare quando i [carboidrati vengono assorbiti](../DailyLifeWithAaps/CobCalculation.md).
 
-At times when carb absorption can’t be dynamically worked out based on your blood's reactions, **AAPS** inserts a default decay to your carbs. Basically, it is a failsafe. This value is only used during gaps in **CGM** readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause **AAPS** to decay COB.
+Nei momenti in cui l'assorbimento dei carboidrati non può essere calcolato dinamicamente in base alle reazioni del sangue, **AAPS** inserisce un decadimento predefinito per i tuoi carboidrati. In sostanza, è un meccanismo di sicurezza. Questo valore viene usato solo durante le lacune nelle letture del **CGM** o quando l'attività fisica "consuma" tutta la glicemia che altrimenti farebbe decadere il COB da parte di **AAPS**.
 
-To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc.
+In parole semplici: L'algoritmo "sa" come dovrebbero *comportarsi* le glicemie quando sono influenzate dalla dose di insulina corrente ecc. Ogni volta che c'è una deviazione positiva dal comportamento previsto, alcuni carboidrati vengono assorbiti/decaduti. Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Grande cambiamento = molti carboidrati ecc.
 
-The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
+Il min_5m_carbimpact definisce l'impatto predefinito sull'assorbimento dei carboidrati per 5 minuti. Per ulteriori dettagli vedi la [documentazione OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
 
-Standard value for AMA is 5, for SMB it's 8.
+Il valore standard per AMA è 5, per SMB è 8.
 
-The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
+Il grafico COB nella schermata principale indica quando viene usato min_5m_impact mettendo un cerchio arancione in cima.
 
 ![COB graph](../images/Pref2020_min_5m_carbimpact.png)
 
-### Meal max absorption time
+### Tempo massimo di assorbimento del pasto
 
-If you often eat high fat or protein meals you will need to increase your meal absorption time.
+Se mangi spesso pasti ad alto contenuto di grassi o proteine, dovrai aumentare il tempo di assorbimento del pasto.
 
-### Advanced settings - autosens ratio
+### Impostazioni avanzate - rapporto autosens
 
 ![Absorption settings](../images/Pref2020_Absorption.png)
 
-- Define min. and max. [autosens](#Open-APS-features-autosens) ratio.
-- Normally standard values (max. 1.2 and min. 0.7) should not be changed.
+- Definisci il rapporto minimo e massimo di [autosens](#Open-APS-features-autosens).
+- Normalmente i valori standard (max. 1,2 e min. 0,7) non dovrebbero essere modificati.
 
 ## Pump
 
 ### BT Watchdog
 
-Activate BT watchdog if necessary (e.g. for Dana pumps). It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+Attiva BT watchdog se necessario (es. per i microinfusori Dana). Disattiva il Bluetooth per un secondo se non è possibile alcuna connessione al microinfusore. Questo può aiutare su alcuni telefoni dove lo stack Bluetooth si blocca.
 
 ## Pump settings
 
-The options here will vary depending on which pump driver you have selected in [Config Builder > Pump](#Config-Builder-pump).  Pair and set your pump up according to the [pump related instructions](../Getting-Started/CompatiblePumps.md).
+Le opzioni qui varieranno a seconda del driver del microinfusore selezionato in [Generatore di configurazione > Microinfusore](#Config-Builder-pump).  Accoppia e configura il tuo microinfusore secondo le [istruzioni relative al microinfusore](../Getting-Started/CompatiblePumps.md).
 
 ## Tidepool
 
-More information on the dedicated [Tidepool](../SettingUpAaps/Tidepool.md) page.
+Ulteriori informazioni sulla pagina dedicata [Tidepool](../SettingUpAaps/Tidepool.md).
 
 (Preferences-nsclient)=
 ## NSClient
 
 ![NSClient](../images/Pref2020_NSClient.png)
 
-Original communication protocol, can be used with older Nightscout versions.
+Protocollo di comunicazione originale, può essere usato con le versioni più vecchie di Nightscout.
 
-- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
-- **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-- The *[API secret](https://nightscout.github.io/nightscout/setup_variables/#api-secret-nightscout-password)* (a 12 character password recorded in your Nightscout variables).
-- This enables data to be read and written between both the Nightscout website and **AAPS**.
-- Double check for typos here if you are stuck in Objective 1.
+- Imposta il tuo *URL Nightscout* (es. <https://nomesito.tuapiattaforma.dom>).
+- **Assicurati che l'URL sia SENZA /api/v1/ alla fine.**
+- Il *[segreto API](https://nightscout.github.io/nightscout/setup_variables/#api-secret-nightscout-password)* (una password di 12 caratteri registrata nelle variabili Nightscout).
+- Ciò consente la lettura e la scrittura di dati tra il sito web Nightscout e **AAPS**.
+- Controlla gli errori di battitura qui se sei bloccato nell'Obiettivo 1.
 
 ## NSClientV3
 
 ![NSClientV3](../images/Pref2024_NSClientV3.png)
 
-[New protocol introduced with AAPS 3.2.](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) Safer and more efficient.
+[Nuovo protocollo introdotto con AAPS 3.2.](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) Più sicuro ed efficiente.
 
 ```{admonition} V3 data uploaders
 :class: warning
 
-When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let **AAPS** upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.
+Quando si usa NSClientV3, tutti i caricatori devono usare l'API V3. Poiché la maggior parte non è ancora compatibile, ciò significa **devi lasciare che **AAPS** carichi tutti i dati** (glicemia, trattamenti, ...) su Nightscout e disabilitare tutti gli altri caricatori se non sono conformi alla V3.
 ```
 
-- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
-- **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in the **NS access token** (not your API Secret!).
-- This enables data to be read and written between both the Nightscout website and **AAPS**.
-- Double check for typos here if you are stuck in Objective 1.
-- Leave Connect to websockets enabled (recommended).
+- Imposta il tuo *URL Nightscout* (es. <https://nomesito.tuapiattaforma.dom>).
+- **Assicurati che l'URL sia SENZA /api/v1/ alla fine.**
+- In Nightscout, crea un *[token Admin](https://nightscout.github.io/nightscout/security/#create-a-token)* (richiede [Nightscout 15](https://nightscout.github.io/update/update/) per usare l'API V3) e inseriscilo nel **token di accesso NS** (non il tuo segreto API!).
+- Ciò consente la lettura e la scrittura di dati tra il sito web Nightscout e **AAPS**.
+- Controlla gli errori di battitura qui se sei bloccato nell'Obiettivo 1.
+- Lascia abilitata la connessione ai websocket (consigliato).
 
 (Preferences-nsclient-synchronization)=
-### Synchronization
+### Sincronizzazione
 
 ![Synchronization options](../images/Pref2025_NSclient_Synchronization.png)
 
-Synchronization choices will depend on the way you will want to use **AAPS**.
+Le scelte di sincronizzazione dipenderanno dal modo in cui vuoi usare **AAPS**.
 
-You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings). 
+Puoi selezionare quali dati vuoi [caricare e scaricare su o da Nightscout](#Nightscout-aaps-settings).
 
 ### Alarm options
 
 ![Alarm options](../images/Pref2024_NSClient_Alarms.png)
 
-- Alarm options allows you to select which Nightscout alarms to use through the app. **AAPS** will alarm when a Nightscout alarm triggers.
-- For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
-- They will only work whilst you have a connection to Nightscout and are intended for parent/caregivers.
-- If you have the **CGM** source on your phone (i.e. xDrip+ or BYODA) then use those alarms instead of Nightscout Alarms.
-- Create notifications from Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) will echo Nightscout announcements in the **AAPS** notifications bar.
-- You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
+- Le opzioni di allarme ti permettono di selezionare quali allarmi Nightscout usare tramite l'app. **AAPS** suonerà un allarme quando un allarme Nightscout viene attivato.
+- Per far suonare gli allarmi devi impostare i valori di allarme Urgente Alto, Alto, Basso e Urgente Basso nelle tue [variabili Nightscout](https://nightscout.github.io/nightscout/setup_variables/#alarms).
+- Funzioneranno solo mentre hai una connessione a Nightscout e sono intesi per genitori/caregiver.
+- Se hai la sorgente **CGM** sul tuo telefono (es. xDrip+ o BYODA), usa quegli allarmi invece degli allarmi Nightscout.
+- Crea notifiche dagli [annunci](https://nightscout.github.io/nightscout/discover/#announcement) Nightscout replicherà gli annunci Nightscout nella barra delle notifiche di **AAPS**.
+- Puoi modificare la soglia degli allarmi per dati obsoleti e dati urgentemente obsoleti quando non vengono ricevuti dati da Nightscout dopo un certo tempo.
 
-### Connection settings
+### Impostazioni di connessione
 
 ![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
 
-- Connection settings define when Nightscout connection will be enabled.
-- Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
-- If you want to use only a specific Wi-Fi network you can enter its Wi-Fi SSID.
-- Multiple SSIDs can be separated by semicolon.
-- To delete all SSIDs enter a blank space in the field.
+- Le impostazioni di connessione definiscono quando la connessione Nightscout sarà abilitata.
+- Limita il caricamento su Nightscout solo al Wi-Fi o anche a certi SSID Wi-Fi specifici.
+- Se vuoi usare solo una rete Wi-Fi specifica puoi inserire il suo SSID Wi-Fi.
+- Più SSID possono essere separati da punto e virgola.
+- Per eliminare tutti gli SSID inserisci uno spazio vuoto nel campo.
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClient)
+### Impostazioni avanzate (NSClient)
 
 ![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
 
-Options in advanced settings are self-explanatory.
+Le opzioni nelle impostazioni avanzate sono autoesplicative.
 
-## SMS Communicator
+## Comunicatore SMS
 
-More information on the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
+Ulteriori informazioni sulla pagina dedicata [Comandi SMS](../RemoteFeatures/SMSCommands.md).
 
-## Automation
+## Automazione
 
-Select which location service shall be used:
+Seleziona quale servizio di localizzazione usare:
 
-- Use passive location: **AAPS** only takes locations if other apps are requesting it
-- Use network location: Location of your Wi-Fi
-- Use GPS location (Attention! May cause excessive battery drain!)
+- Usa localizzazione passiva: **AAPS** prende le posizioni solo se altre app le richiedono
+- Usa localizzazione di rete: Posizione del tuo Wi-Fi
+- Usa localizzazione GPS (Attenzione! Potrebbe causare un consumo eccessivo della batteria!)
 
 ## Local alerts
 
 ![Local alerts](../images/Pref2020_LocalAlerts.png)
 
-Settings should be self-explanatory.
+Le impostazioni sono autoesplicative.
 
 (preferences-maintenance-settings)=
 ## Maintenance settings
 
 ![Maintenance settings](../images/Pref2020_Maintenance.png)
 
-**Email recipient**: Standard recipient of logs is <mailto:logs@aaps.app>.
+**Destinatario email**: Il destinatario standard dei log è <logs@aaps.app>.
 
-**Data Choices**
+**Scelte dati**
 
 ![Data choices](../images/Pref2020_DataChoice.png)
 
-You can help develop **AAPS** further by sending crash reports to the developers.
+Puoi aiutare a sviluppare ulteriormente **AAPS** inviando report di crash agli sviluppatori.
 
-**Unattended Settings Export**<br/>
-By enabling this feature, you allow **AAPS** to execute settings exports without user intervention. For this the master password
-is securely stored on your phone (only) at the next manually export. The stored password will be used for up to 4 weeks.
-After 4 weeks you will be notified the password is about to expire. During a grace period of 1 week, the password can then be refreshed by
-manually exporting settings from the maintenance menu.
+**Esportazioni impostazioni non presidiate**<br/> Abilitando questa funzione, consenti ad **AAPS** di eseguire esportazioni delle impostazioni senza l'intervento dell'utente. Per questo la password master viene archiviata in modo sicuro sul tuo telefono (solo) alla successiva esportazione manuale. La password archiviata verrà usata per un massimo di 4 settimane. Dopo 4 settimane riceverai una notifica che la password sta per scadere. Durante un periodo di grazia di 1 settimana, la password può essere aggiornata eseguendo manualmente l'esportazione delle impostazioni dal menu di manutenzione.
 
-After the grace period of 1 week has passed the stored password expires and any automated settings export will abort while notifying the user, asking
-to reenter the password.  [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)  will be logged
-to the **AAPS** 'Careportal' and 'User entry' lists under Treatments.
+Dopo che il periodo di grazia di 1 settimana è scaduto, la password archiviata scade e qualsiasi esportazione automatica delle impostazioni verrà interrotta mentre viene notificato l'utente, chiedendo di reinserire la password.  Le [(**esportazioni automatiche delle impostazioni**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) verranno registrate negli elenchi 'Careportal' e 'Inserimento utente' di **AAPS** in Trattamenti.
 
-After enabling this option, make sure to perform a manual settings export, where you will be requested for your password, so that **AAPS** can store it.
+Dopo aver abilitato questa opzione, assicurati di eseguire un'esportazione manuale delle impostazioni, dove ti verrà chiesta la password, in modo che **AAPS** possa archiviarla.
 
-### Log files
+### File di log
 
-AAPS will save logs for troubleshooting.
+AAPS salverà i log per la risoluzione dei problemi.
 
-Do not disable this feature: it will help understanding the reasons if something goes wrong.
+Non disabilitare questa funzione: aiuterà a capire le ragioni se qualcosa va storto.
 
-If you need to send the logs to the developers, make sure you file accurately the mail contents to describe the issue. It is preferable to send logs only after being requested to do so, following an [issue report in GitHub](https://github.com/nightscout/AndroidAPS/issues).
+Se hai bisogno di inviare i log agli sviluppatori, assicurati di compilare accuratamente il contenuto della mail per descrivere il problema. È preferibile inviare i log solo dopo essere stati invitati a farlo, in seguito a un [segnalazione di problema in GitHub](https://github.com/nightscout/AndroidAPS/issues).
 
-You can find AAPS logs in your phone memory -> Android -> data -> info.nightscout.androidaps -> files.
+Puoi trovare i log di AAPS nella memoria del telefono -> Android -> data -> info.nightscout.androidaps -> files.
 
 ![Log files options](../images/Pref2020_Maintenance_Logs.png)
 
 (preferences-maintenance-logdirectory)=
 
-### Setting the local AAPS directory
+### Impostazione della directory locale AAPS
 
-Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files.
+This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files. Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab.
 
 ![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
 
-It is strongly recommended to use a directory directly in the main entry of your phone memory. Default is AAPS.
+Si raccomanda vivamente di usare una directory direttamente nella voce principale della memoria del telefono. Il valore predefinito è AAPS.
 
 ![Local directory location](../images/preferences/maintenance_settings_directory.png)
 
-If you select a subdirectory of AAPS, you will see an error message. Tap "OK" and retry, selecting the correct directory (one above). Do not select "DISMISS" unless you clearly know what you are doing.
+Se selezioni una sottodirectory di AAPS, vedrai un messaggio di errore. Tocca "OK" e riprova, selezionando la directory corretta (quella superiore). Non selezionare "IGNORA" a meno che tu non sappia chiaramente cosa stai facendo.
 
 ![Local directory location](../images/preferences/maintenance_settings_wrongdirectory.png)
 
 (preferences-maintenance-cloud)=
 
-### Setting a cloud directory
+### Impostazione di una directory cloud
 
-You can export your settings, logs and CSV data to a cloud service.
+Puoi esportare le impostazioni, i log e i dati CSV su un servizio cloud.
 
-1.  Select Cloud directory
-2. Select your cloud service
-3. Enable cloud export
+1.  Seleziona Directory cloud
+2. Seleziona il tuo servizio cloud
+3. Abilita esportazione cloud
 
 ![Cloud directory](../images/preferences/maintenance_settings_cloud.png)
 
-You can then define what data will be uploaded to the cloud.
+Puoi quindi definire quali dati verranno caricati nel cloud.
 
 ![Cloud directory data](../images/preferences/maintenance_settings_clouddata.png)
 
-You can disable cloud export.
+Puoi disabilitare l'esportazione cloud.
 
 ![Cloud directory disable](../images/preferences/maintenance_settings_cloudoff.png)
 
 ## Open Humans
 
-You can help the community by donating your data to research projects! Details are described on the [Open Humans page](../SupportingAaps/OpenHumans.md).
+Puoi aiutare la community donando i tuoi dati ai progetti di ricerca! I dettagli sono descritti nella [pagina Open Humans](../SupportingAaps/OpenHumans.md).
 
-In Preferences, you can define when data shall be uploaded
-- only if connected to Wi-Fi
-- only if charging
+Nelle Preferenze, puoi definire quando i dati devono essere caricati
+- solo se connesso al Wi-Fi
+- solo se in carica

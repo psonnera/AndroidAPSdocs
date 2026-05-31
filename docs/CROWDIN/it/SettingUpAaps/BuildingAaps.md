@@ -1,34 +1,33 @@
-# Building AAPS
+# Costruire AAPS
 
-## Build yourself instead of download
+## Costruire da soli invece di scaricare
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**L'app AAPS (un file apk) non è disponibile per il download, a causa delle normative sui dispositivi medici. È legale costruire l'app per il proprio uso, ma non devi darne una copia ad altri!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Vedi la pagina [Domande frequenti](../UsefulLinks/FAQ.md) per i dettagli.
 
 ---
 
-Three methods are available to build the AAPS app:
+Sono disponibili tre metodi per costruire l'app AAPS:
 
-### Build with a browser (recommended)
+### Costruire con un browser (consigliato)
 
-You can build the app with your smartphone using GitHub actions, and save it in your Google Drive.
+Puoi costruire l'app con il tuo smartphone usando le GitHub actions e salvarla nel tuo Google Drive.
 
-**[Follow these instructions.](./BrowserBuild.md)**
-
-----
-
-### Build with Android Studio
-
-You can build the app with your computer using Android Studio. This used to be the only build option,
-nowadays Android Studio is mostly used by developers who consider making code changes.
-
-**[Follow these instructions.](./ComputerBuild.md)**
+**[Segui queste istruzioni.](./BrowserBuild.md)**
 
 ----
 
-### Build using the command-line
+### Costruire con Android Studio
 
-This option is intended for those who prefer to build AAPS in local command-line, without installing Android Studio.
+Puoi costruire l'app con il tuo computer usando Android Studio. Questa era l'unica opzione di build disponibile; oggi Android Studio è usato principalmente dagli sviluppatori che intendono apportare modifiche al codice.
 
-**[Follow these instructions.](./CLIBuild.md)**
+**[Segui queste istruzioni.](./ComputerBuild.md)**
+
+----
+
+### Costruire dalla riga di comando
+
+Questa opzione è destinata a chi preferisce costruire AAPS dalla riga di comando locale, senza installare Android Studio.
+
+**[Segui queste istruzioni.](./CLIBuild.md)**

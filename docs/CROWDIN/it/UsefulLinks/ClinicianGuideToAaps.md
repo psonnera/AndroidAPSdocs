@@ -1,103 +1,99 @@
-# For Clinicians – A General Introduction and Guide to AAPS
+# Per i clinici – Introduzione generale e guida ad AAPS
 
-This page is intended for clinicians who have expressed interest in open source artificial pancreas technology such as AAPS, or for patients who want to share such information with their clinicians.
+Questa pagina è destinata ai clinici che hanno espresso interesse per la tecnologia open source del pancreas artificiale come AAPS, o ai pazienti che vogliono condividere tali informazioni con i propri medici.
 
-This guide has some high-level information about DIY closed looping and specifically how AAPS works. For more details on all of these topics, please view the [comprehensive AAPS documentation online](../index.md). If you have questions, please ask your patient for more details, or always feel free to reach out to the community with question. (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email developers@AndroidAPS.org). [You can also find some of the latest studies & outcomes related data here](https://openaps.org/outcomes/).
+Questa guida contiene alcune informazioni di alto livello sul loop chiuso fai-da-te e in particolare su come funziona AAPS. Per maggiori dettagli su tutti questi argomenti, consultare la [documentazione completa di AAPS online](../index.md). In caso di domande, chiedere al paziente per maggiori dettagli, o contattare la comunità. (Se non sei sui social media (ad es. [Twitter](https://twitter.com/kozakmilos) o Facebook), invia un'email a developers@AndroidAPS.org). [Qui puoi trovare anche alcuni degli ultimi studi e dati sui risultati](https://openaps.org/outcomes/).
 
-## The steps for building a DIY Closed Loop:
+## I passaggi per costruire un Loop Chiuso fai-da-te:
 
-To start using AAPS, the following steps should be taken:
-* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](../Getting-Started/Phones.md), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
-* [Download the AAPS source code and build the software](../SettingUpAaps/BuildingAaps.md).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../SettingUpAaps/SetupWizard.md).
+Per iniziare a usare AAPS, è necessario eseguire i seguenti passaggi:
+* Trovare un [microinfusore compatibile](../Getting-Started/CompatiblePumps.md), un [dispositivo Android compatibile](../Getting-Started/Phones.md) e una [sorgente CGM compatibile](../Getting-Started/CompatiblesCgms.md).
+* [Scaricare il codice sorgente di AAPS e compilare il software](../SettingUpAaps/BuildingAaps.md).
+* [Configurare il software per comunicare con i dispositivi per il diabete e specificare le impostazioni e le preferenze di sicurezza](../SettingUpAaps/SetupWizard.md).
 
-## How A DIY Closed Loop Works
+## Come funziona un Loop Chiuso fai-da-te
 
-Without a closed loop system, a person with diabetes gathers data from their pump and CGM, decides what to do, and takes action.
+Senza un sistema a loop chiuso, una persona con diabete raccoglie i dati dal microinfusore e dal CGM, decide cosa fare e agisce.
 
-With automated insulin delivery, the system does the same thing: it gathers data from the pump, CGM, and anywhere else information is logged (such as Nightscout), uses this information to do the maths and decide how much more or less insulin is needed (above or below the underlying basal rate), and uses temporary basal rates to make the necessary adjustments to keep or eventually bring BGs into target range.
+Con l'erogazione automatica di insulina, il sistema fa la stessa cosa: raccoglie i dati dal microinfusore, dal CGM e da qualsiasi altro luogo in cui vengono registrate le informazioni (come Nightscout), utilizza queste informazioni per fare i calcoli e decidere quanta insulina in più o in meno è necessaria (sopra o sotto la velocità basale di base), e utilizza basali temporanee per apportare le correzioni necessarie a mantenere o riportare la glicemia nell'intervallo target.
 
-If the device running AAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the preprogrammed basals rates running.
+Se il dispositivo che esegue AAPS si guasta o esce dall'intervallo del microinfusore, una volta terminata l'ultima basale temporanea, il microinfusore torna a funzionare come un microinfusore standard con le velocità basali preprogrammate.
 
-## How data is gathered:
+## Come vengono raccolti i dati:
 
-With AAPS, an Android device runs a special app to do the math, the device communicates using Bluetooth with a supported pump. AAPS can communicate with other devices and to the cloud via wifi or mobile data to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
+Con AAPS, un dispositivo Android esegue un'app speciale per fare i calcoli; il dispositivo comunica tramite Bluetooth con un microinfusore supportato. AAPS può comunicare con altri dispositivi e con il cloud tramite wifi o dati mobili per raccogliere informazioni aggiuntive e riferire al paziente, agli assistenti e ai familiari su cosa sta facendo e perché.
 
-The Android device needs to:
-* communicate with the pump and read history - how much insulin has been delivered
-* communicate with the CGM (either directly, or via the cloud) - to see what BGs are/have been doing
+Il dispositivo Android deve:
+* comunicare con il microinfusore e leggere la cronologia - quanta insulina è stata erogata
+* comunicare con il CGM (direttamente o tramite il cloud) - per vedere i valori di glicemia attuali e passati
 
-When the device has collected this data, the algorithm runs and does the decision-making based on the settings (ISF, carb ratio, DIA, target, etc.). If required, it then issues commands to the pump to modify insulin delivery rate.
+Quando il dispositivo ha raccolto questi dati, l'algoritmo viene eseguito e prende decisioni basate sulle impostazioni (ISF, rapporto carboidrati, DIA, target, ecc.). Se necessario, invia comandi al microinfusore per modificare la velocità di erogazione dell'insulina.
 
-It will also gather any information about boluses, carbohydrate consumption, and temporary target adjustments from the pump or from Nightscout to use it for the calculation of insulin delivery rates.
+Raccoglierà anche informazioni sui boli, il consumo di carboidrati e le modifiche ai target temporanei dal microinfusore o da Nightscout per utilizzarle nel calcolo delle velocità di erogazione dell'insulina.
 
-## How does it know what to do? 
+## Come sa cosa fare?
 
-The open source software is designed to make it easy for the device to do the work people used to do (in manual mode) to calculate how insulin delivery should be adjusted. It first collects data from all the supporting devices and from the cloud, prepares the data and runs the calculations, makes predictions of expected BG-levels during the next hours will be expected to do in different scenarios, and calculates the needed adjustments to keep or bring BG back into target range. Next it sends any necessary adjustments to the pump. Then it reads the data back, and does it over and over again. 
+Il software open source è progettato per rendere facile al dispositivo il lavoro che le persone facevano (in modalità manuale) per calcolare come dovrebbe essere regolata l'erogazione di insulina. Per prima cosa raccoglie i dati da tutti i dispositivi di supporto e dal cloud, prepara i dati ed esegue i calcoli, fa previsioni dei livelli di glicemia previsti nelle prossime ore in diversi scenari e calcola le correzioni necessarie per mantenere o riportare la glicemia nell'intervallo target. Poi invia le correzioni necessarie al microinfusore. Quindi rilegge i dati e ricomincia.
 
-As the most important input parameter is the blood glucose level coming from the CGM, it is important to have high-quality CGM data.
+Poiché il parametro di input più importante è il livello di glucosio nel sangue proveniente dal CGM, è importante avere dati CGM di alta qualità.
 
-AAPS is designed to transparently track all input data it gathers, the resulting recommendation, and any action taken. It is therefore easy to answer the question at any time, “why is it doing X?” by reviewing the logs.
+AAPS è progettato per tracciare in modo trasparente tutti i dati di input raccolti, la raccomandazione risultante e qualsiasi azione intrapresa. È quindi facile rispondere alla domanda in qualsiasi momento "perché sta facendo X?" esaminando i log.
 
-## Examples of AAPS algorithm decision making:
+## Esempi di processo decisionale dell'algoritmo AAPS:
 
-AAPS uses the same core algorithm and feature set as OpenAPS. The algorithm makes multiple predictions (based on settings, and the situation) representing different scenarios of what might happen in the future. In Nightscout, these are displayed as “purple lines”. AAPS uses different colors to separate these [prediction lines](#aaps-screens-prediction-lines). In the logs, it will describe which of these predictions and which time frame is driving the necessary actions.
+AAPS utilizza lo stesso algoritmo di base e le stesse funzionalità di OpenAPS. L'algoritmo fa molteplici previsioni (basate sulle impostazioni e sulla situazione) che rappresentano diversi scenari di ciò che potrebbe accadere in futuro. In Nightscout, queste vengono visualizzate come "linee viola". AAPS usa colori diversi per separare queste [linee di previsione](#aaps-screens-prediction-lines). Nei log, descriverà quale di queste previsioni e quale intervallo di tempo sta guidando le azioni necessarie.
 
-### Here are examples of the purple prediction lines, and how they might differ:
+### Ecco alcuni esempi delle linee di previsione viola e come potrebbero differire:
 
 ![Purple prediction line examples](../images/Prediction_lines.jpg)
 
-### Here are examples of different time frames that influence the needed adjustments to insulin delivery:
+### Ecco alcuni esempi di diversi intervalli di tempo che influenzano le correzioni necessarie all'erogazione di insulina:
 
-### Scenario 1 - Zero Temp for safety
+### Scenario 1 - Basale zero per sicurezza
 
-In this example, BG is rising in the near-term time frame; however, it is predicted to be low over a longer time frame. In fact, it is predicted to go below target *and* the safety threshold. For safety to prevent the low, AAPS will issue a zero temp (temporary basal rate at 0%), until the eventualBG (in any time frame) is above threshold.
+In questo esempio, la glicemia sta aumentando a breve termine; tuttavia, si prevede che sarà bassa su un periodo più lungo. In effetti, si prevede che scenda al di sotto del target *e* della soglia di sicurezza. Per sicurezza, per prevenire il basso, AAPS emetterà una basale zero (basale temporanea allo 0%), finché la glicemia prevista (in qualsiasi intervallo di tempo) non sarà al di sopra della soglia.
 
 ![Dosing scenario 1](../images/Dosing_scenario_1.jpg)
 
-### Scenario 2 - Zero temp for safety
+### Scenario 2 - Basale zero per sicurezza
 
-In this example, BG is predicted to go low in the near-term, but is predicted to eventually be above target. However, because the near-term low is actually below the safety threshold, AAPS will issue a zero temp, until there is no longer any point of the prediction line that is below threshold.
+In questo esempio, si prevede che la glicemia scenda a breve termine, ma si prevede che alla fine sarà sopra il target. Tuttavia, poiché il basso a breve termine è effettivamente al di sotto della soglia di sicurezza, AAPS emetterà una basale zero finché non ci sarà più nessun punto della linea di previsione al di sotto della soglia.
 
 ![Dosing scenario 2](../images/Dosing_scenario_2.jpg)
 
-### Scenario 3 - More insulin needed
+### Scenario 3 - Serve più insulina
 
-In this example, a near-term prediction shows a dip below target. However, it is not predicted to be below the safety threshold. The eventual BG is above target. Therefore, AAPS will restrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). It will then assess adding insulin to bring the lowest level of the eventual predicted BG down to target, once it is safe to do so. *(Depending on settings and the amount and timing of insulin required, this insulin may be delivered via temp basals or SMB's (super micro boluses) ).*
+In questo esempio, una previsione a breve termine mostra una caduta al di sotto del target. Tuttavia, non si prevede che scenda al di sotto della soglia di sicurezza. La glicemia prevista finale è sopra il target. Pertanto, AAPS si asterrà dall'aggiungere insulina che contribuirebbe a un basso a breve termine (aggiungendo insulina che farebbe scendere la previsione al di sotto della soglia). Poi valuterà l'aggiunta di insulina per riportare il livello più basso della glicemia prevista finale al target, una volta che è sicuro farlo. *(A seconda delle impostazioni e della quantità e del timing dell'insulina necessaria, questa insulina può essere erogata tramite basali temporanee o SMB (super micro boli)).*
 
 ![Dosing scenario 3](../images/Dosing_scenario_3.jpg)
 
-### Scenario 4 - Low temping for safety
+### Scenario 4 - Basale bassa per sicurezza
 
-In this example, AAPS sees that BG is spiking well above target. However, due to the timing of insulin, there is already enough insulin in the body to bring BG into range eventually. In fact, BG is predicted to eventually be below target. Therefore, AAPS will not provide extra insulin so it will not contribute to a longer-timeframe low. Although BG is high/rising, a low temporary basal rate is likely here.
+In questo esempio, AAPS vede che la glicemia sta salendo ben al di sopra del target. Tuttavia, a causa del timing dell'insulina, c'è già abbastanza insulina nel corpo per portare la glicemia nell'intervallo alla fine. In effetti, si prevede che la glicemia alla fine scenda al di sotto del target. Pertanto, AAPS non fornirà insulina extra per non contribuire a un basso a lungo termine. Anche se la glicemia è alta/in aumento, è probabile che qui venga impostata una bassa basale temporanea.
 
 ![Dosing scenario 4](../images/Dosing_scenario_4.jpg)
 
-## Optimizing settings and making changes 
+## Ottimizzazione delle impostazioni e apportare modifiche
 
-As a clinician who may not have experience with AAPS or DIY closed loops, you may find it challenging to help your patient optimize their settings or make changes to improve their outcomes. We have multiple tools and [guides](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) in the community that help patients make small, tested adjustments to improve their settings.
+Come clinico che potrebbe non avere esperienza con AAPS o con i loop chiusi fai-da-te, potresti trovare difficile aiutare il tuo paziente a ottimizzare le impostazioni o apportare modifiche per migliorare i suoi risultati. Abbiamo molteplici strumenti e [guide](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) nella comunità che aiutano i pazienti a fare piccole modifiche testate per migliorare le loro impostazioni.
 
-The most important thing for patients to do is make one change at a time, and observe the impact for 2-3 days before choosing to change or modify another setting (unless it’s obviously a bad change that makes things worse, in which case they should revert immediately to the previous setting). The human tendency is to turn all the knobs and change everything at once; but if someone does so, then they may end up with further sub-optimal settings for the future, and find it hard to get back to a known good state.
+La cosa più importante che i pazienti devono fare è apportare un cambiamento alla volta e osservare l'impatto per 2-3 giorni prima di scegliere di cambiare o modificare un'altra impostazione (a meno che non sia ovviamente un cambiamento negativo che peggiora le cose, nel qual caso dovrebbero tornare immediatamente all'impostazione precedente). La tendenza umana è di girare tutte le manopole e cambiare tutto in una volta; ma se qualcuno lo fa, potrebbe ritrovarsi con ulteriori impostazioni sub-ottimali per il futuro e trovare difficile tornare a uno stato funzionante noto.
 
-One of the most powerful tools for making settings changes is an automated calculation tool for basal rates, ISF, and carb ratio. This is called “[Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)”. It is designed to be run independently/manually, and allow the data to guide you or your patient in making incremental changes to settings. It is best practice in the community to run (or review) Autotune reports first, prior to attempting to make manual adjustments to settings. With AAPS, Autotune will be run as a "one-off", although there are ongoing efforts to incorporate it directly into AAPS as well.
-As these parameters are a prerequisite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adjustment of these parameters would be the natural link to the clinician. 
+Uno degli strumenti più potenti per apportare modifiche alle impostazioni è uno strumento di calcolo automatico per le velocità basali, ISF e rapporto carboidrati. Questo si chiama "[Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)". È progettato per essere eseguito in modo indipendente/manuale e consentire ai dati di guidare te o il tuo paziente nell'apportare modifiche incrementali alle impostazioni. È buona pratica nella comunità eseguire (o rivedere) i rapporti Autotune prima di tentare di apportare modifiche manuali alle impostazioni. Con AAPS, Autotune verrà eseguito come operazione "una tantum", anche se ci sono sforzi in corso per incorporarlo direttamente in AAPS. Poiché questi parametri sono un prerequisito sia per l'erogazione standard di insulina con microinfusore che per l'erogazione di insulina a loop chiuso, la discussione dei risultati di autotune e la regolazione di questi parametri sarebbe il collegamento naturale con il clinico.
 
-Additionally, human behavior (learned from manual diabetes mode) often influences outcomes, even with a DIY closed loop. For example, if BG is predicted to go low and AAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dl (3.9 mmol). However, in many cases, someone may choose to treat with many more carbs (e.g. sticking to the 15 rule), which will cause a resulting faster spike both from the extra glucose and because insulin had been reduced in the timeframe leading up to the low.
+Inoltre, il comportamento umano (appreso dalla modalità manuale del diabete) spesso influenza i risultati, anche con un loop chiuso fai-da-te. Ad esempio, se si prevede che la glicemia scenda e AAPS riduce l'insulina mentre scende, potrebbero essere necessari solo pochi carboidrati (ad es. 3-4 g di carboidrati) per riportare la glicemia da 70 mg/dl (3,9 mmol). Tuttavia, in molti casi, qualcuno potrebbe scegliere di trattare con molti più carboidrati (ad es. attenendosi alla regola del 15), il che causerà un picco più rapido sia dal glucosio extra che perché l'insulina era stata ridotta nel periodo che ha preceduto il basso.
 ## OpenAPS
 
-**This guide was adopted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).**
-OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig").
-AAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide.
-Much of the information about OpenAPS can be easily adapted to AAPS, with the main difference being the hardware platform where each piece of software is run.
+**Questa guida è stata adottata dalla [guida del clinico a OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS è un sistema sviluppato per essere eseguito su un piccolo computer portatile (generalmente denominato "rig"). AAPS utilizza molte delle tecniche implementate in OpenAPS e condivide gran parte della logica e degli algoritmi, motivo per cui questa guida è molto simile alla guida originale. Gran parte delle informazioni su OpenAPS può essere facilmente adattata ad AAPS, con la differenza principale che è la piattaforma hardware su cui viene eseguito ciascun software.
 
 
-## Summary
+## Riepilogo
 
-This is meant to be a high-level overview of how AAPS works. For more details, ask your patient, reach out to the community, or read the full AAPS documentation available online.
+Questa è una panoramica di alto livello su come funziona AAPS. Per maggiori dettagli, chiedere al paziente, contattare la comunità o leggere la documentazione completa di AAPS disponibile online.
 
-Additional recommended reading:
-* The [full AAPS documentation](../index.md)
-* The [OpenAPS Reference Design](https://OpenAPS.org/reference-design/), which explains how OpenAPS is designed for safety: https://openaps.org/reference-design/
-* The [full OpenAPS documentation](https://openaps.readthedocs.io/en/latest/index.html)
-  * More [details on OpenAPS calculations](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
+Letture aggiuntive consigliate:
+* La [documentazione completa di AAPS](../index.md)
+* Il [Progetto di riferimento OpenAPS](https://OpenAPS.org/reference-design/), che spiega come OpenAPS è progettato per la sicurezza: https://openaps.org/reference-design/
+* La [documentazione completa di OpenAPS](https://openaps.readthedocs.io/en/latest/index.html)
+  * Maggiori [dettagli sui calcoli OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
 

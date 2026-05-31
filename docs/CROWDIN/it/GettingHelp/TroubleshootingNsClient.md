@@ -1,44 +1,44 @@
 (Troubleshooting-NSClient-troubleshooting-nsclient)=
-# Troubleshooting NSClient
+# Risoluzione dei problemi di NSClient
 
-NSClient relies on stable communication with Nightscout. An unstable connection leads to synchronization errors and high data usage.
+NSClient dipende da una comunicazione stabile con Nightscout. Una connessione instabile porta a errori di sincronizzazione e un elevato consumo di dati.
 
-If nobody is following you on Nightscout you can choose to pause NSClient to save battery life or you can choose to setup NSClient so that it only connects when on Wi-Fi and/or during charging.
+Se nessuno ti segue su Nightscout, puoi scegliere di mettere in pausa NSClient per risparmiare la batteria, oppure puoi configurare NSClient in modo che si connetta solo quando sei su Wi-Fi e/o durante la ricarica.
 
-* How to detect an unstable connection?
+* Come rilevare una connessione instabile?
 
-Go to NSClient tab in AAPS and watch the log. The expected behavior is to receive a PING every ~30s and almost no reconnection messages. If you see many reconnections, then there is a problem. 
+Vai alla scheda NSClient in AAPS e osserva il log. Il comportamento atteso è ricevere un PING ogni ~30 secondi e quasi nessun messaggio di riconnessione. Se vedi molte riconnessioni, c'è un problema.
 
-Since AAPS version 2.0, when such behavior is detected, NSClient is paused for 15 minutes and the message "NSClient malfunction" is displayed on the main Overview screen.
+Dalla versione 2.0 di AAPS, quando viene rilevato questo comportamento, NSClient viene messo in pausa per 15 minuti e viene visualizzato il messaggio "NSClient malfunzionamento" nella schermata principale.
 
-* Restart
+* Riavvio
 
-What you should try as a first step is restart both: Nightscout and then phone to see if the issue is permanent
+Il primo passo da provare è riavviare sia Nightscout che il telefono, per verificare se il problema è permanente.
 
-If your Nightscout is hosted on Heroku, you can restart Nightscout by: Logging into Heroku, click on your nightscout app name, click on the 'More' menu, then 'Restart all dynos'.
+Se il tuo Nightscout è ospitato su Heroku, puoi riavviarlo così: accedi a Heroku, clicca sul nome della tua app Nightscout, clicca sul menu 'Altro', poi 'Riavvia tutti i dynos'.
 
-For other hosts, please follow your hosts guidance documentation.
+Per altri host, segui la documentazione del tuo provider.
 
-* Phone issues
+* Problemi con il telefono
 
-Android may put your phone into a sleep mode. Check if you have an exception for AAPS in your phones power options to allow it to run in the background all the time.
+Android potrebbe mettere il telefono in modalità sleep. Verifica di avere un'eccezione per AAPS nelle opzioni di risparmio energetico del tuo telefono, per consentirgli di funzionare sempre in background.
 
-Check the NSClient again when in strong network signal location.
+Controlla nuovamente NSClient quando sei in una posizione con un segnale di rete forte.
 
-Try another phone.
+Prova un altro telefono.
 
 * Nightscout
 
-If your site is hosted on Azure, many people have found that connection issues have improved since moving to Heroku.
+Se il tuo sito è ospitato su Azure, molte persone hanno riscontrato che i problemi di connessione sono migliorati dopo il passaggio a Heroku.
 
-A workaround to connection issues in Azure is to set in Application settings HTTP protocol to 2.0 and Websockets to ON
+Una soluzione alternativa ai problemi di connessione su Azure è impostare nelle impostazioni dell'applicazione il protocollo HTTP su 2.0 e i Websocket su ON.
 
-* No BG reading from Nightscout
+* Nessuna lettura glicemica da Nightscout
 
-If AAPS connects to Nightscout correctly but does BG displays as N/A. Go to NSCLIENT tab, press the 3 dot menu top right, Click NSClient Preferences -> Synchronization turn on "Receive/backfill CGM data".
+Se AAPS si connette correttamente a Nightscout ma la glicemia viene visualizzata come N/A. Vai alla scheda NSCLIENT, premi il menu a 3 punti in alto a destra, clicca su Preferenze NSClient -> Sincronizzazione e attiva "Ricevi/reintegra dati CGM".
 
-* If you still get an error...
+* Se si ottiene ancora un errore...
 
-Check the size of your database in MongoDB (or via the database size plugin in nightscout). If you are using the free tier in MongoDB, 496MB means it is full and needs to be cleaned up. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troublehoot/#database-full). 
+Controlla la dimensione del tuo database in MongoDB (o tramite il plugin della dimensione del database in Nightscout). Se stai usando il piano gratuito di MongoDB, 496 MB significa che è pieno e deve essere ripulito. [Segui queste istruzioni di Nightscout per controllare la dimensione del database e cancellare i dati](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
 
-Before clearing data from your database and if you haven't already set it up, you should consider donating your AAPS data to the Open Humans project (for research). The instructions are on the [OpenHumans configuration page](../SupportingAaps/OpenHumans.md).
+Prima di cancellare i dati dal database, e se non l'hai già fatto, considera di donare i tuoi dati AAPS al progetto Open Humans (per la ricerca). Le istruzioni si trovano nella [pagina di configurazione di OpenHumans](../SupportingAaps/OpenHumans.md).

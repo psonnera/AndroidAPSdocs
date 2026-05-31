@@ -2,87 +2,91 @@
 
 # Browser build
 
-Building AAPS with GitHub Actions.
+Compilazione di AAPS tramite GitHub Actions.
 
-**Minimum AAPS version supported is 3.3.2.1.**
+**La versione minima di AAPS supportata è la 3.3.2.1.**
 
-## Build yourself instead of download
+## Compilare autonomamente invece di scaricare
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**L'app AAPS (un file apk) non è disponibile per il download a causa delle normative sui dispositivi medici. È legale compilare l'app per uso personale, ma non è consentito cederne una copia ad altri!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Per i dettagli, consulta la [pagina FAQ](../UsefulLinks/FAQ.md).
 
 (Building-APK-without-a-computer)=
 
-## Device and software specifications for building AAPS
+## Requisiti hardware e software per la compilazione di AAPS
 
-We recommend using an Android device. You can also use a computer or an iOS device.
+Si consiglia di utilizzare un dispositivo Android. È possibile utilizzare anche un computer o un dispositivo iOS.
 
-You will need to use multiple tabs in your browser, and switch from one to the other. Example Chrome:
+Sarà necessario utilizzare più schede nel browser e passare da una all'altra. Esempio con Chrome:
 
 ![fork_aaps](../images/Building-the-App/CI/BrowserBuildTabs.png)
 
-You also need a Google account so that the app can be saved in your Google Drive.
+È inoltre necessario un account Google affinché l'app possa essere salvata su Google Drive.
 
 ```{note}
-This wiki assumes you're performing all operations with your cellular phone and the Chrome web browser.  
-You will need to jump from tab to tab: start with all tabs closed to avoid losing yourself when switching from one to another.
+Questa guida presuppone che tutte le operazioni vengano eseguite con lo smartphone e il browser web Chrome.  
+Sarà necessario passare da una scheda all'altra: iniziare con tutte le schede chiuse per evitare di perdersi durante i passaggi.
 ```
 
 (github-fork)=
 
-## 1. AAPS personal fork
+## 1. Fork personale di AAPS
 
-You will need to secretly store your personal Android Java Key and Google Drive information in GitHub (later in the process, we will explain how).
+Sarà necessario memorizzare in modo sicuro la chiave Android Java personale e le informazioni di Google Drive su GitHub (lo spiegheremo in seguito).
 
-Since this cannot be done inside the public repository of AndroidAPS, you need to make your personal copy of the source code (called a fork).
+Poiché questa operazione non può essere eseguita all'interno del repository pubblico di AndroidAPS, è necessario creare una copia personale del codice sorgente (chiamata fork).
 
-### GitHub account
+### Account GitHub
 
-You need to [create a GitHub account](https://github.com/signup) if you don't have one yet.  
-You can sign up with your email, or you can sign up with Google. Follow the registration and verification process.
+Se non hai ancora un account GitHub, devi [crearne uno](https://github.com/signup).  
+Puoi registrarti con la tua e-mail o con Google. Segui il processo di registrazione e verifica.
 
-When you have an account, [sign in to GitHub](https://github.com/login).
+Quando hai un account, [accedi a GitHub](https://github.com/login).
 
-### Fork AndroidAPS
+### Fork di AndroidAPS
 
-Open the official AndroidAPS repository following [this link](https://github.com/nightscout/AndroidAPS).
+Apri il repository ufficiale di AndroidAPS seguendo [questo link](https://github.com/nightscout/AndroidAPS).
 
-Tap on the fork icon. This will create a copy inside your own account.
+Tocca l'icona fork. Verrà creata una copia all'interno del tuo account.
 
 ![fork_aaps](../images/Building-the-App/CI/ForkAAPS.png)
 
-Scroll down the next screen and tap **Create Fork**.
+Scorri verso il basso nella schermata successiva e tocca **Create Fork**.
 
 ![fork_aaps_confirm](../images/Building-the-App/CI/ForkAAPS2.png)
 
-*Note: you can **unselect** "Copy the main branch only" if you will want to build developers versions or customizations.*
+*Nota: puoi **deselezionare** "Copy the main branch only" se desideri compilare versioni per sviluppatori o personalizzazioni.*
 
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
 ```{note}
-You cannot fork and you see this?</br></br>
+<<<<<<< Updated upstream
+Forking a repository allows you to freely experiment with changes without affecting the original project. You cannot fork and you see this?</br></br>
+=======
+Non riesci a fare il fork e vedi questo?</br></br>
+>>>>>>> Stashed changes
 **`Create a new fork`**</br>
-`A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. View existing forks.`</br>
+`A fork is a copy of a repository. View existing forks.`</br>
 *`Required fields are marked with an asterisk (*).`*</br>
 **`No available destinations to fork this repository.`**</br></br>
-This means you already have an existing fork of AndroidAPS.</br>
-Make sure it's up to date and continue to Preparation Steps.
+Ciò significa che hai già un fork esistente di AndroidAPS.</br>
+Assicurati che sia aggiornato e prosegui con i Passi di preparazione.
 ```
 
 ```{warning}
-**Never delete your fork without having done a backup of your secrets!**
+**Non eliminare mai il tuo fork senza aver eseguito un backup dei tuoi segreti!**
 ```
 
-GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab open.
+GitHub ora mostra la tua copia personale di AndroidAPS. Lascia questa scheda del browser aperta.
 
 ![forked_aaps](../images/Building-the-App/CI/ForkAAPS4.png)
 
 (aaps-ci-preparation)=
 
-## 2. Preparation Steps
+## 2. Passi di preparazione
 
-- If you are building from an Android device, install [File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) from the Google Play store.
+- Se stai compilando da un dispositivo Android, installa [File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) dal Google Play Store.
 
 ```{admonition} File Manager Plus
 :class: dropdown
@@ -90,12 +94,15 @@ GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab
 :::{include} BrowserBuildFileManagerPlus.md
 ```
 
-- Download the preparation file from here: [aaps-ci-preparation.html](https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
+- Scarica il file di preparazione da qui: [aaps-ci-preparation.html](https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
 
 ````{admonition} Note
 :class: note
 
-1. If you open this page from within an app (via a web view), the HTML file may not download. Please copy the URL and open it in your browser instead:
+1. If you open this page from within an app (via a web view), the HTML file may not download. raw:: html
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download>  aaps-ci-preparation.html</a>
+```<!--crowdin:enable-->Please copy the URL and open it in your browser instead:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
@@ -105,74 +112,89 @@ https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 
 2.Backup copy hosted on this site:
+
  - If the external link is also unavailable, you can use this backup file to download.
-<!--crowdin:disable-->
-
-```{eval-rst}
-.. raw:: html
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download>  aaps-ci-preparation.html</a>
+Copia l'URL e aprilo nel browser:
+>>>>>>> Stashed changes
+```text
+https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
-<!--crowdin:enable-->
+Oppure visita la pagina dell'ultima versione:
+```text
+https://github.com/nightscout/aaps-ci-preparation/releases/latest
+```
+
+2.Copia di backup ospitata su questo sito:
+
+ - Se anche il link esterno non è disponibile, puoi utilizzare questo file di backup per il download. Copia l'URL e aprilo nel browser:
+>>>>>>> Stashed changes
+```text
+https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
+```
+Oppure visita la pagina dell'ultima versione:
+```text
+https://github.com/nightscout/aaps-ci-preparation/releases/latest
+```
+
+2.Copia di backup ospitata su questo sito:
+
+ - Se anche il link esterno non è disponibile, puoi utilizzare questo file di backup per il download.
 ````
-
-AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS):
-
-- If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
-
+<<<<<<< Updated upstream AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS): - If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
+- - - - Se vuoi utilizzare il tuo JKS (quello usato per una precedente compilazione di AAPS da computer in Android Studio), conosci la password e l'alias (key0), scegli [AAPS-CI Opzione 2 – Carica JKS esistente](#aaps-ci-option2).
 </br>
 
 ```{warning}
-Building AAPS with **Option 1** will not allow you to upgrade your existing AAPS.
-You will need to:
-1. [Export settings](#ExportImportSettings-Automating-Settings-Export) on your phone.
-2. Copy or upload the settings file from your phone to an external location (i.e. your computer, cloud storage service…).
-3. Generate a new version of the signed apk as described in Option 1 and transfer it to your phone.
-4. Uninstall previous AAPS version on your phone.
-5. Install new AAPS version on your phone.
-6. [Import settings](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
-7. Restore your data from Nightscout.
+La compilazione di AAPS con l'**Opzione 1** non consentirà di aggiornare la versione esistente di AAPS.
+Sarà necessario:
+1. [Esportare le impostazioni](#ExportImportSettings-Automating-Settings-Export) sullo smartphone.
+2. Copiare o caricare il file delle impostazioni dallo smartphone in una posizione esterna (es. computer, servizio di archiviazione cloud…).
+3. Generare una nuova versione dell'apk firmato come descritto nell'Opzione 1 e trasferirla sullo smartphone.
+4. Disinstallare la versione precedente di AAPS sullo smartphone.
+5. Installare la nuova versione di AAPS sullo smartphone.
+6. [Importare le impostazioni](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) per ripristinare gli obiettivi e la configurazione.
+7. Ripristinare i dati da Nightscout.
 ```
 
-- If you want to use your own JKS (the one you used on a previous build of AAPS from a computer in Android Studio), you know its password and alias (key0), please choose [AAPS-CI Option 2 – Upload Existing JKS](#aaps-ci-option2).
+- - - - - - - - If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
 
 </br>
 
-The AAPS app will be saved in your Google Cloud drive once built.
+Una volta compilata, l'app AAPS verrà salvata nel tuo Google Cloud Drive.
 
 (aaps-ci-option1)=
-### AAPS-CI Option 1 – Generate JKS
- - Suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
-- Here are examples using multiple platforms below.
-- Select your platform in the list below, between Android (preferred choice), iOS or Computer.
+### AAPS-CI Opzione 1 – Genera JKS
+ - Adatta ai nuovi utenti, a chi non ha un JKS, o a chi ha dimenticato la password o l'alias.
+- Di seguito sono riportati esempi per più piattaforme.
+- Seleziona la tua piattaforma nell'elenco: Android (scelta preferita), iOS o Computer.
 
 ```{tab-set}
 
 :::{tab-item} Android
 (aaps-ci-option1-android)=
 :::{include} BrowserBuildO1A.md
-:::
+:::  
 
 :::{tab-item} iOS
 (aaps-ci-ios-ipad)=
 :::{include} BrowserBuildO1I.md
-:::
+:::  
 
 :::{tab-item} Computer
 (aaps-ci-option1-computer)=
 :::{include} BrowserBuildO1C.md
-:::
+:::  
 
 ```
 
-Skip the next section and continue [here](#aaps-ci-google-drive-auth).
+Salta la sezione successiva e continua [qui](#aaps-ci-google-drive-auth).
 
 ---
 
 (aaps-ci-option2)=
 
-### AAPS-CI Option 2 – Upload Existing JKS
- - Suitable for users who already have a JKS and know the JKS password and alias  (For `KEYSTORE_PASSWORD`, `KEY_ALIAS`, and `KEY_PASSWORD`, enter your actual password and alias in GitHub - those from Android Studio, see below where you used them.)
+### AAPS-CI Opzione 2 – Carica JKS esistente
+ - Adatta agli utenti che hanno già un JKS e conoscono la password e l'alias del JKS  (Per `KEYSTORE_PASSWORD`, `KEY_ALIAS` e `KEY_PASSWORD`, inserire la password e l'alias effettivi in GitHub — quelli di Android Studio, vedi sotto dove li hai utilizzati.)
 
 ```{admonition} KEY + PASSWORDS
 :class: dropdown
@@ -180,8 +202,8 @@ Skip the next section and continue [here](#aaps-ci-google-drive-auth).
 ![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
 ```
 
- - Here are examples using multiple platforms below.
- - Select your platform in the list below, between Android (preferred choice) or Computer.
+ - Di seguito sono riportati esempi per più piattaforme.
+ - Seleziona la tua piattaforma nell'elenco: Android (scelta preferita) o Computer.
 
 
 ```{tab-set}
@@ -189,92 +211,92 @@ Skip the next section and continue [here](#aaps-ci-google-drive-auth).
 :::{tab-item} Android
 (aaps-ci-option2-android)=
 :::{include} BrowserBuildO2A.md
-:::
+:::  
 
 :::{tab-item} Computer
 (aaps-ci-option2-computer)=
 :::{include} BrowserBuildO2C.md
-:::
+:::  
 
 ```
 
 </br>
 
-(aaps-ci-google-drive-auth)= 
+(aaps-ci-google-drive-auth)=
 
-### AAPS-CI Google Drive Auth
+### AAPS-CI Autenticazione Google Drive
 
 ```{warning}
-No matter which of the prior sets of instructions you followed (option 1 or option 2), you MUST add the Google Drive authorization to successfully use the Browser Build.
+Indipendentemente dall'insieme di istruzioni seguito (opzione 1 o opzione 2), DEVI aggiungere l'autorizzazione Google Drive per utilizzare con successo il Browser Build.
 ```
 
-Note: If you already followed this part in the video, you can now skip to [here](#github-build-apk).
+Nota: se hai già seguito questa parte nel video, puoi saltare direttamente [qui](#github-build-apk).
 
-Return to the File Explorer Plus tab.
+Tornare alla scheda File Explorer Plus.
 
-Scroll down to the Google Drive Auth section and tap Start Auth.
+Scorrere verso il basso fino alla sezione Google Drive Auth e toccare Start Auth.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep44.png)
 
-Select your Google account.
+Selezionare il proprio account Google.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH1.png)
 
-Scroll down and accept the access. The web page needs it to obtain the Google Drive authentication key.
+Scorrere verso il basso e accettare l'accesso. La pagina web ne ha bisogno per ottenere la chiave di autenticazione di Google Drive.
 
-Tap Continue.
+Toccare Continue.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH2.png)
 
-The `GDRIVE_OAUTH2` field will populate, tap the top Copy button.
+Il campo `GDRIVE_OAUTH2` si compilerà automaticamente; toccare il pulsante Copy in alto.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH3.png)
 
-Switch back to the GitHub tab.
+Tornare alla scheda GitHub.
 
-Scroll down to Repository secrets and tap New repository secret.
+Scorrere verso il basso fino a Repository secrets e toccare New repository secret.
 
-If you followed Option 1 you should see this:
+Se hai seguito l'Opzione 1, dovresti vedere questo:
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH4.png)
 
-If you followed Option 2 there will be more keys:
+Se hai seguito l'Opzione 2, ci saranno più chiavi:
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH4b.png)
 
-In the Name field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+Nel campo Name, incollare il testo appena copiato. Usare una pressione prolungata sulla casella di testo per visualizzare il menu di incollaggio.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH5.png)
 
-Switch to the File Explorer Plus tab.
+Passare alla scheda File Explorer Plus.
 
-Tap the second Copy button.
+Toccare il secondo pulsante Copy.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH6.png)
 
-Switch back to the GitHub tab.
+Tornare alla scheda GitHub.
 
-1. In the Secret field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+1. Nel campo Secret, incollare il testo appena copiato. Usare una pressione prolungata sulla casella di testo per visualizzare il menu di incollaggio.
 
-2. Tap Add secret.
+2. Toccare Add secret.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH7.png)
 
-You should have either two (option 1) or five (option 2) secrets entries now.
+Ora dovresti avere due (opzione 1) o cinque (opzione 2) voci di segreti.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH8.png)
 
-GitHub will now be able to store the AAPS apk file in your Google Drive, once built.
+GitHub sarà ora in grado di salvare il file apk di AAPS nel tuo Google Drive, una volta compilato.
 
 (github-build-apk)=
-## AAPS-CI GitHub Actions to Build the AAPS APK
- - Suitable for general users.
+## AAPS-CI GitHub Actions per compilare l'APK di AAPS
+ - Adatto agli utenti generici.
 
 ```{tab-set}
 
 :::{tab-item} Wiki
 :::{include} BrowserBuildCIS.md
-:::
+:::  
 
 :::{tab-item} Video
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
@@ -287,111 +309,110 @@ GitHub will now be able to store the AAPS apk file in your Google Drive, once bu
     </iframe>
   </div>
 </div>
-:::
+:::  
 
 ```
 
-### Build Version selection
+### Selezione della versione da compilare
 
-**Only AAPS versions from 3.3.2.1 and above will build with the Browser method.**
+**Solo le versioni di AAPS dalla 3.3.2.1 in su possono essere compilate con il metodo Browser.**
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant2.png)
 
-(browserbuild-variant)=
+(variant)=
 
-### Build Variants selection
+### Selezione della variante di compilazione
 
-*Note: both Android and Android Wear apps will be built automatically.*
+*Nota: sia l'app Android che l'app Android Wear verranno compilate automaticamente.*
 
-  - Select the variant you need:
-    - fullRelease: For regular pump usage with full functionality.
-    - [aapsclientRelease, aapsclient2Release](#RemoteControl_aapsclient): For caregivers (requires [Nightscout](../SettingUpAaps/Nightscout.md))。
-    - pumpcontrolRelease: To replace your pump app/controller
+  - Selezionare la variante necessaria:
+    - fullRelease: Per l'uso regolare del microinfusore con tutte le funzionalità.
+    - [aapsclientRelease, aapsclient2Release](#RemoteControl_aapsclient): Per i caregiver (richiede [Nightscout](../SettingUpAaps/Nightscout.md)).
+    - pumpcontrolRelease: Per sostituire l'app/controller del microinfusore.
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant3.png)
 
-Variants ending with “Debug” indicates that the APK will be built in debug mode, which is useful for developers for troubleshooting.
+Le varianti che terminano con "Debug" indicano che l'APK verrà compilato in modalità debug, utile per gli sviluppatori per la risoluzione dei problemi.
 
 <!-- If you want to test the items in a pull request has been moved to dev page /AdvancedOptions/DevBranch.md -->
 
 (aaps-ci-troubleshooting)=
-## AAPS-CI Troubleshooting
+## Risoluzione dei problemi AAPS-CI
 
 (aaps-ci-preparation-web)=
-### aaps-ci-preparation web page
-  - When you open aaps-ci-preparation.html using a file manager, it will start a temporary local server on your phone to display the webpage and receive the Google refresh token.
-  - If you see the screen below, it means you have been inactive for a while, and the file manager has already shut down the local server.
-  - Please reopen aaps-ci-preparation.html using the file manager app and complete the remaining steps.
+### Pagina web aaps-ci-preparation
+  - Quando si apre aaps-ci-preparation.html tramite un file manager, viene avviato un server locale temporaneo sullo smartphone per visualizzare la pagina web e ricevere il token di aggiornamento Google.
+  - Se viene visualizzata la schermata seguente, significa che si è stati inattivi per un po' e il file manager ha già chiuso il server locale.
+  - Riaprire aaps-ci-preparation.html tramite l'app file manager e completare i passaggi rimanenti.
 
   ![aaps_ci_html_not_found](../images/Building-the-App/CI/aaps_ci_html_not_found.png)
 
 (aaps-ci-google-token-expired)=
-### Google Refresh Token Expired
-  - Google OAuth2 refresh tokens will expire if not used for 6 months, and may also become invalid under other conditions (e.g., you have changed your Google account password, or manually revoked access). For more details, see the [Google OAuth2 documentation](https://developers.google.com/identity/protocols/oauth2).
-  - You will see an error indicating that the access token is invalid, as shown below:
+### Token di aggiornamento Google scaduto
+  - I token di aggiornamento Google OAuth2 scadono se non vengono utilizzati per 6 mesi e possono diventare non validi anche in altre condizioni (ad es. se si è cambiata la password dell'account Google o si è revocato manualmente l'accesso). Per maggiori dettagli, consultare la [documentazione Google OAuth2](https://developers.google.com/identity/protocols/oauth2).
+  - Verrà visualizzato un errore che indica che il token di accesso non è valido, come mostrato di seguito:
 
   ![aaps_ci_token_expired](../images/Building-the-App/CI/aaps_ci_token_expired.jpg)
 
-  - If your build fails due to an expired or revoked Google refresh token, you will need to redo the [Google Drive Auth](#aaps-ci-google-drive-auth) steps to obtain a new `GDRIVE_OAUTH2` token and update the secret in your GitHub repository, then re-run the build workflow.
+  - Se la compilazione fallisce a causa di un token di aggiornamento Google scaduto o revocato, sarà necessario ripetere i passaggi [Autenticazione Google Drive](#aaps-ci-google-drive-auth) per ottenere un nuovo token `GDRIVE_OAUTH2` e aggiornare il segreto nel repository GitHub, quindi rieseguire il workflow di compilazione.
 
 (aaps-ci-disable-software)=
-### Disable Software That May Interfere With OAUTH Verification
-  - Disable any VPN or security app (firewall, antimalware,...) on the phone before trying to get the OAUTH key.
+### Disabilitare il software che potrebbe interferire con la verifica OAUTH
+  - Disabilitare qualsiasi VPN o app di sicurezza (firewall, antimalware, …) sullo smartphone prima di tentare di ottenere la chiave OAUTH.
 
 (aaps-ci-actions-permission)=
-### Check GitHub Actions Permission Settings
-  - Make sure GitHub Actions policies are set to “Allow all actions and reusable workflows” (Settings → Actions → General).
+### Verificare le impostazioni dei permessi di GitHub Actions
+  - Assicurarsi che le policy di GitHub Actions siano impostate su "Allow all actions and reusable workflows" (Settings → Actions → General).
 
   ![aaps_ci_actions_permission](../images/Building-the-App/CI/aaps-ci-actions-permission.png)
 
-`actions/checkout@v4` and `actions/setup-java@v4` are not allowed to be used in `xxxxx/AndroidAPS`.
- Actions in this workflow must be: within a repository owned by `xxxxx`
+`actions/checkout@v4` e `actions/setup-java@v4` non sono autorizzati per l'uso in `xxxxx/AndroidAPS`. Le azioni in questo workflow devono essere: all'interno di un repository di proprietà di `xxxxx`
 
 --------
 
 ```{warning}
-Customizations are usually not necessary. This is for your information ony.
+Le personalizzazioni di solito non sono necessarie. Queste informazioni sono fornite solo a titolo informativo.
 ```
 
 (github-cherry-pick)=
 
-## If you want to add a specific commit to your branch, please use cherry-pick.
+## Per aggiungere un commit specifico al branch, utilizzare cherry-pick.
 
   ![aaps_cherry-pick_ci](../images/Building-the-App/CI/aaps_cherry_pick_ci.png)
 
-  - Use workflow from Branch: Please enter the branch name you want to cherry-pick to.
-  - Upstream Repository: Please enter the repository name you want to cherry-pick from.
-  - Commit SHA: Please enter the commit SHA you want to cherry-pick.(like git commit hash)
-  - Select Build Variant: [variant](#browserbuild-variant)
+  - Use workflow from Branch: Inserire il nome del branch a cui si desidera applicare il cherry-pick.
+  - Upstream Repository: Inserire il nome del repository da cui si desidera applicare il cherry-pick.
+  - Commit SHA: Inserire il commit SHA da applicare con cherry-pick (come hash del commit git).
+  - Select Build Variant: [variante](variant)
 
 (ci-keystore-export)=
-## CI KeyStore Export
+## Esportazione CI KeyStore
 
-If you want to export your stored keystore, use this method.
+Per esportare il keystore memorizzato, utilizzare questo metodo.
 
-This script will export your previously configured keystore information (from Option 1 or Option 2) as a password-protected ZIP file to the `/AAPS/KeyStore` directory in your Google Drive.
+Questo script esporterà le informazioni sul keystore precedentemente configurato (dall'Opzione 1 o dall'Opzione 2) come file ZIP protetto da password nella directory `/AAPS/KeyStore` del Google Drive.
 
 ```{warning}
-Before using this export method, make sure your keystore and Google Drive settings have been completed.
+Prima di utilizzare questo metodo di esportazione, assicurarsi che le impostazioni del keystore e di Google Drive siano state completate.
 ```
 
-### Steps:
+### Passaggi:
 
-1. **Add ZIP Password Secret:**
-   - Go to your repository's **Settings** → **Secrets and variables** → **Actions**
-   - Click **New repository secret**
-   - In the **Name** field, enter: `ZIP_PASSWORD`
-   - In the **Secret** field, enter your custom ZIP encryption password
-   - Use only English letters and numbers for the password (no special symbols)
-   - Click **Add secret**
+1. **Aggiungere il segreto della password ZIP:**
+   - Vai su **Settings** → **Secrets and variables** → **Actions** del tuo repository.
+   - Fare clic su **New repository secret**.
+   - Nel campo **Name**, inserire: `ZIP_PASSWORD`
+   - Nel campo **Secret**, inserire la password di crittografia ZIP personalizzata.
+   - Utilizzare solo lettere e numeri inglesi per la password (nessun simbolo speciale).
+   - Fare clic su **Add secret**.
 
    ![aaps_ci_zip_password.png](../images/Building-the-App/CI/aaps_ci_zip_password.png)
 
-2. **Run Export Workflow:**
-   - Go to the **Actions** tab in your repository
-   - Select **CI KeyStore Export**
-   - Click **Run workflow**
-   - The exported keystore ZIP file will be saved to your Google Drive
+2. **Eseguire il workflow di esportazione:**
+   - Andare alla scheda **Actions** del repository.
+   - Selezionare **CI KeyStore Export**.
+   - Fare clic su **Run workflow**.
+   - Il file ZIP del keystore esportato verrà salvato su Google Drive.
 
    ![aaps_ci_keystore_export.png](../images/Building-the-App/CI/aaps_ci_keystore_export.png)
 
