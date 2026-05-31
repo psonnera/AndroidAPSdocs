@@ -1,135 +1,150 @@
 # Accu-Chek Insight Pump
 
-**Questo software è parte di una soluzione fai-da-te per pancreas artificiale e non è un prodotto finito, ma richiede che sia TU a leggere, imparare e comprendere il sistema, incluso come utilizzarlo. Non è qualcosa che gestisce tutta la tua terapia del diabete al posto tuo, ma ti permette di migliorare il tuo diabete e la tua qualità di vita se sei disposto a dedicarvi il tempo necessario. Non affrettarti, ma concediti il tempo di imparare. Sei tu solo il responsabile di ciò che ne fai.**
+**This software is part of a DIY artificial pancreas solution and is not a product, but
+requires YOU to read, learn and understand the system including how to use it.
+It is not something that does all your diabetes management for you but
+allows you to improve your diabetes and your quality of life, 
+if you're willing to put in the time required. Don't rush into it,
+but allow yourself time to learn. You alone are responsible for what
+you do with it.**
 
 ---
-***AVVISO:** Se in passato hai utilizzato Insight con **SightRemote**, aggiorna alla **versione più recente di AAPS** e **disinstalla SightRemote**.*
+***WARNING:** If you have been using the Insight with **SightRemote** in the past, please **update to the newest AAPS version** and **uninstall SightRemote**.*
 ---
 
 
-## Requisiti hardware e software
+## Hardware and software requirements
 
-* Un microinfusore Roche Accu-Chek Insight (qualsiasi firmware, tutti funzionano)
+* A Roche Accu-Chek Insight pump (any firmware, they all work)
 
-Nota: AAPS scriverà i dati sempre nel **primo profilo di velocità basale del microinfusore**.
-* Uno smartphone Android (praticamente qualsiasi versione Android funziona con Insight, ma controlla la pagina [Componenti](../Getting-Started/ComponentOverview) per sapere quale versione Android è necessaria per eseguire AAPS.)
-* L'app AAPS installata sul telefono
+Note: AAPS will write data always in **first basal rate profile in the pump**.
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Getting-Started/ComponentOverview) page which Android version is required to run AAPS.)
+* The AAPS app installed on your phone
 
-## Configurazione
+## Setup
 
-* Il microinfusore Insight deve essere connesso a un solo dispositivo alla volta. Se in precedenza hai usato il telecomando Insight (glucometro), devi rimuovere il glucometro dall'elenco dei dispositivi associati al microinfusore: Menu > Impostazioni > Comunicazione > Rimuovi dispositivo
-
+* The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: Menu > Settings > Communication > Remove device
+  
    ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
-
-* In [Costruttore di configurazione > Microinfusore](../SettingUpAaps/ConfigBuilder.md), selezionare Accu-Chek Insight.
+   
+* In [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md), select Accu-Chek Insight.
 
    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
-* Toccare l'ingranaggio per aprire le impostazioni Insight.
-* Nelle impostazioni, toccare il pulsante 'Associazione Insight' nella parte superiore dello schermo. Verrà visualizzato un elenco di tutti i dispositivi Bluetooth nelle vicinanze (in basso a sinistra).
-* Sul microinfusore Insight, andare a Menu > Impostazioni > Comunicazione > Aggiungi dispositivo. Il microinfusore visualizzerà la schermata seguente (in basso a destra) con il numero di serie del microinfusore.
+* Tap the cog-wheel to open Insight settings.
+* In settings, tap on the button 'Insight pairing' at the top of the screen. You should see a list of all nearby bluetooth devices (below left).
+* On the Insight pump, go to Menu > Settings > Communication > Add Device. The pump will display the following screen (below right) showing the serial number of the pump.
 
    ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
 
-* Tornando al telefono, toccare il numero di serie del microinfusore nell'elenco dei dispositivi Bluetooth. Poi toccare Associa per confermare.
+* Going back to your phone, tap on the pump serial number in the list of bluetooth devices. Then tap on Pair to confirm. 
 
    ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
 
-* Sia il microinfusore che il telefono visualizzeranno un codice. Verificare che i codici siano uguali su entrambi i dispositivi e confermare sia sul microinfusore che sul telefono.
+* Both the pump and phone will then display a code. Check that the codes are the same on both devices and confirm on both the pump and the phone.
 
    ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
 
-* Fatto! Complimenti per aver associato correttamente il microinfusore con AAPS.
+* Success! Pat yourself on the back for successfully pairing your pump with AAPS.
 
    ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
 
-* Per verificare che tutto funzioni, tornare al Costruttore di configurazione in AAPS e toccare l'ingranaggio accanto al Microinfusore Insight per accedere alle impostazioni Insight, quindi toccare Associazione Insight e vedrai alcune informazioni sul microinfusore:
+* To check all is well, go back to Config builder in AAPS and tap on the cog-wheel by the Insight Pump to get into Insight settings, then tap on Insight Pairing and you will see some information about the pump:
 
    ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
 
-Nota: Non ci sarà una connessione permanente tra il microinfusore e il telefono. La connessione verrà stabilita solo quando necessario (ad es. per impostare una basale temporanea, erogare un bolo, leggere la cronologia del microinfusore...). Altrimenti la batteria del telefono e del microinfusore si scaricherebbe troppo rapidamente.
+Note: There will be no permanent connection between pump and phone. A connection will only be established if necessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Otherwise battery of phone and pump would drain way too fast.
 
 (Accu-Chek-Insight-Pump-settings-in-aaps)=
-## Impostazioni in AAPS
-**Nota: Ora è possibile (solo con AAPS v2.7.0 e versioni successive) usare 'Usa sempre valori basali assoluti' se si vuole usare Autotune con il microinfusore Insight, anche se 'la sincronizzazione è abilitata' con Nightscout.** (In AAPS vai a [Preferenze > NSClient > Impostazioni avanzate](#Preferences-advanced-settings-nsclient)).
+## Settings in AAPS
+**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](#Preferences-advanced-settings-nsclient)).
 
    ![Screenshot of Insight Settings](../images/Insight_settings.png)
 
-Nelle impostazioni Insight in AAPS è possibile abilitare le seguenti opzioni:
-* "Registra cambio serbatoio": Registra automaticamente un cambio cartuccia insulina quando si esegue il programma "riempimento cannula" sul microinfusore.
+In the Insight settings in AAPS you can enable the following options:
+* "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.
 
-* "Registra cambio tubo": Aggiunge una nota nel database AAPS quando si esegue il programma "riempimento tubo" sul microinfusore.
+* "Log tube changes": This adds a note to the AAPS database when you run the "tube filling" program on the pump.
 
-* "Registra cambio sito": Aggiunge una nota nel database AAPS quando si esegue il programma "riempimento cannula" sul microinfusore. **Nota: Un cambio sito reimposta anche Autosens.**
+* "Log site change": This adds a note to the AAPS database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
 
-* "Registra cambio batteria": Registra un cambio batteria quando si inserisce una nuova batteria nel microinfusore.
+* "Log battery changes": This records a battery change when you put a new battery in the pump.
 
-* "Registra cambi modalità operativa": Inserisce una nota nel database AAPS ogni volta che si avvia, si ferma o si mette in pausa il microinfusore.
+* "Log operating mode changes": This inserts a note in the AAPS database whenever you start, stop or pause the pump.
 
-* "Registra avvisi": Registra una nota nel database AAPS ogni volta che il microinfusore emette un avviso (eccetto promemoria, bolo e annullamento TBR - questi non vengono registrati).
+* "Log alerts": This records a note in the AAPS database whenever the pump issues an alert (except reminders, bolus and TBR cancellation - those are not recorded).
 
-* "Abilita emulazione TBR": Il microinfusore Insight può erogare basali temporanee (TBR) solo fino al 250%. Per aggirare questa limitazione, l'emulazione TBR ordinerà al microinfusore di erogare un bolo esteso per l'insulina aggiuntiva se si richiede una TBR superiore al 250%.
+* "Enable TBR emulation": The Insight pump can only issue temporary basal rates (TBRs) up to 250%. To get round this restriction, TBR emulation will instruct the pump to deliver an extended bolus for the extra insulin if you request a TBR of more than 250%.
 
-  **Nota: Usare un solo bolo esteso alla volta, poiché più boli estesi contemporaneamente potrebbero causare errori.**
-
-* "Disabilita vibrazioni durante erogazione bolo manuale": Disabilita le vibrazioni del microinfusore Insight durante l'erogazione di un bolo manuale (o esteso). Questa impostazione è disponibile solo con l'ultima versione del firmware Insight (3.x).
-
-* "Disabilita vibrazioni durante erogazione bolo automatico": Disabilita le vibrazioni del microinfusore Insight durante l'erogazione di un bolo automatico (SMB o basale temporanea con emulazione TBR). Questa impostazione è disponibile solo con l'ultima versione del firmware Insight (3.x).
-
-* "Durata recupero": Definisce per quanto tempo AAPS attenderà prima di riprovare dopo un tentativo di connessione fallito. È possibile scegliere da 0 a 20 secondi. In caso di problemi di connessione, scegliere un tempo di attesa più lungo. <br><br>Example for min. recovery duration = 5 and max. recovery duration = 20 <br><br>no connection -> wait <b>5</b> sec. <br>  retry -> no connection -> wait <b>6</b> sec. <br>  retry -> no connection -> wait <b>7</b> sec. <br>  retry -> no connection -> wait <b>8</b> sec. <br>... <br>  riprova -> nessuna connessione -> attendi <b>8</b> sec. <br>... <br>riprova -> nessuna connessione -> attendi <b>20</b> sec.
-
-* "Ritardo disconnessione": Definisce per quanto tempo (in secondi) AAPS attenderà prima di disconnettersi dal microinfusore al termine di un'operazione. Il valore predefinito è 5 secondi.
+  **Note: Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.**
+  
+* "Disable vibrations on manual bolus delivery": This disables the Insight pump's vibrations when delivering a manual bolus (or extended bolus). This setting is available only with the latest version of Insight firmware (3.x).
+  
+* "Disable vibrations on automated bolus delivery": This disables the Insight pump's vibrations when delivering an automatic bolus (SMB or Temp basal with TBR emulation). This setting is available only with the latest version of Insight firmware (3.x).
+  
+* "Recovery duration": This defines how long AAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time.
+    <br><br>Example for min. recovery duration = 5 and max. recovery duration = 20
+    <br><br>no connection -> wait <b>5</b> sec.
+      <br>  retry -> no connection -> wait <b>6</b> sec.
+      <br>  retry -> no connection -> wait <b>7</b> sec.
+      <br>  retry -> no connection -> wait <b>8</b> sec.
+      <br>...
+      <br>retry -> no connection -> wait <b>20</b> sec.
+      <br>retry -> no connection -> wait <b>20</b> sec.
+      <br>...
+    
+* "Disconnect delay": This defines how long (in seconds) AAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
 
 For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
 
-In AAPS, la scheda Accu-Chek Insight mostra lo stato attuale del microinfusore e ha due pulsanti:
-* "Aggiorna": Aggiorna lo stato del microinfusore
-* "Abilita/Disabilita TBR tramite notifica": Un microinfusore Insight standard emette un allarme quando una TBR è terminata. Questo pulsante consente di abilitare o disabilitare questo allarme senza bisogno di software di configurazione.
+In AAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
+* "Refresh": Refreshes pump status
+* "Enable/Disable TBR over notification": A standard Insight pump emits an alarm when a TBR is finished. This button lets you enable or disable this alarm without the need for configuration software.
 
    ![Screenshot of Insight Status](../images/Insight_Status2.png)
 
 ## Settings in the pump
 
-Configurare gli allarmi nel microinfusore come segue:
-* Menu > Impostazioni > Impostazioni dispositivo > Impostazioni modalità > Silenzioso > Segnale > Suono
-* Menu > Impostazioni > Impostazioni dispositivo > Impostazioni modalità > Silenzioso > Volume > 0 (rimuovere tutte le barre)
-* Menu > Modalità > Modalità segnale > Silenzioso
+Configure alarms in the pump as follows:
+* Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound
+* Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
+* Menu > Modes > Signal mode > Quiet
 
-Questo disattiverà tutti gli allarmi del microinfusore, consentendo ad AAPS di decidere se un allarme è rilevante. Se AAPS non conferma un allarme, il volume aumenterà (prima un segnale acustico, poi una vibrazione).
+This will silence all alarms from the pump, allowing AAPS to decide if an alarm is relevant to you. If AAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
 
 (Accu-Chek-Insight-Pump-vibration)=
-### Vibrazione
+### Vibration
 
-A seconda della versione del firmware del microinfusore, l'Insight vibrerà brevemente ogni volta che viene erogato un bolo (ad esempio, quando AAPS emette un SMB o l'emulazione TBR eroga un bolo esteso).
+Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AAPS issues an SMB or TBR emulation delivers an extended bolus).
 
-* Firmware 1.x: Nessuna vibrazione per design.
-* Firmware 2.x: La vibrazione non può essere disabilitata.
-* Firmware 3.x: AAPS eroga il bolo silenziosamente. (versione minima [2.6.1.4](#Releasenotes-version-2-6-1-4))
+* Firmware 1.x: No vibration by design.
+* Firmware 2.x: Vibration cannot be disabled.
+* Firmware 3.x: AAPS delivers bolus silently. (minimum [version 2.6.1.4](#Releasenotes-version-2-6-1-4))
 
-La versione del firmware si trova nel menu.
+Firmware version can be found in the menu.
 
-## Sostituzione della batteria
+## Battery replacement
 
-La durata della batteria per Insight in modalità loop varia da 10 a 14 giorni, con un massimo di 20 giorni. L'utente che riporta questo dato usa batterie al litio Energizer.
+Battery life for Insight when looping range from 10 to 14 days, max. 20 days. The user reporting this is using Energizer lithium batteries.
 
-Il microinfusore Insight ha una piccola batteria interna per mantenere le funzioni essenziali come l'orologio durante la sostituzione della batteria rimovibile. Se la sostituzione della batteria richiede troppo tempo, questa batteria interna potrebbe esaurirsi, l'orologio si azzererà e verrà chiesto di inserire una nuova data e ora dopo aver inserito la nuova batteria. In questo caso, tutte le voci in AAPS precedenti al cambio batteria non verranno più incluse nei calcoli poiché l'ora corretta non può essere identificata correttamente.
+The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
 
 (Accu-Chek-Insight-Pump-insight-specific-errors)=
-## Errori specifici di Insight
+## Insight specific errors
 
 ### Extended bolus
 
-Usare un solo bolo esteso alla volta, poiché più boli estesi contemporaneamente potrebbero causare errori.
+Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
 
-### Timeout
+### Time out
 
-A volte può succedere che il microinfusore Insight non risponda durante la configurazione della connessione. In questo caso AAPS visualizzerà il seguente messaggio: "Timeout durante l'handshake - resetta Bluetooth".
+Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset bluetooth".
 
 ![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
 
-In questo caso spegnere il Bluetooth sia sul microinfusore che sullo smartphone per circa 10 secondi e poi riaccenderlo.
+In this case turn off bluetooth on pump AND smartphone for about 10 seconds and then turn it back on.
 
 ## Crossing time zones with Insight pump
 
-Per informazioni sui viaggi attraverso i fusi orari vedere la sezione [Viaggi con cambi di fuso orario con i microinfusori](#timezone-traveling-insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-insight).
 

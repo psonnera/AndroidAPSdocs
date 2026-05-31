@@ -1,66 +1,67 @@
 (Extended-Carbs-extended-carbs-ecarbs)=
-# Carboidrati estesi / "eCarbs"
+# Extended carbs / "eCarbs"
 
-## Cosa sono gli eCarbs e quando sono utili?
+## What are eCarbs and when are they useful?
 
-Con la terapia con microinfusore tradizionale, i boli estesi sono un buon metodo per gestire pasti grassi o comunque ad assorbimento lento, che aumentano la glicemia più a lungo di quanto dura l'effetto dell'insulina. Nel contesto del loop, tuttavia, i boli estesi non hanno molto senso (e pongono difficoltà tecniche), poiché sono essenzialmente una basale temporanea elevata e fissa, che va contro il funzionamento del loop, il quale regola la basale in modo dinamico. Per i dettagli vedere [bolo esteso](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) di seguito.
+With a regular pump therapy, extended boluses are a good way to deal with fatty or otherwise slowly-absorbed meals which increase blood glucose longer than the insulin is in effect. In a loop context, however, extended boluses don't make as much sense (and pose technical difficulties), since they're basically a fixed high temporary basal rate, which goes against how the loop works, which is adjusting the basal rate dynamically. For details see [extended bolus](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) below.
 
-La necessità di gestire tali pasti esiste comunque. Ecco perché AAPS dalla versione 2.0 supporta i cosiddetti carboidrati estesi o eCarbs.
+The need to deal with such meals still exists though. Which is why AAPS as of version 2.0 supports so called extended carbs or eCarbs.
 
-Gli eCarbs sono carboidrati suddivisi su più ore. Per i pasti standard con più carboidrati che grassi/proteine, inserire i carboidrati in anticipo (e ridurre il bolo iniziale se necessario) è solitamente sufficiente per evitare una somministrazione di insulina troppo precoce.  Ma per i pasti ad assorbimento più lento, in cui l'inserimento completo dei carboidrati in anticipo genera troppa IOB dagli SMB, è possibile usare gli eCarbs per simulare più accuratamente come i carboidrati (e qualsiasi equivalente di carboidrati inserito per altri macronutrienti) vengono assorbiti e influenzano la glicemia. Con queste informazioni, il loop può somministrare SMB in modo più graduale per gestire quei carboidrati, il che può essere visto come un bolo esteso dinamico (questo dovrebbe funzionare anche senza SMB, ma probabilmente è meno efficace).
+eCarbs are carbs that are spilt up over several hours. For standard meals with more carbohydrates than fat/protein, entering the carbs up front (and reducing the initial bolus if needed) is usually sufficient to prevent too-early insulin delivery.  But for slower-absorbing meals where full carb entry up front results in too much IOB from SMB, eCarbs can be used to more accurately simulate how the carbs (and any carb equivalents you enter for other macronutrients) are absorbed and influence the blood glucose. With this information, the loop can administer SMBs more gradually to deal with those carbs, which can be seen as a dynamic extended bolus (this should also work without SMBs, but is probably less effective).
 
-**Nota:** gli eCarbs non si limitano ai pasti ricchi di grassi/proteine: possono essere usati anche per gestire qualsiasi situazione in cui vi siano influenze che aumentano la glicemia, ad esempio altri farmaci come i corticosteroidi.
+**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can be also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
 
 ## Mechanics of using eCarbs
 
-Per inserire gli eCarbs, impostare una durata nella finestra di dialogo *Carboidrati* nella scheda panoramica, il totale dei carboidrati e, facoltativamente, uno sfasamento temporale (*i numeri sottostanti sono solo esempi; sarà necessario provare i propri valori per ottenere una risposta glicemica soddisfacente per i propri casi d'uso*):
+To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the total carbs and optionally a time shift (*numbers below are just examples, you will need to try your own values to arrive at satisfactory glucose response for your use-cases*):
 
 ![Enter carbs](../images/eCarbs_Dialog.png)
 
-Gli eCarbs nella scheda panoramica; si notino i carboidrati tra parentesi nel campo COB, che mostra i carboidrati futuri:
+The eCarbs on the overview tab, note the carbs in brackets at the COB field, which shows the carbs in the future:
 
 ![eCarbs in graph](../images/eCarbs_Graph.png)
 
 ______________________________________________________________________
 
-Un metodo per gestire grassi e proteine con questa funzionalità è descritto qui: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
+A way to handle fat and protein with that feature is described here: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
 
 ______________________________________________________________________
 
-## Configurazione consigliata, scenario di esempio e note importanti
+## Recommended setup, example scenario, and important notes
 
-La configurazione consigliata prevede l'utilizzo del plugin APS OpenAPS SMB, con SMB abilitato e la preferenza *Abilita SMB con COB* attivata.
+The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as well as the *Enable SMB with COB* preference being enabled.
 
-Uno scenario, ad esempio per una pizza, potrebbe essere quello di somministrare un bolo (parziale) in anticipo tramite il *calcolatore* e poi usare il pulsante *carboidrati* per inserire i carboidrati rimanenti per una durata di 4-6 ore, a partire da 1 o 2 ore dopo.
+A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the *calculator* and then use the *carbs* button to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours.
 
-**Note importanti:** sarà necessario sperimentare per trovare i valori concreti più adatti alle proprie esigenze. Si potrebbe anche regolare con attenzione l'impostazione *minuti massimi di basale per limitare SMB a* per rendere l'algoritmo più o meno aggressivo. Con pasti a basso contenuto di carboidrati e alto contenuto di grassi/proteine, potrebbe essere sufficiente usare solo gli eCarbs senza boli manuali (vedere il post del blog sopra). Quando vengono generati gli eCarbs, viene creata anche una nota nel Careportal per documentare tutti gli input, in modo da semplificare l'iterazione e il miglioramento degli input.
+**Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive.
+With low carb, high fat/protein meals it may be enough to only use eCarbs without manual boluses (see the blog post above). When eCarbs are generated, a Careportal note is also created to document all inputs, to make it easier to iterate and improve inputs.
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
-## Bolo esteso e perché non funziona in un ambiente a loop chiuso?
+## Extended bolus and why they won't work in closed-loop environment?
 
-Come menzionato sopra, i boli estesi o multiwave non funzionano davvero in un ambiente a loop chiuso. [Vedere sotto](#why-extended-boluses-wont-work-in-a-closed-loop-environment) per i dettagli.
+As mentioned above extended or multiwave boluses do not really work in a closed loop environment. [See below](#why-extended-boluses-wont-work-in-a-closed-loop-environment) for details
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
-### Bolo esteso e passaggio al loop aperto - solo microinfusori Dana e Insight
+### Extended bolus and switch to open loop - Dana and Insight pump only
 
-Alcune persone richiedevano la possibilità di usare comunque il bolo esteso in AAPS per poter trattare alimenti speciali nel modo a cui erano abituati.
+Some people were asking for an option to use extended bolus in AAPS anyway as they wanted to treat special foods the way they are used to.
 
-Ecco perché dalla versione 2.6 esiste un'opzione per il bolo esteso per gli utenti dei microinfusori Dana e Insight.
+That's why as of version 2.6 there is an option for an extended bolus for users of Dana and Insight pumps.
 
-- Il loop chiuso verrà automaticamente interrotto e si passerà alla modalità loop aperto per tutta la durata del bolo esteso.
-- Le unità del bolo, il tempo rimanente e quello totale verranno mostrati nella schermata principale.
-- Sul microinfusore Insight il bolo esteso *non è disponibile* se viene utilizzata l'[emulazione TBR](#Accu-Chek-Insight-Pump-settings-in-aaps).
+- Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
+- Bolus units, remaining and total time will be shown on homescreen.
+- On Insight pump extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
 
 ![Extended bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
 
 (why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
-### Perché i boli estesi non funzionano in un ambiente a loop chiuso
+### Why extended boluses won't work in a closed loop environment
 
-1. Il loop determina che ora devono essere somministrate 1,55 U/h. Che ciò venga somministrato come bolo esteso o TBR non è importante per l'algoritmo. Alcuni microinfusori usano effettivamente il bolo esteso. Cosa dovrebbe accadere allora? La maggior parte dei driver del microinfusore interrompe il bolo esteso -> non era nemmeno necessario avviarlo.
+1. The loop determines that now 1.55U/h is to be delivered. Whether this is delivered as an extended bolus or TBR does not matter to the algorithm. In fact, some of the pumps use the extended bolus. What should happen then? Most pump drivers then stop the extended bolus -> You didn't even need to start it.
 
-2. Se il bolo esteso fosse usato come input, cosa dovrebbe accadere nel modello?
+2. If you had the extended bolus as input, what should happen in the model?
 
-   1. Dovrebbe essere considerato neutro insieme alla BR e messo in loop? Allora il loop dovrebbe anche poter ridurre il bolo se, ad esempio, la glicemia scende troppo e tutta l'insulina "neutrale" viene eliminata?
-   2. Il bolo esteso dovrebbe semplicemente essere aggiunto? Quindi il loop dovrebbe semplicemente continuare? Anche nella peggiore delle ipoglicemie? Non sembra una buona idea: è prevista un'ipoglicemia ma non deve essere prevenuta?
+   1. Should it be considered neutral together with the BR and looped on it? Then the loop should also be able to reduce the bolus if, for example, you get too low and all the "neutral" insulin is taken away?
+   2. Should the extended bolus simply be added? So the loop should simply be allowed to continue? Even in the worst hypo? I don't think this is so good: A hypo is foreseen but it must not be prevented?
 
-3. L'IOB accumulato dal bolo esteso si materializza dopo 5 minuti alla successiva esecuzione. Di conseguenza, il loop eroga meno basale. Quindi non cambia molto... tranne che viene eliminata la possibilità di evitare l'ipoglicemia.
+3. The IOB that the extended bolus builds up materializes after 5 minutes at the next run. Accordingly, the loop would give less basal. So not much changes... except that the possibility of hypo avoidance is taken.

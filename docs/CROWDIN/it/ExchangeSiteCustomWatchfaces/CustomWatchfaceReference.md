@@ -1,45 +1,45 @@
-# Documento di riferimento Custom Watchface
+# Custom Watchface Reference Document
 
-Questa pagina è destinata ai designer di nuovi quadranti. Elenca tutte le parole chiave e le funzionalità disponibili per creare o animare un nuovo quadrante.
+This page is for designers of new Watchfaces. It will list all the keywords and features available when you want to create or animate a new watchface.
 
-- Le nuove funzionalità e chiavi disponibili in Custom Watchface V2 (Wear apk 3.3.0 o superiore) sono disponibili [qui](#cwf-reference-new-v2-features)
+- New features and keys available in Custom Watchface V2 (Wear apk 3.3.0 or above) are available [here](#cwf-reference-new-v2-features)
 
-## Formato Custom Watchface
+## Custom Watchface Format
 
-Custom Watchface è un formato aperto progettato per AAPS, associato al nuovo quadrante "AAPS (Custom)" disponibile sull'orologio.
+Custom Watchface is an open format designed for AAPS and associated to the new "AAPS (Custom)" watchface available on Watch.
 
-Il file del quadrante è un semplice file zip, ma per essere riconosciuto come file di quadrante, il file zip deve contenere i seguenti file:
+The Watchface file is a simple zip file, but to be recognized as a Watchface file, the zip file must contain the following files:
 
 - One image file named CustomWatchface (can be bitmap files `CustomWatchface.jpg`, `CustomWatchface.png` or a vector `CustomWatchface.svg`). This file is the little icon used to select the watchface when you click on "Load Watchface" button, and also the image visible within AAPS Wear plugin.
-- Un file denominato `CustomWatchface.json` (vedi [struttura JSON](#cwf-reference-json-structure) sotto). Questo secondo file è il file principale che contiene tutte le informazioni necessarie per progettare il quadrante. Il file json deve essere valido (questo è probabilmente il punto più delicato quando si modifica manualmente il file con un editor di testo, perché una virgola mancante o in più è sufficiente a invalidare il formato json). Il file JSON deve anche includere un blocco `"metadata"` con una chiave `"name"` non vuota. Questo sarà il nome del tuo quadrante personalizzato (vedi [Impostazioni Metadata](#cwf-reference-metadata-settings) sotto).
-- - the size of this zip should be as small as possible (less than about 500kb). If this file is too big, it will just be blocked and not transmitted to the watch.
+- One file named `CustomWatchface.json` (see [JSON structure](#cwf-reference-json-structure) below). This second file is the core file that will include all information required to design the watchface. This json file must be valid (it's probably the most tricky point when you edit manually this file within a text editor, because a missing or additional comma is enough to break the json format). This JSON file must also include a `"metadata"` block with a `"name"` key with not empty value. This will be the name of your custom watchface (see [Metadata settings](#cwf-reference-metadata-settings) below)
+- the size of this zip should be as small as possible (less than about 500kb). If this file is too big, it will just be blocked and not transmitted to the watch.
 
-Il file zip può contenere anche alcuni file di risorse aggiuntivi:
+The zip file can also contain some additional resource files:
 
-- Nomi di file predefiniti per le immagini che verranno utilizzate nelle viste standard incluse nel quadrante (come `Background`, `CoverChart`... vedi [Elenco dei file di risorse predefiniti](#cwf-reference-list-of-hardcoded-resource-files) sotto). Tutti questi file possono essere in formato `jpg`, `png` o `svg`, ma per la maggior parte di essi sarà necessario usare `png` o `svg` che gestiscono la trasparenza (i jpg sono più leggeri dei png, ma senza trasparenza). La migliore qualità con la dimensione minore si ottiene generalmente con i file svg (formato vettoriale).
-- File di risorse aggiuntivi con nomi liberi. Questi file aggiuntivi possono essere immagini o font (`ttf` e `otf` sono i formati accettati per i font). Il `filename` (senza estensione) verrà usato come keyValue nel file JSON per specificare dove o quando questi file devono essere usati.
-  - I file immagine vengono spesso usati come sfondo di viste di testo o per animazioni dinamiche (come il livello della batteria da 0% a 100%)
-  - I file font consentono di usare font dedicati nel quadrante
+- Hardcoded file names for images that will be used used in standard views included in the watchface (like `Background`, `CoverChart`... see [List of hardcoded resource files](#cwf-reference-list-of-hardcoded-resource-files) below). All these files can be either `jpg`, `png` or `svg` format. but for most of them, you will have to use `png` or `svg` that manage transparency (jpg are smaller in size compared to png, but with no transparency). Note that the best quality associated to the smallest size will generally be with svg files (vector format).
+- Additional resource files with free names. These additional files can be either image files, or font files (`ttf` and `otf` format are accepted for fonts). Note that for these additional files, the `filename` (without extension) will be used as the keyValue, within JSON file, to specify where or when these files should be used.
+  - image files are often used as background of text views or for dynamic animation (like battery level from 0% to 100%)
+  - font files allow you to use dedicated fonts within your watchface
 
 (cwf-reference-json-structure)=
 
-## Struttura JSON
+## JSON Structure
 
-I file JSON possono essere modificati con un editor di testo come Notepad (o notepad++) (preferire notepad++ che riconosce il JSON e usa la formattazione a colori).
+JSON files can be edited in Notepad (or notepad++) text editor (prefer notepad++ that recognize JSON and use color formatting)
 
-- Contiene chiavi stringa `"string_key":` e valori che possono essere stringhe come `"key value"`, numeri interi, booleani come `true` o `false`, oppure blocchi di dati.
-- Ogni valore è separato da una virgola `,`
-- Un blocco di dati inizia con `{` e termina con `}`
-- Il file json è un unico blocco che inizia con `{` e termina con `}`, e al suo interno tutti i blocchi annidati sono associati a una `"key"` che deve essere univoca all'interno del blocco
-- Per migliorare la leggibilità del file json, è solitamente indentato (ogni nuova chiave è su una nuova riga, ogni nuovo blocco è sfalsato a destra di 4 spazi)
+- it contains string keys `"string_key":` and key values that can be strings like `"key value"`, integer, boolean like `true`or `false` or block of data.
+- each value is separated by a comma `,`
+- A block of data starts by `{`  and ends by `}`
+- the json file is a whole block so it starts by  `{`  and ends by `}`, and inside this file all embedded blocks are associated to a `"key"` that should be unique within the block
+- To improve readability of json file, it's generally indented (each new key is on a new line, each new block is shifted on the right by 4 spaces characters)
 
 (cwf-reference-metadata-settings)=
 
-### Impostazioni Metadata
+### Metadata Settings
 
-Questo blocco è il primo blocco incluso nel file json ed è obbligatorio. Contiene tutte le informazioni associate al quadrante, come il nome, l'autore, la data di creazione o aggiornamento, la versione dell'autore o la versione del plugin.
+This block is the first block included into the json file and is mandatory. It contains all the information associated to this watchface, like the name, the author, the date of creation or update, the author version or the plugin version.
 
-Di seguito un esempio di blocco metadata:
+See below an example of metadata block:
 
 ```text
 "metadata": {
@@ -52,17 +52,17 @@ Di seguito un esempio di blocco metadata:
 },
 ```
 
-Nota: il carattere `/` usato per la data è un carattere speciale; per essere riconosciuto correttamente nel file json, deve essere preceduto dal carattere di "escape" `\`
+Note that `/` used for the date is a special character, so to be recognize correctly within json file, you have to put before an "escape" character `\`
 
-In alcuni file json è presente una chiave aggiuntiva `"filename"`: questa chiave viene creata o aggiornata automaticamente quando il quadrante personalizzato viene caricato in AAPS (viene usata per mostrare all'utente il nome del file zip nella cartella exports), quindi può essere rimossa dal blocco metadata.
+You can see in some json file an additional key `"filename"`, this key will be automatically created or updated when the custom watchface will be loaded within AAPS (it will be used to show to the user the zip filename within exports folder), so you can remove this key within metadata block.
 
 (cwf-reference-general-parameter-settings)=
 
-### Impostazioni dei parametri generali
+### General parameter settings
 
-Ricordare che i soli valori dinamici disponibili sono quelli elencati [qui](#cwf-reference-dyndata-key-values)
+After the first block with metadata, you will set some general parameters (see [List of general parameters](#cwf-reference-list-of-general-parameters) below), this allow you to set Graph colors (Carbs, Bolus, BG values...), and also default colors for value in range, hyper or hypo (default colors of BG value and arrows)
 
-Di seguito un esempio di parametri generali
+See below an example of general parameters
 
 ```text
 "highColor": "#FFFF00",
@@ -78,11 +78,11 @@ Di seguito un esempio di parametri generali
 ```
 (cwf-reference-imageview-settings)=
 
-### Impostazioni ImageView
+### ImageView settings
 
-L'immagine personalizzata si configura usando il nome file corretto associato a ciascuna ImageView inclusa nel layout del quadrante; il blocco json serve solo a definire posizione, dimensione, visibilità e, opzionalmente, il colore:
+Custom image can be tuned using correct filename associated to each ImageView included into custom watchface Layout, then the json block is only here to define the position, the size, if the view is visible or not, and optionally tune the color:
 
-Di seguito un esempio di blocco Image per second_hand (in questo caso non è inclusa nessuna immagine nel file zip, quindi verrà usata l'immagine predefinita della lancetta dei secondi, colorata con un colore personalizzato).
+See below an example of an Image block for second_hand, (in this case there are no image included into zip file so default second hand image will be used, but tuned with a custom color.
 
 ```text
 "second_hand": {
@@ -94,7 +94,7 @@ Di seguito un esempio di blocco Image per second_hand (in questo caso non è inc
     "color": "#BC906A"
 }
 ```
-Per colorare la lancetta dei secondi con il colore predefinito della glicemia (lowRange, midRange o highRange), basta modificare l'ultima riga con il keyValue `bgColor`
+To have second_hand colored with default BG color (lowRange, midRange or highRange), you just have to modify the latest line with the keyValue `bgColor`
 
 ```json
     "color": "bgColor"
@@ -102,9 +102,9 @@ Per colorare la lancetta dei secondi con il colore predefinito della glicemia (l
 
 (cwf-reference-textview-settings)=
 
-### Impostazioni TextView
+### TextView settings
 
-La TextView ha più parametri disponibili rispetto alla ImageView: è possibile regolare la rotazione (valore intero in gradi), la dimensione del testo (valore intero in pixel), la gravity (per definire se il testo è centrato — valore predefinito — o allineato a sinistra o a destra), il font, lo fontStyle e il fontColor, nonché il colore di sfondo della TextView.
+TexView have more available parameters compare to ImageView: you can tune rotation (integer value in degrees), textsize (integer value in pixel), gravity (to define if text value will be centered (default value), or aligned left or right), set the font, fontStyle and fontColor, and also background color of the TextView
 
 ```text
 "basalRate": {
@@ -121,7 +121,7 @@ La TextView ha più parametri disponibili rispetto alla ImageView: è possibile 
     "fontColor": "#BDBDBD"
 },
 ```
-Se non si vuole gestire una vista nel quadrante, impostare la chiave `"visibility"` a `"gone"` e anche dimensione e posizione fuori dall'area visibile, in questo modo:
+Note that if you don't want to manage one view within your watchface, then put the `"visibility"` key to `"gone"` but also set size and position outside visible area like that:
 
 ```text
 "second": {
@@ -138,23 +138,23 @@ Se non si vuole gestire una vista nel quadrante, impostare la chiave `"visibilit
     "fontColor": "#BDBDBD"
 },
 ```
-Se dimensione e posizione sono nell'area visibile, si potrebbe vedere un "lampeggio" del valore nascosto durante l'aggiornamento del quadrante.
+If size and position are within visible area, you can get some "flash" of the hidden value during the refresh of the watchface.
 
-Per personalizzare l'immagine di sfondo di una text view, usare la chiave `"background":` e inserire come keyValue il nome del file immagine incluso nel file zip; è anche possibile cambiare solo il colore di sfondo con la chiave `"color:"` .
+If you want to customize background image of a text view, then you can use the key `"background":` and put the filename of image included into zip file as keyValue, you can also just change the background color using `"color:"` key.
 
 ```json
 "background": "fileName"
 ```
 
-Sono disponibili anche 4 textView specifiche (denominate freetext1 a freetext4) che hanno il parametro specifico `"textvalue":` utilizzabile per impostare ad esempio un'etichetta.
+You also have 4 specific textViews (named freetext1 to freetext4) that have a specific parameter `"textvalue":` that can be used to set for example a label
 
 (cwf-reference-chartview-settings)=
 
-### Impostazioni ChartView
+### ChartView settings
 
-La Chart view è una vista molto specifica che può condividere alcuni parametri con ImageView o con TextView.
+Chart view is a very specific view that can share some parameters with ImageView or with TextView...
 
-Le impostazioni standard per questa vista sono molto semplici:
+Standard settings for this view is very simple:
 
 ```text
 "chart": {
@@ -165,67 +165,67 @@ Le impostazioni standard per questa vista sono molto semplici:
     "visibility": "visible"
 },
 ```
-I 2 parametri aggiuntivi per la Chart view sono: il colore di sfondo (predefinito trasparente) tramite la chiave `"color"`, o un'immagine di sfondo tramite la chiave `"background"`.
+The 2 additional parameters you can include for Chart view is a background color (default is transparent), using `"color"` key or a background image using `"background"` key.
 
 (cwf-reference-how-to-build-watchface)=
 
-## Come costruire/progettare il tuo primo quadrante
+## How to build/design your first Watchface
 
-### Strumenti necessari
+### Tools required
 
-- Editor di testo: si consiglia NotePad++ (o equivalente), un semplice editor di testo con il vantaggio di mostrare il testo formattato con codice colore, rendendo più facile individuare gli errori. Qualsiasi editor di testo semplice va comunque bene, poiché lo scopo è modificare le informazioni json. Since the purpose is to tune json information.
-- Editor di immagini (bitmap e/o vettoriale)
-  - Se usi Bitmap
-    - L'editor deve essere in grado di gestire la trasparenza (necessaria per tutte le immagini sopra lo sfondo) e il formato png (se si usano immagini bitmap)
-    - L'immagine di sfondo può essere in formato jpg (più piccolo del png)
-    - L'editor deve consentire di misurare in pixel gli oggetti grafici (può essere un semplice rettangolo) (top, left, width, height)
-    - L'editor deve essere in grado di mostrare i colori con codice RRGGBB in esadecimale
-    - L'editor deve poter ridimensionare le immagini a 400px x 400px (molto importante lavorare con questa risoluzione)
-  - Se usi Vettoriale
-    - L'immagine vettoriale deve essere esportata in formato svg
+- Text editor: My advice is to use NotePad++ (or equivalent) that is a simple text editor, but added value is you can see formatted text with color code, so it's easier to detect errors. any simple text editor will do the job. Since the purpose is to tune json information.
+- Image editor (bitmap and/or vector)
+  - If you use Bitmap
+    - Image editor should be able to manage transparency (required for all image above background), and png format (if you used bitmap image)
+    - Background image can  be in jpg format (smaller that png)
+    - Image editor should allow you to measure in pixel graphical objects (can be a simple square) (top, left, width, height)
+    - Image editor should be able to show you colors with RRVVBB code in hexadecimal
+    - Image editor should be able to resize image to 400px x 400px (very important to work with this resolution)
+  - If you use Vector
+    - Vector image should be exported in svg format
 
-### Ottenere il template per non partire da zero
+### Get template to not start from scratch
 
-Quando si vuole progettare il proprio primo quadrante, il modo migliore è partire dal quadrante predefinito (questo garantisce di avere l'ultima versione con tutte le viste disponibili correttamente ordinate).
+When you want to design your first watchface, the best is to start by the default watchface (this will ensure you to have latest version with all available views correctly sorted)
 
-- Il file zip si ottiene cliccando sul pulsante "Esporta template" nel plugin Wear e recuperando il file zip dalla cartella AAPS/exports
-- Nota: per vedere i pulsanti Custom Watchface è necessario avere un orologio connesso ad AAPS (l'orologio è comunque necessario per controllare, testare e mettere a punto il quadrante personalizzato)
+- You can get zip file by clicking on "Export Template" button within Wear plugin and get zip file within AAPS/exports folder
+- Note that you will need to have a watch connected to AAPS to see Custom Watchface buttons (but watch is also required to check, test and tune your custom watchface)
 
-Il quadrante predefinito è molto semplice e il file zip contiene solo 2 file:
+Default watchface is very simple and zip file will contains only the 2 files: 
 
-- CustomWatchface.png (immagine del quadrante predefinito per la selezione del quadrante)
+- CustomWatchface.png (image of default watchface for WF selection)
 - CustomWatchface.json
 
-### Organizzare i file sul computer
+### Organize your files within your computer
 
-Il modo più comodo di lavorare è avere il telefono collegato al computer e lavorare con due cartelle specifiche:
+The easiest way to work is to have phone connected to the computer, and work with to specific folders:
 
-- Un explorer aperto su una cartella specifica che contiene tutti i file (json, immagini bitmap, immagini vettoriali, font) e il file CustomWatchface.zip
-- Un altro explorer (o albero di navigazione) aperto sulla cartella Phone/AAPS/exports del telefono
+- one explorer opened on a specific folder that will have all files (json, bitmap images, vector images, fonts), and the CustomWatchface.zip file within it
+- another explorer (or navigation tree tuned) opened to have Phone/AAPS/exports folder available
 
-In questo modo il lavoro è molto semplice: ogni volta che si modifica il file json con l'editor di testo o un'immagine con l'editor di immagini (bitmap o vettoriale), basta:
+That way working is very easy: each time you tune json file with a text editor, image with image editor (bitmap or vector) you have to just:
 
-1. Salvare le modifiche in ogni app
-2. Trascinare tutti i file nel file CustomWatchface.zip
-3. Trascinare CustomWatchface.zip nella cartella AAPS/exports del telefono
-4. Inviare CustomWatchface all'orologio per verificare i risultati
+1. save your modifications in each app
+2. drag and drop all files within CustomWatchface.zip file
+3. drag and drop CustomWatchface.zip into AAPS/exports folder of the phone
+4. send CustomWatchface to the watch to check the results
 
-### Inizializzare la personalizzazione del quadrante
+### Initialize Watchface customization
 
-Il primo passo è definire un nome per il quadrante (necessario per selezionarlo facilmente durante i test) e iniziare a configurare le chiavi metadata all'inizio del file json.
+First step you will have to define a watchface Name (necessary to select it easily for testing), and start to tune metadata keys at the beginning of json file
 
-Occorre poi definire quali informazioni visualizzare, ovvero quali viste devono essere visibili o nascoste.
+Then you will have to define which information you want to show so which view should be visible or hidden.
 
-- Si vuole gestire i secondi o no?
-- Si vuole progettare un orologio analogico o digitale (o entrambi...)?
+- will you manage second or not?
+- do you want to design an analog watch or a digital watch (or both...)
 
-A questo punto si può iniziare a modificare il file json impostando la chiave `"visibility":` di ciascuna vista su `"visible"` o `"gone"` (a seconda che si voglia mantenere o meno la vista).
+Now you can start to modify json file with the `"visibility":` key of each view set to `"visible"` or `"gone"` (if you want to keep or not the view)
 
-È anche possibile iniziare a regolare approssimativamente i valori di margine superiore, sinistro, larghezza e altezza per organizzare il quadrante (questi valori verranno affinati in seguito con l'editor di immagini).
+You can also start to tune approximativaly top, left margin and width height values to start organizing the watchface (these values will be tuned later using image editor)
 
-Nota: tutto viene progettato in un **rettangolo 400px x 400px**. Tutto sarà quindi posizionato in coordinate assolute all'interno di questa dimensione.
+Note: everything is design within a **400px x 400px rectangle**. So everything will be position in absolute coordinates within this size.
 
-Quando si progetta il primo quadrante, è importante sapere che tutto è organizzato a livelli dal basso verso l'alto, quindi ogni vista (ImageView o TextView) può nascondere qualcosa che si trova dietro...
+When you design your first watchface, you have to know that everything is organized by layer from the Back to the Top, so each view (ImageView or TextView) can hide something that is behind...
 
 
 
@@ -233,92 +233,92 @@ Quando si progetta il primo quadrante, è importante sapere che tutto è organiz
 
 
 
-Nel file json tutte le viste sono ordinate dal basso verso l'alto (questo aiuta a ricordare cosa si trova dietro cosa...).
+Then within json file all views are sorted from the Back to the Top (this will help you to remember what is behind what...)
 
-Se si sta progettando o modificando il primo quadrante personalizzato, iniziare con cose semplici: cambiare la visibilità di alcune viste, includere un'immagine di sfondo dedicata senza modificare il file json...
+If you design or tune your first custom watchface, start by simple things: change visibility of some views, include a dedicated background image without changing json file...
 
-### Gestire i colori
+### Manage colors
 
-nome del dato dinamico da usare (generalmente uguale alla chiave della vista associata).<br />Se non specificato, verrà usato il valore predefinito per la vista che usa questo blocco.<br />Ad esempio, è possibile definire un blocco per personalizzare la percentuale della batteria senza specificare valueKey, e poi usare lo stesso blocco per uploader_battery e rig_battery
+Within json file, you will have several keys to specify colors: `"color"`, `"fontColor"`for views, but also `"highColor"`, `"midColor"`, `"lowColor"`, ... (see [List of General Parameters](#cwf-reference-list-of-general-parameters))
 
-I colori sono specificati con un campo di testo che inizia con `#` seguito dai valori RRGGBB (Rosso, Verde, Blu) in formato esadecimale:
+Colors are specified with a text field that starts by `#` followed by RRGGBB (Red, Green, Blue) values in hexadecimal format:
 
-- `"#00000000"` è completamente trasparente, e `"#FF000000"` è completamente opaco (quindi `"#FF000000"` è equivalente a `"#000000"`)
+- `"#FFFFFF"` is white, and `"#000000"` is black, `"#FF0000"` is red...
 
-È anche possibile includere 2 valori aggiuntivi per il livello alpha e specificare un livello di trasparenza (AARRGGBB):
+You can also include 2 additional values for alpha layer and specify a transparency level (AARRGGBB):
 
-- `"#FFFFFF"` è bianco, `"#000000"` è nero, `"#FF0000"` è rosso...
+- `"#00000000"`is completely transparent, and `"#FF000000"` is completely opaque ( so  `"#FF000000"` is equivalent to  `"#000000"`)
 
-È anche possibile usare il keyvalue specifico `"bgColor"` per usare automaticamente `"highColor"`, `"midColor"`, `"lowColor"` specificati nei parametri generali in base al valore glicemia:
+You can also use the specific keyvalue `"bgColor"` to automatically use `"highColor"`, `"midColor"`, `"lowColor"` specified in general parameters according to BG Value:
 
-- `"fontColor": "bgColor",` imposterà automaticamente il colore del font della vista in base al valore glicemia
-- Nota che le viste `sgv` (per il valore glicemia) e `direction` (per la freccia di tendenza) applicano automaticamente i colori glicemici impostati nei parametri generali (per queste 2 viste, se si vogliono colori diversi, occorre usare la funzionalità avanzata [dynData](#cwf-reference-dyndata-feature) con un colore a passo singolo...)
+- `"fontColor": "bgColor",` will automatically set the font color of the view according to BG Value
+- Note that `sgv` (for BG Value) and `direction` (for trend arrow) views automatically apply BG colors set into general parameters (for these 2 views, if you want to have different colors, you will have to use advanced [dynData](#cwf-reference-dyndata-feature) feature with one step color...)
 
-Per maggiori informazioni sulle ImageView e sulla chiave `"color":`, vedere il capitolo dedicato [Regolare il colore dell'immagine](#cwf-reference-tune-image-color) sotto.
+For more information concerning ImageViews and `"color":` key, see dedicated chapter [Tune image color](#cwf-reference-tune-image-color) below.
 
-### Includere immagini predefinite
+### Include Hardcoded images
 
-Il modo più semplice per iniziare a personalizzare il quadrante è includere nel file zip alcune immagini con nomi specifici (vedi [Elenco dei file di risorse predefiniti](#cwf-reference-list-of-hardcoded-resource-files)).
+the easiest way to start tuning your watchface is to include within zip file some images with a specific names (see [List of Hardcoded resource files](#cwf-reference-list-of-hardcoded-resource-files))
 
-- Le immagini devono essere in formato `.jpg`, `.png` o `.svg`. Attenzione: il formato jpg non gestisce la trasparenza, quindi deve essere usato solo per il livello di sfondo. Per tutti i livelli intermedi (cover_chart, cover_plate, hands) usare `.png` o `.svg`.
+- Image should be in `.jpg`, `.png` or `.svg` format. but be careful, jpg doesn't manage transparency, so should be only used for background layer. For all intermediate layers (cover_chart, cover_plate, hands) use either `.png`or `.svg` image
 
-- Se si dispone di un editor di immagini vettoriali (come ad esempio Illustrator), preferire questo formato che produce file di testo piccoli con estensione `.svg` e della migliore qualità.
-- Occorre fare attenzione a usare il nome file esatto (incluse maiuscole/minuscole).
+- If you have a vector image editor (like for example Illustrator), prefer this format that will produce small text files with `.svg` extension the best quality.
+- You should take care to use exact filename (including High/lower case)
 
-Per aggiungere un'immagine di sfondo dedicata, è sufficiente includere nel file zip un file denominato `Background.jpg` (senza modificare nient'altro, inviare il file zip all'orologio e verificare il risultato). send zip file into the watch and check result!.
+Now if you want a dedicated backgoung image, you only have to include within the zip file a file named `Background.jpg` (without changing anything else. send zip file into the watch and check result!.
 
-Per personalizzare hour_hand, minute_hand o second_hand di un orologio analogico, includere semplicemente `HourHand.png` (o `HourHand.svg`), `MinuteHand.png` e `SecondHand.png`.
+If you want to customize hour_hand, minute_hand or second_hand for an analog watch, simply include `HourHand.png` (or `HourHand.svg`), `MinuteHand.png` and `SecondHand.png`.
 
-- Queste immagini ruoteranno automaticamente attorno al centro dell'immagine, quindi devono essere impostate alle 00:00:00 (per un orologio analogico a "frame completo", usare una dimensione di 400 x 400 px posizionata a top 0 left 0).
+- these images will automatically rotate around the center of the image, so the images should be set to 00:00:00 (and for a "full frame" analog watch, use a size of 400 x 400 px positioned at top 0 left 0)
 
-Come si può notare nell'[Elenco dei file di risorse predefiniti](#cwf-reference-list-of-hardcoded-resource-files), per ogni image view sono disponibili due nomi file predefiniti aggiuntivi `High` e `Low` (ad esempio è possibile includere nel file zip altre immagini denominate `BackgroundHigh.jpg` e `BackgroundLow.jpg`). L'immagine cambierà automaticamente in base al livello glicemia (in range, iper o ipo). Vedere il quadrante AIMICO come esempio.
+You can also noticed within [List of Hardcoded resource files](#cwf-reference-list-of-hardcoded-resource-files) that for each image view, you have two additional hardcoded filenames `High` and `Low` (for example you can include other images named `BackgroundHigh.jpg` and `BackgroundLow.jpg` within zip file). then image will automatically change according to you BG level (within Range, Hyper or Hypo). See AIMICO watchface as example.
 
 (cwf-reference-tune-image-color)=
 
-### Regolare il colore dell'immagine
+### Tune image color
 
-La chiave `"color"` può essere usata per regolare il colore predefinito dell'immagine:
+`"color"` key can  be used to tune default image color: 
 
-- Applicata alla vista background, imposta il colore di sfondo (predefinito nero)
-- Applicata a cover_plate (quadrante semplice) o alle lancette, cambia l'immagine predefinita (bianca) con il colore specificato (incluso `"bgColor"`)
+- applied on background view, it will set the background color (default black)
+- applied on cover_plate (simple dial) or hands, it will change the default image (white) by the color specified (including `"bgColor"`)
 
-Quando si applica la chiave `"color"` a un'immagine bitmap (`.jpg` o `.png`), il colore produce un interessante effetto sulla saturazione del colore. L'immagine bitmap risulterà comunque riconoscibile.
+When you apply `"color"` key on a bitmap image (`.jpg` or `.png`), color will apply an interesting effect on color saturation. So you will still recognize your bitmap.
 
-Infine, sui file di immagine `.svg`, la chiave `"color"` non ha alcun effetto: il colore dei file vettoriali è da considerarsi fisso nell'immagine. Per cambiare i colori occorre includere più file `svg` e usare la funzionalità avanzata [dynData](#cwf-reference-dyndata-feature).
+Finally on `.svg` image file, `"color"`key will have no effect, consider color of vector files as hardcoded within the image. If you want to change colors, you will have to include several `svg` files, and use advanced [dynData](#cwf-reference-dyndata-feature) feature to change it
 
-### Usare font aggiuntivi per le TextView
+### Use additional fonts for TextViews
 
-Diversi font predefiniti sono già disponibili nell'apk wear (vedi le chiavi font nel capitolo [valori chiave](#cwf-reference-key-values)). Per usare font aggiuntivi non disponibili come predefiniti, è possibile includerli nel file zip:
+Several defaults font are already available within wear apk (see font keys included into [key values](#cwf-reference-key-values) chapter). But if you want to use additional fonts not available as default, you can include additional fonts within zip file:
 
-- I 2 formati font accettati sono `.ttf` e `.otf`
-- Se si include un font personalizzato nel file zip, ad esempio con un file denominato `myCustomFont.ttf`, occorre usare il nome del file nel file json per una TextView:
+- the 2 accepted font format are `.ttf` and `.otf` files
+- if you include a custom font within zip file, for example with a file named `myCustomFont.ttf`, then you will have to use the filename to use it within json file for a TextView:
 
 ```
 "font": "myCustomFont",
 ```
 
-Tenere presente che alcuni font possono essere inclusi in file di grandi dimensioni (e c'è un limite massimo per la dimensione del file zip). Se si usano pochissimi caratteri (numeri, `.`, `,`), è possibile usare strumenti gratuiti per rimuovere i caratteri inutilizzati (ad esempio [qui](https://products.aspose.app/font/generator/ttf-to-ttf)) e ridurre così la dimensione del font.
+Keep in mind that some fonts can be included into big files (and you are limited to a maximum size for zip file). So if you only use very few characters (numbers, `.`, `,`), you can use free tools to remove unused characters (for example [here](https://products.aspose.app/font/generator/ttf-to-ttf)) and then reduce font size.
 
 (cwf-reference-advanced-features)=
 
-## Funzionalità avanzate
+## Advanced features
 
 (cwf-reference-preference-feature)=
 
-### Funzionalità Preferenze
+### Preferences Feature
 
-CustomWatchface può regolare automaticamente alcune preferenze dell'orologio per avere la corretta visualizzazione del quadrante (se l'autorizzazione è concessa dall'utente nelle preferenze Wear).
+CustomWatchface can automatically tune some watch preferences to have the correct visualization of the watchface (if authorization is given within Wear preferencesby the user).
 
-Questa funzionalità deve però essere usata con attenzione. Le preferenze sono comuni a tutti gli altri quadranti. Ecco quindi alcune regole da rispettare:
+But this feature should be used with care. Preferences are common with all other watchfaces. So several rules to respect with this feature:
 
-- Non impostare mai preferenze relative a viste nascoste
-- Cercare di massimizzare le viste visibili
-- Sentirsi liberi di sovradimensionare la larghezza di alcune viste:
-  - La TBR può essere mostrata come percentuale (larghezza ridotta, ma anche come valori assoluti molto più ampi)
-  - Delta o avg delta con informazioni dettagliate possono essere larghi
-  - Lo stesso vale per iob2: questa vista può avere il totale iob, ma se è selezionato l'iob dettagliato, la dimensione del testo può essere molto lunga
+- never set preferences concerning hidden views
+- try to maximize the visible views
+- feel free to oversize the width of certain views:
+  - TBR can be shown as percentage (small width, but also as absolute values much wider)
+  - delta or avg delta with detailed information can be wide
+  - same for iob2: this view can have total iob, but if detailed iob is selected, then text size can be very long
 
-Se si hanno ancora bisogno di impostazioni molto specifiche per una visualizzazione corretta (nell'esempio seguente, se non c'è abbastanza spazio per l'iob dettagliato, si può "forzare" questo parametro a `false` sull'orologio), è possibile includere nel blocco metadata alcuni vincoli di impostazione come questo:
+If you still need some very specific settings to have a correct display (in example below, if there is not enough space for detailed iob, you can "force" this parameter to `false` of your watch, you can include within metadata block some settings constraint like that
 
 ```text
 "metadata": {
@@ -332,11 +332,11 @@ Se si hanno ancora bisogno di impostazioni molto specifiche per una visualizzazi
 },
 ```
 
-Se l'utente autorizza il quadrante personalizzato a modificare i parametri dell'orologio (impostazione nel plugin wear), "Mostra iob dettagliato" verrà impostato su "disabilitato" e bloccato in questa modalità (nessuna modifica di questo parametro è possibile finché l'autorizzazione non viene disabilitata nelle impostazioni del plugin wear o non viene selezionato un altro quadrante).
+If user authorize custom watchface to modify watch parameter (setting within wear plugin) then Show detailed iob will be set to "disable", and locked to disable (no modification of this parameter possible, until authorization is disabled within wear plugin parameter, or another watchface is selected)
 
-- Nota: quando un utente seleziona un quadrante, può vedere il numero di "parametri richiesti" durante la selezione del quadrante.
+- Note that when a user select a watchface, he can see the number of "required parameter" during watchface selection
 
-Nell'esempio seguente il quadrante Gota ha un parametro richiesto. Se l'autorizzazione non è concessa, viene mostrato in bianco; se l'autorizzazione è concessa, il parametro verrà impostato e bloccato sull'orologio (in questo caso il numero è in arancione).
+In example below Gota watchface has one required parameter. If authorization is not given it will be shown in white color, but authorization is given, then this parameter will be set and locked on the watch (in this case the number is in orange color)
 
 ![Required parameters](../images/CustomWatchface_2.jpg)
 
@@ -344,21 +344,21 @@ Nell'esempio seguente il quadrante Gota ha un parametro richiesto. Se l'autorizz
 
 (cwf-reference-twinview-feature)=
 
-### Funzionalità TwinView
+### TwinView Feature
 
-Le twin view (viste gemelle) forniscono un modo semplice per regolare la posizione delle viste in base alle viste visibili. Non hanno la potenza di un layout interamente composto da LinearLayout, ma possono gestire molti casi comuni.
+Twin views provide an easy way to adjust the view position based on the visible views. This does not have the power of a layout entirely made up of LinearLayout, but can handle many common cases.
 
-Nell'esempio seguente si può vedere il quadrante AAPS (Cockpit) con tutte le viste visibili nelle impostazioni, e lo stesso quadrante con "Mostra batteria rig" disabilitato e "Mostra avg delta" disabilitato.
+In example below you can see AAPS (Cockpit) watchface with all views visible within settings, and the same watchface with "Show rig battery" disabled and "Show avg delta" disabled
 
 ![Twin Views](../images/CustomWatchface_3.jpg)
 
-Si può vedere che quando una delle viste gemelle è nascosta, l'altra si sposta per rimanere centrata.
+You can see that when one of the twin views is hidden, the other is shifted to be centered
 
-In questo esempio si vede che nel blocco `"uploader_battery"` la chiave `"twinView":` è aggiunta per definire la vista `"rig_battery"`, e nel blocco `"rig_battery"` la chiave `"twinView":` definisce `"uploader_battery"` come gemella. La chiave aggiuntiva `"leftOffsetTwinHidden":` definisce il numero di pixel di cui spostare la vista quando la gemella è nascosta.
+in this example, you can see that within `"uploader_battery"` block, we have `"twinView":` key is added to define `"rig_battery"` view, and in `"rig_battery"` block  `"twinView":` key define `"uploader_battery"` as twin. Then then additional key `"leftOffsetTwinHidden":` define the number of pixel to shift the view when twin is hidden.
 
-Per calcolare questo valore, si nota che la differenza tra il leftMargin di ciascuna delle viste gemelle è 50 pixel, quindi l'offset per rimanere centrati è la metà in una direzione o nell'altra.
+To calculate this number, you can see that the difference between the leftMargin of each of the twin views is 50 pixels, so the offset to stay centered is half in one direction or the other.
 
-Se le viste gemelle sono posizionate verticalmente, in questo caso occorre usare la chiave `"topOffsetTwinHidden":`
+If the twin views are positioned vertically, in this case you must use the key `"topOffsetTwinHidden":` 
 
 ```text
 "uploader_battery": {
@@ -394,33 +394,33 @@ Se le viste gemelle sono posizionate verticalmente, in questo caso occorre usare
 ```
 (cwf-reference-dyndata-feature)=
 
-### Funzionalità DynData
+### DynData Feature
 
-DynData è la funzionalità più potente per includere animazioni nel quadrante, in base a valori interni (come il valore glicemia, il livello glicemia, il delta, la % di batteria... vedi l'elenco dei dati disponibili [qui](#cwf-reference-dyndata-key-values)).
+DynData is the most powerful feature if you want to include some animation within you watchface, according to some internal values (like BG value, BG level, delta, % of battery... see list of available data [here](#cwf-reference-dyndata-key-values))
 
-Per illustrare questa funzionalità, prendiamo come esempio il quadrante AAPS (SteamPunk):
+To illustrate this feature, I will take the example of AAPS (SteamPunk) watchface:
 
 ![CustomWatchface_4](../images/CustomWatchface_4.png)
 
-In questo quadrante occorre gestire la [rotazione del valore glicemia](#cwf-reference-background-management) (da 30 a 330 gradi) sulla destra, il [range dinamico di avg_delta](#cwf-reference-avg-delta-management) (scala fino a 5mgdl, 10mgdl o 20mgdl in base al valore), la [rotazione del puntatore](#cwf-reference-dynamic-rotation-management) che deve essere sincronizzato con la scala, e i diversi livelli delle viste...
+In this watchface, we will have to manage the [rotation of BG value](#cwf-reference-background-management) (from 30 degrees to 330 degrees) on the right, the [dynamic range of avg_delta](#cwf-reference-avg-delta-management) (scale up to 5mgdl, 10mgdl or 20mgdl according to value), the [rotation of pointer](#cwf-reference-dynamic-rotation-management) that should be synchronized to the scale, and also the different layer of the views...
 
-Per gestire questo quadrante, di seguito tutte le immagini incluse nel file zip:
+To be able to manage this Watchface, see below all the images included into the zip file:
 
-Nota: per poter vedere la trasparenza, tutte queste immagini sono su sfondo giallo circondate da un quadrato rosso.
+Note: to be able to see the transparency, all these images are on a yellow background and surrounded by a red square
 
 ![Steampunk images](../images/CustomWatchface_5.jpg)
 
-- Nella prima riga, Background.jpg e CoverPlate.png verranno mappati automaticamente con la vista associata (nome file vista predefinito), e steampunk_pointer.png sarà gestito da dynData
-- Nella seconda riga si vedono le 3 scale del range dinamico per avg_delta, che saranno anch'esse gestite da dynData
-- Nella terza riga, chartBackground.jpg verrà collegato manualmente nella vista chart, HourHand.png e MinuteHand.png verranno mappati automaticamente con le viste associate
+- On the first row, Background.jpg and CoverPlate.png will be automatically mapped with associated view (default views filename), and steampunk_pointer.png will be managed by dynData
+- On the second row you see the 3 scales of dynamic range for avg_delta that will also be managed by dynData
+- On the third row, chartBackground.jpg will be linked manually within chart view, HourHand.png and finally MinuteHand.png files will be automatically mapped with associated views
 
 (cwf-reference-background-management)=
 
-#### **Gestione dello sfondo**
+#### **Background management**
 
-So we will have to map BG value to the background, and then rotate background image according to BG value. First, concerning BG value image, no choice here, it can only be in the background layer (otherwise it will be in front of the chart view and chart will not be visible!).
+First, concerning BG value image, no choice here, it can only be in the background layer (otherwise it will be in front of the chart view and chart will not be visible!). So we will have to map BG value to the background, and then rotate background image according to BG value.
 
-Nel blocco `"background"` includiamo 2 chiavi dedicate per questa rotazione:
+Within `"background"` block, we will include 2 dedicated keys to make this rotation:
 
 ```text
 "background": {
@@ -433,11 +433,11 @@ Nel blocco `"background"` includiamo 2 chiavi dedicate per questa rotazione:
     "visibility": "visible"
 },
 ```
-La chiave `"dynData":` definisce quale blocco usare per l'animazione (valore, range, conversione...); qui il blocco è stato chiamato "rotateSgv" (scegliere un nome esplicito quando si usa questa funzionalità).
+`"dynData":` key will define which block should be used to define the animation (value, range, conversion...) here this block was named "rotateSgv" (choose an explicit name when you use this feature), 
 
-`"rotationOffset": true,` definisce che l'animazione attesa in base al valore deve essere una rotazione. (Le altre chiavi disponibili sono `"leftOffset"` e `"topOffset"` per creare uno slider.)
+`"rotationOffset": true,` will define that the expected animation according to value should be a rotation. (others available keys are `"leftOffset"` and `"topOffset"` if you want to create a slider)
 
-Ora andiamo alla fine del file, dopo l'ultima vista:
+Now we will go at the end of the file, after the last view:
 
 ```text
 "second_hand": {
@@ -454,21 +454,21 @@ Ora andiamo alla fine del file, dopo l'ultima vista:
         "maxData": 330
     },
 ```
-Si vede che dopo l'ultima vista (`"second_hand"`), è stato aggiunto un nuovo blocco `"dynData": { ... }` che conterrà tutte le animazioni.
+You can see that after the latest view (`"second_hand"`), we added a new `"dynData": { ... }` block that  will contains all the animations:
 
-Il blocco definito nella vista `"background"` si chiama `"rotateSgv"`, ed è il primo blocco che si trova in `"dynData"`!
+The block defined within `"background"`view was named `"rotateSgv"`, it's the first block you will find into `"dynData"`!
 
-Questo blocco è semplice: contiene una prima chiave `"valueKey":` che definisce quale valore usare. In questo caso `"sgv"` è un "keyValue" che definisce il valore glicemia (nella maggior parte dei casi il keyValue ha lo stesso nome della vista che mostra questa informazione).
+This block is simple: you have a first key named `"valueKey":` that will be used to define which value should be used. in this case `"sgv"` is a "keyValue" that defines BG value (note that in most cases the keyValue has the same name that the view that shows this information).
 
-Per il valore glicemia, il minData predefinito è 39mgdl e il maxData è 400mgdl (vedi [Valori chiave di riferimento DynData](#cwf-reference-dyndata-key-values) per tutti i keyValue disponibili e i valori min/max associati).
+Concerning BG value, default min data is set to 39mgdl and max  data is set to 400mgdl (see [DynData reference key values](#cwf-reference-dyndata-key-values) below all available keyValues and associated min/max data values).
 
-Nel blocco `"rotateSgv"` le due chiavi aggiuntive (`"minData":` e `"maxData":`) vengono usate per impostare i valori min e max a 30 e 330. Con questi valori min e max, è possibile usare direttamente il valore dei dati (senza alcuna conversione) per ruotare lo sfondo in gradi. In questa situazione tutti i valori glicemia superiori a 330mgdl saranno limitati a 330, il limite superiore dell'immagine.
+Within `"rotateSgv"` block the two additional keys (`"minData":` and `"maxData":`) will be used to tune min and max data to 30 and 330. With these min and max values, we will be able to directly use data value (without any conversion) to rotate background in degrees. In this situation all BG values above 330mgdl will be limited to 330, upper limit of the image. 
 
-#### **Gestione del grafico**
+#### **Chart management**
 
-Lo sfondo predefinito del grafico è trasparente, quindi per nascondere la scala glicemia inclusa nell'immagine di sfondo occorre includere un'immagine di sfondo dedicata (questa immagine includerà le ombre complessive del quadrante Steampunk). Il collegamento al file charBackground.jpg viene fatto con la chiave `"background":`.
+Default background of chart is transparent, so to hide BG scale included into background image, we will need to include a dedicated background image (this image will include the overall shadows of Steampunk watchface). The link to charBackground.jpg file is done with `"background":` key
 
-Naturalmente il dimensionamento e il posizionamento della vista devono essere precisi al pixel!
+Of course, the sizing and positioning of the view must be done to the pixel!
 
 ```text
 "chart": {
@@ -482,15 +482,15 @@ Naturalmente il dimensionamento e il posizionamento della vista devono essere pr
 ```
 (cwf-reference-avg-delta-management)=
 
-#### **Gestione avg delta**
+#### **Avg delta management**
 
-Per gestire il range dinamico di avg delta, useremo le quattro viste freetext. freetext1 sarà usata per gestire la scala dell'immagine, e da freetext2 a freetext4 per gestire la rotazione del puntatore in base alla scala.
+To be able to manage dynamic range of avg delta, we will use the four freetext views. freetext1 will be used to manage the image scale, and freetext2 to freetext4 will be used to manage pointer rotation according to scale.
 
 **freetext1**
 
-Come spiegato prima, le viste freetext sono davanti al grafico e davanti allo sfondo, ecco perché abbiamo incluso un'area trasparente per vedere queste immagini (lato destro e lato inferiore dell'immagine).
+As explain before, freetext views are in front of chart and in front of background, that's why we included transparent area to see these images (right side and bottom side of the image)
 
-La parte inferiore rimossa di queste immagini è stata usata come sfondo del grafico per una perfetta integrazione.
+Note that the removed bottom part of these images has been used as background of chart to have a perfect integration.
 
 ```text
 "freetext1": {
@@ -503,7 +503,7 @@ La parte inferiore rimossa di queste immagini è stata usata come sfondo del gra
     "dynData": "avgDeltaBackground"
 },
 ```
-Per questa vista includiamo il collegamento a un altro blocco `"dynData"` chiamato `avgDeltaBackground`. Questo blocco gestirà la scala di avgDelta in base al valore di avgDelta.
+For this view we include the link to another `"dynData"`block named `avgDeltaBackground`. This block will manage avgDelta scale according to avgDelta value.
 
 ```text
 "avgDeltaBackground": {
@@ -521,24 +521,24 @@ Per questa vista includiamo il collegamento a un altro blocco `"dynData"` chiama
     "image8": "steampunk_gauge_mgdl_20"
 },
 ```
-- `"valueKey":` crea il collegamento con il valore `"avg_delta"`
-- minData e maxData limitano anche il range al valore massimo disponibile in questo quadrante (da -20mgdl a 20mgdl). Per gli utenti mmol, ricordare che tutti i valori interni sono sempre in mgdl in AAPS.
+- `"valueKey":` will make the link with `"avg_delta"` value
+- min and max Data will also limit the range to the maximum value available within this watchface (from -20mgdl to 20mgdl). For mmol users, keep in mind that all internal values are always in mgdl within AAPS.
 
-Vediamo ora come gestire l'immagine di sfondo dinamica in base al valore.
+Then we will see here how to manage dynamic background image according to value.
 
-`"invalidImage":` è la chiave per gestire l'immagine da mostrare in caso di dati non validi (o mancanti). Qui si crea il collegamento all'immagine di risorsa aggiuntiva inclusa nel file zip con scala 5 mgdl.
+`"invalidImage":` is the key to manage image to show when we have an invalid data (or missing data). Here we make the link to additional resource image including into zip file with 5 mgdl scale
 
-Si usa poi una serie di immagini, da `"image1":` a `"image8":`. Il numero di immagini fornite definisce il numero di passi tra `minData` e `maxData`.
+Then we will use a series of images, starting from `"image1":` to `"image8":`. The number of provided images will define the number of steps between `minData` and `maxData`. 
 
-- `image1` definisce l'immagine da mostrare quando avg_delta è uguale o vicino a `minData`, e l'immagine con il numero più alto (qui `image8`) definisce l'immagine da mostrare quando avg_delta è uguale o vicino a `maxData`
-- Tra -20mgdl e 20mgdl, il range totale è 40mgdl, diviso per 8 (numero di immagini fornite), avremo 8 passi da 5mgdl ciascuno
-- Ora possiamo mappare le immagini di sfondo in base al valore avg_delta, partendo dai valori più bassi: tra -20 e -15, e tra -15 e -10 useremo `steampunk_gauge_mgdl_20` per la scala, poi tra -10 e -5 `steampunk_gauge_mgdl_10`, e così via fino a +15 e +20 dove useremo di nuovo l'immagine di sfondo `steampunk_gauge_mgdl_20`
+- `image1` will define image to show when avg_delta is equal or close to `minData` and the image with the highest number (here `image8`) will be used to define the image that should be shown when avg_delta is equal or close to `maxData`
+- between -20mgdl and 20mgdl, the overall range is 40mgdl, divided by 8 (number of images provided), we will have 8 steps of 5mgdl
+- Now we can map background images according to avg_delta value, starting from the lowest values: between -20 and -15, and also between -15 and -10 we will use  `steampunk_gauge_mgdl_20` for the scale, then between -10 and -5 `steampunk_gauge_mgdl_10`, and so on until +15 and +20 where we will again use `steampunk_gauge_mgdl_20` background image
 
 (cwf-reference-dynamic-rotation-management)=
 
-**da freetext2 a freetext4**
+**freetext2 to freetext4**
 
-Per queste viste combineremo immagini dinamiche e la funzionalità di rotazione spiegata in precedenza:
+For these views will will combine dynamic images and rotation feature explained before:
 
 ```text
 "freetext2": {
@@ -572,7 +572,7 @@ Per queste viste combineremo immagini dinamiche e la funzionalità di rotazione 
     "rotationOffset": true
 },
 ```
-Ogni vista è dedicata a una scala specifica (quindi è collegata a un blocco dynData dedicato); si può anche notare che la chiave `"rotationOffset":` è abilitata per queste 3 viste. Vediamo ora il primo blocco dynData:
+Here each view is dedicated to a specific scale (so is linked to a dedicated dynData block), you can also notice that `"rotationOffset":` key is enabled for these 3 views.Now take a look on the first dynData block:
 
 ```text
 "avgDelta5": {
@@ -594,19 +594,19 @@ Ogni vista è dedicata a una scala specifica (quindi è collegata a un blocco dy
     "image8": "null"
 },
 ```
-Anche se il range dinamico verrà usato solo tra -5 e +5 avg_delta, è importante mantenere il range complessivo di -20, +20mgdl per garantire che il puntatore sia sincronizzato con lo sfondo durante i cambi di scala. Ecco perché si mantiene lo stesso range complessivo di `avgDeltaBackground` e lo stesso numero di passi (8 immagini).
+Here, even if dynamic range will be used only between -5 and +5 avg_delta data, it's important to keep the overall range of -20, +20mgdl to ensure that the pointer will be synchronize with the background during scale switches. That's why we keep the same overall range than for `avgDeltaBackground`  and the same number of steps (8 images).
 
-Si può notare che sia `"invalidImage"` che diversi `"imagexx"` hanno il valore chiave `"null"` (potrebbe essere qualsiasi stringa non esistente come nome file nel file zip). Quando un nome file non viene trovato, l'immagine di sfondo della vista è trasparente. Quindi questa impostazione garantisce che il puntatore sia visibile solo per i passi 4 e 5 (avg delta tra -5mgdl e +5 mgdl) e non sia visibile al di fuori di questo range.
+You can note that either `"invalidImage"` or several `"imagexx"` are with `"null"` key value (it could be any string not existing as a filename within zip file). When a filename is not found, then view background image will be transparent. So the setting ensure that pointer will only be visible for step 4 and step 5 (avg delta between -5mgdl and +5 mgdl), and will not be visible outside this range.
 
-Vediamo ora un nuovo blocco `"rotationOffset":` con due chiavi interne `"minValue":` e `"maxValue":`. Questi valori servono a convertire i dati interni (in mgdl) nell'angolo di rotazione desiderato.
+Now we can see a new block `"rotationOffset":` that will have inside two keys `"minValue":` and `"maxValue":`. These values are used to make the conversion between internal data (in mgdl), and the angle rotation we want to have.
 
-- Il quadrante Steampunk è progettato per avere una rotazione massima da -30 a 30 gradi per il puntatore. Quindi in base alla scala (qui da -5mgdl a 5mgdl), vogliamo 30 gradi per questi valori. Poiché `minData` e `maxData` sono 4 volte maggiori, i corrispondenti minValues e maxValues sono 4 * 30 gradi, ovvero -120 e +120 gradi. Ma per tutte le rotazioni superiori o inferiori a +-30 gradi il puntatore sarà nascosto (nessuna immagine visibile), e il puntatore sarà visibile solo per valori tra -5 e +5mgdl... È esattamente quello che ci aspettiamo.
+- Steampunk watchface is designed to have maximum from -30 degrees to 30 degrees rotation for the pointer. So according to the scale (here from -5mgdl to 5mgdl), we will want to have 30 degrees for these values. Because `minData` and `maxData`are 4 times greater, then the corresponding minValues and maxValues are 4 * 30 degrees so -120 and +120 degrees. But for all rotation above or below +-30 degrees the pointer will be hidden (no image visible), and the pointer will only be visible for values between -5 and +5mgdl... So it's exactly what is expected here.
 
-Gli altri blocchi dynData sono definiti allo stesso modo per configurare `"avgDelta10"` e `"avgDelta20"`.
+The other dynData blocks are defined the same way to tune `"avgDelt10"`and `"avgDelta20"`
 
-#### Vista loop
+#### loop view
 
-Nel quadrante Steampunk le frecce verdi e rosse del loop (per lo stato) sono disabilitate; questo è gestito anche con un blocco dynData dedicato associato alla vista loop.
+in Steampunk watchface loop green and red arrows (for status) are disabled, this is also managed with a dedicated dynData block associated to loop view.
 
 ```text
     "loopArrows": {
@@ -615,15 +615,15 @@ Nel quadrante Steampunk le frecce verdi e rosse del loop (per lo stato) sono dis
         "image2": "redArrows"
     }
 ```
-Poiché questo blocco è chiamato solo dalla vista loop, e i dati predefiniti gestiti da questa vista sono le informazioni del loop, la chiave `"valueKey":` è opzionale.
+Because this block is only called by loop View, and default data managed by this view is loop information, then `"valueKey":` key is optional.
 
-I valori predefiniti `minData` e `maxData` per il loop sono impostati a 0min e 28min, quindi con due immagini, tutti i valori inferiori a 14 min saranno mostrati con lo sfondo `image1` e tutti i valori superiori a 14 min con `image2`. 14 min è esattamente la soglia per passare dalla freccia verde a quella rossa.
+Default `minData` and `maxData` for loop are defined to 0min and 28min, so with two images, all data values below 14 min will be shown with background `image1` and all data values above 14 min will be shown with `image2`. 14 min is exactly the threshold to switch from green arrow to red arrow.
 
-In questo esempio, i file `greyArrows`, `greenArrows` e `redArrows` non sono inclusi nel file zip, quindi le frecce vengono semplicemente rimosse (invisibili), ma è possibile usare questo blocco "così com'è" per personalizzare le frecce di stato con immagini di sfondo personalizzate.
+In this example, `greyArrows`, `greenArrows` and `redArrows` files are not included into zip file, so these arrows are just removed (invisible), but you can use this block "as is" if you want to tune status arrows with custom background images.
 
-#### Viste rig_battery e uploader_battery
+#### rig_battery and uploader_battery views
 
-Per concludere la panoramica della funzionalità dynData, vediamo la gestione della batteria. L'idea qui è personalizzare il colore del testo in base al livello della batteria (da 0 a 100%).
+To finish the overview of dynData feature, we will take a look on battery management. The idea here is to customize text color according to battery level (from 0 to 100%)
 
 ```text
 "uploader_battery": {
@@ -659,11 +659,11 @@ Per concludere la panoramica della funzionalità dynData, vediamo la gestione de
     "topOffsetTwinHidden": 13
 },
 ```
-Si può vedere che entrambe queste viste condividono lo stesso blocco `dynData` denominato `batteryIcons`. È possibile perché di default i dati collegati sono quelli della vista (senza specificare una chiave `"valueKey":` nel blocco `batteryIcons`, verranno applicati i dati di `uploader_battery` o `rig_battery` in base alla vista).
+You can see here that these both views share the same `dynData` block named `batteryIcons`. It's possible because by default attached data is the one of the view (to without specifying a  `"valueKey":` key within  `batteryIcons` block, it will be applied with `uploader_battery` data or `rig_battery` data according to the view).
 
-Nota: queste due viste usano anche la funzionalità TwinView spiegata [qui](#cwf-reference-twinview-feature).
+Note these two views also use TwinView feature explain [here](#cwf-reference-twinview-feature).
 
-Vediamo ora il blocco dynData:
+Now lets take a look on dynData block:
 
 ```text
 "batteryIcons": {
@@ -675,27 +675,27 @@ Vediamo ora il blocco dynData:
     "fontColor5": "#000000"        
 },
 ```
-Qui si usa esattamente la stessa logica delle immagini di sfondo dinamiche, ma con chiavi dedicate (`"invalidFontColor"` e da `"fontColor1"` a `"fontColor5"` per specificare 5 passi del 20% ciascuno).
+Here we use exactly the same logic that for dynamic background image, but with dedicated keys (`"invalidFontColor"` and  `"fontColor1"` to `"fontColor5"` to specify 5 steps of 20% each one).
 
-- `"fontColor1"` (rosso scuro) verrà usato per tutti i valori inferiori al 20%, e il bianco per tutti i valori superiori a questa soglia.
-- Per abbassare la soglia a "sotto il 10%", basta aggiungere 5 chiavi aggiuntive da `"fontColor6"` a `"fontColor10"`, ma è anche possibile regolare ogni colore per avere una variazione progressiva dal verde al giallo, arancione e rosso...
+- `"fontColor1"` (dark red) will be used for all values below 20%, and white will be used for all values above this threshold.
+- If you want to lower the threshold to "below 10%", you just have to add 5 additional keys from `"fontColor6"` to `"fontColor10"` , but you can also adjust each color if you want progressive variation from green to yellow, orange and red...
 
 (cwf-reference-dynpref-feature)=
 
-### Funzionalità DynPref
+### DynPref Feature
 
-Prima di leggere questo capitolo, occorre capire come funziona [dynData](#cwf-reference-dyndata-feature), perché DynPref è un uso avanzato di DynData: è ora possibile regolare ogni blocco DynData in base alle preferenze impostate dall'utente.
+Before reading this chapter, you have to understand how [dynData](#cwf-reference-dyndata-feature) works, because DynPref is an advanced usage of DynData: You will now be able to adjust each DynData block according to preferences set by the user:
 
-Per illustrare la funzionalità DynPref, useremo due esempi:
+To illustrate DynPref feature, we will use two example:
 
-- Quadrante Steampunk (uso semplice per includere nello stesso quadrante la versione mgdl e mmol; il quadrante si aggiorna automaticamente in base all'unità selezionata in AAPS).
-- Il quadrante AAPS V2 combinerà diverse preferenze per gestire il colore del testo e lo sfondo in base alle preferenze dark e match divider.
+- Steampunk watchface (simple use to include into the same watchface mgdl and mmol version, watchface will automatically switch according to unit selected into aaps).
+- AAPS V2 watchface will combine different preferences to be able to manage text color and background according to dark and match divider preferences.
 
-#### Uso semplice di dynPref nel quadrante Steampunk
+#### Simple usage of dynPref within Steampunk watchface
 
-In Steampunk abbiamo due set di immagini in base alle unità: l'immagine `background` con la scala glicemia che ruota in base al valore glicemia, e `freeText1` con la scala dinamica in base al valore avgDelta. Per avere un unico quadrante che mostri automaticamente le unità corrette, occorre selezionare l'immagine in base all'unità selezionata.
+Within Steampunk, we have to set of images according to units: `background` image that will have BG scale and will turn according to BG value. and `freeText1` that contains dynamic scale according to avgDelta value.To be able to have one watchface that will automatically show correct units, we should select image according to unit selected.
 
-Per farlo sostituiamo la chiave `dynData` con una chiave `dynPref` nel blocco della vista:
+To do that we will replace `dynData` key by a `dynPref`key within view block:
 
 ```text
  "background": {
@@ -708,9 +708,9 @@ Per farlo sostituiamo la chiave `dynData` con una chiave `dynPref` nel blocco de
     "visibility": "visible"
 },
 ```
-L'uso delle chiavi `dynPref` sarà molto simile alle chiavi `dynData` spiegate nel capitolo precedente.
+Usage of `dynPref`keys will be very close to `dynData`keys explained in previous chapter
 
-Vediamo ora la fine del file json, dopo il blocco `dynData`:
+Now we will take a look at the end of the json file, after `dynData` block:
 
 ```text
 "dynData": {
@@ -737,22 +737,22 @@ Vediamo ora la fine del file json, dopo il blocco `dynData`:
     ...
 }
 ```
-Si può vedere che la chiave dynpref definita nel blocco vista `background` (`"dynPref": "rotateSgv"`) esiste nel blocco json `dynPref` incluso alla fine del file json.
+You can see that the dynpref key defined within `background` view block (`"dynPref": "rotateSgv"`) exists into the `dynPref` json block included at the end of json file:
 
-Questo blocco deve contenere una chiave `"prefKey"` che definisce quale preferenza usare. In questo esempio la chiave `"key_units"` è collegata alle unità selezionate in AAPS sul telefono, e il valore è `"true"` se l'unità selezionata è mgdl, `"false"` se l'unità è mmol.
+This block should contains a `"prefKey"`key that will define which preference should be used. In this example the key `"key_units"` is linked to units selected within AAPS on phone, and value is `"true"`if selected unit is mgdl, `"false"`if selected unit is mmol.
 
-Troverete poi due blocchi json che usano il formato "dynData" e vengono usati in base alla preferenza selezionata.
+Then you will find two json blocks that will use "dynData" format, and that will be used according to selected preference
 
-Nota: il nome file "predefinito" dell'immagine Background è ora sostituito da un'immagine dinamica che sarà la stessa indipendentemente dal valore glicemia (file `Background_mgdl.png` se key_units è "true", `Background_mmol.png` se key_units è false), e includiamo anche una chiave `"invalidImage"` per avere sempre un'immagine di sfondo anche se non sono stati ricevuti dati dal telefono.
+Note that the "HardCoded" file name for Background image is now replaced by a dynamic image that will be the same whatever the BG value (`Background_mgdl.png`file if key_units is "true", `Background_mmol.png` if key_units is false), and we also include an `"invalidImage" key to always have a background image even if no data has been received from the phone.
 
-#### Combinare diverse preferenze con dynPref nel quadrante AAPS V2
+#### Combine different preferences within dynPref with AAPS V2
 
-La maggior parte delle volte, quando si imposta una preferenza, non è per ottenere un "comportamento dinamico", ma solo i risultati in base a ciò che si seleziona; ma in dynPref è considerata una funzionalità dinamica...
+Most of the time, when you set a preference, it's not to get "dynamic behaviour", but only the results according to what you select, but within dynPref, it's considered as a dynamic feature...
 
-- Mentre in `dynData` si specifica un blocco completo di parametri (con immagini, fontColor, Color, ...), con `dynPref` è possibile combinare ogni parametro in base a una specifica preferenza.
-- Vedremo come la preferenza match divider sarà associata alla preferenza dark per mostrare, quando è abilitata (true), testo bianco su sfondo nero sul quadrante scuro (parametro dark true) o testo nero su sfondo bianco sul quadrante chiaro (dark false)...
+- when in `dynData`you specify one full block of parameters (with images, fontColor, Color, ...), with `dynPref`, you will be able to combine each parameter according to one specific preference.
+- Here we will see how match divider preference will be associated to dark preference to show when it's enabled (true) white text on black background on dark watchface (dark parameter true) or black text on white background on light watchface (dark false)...
 
-Vediamo prima l'inizio del file json:
+First lets see the beginning of json file:
 
 ```text
 "dynPrefColor": "prefColorDark",
@@ -767,9 +767,9 @@ Vediamo prima l'inizio del file json:
     "dynPref": "dark"
 },
 ```
-`"dynPrefColor": "prefColorDark"` specifica il blocco dynPref di tutti i colori predefiniti al di fuori delle viste. Questi colori verranno regolati in base al parametro dark nel blocco `"prefColorDark"`:
+`"dynPrefColor": "prefColorDark"` will specify the dynPref block of all default colors outside views. These colors will be tuned according to dark parameter within `"prefColorDark"`:
 
-E alla fine, all'interno del blocco `dynPref`, ci sarà un blocco dynPref specifico per i colori predefiniti:
+And at the end, within the `dynPref` block, you will have a specific dynPref block for default colors:
 
 ```text
 "prefColorDark": {
@@ -796,9 +796,9 @@ E alla fine, all'interno del blocco `dynPref`, ci sarà un blocco dynPref specif
     }
 }
 ```
-La differenza tra questo blocco dynPref e gli altri blocchi dynPref standard usati per le viste è che qui non c'è un blocco dynData per ogni valore del parametro `"key_dark"`, ma solo l'elenco dei colori principali (`highColor`, `midColor`, ...).
+The difference between this dynPref block and the other standard dynPref blocks used for views is that here you don't have a dynData block for each value of `"key_dark"` parameter, but only the list of main colors (`highColor`, `midColor` , ...)
 
-Vediamo ora gli elementi inclusi nel "divider banner" (nell'esempio seguente la vista `"basalRate"` è collegata alla vista dynPref `"matchDivider"`):
+Lets now take a look on items included into the "divider banner" (in example below `"basalRate"` view linked to `"matchDivider"` dynPref view:
 
 ```text
 "basalRate": {
@@ -812,7 +812,7 @@ Vediamo ora gli elementi inclusi nel "divider banner" (nell'esempio seguente la 
     "dynPref": "matchDivider"
 },
 ```
-Nel blocco dynPref si vede che il parametro Match divider (chiave `key_match_divider`) include i 2 blocchi "true" e "false", ma questi due blocchi vengono usati solo per definire se la vista userà il dynBlock "dark" (stessi colori di sfondo e testo delle altre viste fuori dal banner) o il dynBlock "white" che imposterà colori opposti per sfondo e testo...
+Then within dynPref block, you can see that Match divider parameter (`key_match_divider` key), include the 2 blocks "true" and "false", but these two blocks are only used to define that view will use either "dark" dynBlock (so exactly the same background and text color than the otherviews outside the banner), or "white" dynBLock that will set opposite colors for background and text...
 
 ```text
 "matchDivider": {
@@ -836,13 +836,13 @@ Nel blocco dynPref si vede che il parametro Match divider (chiave `key_match_div
     }
 },
 ```
-Nota: qui siamo all'interno di un blocco "dynData", quindi per definire un colore o un fontColor si usa un dynData (non specificato qui) con un unico passo (`"color1"` e `"fontColor1"` sono usati).
+Note that here you are within a "dynData" block, then to define a color or a fontColor, you will use a dynData (not specified here), and a single step (`"color1"` and `'fontColor1'` are used)
 
-- Per tutti i parametri diversi da `image`, il valore "non valido" predefinito (se non impostato specificamente con la chiave `"invalidColor"` o `"invalidFontColor"`) sarà `"color1"` e `"fontColor1"`.
+- for all parameter other than `image` default "invalid value (if not set specifically by `"invalidColor"` key or `"invalidFontColor"` keys) will be `"color1"` and `"fontColor1"`.
 
+  
 
-
-Vedremo poi un terzo esempio con le viste iob (`iob1` e `iob2`), dove verrà usato un testo più piccolo per l'iob dettagliato e un testo più grande per il totale iob:
+Then we will see a third example with iob views (`iob1` and `iob2`), where we will use smaller text for detailed iob and bigger text for total iob:
 
 ```text
 "iob1": {
@@ -869,7 +869,7 @@ Vedremo poi un terzo esempio con le viste iob (`iob1` e `iob2`), dove verrà usa
     "dynPref": "prefIob2"
 },
 ```
-Nelle impostazioni predefinite della vista si vede la dimensione del testo (19 per `iob1` e 24 per `iob2`) e i due diversi blocchi `dynPref` che devono regolare la dimensione del testo (in base al parametro iob dettagliato) e i colori (in base al parametro dark).
+You will see within default view settings the text size (19 on `iob1` and 24 on `iob2`) and the two different `dynPref` block that should tune textsize (according to detailed iob parameter), and colors (according to dark parameter)
 
 ```text
 "prefIob1": {
@@ -893,11 +893,11 @@ Nelle impostazioni predefinite della vista si vede la dimensione del testo (19 p
     }
 },
 ```
-Si vede che in base al parametro iob dettagliato (chiave `"key_show_detailed_iob"`), quando è "true" la dimensione del testo viene definita a un valore fisso maggiore del predefinito (24 invece di 19): questo viene fatto usando la funzionalità "step" di textsize, con un unico valore quindi un unico passo... (nota: per tutti i parametri diversi dalle immagini, se invalidTextSize non è impostato, textsize1 verrà usato per i dati non validi).
+You can see here that according to detailed iob parameter (`"key_show_detailed_iob"` key), when it's "true" then textsize is defined to a fix value bigger than default (24 instead of 19): this is done using textsize "step" feature, within only one value so one step... (note that for all parameter others than images,if invalidTextSize is not set, then textsize1 will be used for invalid data)
 
-Il blocco dynPref "dark" verrà poi usato per impostare color e fontColor.
+Then "dark" dynPref block will be used to set colorand fontColor
 
-Il blocco dynData che verrà usato per la stessa vista iob1 se IOB dettagliato è disabilitato e dark è disabilitato sarà:
+In this example the dynData block that will be used for iob1 view will be if detailed IOB is enabled and dark enabled:
 
 ```text
 {
@@ -907,9 +907,9 @@ Il blocco dynData che verrà usato per la stessa vista iob1 se IOB dettagliato �
 },
 ```
 
-Il testo sarà ora in nero su sfondo bianco con una dimensione di 19.
+So the text will be inwhite on black background and the size 24 will replace default size of 19 set into the view
 
-In questo esempio il blocco dynData che verrà usato per la vista iob1 se IOB dettagliato è abilitato e dark è abilitato sarà:
+The dynData block that will be used for the same view iob1 if detailed IOB is disabled and dark disabled will be:
 
 ```text
 {
@@ -918,118 +918,118 @@ In questo esempio il blocco dynData che verrà usato per la vista iob1 se IOB de
 },
 ```
 
-Il testo sarà quindi in bianco su sfondo nero e la dimensione 24 sostituirà la dimensione predefinita di 19 impostata nella vista.
+Now the text will be in black on white background with a size of 19
 
-#### Suggerimenti e trucchi per dynPref
+#### Tips and tricks for dynPref
 
-- È possibile combinare quante preferenze si vuole, ma attenzione: il numero di blocchi da descrivere può aumentare molto rapidamente (in modo esponenziale): se si concatenano 3 parametri e si vogliono definire tutte le situazioni, ci saranno 8 blocchi da descrivere, se ogni parametro ha solo 2 valori...
-- Fare attenzione a non creare "loop infiniti" (ad esempio se il blocco dynpref1 deve essere completato dal blocco dynpref2 che deve essere completato dal blocco dynpref1...). In questo caso i blocchi dynpref saranno considerati non validi...
-- Non dimenticare di includere l'indice numerico dopo la chiave (quando si usa ad esempio la chiave `"textsize"` in una vista, si dovrà usare `"textsize1"` nel blocco valore dynPref, perché è un formato "dynData", quindi collegato al valore con un unico passo in questo caso).
-- Una sola chiave `"valueKey"` deve essere impostata per una vista, quindi se il blocco finale `dynData` è costruito da diversi blocchi `dynPref`, non includere più `"valueKey"` (e i relativi `"minData"`, `"maxData"`, ...)
+- You can combine as many pref than you want, but be careful, the number of blocks to describe can increase very fast (it's exponential): if you chain 3 parameters and you want to define all situations, you will have 8 blocks to describe, if each parameter has only 2 values...
+- Be careful to not build "infinite loop" (for example if dynpref1 block should be completed by dynpref2 block that should be completed by dynpref1 block...). In this case the dynpref blocks will be considered as invalid...
+- Do not forget to include the numéric index after the key (when you use for example `"textsize"`key within a view, you will have to use `"textsize1"`within the dynPref  value block, because it's a "dynData" format, so linked to value with a single step in this case)
+- Only one key `"valueKey"` should be set for one view, so if the final `dynData` block is built from several `dynPref`blocks, do not include several `"valueKey"`  (and associated `"minData"`, `"maxData"`, ...)
 
 (cwf-reference-new-v2-features)=
 
-### Nuove funzionalità in CustomWatchface V2 (AAPS V3.3.0 o superiore)
+### New Features in CustomWatchface V2 (AAPS V3.3.0 or above)
 
-I quadranti che usano queste nuove funzionalità o viste richiedono il più recente wear apk costruito dalla versione 3.3.0 di AAPS.
+Note that the watchfaces using these new features or views will require the latest wear apk built from 3.3.0 version of AAPS.
 
-Se si usa un zip "v2" con un orologio che include CustomWatchface V1, ci saranno informazioni mancanti o contenuto errato nel quadrante.
+If you use a zip "v2" with a watch that includes CustomWachface V1, you will have missing information or wrong content into the watchface.
 
-CustomWatchface V2 include queste nuove funzionalità:
+CustomWatchface V2 includes these new features:
 
-- [Nuova vista Status](#cwf-reference-new-status-feature)
-- [Nuova vista TempTarget](#cwf-reference-new-temp-target-feature)
-- [Nuova vista Livello Reservoir](#cwf-reference-new-reservoir-level-feature)
-- [Nuova funzionalità Formattazione](#cwf-reference-new-formating-feature)
-- [Mostra dati esterni per Follower](#cwf-reference-show-external-datas) (fino a 3 set di dati in un unico quadrante, per AAPS, AAPSCLIENT e AAPSCLIENT2)
+- [New Status view](#cwf-reference-new-status-feature)
+- [New TempTarget view](#cwf-reference-new-temp-target-feature)
+- [New Reservoir Level view](#cwf-reference-new-reservoir-level-feature)
+- [New Formatting Feature](#cwf-reference-new-formating-feature)
+- [Show External data for Follower](#cwf-reference-show-external-datas) (up to 3 set of data within one single Watchface, for AAPS, AAPSCLIENT and AAPSCLIENT2)
 
 (cwf-reference-new-status-feature)=
 
-#### Nuova vista Status
+#### New Status view
 
-La chiave di questa vista è `"status"` e il blocco associato viene incluso automaticamente nel template esportato dall'apk wear "Custom Watchface V2" (costruito dalla versione AAPS 3.3.0 o superiore).
+The key of this view is `"status"` and associated block is automatically included into the template exported from wear apk "Custom Watchface V2" (built from AAPS 3.3.0 version or above)
 
-Questa vista era inclusa nei precedenti quadranti esistenti AAPS (NoChart), AAPS (BigChart) e AAPS (Large) e include un valore stringa (costruito nell'apk wear).
+This view was included into previous AAPS (NoChart), AAPS (BigChart) and AAPS (Large) previous existing watchfaces available and include a string value (built within wear apk).
 
-Questi quadranti precedenti sono stati rimossi e sostituiti da 3 nuovi quadranti personalizzati in AAPS 3.3.0.
+These previous watchfaces has been removed and replaced by 3 new custom watchfaces in AAPS 3.3.0.
 
-- L'informazione minima è il valore IOB (sempre visibile indipendentemente dal parametro IOB sull'orologio)
-- Poi i valori IOB dettagliati (BolusIOB|BasalIOB) se abilitati nelle preferenze
-- E il valore BGI (se abilitato nelle preferenze)
+- the minimum information is IOB value (always visible whatever IOB parameter into watch)
+- then you have detailed IOB values (BolusIOB|BasalIOB) if enabled within preferences
+- and BGI value (again if enabled within preferences)
 
-Questa vista `"status"` è associata alla chiave `"key_show_loop_status"` (nel dynPref) per gestire la visibilità.
+This `"status"` view is associated with `"key_show_loop_status"` key (within dynPref) to manage visibility.
 
-In V1 questa vista poteva essere gestita usando le viste esistenti `"iob1"`, `"iob2"` e `"bgi"`, ma con la necessità di impostazioni dynPref complesse per gestire la spaziatura tra le informazioni in base alle diverse impostazioni selezionate sull'orologio.
+This view could be managed in V1 using `"iob1"`, `"iob2"` and `"bgi"`  existing views, but with the need of complex dynPref settings to manage spacing within each information according to different settings selected within Watch.
 
 (cwf-reference-new-temp-target-feature)=
 
-#### Nuova vista TempTarget
+#### New TempTarget view
 
-La chiave di questa vista è `"tempTarget"` e il blocco associato viene incluso automaticamente nel template esportato dall'apk wear "Custom Watchface V2" (costruito dalla versione AAPS 3.3.0 o superiore).
+The key of this view is `"tempTarget"` and associated block is automatically included into the template exported from wear apk "Custom Watchface V2" (built from AAPS 3.3.0 version or above).
 
-Mostra nel quadrante:
+It shows within watchface:
 
-- Target del profilo (valore singolo o valori min-max del target) (colore predefinito bianco)
-- Target aggiustato dal loop (colore predefinito verde)
-- Target temporaneo definito dall'utente (colore predefinito giallo)
+- Profile target (single value or min-max target values) (default color in white)
+- Loop adjusted target (default color in Green)
+- Temp Target defined by user (default color in Yellow)
 
-Questa vista `"tempTarget"` è associata alla chiave `"key_show_temp_target"` (nel dynPref) per gestire la visibilità.
+This `"tempTarget"` view is associated with `"key_show_temp_target"` key (within dynPref) to manage visibility.
 
-La chiave DynData (associata alle informazioni sul colore) è `"tempTarget"` (chiave DynData predefinita associata alla vista TempTarget).
+The DynData Key (associated with color information) is `"tempTarget"` (default DynData key associated with TempTarget View)
 
-Il valore DynData è uguale a:
+DynData value equals:
 
-- 0 (Target Profilo),
-- 1 (Target Loop) o
-- 2 (Target Temporaneo Utente)
+- 0 (Profile Target), 
+- 1 (Loop Target) or 
+- 2 (User Temp Target)
 
-Nota: questa vista è disponibile anche per i dati esterni (vedi [sotto](#cwf-reference-show-external-datas)) con le chiavi `"tempTarget_Ext1"` e `"tempTarget_Ext2"` (Vista e DynData).
+Note that this view is also available for external data (see [below](#cwf-reference-show-external-datas)) with `"tempTarget_Ext1"` and  `"tempTarget_Ext2"` keys (View and DynData)
 
 (cwf-reference-new-reservoir-level-feature)=
 
-#### Nuova vista Livello Reservoir
+#### New Reservoir Level view
 
-La chiave di questa vista è `"reservoir"` e il blocco associato viene incluso automaticamente nel template esportato dall'apk wear "Custom Watchface V2" (costruito dalla versione AAPS 3.3.0 o superiore).
+The key of this view is `"reservoir"` and associated block is automatically included into the template exported from wear apk "Custom Watchface V2" (built from AAPS 3.3.0 version or above).
 
-Questa vista mostra il livello del Reservoir (in `U`) con colore predefinito bianco, giallo per il Livello di Avviso, rosso per il Livello di Urgenza.
+This view show Reservoir level (in `U`) with a White default color, Yellow if Warning Level, Red if Urgent Level
 
-Questa vista `"reservoir"` è associata alla chiave `"key_show_reservoir_level"` (nel dynPref) per gestire la visibilità.
+This `"reservoir"` view is associated with `"key_show_reservoir_level"` key (within dynPref) to manage visibility.
 
-Le chiavi DynData associate al Livello Reservoir sono:
+The DynData Keys associated with Reservoir Level are:
 
--  `"reservoir"` (Chiave DynData predefinita associata alla vista Livello Reservoir) associata al livello di insulina in `U`
-  - Valore minimo: 0.0 U
-  - Valore massimo: 500.0 U
--  `"reservoirLevel"`
-  - 0 (Livello Standard, colore bianco per impostazione predefinita)
-  - 1 (Livello di Avviso, colore giallo per impostazione predefinita)
-  - 2 (Livello di Urgenza, colore rosso per impostazione predefinita)
+-  `"reservoir"`  (Default DynData Key associated with Reservoir Level view) associated with level in insulin `U`
+  - Min Value is 0.0 U
+  - Max Value is 500.0 U
+-  `"reservoirLevel"`  
+  - 0 (Standard Level, White Color by default)
+  - 1 (Warning Level, Yellow color by default)
+  - 2 (Urgent Level, Red color by default)
 
-Nota: questa vista è disponibile anche per i dati esterni (vedi [sotto](#cwf-reference-show-external-datas)) con le chiavi `"reservoir_Ext1"`, `"reservoir_Ext2"`, `"reservoirLevel_Ext1"` e `"reservoirLevel_Ext2"` (Vista e DynData).
+Note that this view is also available for external data (see [below](#cwf-reference-show-external-datas)) with `"reservoir_Ext1"`, `"reservoir_Ext2"`, `"reservoirLevel_Ext1"` and  `"reservoirLevel_Ext2"` keys (View and DynData).
 
 (cwf-reference-new-formating-feature)=
 
-#### Nuova funzionalità di formattazione per DynData o DynPref
+#### New Formatting feature for DynData or DynPref
 
-È ora possibile gestire una formattazione personalizzata dei valori grezzi ricevuti dall'orologio e inclusi nella [tabella valori chiave DynData](#cwf-reference-dyndata-key-values) qui sotto.
+You can now manage a custom formatting of raw values received by the watch and included in [dyndata key value table](#cwf-reference-dyndata-key-values) below.
 
-Per illustrare come funziona questa funzionalità, prendiamo come esempio il quadrante AAPS (Large) e vediamo i risultati in base al "tempo trascorso" e alla nuova vista "status" visibile o meno:
+To illustrate how this feature works, lets take as an example AAPS (Large) watchface and look at the results according to "time ago value" and the new "status" view visible or not:
 
 ![AAPS (Large)](../images/CustomWatchface_6.jpg)
 
-- Nel primo screenshot a sinistra, la vista status è visibile (con IOB, IOB dettagliato e BGI), quindi solo 1/3 della riga è disponibile per mostrare il timestamp (informazione molto compatta con `1'`, e per le informazioni sulla batteria del telefono `U: 55%`)
-- Nel secondo screenshot, la vista `status` è stata nascosta nei parametri dell'orologio, quindi c'è molto spazio per mostrare l'etichetta completa per le informazioni sul timestamp e sulla batteria del telefono (`1 minute ago` e `Uploader : 55%`)
-- Nel terzo screenshot a destra, le impostazioni sono esattamente le stesse sull'orologio, ma il timestamp è cambiato ed è superiore a "1". Ora il quadrante personalizzato è in grado di mostrare l'etichetta aggiornata con la gestione del plurale (`2 minutes ago`).
+- In first screenshot in the left, status view is visible (with IOB, detailed IOB and BGI), so only 1/3 of the line is available to show timestamp (very compact information with `1'`, and for uploader battery information `U: 55%`)
+- In second screenshot, now `status`view has been hidden in watch parameter, so you have a lot of place available to show full label for timestamp information and uploader battery (`1 minute ago` and `Uploader : 55%`)
+- In the third screenshot in the right, you have exactly the same setting within watch, but now timestamp has changed and is above "1". now the custom watchface is able to show the label updated with plural management (`2 minutes ago`)
 
-Non spiegherò come vengono gestite tutte le viste nel file zip (posizionamento di ogni vista in base alle diverse impostazioni), ma mi concentrerò solo sul modo in cui gestiamo la funzionalità di formattazione e il valore dinamico associato nel quadrante AAPS (Large).
+I will not explain below how the whole views are managed within zip file (positioning of each view according to different settings), but I will only focus on the way we manage formatting feature and associated dynamic value within AAPS (Large) watchface.
 
 
 
-**Questa funzionalità richiede un "blocco dinamico"** (può essere un blocco `dynData` o un blocco `dynPref`).
+**This feature requires "dynamic block"** (it can be either a `dynData` block or a `dynPref` block)
 
-- Per il quadrante AAPS (Large), volevamo avere il formato regolato in base ai parametri (formato breve o lungo in base alla visibilità della vista `status`), quindi abbiamo usato un blocco `dynPref`.
+- For AAPS (Large) Watchface, we wanted to have the format tuned according to parameters (short or long format according to `status` view visibility) so we used a `dynPref` block for that.
 
-Iniziamo con le viste:
+First lets start by the views:
 
 ```text
 "uploader_battery": {
@@ -1043,8 +1043,8 @@ Iniziamo con le viste:
     "gravity": "center",
     "font": "roboto_condensed_light",
     "fontStyle": "normal",
-    "dynPref": "uploader",
-    "dynValue": false,
+	"dynPref": "uploader",
+	"dynValue": false,
     "fontColor": "#BDBDBD"
 },
 
@@ -1064,16 +1064,16 @@ Iniziamo con le viste:
     "fontColor": "#FFFFFF"
 },
 ```
-La chiave più importante qui è `"dynValue"`: la presenza di questa chiave abilita la gestione dinamica del valore grezzo. Il booleano (true o false) definisce se il valore deve essere "convertito o no".
+here the most important key is `"dynValue"`: Having this key information will enable dynamic management of raw value. the boolean behind (true or false) will define if value should be "converted or not"
 
-- `false`: il valore grezzo viene usato così com'è, senza limitazioni o conversioni
-- Se in una vista si vuole usare una stringa di formattazione statica con la chiave `"textvalue"` per definire il formato e la chiave `"dynValue"` per l'uso del valore dinamico, occorre usare anche un blocco `"dynData"` o `"dynPref"` (anche se vuoto) per poter usare la funzionalità di formattazione.
+- `false`: raw value will be use as it is without any limitation or conversion
+- `true`: raw value will be converted (using `minData` and `maxData` keys in dynData block and using `minValue` and `maxValue` defined in dynData)
 
-Per questo quadrante, i valori grezzi vengono usati senza alcuna conversione, quindi per entrambe le viste la chiave `"dynValue"` è impostata a `false`.
+For this watchface, raw values are used without any conversion, so for both views, `"dynValue"` key as been set to `false`.
 
 
 
-Vediamo ora il blocco `"uploader"` definito nel `"dynPref"`:
+Now we will take a look on `"uploader"` block defined within `"dynPref"`:
 
 ```text
 "uploader": {
@@ -1090,30 +1090,30 @@ Vediamo ora il blocco `"uploader"` definito nel `"dynPref"`:
     }
 },
 ```
-Per impostazione predefinita la vista `"uploader_battery"` è collegata a `"uploader_battery"`, quindi non è necessario aggiungere una riga esplicita con
+By default  `"uploader_battery"` view is linked to `"uploader_battery"` , so no need to add an explicit line with
 
-`"valueKey": "uploader_battery"` (valore min 0, valore max 100, e il valore grezzo è la percentuale della batteria del telefono).
+`"valueKey": "uploader_battery"` (min value 0, max value 100, and raw value is percentage of phone battery)
 
-La stringa di formattazione è inclusa nella chiave `"textvalue1"` (le chiavi `"textvalue1"`, `"textvalue2"`, ecc. sono collegate alla chiave `"textvalue"` che può essere inclusa nel blocco `view`).
+The formatting string is included into `"textvalue1"` key (`"textvalue1"`, `"textvalue2"`, etc keys are linked to `"textvalue"` key that could be included into `view` block)
 
-- La chiave `"textvalue"` può essere usata con informazioni di formattazione nel blocco vista (in questo caso il formato è statico, indipendentemente dal valore o dalle impostazioni)
-- `true`: il valore grezzo viene convertito (usando le chiavi `minData` e `maxData` nel blocco dynData e `minValue` e `maxValue` definiti in dynData)
-- Le chiavi `"dynPref"` aggiuntive servono a definire altri blocchi per la variazione di posizionamento e colore in base alle viste visibili, alle impostazioni dark e matchDivider.
+- `"textvalue"`  key can be used with formatting information within the view block (in this situation format will be static, whatever the value or the settings)
+- If you want to modify formatting information according to settings or values, thenall dynData feature can be applied, and the dedicated keys are `"invalidTextValue"` key (without "formatting information" because value is not valid) and `"textvalue1"`, `"textvalue2"`... (and as many values that you want to manage steps between minData and maxData)
+- the additional `"dynPref"` keys are used to define other blocks for positioning variation and color variation depending on visible views, dark and matchDivider settings
 
-Per quanto riguarda la stringa di formattazione, la sintassi è la seguente: `%[flags][width][.precision]f`
+Concerning now the formatting string, syntax is the following: `%[flags][width][.precision]f`
 
-- `%` è l'inizio di una formattazione, `f` è la fine e deve essere usata per la conversione di valori Double.
-  - Nota: per usare il carattere `%` nella stringa, occorre usare `%%` per indicare che non è una stringa di formattazione ma il carattere percentuale.
-- `[flag]` è opzionale; principalmente può essere `+` per avere sempre un segno prima del numero, o `(` per i valori negativi tra parentesi.
-- `[width]` è opzionale; definisce il numero minimo di caratteri da scrivere nell'output.
-- `[.precision]` definisce il numero di cifre dopo la virgola.
-  - Nota: i valori sono Double, quindi è consigliabile impostare sempre una precisione (per evitare molti caratteri dopo la virgola dovuti alla precisione di Kotlin).
+- `%` is the beginning of a formatting, `f` is the end and should be used for Double value conversion.
+  - Note that if you want to use `%` character within your string, you will have to use `%%` to specify that it's not a formatting string but percentage character.
+- `[flag]` is optional, mainly can be `+` if you always want a sign before the number, or `(` if you want negative values in parentheses
+- `[width]`  is optional, define the minimum number of characters to be written to the output
+- `[.precision]` used to define number of digits after radix point.
+  - Note that values are Double so it's wise to always set a precision (to avoid a lot of characters after radix point due to kotlin precision)
 
-Nell'esempio sopra `%.0f` mostrerà il valore Double come numero intero.
+So in the above example `%.0f` will show Double value as an integer
 
 
 
-Vediamo ora il blocco dynPref del timestamp per gestire il plurale:
+Let's now take a look on timestamp dynPref block to manage plural:
 
 ```text
 "timestamp": {
@@ -1133,364 +1133,364 @@ Vediamo ora il blocco dynPref del timestamp per gestire il plurale:
     }
 },
 ```
-- Se la vista `status` è visibile (quindi la chiave `"key_show_loop_status"` è `true`), si usa un unico formato (`"textvalue1"`), con `'` come "unità"
-- Se la vista `status` è nascosta, si usano 2 formati diversi: uno per 0 o 1 con il singolare, e un altro per i valori superiori a 2 con il plurale
-  - `"minData"` e `"maxData"` servono a definire il range e assicurarsi che il passaggio dal singolare al plurale avvenga tra i valori 1 e 2
-  - Nota: `"maxData"` (intero) è stato impostato a 3 e non a 2, perché i dati Double gestiti dal sistema non sono interi, quindi un valore leggermente sopra o sotto 1 potrebbe avere formato singolare o plurale anche se dopo l'arrotondamento all'intero il valore è uguale a 1.
+- here if `status` view is visible (so  `"key_show_loop_satus"` key is `true`), a single format is used (`"textvalue1"`), with `'`  as "unit"
+- if  `status` view is hidden, you have 2 different format used one for 0 or 1 with singular, and another format for values above 2 with plural
+  - `"minData"` and `"maxData"` are used to define the range and be sure the switch from singular to plural will be done between 1 and 2 values
+  - Note that `"maxData"` (integer) has been set to 3 and not 2, just because Double data managed into the system is not integer, so a value a bit above or a bit lower 1 may have singular or plural format even if after rounding to integer, the value equals 1.
 
-- Per la vista `timestamp`, è importante impostare la chiave `"dynValue"` a `false`, altrimenti a causa della formattazione (singolare/plurale), tutti i valori superiori a 3 saranno limitati a `3 minutes ago` con la conversione usando `maxData`...
+- For `timestamp` view, it's important to set `"dynValue"` key to `false`,  otherwise because of formatting (singular/plural), all values above 3 will be limited to `3 minutes ago` with conversion using `maxData`...
 
 
 
-**Commento aggiuntivo sulla funzionalità di formattazione**
+**Additional comment concerning formatting feature**
 
 - keep in mind that the only dynamic values available are the one listed [here](#cwf-reference-dyndata-key-values)
-- All `BG` values are in mgdl unit, if you want to use formatting feature to show values in mmol units, you will have to manage mgdl to mmol conversion. Within a `dynData` or `dynPref` block, the key that should be used to name the block that will include `"minValue"`and `"maxValue"` for value conversion should be named `"dynValue": { ... }`. (see [Dyn Data Keys](#cwf-reference-dyndata-keys))
+- All `BG` values are in mgdl unit, if you want to use formatting feature to show values in mmol units, you will have to manage mgdl to mmol conversion. Within a `dynData` or `dynPref` block, the key that should be used to name the block that will include `"minValue"`and `"maxValue"` for value conversion should be named `"dynValue": { ...  }`. (see [Dyn Data Keys](#cwf-reference-dyndata-keys))
 - If within a view you want to use a static formatting string, with `"textvalue"` key to define format, and `"dynValue"` key to define usage of dynamic value, then you will have to also use a `"dynData"` or a `"dynPref"`block (even if empty), to be able to use formatting feature.
-- `"textvalue1"`, `"textvalue2"` fino a textvalue*n* possono essere usati senza la funzionalità di formattazione per sostituire il passo del valore double con un'etichetta di testo dedicata (ad esempio con il valore chiave `"day_name"` e sette passi per definire il nome personalizzato dei giorni della settimana, ...)
+- `"textvalue1"`, `"textvalue2"` to textvalue*n* can be used without formatting feature to replace double value step by a dedicated text label (for example with `"day_name"` key value and  seven steps to define custom name of the dayx of the week, ... )
 
-- Per la documentazione completa vedere [Class Formatter](https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html)
+- For full documentation you can see [Class Formatter](https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html)
 
 (cwf-reference-show-external-datas)=
 
-#### Mostra dati esterni per Follower
+#### Show External data for Follower
 
-Custom Watchface è ora in grado di visualizzare nello stesso quadrante fino a 3 set di dati: AAPS, AAPSCLIENT e AAPSCLIENT2.
+Custom Watchface is now able to display on the same watchface up to 3 set of data: AAPS, AAPSCLIENT and AAPSCLIENT2
 
-Per usare questa funzionalità occorre:
+To use this feature, you need to:
 
-- Avere almeno 2 delle 3 seguenti app installate sul telefono (AAPS, AAPSCLIENT, AAPSCLIENT2)
-- Abilitare la trasmissione dati in AAPSCLIENT e/o AAPSCLIENT2 per trasmettere i dati all'app principale usata per la sincronizzazione con CustomWatchface (AAPS o AAPSCLIENT)
-- Usare un CustomWatchface che implementi Viste con Chiave che include `_Ext1` o `_Ext2` (vedi [Riferimento Chiavi e ValoriChiave](#cwf-reference-key-and-keyvalue-reference) sotto)
+- have at least 2 of the 3 following apps installed in phone (AAPS, AAPSCLIENT, AAPSCLIENT2)
+- enable Broadcast data in AAPSCLIENT and/or AAPSCLIENT2 to broadcast data to the main app used to sync with CustomWatchface (AAPS or AAPSCLIENT)
+- Use a CustomWatchface that implement Views with Key including `_Ext1` or `_Ext2` (see [Key and KeyValue reference](#cwf-reference-key-and-keyvalue-reference) below)
 
-Nota: se l'app principale sul telefono è AAPSCLIENT e l'app secondaria che trasmette i dati è AAPSCLIENT2, occorre abilitare il parametro `Scambia dati esterni nel quadrante` nel parametro dedicato Custom Watchface se si usa un quadrante con viste standard e viste aggiuntive Ext1 (Ext1 è collegato a AAPSCLIENT e Ext2 è collegato a AAPSCLIENT2).
+Note that if main app in phone is AAPSCLIENT and secondary app which broadcast data is AAPSCLIENT2, you will have to enable `Switch external data in watchface` parameter within Custom Watchface dedicated parameter if you use a watchface which use standard views and Ext1 additional views (Ext1 is linked to AAPSCLIENT and Ext2 is linked to AAPSCLIENT2)
 
-Inoltre tre nuove viste (`"patient_name"`, `"patient_name_Ext1"` e `"patient_name_Ext2"` *) sono state aggiunte per includere automaticamente il nome del paziente (impostato nelle preferenze AAPS) nel quadrante (vedi esempio sotto).
+Additionally three new views (`"patient_name"` , `"patient_name_Ext1"`  and `"patient_name_Ext2"` *) has been added to be able to automatically include patient name (set within AAPS preferences) within watchface (see example below)
 
 ![CustomWatchface_7](../images/CustomWatchface_7.png)
 
 (cwf-reference-key-and-keyvalue-reference)=
 
-## Riferimento Chiavi e ValoriChiave
+## Key and KeyValue reference
 
 (cwf-reference-list-of-metadata-keys)=
 
-### Elenco delle chiavi Metadata
+### List of Metadata keys
 
 (cwf-reference-list-of-standard-metadata-keys)=
 
-#### Elenco delle chiavi metadata di informazione standard
+#### List of Standard information metadata keys 
 
-| Key                | Comment                                                                                                                          |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
-| `"name"`           | Nome del quadrante personalizzato                                                                                                |
-| `"author"`         | Nome o pseudonimo dell'autore/degli autori                                                                                       |
-| `"created_at"`     | Data di creazione (o aggiornamento); attenzione: `/` è un carattere speciale, quindi se lo si usa nella data inserire `\` prima |
-| `"cwf_version"`    | Plugin quadrante compatibile con il design del quadrante                                                                         |
-| `"author_version"` | L'autore può specificare qui la versione del suo quadrante                                                                       |
-| `"comment"`        | Testo libero che può essere usato per fornire informazioni o limitazioni del quadrante corrente                                  |
+| Key                | Comment                                                      |
+| ------------------ | ------------------------------------------------------------ |
+| `"name"`           | Name of custom watchface                                     |
+| `"author"`         | Name or pseudo of the author(s)                              |
+| `"created_at"`     | Creation (or update) date, be careful `/` is a special character, so if you use it for the date put `\`before |
+| `"cwf_version"`    | Watchface plugin compatible with the design of your watchface |
+| `"author_version"` | The author can specify here the version of his watchface     |
+| `"comment"`        | Free text that can be used to give some information or limitation of current watchface |
 
 (cwf-reference-preference-keys)=
 
-#### Chiavi Preferenze
+#### Preference keys
 
-| Key                           | Valore predefinito e commento                                                                                                                                                                                                                                                                              |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"key_show_detailed_iob"`     | true blocca i dati IOB dettagliati sulla vista `iob2`, quindi `iob1` (se visibile e non sostituita da un'icona) mostrerà il totale iob.<br />false blocca il totale iob sulla vista `iob2`. Può essere usato se la larghezza di `iob2` è troppo piccola per mostrare correttamente l'iob dettagliato |
-| `"key_show_detailed_delta"`   | false (solo se il design non è compatibile con la larghezza del delta dettagliato per le viste `delta` e `avg_delta`)                                                                                                                                                                                      |
-| `"key_show_bgi"`              | true se il design richiede le informazioni `bgi`                                                                                                                                                                                                                                                           |
-| `"key_show_iob"`              | true se il design richiede le viste `iob1` o `iob2`                                                                                                                                                                                                                                                        |
-| `"key_show_cob"`              | true se il design richiede le viste `cob1` o `cob2`                                                                                                                                                                                                                                                        |
-| `"key_show_delta"`            | true se il design richiede le informazioni `delta`                                                                                                                                                                                                                                                         |
-| `"key_show_avg_delta"`        | true se il design richiede le informazioni `avg_delta`                                                                                                                                                                                                                                                     |
-| `"key_show_temp_target"`      | true se il design richiede le informazioni `tempTarget`                                                                                                                                                                                                                                                    |
-| `"key_show_reservoir_level"`  | true se il design richiede le informazioni `reservoir`                                                                                                                                                                                                                                                     |
-| `"key_show_uploader_battery"` | true se il design richiede le informazioni `uploader_battery` (batteria del telefono)                                                                                                                                                                                                                      |
-| `"key_show_rig_battery"`      | true se il design richiede le informazioni `rig_battery`                                                                                                                                                                                                                                                   |
-| `"key_show_temp_basal"`       | true se il design richiede le informazioni `basalRate`                                                                                                                                                                                                                                                     |
-| `"key_show_direction"`        | true se il design richiede le informazioni `direction` (frecce di variazione glicemia)                                                                                                                                                                                                                     |
-| `"key_show_ago"`              | true se il design richiede le informazioni `timestamp` (minuti fa per l'ultima glicemia ricevuta)                                                                                                                                                                                                          |
-| `"key_show_bg"`               | true se il design richiede le informazioni `sgv` (valore glicemia)                                                                                                                                                                                                                                         |
-| `"key_show_loop_status"`      | true se il design richiede le informazioni `loop` (stato del loop e tempo)                                                                                                                                                                                                                                 |
-| `"key_show_week_number"`      | true se il design richiede le informazioni `week_number`                                                                                                                                                                                                                                                   |
-| `"key_show_date"`             | true se il design richiede le informazioni `Date`, `Month` o `Day of the week`                                                                                                                                                                                                                             |
+| Key                           | Default value and Comment                                    |
+| ----------------------------- | ------------------------------------------------------------ |
+| `"key_show_detailed_iob"`     | true will lock detailed IOB data on view `iob2`, then `iob1` (if visible and not replaced by an icon) will show iob total.<br />false will lock total iob on `iob2`view. can be used if the width of `iob2`is too small to show correctly detailed iob |
+| `"key_show_detailed_delta"`   | false (only if design is not compatible with the width of detailed delta for `delta`and `avg_delta` views) |
+| `"key_show_bgi"`              | true if your design requires `bgi` information               |
+| `"key_show_iob"`              | true if your design requires `iob1` or `iob2`views           |
+| `"key_show_cob"`              | true if your design requires `cob1` or `cob2`views           |
+| `"key_show_delta"`            | true if your design requires `delta` information             |
+| `"key_show_avg_delta"`        | true if your design requires `avg_delta` information         |
+| `"key_show_temp_target"`      | true if your design requires `tempTarget` information        |
+| `"key_show_reservoir_level"`  | true if your design requires `reservoir` information         |
+| `"key_show_uploader_battery"` | true if your design requires `uploader_battery` (phone battery) information |
+| `"key_show_rig_battery"`      | true if your design requires `rig_battery` information       |
+| `"key_show_temp_basal"`       | true if your design requires `basalRate` information         |
+| `"key_show_direction"`        | true if your design requires `direction` information (BG variation arrows) |
+| `"key_show_ago"`              | true if your design requires `timestamp` information (minutes ago for last received BG) |
+| `"key_show_bg"`               | true if your design requires `sgv` information (BG value)    |
+| `"key_show_loop_status"`      | true if your design requires `loop` information (loop status and ago) |
+| `"key_show_week_number"`      | true if your design requires `week_number` information (loop status and ago) |
+| `"key_show_date"`             | true if your design requires `Date`, `Month` or `Day of the week` information |
 
-#### Chiavi interne
+#### Internal keys
 
-| Key                   | Commento                                                                                                                                                                                                                            |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"filename"`          | Questa chiave viene creata (o aggiornata) automaticamente quando il quadrante viene caricato e conterrà il nome del file zip locale nella cartella exports                                                                          |
-| `"cwf_authorization"` | questa chiave viene creata (quando il quadrante viene caricato) e aggiornata ogni volta che la preferenza di autorizzazione viene modificata nelle impostazioni Wear; viene usata per sincronizzare l'autorizzazione con l'orologio |
+| Key                   | Comment and                                                  |
+| --------------------- | ------------------------------------------------------------ |
+| `"filename"`          | This key will be created (or updated) automatically when the watchface is loaded and will contains local zip filename within exports folder |
+| `"cwf_authorization"` | this key will be created (when the watchface is loaded) and updated each time authorization preference is changed in Wear settings, and it will be used to synchronize authorization to watch |
 
 (cwf-reference-list-of-general-parameters)=
 
-### Elenco dei parametri generali
+### List of General parameters
 
-| Key                      | Comment                                                                                                                                                                                                                                                                                   |
-| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"highColor"`            | `"#FFFF00"` (predefinito Giallo): Colore del valore glicemia, frecce di tendenza e valore glicemia nel grafico se la glicemia è sopra il limite superiore (Iper)                                                                                                                          |
-| `"midColor"`             | `"#00FF00"` (predefinito Verde): Colore del valore glicemia, frecce di tendenza e valore glicemia nel grafico se la glicemia è nel range                                                                                                                                                  |
-| `"lowColor"`             | `"#FF0000"` (predefinito Rosso): Colore del valore glicemia, frecce di tendenza e valore glicemia nel grafico se la glicemia è sotto il limite inferiore (Ipo)                                                                                                                            |
-| `"lowBatColor"`          | `"#E53935"` (predefinito Rosso Scuro): Colore di `uploader_battery` quando il valore è basso (sotto il 20%)                                                                                                                                                                               |
-| `"carbColor"`            | `"#FB8C00"` (predefinito Arancione): Colore dei punti carboidrati nel grafico                                                                                                                                                                                                             |
-| `"basalBackgroundColor"` | `"#0000FF"` (predefinito Blu scuro): Colore della curva TBR nel grafico                                                                                                                                                                                                                   |
-| `"basalCenterColor"`     | `"#64B5F6"` (predefinito Azzurro): Colore dei punti Bolo o SMB nel grafico                                                                                                                                                                                                                |
-| `"gridColor"`            | `"#FFFFFF"` (predefinito Bianco): Colore delle linee e della scala del testo nel grafico                                                                                                                                                                                                  |
-| `"pointSize"`            | 2 (predefinito): dimensione dei punti nel grafico (1 per punti piccoli, 2 per punti grandi)                                                                                                                                                                                               |
-| `"enableSecond"`         | false (predefinito): specifica se il quadrante gestirà i secondi o meno nelle viste `time`, `second` o `second_hand`. È importante essere coerenti tra la visibilità della vista e questa impostazione generale che consentirà l'aggiornamento ogni secondo delle informazioni temporali. |
-| `"dayNameFormat"`        | "E" (predefinito): da "E" a "EEEE" specifica il formato del nome del giorno (numero, nome breve, nome completo)                                                                                                                                                                           |
-| `"monthFormat"`          | "MMM" (predefinito): da "M" a "MMMM" specifica il formato del mese (numero, nome breve, nome completo)                                                                                                                                                                                    |
+| Key                      | Comment                                                      |
+| ------------------------ | ------------------------------------------------------------ |
+| `"highColor"`            | `"#FFFF00"`(default Yellow): Color of BG value, trend arrows and bg value in graph if bg is above upper limit (Hyper) |
+| `"midColor"`             | `"#00FF00"`(default Green): Color of BG value, trend arrows and bg value in graph if bg is within range |
+| `"lowColor"`             | `"#FF0000"`(default Red): Color of BG value, trend arrows and bg value in graph if bg is below lower limit (Hypo) |
+| `"lowBatColor"`          | `"#E53935"`(default Dark Red): Color of `uploader_battery` when value is low (below 20% tbc) |
+| `"carbColor"`            | `"#FB8C00"`(default Orange): Color of Carbs points within graph |
+| `"basalBackgroundColor"` | `"#0000FF"`(default Dark blue): Color of TBR curve within graph |
+| `"basalCenterColor"`     | `"#64B5F6"`(default Light blue): Color of Bolus or SMB points within graph |
+| `"gridColor"`            | `"#FFFFFF"`(default White): Color of lines and text scale within graph |
+| `"pointSize"`            | 2 (default): size of points in graph (1 for small point, 2 for big points) |
+| `"enableSecond"`         | false (default): specify if watchface will manage seconds or not within `time`, `second` or `second_hand` views. it's important to be consistent between view visibility and this overall setting that will allow update every second of time information |
+| `"dayNameFormat"`        | "E" (default): from "E" to "EEEE" specify dayname format (number, short name, full name) tbc |
+| `"monthFormat"`          | "MMM" (default): from "M" to "MMMM" specify month format (number, short name, full name) |
 
 (cwf-reference-list-of-hardcoded-resource-files)=
 
-### Elenco dei file di risorse predefiniti
+### List of HardCoded resource files
 
-Per la maggior parte delle immagini, il suffisso High e Low consente di regolare l'immagine in base al livello glicemia (in Range, Iper o Ipo).
+For most images, High and Low suffix allow tuning of image according to BG level (in Range, Hyper or Hypo)
 
-| Nomi file                                                       | Comment                                                                                                                                                                                                                |
-| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CustomWatchface                                                 | Immagine mostrata per la selezione del quadrante e nel plugin Wear                                                                                                                                                     |
-| Background,<br />BackgroundHigh,<br />BackgroundLow | nessuno (predefinito nero): immagine di sfondo. Lo sfondo è sempre visibile e il colore predefinito è nero se non viene fornita alcuna immagine. Il colore può essere modificato per adattarsi al design del quadrante |
-| CoverChart,<br />CoverChartHigh,<br />CoverChartLow | nessuno (predefinito): immagine davanti al grafico (la trasparenza deve essere disponibile per vedere il grafico dietro). Può essere usata per limitare i bordi del grafico                                            |
-| CoverPlate,<br />CoverPlateHigh,<br />CoverPlateLow | quadrante semplice (predefinito): immagine davanti a tutti i valori di testo. La trasparenza è obbligatoria per vedere tutti i valori che si trovano dietro                                                            |
-| HourHand,<br />HourHandHigh,<br />HourHandLow       | hour_hand (predefinito): immagine della lancetta delle ore. Viene fornita un'immagine predefinita che può essere colorata per adattarsi al design analogico. L'asse di rotazione sarà il centro dell'immagine          |
-| MinuteHand,<br />MinuteHandHigh,<br />MinuteHandLow | minute_hand (predefinito): immagine della lancetta dei minuti. Viene fornita un'immagine predefinita che può essere colorata per adattarsi al design analogico. L'asse di rotazione sarà il centro dell'immagine       |
-| SecondHand,<br />SecondHandHigh,<br />SecondHandLow | second_hand (predefinito): immagine della lancetta dei secondi. Viene fornita un'immagine predefinita che può essere colorata per adattarsi al design analogico. L'asse di rotazione sarà il centro dell'immagine      |
-| ArrowNone                                                       | ?? (predefinito): immagine mostrata quando non è disponibile nessuna freccia valida                                                                                                                                    |
-| ArrowDoubleUp                                                   | ↑↑ (predefinito): immagine della doppia freccia su                                                                                                                                                                     |
-| ArrowSingleUp                                                   | ↑ (predefinito): immagine della freccia singola su                                                                                                                                                                     |
-| Arrow45Up                                                       | ↗ (predefinito): immagine della freccia a 45° su                                                                                                                                                                       |
-| ArrowFlat                                                       | → (predefinito): immagine della freccia orizzontale                                                                                                                                                                    |
-| Arrow45Down                                                     | ↘ (predefinito): immagine della freccia a 45° giù                                                                                                                                                                      |
-| ArrowSingleDown                                                 | ↓ (predefinito): immagine della freccia singola giù                                                                                                                                                                    |
-| ArrowDoubleDown                                                 | ↓↓ (predefinito): immagine della doppia freccia giù                                                                                                                                                                    |
+| Filenames                                           | Comment                                                      |
+| --------------------------------------------------- | ------------------------------------------------------------ |
+| CustomWatchface                                     | Image shown for watchface selection and within Wear plugin   |
+| Background,<br />BackgroundHigh,<br />BackgroundLow | none (default black): Background image. background is always visible and default color is black if no image provided. Color can be modified to fit watchface design |
+| CoverChart,<br />CoverChartHigh,<br />CoverChartLow | none (default): Image in front of Chart (transparency should be available to see Chart behind) Can be used to limit boundaries of graph |
+| CoverPlate,<br />CoverPlateHigh,<br />CoverPlateLow | simple dial (default): image in front of all text values. transparency mandatory to see all values that are behind |
+| HourHand,<br />HourHandHigh,<br />HourHandLow       | hour_hand (default): image of hour hand. a default image is provided and can be colored to fit analog design. Note axis for rotation will be the center of the image |
+| MinuteHand,<br />MinuteHandHigh,<br />MinuteHandLow | minute_hand (default): image of minute hand. a default image is provided and can be colored to fit analog design. Note axis for rotation will be the center of the image |
+| SecondHand,<br />SecondHandHigh,<br />SecondHandLow | second_hand (default): image of second hand. a default image is provided and can be colored to fit analog design. Note axis for rotation will be the center of the image |
+| ArrowNone                                           | ?? (default): image shown when no valid arrow is available.  |
+| ArrowDoubleUp                                       | ↑↑ (default): image of double arrow up                       |
+| ArrowSingleUp                                       | ↑ (default): image of single arrow up                        |
+| Arrow45Up                                           | ↗ (default): image of fortyfive arrow up                     |
+| ArrowFlat                                           | → (default): image of flat arrow                             |
+| Arrow45Down                                         | ↘ (default): image of fortyfive arrow down                   |
+| ArrowSingleDown                                     | ↓ (default): image of single arrow down                      |
+| ArrowDoubleDown                                     | ↓↓ (default): image of double arrow down                     |
 
-Per ciascuno dei nomi file sopra, l'estensione può essere `.jpg`, `.png` o `.svg`. Ma attenzione: `.jpg` non gestisce la trasparenza (quindi la maggior parte dei file dovrebbe essere in .png o .svg per non nascondere le viste che si trovano dietro...)
+For each above filenames, extension can be either `.jpg`, `.png` or `.svg`. But be careful, `.jpg`doesn't manage transparency (so most of the files should be with .png or .svg to not hide view that are behind...)
 
 (cwf-reference-list-of-view-keys)=
 
-### Elenco delle chiavi Vista
+### List of View keys
 
-Questo elenco è ordinato dallo sfondo al primo piano: è molto importante conoscere questo ordine quando si organizza il quadrante, perché alcune immagini o testi possono essere nascosti da altre immagini.
+This list is sorted from background to foreground this is very important when you organize your watchface to know this order because some image or text can be hidden by other images.
 
-Nota: tutte le chiavi che includono `_Ext1` o `_Ext2` alla fine sono nuove e dedicate ai quadranti multi-utente.
+Note: all keys including `_Ext1` or `_Ext2` at the end are new and dedicated for multi users Watchfaces.
 
-| Key                                                                                    | Tipo di vista           | Dati collegati                                                                                                                                                               | Chiave DynData                                                                                                                                                                          |
-| -------------------------------------------------------------------------------------- | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"background"`                                                                         | Image View              |                                                                                                                                                                              |                                                                                                                                                                                         |
-| `"chart"`                                                                              | Vista Grafico Specifica | Curve grafiche                                                                                                                                                               |                                                                                                                                                                                         |
-| `"cover_chart"`                                                                        | Image View              |                                                                                                                                                                              |                                                                                                                                                                                         |
-| `"freetext1"`                                                                          | Text View               |                                                                                                                                                                              |                                                                                                                                                                                         |
-| `"freetext2"`                                                                          | Text View               |                                                                                                                                                                              |                                                                                                                                                                                         |
-| `"freetext3"`                                                                          | Text View               |                                                                                                                                                                              |                                                                                                                                                                                         |
-| `"freetext4"`                                                                          | Text View               |                                                                                                                                                                              |                                                                                                                                                                                         |
-| `"patient_name"` *<br/>`"patient_name_Ext1"` *<br/>`"patient_name_Ext2"` * | Text View               | Nome Paziente                                                                                                                                                                |                                                                                                                                                                                         |
-| `"iob1"`<br/>`"iob1_Ext1"` *<br/>`"iob1_Ext2"` *                           | Text View               | Etichetta IOB o Totale IOB                                                                                                                                                   |                                                                                                                                                                                         |
-| `"iob2"`<br/>`"iob2_Ext1"` *<br/>`"iob2_Ext2"` *                           | Text View               | Totale IOB o IOB Dettagliato                                                                                                                                                 |                                                                                                                                                                                         |
-| `"cob1"`<br/>`"cob1_Ext1"` *<br/>`"cob1_Ext2"` *                           | Text View               | Etichetta Carboidrati                                                                                                                                                        |                                                                                                                                                                                         |
-| `"cob2"`<br/>`"cob2_Ext1"` *<br/>`"cob2_Ext2"` *                           | Text View               | Valore COB                                                                                                                                                                   |                                                                                                                                                                                         |
-| `"delta"`<br/>`"delta_Ext1"` *<br/>`"delta_Ext2"` *                        | Text View               | Delta breve (5 min)                                                                                                                                                          | delta                                                                                                                                                                                   |
-| `"avg_delta"`<br/>`"avg_delta_Ext1"` *<br/>`"avg_delta_Ext2"` *            | Text View               | Avg Delta (15 min)                                                                                                                                                           | delta_Ext1<br/>delta_Ext2                                                                                                          | | `"avg_delta"`<br/>`"avg_delta_Ext1"` |
-| `"tempTarget"`*<br/>`"tempTarget_Ext1"` *<br/>`"tempTarget_Ext2"` *        | Text View               | Target glicemia (valore singolo o valori min-max del target)                                                                                                                 | tempTarget<br/>tempTarget_Ext1<br/>tempTarget_Ext2                                                                                                                          |
-| `"reservoir"`*<br/>`"reservoir_Ext1"` *<br/>`"reservoir_Ext2"` *           | Text View               | Livello Reservoir                                                                                                                                                            | reservoir<br/>reservoirLevel<br/>reservoir_Ext1<br/>reservoirLevel_Ext1<br/>reservoir_Ext2<br/>reservoirLevel_Ext2                                        |
-| `"uploader_battery"`                                                                   | Text View               | livello batteria telefono (%)                                                                                                                                                | uploader_battery                                                                                                                                                                        |
-| `"rig_battery"`<br/>`"rig_battery_Ext1"` *<br/>`"rig_battery_Ext2"` *      | Text View               | livello batteria rig (%)                                                                                                                                                     | rig_battery<br/>rig_battery_Ext1<br/>rig_battery_Ext2                                                                                                                   |
-| `"basalRate"`<br/>`"basalRate_Ext1"` *<br/>`"basalRate_Ext2"` *            | Text View               | % o valore assoluto                                                                                                                                                          |                                                                                                                                                                                         |
-| `"bgi"`<br/>`"bgi_Ext1"` *<br/>`"bgi2_Ext2"` *                             | Text View               | mgdl/(5 min) or mmol/(5 min)                                                                                                                                                 |                                                                                                                                                                                         |
-| `"status"` *<br/>`"status_Ext1"` *<br/>`"status_Ext2"` *                   | Text View               | Sintesi IOB (indipendentemente dall'impostazione IOB sull'orologio), IOB Dettagliato (in base all'impostazione sull'orologio) e BGI (in base all'impostazione sull'orologio) |                                                                                                                                                                                         |
-| `"time"`                                                                               | Text View               | HH:MM o HH:MM:SS                                                                                                                                                             |                                                                                                                                                                                         |
-| `"hour"`                                                                               | Text View               | HH                                                                                                                                                                           |                                                                                                                                                                                         |
-| `"minute"`                                                                             | Text View               | MM                                                                                                                                                                           |                                                                                                                                                                                         |
-| `"second"`                                                                             | Text View               | SS                                                                                                                                                                           |                                                                                                                                                                                         |
-| `"timePeriod"`                                                                         | Text View               | AM o PM                                                                                                                                                                      |                                                                                                                                                                                         |
-| `"day_name"`                                                                           | Text View               | nome del giorno (cfr. dayNameFormat)                                                                                                                                         | day_name                                                                                                                                                                                |
-| `"day"`                                                                                | Text View               | data DD                                                                                                                                                                      | day                                                                                                                                                                                     |
-| `"week_number"`                                                                        | Text View               | (WW) numero della settimana                                                                                                                                                  | week_number                                                                                                                                                                             |
-| `"month"`                                                                              | Text View               | nome del mese (cfr. monthFormat)                                                                                                                                             |                                                                                                                                                                                         |
-| `"loop"`<br/>`"loop_Ext1"` *<br/>`"loop_Ext2"` *                           | Text View               | minuti fa dall'ultima esecuzione e stato (frecce colorate nello sfondo); le frecce colorate possono essere regolate con DynData                                              | loop                                                                                                                                                                                    |
-| `"direction"`<br/>`"direction_Ext1"` *<br/>`"direction_Ext2"` *            | Image View              | TrendArrows                                                                                                                                                                  | direction                                                                                                                                                                               |
-| `"timestamp"`<br/>`"timestamp_Ext1"` *<br/>`"timestamp_Ext2"` *            | Text View               | intero (minuti fa)                                                                                                                                                           | timestamp                                                                                                                                                                               |
-| `"sgv"`<br/>`"sgv_Ext1"` *<br/>`"sgv_Ext2"` *                              | Text View               | valore sgv (mgdl o mmol)                                                                                                                                                     | sgv<br />sgvLevel<br/>sgv_Ext1<br />sgvLevel_Ext1<br/>sgv_Ext2<br />sgvLevel_Ext2                                                                         |
-| `"cover_plate"`                                                                        | Image View              |                                                                                                                                                                              |                                                                                                                                                                                         |
-| `"hour_hand"`                                                                          | Image View              |                                                                                                                                                                              |                                                                                                                                                                                         |
-| `"minute_hand"`                                                                        | Image View              |                                                                                                                                                                              |                                                                                                                                                                                         |
-| `"second_hand"`                                                                        | Image View              |                                                                                                                                                                              |                                                                                                                                                                                         |
+| Key                                                          | Type of view        | Data attached                                                | DynData Key                                                  |
+| ------------------------------------------------------------ | ------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `"background"`                                               | Image View          |                                                              |                                                              |
+| `"chart"`                                                    | Specific Chart View | Graphical curves                                             |                                                              |
+| `"cover_chart"`                                              | Image View          |                                                              |                                                              |
+| `"freetext1"`                                                | Text View           |                                                              |                                                              |
+| `"freetext2"`                                                | Text View           |                                                              |                                                              |
+| `"freetext3"`                                                | Text View           |                                                              |                                                              |
+| `"freetext4"`                                                | Text View           |                                                              |                                                              |
+| `"patient_name"` *<br/>`"patient_name_Ext1"` *<br/>`"patient_name_Ext2"` * | Text View           | Patient Name                                                 |                                                              |
+| `"iob1"`<br/>`"iob1_Ext1"` *<br/>`"iob1_Ext2"` *             | Text View           | IOB label or IOB Total                                       |                                                              |
+| `"iob2"`<br/>`"iob2_Ext1"` *<br/>`"iob2_Ext2"` *             | Text View           | IOB Total or IOB Detailed                                    |                                                              |
+| `"cob1"`<br/>`"cob1_Ext1"` *<br/>`"cob1_Ext2"` *             | Text View           | Carb label                                                   |                                                              |
+| `"cob2"`<br/>`"cob2_Ext1"` *<br/>`"cob2_Ext2"` *             | Text View           | COB Value                                                    |                                                              |
+| `"delta"`<br/>`"delta_Ext1"` *<br/>`"delta_Ext2"` *          | Text View           | Short delta (5 min)                                          | delta<BR/>delta_Ext1<br/>delta_Ext2                          |
+| `"avg_delta"`<br/>`"avg_delta_Ext1"` *<br/>`"avg_delta_Ext2"` * | Text View           | Avg Delta (15 min)                                           | avg_delta<br/>avg_delta_Ext1<br/>avg_delta_Ext2              |
+| `"tempTarget"`*<br/>`"tempTarget_Ext1"` *<br/>`"tempTarget_Ext2"` * | Text View           | BG Target (single value or min - max targets values)         | tempTarget<br/>tempTarget_Ext1<br/>tempTarget_Ext2           |
+| `"reservoir"`*<br/>`"reservoir_Ext1"` *<br/>`"reservoir_Ext2"` * | Text View           | Reservoir level                                              | reservoir<br/>reservoirLevel<br/>reservoir_Ext1<br/>reservoirLevel_Ext1<br/>reservoir_Ext2<br/>reservoirLevel_Ext2 |
+| `"uploader_battery"`                                         | Text View           | phone battery level (%)                                      | uploader_battery                                             |
+| `"rig_battery"`<br/>`"rig_battery_Ext1"` *<br/>`"rig_battery_Ext2"` * | Text View           | rig battery level (%)                                        | rig_battery<br/>rig_battery_Ext1<br/>rig_battery_Ext2        |
+| `"basalRate"`<br/>`"basalRate_Ext1"` *<br/>`"basalRate_Ext2"` * | Text View           | % or absolute value                                          |                                                              |
+| `"bgi"`<br/>`"bgi_Ext1"` *<br/>`"bgi2_Ext2"` *               | Text View           | mgdl/(5 min) or mmol/(5 min)                                 |                                                              |
+| `"status"` *<br/>`"status_Ext1"` *<br/>`"status_Ext2"` *     | Text View           | Synthesis of IOB (whatever IOB setting in watch), Detailed IOB (according to setting in watch and BGI (according to setting in watch) |                                                              |
+| `"time"`                                                     | Text View           | HH:MM or HH:MM:SS                                            |                                                              |
+| `"hour"`                                                     | Text View           | HH                                                           |                                                              |
+| `"minute"`                                                   | Text View           | MM                                                           |                                                              |
+| `"second"`                                                   | Text View           | SS                                                           |                                                              |
+| `"timePeriod"`                                               | Text View           | AM or PM                                                     |                                                              |
+| `"day_name"`                                                 | Text View           | name of the day (cf. dayNameFormat)                          | day_name                                                     |
+| `"day"`                                                      | Text View           | DD date                                                      | day                                                          |
+| `"week_number"`                                              | Text View           | (WW) week number                                             | week_number                                                  |
+| `"month"`                                                    | Text View           | month name (cf. monthFormat)                                 |                                                              |
+| `"loop"`<br/>`"loop_Ext1"` *<br/>`"loop_Ext2"` *             | Text View           | min ago since last run and status (color arrows in background), color arrows can be tuned with DynData | loop                                                         |
+| `"direction"`<br/>`"direction_Ext1"` *<br/>`"direction_Ext2"` * | Image View          | TrendArrows                                                  | direction                                                    |
+| `"timestamp"`<br/>`"timestamp_Ext1"` *<br/>`"timestamp_Ext2"` * | Text View           | integer (min ago)                                            | timestamp                                                    |
+| `"sgv"`<br/>`"sgv_Ext1"` *<br/>`"sgv_Ext2"` *                | Text View           | sgv value (mgdl or mmol)                                     | sgv<br />sgvLevel<br/>sgv_Ext1<br />sgvLevel_Ext1<br/>sgv_Ext2<br />sgvLevel_Ext2 |
+| `"cover_plate"`                                              | Image View          |                                                              |                                                              |
+| `"hour_hand"`                                                | Image View          |                                                              |                                                              |
+| `"minute_hand"`                                              | Image View          |                                                              |                                                              |
+| `"second_hand"`                                              | Image View          |                                                              |                                                              |
 
-**Vista aggiunta in Custom Watchface V2.0 o superiore (disponibile nell'apk wear AAPS 3.3.0 o superiore)*
+**View added in Custom Watchface V2.0 or above (available on AAPS 3.3.0 wear apk or above)*
 
 (cwf-reference-list-of-json-keys)=
 
-### Elenco delle chiavi Json
+### List of Json keys
 
 (cwf-reference-common-keys)=
 
-#### Chiavi comuni
+#### Common keys
 
- utilizzabili su tutti i tipi di vista (Text View, image View, graph view)
+ that can be used on all view types (Text View, image View, graph view)
 
-| Key                      | tipo    | commento / valore                                                                                                                                                                                                   |
-| ------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"width"`                | int     | larghezza della vista in pixel                                                                                                                                                                                      |
-| `"height"`               | int     | altezza della vista in pixel                                                                                                                                                                                        |
-| `"topmargin"`            | int     | margine superiore in pixel                                                                                                                                                                                          |
-| `"leftmargin"`           | int     | margine sinistro in pixel                                                                                                                                                                                           |
-| `"rotation"`             | int     | angolo di rotazione in gradi                                                                                                                                                                                        |
-| `"visibility"`           | string  | vedi tabella valori chiave                                                                                                                                                                                          |
-| `"dynData"`              | string  | nome del blocco chiave che specifica i dati dinamici da collegare e l'animazione associata (colori, immagine, scorrimento, rotazione)<br />`"dynData": "customName",` (see below )                            |
-| `"leftOffset"`           | boolean | includere questa chiave con valore true per abilitare lo scorrimento orizzontale (valore positivo o negativo) dovuto al valore dynData                                                                              |
-| `"topOffset"`            | boolean | includere questa chiave con valore true per abilitare lo scorrimento verticale (valore positivo o negativo) dovuto al valore dynData                                                                                |
-| `"rotationOffset"`       | boolean | includere questa chiave con valore true per abilitare la rotazione (valore positivo o negativo) dovuta al valore dynData                                                                                            |
-| `"twinView"`             | string  | chiave dell'altra vista (generalmente l'altra vista include anche il parametro twinView con la chiave di questa vista)                                                                                              |
-| `"topOffsetTwinHidden"`  | int     | numero di pixel di cui spostare la posizione della vista verticalmente se la vista gemella è nascosta (valore positivo o negativo)<br />topOffsetTwinHidden = (topOffset twinView - topOffset thisView)/2     |
-| `"leftOffsetTwinHidden"` | int     | numero di pixel di cui spostare la posizione della vista orizzontalmente se la vista gemella è nascosta (valore positivo o negativo)<br />leftOffsetTwinHidden= (leftOffset twinView - leftOffset thisView)/2 |
-| `"dynPref"`              | string  | nome del blocco chiave che specifica la preferenza dinamica da collegare e l'animazione associata (colori, immagine, scorrimento, rotazione)<br />`"dynPref": "customName",` (see below )                     |
+| Key                      | type    | comment / value                                              |
+| ------------------------ | ------- | ------------------------------------------------------------ |
+| `"width"`                | int     | width of view in pixel                                       |
+| `"height"`               | int     | height of view in pixel                                      |
+| `"topmargin"`            | int     | top margin in pixel                                          |
+| `"leftmargin"`           | int     | left margin in pixel                                         |
+| `"rotation"`             | int     | rotation angle in degrees                                    |
+| `"visibility"`           | string  | see key value table                                          |
+| `"dynData"`              | string  | key block name that will specify dynamic data to link and associated animation (colors, image, shift, rotation)<br />`"dynData": "customName",` (see below ) |
+| `"leftOffset"`           | boolean | include this key with key value true to enable horizontal shift (positive or negative value) due to dynData value |
+| `"topOffset"`            | boolean | include this key with key value true to enable vertical shift (positive or negative value) due to dynData value |
+| `"rotationOffset"`       | boolean | include this key with key value true to enable rotation (positive or negative value) due to dynData value |
+| `"twinView"`             | string  | key of the other view (generally the other view also include the twinView parameter with the key of this view in it) |
+| `"topOffsetTwinHidden"`  | int     | number of pixel to shift view position vertically if twin view is hidden (positive or negative value)<br />topOffsetTwinHidden = (topOffset twinView - topOffset thisView)/2 |
+| `"leftOffsetTwinHidden"` | int     | number of pixel to shift view position horizontally if twin view is hidden (positive or negative value)<br />leftOffsetTwinHidden= (leftOffset twinView - leftOffset thisView)/2 |
+| `"dynPref"`              | string  | key block name that will specify dynamic pref to link and associated animation (colors, image, shift, rotation)<br />`"dynPref": "customName",` (see below ) |
 
 (cwf-reference-textview-keys)=
 
-#### Chiavi TextView
+#### TextView keys
 
-| Key            | tipo    | commento                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| -------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"textsize"`   | int     | dimensione del font in pixel (tenere presente che il font può includere margini superiore e inferiore, quindi la dimensione reale del testo sarà generalmente inferiore al numero di pixel impostato). La dimensione deve essere inferiore all'altezza della vista per non essere troncata                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `"gravity"`    | string  | vedi tabella valori chiave                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `"font"`       | string  | vedi tabella valori chiave per i font disponibili.<br />Può essere anche il nome del file font (senza estensione) per i font inclusi nel file zip                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| `"fontStyle"`  | string  | vedi tabella valori chiave                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `"fontColor"`  | string  | Gestisce il colore del font<br />`"#RRGGBB"`: codice colore in formato RGB, i valori esadecimali #FF0000 è rosso<br />`"#AARRGGBB"`: AA include informazioni Alpha (trasparenza), 00 è trasparente, FF è opaco<br />`"bgColor"`: il keyValue bgColor è un modo semplice per usare highColor, midColor o lowColor in base al valore glicemia                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `"allCaps"`    | boolean | true per avere il testo in maiuscolo (principalmente nome del giorno o nome del mese)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `"background"` | string  | `resource_filename` consente di includere un'immagine di risorsa come sfondo della text view (il file di risorsa verrà ridimensionato per adattarsi all'altezza e alla larghezza della text view, mantenendo le proporzioni dell'immagine). Il valore di testo sarà davanti all'immagine di sfondo.<br />- Nota: questa chiave può essere usata anche per la vista `chart` per impostare uno sfondo personalizzato al grafico, davanti all'immagine di sfondo                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `"color"`      | string  | Gestisce il colore dello sfondo della vista o regola il colore dell'immagine (solo bitmap)<br />`"#RRGGBB"`: codice colore in formato RGB, i valori esadecimali #FF0000 è rosso<br />`"#AARRGGBB"`: AA include informazioni Alpha (trasparenza), 00 è trasparente, FF è opaco<br />`"bgColor"`: il keyValue bgColor è un modo semplice per usare highColor, midColor o lowColor in base al valore glicemia<br />- Per le immagini incorporate predefinite (lancette, quadrante), il colore viene applicato direttamente; per le immagini bitmap (jpg o png) verrà applicato un filtro di gradiente di saturazione<br />- Per i file svg questo parametro non avrà effetto (il colore dei file svg non può essere modificato)<br />- Nota: questa chiave può essere usata anche per la vista `chart` per impostare uno sfondo personalizzato al grafico, davanti all'immagine di sfondo |
-| `"textvalue"`  | string  | Chiave specifica per le 4 viste di testo libero incluse nel layout (da freetext1 a freetext4); consente di impostare il testo da includere (può essere un'etichetta, o solo `:` per aggiungere un separatore tra la vista delle ore e quella dei minuti...). Dalla versione V2 del plugin Custom Watchface (AAPS 3.3), textvalue può essere usato per includere una stringa di formato per le altre textView (da usare con le chiavi `dynValue` e `dynData` o `dynPref`). for example                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `"dynValue"`*  | boolean | true per includere il valore grezzo (double). Utile con la chiave `textvalue` per avere un formato dedicato alla visualizzazione del valore                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Key            | type    | comment                                                      |
+| -------------- | ------- | ------------------------------------------------------------ |
+| `"textsize"`   | int     | size of font in pixel (keep in mind that font can include top and bottom margin so the real text size will generally be smaller than the number of pixel set). Note that size should be smaller than view height to not be truncated |
+| `"gravity"`    | string  | see key value table                                          |
+| `"font"`       | string  | see key value table for available fonts.<br />Can also be font filename (without extension) for fonts included into zip file |
+| `"fontStyle"`  | string  | see key value table                                          |
+| `"fontColor"`  | string  | Manage color of the font<br />`"#RRVVBB"`: color code in RVB format, hexadecimal values #FF0000 is red<br />`"#AARRVVBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value |
+| `"allCaps"`    | boolean | true if you want text in uppercase (mainly day name or month name) |
+| `"background"` | string  | `resource_filename` you can include a resource image as background of the text view (resource file will be resized to fit height and width of text view, but keeping image ratio). text value will be in front of background image.<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, in front of background image |
+| `"color"`      | string  | Manage the color of view Background or tune color of image (if bitmap only)<br />`"#RRVVBB"`: color code in RVB format, hexadecimal values #FF0000 is red<br />`"#AARRVVBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value<br />- For default embedded image (hand, dial) color will be applied directly, for bitmap image (jpg or png) this will apply a saturation gradient filter on imagae<br />- For svg this parameter will have no effect (color of svg files cannot be modified)<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, in front of background image |
+| `"textvalue"`  | string  | Key specific to the 4 free text views included into the layout (from freetext1 to freetext4), this allow you to set the text that should be included (can be a label, or just `:` if you want to add a separator between hour view and minute view...)<BR>From Custom Watchface plugin v2 (AAPS 3.3), textvalue can be used to include a format string for the other textViews (to use with `dynValue` key and `dynData` or `dynPref`). for example |
+| `"dynValue"`*  | boolean | true if you want to include raw value in (double). Useful with `texvalue` key if you want a dedicated format to show value |
 
-**Chiave aggiunta in Custom Watchface V2.0 o superiore (disponibile nell'apk wear AAPS 3.3.0 o superiore)*
+**Key added in Custom Watchface V2.0 or above (available on AAPS 3.3.0 wear apk or above)*
 
 (cwf-reference-imageview-keys)=
 
-#### Chiavi ImageView
+#### ImageView keys
 
-| Key       | tipo   | commento                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| --------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"color"` | string | Gestisce il colore dello sfondo della vista o regola il colore dell'immagine (solo bitmap)<br />`"#RRGGBB"`: codice colore in formato RGB, i valori esadecimali #FF0000 è rosso<br />`"#AARRGGBB"`: AA include informazioni Alpha (trasparenza), 00 è trasparente, FF è opaco<br />`"bgColor"`: il keyValue bgColor è un modo semplice per usare highColor, midColor o lowColor in base al valore glicemia<br />- Per le immagini incorporate predefinite (lancette, quadrante), il colore viene applicato direttamente; per le immagini bitmap (jpg o png) verrà applicato un filtro di gradiente di saturazione<br />- Per i file svg questo parametro non avrà effetto (il colore dei file svg non può essere modificato)<br />- Nota: questa chiave può essere usata anche per la vista `chart` per impostare uno sfondo personalizzato al grafico, davanti all'immagine di sfondo |
+| Key       | type   | comment                                                      |
+| --------- | ------ | ------------------------------------------------------------ |
+| `"color"` | string | Manage the color of view Background or tune color of image (if bitmap only)<br />`"#RRVVBB"`: color code in RVB format, hexadecimal values #FF0000 is red<br />`"#AARRVVBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value<br />- For default embedded image (hand, dial) color will be applied directly, for bitmap image (jpg or png) this will apply a saturation gradient filter on imagae<br />- For svg this parameter will have no effect (color of svg files cannot be modified)<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, in front of background image |
 
 (cwf-reference-chartview-keys)=
 
-#### Chiavi ChartView
+#### ChartView keys
 
-| Key            | tipo   | commento                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| -------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"color"`      | string | Gestisce il colore dello sfondo della vista o regola il colore dell'immagine (solo bitmap)<br />`"#RRGGBB"`: codice colore in formato RGB, i valori esadecimali #FF0000 è rosso<br />`"#AARRGGBB"`: AA include informazioni Alpha (trasparenza), 00 è trasparente, FF è opaco<br />`"bgColor"`: il keyValue bgColor è un modo semplice per usare highColor, midColor o lowColor in base al valore glicemia<br />- Per le immagini incorporate predefinite (lancette, quadrante), il colore viene applicato direttamente; per le immagini bitmap (jpg o png) verrà applicato un filtro di gradiente di saturazione<br />- Per i file svg questo parametro non avrà effetto (il colore dei file svg non può essere modificato)<br />- Nota: questa chiave può essere usata anche per la vista `chart` per impostare uno sfondo personalizzato al grafico, davanti all'immagine di sfondo |
-| `"background"` | string | `resource_filename` consente di includere un'immagine di risorsa come sfondo della chart view (il file di risorsa verrà ridimensionato per adattarsi all'altezza e alla larghezza della chart view, mantenendo le proporzioni dell'immagine). Il valore di testo sarà davanti all'immagine di sfondo.<br />- Nota: questa chiave può essere usata anche per la vista `chart` per impostare uno sfondo personalizzato al grafico, davanti all'immagine di sfondo                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Key            | type   | comment                                                      |
+| -------------- | ------ | ------------------------------------------------------------ |
+| `"color"`      | string | Manage the color of view Background or tune color of image (if bitmap only)<br />`"#RRVVBB"`: color code in RVB format, hexadecimal values #FF0000 is red<br />`"#AARRVVBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value<br />- For default embedded image (hand, dial) color will be applied directly, for bitmap image (jpg or png) this will apply a saturation gradient filter on imagae<br />- For svg this parameter will have no effect (color of svg files cannot be modified)<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, in front of background image |
+| `"background"` | string | `resource_filename` you can include a resource image as background of the text view (resource file will be resized to fit height and width of text view, but keeping image ratio). text value will be in front of background image.<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, in front of background image |
 
 (cwf-reference-key-values)=
 
-### Valori chiave
+### Key values
 
-| Valore chiave                | chiave     | commento                                                                                       |
-| ---------------------------- | ---------- | ---------------------------------------------------------------------------------------------- |
-| `"gone"`                     | visibility | vista nascosta                                                                                 |
-| `"visible"`                  | visibility | vista visibile nel quadrante (la visibilità può essere abilitata o disabilitata nei parametri) |
-| `"center"`                   | gravity    | testo centrato verticalmente e orizzontalmente nella vista                                     |
-| `"left"`                     | gravity    | testo centrato verticalmente ma allineato a sinistra nella vista                               |
-| `"right"`                    | gravity    | testo centrato verticalmente ma allineato a destra nella vista                                 |
-| `"sans_serif"`               | font       |                                                                                                |
-| `"default"`                  | font       |                                                                                                |
-| `"default_bold"`             | font       |                                                                                                |
-| `"monospace"`                | font       |                                                                                                |
-| `"serif"`                    | font       |                                                                                                |
-| `"roboto_condensed_bold"`    | font       |                                                                                                |
-| `"roboto_condensed_light"`   | font       |                                                                                                |
-| `"roboto_condensed_regular"` | font       |                                                                                                |
-| `"roboto_slab_light"`        | font       |                                                                                                |
-| `"normal"`                   | fontStyle  |                                                                                                |
-| `"bold"`                     | fontStyle  |                                                                                                |
-| `"bold_italic"`              | fontStyle  |                                                                                                |
-| `"italic"`                   | fontStyle  |                                                                                                |
+| Key value                    | key        | comment                                                      |
+| ---------------------------- | ---------- | ------------------------------------------------------------ |
+| `"gone"`                     | visibility | view hidden                                                  |
+| `"visible"`                  | visibility | view visible in watchface (but visibility can be enable or disable in parameters) |
+| `"center"`                   | gravity    | text is vertical and horizontal centered into the view       |
+| `"left"`                     | gravity    | text is vertical centered but left aligned into the view     |
+| `"right"`                    | gravity    | text is vertical centered but right aligned into the view    |
+| `"sans_serif"`               | font       |                                                              |
+| `"default"`                  | font       |                                                              |
+| `"default_bold"`             | font       |                                                              |
+| `"monospace"`                | font       |                                                              |
+| `"serif"`                    | font       |                                                              |
+| `"roboto_condensed_bold"`    | font       |                                                              |
+| `"roboto_condensed_light"`   | font       |                                                              |
+| `"roboto_condensed_regular"` | font       |                                                              |
+| `"roboto_slab_light"`        | font       |                                                              |
+| `"normal"`                   | fontStyle  |                                                              |
+| `"bold"`                     | fontStyle  |                                                              |
+| `"bold_italic"`              | fontStyle  |                                                              |
+| `"italic"`                   | fontStyle  |                                                              |
 
 (cwf-reference-dyndata-keys)=
 
-### Chiavi DynData
+### DynData keys
 
-| Key                       | tipo   | commento                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| ------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"dynData"`               | block  | definisce il blocco di tutti i blocchi di dati dinamici che verranno usati per le viste. Generalmente dopo l'ultima vista.<br />Tutte le chiavi definite in questo blocco verranno usate come valore chiave nel blocco vista:<br />`"dynData": { dynData blocks }`<br />e ogni blocco è definito da un nome personalizzato e diverse chiavi al suo interno:<br />`"customName": { one dynData block }`                                                                                 |
-| `"valueKey"`              | string | name of dynamic data to use (generally same that associated view key).<br />If not existing, the default will be the values used for the view that uses this block. <br />for example you can define one block to customize battery level percentage without specifying valueKey, and then use the same block to customize uploader_battery and rig_battery                                                                                                                                      |
-| `"minData"`               | int    | specifica il valore minimo da prendere in considerazione per i dati AAPS: ad esempio se il valore è sgv (unità mgdl internamente), se minData è impostato a 50, tutti i valori BG inferiori a 50mgdl saranno impostati a 50.<br />- Nota: minData e maxData vengono usati per calcolare i valori dinamici (in pixel o in gradi).                                                                                                                                                                         |
-| `"maxData"`               | int    | specifica il valore massimo da prendere in considerazione per i dati AAPS: ad esempio se il valore è sgv (unità mgdl internamente), se maxData è impostato a 330, tutti i valori BG superiori a 330mgdl saranno impostati a 330.                                                                                                                                                                                                                                                                               |
-| `"leftOffset"`            | block  | Specifica lo scorrimento orizzontale della vista in base ai valori min e max in pixel.<br />- Include le chiavi minValue, maxValue e invalidValue (opzionale)<br />- Se i dati sono inferiori o uguali a minData, la vista verrà spostata di minValue pixel; se i dati sono superiori o uguali a maxData, la vista verrà spostata di maxValue pixel<br />Nota: per applicare questo scorrimento, `leftOffset` deve essere impostato a true nella vista                                       |
-| `"topOffset"`             | block  | Specifica lo scorrimento verticale della vista in base ai valori min e max in pixel.<br />- Include le chiavi minValue, maxValue e invalidValue (opzionale)<br />- Se i dati sono inferiori o uguali a minData, la vista verrà spostata di minValue pixel; se i dati sono superiori o uguali a maxData, la vista verrà spostata di maxValue pixel<br />Nota: per applicare questo scorrimento, `topOffset` deve essere impostato a true nella vista                                          |
-| `"rotationOffset"`        | block  | Specifica l'angolo di rotazione in gradi della vista in base ai valori min e max.<br />- Include le chiavi `minValue`, `maxValue` e `invalidValue` (opzionale)<br />- Se i dati sono inferiori o uguali a `minData`, la vista ruoterà di `minValue` gradi; se i dati sono superiori o uguali a `maxData`, la vista ruoterà di `maxValue` gradi<br />Nota: per applicare questa rotazione, `rotationOffset` deve essere impostato a true nella vista                                          |
-| `"dynValue"`*             | block  | Specifica la conversione dynValue dal range min e max ai valori min e max.<br />- Include le chiavi `minValue`, `maxValue` e `invalidValue` (opzionale)<br />- Se i dati sono inferiori o uguali a `minData`, il dynValue inviato sarà minValue (convertito in double); se i dati sono superiori o uguali a `maxData`, il dynValue calcolato sarà maxValue (convertito in double)<br />Nota: per applicare questa conversione, la chiave `dynValue` deve essere impostata a true nella vista |
-| `"minValue"`              | int    | valore risultante da applicare alla vista (chiave applicabile solo in un blocco leftOffset, topOffset o rotationOffset)                                                                                                                                                                                                                                                                                                                                                                                        |
-| `"maxValue"`              | int    | valore risultante da applicare alla vista (chiave applicabile solo in un blocco leftOffset, topOffset o rotationOffset)                                                                                                                                                                                                                                                                                                                                                                                        |
-| `"invalidValue"`          | int    | valore risultante da applicare alla vista se i dati non sono validi (chiave applicabile solo in un blocco leftOffset, topOffset o rotationOffset)                                                                                                                                                                                                                                                                                                                                                              |
-| `"invalidImage"`          | string | `resource_filename` da usare per ImageView o sfondo TextView se i dati non sono validi                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| image*1_to_n*           | string | `resource_filename` da usare per ogni passo tra minData (o vicino a minData) con `"image1"` e maxData (o vicino a maxData) con image*n*<br />Ad esempio, inserendo 5 immagini (da image1 a image5), il range tra minData e maxData verrà diviso in 5 passi e, in base al valore dei dati, verrà mostrata l'immagine corrispondente                                                                                                                                                                       |
-| `"invalidFontColor"`      | string | Gestisce i passi di fontColor se i dati non sono validi<br />`"#RRVVBB"` o `"#AARRVVBB"`: colore da usare se vengono ricevuti dati non validi (può essere trasparente se AA=00)                                                                                                                                                                                                                                                                                                                          |
-| fontColor*1_to_n*       | string | Gestisce i passi di fontColor<br />`"#RRVVBB"` o `"#AARRVVBB"`: colore da usare per ogni passo tra minData (o vicino a minData) con `"fontColor1"` e maxData (o vicino a maxData) con fontColor*n*                                                                                                                                                                                                                                                                                                       |
-| `"invalidColor"`          | string | Gestisce i passi del colore di sfondo o del colore dell'immagine se i dati non sono validi<br />`"#RRVVBB"` o `"#AARRVVBB"`: colore da usare se vengono ricevuti dati non validi (può essere trasparente se AA=00)                                                                                                                                                                                                                                                                                       |
-| color*1_to_n*           | string | Gestisce i passi del colore di sfondo o del colore dell'immagine<br />`"#RRVVBB"` o `"#AARRVVBB"`: colore da usare per ogni passo tra minData (o vicino a minData) con `"color1"` e maxData (o vicino a maxData) con color*n*                                                                                                                                                                                                                                                                            |
-| `"invalidTextSize"`       | int    | Gestisce i passi della dimensione del testo se i dati non sono validi                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| textsize*1_to_n*        | int    | Gestisce la dimensione del testo da usare per ogni passo tra minData (o vicino a minData) con `"textsize1"` e maxData (o vicino a maxData) con textsize*n*                                                                                                                                                                                                                                                                                                                                                     |
-| `"invalidLeftOffset"`     | int    | Gestisce i passi di leftOffset se i dati non sono validi                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| leftOffset*1_to_n*      | int    | Gestisce il leftOffset da usare per ogni passo tra minData (o vicino a minData) con `"leftOffset1"` e maxData (o vicino a maxData) con leftOffset*n*<br />Nota: può essere usato con dynPref per spostare una vista quando un'altra è nascosta...                                                                                                                                                                                                                                                        |
-| `"invalidTopOffset"`      | int    | Gestisce i passi di topOffset se i dati non sono validi                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| topOffset*1_to_n*       | int    | Gestisce il topOffset da usare per ogni passo tra minData (o vicino a minData) con topOffset1 e maxData (o vicino a maxData) con topOffset*n*<br />Nota: può essere usato con dynPref per spostare una vista quando un'altra è nascosta...                                                                                                                                                                                                                                                               |
-| `"invalidRotationOffset"` | int    | Gestisce i passi di rotationOffset se i dati non sono validi                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| rotationOffset*1_to_n*  | int    | Gestisce il rotationOffset da usare per ogni passo tra minData (o vicino a minData) con rotationOffset1 e maxData (o vicino a maxData) con rotationOffset*n*                                                                                                                                                                                                                                                                                                                                                   |
-| `"invalidTextvalue"`*     | string | Gestisce il textvalue se i dati non sono validi                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| textvalue*1_to_n* *     | string | Gestisce il textvalue da usare per ogni passo tra minData (o vicino a minData) con textvalue1 e maxData (o vicino a maxData) con textvalue*n*<br />Nota: può includere una stringa di formato se `"dynValue"` è impostato a true nella vista                                                                                                                                                                                                                                                             |
+| Key                       | type   | comment                                                      |
+| ------------------------- | ------ | ------------------------------------------------------------ |
+| `"dynData"`               | block  | define the block of all dynamic data blocks that will be used for the views. generally after the last view.<br />All the keys defined within this block will be used as key Value within view block:<br />`"dynData": { dynData blocks }`<br />and each block is defined by a custom name and several keys inside:<br />`"customName": { one dynData block }` |
+| `"valueKey"`              | string | name of dynamic data to use (generally same that associated view key).<br />If not existing, the default will be the values used for the view that uses this block. <br />for example you can define one block to customize battery level percentage without specifying valueKey, and then use the same block to customize uploader_battery and rig_battery |
+| `"minData"`               | int    | specify the minimum value to take into account for AAPS data : for example if value is sgv (unit mgdl internally), if minData is set to 50, all bg values below 50mgdl will be set to 50.<br />- Note that minData and maxData will be used to calculate dynamic values (in pixel or in degrees). |
+| `"maxData"`               | int    | specify the maximum value to take into account for AAPS data : for example if value is sgv (unit mgdl internally), if maxData is set to 330, all bg values above 330mgdl will be set to 330. |
+| `"leftOffset"`            | block  | Specify the horizontal shift of the view according to min and max values in pixels.<br />- It includes minValue key, maxValueKey and invalidValue key (optional)<br />- If data is below or equal minData, then the view will be shifted to minValue pixels, and if data is above or equal to maxData, then the view will be shifted to maxValue pixels<br />Note that to apply this shift, `leftOffset` should be set to true within the view |
+| `"topOffset"`             | block  | Specify the vertical shift of the view according to min and max values in pixels.<br />- It includes minValue key, maxValueKey and invalidValue key (optional)<br />- If data is below or equal minData, then the view will be shifted to minValue pixels, and if data is above or equal to maxData, then the view will be shifted to maxValue pixels<br />Note that to apply this shift topOffset should be set to true within the view |
+| `"rotationOffset"`        | block  | Specify the rotation angle in degrees of the view according to min and max values in pixels.<br />- It includes `minValue` key, `maxValue` Key and `invalidValue` key (optional)<br />- If data is below or equal `minData`, then the view will rotate by `minValue` degrees, and if data is above or equal to `maxData`, then the view will rotate by `maxValue` degrees<br />Note that to apply this rotation, `rotationOffset` should be set to true within the view |
+| `"dynValue"`*             | block  | Specify the dynValue conversion from min and max range to min and max values in pixels.<br />- It includes `minValue` key, `maxValue` Key and `invalidValue` key (optional)<br />- If data is below or equal `minData`, then the dynValue sent will be minValue (converted to double) , and if data is above or equal to `maxData`, then the dynValue calculated will be maxValue (converted to double)<br />Note that to apply this conversion, `dynValue` key should be set to true within the view |
+| `"minValue"`              | int    | result value to apply to the view (key only applicable within a leftOffset, topOffset or rotationOffset block) |
+| `"maxValue"`              | int    | result value to apply to the view (key only applicable within a leftOffset, topOffset or rotationOffset block) |
+| `"invalidValue"`          | int    | result value to apply to the view if data is invalid (key only applicable within a leftOffset, topOffset or rotationOffset block) |
+| `"invalidImage"`          | string | `resource_filename` to use for the ImageView or background TextView if the data is invalid |
+| image*1_to_n*             | string | `resource_filename` image to use for each step between minData (or close to minData) with `"image1"` and maxData (or close to maxData) with image*n*<br />If for example your put 5 images (from image1 to image5), the range between minData and maxData will be divided in 5 steps and according to data value, the corresponding image will be shown |
+| `"invalidFontColor"`      | string | Manage fontColor steps if the data is invalid<br />`"#RRVVBB"` or `"#AARRVVBB"`: Color to use if an invalid data is received (can be transparent if AA=00) |
+| fontColor*1_to_n*         | string | Manage fontColor steps<br />`"#RRVVBB"` or `"#AARRVVBB"`: color to use for each step between minData (or close to minData) with `"fontColor1"` and maxData (or close to maxData) with fontColor*n* |
+| `"invalidColor"`          | string | Manage background color or image color steps if the data is invalid<br />`"#RRVVBB"` or `"#AARRVVBB"`: Color to use if an invalid data is received (can be transparent if AA=00) |
+| color*1_to_n*             | string | Manage background color or image Color steps<br />`"#RRVVBB"` or `"#AARRVVBB"`: color to use for each step between minData (or close to minData) with `"color1"` and maxData (or close to maxData) with color*n* |
+| `"invalidTextSize"`       | int    | Manage text size steps if the data is invalid                |
+| textsize*1_to_n*          | int    | Manage text size to use for each step between minData (or close to minData) with `"textsize1"` and maxData (or close to maxData) with textsize*n* |
+| `"invalidLeftOffset"`     | int    | Manage leftOffset steps if the data is invalid               |
+| leftOffset*1_to_n* |int|Manage leftOffset to use for each step between minData (or close to minData) with `"leftOffset1"` and maxData (or close to maxData) with leftOffset*n*<br />Note, can be used with dynPref to shift a view when another is hidden...|
+| `"invalidTopOffset"`      | int    | Manage topOffset steps if the data is invalid                |
+| topOffset*1_to_n*         | int    | Manage topOffset to use for each step between minData (or close to minData) with topOffset1 and maxData (or close to maxData) with topOffset*n*<br />Note, can be used with dynPref to shift a view when another is hidden... |
+| `"invalidRotationOffset"` | int    | Manage rotationOffset steps if the data is invalid           |
+| rotationOffset*1_to_n*    | int    | Manage rotationOffset to use for each step between minData (or close to minData) with rotationOffset1 and maxData (or close to maxData) with rotationOffset*n* |
+| `"invalidTextvalue"`*     | string | Manage textvalue if the data in invalid                      |
+| textvalue*1_to_n* *       | string | Manage texvalue to use for each step between minData (or close to minData) with textvalue1 and maxData (or close to maxData) with textvalue*n*<br />Note, can include formatting string if `"dynValue"` is set to true within view |
 
-**Chiave aggiunta in Custom Watchface V2.0 o superiore (disponibile nell'apk wear AAPS 3.3.0 o superiore)*
+**Key added in Custom Watchface V2.0 or above (available on AAPS 3.3.0 wear apk or above)*
 
 (cwf-reference-dyndata-key-values)=
 
-### Valori chiave DynData
+### DynData key values
 
-| Valore chiave                                                                               | chiave   | commento                                                                                                                                                                                                                                                                                      |
-| ------------------------------------------------------------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"sgv"`<br/>`"sgv_Ext1"` *<br>`"sgv_Ext2"` *                                    | valueKey | minData predefinito = 39 mgdl<br />maxData predefinito = 400 mgdl<br />- Nota: il vero maxData dipende dal sensore e le unità sono sempre in mgdl per i valori interni                                                                                                            |
-| `"sgvLevel"`<br/>`"sgvLevel_Ext1"` *<br/>`"sgvLevel_Ext2"` *                    | valueKey | minData predefinito = -1 (Ipo)<br />maxData predefinito = 1 (Iper)<br />BG nel range = 0                                                                                                                                                                                          |
-| `"direction"`<br/>`"direction_Ext1"` *<br/>`"direction_Ext2"` *                 | valueKey | minData predefinito = 1 (doppia freccia giù)<br />maxValue predefinito = 7 (doppia freccia su)<br />freccia piatta = 4<br />Errore o dati mancanti = 0 (??)                                                                                                                 |
-| `"delta"`<br/>`"delta_Ext1"` *<br/>`"delta_Ext2"` *                             | valueKey | minData predefinito = -25 mgdl<br />maxData predefinito = 25 mgdl<br />- Nota: i veri min e maxData possono essere superiori, e le unità sono sempre in mgdl per i valori interni                                                                                                 |
-| `"avg_delta"`<br/>`"avg_delta_Ext1"` *<br/>`"avg_delta_Ext2"` *                 | valueKey | minData predefinito = -25 mgdl<br />maxData predefinito = 25 mgdl<br />- Nota: i veri min e maxData possono essere superiori, e le unità sono sempre in mgdl per i valori interni                                                                                                 |
-| `"tempTarget"`*<br/>`"tempTarget_Ext1"` *<br/>`"tempTarget_Ext2"` *             | valueKey | minData predefinito = 0 (Target Profilo)<br />maxData predefinito = 2 (Target Temporaneo)<br />Target regolato dal loop = 1<br/>Informazioni predefinite o mancanti = 0                                                                                                     |
-| `"reservoir"`*<br/>`"reservoir_Ext1"` *<br/>`"reservoir_Ext2"` *                | valueKey | minData predefinito = 0 U<br />maxData predefinito = 500 U                                                                                                                                                                                                                              |
-| `"reservoirLevel"`*<br/>`"reservoirLevel_Ext1"` *<br/>`"reservoirLevel_Ext2"` * | valueKey | minData predefinito = 0 (Colore Standard)<br/>maxData predefinito = 2 (Colore Urgente)<br/>Colore Avviso = 1                                                                                                                                                                      |
-| `"uploader_battery"`                                                                        | valueKey | minData predefinito = 0 %<br />maxData predefinito = 100%                                                                                                                                                                                                                               |
-| `"rig_battery"`<br/>`"rig_battery_Ext1"` *<br/>`"rig_battery_Ext2"` *           | valueKey | minData predefinito = 0 %<br />maxData predefinito = 100%                                                                                                                                                                                                                               |
-| `"timestamp"`<br/>`"timestamp_Ext1"` *<br/>`"timestamp_Ext2"` *                 | valueKey | minData predefinito = 0 min<br />maxData predefinito = 60 min                                                                                                                                                                                                                           |
-| `"loop"`<br/>`"loop_Ext1"` *<br/>`"loop_Ext2"` *                                | valueKey | minData predefinito = 0 min<br />maxData predefinito = 28 min<br />- Nota: le frecce di stato sono verdi sotto i 14 min e rosse sopra i 14 min; inserendo 2 immagini, è possibile sostituire lo sfondo dello stato con immagini personalizzate usando i min e maxData predefiniti |
-| `"day"`                                                                                     | valueKey | minData predefinito = 1<br />maxData predefinito = 31                                                                                                                                                                                                                                   |
-| `"day_name"`                                                                                | valueKey | minData predefinito = 1<br />maxData predefinito = 7                                                                                                                                                                                                                                    |
-| `"month"`                                                                                   | valueKey | minData predefinito = 1<br />maxData predefinito = 12                                                                                                                                                                                                                                   |
-| `"week_number"`                                                                             | valueKey | minData predefinito = 1<br />maxData predefinito = 53                                                                                                                                                                                                                                   |
+| Key value                                                    | key      | comment                                                      |
+| ------------------------------------------------------------ | -------- | ------------------------------------------------------------ |
+| `"sgv"`<br/>`"sgv_Ext1"` *<br>`"sgv_Ext2"` *                 | valueKey | default minData = 39 mgdl<br />default maxData = 400 mgdl<br />- Note that real maxData is linked to your sensor and units are always in mgdl for internal values |
+| `"sgvLevel"`<br/>`"sgvLevel_Ext1"` *<br/>`"sgvLevel_Ext2"` * | valueKey | default minData = -1 (Hypo)<br />default maxData = 1 (Hyper)<br />if BG is within Range = 0 |
+| `"direction"`<br/>`"direction_Ext1"` *<br/>`"direction_Ext2"` * | valueKey | default minData = 1 (double Down)<br />default maxValue = 7 (double Up)<br />flat arrow data = 4<br />Error or missing data = 0 (??) |
+| `"delta"`<br/>`"delta_Ext1"` *<br/>`"delta_Ext2"` *          | valueKey | default minData = -25 mgdl<br />default maxData = 25 mgdl<br />- Note that real min and maxData can be above, and units are always mgdl for internal values |
+| `"avg_delta"`<br/>`"avg_delta_Ext1"` *<br/>`"avg_delta_Ext2"` * | valueKey | default minData = -25 mgdl<br />default maxData = 25 mgdl<br />- Note that real min and maxData can be above, and units are always mgdl for internal values |
+| `"tempTarget"`*<br/>`"tempTarget_Ext1"` *<br/>`"tempTarget_Ext2"` * | valueKey | default minData = 0 (Profile Target)<br />default maxData = 2 (Temp Target)<br />Target is adjusted byt the loop = 1<br/>Default or missing information = 0 |
+| `"reservoir"`*<br/>`"reservoir_Ext1"` *<br/>`"reservoir_Ext2"` * | valueKey | default minData = 0 U<br />default maxData = 500 U           |
+| `"reservoirLevel"`*<br/>`"reservoirLevel_Ext1"` *<br/>`"reservoirLevel_Ext2"` * | valueKey | default minData = 0 (Standard Color)<br/>default maxData = 2 (Urgent Color)<br/>Warning Color = 1 |
+| `"uploader_battery"`                                         | valueKey | default minData = 0 %<br />default maxData = 100%            |
+| `"rig_battery"`<br/>`"rig_battery_Ext1"` *<br/>`"rig_battery_Ext2"` * | valueKey | default minData = 0 %<br />default maxData = 100%            |
+| `"timestamp"`<br/>`"timestamp_Ext1"` *<br/>`"timestamp_Ext2"` * | valueKey | default minData = 0 min<br />default maxData = 60 min        |
+| `"loop"`<br/>`"loop_Ext1"` *<br/>`"loop_Ext2"` *             | valueKey | default minData = 0 min<br />default maxData = 28 min<br />- Note that status arrows are in green below 14 min and in red above 14 min so if you put 2 images, you can replace status background with your custom images with default min and maxData |
+| `"day"`                                                      | valueKey | default minData = 1<br />default maxData = 31                |
+| `"day_name"`                                                 | valueKey | default minData = 1<br />default maxData = 7                 |
+| `"month"`                                                    | valueKey | default minData = 1<br />default maxData = 12                |
+| `"week_number"`                                              | valueKey | default minData = 1<br />default maxData = 53                |
 
-**Chiave aggiunta in Custom Watchface V2.0 o superiore (disponibile nell'apk wear AAPS 3.3.0 o superiore)*
+**Key added in Custom Watchface V2.0 or above (available on AAPS 3.3.0 wear apk or above)*
 
 (cwf-reference-dynpref-keys)=
 
-### Chiavi DynPref
+### DynPref keys
 
-| Key              | tipo   | commento                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ---------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"dynPref"`      | block  | definisce il blocco di tutte le preferenze dinamiche che verranno usate per le viste. Generalmente dopo l'ultima vista o dopo il blocco dynData.<br />Tutte le chiavi definite in questo blocco verranno usate come valore chiave nel blocco vista:<br />`"dynPref": { dynPref blocks }`<br />e ogni blocco è definito da un nome personalizzato e diverse chiavi al suo interno:<br />`"customName": { one dynPref block }`                                                                                                                                    |
-| `"dynPref"`      | string | *All'interno di un blocco vista*<br />nome del blocco dynPref dinamico da usare (generalmente uguale alla chiave della vista associata o alla preferenza associata).                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `"dynPref"`      | string | *All'interno di un blocco dynData parziale incluso in un blocco dynPref*<br />nome del blocco dynPref dinamico da usare per completare il blocco dynData. Consente di regolare un blocco dynData in base a diverse preferenze                                                                                                                                                                                                                                                                                                                                                     |
-| `"dynPrefColor"` | string | questa chiave è specifica per il blocco principale con tutti i colori principali (highColor, midColor, lowColor, colori del grafico...). Da usare per regolare i colori principali in base alle preferenze                                                                                                                                                                                                                                                                                                                                                                              |
-| `"prefKey"`      | string | specifica il valore della chiave preferenza da usare per ottenere le preferenze dell'utente (vedi [Valori PrefKey](#cwf-reference-prefkey-values) sotto). Questa chiave deve essere usata all'interno di un blocco `dynPref`.<br />In base alla chiave preferenza, il blocco `dynPref` deve contenere tante chiavi quanti sono i valori di prefKey.<br />Nota: la maggior parte delle preferenze è "Boolean", quindi nel blocco dynPref si trovano tipicamente questi due blocchi dynData: <br />`"true": { dynData Block },`<br />`"false": { dynData Block }` |
-| `"true"`         | block  | la maggior parte delle preferenze imposta un booleano `"true"` o `"false"`. Si specifica il blocco dynData da usare se la preferenza selezionata dall'utente è true.<br />Nota: se il blocco contiene anche una chiave `"dynPref":`, il blocco dynData verrà unito con un altro blocco. Ciò consente di regolare, ad esempio, il colore in base a una preferenza e la dimensione del testo in base a un'altra                                                                                                                                                                     |
-| `"false"`        | block  | la maggior parte delle preferenze imposta un booleano `"true"` o `"false"`. Si specifica il blocco dynData da usare se la preferenza selezionata dall'utente è false.<br />Nota: se il blocco contiene anche una chiave `"dynPref":`, il blocco dynData verrà unito con un altro blocco. Ciò consente di regolare, ad esempio, il colore in base a una preferenza e la dimensione del testo in base a un'altra                                                                                                                                                                    |
+| Key              | type   | comment                                                      |
+| ---------------- | ------ | ------------------------------------------------------------ |
+| `"dynPref"`      | block  | define the block of all dynamic preference blocks that will be used for the views. Generally after the last view or after the dynData block.<br />All the keys defined within this block will be used as key Value within view block:<br />`"dynPref": { dynPref blocks }`<br />and each block is defined by a custom name and several keys inside:<br />`"customName": { one dynPref block }` |
+| `"dynPref"`      | string | *Within a view Block*<br />name of dynamic dynPref block to use (generally same that associated view key or associated preference). |
+| `"dynPref"`      | string | *Within a partial dynData Block included into a dynPref Block*<br />name of dynamic dynPref block to use to complete the dynData block. This allow you to tune a dynData block according to several preferences |
+| `"dynPrefColor"` | string | this key is specific to the main block with all main colors (highColor, midColor, lowColor, graph colors...). you will use it if you want to tune main colors according to preferences |
+| `"prefKey"`      | string | specify the preference key Value that will be used to get user preferences (see [PrefKey values](#cwf-reference-prefkey-values) below). This key should be used within a `dynPref` block.<br />Then according to preference key, the `dynPref`block should contains as many keys than prefKey has values.<br />Note that most of the time preferences are "Boolean" so you should find within the dynPref block these two dynData blocks: <br />```"true": { dynData Block },```<br />```"false": { dynData Block }``` |
+| `"true"`         | block  | most preferences will set a boolean `"true"` or `"false"`. You will specify the dynData block to use if preference selected by user is true.<br />Note that if the block also contains a `"dynPref":`key, the dynData block will be merged with other block. This allow you to tune for example color according to one preference, and textsize according to another preference |
+| `"false"`        | block  | most preferences will set a boolean `"true"` or `"false"`. You will specify the dynData block to use if preference selected by user is false.<br />Note that if the block also contains a `"dynPref":`key, the dynData block will be merged with other block. This allow you to tune for example color according to one preference, and textsize according to another preference |
 
 (cwf-reference-prefkey-values)=
 
-### Valori PrefKey
+### PrefKey values
 
-Tutte le chiavi incluse nel capitolo [Chiavi Preferenze](#cwf-reference-preference-keys) sopra possono essere usate per regolare i parametri delle viste.
+All keys included into [Preference keys](#cwf-reference-preference-keys) chapter above can be used to tune view parameters 
 
-Si possono anche usare queste chiavi aggiuntive incluse nei parametri specifici di AAPS (Custom):
+You can also you these additional key below included into AAPS (Custom) specific parameters:
 
-| Key                   | tipo    | commento                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| --------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"key_units"`         | boolean | *true*: se le unità selezionate in AAPS sono mgdl<br />*false*: se le unità selezionate in AAPS sono mmol                                                                                                                                                                                                                                                                                                            |
-| `"key_dark"`          | boolean | *true*: per usare uno sfondo scuro<br />false: per usare uno sfondo chiaro<br />Nota: questo parametro viene spesso usato nei quadranti AAPS precedenti (AAPS, AAPS V2...)                                                                                                                                                                                                                                     |
-| `"key_match_divider"` | boolean | *true*: il divisore incluso nei quadranti AAPS, AAPS v2 non sarà visibile<br />*false*: il divisore incluso nei quadranti AAPS, AAPS v2 sarà visibile<br />Nota: questa impostazione viene spesso combinata con la preferenza dark (usando la chiave `dynPref` nel blocco `dynData`) per impostare il colore del testo (e dello sfondo) sullo stesso colore o sul colore opposto rispetto al parametro dark... |
+| Key                   | type    | comment                                                      |
+| --------------------- | ------- | ------------------------------------------------------------ |
+| `"key_units"`         | boolean | *true*: if units selected on AAPS is mgdl<br />*false*: if units selected on AAPS is mmol |
+| `"key_dark"`          | boolean | *true*: to use a dark background<br />false: to use a light background<br />Note: this parameter is often use into previous AAPS watchfaces (AAPS, AAPS V2...) |
+| `"key_match_divider"` | boolean | *true*: divider included into AAPS, AAPS v2 watchfaces will not be visible<br />*false*: divider included into AAPS, AAPS v2 watchfaces will be visible<br />Note: this setting is often combine with dark preference (using `dynPref` key into `dynData`block) to set text color (and background) on the same or opposite color than dark parameter... |

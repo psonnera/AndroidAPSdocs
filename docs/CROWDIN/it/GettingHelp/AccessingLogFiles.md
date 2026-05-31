@@ -1,13 +1,14 @@
 (Accessing-logfiles-accessing-logfiles)=
-# Accesso ai file di log
+# Accessing logfiles
 
-* Collega il telefono al computer in modalità trasferimento file
-* Individua i file di log nella directory dei dati di AAPS, in `Android\data\info.nightscout.androidaps\files`.<br/> Il nome della cartella radice può variare leggermente a seconda del telefono.
-* Per [AAPSClient](#RemoteControl_aapsclient), il percorso è `Android\data\info.nightscout.aapsclient\files`.
-* Nota: il percorso dei log è cambiato in **AAPS 3.3**. Consulta la documentazione delle versioni precedenti se necessario.
+* Connect phone to a computer in file transfer mode
+* Locate the log files in the AAPS data directory, in `Android\data\info.nightscout.androidaps\files`.<br/>
+  The naming of the root storage folder may vary a little depending on the phone.
+* The location is `Android\data\info.nightscout.aapsclient\files` for [AAPSClient](#RemoteControl_aapsclient).
+* Note : log location has changed in **AAPS 3.3**. See the previous versions' documentation if needed.
 
 ![logs](../images/aapslog.png)
 
-* Il log corrente è un file .log che può essere visualizzato in diversi modi, ad esempio con [LogCat](https://developer.android.com/studio/debug/am-logcat.html) in Android Studio, con qualsiasi app Log Viewer per Android, o semplicemente come testo normale.
-* I file di log precedenti sono compressi e archiviati in cartelle ordinate per data/ora.
-* Se stai condividendo il tuo file di log su [Discord](https://discord.gg/4fQUWHZ4Mw) per segnalare un potenziale bug, decomprimi e carica il file datato prima che si verificasse l'errore.
+* The current log is a .log file which can be viewed in a number of ways such as [LogCat](https://developer.android.com/studio/debug/am-logcat.html) within Android Studio, any Log Viewer android app, or simply as plain text. 
+* Previous log files are zipped and stored in folders in date/time order.  
+* If you are sharing your log file in [discord](https://discord.gg/4fQUWHZ4Mw) to talk about a potential bug, please unzip and upload the file dated before the error occurred.
