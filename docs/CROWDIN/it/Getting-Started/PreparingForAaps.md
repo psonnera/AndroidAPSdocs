@@ -34,7 +34,7 @@ Questo danno può includere **perdita della vista e neuropatia permanente (dolor
 
 Uno [studio](https://pubmed.ncbi.nlm.nih.gov/1464975/) retrospettivo su 76 pazienti ha riportato che il rischio di progressione della retinopatia aumentava di 1,6 volte, 2,4 volte e 3,8 volte se l'HbA1C scendeva rispettivamente dell'1%, 2% o 3% nell'arco di un periodo di 6 mesi. Hanno suggerito che la **"diminuzione del valore di HbA1c in qualsiasi periodo di 6 mesi dovrebbe essere limitata a meno del 2% per prevenire la progressione della retinopatia....Una diminuzione troppo rapida all'inizio del controllo glicemico potrebbe causare una grave o transitoria esacerbazione della progressione della retinopatia."**
 
-N.B. N.B. N.B. N.B. N.B. N.B. N.B. N.B. N.B. N.B. N.B. N.B. N.B. If you use different HbA1c units (mmol/mol rather than %), click [here](https://www.diabetes.co.uk/hba1c-units-converter.html) for a HbA1c calculator tool.
+N.B. N.B. N.B. N.B. N.B. N.B. N.B. N.B. N.B. N.B. N.B. N.B. N.B. N.B. If you use different HbA1c units (mmol/mol rather than %), click [here](https://www.diabetes.co.uk/hba1c-units-converter.html) for a HbA1c calculator tool.
 
 In un'altra [valutazione](https://academic.oup.com/brain/article/138/1/43/337923) retrospettiva su 954 pazienti, i ricercatori hanno osservato che:
 
