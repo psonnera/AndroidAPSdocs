@@ -1,4 +1,4 @@
-Compatible with Android (The simplest, recommended as the first choice)
+Compatibile con Android (Il metodo più semplice, consigliato come prima scelta)
 
 <!--crowdin: exclude-->
 
@@ -6,7 +6,7 @@ Compatible with Android (The simplest, recommended as the first choice)
 
 :::{tab-item} Wiki
 :::{include} BrowserBuildO2AS.md
-:::
+:::  
 
 :::{tab-item} Video
 (aaps-ci-option2-android-video)=
@@ -20,7 +20,7 @@ Compatible with Android (The simplest, recommended as the first choice)
     </iframe>
   </div>
 </div>
-:::
+:::  
 
 ```
 
