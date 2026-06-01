@@ -61,13 +61,13 @@ Scorri verso il basso nella schermata successiva e tocca **Create Fork**.
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
 ```{note}
-You cannot fork and you see this?</br></br>
+<<<<<<< Updated upstream
+Forking a repository allows you to freely experiment with changes without affecting the original project. You cannot fork and you see this?</br></br>
 =======
 Non riesci a fare il fork e vedi questo?</br></br>
 >>>>>>> Stashed changes
 **`Create a new fork`**</br>
-`A fork is a copy of a repository. <<<<<<< Updated upstream
-Forking a repository allows you to freely experiment with changes without affecting the original project. View existing forks.`</br>
+`A fork is a copy of a repository. View existing forks.`</br>
 *`Required fields are marked with an asterisk (*).`*</br>
 **`No available destinations to fork this repository.`**</br></br>
 Ciò significa che hai già un fork esistente di AndroidAPS.</br>
@@ -141,7 +141,7 @@ https://github.com/nightscout/aaps-ci-preparation/releases/latest
  - Se anche il link esterno non è disponibile, puoi utilizzare questo file di backup per il download.
 ````
 <<<<<<< Updated upstream AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS): - If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
-- - - - - - - - - - If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
+- - - - - - - Se vuoi utilizzare il tuo JKS (quello usato per una precedente compilazione di AAPS da computer in Android Studio), conosci la password e l'alias (key0), scegli [AAPS-CI Opzione 2 – Carica JKS esistente](#aaps-ci-option2).
 </br>
 
 ```{warning}
@@ -156,7 +156,7 @@ Sarà necessario:
 7. Ripristinare i dati da Nightscout.
 ```
 
-- - - - - - - Se vuoi utilizzare il tuo JKS (quello usato per una precedente compilazione di AAPS da computer in Android Studio), conosci la password e l'alias (key0), scegli [AAPS-CI Opzione 2 – Carica JKS esistente](#aaps-ci-option2).
+- - - - - - - - - - - If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
 
 </br>
 
