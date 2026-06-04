@@ -349,7 +349,7 @@ Questo pulsante avvierà il processo di cambio della patch. Vedere [Attiva patch
 
 ### Reset alarms
 
-Il pulsante allarme apparirà nella schermata di panoramica quando è presente un allarme attivo che può essere ripristinato. Premendo questo pulsante si ripristineranno gli allarmi e si riprenderà l'erogazione di insulina se la patch è stata sospesa a causa dell'allarme. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. Ad esempio, quando sospesa a causa di un allarme di erogazione massima giornaliera di insulina.
+Il pulsante allarme apparirà nella schermata di panoramica quando è presente un allarme attivo che può essere ripristinato. Premendo questo pulsante si ripristineranno gli allarmi e si riprenderà l'erogazione di insulina se la patch è stata sospesa a causa dell'allarme. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. Ad esempio, quando sospesa a causa di un allarme di erogazione massima giornaliera di insulina.
 
 ![Reset alarms](../images/medtrum/ResetAlarms.png)
 
