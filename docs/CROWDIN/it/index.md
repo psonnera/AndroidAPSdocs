@@ -3,9 +3,9 @@
 ![image](./images/basic-outline-of-AAPS.png)
 
 ```{admonition} Latest Release
-:class: nota
+:class: note
 
- 10 aprile 2026 : La versione 3.4.2.2 è uscita. Controlla le [Note di rilascio](#latestrelease) per vedere cosa c'è di nuovo e segui le istruzioni nel [Manuale di aggiornamento](./Maintenance/UpdateToNewVersion.md) per aggiornare.
+ 4 June 2026 : Version 3.4.2.3 is out. Controlla le [Note di rilascio](#latestrelease) per vedere cosa c'è di nuovo e segui le istruzioni nel [Manuale di aggiornamento](./Maintenance/UpdateToNewVersion.md) per aggiornare.
 
 ```
 

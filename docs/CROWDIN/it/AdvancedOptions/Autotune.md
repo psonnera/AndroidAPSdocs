@@ -12,7 +12,7 @@ Crea un file vuoto denominato `enable_autotune` nella sottocartella `extra` dell
 
 ***NOTA: Assicurati di controllare nelle impostazioni di **AAPS** dove si trova la tua Directory AAPS e di aver messo il file in quella corretta; diversi utenti sono stati colti di sorpresa mettendo il file nella cartella sbagliata.***
 
-![Enable Autotune](../images/Autotune/Autotune_0.png)
+![Abilita Autotune](../images/Autotune/Autotune_0.png)
 
 Autotune verrà quindi visualizzato nel Costruttore di configurazione dopo aver riavviato AAPS.
 
@@ -86,7 +86,7 @@ Autotune verrà quindi visualizzato nel Costruttore di configurazione dopo aver 
 
 - Se è stato aggiornato il profilo di input, il pulsante "Aggiorna profilo di input" viene sostituito dal pulsante "Revert input profile" (vedere la schermata sottostante). Puoi vedere immediatamente in questo modo se il tuo attuale profilo di input nel plugin del profilo locale include già il risultato dell'ultima esecuzione o meno. Hai anche la possibilità di recuperare il tuo profilo di input senza risultati automatici con questo pulsante
 
-  ![Autotune Update input profile](../images/Autotune/Autotune_10.png)
+  ![Autotune aggiornamento profilo di input](../images/Autotune/Autotune_10.png)
 
 
 
@@ -172,11 +172,11 @@ Nota: per ulteriori informazioni su come impostare una regola di automazione, ve
 
 - Quindi è possibile selezionare la funzione "Esegui Autotune" dall' elenco
 
-  ![Autotune default screen](../images/Autotune/Autotune_18.png)
+  ![Schermata predefinita di Autotune](../images/Autotune/Autotune_18.png)
 
 - È quindi possibile selezionare la funzione Autotune per regolare i parametri per l'esecuzione. I parametri predefiniti sono "Profilo attivo", il valore di Tune days predefinito definito nelle preferenze di plugin di Autotune e tutti i giorni sono selezionati.
 
-  ![Autotune default screen](../images/Autotune/Autotune_19b.png)
+  ![Schermata predefinita di Autotune](../images/Autotune/Autotune_19b.png)
 
 - Dopo alcuni giorni, se ti fidi completamente dei risultati di Autotune e la percentuale di modifica è bassa, puoi modificare le [impostazioni di Autotune](#autotune-plugin-settings) "Profilo di commutazione di automazione" per abilitare l'aggiornamento automatico e attivare il profilo sintonizzato dopo il calcolo.
 
