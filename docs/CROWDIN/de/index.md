@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: Anmerkung
 
- 10. April 2026: Version 3.4.2.2 ist veröffentlicht. Schau in die [Release Notes](#latestrelease), um zu sehen was es Neues gibt, und führe die Schritte wie sie in der [Aktualisierungsanleitung](./Maintenance/UpdateToNewVersion.md) beschrieben sind, um entsprechend auf die neueste Version zu aktualisieren.
+ 4. Juni 2026: Version 3.4.2.3 ist veröffentlicht. Schau in die [Release Notes](#latestrelease), um zu sehen was es Neues gibt, und führe die Schritte wie sie in der [Aktualisierungsanleitung](./Maintenance/UpdateToNewVersion.md) beschrieben sind, um entsprechend auf die neueste Version zu aktualisieren.
 
 ```
 
