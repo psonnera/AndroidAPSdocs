@@ -7,10 +7,10 @@ Per utilizzare il tuo Libre come CGM, ottenendo nuovi valori di glicemia ogni 5 
 Verifica che il bridge e l'app che vuoi usare siano compatibili con il tuo sensore.  
 ```
 
-Some bridges are still available on the market:
+Sul mercato sono ancora disponibili alcuni bridge:
 
 -   [MiaoMiao Reader](https://www.miaomiao.cool/) (versione 1, 2 o 3) disponibile anche su AliExpress.
--   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) from European vendors ([BubbleShop](https://bubbleshop.eu/)) or for Russian users [here](https://vk.com/saharmonitor/). Disponibile anche su AliExpress.
+-   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) da rivenditori europei ([BubbleShop](https://bubbleshop.eu/)) o per gli utenti russi [qui](https://vk.com/saharmonitor/). Disponibile anche su AliExpress.
 -   Atom per gli utenti russi.
 
 ## 1. Usando xDrip+
@@ -28,4 +28,4 @@ Some bridges are still available on the market:
 
 ![Diabox](../images/Diabox. png)
 
-- Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Seleziona xDrip+ nel [Configuratore Strutturale, Origine BG](#Config-Builder-bg-source).
