@@ -68,11 +68,11 @@ Una volta selezionato, **AAPS** ricalcola la basale predefinita e **AAPS** (aper
 
 L'effetto di una Percentuale del **Profilo** è riassunto nella tabella seguente:
 
-| Cambio Profilo<br>Percentuale |   Effetto    |    I:C<br>g/UI     | esempio<br>15g |               ISF<br>mmol/l/UI<br/>mg/dl/UI                | UI per abbassare<br/>2mmol/l<br/>40mg/dl |
-|:-----------------------------------:|:------------:|:------------------------:|:--------------------:|:----------------------------------------------------------------------:|:----------------------------------------------------:|
-|                 90%                 |    Weaker    | 5/0.9<br>=**5.55** |        2.7 UI        | 2.2/0.9<br>=**2.4**<br><br>40/0.9<br>=**44.4** |                        0.8 UI                        |
-|              **100%**               | **Standard** |          **5**           |       **3 UI**       |                          **2.2<br>40**                           |                      **0.9** UI                      |
-|                130%                 |  Più forte   | 5/1.3<br>=**3.85** |        3.9 UI        | 2.2/1.3<br>=**1.7**<br><br>40/1.3<br>=**30.8** |                        1.2 UI                        |
+| Cambio Profilo<br>Percentuale |   Effetto   |    I:C<br>g/UI     | esempio<br>15g |               ISF<br>mmol/l/UI<br/>mg/dl/UI                | UI per abbassare<br/>2mmol/l<br/>40mg/dl |
+|:-----------------------------------:|:-----------:|:------------------------:|:--------------------:|:----------------------------------------------------------------------:|:----------------------------------------------------:|
+|                 90%                 | Più debole  | 5/0.9<br>=**5.55** |        2.7 UI        | 2.2/0.9<br>=**2.4**<br><br>40/0.9<br>=**44.4** |                        0.8 UI                        |
+|              **100%**               | **Normale** |          **5**           |       **3 UI**       |                          **2.2<br>40**                           |                      **0.9** UI                      |
+|                130%                 |  Più forte  | 5/1.3<br>=**3.85** |        3.9 UI        | 2.2/1.3<br>=**1.7**<br><br>40/1.3<br>=**30.8** |                        1.2 UI                        |
 
 (ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
 ## Sfasamento temporale del Profilo Percentuale Circadiano
