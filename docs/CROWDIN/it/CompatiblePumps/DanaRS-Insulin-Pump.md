@@ -96,7 +96,7 @@ In caso di perdita della connessione tra AAPS e Dana RS durante l'erogazione del
 ![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
 
 * Nella maggior parte dei casi si tratta solo di un problema di comunicazione e la quantità corretta di insulina viene erogata.
-* Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
+* Verifica nella la cronologia del microinfusore (sul microinfusore o tramite scheda Dana > cronologia del micro > boli) se è stato erogato il bolo giusto.
 * Eliminare la voce di errore nella [scheda trattamenti](#screens-bolus-carbs) se si desidera.
 * La quantità reale viene letta e registrata alla prossima connessione. Per forzarlo premere l'icona BT nella scheda Dana o aspettare la prossima connessione.
 
