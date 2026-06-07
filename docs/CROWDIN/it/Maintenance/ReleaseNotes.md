@@ -56,7 +56,7 @@ WearOS 5, API level 34 (Android 14) ha [limitazioni](#BuildingAapsWearOs-WearOS5
 
 (version3423)=
 
-## Version for 3.4.2.3
+## Versione per 3.4.2.3
 - Dash: Drift resolution @nl-ruud
 - NSClientV3: Fix gap after reconnection @MilosKozak
 - Automation: Fix deserialization @MilosKozak
