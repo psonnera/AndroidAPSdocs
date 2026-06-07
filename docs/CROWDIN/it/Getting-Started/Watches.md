@@ -49,7 +49,7 @@ Il modo migliore per scegliere uno smartwatch è cercare post relativi agli "oro
 
 ## Android Completo
 
-It sounds like an attractive option, right? However, at present, only a few enthusiasts are experimenting with **AAPS**  on a stand-alone watch. There are a limited number of smartwatches with a reasonable interface which also which work well with standalone use of **AAPS** and your CGM app. You will need to load the watch with the **AAPS** "full" apk (the apk which is usually installed on a smartphone) rather than the **AAPS** "wear" apk. Popular models include the LEMFO LEM.
+Sembra un'opzione interessante, vero? Tuttavia, al momento, solo pochi appassionati stanno sperimentando **AAPS** su un orologio autonomo. Esiste un numero limitato di smartwatch con un'interfaccia ragionevole che funzionano bene anche con l'uso autonomo di **AAPS** e della tua app CGM. You will need to load the watch with the **AAPS** "full" apk (the apk which is usually installed on a smartphone) rather than the **AAPS** "wear" apk. Popular models include the LEMFO LEM.
 
 Sebbene non ci sia una specifica chiara che ti aiuti a sapere se un orologio funzionerà bene per l'uso standalone di **AAPS**, i seguenti parametri ti aiuteranno:
 
