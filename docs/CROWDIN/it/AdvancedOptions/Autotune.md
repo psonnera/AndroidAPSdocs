@@ -115,7 +115,7 @@ La funzionalità Cambio Profilo Automatico è disponibile solo in modalità Dev/
 
 - Autotune usa anche il rapporto max autosens e il rapporto min autosens per limitare la variazione. È possibile vedere e regolare questi valori in Config Builder & #062; Sensitivity detection plugin & #062; Impostazioni & #062; Impostazioni avanzate
 
-  ![Schermata predefinita Autotune ](../images/Autotune/Autotune_12.png)
+  ![Schermata predefinita Autotune](../images/Autotune/Autotune_12.png)
 
 
 
