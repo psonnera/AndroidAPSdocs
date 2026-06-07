@@ -508,7 +508,7 @@ Lo scopo di una guida pratica è aiutare l'utente già competente a svolgere cor
       Non inquinare la tua guida pratica con tutto ciò che l'utente potrebbe fare in relazione a x.
 
 
-##### ![Image](../images/styleguide07.png) Explanation (e.g. Science behind why egg whites stiffen when you beat them)
+##### ![Image](../images/styleguide07.png) Spiegazione (es. La scienza dietro al perché gli albumi si solidificano quando vengono montati)
 
 Una spiegazione chiarisce, approfondisce e amplia la comprensione di un argomento da parte del lettore.
 
