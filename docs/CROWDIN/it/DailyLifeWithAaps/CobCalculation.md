@@ -1,4 +1,4 @@
-# COB calculation
+# Calcolo COB
 
 ## Come calcola AAPS il valore COB?
 
