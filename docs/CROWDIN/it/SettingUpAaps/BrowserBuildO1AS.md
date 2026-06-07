@@ -1,78 +1,78 @@
-### Open the CI preparation help file
+### Apri il file di aiuto per la preparazione CI
 
-With File Manager+, open the file `aaps-ci-preparation-html` you downloaded above.
+Con File Manager+, apri il file `aaps-ci-preparation-html` scaricato in precedenza.
 
-Select Downloads.
+Seleziona Download.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep07.png)
 
-And search for this file, tap it to open it, open it with Chrome, tap Just once.
+Cerca questo file, toccalo per aprirlo, aprilo con Chrome, tocca Solo una volta.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep08.png)
 
-It will open like this.
+Si aprirà in questo modo.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep09.png)
 
-Select Generate JKS. The field below will populate with characters.
+Seleziona Genera JKS. Il campo qui sotto si popolerà con dei caratteri.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep09a.png)
 
-Keep this tab open.
+Tieni questa scheda aperta.
 
-### Create a new secret in GitHub
+### Crea un nuovo segreto in GitHub
 
-Return to your GitHub browser tab: your own AndroidAPS copy.
+Torna alla scheda del browser GitHub: la tua copia personale di AndroidAPS.
 
-1. Top right, tap the `...` button
-2. Select Settings in the list
+1. In alto a destra, tocca il pulsante `...`
+2. Seleziona Impostazioni nell'elenco
 
 ![](../images/Building-the-App/CI/BrowserBuildStep10.png)
 
-Scroll down to Security and select Secrets and variables.
+Scorri verso il basso fino a Sicurezza e seleziona Segreti e variabili.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep11.png)
 
-Now select Actions
+Ora seleziona Azioni
 
 ![](../images/Building-the-App/CI/BrowserBuildStep12.png)
 
-Scroll down to Repository secrets and tap New repository secret
+Scorri verso il basso fino a Segreti del repository e tocca Nuovo segreto del repository
 
 ![](../images/Building-the-App/CI/BrowserBuildStep13.png)
 
-You will see this dialog (scroll down if it's not visible).
+Vedrai questa finestra di dialogo (scorri verso il basso se non è visibile).
 
 ![](../images/Building-the-App/CI/BrowserBuildStep14.png)
 
-Leave the tab opened like this.
+Lascia la scheda aperta così.
 
-Switch to the File Explorer Plus tab.
+Passa alla scheda File Explorer Plus.
 
-Tap the top Copy button.
+Tocca il pulsante Copia in alto.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep15.png)
 
-Switch back to the GitHub tab.
+Torna alla scheda GitHub.
 
-In the Name field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+Nel campo Nome, incolla il testo appena copiato. Usa un tocco lungo sulla casella di testo per mostrare il menu di incolla.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep16.png)
 
-Switch to the File Explorer Plus tab.
+Passa alla scheda File Explorer Plus.
 
-Tap the second Copy button.
+Tocca il secondo pulsante Copia.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep17.png)
 
-Switch back to the GitHub tab.
+Torna alla scheda GitHub.
 
-1. In the Secret field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+1. Nel campo Segreto, incolla il testo appena copiato. Usa un tocco lungo sulla casella di testo per mostrare il menu di incolla.
 
-2. Tap Add secret.
+2. Tocca Aggiungi segreto.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep18.png)
 
-Check the secret has been added, scroll down to verify.
+Verifica che il segreto sia stato aggiunto, scorri verso il basso per confermare.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep19.png)
