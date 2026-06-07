@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
- 4 June 2026 : Version 3.4.2.3 is out. Controlla le [Note di rilascio](#latestrelease) per vedere cosa c'è di nuovo e segui le istruzioni nel [Manuale di aggiornamento](./Maintenance/UpdateToNewVersion.md) per aggiornare.
+ 4 giugno 2026: è disponibile la versione 3.4.2.3. Controlla le [Note di rilascio](#latestrelease) per vedere cosa c'è di nuovo e segui le istruzioni nel [Manuale di aggiornamento](./Maintenance/UpdateToNewVersion.md) per aggiornare.
 
 ```
 
@@ -84,22 +84,11 @@ Panoramica componenti <./Getting-Started/ComponentOverview.md>
 ```
 
 ```{toctree}
-:caption: 3) Setting up AAPS
+:caption: 3) Configurazione di AAPS
 
-Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
+Configurazione del server di reporting <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
-Building AAPS <./SettingUpAaps/BuildingAaps.md>
-- Browser Build <./SettingUpAaps/BrowserBuild.md>
-- Android Studio Build <./SettingUpAaps/ComputerBuild.md>
-- CLI Build <./SettingUpAaps/CLIBuild.md>
-Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Config Builder <./SettingUpAaps/ConfigBuilder.md>
-- Preferences <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -142,27 +131,20 @@ Scambio di quadranti personalizzati <./ExchangeSiteCustomWatchfaces/index.md>
 ```
 
 ```{toctree}
-:caption: 7) Maintenance of AAPS
+:caption: 7) Manutenzione di AAPS
 
-Export/Import Settings <./Maintenance/ExportImportSettings.md>
-Reviewing your data <./Maintenance/Reviewing.md>
-AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-Documentation updates <./Maintenance/DocumentationUpdate.md>
-Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update <./Maintenance/UpdateBrowserBuild.md>
-- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
+Esporta/Importa Impostazioni <./Maintenance/ExportImportSettings.md>
+Revisione dei dati <./Maintenance/Reviewing.md>
+Note di rilascio AAPS <./Maintenance/ReleaseNotes.md>
 
 ```
 
 ```{toctree}
-:caption: 8) Getting Help
+:caption: 8) Ottenere aiuto
 
-Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
-General troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
-- Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
-Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
-Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
-Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
+Dove posso ottenere aiuto con AAPS <./GettingHelp/WhereCanIGetHelp.md>
+Risoluzione generale dei problemi <./GettingHelp/GeneralTroubleshooting.md>
+- Risoluzione problemi Bluetooth
 ```
 
 ```{toctree}
