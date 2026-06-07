@@ -1,4 +1,4 @@
-# DanaR Pump
+# DanaR
 
 _Queste istruzioni riguardano la configurazione dell'app e del microinfusore per chi possiede un DanaR.  Visitare [Microinfusore DanaRS](./DanaRS-Insulin-Pump.md) se si possiede il DanaRS lanciato nel 2017._
 
@@ -18,7 +18,7 @@ _Queste istruzioni riguardano la configurazione dell'app e del microinfusore per
 * Nelle Preferenze sotto le impostazioni del microinfusore DanaR è possibile cambiare la velocità predefinita del bolo (12 sec per 1U, 30 sec per 1U o 60 sec per 1U).
 * Impostare il passo basale del microinfusore a 0,01 U/h
 * Impostare il passo bolo del microinfusore a 0,1 U/h
-* Enable extended boluses on pump
+* Abilita bolo esteso sul micro
 
 ## Viaggi con cambi di fuso orario con il microinfusore Dana R
 
