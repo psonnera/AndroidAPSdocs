@@ -10,9 +10,9 @@ Custom Watchface è un formato aperto progettato per AAPS, associato al nuovo qu
 
 Il file del quadrante è un semplice file zip, ma per essere riconosciuto come file di quadrante, il file zip deve contenere i seguenti file:
 
-- One image file named CustomWatchface (can be bitmap files `CustomWatchface.jpg`, `CustomWatchface.png` or a vector `CustomWatchface.svg`). This file is the little icon used to select the watchface when you click on "Load Watchface" button, and also the image visible within AAPS Wear plugin.
+- Un file immagine chiamato CustomWatchface (può essere un file bitmap `CustomWatchface.jpg`, `CustomWatchface.png` o un vettoriale `CustomWatchface.svg`) Questo file è la piccola icona usata per selezionare il quadrante quando clicchi sul pulsante "Carica Quadrante", ed è anche l'immagine visibile nel plugin AAPS Wear.
 - Un file denominato `CustomWatchface.json` (vedi [struttura JSON](#cwf-reference-json-structure) sotto). Questo secondo file è il file principale che contiene tutte le informazioni necessarie per progettare il quadrante. Il file json deve essere valido (questo è probabilmente il punto più delicato quando si modifica manualmente il file con un editor di testo, perché una virgola mancante o in più è sufficiente a invalidare il formato json). Il file JSON deve anche includere un blocco `"metadata"` con una chiave `"name"` non vuota. Questo sarà il nome del tuo quadrante personalizzato (vedi [Impostazioni Metadata](#cwf-reference-metadata-settings) sotto).
-- - the size of this zip should be as small as possible (less than about 500kb). If this file is too big, it will just be blocked and not transmitted to the watch.
+- - the size of this zip should be as small as possible (less than about 500kb). Se questo file è troppo grande, verrà semplicemente bloccato e non trasmesso all'orologio.
 
 Il file zip può contenere anche alcuni file di risorse aggiuntivi:
 
@@ -46,10 +46,7 @@ Di seguito un esempio di blocco metadata:
     "name": "Default Watchface",
     "author": "myName",
     "created_at": "07\/10\/2023",
-    "author_version": "1.0",
-    "cwf_version": "1.0",
-    "comment": "Default watchface, you can click on EXPORT WATCHFACE button to generate a template"
-},
+    "author_version":
 ```
 
 Nota: il carattere `/` usato per la data è un carattere speciale; per essere riconosciuto correttamente nel file json, deve essere preceduto dal carattere di "escape" `\`
@@ -173,7 +170,7 @@ I 2 parametri aggiuntivi per la Chart view sono: il colore di sfondo (predefinit
 
 ### Strumenti necessari
 
-- Editor di testo: si consiglia NotePad++ (o equivalente), un semplice editor di testo con il vantaggio di mostrare il testo formattato con codice colore, rendendo più facile individuare gli errori. Qualsiasi editor di testo semplice va comunque bene, poiché lo scopo è modificare le informazioni json. Since the purpose is to tune json information.
+- Editor di testo: si consiglia NotePad++ (o equivalente), un semplice editor di testo con il vantaggio di mostrare il testo formattato con codice colore, rendendo più facile individuare gli errori. Qualsiasi editor di testo semplice va comunque bene, poiché lo scopo è modificare le informazioni json. Poiché lo scopo è ottimizzare le informazioni json.
 - Editor di immagini (bitmap e/o vettoriale)
   - Se usi Bitmap
     - L'editor deve essere in grado di gestire la trasparenza (necessaria per tutte le immagini sopra lo sfondo) e il formato png (se si usano immagini bitmap)
@@ -265,7 +262,7 @@ Il modo più semplice per iniziare a personalizzare il quadrante è includere ne
 - Se si dispone di un editor di immagini vettoriali (come ad esempio Illustrator), preferire questo formato che produce file di testo piccoli con estensione `.svg` e della migliore qualità.
 - Occorre fare attenzione a usare il nome file esatto (incluse maiuscole/minuscole).
 
-Per aggiungere un'immagine di sfondo dedicata, è sufficiente includere nel file zip un file denominato `Background.jpg` (senza modificare nient'altro, inviare il file zip all'orologio e verificare il risultato). send zip file into the watch and check result!.
+Per aggiungere un'immagine di sfondo dedicata, è sufficiente includere nel file zip un file denominato `Background.jpg` (senza modificare nient'altro, inviare il file zip all'orologio e verificare il risultato). invia il file zip nell'orologio e verifica il risultato!
 
 Per personalizzare hour_hand, minute_hand o second_hand di un orologio analogico, includere semplicemente `HourHand.png` (o `HourHand.svg`), `MinuteHand.png` e `SecondHand.png`.
 
@@ -325,11 +322,7 @@ Se si hanno ancora bisogno di impostazioni molto specifiche per una visualizzazi
     "name": "Default Watchface",
     "author": "myName",
     "created_at": "07\/10\/2023",
-    "author_version": "1.0",
-    "cwf_version": "1.0",
-    "comment": "Default watchface, you can click on EXPORT WATCHFACE button to generate a template",
-    "key_show_detailed_iob": false
-},
+    "author_version":
 ```
 
 Se l'utente autorizza il quadrante personalizzato a modificare i parametri dell'orologio (impostazione nel plugin wear), "Mostra iob dettagliato" verrà impostato su "disabilitato" e bloccato in questa modalità (nessuna modifica di questo parametro è possibile finché l'autorizzazione non viene disabilitata nelle impostazioni del plugin wear o non viene selezionato un altro quadrante).
@@ -1144,9 +1137,9 @@ Vediamo ora il blocco dynPref del timestamp per gestire il plurale:
 
 **Commento aggiuntivo sulla funzionalità di formattazione**
 
-- keep in mind that the only dynamic values available are the one listed [here](#cwf-reference-dyndata-key-values)
-- All `BG` values are in mgdl unit, if you want to use formatting feature to show values in mmol units, you will have to manage mgdl to mmol conversion. Within a `dynData` or `dynPref` block, the key that should be used to name the block that will include `"minValue"`and `"maxValue"` for value conversion should be named `"dynValue": { ... }`. (see [Dyn Data Keys](#cwf-reference-dyndata-keys))
-- If within a view you want to use a static formatting string, with `"textvalue"` key to define format, and `"dynValue"` key to define usage of dynamic value, then you will have to also use a `"dynData"` or a `"dynPref"`block (even if empty), to be able to use formatting feature.
+- tieni presente che gli unici valori dinamici disponibili sono quelli elencati [qui](#cwf-reference-dyndata-key-values)
+- Tutti i valori `BG` sono in unità mgdl; se vuoi usare la funzione di formattazione per mostrare i valori in unità mmol, dovrai gestire la conversione da mgdl a mmol. Within a `dynData` or `dynPref` block, the key that should be used to name the block that will include `"minValue"`and `"maxValue"` for value conversion should be named `"dynValue": { ... }`. (see [Dyn Data Keys](#cwf-reference-dyndata-keys))
+- Se all'interno di una vista vuoi usare una stringa di formattazione statica, usa la chiave `"textvalue"` per definire il formato e la chiave `"dynValue"` per definire l'unità.
 - `"textvalue1"`, `"textvalue2"` fino a textvalue*n* possono essere usati senza la funzionalità di formattazione per sostituire il passo del valore double con un'etichetta di testo dedicata (ad esempio con il valore chiave `"day_name"` e sette passi per definire il nome personalizzato dei giorni della settimana, ...)
 
 - Per la documentazione completa vedere [Class Formatter](https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html)
@@ -1296,7 +1289,7 @@ Nota: tutte le chiavi che includono `_Ext1` o `_Ext2` alla fine sono nuove e ded
 | `"uploader_battery"`                                                                   | Text View               | livello batteria telefono (%)                                                                                                                                                | uploader_battery                                                                                                                                                                        |
 | `"rig_battery"`<br/>`"rig_battery_Ext1"` *<br/>`"rig_battery_Ext2"` *      | Text View               | livello batteria rig (%)                                                                                                                                                     | rig_battery<br/>rig_battery_Ext1<br/>rig_battery_Ext2                                                                                                                   |
 | `"basalRate"`<br/>`"basalRate_Ext1"` *<br/>`"basalRate_Ext2"` *            | Text View               | % o valore assoluto                                                                                                                                                          |                                                                                                                                                                                         |
-| `"bgi"`<br/>`"bgi_Ext1"` *<br/>`"bgi2_Ext2"` *                             | Text View               | mgdl/(5 min) or mmol/(5 min)                                                                                                                                                 |                                                                                                                                                                                         |
+| `"bgi"`<br/>`"bgi_Ext1"` *<br/>`"bgi2_Ext2"` *                             | Text View               | mgdl/(5 min) o mmol/(5 min)                                                                                                                                                  |                                                                                                                                                                                         |
 | `"status"` *<br/>`"status_Ext1"` *<br/>`"status_Ext2"` *                   | Text View               | Sintesi IOB (indipendentemente dall'impostazione IOB sull'orologio), IOB Dettagliato (in base all'impostazione sull'orologio) e BGI (in base all'impostazione sull'orologio) |                                                                                                                                                                                         |
 | `"time"`                                                                               | Text View               | HH:MM o HH:MM:SS                                                                                                                                                             |                                                                                                                                                                                         |
 | `"hour"`                                                                               | Text View               | HH                                                                                                                                                                           |                                                                                                                                                                                         |
@@ -1413,7 +1406,7 @@ Nota: tutte le chiavi che includono `_Ext1` o `_Ext2` alla fine sono nuove e ded
 | Key                       | tipo   | commento                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `"dynData"`               | block  | definisce il blocco di tutti i blocchi di dati dinamici che verranno usati per le viste. Generalmente dopo l'ultima vista.<br />Tutte le chiavi definite in questo blocco verranno usate come valore chiave nel blocco vista:<br />`"dynData": { dynData blocks }`<br />e ogni blocco è definito da un nome personalizzato e diverse chiavi al suo interno:<br />`"customName": { one dynData block }`                                                                                 |
-| `"valueKey"`              | string | name of dynamic data to use (generally same that associated view key).<br />If not existing, the default will be the values used for the view that uses this block. <br />for example you can define one block to customize battery level percentage without specifying valueKey, and then use the same block to customize uploader_battery and rig_battery                                                                                                                                      |
+| `"valueKey"`              | string | nome dei dati dinamici da utilizzare (generalmente lo stesso della chiave della vista associata).<br />Se non esistente, il valore predefinito sarà quello usato dalla vista che utilizza questo blocco. <br />ad esempio puoi definire un blocco per personalizzare la percentuale della batteria senza specificare valueKey, e poi usare lo stesso blocco per personalizzare uploader_battery e rig_battery                                                                                    |
 | `"minData"`               | int    | specifica il valore minimo da prendere in considerazione per i dati AAPS: ad esempio se il valore è sgv (unità mgdl internamente), se minData è impostato a 50, tutti i valori BG inferiori a 50mgdl saranno impostati a 50.<br />- Nota: minData e maxData vengono usati per calcolare i valori dinamici (in pixel o in gradi).                                                                                                                                                                         |
 | `"maxData"`               | int    | specifica il valore massimo da prendere in considerazione per i dati AAPS: ad esempio se il valore è sgv (unità mgdl internamente), se maxData è impostato a 330, tutti i valori BG superiori a 330mgdl saranno impostati a 330.                                                                                                                                                                                                                                                                               |
 | `"leftOffset"`            | block  | Specifica lo scorrimento orizzontale della vista in base ai valori min e max in pixel.<br />- Include le chiavi minValue, maxValue e invalidValue (opzionale)<br />- Se i dati sono inferiori o uguali a minData, la vista verrà spostata di minValue pixel; se i dati sono superiori o uguali a maxData, la vista verrà spostata di maxValue pixel<br />Nota: per applicare questo scorrimento, `leftOffset` deve essere impostato a true nella vista                                       |
