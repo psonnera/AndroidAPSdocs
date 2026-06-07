@@ -37,7 +37,7 @@ Assicurarsi che le notifiche di AAPS non siano bloccate sull'orologio. La confer
 
 Per accedere al menu principale di AAPS puoi usare una delle seguenti opzioni:
 
-* double tap on your BG value
+* doppio tocco sul valore della glicemia
 * seleziona l'icona AAPS nel menu delle applicazioni dell'orologio
 * tocca la complicazione AAPS (se configurata per il menu)
 
