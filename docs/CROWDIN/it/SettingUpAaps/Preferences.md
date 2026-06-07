@@ -124,7 +124,7 @@ Nella sezione **Panoramica**, puoi definire le preferenze per la schermata princ
 
 ### Mantieni schermo acceso
 
-L'opzione 'Mantieni schermo acceso' costringerà Android a mantenere sempre acceso lo schermo. Questo è utile per le presentazioni ecc. Ma consuma molta energia della batteria. But it consumes a lot of battery power. Pertanto, si raccomanda di collegare lo smartphone a un cavo del caricabatterie.
+L'opzione 'Mantieni schermo acceso' costringerà Android a mantenere sempre acceso lo schermo. Questo è utile per le presentazioni ecc. Ma consuma molta energia della batteria. Ma consuma molta energia della batteria. Pertanto, si raccomanda di collegare lo smartphone a un cavo del caricabatterie.
 
 (Preferences-buttons)=
 ### Pulsanti
@@ -230,7 +230,7 @@ L'ultima opzione ti permette di importare quelle impostazioni da Nightscout se d
 ![Preferences > Status Lights](../images/Pref2020_OV_StatusLights2.png)
 
 (Preferences-deliver-this-part-of-bolus-wizard-result)=
-### Deliver this part of bolus wizard result
+### Eroga questa parte del risultato del calcolatore bolo
 
 Imposta la [percentuale predefinita](#AapsScreens-section-j) del bolo calcolato quando si usa il calcolatore bolo.
 
@@ -267,7 +267,7 @@ Impostazione nascosta in [modalità semplice](#preferences-simple-mode).
 
 Impostazione nascosta in [modalità semplice](#preferences-simple-mode).
 
-Option to enable superbolus in bolus wizard.
+Opzione per abilitare il superbolus nel calcolatore bolo.
 
 Il [Super bolo](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) è un concetto per "prendere in prestito" un po' di insulina dalla basale nelle due ore successive per prevenire picchi. È diverso dal *super micro bolus*!
 
@@ -334,7 +334,7 @@ L'algoritmo usa BGI (impatto sulla glicemia) per determinare quando i [carboidra
 
 Nei momenti in cui l'assorbimento dei carboidrati non può essere calcolato dinamicamente in base alle reazioni del sangue, **AAPS** inserisce un decadimento predefinito per i tuoi carboidrati. In sostanza, è un meccanismo di sicurezza. Questo valore viene usato solo durante le lacune nelle letture del **CGM** o quando l'attività fisica "consuma" tutta la glicemia che altrimenti farebbe decadere il COB da parte di **AAPS**.
 
-In parole semplici: L'algoritmo "sa" come dovrebbero *comportarsi* le glicemie quando sono influenzate dalla dose di insulina corrente ecc. Ogni volta che c'è una deviazione positiva dal comportamento previsto, alcuni carboidrati vengono assorbiti/decaduti. Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Grande cambiamento = molti carboidrati ecc.
+In parole semplici: L'algoritmo "sa" come dovrebbero *comportarsi* le glicemie quando sono influenzate dalla dose di insulina corrente ecc. Ogni volta che c'è una deviazione positiva dal comportamento previsto, alcuni carboidrati vengono assorbiti/decaduti. Ogni volta che c'è una deviazione positiva dal comportamento atteso, alcuni carboidrati vengono assorbiti/smaltiti. Grande cambiamento = molti carboidrati ecc.
 
 Il min_5m_carbimpact definisce l'impatto predefinito sull'assorbimento dei carboidrati per 5 minuti. Per ulteriori dettagli vedi la [documentazione OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
 
