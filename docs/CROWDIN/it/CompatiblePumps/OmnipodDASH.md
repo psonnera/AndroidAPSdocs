@@ -38,7 +38,7 @@ Queste sono le specifiche dell' **Omnipod DASH** ('DASH') e ciò che lo differen
 - **Uno smartphone Android compatibile** con Bluetooth Low Energy (BLE) (vedere [Telefoni](../Getting-Started/Phones.md) per maggiori informazioni); le seguenti informazioni aiuteranno anche a orientarsi su altre considerazioni chiave per attivare e usare con successo il DASH su un telefono compatibile:
     -  Il driver Omnipod Dash di **AAPS** si connette al Pod DASH tramite Bluetooth. **AAPS** stabilirà automaticamente una nuova connessione Bluetooth al Pod ogni volta che ha bisogno di inviare un comando (ad es. un Bolo); dopo l'invio del comando la connessione Bluetooth viene immediatamente disconnessa.
        - **NOTA:**
-         - La connessione Bluetooth può essere interrotta/disturbata da altri dispositivi Bluetooth collegati al telefono che esegue **AAPS**, come auricolari ecc. Dispositivi di questo tipo possono causare errori di connessione o problemi di attivazione del pod su alcuni modelli di telefono. Devices like this can cause connection errors or pod activation issues on some models of phones. È buona idea rivedere l'elenco delle [configurazioni hardware testate](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) prima di impegnarsi con una nuova configurazione basata su Omnipod DASH.
+         - La connessione Bluetooth può essere interrotta/disturbata da altri dispositivi Bluetooth collegati al telefono che esegue **AAPS**, come auricolari ecc. Dispositivi di questo tipo possono causare errori di connessione o problemi di attivazione del pod su alcuni modelli di telefono. Dispositivi come questi possono creare errori di connessione o problemi di attivazione pod su alcuni modelli di telefoni. È buona idea rivedere l'elenco delle [configurazioni hardware testate](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) prima di impegnarsi con una nuova configurazione basata su Omnipod DASH.
          - Ci sono diversi problemi noti con il Bluetooth che possono causare problemi di attivazione del pod (vedere [Risoluzione dei problemi](#troubleshooting) per consigli su altri problemi Bluetooth), in particolare la sezione [Problemi relativi al Bluetooth](#omnipod-dash-bluetooth-related-issues).
     - Per **Android 15** o versioni precedenti: **DEVI** usare la **Versione 3.0 o successiva di AAPS** seguendo le istruzioni [**Compilazione APK**](../SettingUpAaps/BuildingAaps.md); tuttavia è consigliabile usare l'ultima versione rilasciata.
     - Per **Android 16**: **DEVI** usare la **Versione 3.3.2.1 o successiva di AAPS** seguendo le istruzioni [**Compilazione APK**](../SettingUpAaps/BuildingAaps.md), poiché Android 16 ha cambiato il funzionamento del Bluetooth. Qualsiasi versione precedente alla 3.3.2.1 potrebbe causare guasti del pod e/o [problemi](https://github.com/nightscout/AndroidAPS/issues/3471) di attivazione.
@@ -488,7 +488,7 @@ Questa sezione copre i problemi noti comuni e le soluzioni per l'uso di Omnipod 
 Per problemi noti con le connessioni Bluetooth, disconnessioni di microinfusori/pod, o problemi di attivazione e connessione vedere [Risoluzione problemi Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
-### Delivery suspended
+### Erogazione sospesa
 
   - Non c'è più un pulsante di sospensione. Se si vuole "sospendere" il pod, è possibile impostare una **TBR** zero per x minuti.
   - Durante i **Cambi Profilo**, il DASH deve sospendere l'erogazione prima di impostare il nuovo **Profilo** basale. Se la comunicazione fallisce tra i due comandi, l'erogazione può rimanere sospesa. Quando ciò accade:
@@ -500,10 +500,10 @@ Per problemi noti con le connessioni Bluetooth, disconnessioni di microinfusori/
      - Se **AAPS** non riesce a riprendere l'erogazione da solo (questo accade se il pod non è raggiungibile, il suono è disattivato ecc.), il pod inizierà a emettere 4 segnali acustici ogni minuto per 3 minuti, poi ripetuti ogni 15 minuti se l'erogazione è ancora sospesa per più di 20 minuti.
   - Per i comandi non confermati, "aggiorna stato pod" dovrebbe confermarli/negarli.
 
-***********************************************************NOTE:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, ***so you need to check !************************************************************
+**************************************************************NOTE:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, ***so you need to check !***************************************************************
 
 ---
-### Pod Failures
+### Fallimenti Pod
 
 - I pod si guastano occasionalmente a causa di vari problemi, inclusi problemi hardware del Pod stesso.
 - È buona pratica non aprire casi di supporto/sostituzione con Insulet, poiché AAPS non è un metodo approvato per l'utilizzo dei Pod.
@@ -516,7 +516,7 @@ Questo guasto è correlato a uno stato del pod errato per un comando o a un erro
 
 ---
 
-### Pump Unreachable Alerts
+### Avvisi Micro Non Raggiungibile
 
 Quando non è possibile stabilire comunicazione con il pod per un tempo preconfigurato, verrà generato un avviso "Microinfusore non raggiungibile". Gli avvisi di microinfusore non raggiungibile possono essere configurati andando al menu a tre punti in alto a destra, selezionando **Preferenze** ➜ **Avvisi locali** ➜ **Soglia microinfusore non raggiungibile [min]**. Il valore consigliato è un avviso dopo **120** minuti.
 
