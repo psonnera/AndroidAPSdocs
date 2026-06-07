@@ -521,7 +521,7 @@ In questo esempio selezioniamo "Microinfusore virtuale".
 
 ## Algoritmo APS
 
-Use the OpenAPS SMB algorithm as your APS algorithm. OpenAPS SMB is newer and in general better compared to the OpenAPS AMA anyway. Despite the name the SMB feature of the algorithm is disabled until you are familiar with AAPS and already worked through the first objectives.
+Usa l'algoritmo OpenAPS SMB come algoritmo APS. OpenAPS SMB is newer and in general better compared to the OpenAPS AMA anyway. Despite the name the SMB feature of the algorithm is disabled until you are familiar with AAPS and already worked through the first objectives.
 
 Il motivo per cui SMB è disabilitato all'inizio è che la funzionalità SMB consente una reazione più rapida all'aumento della glicemia attraverso il Super Micro Bolus invece di aumentare la percentuale del tasso basale. Poiché all'inizio il tuo profilo non è generalmente così buono come dopo un po' di esperienza, la funzionalità è disabilitata all'inizio.
 
