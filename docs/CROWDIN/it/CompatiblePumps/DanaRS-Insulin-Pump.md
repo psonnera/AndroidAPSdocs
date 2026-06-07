@@ -21,7 +21,7 @@ _Queste istruzioni riguardano la configurazione dell'app e del microinfusore per
 * Selezionare il menu preferenze toccando i 3 punti in alto a destra.
 * Selezionare 'Preferenze Dana-i/RS'.
 * Fare clic su "Microinfusore selezionato".
-* In the pairing window click on the entry for your pump.
+* Nella finestra di abbinamento, clicca sulla voce del tuo microinfusore.
 
   ![AAPS pair Dana-i/RS](../images/DanaRS_i_Pairing.png)
 
@@ -38,7 +38,7 @@ _Queste istruzioni riguardano la configurazione dell'app e del microinfusore per
 * Selezionare Velocità bolo per cambiare la velocità predefinita del bolo (12 sec per 1U, 30 sec per 1U o 60 sec per 1U).
 * Impostare il passo basale del microinfusore a 0,01 U/h usando il menu Medici (vedere il manuale utente del microinfusore).
 * Impostare il passo bolo del microinfusore a 0,05 U/h usando il menu Medici (vedere il manuale utente del microinfusore).
-* Enable extended boluses on pump
+* Abilita i boli estesi sul microinfusore
 
 (DanaRS-Insulin-Pump-default-password)=
 
