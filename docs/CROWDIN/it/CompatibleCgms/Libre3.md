@@ -13,10 +13,10 @@ All'interno di xDrip+ il sensore può essere calibrato nell'intervallo da -40 mg
 ## Metodo 1: usa le letture al minuto direttamente
 AndroidAPS è ottimizzato per letture a 5 minuti. Pertanto l'elaborazione di valori al minuto presenta occasionali limitazioni.
 
-See [here](#juggluco-to-aaps).
+Vedi [qui](#juggluco-to-aaps).
 
 
-## Method 2: convert 1-minute readings into 5-minute values via xDrip
+## Metodo 2: convertire le letture ogni minuto in valori di 5 minuti tramite xDrip
 Questo metodo utilizza Juggluco per ricevere i dati grezzi dal sensore ogni minuto, vengono poi passati a xDrip+ che ne fa la media ogni 5 minuti, e sono quindi inoltrati ad AAPS.
 
 ### Passo 1: Impostare Juggluco
@@ -52,7 +52,7 @@ Dopo un cambio di sensore, xDrip+ rileva automaticamente il nuovo sensore ed eli
 
 ### Passo 4: Configurare AndroidAPS
 
-- See [here](#juggluco-to-xdrip) and come back.
+- Vedi [qui](#juggluco-to-xdrip) e torna indietro.
 
 - Se AndroidAPS non riceve i valori di glicemia quando il telefono è in modalità aereo, usa "Identifica ricevitore"
 - Disabilita lo smoothing (già fatto in xDrip+)
