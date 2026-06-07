@@ -1,6 +1,6 @@
 # Cambio fuso orario e ora legale
 
-## Timezone traveling with pumps
+## Viaggi attraverso fusi orari con i microinfusori
 
 ## Cambio fuso orario per Omnipod Dash
 
@@ -39,11 +39,11 @@ Per evitare ciò esistono due possibilità:
 
 All'uscita dall'aereo:
 
-* turn off pump
+* sospendere il micro
 * cambiare il fuso orario nel telefono
 * spegnere il telefono, accendere il microinfusore
-* clear history in pump
-* change time in pump
+* cancellare la cronologia nel micro
+* cambia ora nel micro
 * accendere il telefono
 * lasciare che il telefono si connetta al microinfusore e regoli l'ora con precisione
 
@@ -81,7 +81,7 @@ Regolazione dell'ora per l'ora legale
 A seconda della configurazione del microinfusore e del CGM, i salti di orario possono causare problemi nel corretto funzionamento di **AAPS**. Ad esempio, con il microinfusore Combo, la cronologia del microinfusore viene letta due volte, dando luogo a voci duplicate. Per alcuni microinfusori è preferibile apportare le modifiche al fuso orario mentre si è svegli e non di notte.
 
 
-### DST automatic adjustment for most pumps
+### Regolazione automatica DST per la maggior parte dei microinfusori
 
 * Questa funzionalità di regolazione è disponibile a partire dalla versione 2.2 di **AAPS**.
 * Tuttavia, il Loop completamente chiuso verrà disattivato per 3 ore DOPO il cambio dell'ora legale (di solito dall'1:00 in poi) e **AAPS** tornerà alla basale in background selezionata nel **Profilo**. Ciò viene fatto per ragioni di sicurezza: l'**IOB** potrebbe essere troppo alto a causa di un bolo duplicato prima del cambio dell'ora legale.
@@ -113,9 +113,9 @@ Se esegui un bolo con il calcolatore di **AAPS**, non utilizzare i dati **COB** 
 
 ![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
 
-2. Find a timezone that has the same time as your current location but doesn't use DST.
+2. Trovare un fuso orario con la stessa ora della posizione attuale ma che non utilizza l'ora legale.
 
-   * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
+   * Un elenco di questi paesi è disponibile su [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
    * Per il Fuso Orario dell'Europa Centrale (CET) potrebbe essere "Brazzaville" (Congo). Cambiare il fuso orario del telefono in Congo.
 
 
@@ -127,7 +127,7 @@ Se esegui un bolo con il calcolatore di **AAPS**, non utilizzare i dati **COB** 
 
 3. Controllare l'**IOB** e il **COB** di **AAPS** e, se non sono accurati, disabilitare il Loop completamente chiuso per almeno un DIA e il Tempo massimo dei carboidrati, quello che è maggiore.
 
-4. Actions to take after the clock change. A good time to make this switch would be with low **IOB**. 4. E.g. E.g. an hour before a meal such as breakfast. Your **COB** and **IOB** should both be close to zero.)
+4. Azioni da effettuare dopo il cambio dell'ora. A good time to make this switch would be with low **IOB**. 4. E.g. E.g. an hour before a meal such as breakfast. Your **COB** and **IOB** should both be close to zero.)
 
 
 ### Ora legale per Accu-Chek Combo
@@ -144,32 +144,32 @@ Questa sezione è valida solo per il vecchio driver basato su Ruffy. Il nuovo dr
 
    Screenshot_20260329-110315 (1)
 
-2. Find a timezone that has the same time as your current location but doesn't use DST.
+2. Trovare un fuso orario con la stessa ora della posizione attuale ma che non utilizza l'ora legale.
 
-   * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
+   * Un elenco di questi paesi è disponibile su [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
    * Per il Fuso Orario dell'Europa Centrale (CET) potrebbe essere "Brazzaville" (Congo). Cambiare il fuso orario del telefono in Congo.
 
-3. In **AAPS** refresh your pump.
+3. In **AAPS** aggiornare il microinfusore.
 
-4. Check the Treatments tab... If you see any duplicate treatments:
+4. Controllare la scheda Trattamenti... Se si vedono trattamenti duplicati:
 
-   * DON'T press "delete treatments in the future"
-   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+   * NON premere "elimina trattamenti futuri"
+   * Premere "rimuovi" su tutti i trattamenti futuri e quelli duplicati. Questo dovrebbe invalidare i trattamenti anziché rimuoverli, quindi non verranno più considerati per il calcolo dell'IOB.
 
-5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
+5. Se non è chiaro quanta IOB/COB sia presente, per sicurezza disabilitare il loop per almeno un DIA e il Tempo massimo dei carboidrati, quello maggiore.*
 
-#### Actions to take after the clock change
+#### Azioni da effettuare dopo il cambio dell'ora
 Un buon momento per effettuare questo passaggio sarebbe con un **IOB** basso. E.g. E.g. an hour before a meal such as breakfast. Ad esempio, un'ora prima di un pasto come la colazione (tutti i boli recenti nella cronologia del microinfusore saranno state piccole correzioni SMB. Ideally your **COB** and **IOB** should both be close to zero.
 
-1. Change the Android timezone back to your current location and re-enable automatic timezone.
-2. **AAPS** will soon start alerting you that the Combo’s clock doesn’t match. So update the pump’s clock manually via the pump’s screen and buttons.
-3. On the **AAPS** “Combo” screen, press Refresh.
-4. Then go to the Treatments screen, and look for any events in the future. There shouldn’t be many.
+1. Cambiare il fuso orario Android nuovamente alla propria posizione attuale e riabilitare il fuso orario automatico.
+2. **AAPS** inizierà presto ad avvisare che l'orologio del Combo non corrisponde. Aggiorna quindi manualmente l'orologio del microinfusore tramite lo schermo e i pulsanti del dispositivo.
+3. Nella schermata "Combo" di AAPS, premi Aggiorna.
+4. Poi vai alla schermata Trattamenti e cerca eventuali eventi nel futuro. Non dovrebbero essere molti.
 
-   * DON'T press "delete treatments in the future"
-   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+   * NON premere "elimina trattamenti futuri"
+   * Premi "rimuovi" su tutti i trattamenti futuri e i duplicati. Questo dovrebbe invalidare i trattamenti anziché eliminarli, così non verranno più considerati per il calcolo dell'IOB.
 
-5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
+5. Se la situazione riguardo a IOB/COB non è chiara - per sicurezza disabilita il loop per almeno un DIA e Max-Carb-Time - qualunque sia il maggiore.*
 6. Continuare normalmente.
 
 
