@@ -46,7 +46,7 @@ In attesa del rilascio di t:mobi in Europa (gli altri due non sono ancora stati 
 
 **Commenti:** Fine del supporto marzo 2025.
 
-## Pumps that aren't Loopable
+## Microinfusori che non sono Loopable
 
 ### Medtronic Bluetooth
 
@@ -60,7 +60,7 @@ In attesa del rilascio di t:mobi in Europa (gli altri due non sono ancora stati 
 
 **Commenti:** Ypso ha aggiunto una crittografia di terze parti molto pesante.
 
-## Requirements for pumps being loopable
+## Prerequisiti per i microinfusori a circuito chiuso
 
 **Prerequisito**
 - Il microinfusore deve supportare qualche tipo di controllo remoto. (BT, radiofrequenza, ecc.)
@@ -74,7 +74,7 @@ In attesa del rilascio di t:mobi in Europa (gli altri due non sono ancora stati 
 **Per oref1(SMB) o il bolo:**
 - Imposta il bolo
 
-**Good to have**
+**Buono da avere**
 - Annulla il bolo
 - Ottieni il profilo basale (quasi requisito)
 - Imposta il profilo basale (bello avere)
@@ -86,6 +86,6 @@ In attesa del rilascio di t:mobi in Europa (gli altri due non sono ancora stati 
 - Leggi la cronologia
 - Leggi il TDD
 
-### Other pumps support
+### Supporto per altri microinfusori
 
 Se hai altri microinfusori di cui vorresti vedere lo stato, contattaci su Discord.
