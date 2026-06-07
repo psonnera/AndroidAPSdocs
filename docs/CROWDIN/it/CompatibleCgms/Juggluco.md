@@ -16,7 +16,7 @@ Disabilita qualsiasi uploader attivo verso Nightscout in Juggluco.
 
 (juggluco-to-aaps)=
 
-## Juggluco to AAPS
+## Da Juggluco ad AAPS
 
 Juggluco può inviare la glicemia direttamente ad AAPS, abilitando sempre gli SMB se utilizzi un [sensore affidabile](#GettingStarted-TrustedBGSource).
 
@@ -30,7 +30,7 @@ Applica un [smoothing](#SmoothingBloodGlucoseData) sufficiente in AAPS.
 
 (juggluco-to-xdrip)=
 
-## Juggluco to xDrip+
+## Da Juggluco a xDrip+
 
 Juggluco può inviare la glicemia a xDrip+ che la invierà poi ad AAPS.
 
