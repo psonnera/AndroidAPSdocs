@@ -106,9 +106,9 @@ Molte persone hanno chiesto se questo metodo può essere utilizzato con un senso
 
 **Impostazioni**
 
-- *Use service* **on**
+- *Usa servizio* **attivo**
 
-- *Use foreground service* **on**
+- *Usa servizio in foreground* **attivo**
 
 - *Timer Duration* **5 min**
 
@@ -130,14 +130,14 @@ Molte persone hanno chiesto se questo metodo può essere utilizzato con un senso
 
 **NFC Scan features**: *le impostazioni non menzionate si assumono disattivate.*
 
-- *Use NFC feature*: **on**
-- *Sensor Age or Expiry*: **on**
-- *Scan when not in xDrip+*: **on**
+- *Usa funzione NFC*: **attivo**
+- *Età o scadenza sensore*: **attivo**
+- *Scansiona quando non in xDrip+*: **attivo**
 - *Use Any-tag optimized reading method*: **off** ma prova **on** in caso di difficoltà a scansionare
 
 ![xDrip+ NFC settings](../images/minimal00per/xdripNFC.png)
 
-- *Starting Bluetooth connection with FSL2 sensor*: **Always connect to libre2 sensors**
+- *Avvio connessione Bluetooth con sensore FSL2*: **Connetti sempre ai sensori libre2**
 
 ![xDrip+ L2 connect settings](../images/minimal00per/xdripNFCBT.png)
 
@@ -147,10 +147,10 @@ Molte persone hanno chiesto se questo metodo può essere utilizzato con un senso
 
 **Less Common Settings -\> Bluetooth Settings** (*queste sono importanti e possono variare con il tuo telefono/configurazione*)
 
-- *Turn Bluetooth on*: **on**
-- *Trust Auto-Connect*: **on**
-- *Use Background Scans*: **on**
-- *Always discover services*: **on**
+- *Attiva Bluetooth*: **attivo**
+- *Fidati della connessione automatica*: **attivo**
+- *Usa scansioni in background*: **attivo**
+- *Scopri sempre i servizi*: **attivo**
 
 Puoi configurare xDrip+ usando il codice QR qui sotto. Devi scansionarlo (o caricare l'immagine) in xDrip+ -> Auto Configure.
 
@@ -167,7 +167,7 @@ Puoi configurare xDrip+ usando il codice QR qui sotto. Devi scansionarlo (o cari
 Dopo aver scansionato il codice QR sopra, se hai un telefono Samsung (ma questo è utile anche per molti marchi cinesi), scansiona l'altro codice QR qui sotto per cambiare le impostazioni per una connessione più affidabile:
 
 - *Trust Auto-Connect*: **off**
-- *Use Background Scans*: **off**
+- *Usa scansioni in background*: **disattivo**
 
 ```{admonition} QR Code
 :class: dropdown
@@ -179,9 +179,9 @@ Dopo aver scansionato il codice QR sopra, se hai un telefono Samsung (ma questo 
 
 **Extra Logging Settings** (*necessario per il debug in caso di malfunzionamento*)
 
-- *show Raw values in Graph*: **on**
+- *Mostra valori grezzi nel grafico*: **attivo**
 
-- *show Sensor info in Status*: **on**
+- *Mostra info sensore nello stato*: **attivo**
 
 ![xDrip+ BT settings](../images/minimal00per/xdripAS.png)
 
@@ -199,7 +199,7 @@ Dopo aver scansionato il codice QR sopra, se hai un telefono Samsung (ma questo 
 
 > **Impostazioni per la configurazione OOP2**
 
-- *Out of process Libre algorithm*: **OFF**
+- *Algoritmo Libre out-of-process*: **DISATTIVO**
 
 (*ASSICURATI CHE SIA **OFF** PER OOP2 ALTRIMENTI NON OTTERRAI LETTURE!*)
 
@@ -282,7 +282,7 @@ Se usi un Samsung (o molti telefoni di marca cinese) e hai problemi a ricevere d
 Cambierà le impostazioni Bluetooth di xDrip+ in:
 
 - *Trust Auto-Connect*: **off**
-- *Use Background Scans*: **off**
+- *Usa scansioni in background*: **disattivo**
 
 (minimallooper-step9)=
 
@@ -374,12 +374,12 @@ Nella schermata **BT Device** (scorrere a sinistra) puoi verificare ulteriori de
 
 &nbsp;
 
-- **Non puoi eseguire LL e xDrip+ in parallelo insieme per le letture Bluetooth.** LL cercherà sempre di "rubare" la connessione Bluetooth al sensore e abbinarsi. LL will always try to "steal" the Bluetooth connection to the sensor and bond. Se ciò accade, sei bloccato con LL per il resto della vita del sensore. Quindi eseguire le app contemporaneamente non funziona sempre. Come menziono di seguito, puoi abilitare l'app LL e fare una scansione NFC per ottenere la lettura LL (se hai bisogno di confrontare, vuoi recuperare la cronologia per te stesso o per le relazioni dell'endocrinologo) tuttavia dovresti disabilitarla non appena hai la tua lettura e non cercare di farlo entro un minuto da quando xDrip+ recupererà la sua lettura Bluetooth. Non sono sicuro di come funziona l'uso del lettore FSL2 mentre si fa questo ma lo testerò in un secondo momento.
+- **Non puoi eseguire LL e xDrip+ in parallelo insieme per le letture Bluetooth.** LL cercherà sempre di "rubare" la connessione Bluetooth al sensore e abbinarsi. LL cercherà sempre di "rubare" la connessione Bluetooth al sensore e di abbinarsi. Se ciò accade, sei bloccato con LL per il resto della vita del sensore. Quindi eseguire le app contemporaneamente non funziona sempre. Come menziono di seguito, puoi abilitare l'app LL e fare una scansione NFC per ottenere la lettura LL (se hai bisogno di confrontare, vuoi recuperare la cronologia per te stesso o per le relazioni dell'endocrinologo) tuttavia dovresti disabilitarla non appena hai la tua lettura e non cercare di farlo entro un minuto da quando xDrip+ recupererà la sua lettura Bluetooth. Non sono sicuro di come funziona l'uso del lettore FSL2 mentre si fa questo ma lo testerò in un secondo momento.
 - Diversi utenti hanno segnalato che l'app LL può essere riavviata dopo aver avviato correttamente il sensore e ricevuto letture in xDrip+. Nelle autorizzazioni Android dell'app LL devi semplicemente disattivare l'impostazione **Allow Location**. Una volta fatto questo dovresti essere in grado di usare l'app LL e xDrip+ contemporaneamente. Ti consiglio di non selezionare un'app predefinita per la scansione NFC e di scegliere quale app vuoi usare per leggere il sensore con una scansione NFC. Inoltre, NON DIMENTICARE, al tuo prossimo cambio di sensore di chiudere forzatamente l'app LL dopo la scansione NFC di riscaldamento iniziale sul nuovo sensore. Dopo che il sensore è configurato e riceve letture in xDrip+ puoi riavviare l'app LL.
 
 &nbsp;
 
-- **I dispositivi di scansione NFC di terze parti possono ancora essere usati.** Sì, l'ho elencato come svantaggio ma volevo anche sottolineare che se qualcosa va storto con il sensore e LL cattura il controllo di esso, puoi sempre ripiegare sull'utilizzo di un dispositivo di scansione NFC sul sensore per ottenere letture in xDrip+. Yes, I listed this as a disadvantage but I also wanted to point out that if something goes wrong with the sensor and LL captures control of it, you can always fall back to placing an NFC scanning device on the sensor to get readings in xDrip+. Puoi anche usare questo dispositivo invece di una connessione Bluetooth diretta se sei più a tuo agio con una configurazione che consiste in un dispositivo di scansione NFC di terze parti (Miaomiao, Bubble, Blucon). A volte certi telefoni non funzionano bene con il binding nativo del sensore Bluetooth e il recupero dei dati. Puoi usare questi dispositivi come backup o come utilizzo normale, in ogni caso hai ancora questa opzione.
+- **I dispositivi di scansione NFC di terze parti possono ancora essere usati.** Sì, l'ho elencato come svantaggio ma volevo anche sottolineare che se qualcosa va storto con il sensore e LL cattura il controllo di esso, puoi sempre ripiegare sull'utilizzo di un dispositivo di scansione NFC sul sensore per ottenere letture in xDrip+. Sì, l'ho elencato come svantaggio, ma volevo anche sottolineare che se qualcosa va storto con il sensore e LL ne prende il controllo, puoi sempre ripiegare sul posizionamento di un dispositivo di scansione NFC vicino al sensore. Puoi anche usare questo dispositivo invece di una connessione Bluetooth diretta se sei più a tuo agio con una configurazione che consiste in un dispositivo di scansione NFC di terze parti (Miaomiao, Bubble, Blucon). A volte certi telefoni non funzionano bene con il binding nativo del sensore Bluetooth e il recupero dei dati. Puoi usare questi dispositivi come backup o come utilizzo normale, in ogni caso hai ancora questa opzione.
 - Se hai intenzione di usare il **FSL Reader** come dispositivo di scansione NFC per prendere letture, DEVI avviare il sensore FSL2 con la **PRIMA scansione NFC** per riscaldare il sensore con il **READER PER PRIMO**.
 
 &nbsp;
