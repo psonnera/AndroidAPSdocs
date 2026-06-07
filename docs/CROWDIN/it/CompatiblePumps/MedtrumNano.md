@@ -41,7 +41,7 @@ Questo software è parte di una soluzione fai-da-te per pancreas artificiale e n
 
 ## Configurazione
 
-ATTENZIONE: Quando si attiva una patch con AAPS **DEVI** disabilitare tutti gli altri dispositivi che possono comunicare con la base del microinfusore Medtrum, ad es. PDM attivo e app Medtrum. e.g. active PDM and Medtrum app. Assicurati di avere la base del microinfusore e il SN della base pronte per l'attivazione di una nuova patch.
+ATTENZIONE: Quando si attiva una patch con AAPS **DEVI** disabilitare tutti gli altri dispositivi che possono comunicare con la base del microinfusore Medtrum, ad es. PDM attivo e app Medtrum. ad esempio PDM e app Medtrum attivi. Assicurati di avere la base del microinfusore e il SN della base pronte per l'attivazione di una nuova patch.
 
 ### Passaggio 1: Seleziona il microinfusore Medtrum
 
@@ -51,7 +51,7 @@ Se stai installando AAPS per la prima volta, la **Procedura guidata di configura
 
 In caso di dubbi puoi anche selezionare "Microinfusore virtuale" e selezionare "Medtrum" in seguito, dopo aver configurato AAPS (vedere opzione 2).
 
-![Setup Wizard](../images/medtrum/SetupWizard.png)
+![Installazione guidata](../images/medtrum/SetupWizard.png)
 
 #### Opzione 2: Il Costruttore di configurazione
 
@@ -86,7 +86,7 @@ Questa impostazione cambia il modo in cui il microinfusore ti avviserà in caso 
 
 Nota: In modalità silenziosa AAPS emetterà comunque l'allarme in base alle impostazioni del volume del telefono. Se non si risponde all'allarme, la patch alla fine emetterà un segnale acustico.
 
-#### Notification on pump warning
+#### Notifica di avvertimento del microinfusore
 
 ***Predefinito: Abilitato.***
 
@@ -160,7 +160,7 @@ Vai alle preferenze e seleziona **Avvisi locali**:
 
 ![Local Alerts](../images/medtrum/LocalAlertsSettings.png)
 
-##### Alert if pump is unreachable
+##### Avviso se il microinfusore non è raggiungibile
 
 ***Predefinito: Abilitato.***
 
@@ -240,7 +240,7 @@ Premere **OK** per tornare alla schermata principale.
 
 (nano-deactivate-patch)=
 
-### Deactivate patch
+### Disattiva patch
 
 Per disattivare una patch attualmente attiva, andare alla [SCHEDA Medtrum](#nano-overview) nell'interfaccia AAPS e premere il pulsante **Cambia patch**.
 
@@ -258,7 +258,7 @@ Una volta completata la disattivazione, premere **OK** per tornare alla schermat
 
 (nano-resume-interrupted-activation)=
 
-### Resume interrupted activation
+### Riprendi un'attivazione interrotta
 
 Se un'attivazione della patch viene interrotta, ad esempio perché la batteria del telefono si esaurisce, è possibile riprendere il processo di attivazione andando alla [SCHEDA Medtrum](#nano-overview) nell'interfaccia AAPS e premendo il pulsante **Cambia patch**.
 
@@ -286,7 +286,7 @@ Mostra lo stato corrente della connessione Bluetooth alla base del microinfusore
 
 Mostra l'ultima volta che il microinfusore è stato connesso ad AAPS.
 
-### Pump state:
+### Stato microinfusore:
 
 Mostra lo stato corrente del microinfusore. Ad esempio:
     - ATTIVO: Il microinfusore è attivato e funziona normalmente
@@ -302,7 +302,7 @@ Mostra la velocità basale corrente.
 
 ### Ultimo bolo:
 
-This shows the last bolus that was delivered.
+Mostra l'ultimo bolo che è stato erogato.
 
 ### Bolo attivo:
 
@@ -321,7 +321,7 @@ Mostra il livello corrente del serbatoio.
 
 Mostra la tensione corrente della batteria della patch.
 
-### Pump type:
+### Tipo micro:
 
 Mostra il numero del tipo di microinfusore corrente.
 
@@ -347,9 +347,9 @@ Questo pulsante avvierà il processo di cambio della patch. Vedere [Attiva patch
 
 (nano-reset-alarms)=
 
-### Reset alarms
+### Reset allarmi
 
-Il pulsante allarme apparirà nella schermata di panoramica quando è presente un allarme attivo che può essere ripristinato. Premendo questo pulsante si ripristineranno gli allarmi e si riprenderà l'erogazione di insulina se la patch è stata sospesa a causa dell'allarme. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. Ad esempio, quando sospesa a causa di un allarme di erogazione massima giornaliera di insulina.
+Il pulsante allarme apparirà nella schermata di panoramica quando è presente un allarme attivo che può essere ripristinato. Premendo questo pulsante si ripristineranno gli allarmi e si riprenderà l'erogazione di insulina se la patch è stata sospesa a causa dell'allarme. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. E.g. Ad esempio, quando sospesa a causa di un allarme di erogazione massima giornaliera di insulina.
 
 ![Reset alarms](../images/medtrum/ResetAlarms.png)
 
@@ -379,7 +379,7 @@ Per problemi noti con le connessioni Bluetooth, disconnessioni di microinfusori/
 
 ### Attivazione interrotta
 
-If the activation process is interrupted for example by and empty phone battery or phone crash. Se il processo di attivazione viene interrotto, ad esempio da una batteria del telefono scarica o un crash del telefono, il processo di attivazione può essere ripreso andando alla schermata di cambio patch e seguendo i passaggi per riprendere l'attivazione come descritto qui: [Ripresa di un'attivazione interrotta](#nano-resume-interrupted-activation)
+Se il processo di attivazione viene interrotto, per esempio, batteria del telefono scarica o dal crash del telefono. Se il processo di attivazione viene interrotto, ad esempio da una batteria del telefono scarica o un crash del telefono, il processo di attivazione può essere ripreso andando alla schermata di cambio patch e seguendo i passaggi per riprendere l'attivazione come descritto qui: [Ripresa di un'attivazione interrotta](#nano-resume-interrupted-activation)
 
 ### Prevenzione dei guasti della patch
 
