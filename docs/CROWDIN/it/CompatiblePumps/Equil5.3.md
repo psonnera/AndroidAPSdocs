@@ -13,7 +13,7 @@ Queste istruzioni riguardano la configurazione del microinfusore Equil.
 
 * [Versione 3.3.0.0](#version3300) o più recente di AAPS
 
-### Select Equil pump
+### Seleziona il micro Equil
 
 In [Costruttore di configurazione > Microinfusore](#Config-Builder-pump), passare a **Equil 5.3**.
 

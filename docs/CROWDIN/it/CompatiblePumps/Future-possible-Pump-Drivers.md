@@ -2,7 +2,7 @@
 
 Questo è un elenco di alcuni microinfusori disponibili sul mercato, con lo stato del supporto per i sistemi di loop e poi lo stato in AAPS. Alla fine ci sono alcune informazioni su cosa è necessario affinché un microinfusore sia "compatibile con il loop".
 
-## Pumps that are Loopable
+## Microinfusori che sono Loopable
 
 ### Kaleido ([Homepage](https://www.hellokaleido.com/))
 

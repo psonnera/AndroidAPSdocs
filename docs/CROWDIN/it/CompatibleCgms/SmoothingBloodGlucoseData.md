@@ -24,15 +24,15 @@ Usa questa opzione solo se i tuoi dati CGM vengono correttamente filtrati dalla 
 
 ## Suggerimenti per usare lo smoothing
 
-|               | Exponential |  Average  |    None     |
-| ------------- |:-----------:|:---------:|:-----------:|
-| G5/G6/ONE     |  If noisy   |           | Recommended |
-| G7/ONE+/Stelo |  If noisy   | If stable |             |
+|               | Esponenziale |   Medio    |   Nessuno   |
+| ------------- |:------------:|:----------:|:-----------:|
+| G5/G6/ONE     | Se rumoroso  |            | Consigliato |
+| G7/ONE+/Stelo | Se rumoroso  | Se stabile |             |
 
 I sensori Libre sono rumorosi e possono richiedere lo smoothing. Quando si utilizza la connessione diretta xDrip+ o il sorgente dati dell'app patchata (ricevendo da un'altra app, incluso Juggluco), [lo smoothing viene già effettuato all'interno dell'app](#libre2-value-smoothing-raw-values).
 
-| Sensor / Data source | Juggluco | xDrip+ direct | xDrip+ bridge | xDrip+ patched app |
-| -------------------- |:--------:|:-------------:|:-------------:|:------------------:|
-| Libre 1/14 days/Pro  |   N.A.   |     N.A.      |    Average    |        N.A.        |
-| Libre 2/2+ (EU)      | Average  |     None      |    Average    |        None        |
-| Libre 2/2+/3/3+      | Average  |     N.A.      |     N.A.      |        None        |
+| Sensore / Sorgente dati | Juggluco | xDrip+ diretto | xDrip+ bridge | xDrip+ patch app |
+| ----------------------- |:--------:|:--------------:|:-------------:|:----------------:|
+| Libre 1/14 days/Pro     |   N.A.   |      N.A.      |    Average    |       N.A.       |
+| Libre 2/2+ (EU)         | Average  |      None      |    Average    |       None       |
+| Libre 2/2+/3/3+         | Average  |      N.A.      |     N.A.      |       None       |

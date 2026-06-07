@@ -33,10 +33,10 @@ Leggi di più nell'[articolo](https://www.diabettech.com/artificial-pancreas/diy
 
 ```{admonition} Old app version
 :class: warning
-Dexcom BYODA is now a very old version of the app and cannot be updated.
+Dexcom G6 BYODA è ora una versione molto vecchia dell'app e non può essere aggiornata.
 ```
 
--   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+
+-   [Costruisci la tua app Dexcom](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supporta la trasmissione locale su AAPS e/o xDrip+
 
 ![Opzioni broadcast BYODA](../images/BYODA.png)
 

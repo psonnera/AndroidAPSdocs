@@ -1,8 +1,8 @@
-Install [File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) from the Google Play store.
+Installa [File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) dal Google Play Store.
 
-The app is necessary for the preliminary phase and you can safely delete it from your phone once you've successfully build and installed AAPS.
+L'app è necessaria per la fase preliminare e puoi eliminarla dal tuo telefono una volta che hai compilato e installato AAPS con successo.
 
-Check this is the correct app and tap Install, then Open.
+Verifica che questa sia l'app corretta e tocca Installa, poi Apri.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep01.png)
 

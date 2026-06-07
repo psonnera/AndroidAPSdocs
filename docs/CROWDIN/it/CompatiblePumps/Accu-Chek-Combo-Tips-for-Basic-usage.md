@@ -14,7 +14,7 @@
 * In AAPS, andare a **Impostazioni / Allarmi locali** e attivare **allarme quando il microinfusore non è raggiungibile** e impostare **limite microinfusore non raggiungibile [min]** a **31** minuti.
 * Questo darà abbastanza tempo per non attivare l'allarme quando si lascia la stanza mentre il telefono è rimasto sulla scrivania, ma informa se il microinfusore non può essere raggiunto per un tempo superiore alla durata di una basale temporanea.
 
-### Restore reachability of the pump
+### Ripristina la raggiungibilità del microinfusore
 
 * Quando AAPS segnala un allarme **microinfusore non raggiungibile**, prima rilasciare il blocco tasti e **premere qualsiasi tasto sul microinfusore** (ad es. il pulsante "giù"). Non appena il display del microinfusore si è spento, premere **Aggiorna** nella **scheda Combo** in AAPS. Il più delle volte la comunicazione riprende a funzionare.
 * Se ciò non aiuta, riavviare lo smartphone. Dopo il riavvio, AAPS verrà riattivato e verrà stabilita una nuova connessione con il microinfusore. Se si utilizza il vecchio driver, ruffy verrà riattivato.
@@ -36,13 +36,13 @@
 ## L'annullamento della basale temporanea fallisce
 * Occasionalmente, AAPS non riesce ad annullare automaticamente un avviso **BASALE TEMP ANNULLATA**. In questo caso è necessario premere **AGGIORNA** nella **scheda Combo** di AAPS oppure l'allarme sul microinfusore dovrà essere confermato.
 
-## Pump battery considerations
+## Considerazioni sulla batteria del micro
 
 ### Cambio della batteria
 * Dopo un allarme di **batteria scarica**, la batteria dovrebbe essere cambiata il prima possibile per avere sempre abbastanza energia per una comunicazione Bluetooth affidabile con lo smartphone, anche se il telefono si trova a una distanza maggiore dal microinfusore.
 * Anche dopo un allarme di **batteria scarica**, la batteria potrebbe essere utilizzata per un tempo significativo. Tuttavia, si raccomanda di avere sempre una batteria fresca con sé dopo che è suonato un allarme di "batteria scarica".
 * Prima di cambiare la batteria, premere sul simbolo **Loop** nella schermata principale e selezionare **Sospendi loop per 1h**.
-* Wait for the pump to communicate with the pump and the bluetooth logo on the pump has faded.
+* Attendere che il micro comunichi quindi il logo del micro e del bluetooth sullo schermo siano spariti.
 
 ![Bluetooth enabled](../images/combo/combo-tips-compo.png)
 
@@ -77,7 +77,7 @@ L'algoritmo OpenAPS non supporta un bolo esteso parallelo o un bolo multionda. M
 
 ![Disabled loop after multiwave bolus](../images/combo/combo-tips-multiwave-bolus.png)
 
-## Alarms at bolus delivery
+## Allarmi durante l'erogazione del bolo
 * Se AAPS rileva che un bolo identico è stato erogato con successo nello stesso minuto, l'erogazione del bolo verrà impedita con lo stesso numero di unità di insulina. Se si desidera davvero fare lo stesso bolo due volte in rapida successione, attendere altri due minuti e poi erogare di nuovo il bolo. Se il primo bolo è stato interrotto o non è stato erogato per altri motivi, è possibile inviare di nuovo il bolo immediatamente da AAPS 2.0.
 * L'allarme è un meccanismo di sicurezza che legge la cronologia dei boli del microinfusore prima di inviare un nuovo bolo per calcolare correttamente l'insulina attiva (IOB), anche quando un bolo viene erogato direttamente dal microinfusore. Qui le voci indistinguibili devono essere evitate.
 

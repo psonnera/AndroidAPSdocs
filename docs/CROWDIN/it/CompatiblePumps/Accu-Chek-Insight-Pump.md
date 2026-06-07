@@ -1,4 +1,4 @@
-# Accu-Chek Insight Pump
+# Accu-Chek Insight
 
 **Questo software è parte di una soluzione fai-da-te per pancreas artificiale e non è un prodotto finito, ma richiede che sia TU a leggere, imparare e comprendere il sistema, incluso come utilizzarlo. Non è qualcosa che gestisce tutta la tua terapia del diabete al posto tuo, ma ti permette di migliorare il tuo diabete e la tua qualità di vita se sei disposto a dedicarvi il tempo necessario. Non affrettarti, ma concediti il tempo di imparare. Sei tu solo il responsabile di ciò che ne fai.**
 
@@ -80,7 +80,7 @@ Nelle impostazioni Insight in AAPS è possibile abilitare le seguenti opzioni:
 
 * "Ritardo disconnessione": Definisce per quanto tempo (in secondi) AAPS attenderà prima di disconnettersi dal microinfusore al termine di un'operazione. Il valore predefinito è 5 secondi.
 
-For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
+For periods when pump was stopped AAPS will log a temp. di 0%.
 
 In AAPS, la scheda Accu-Chek Insight mostra lo stato attuale del microinfusore e ha due pulsanti:
 * "Aggiorna": Aggiorna lo stato del microinfusore
@@ -88,7 +88,7 @@ In AAPS, la scheda Accu-Chek Insight mostra lo stato attuale del microinfusore e
 
    ![Screenshot of Insight Status](../images/Insight_Status2.png)
 
-## Settings in the pump
+## Impostazioni nel microinfusore
 
 Configurare gli allarmi nel microinfusore come segue:
 * Menu > Impostazioni > Impostazioni dispositivo > Impostazioni modalità > Silenzioso > Segnale > Suono
@@ -117,7 +117,7 @@ Il microinfusore Insight ha una piccola batteria interna per mantenere le funzio
 (Accu-Chek-Insight-Pump-insight-specific-errors)=
 ## Errori specifici di Insight
 
-### Extended bolus
+### Bolo esteso
 
 Usare un solo bolo esteso alla volta, poiché più boli estesi contemporaneamente potrebbero causare errori.
 
@@ -129,7 +129,7 @@ A volte può succedere che il microinfusore Insight non risponda durante la conf
 
 In questo caso spegnere il Bluetooth sia sul microinfusore che sullo smartphone per circa 10 secondi e poi riaccenderlo.
 
-## Crossing time zones with Insight pump
+## Fuso orario con Insight
 
 Per informazioni sui viaggi attraverso i fusi orari vedere la sezione [Viaggi con cambi di fuso orario con i microinfusori](#timezone-traveling-insight).
 
