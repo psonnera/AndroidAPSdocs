@@ -88,7 +88,7 @@ Come descritto nella pagina [Calcolo del COB](../DailyLifeWithAaps/CobCalculatio
 `carboidrati_assorbiti = deviazione * ic / isf`  
 Quando si utilizza l'**ISF Dinamico**, l'**ISF** usato qui è la media dei valori di ISF Dinamico delle ultime 24 ore.
 
-### ISF in Bolus Wizard
+### ISF nel Calcolatore Bolo
 
 Quando si usa il [Calcolatore del bolo](#aaps-screens-bolus-wizard), l'**ISF** viene utilizzato se la **glicemia** è sopra il target per aggiungere una correzione.
 
