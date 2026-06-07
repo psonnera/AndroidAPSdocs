@@ -82,7 +82,7 @@ Quanto sopra varierà a seconda del sistema di componenti **AAPS** e del tuo sti
 
 - Le diete ricche di grassi o proteine, o la digestione lenta/gastroparesi, rendono le cose più facili piuttosto che più difficili per l'**FCL** perché i carboidrati tardivi coprono piacevolmente le inevitabili "code" dell'azione tardiva del bolo necessario attorno al momento del picco.
 
-### Glycemic index and effect on blood glucose
+### Indice glicemico ed effetto sulla glicemia
 
 La sfida per la modalità **UAM** aumenta con l'aumentare dell'"Effetto sulla Glicemia" ('EBG')
 
@@ -91,7 +91,7 @@ La sfida per la modalità **UAM** aumenta con l'aumentare dell'"Effetto sulla Gl
 
 1) **Nessun EBG**: ad es. carne fresca, pesce, uova, bacon, oli, formaggi. 2) **EBG basso**: ad es. verdure fresche e bacche, funghi, noci, latte, yogurt, fiocchi di latte. 3) **EBG moderato**: ad es. pane integrale/pasta, patate, riso selvatico, avena, frutta secca. 4) **EBG alto**: ad es. pane di frumento, baguette, toast, waffle, biscotti, purè di patate, pasta, riso. 5) **EBG molto alto**: ad es. zucchero, bevande dolci, succhi di frutta, cornflakes, caramelle, dolci, patatine, salatini.
 
-![Glycemic index and effect on blood glucose](../images/fullClosedLoop01.png)
+![Indice glicemico ed effetto sulla glicemia](../images/fullClosedLoop01.png)
 
 I pasti più difficili per l'**FCL** sono quelli con componenti esclusivamente ad alto e molto alto **EBG** (vedere il rosso nell'immagine): Non solo la **glicemia** sale rapidamente, ma c'è anche poco componente di grasso/proteine/fibre per bilanciare l'inevitabile "coda" dell'attività insulinica che verrebbe con i tentativi di controllare il glucosio alto prima.
 
@@ -205,7 +205,7 @@ Subito dopo che vengono dati alcuni **SMB** iniziali arriva una **fase equilibra
 La schermata principale di **AAPS** (dove vedi cob=0 nel loop completo **UAM**) potrebbe in questa fase chiedere altri carboidrati necessari. In modalità **UAM** questo significa semplicemente che potresti fare un controllo di plausibilità molto approssimativo: È probabile che quella quantità di carboidrati sia nel tuo corpo, non ancora assorbita dal pasto circa un'ora fa (del quale non hai dato alcuna informazione al loop)?
 
 
-### iob threshold
+### soglia iob
 
 Spesso, le **Automazioni** #1 e/o #2 fanno salire l'IOB ad altezze che tipicamente sono sufficienti per i **tuoi** pasti. Per la messa a punto personalizzata, guarda nei tuoi dati **HCL** i valori massimi di IOB che si verificano con pasti ben gestiti (spesso: il tuo bolo pasto), e al di sopra di quale entità si è verificata un'ipoglicemia (o necessità di carboidrati extra) alla fine.
 
@@ -261,10 +261,10 @@ In generale, non ha senso continuare a ottimizzare le impostazioni per un tipo d
 
 Per prevenire l'ipoglicemia nelle ore 3-5 post-pasto, riduci l'aggressività prima che si accumuli troppo IOB. Approcci specifici:
 
-- Become milder and milder with the **ISF** already during the glucose rise, as in Automation examples #1 and #2 given.
-- Define the iob threshold, from which **AAPS** is made significantly more cautious (Automation #3, above). Note this **iob** can be exceeded, by the last **SMB** before it went into effect; and then further by TBRs if the loop sees insulinReq Carbs getting absorbed will provide a counter-movement towards lower iob.
+- Diventare sempre più mite con l'**ISF** già durante l'aumento del glucosio, come negli esempi di Automazione #1 e #2 forniti.
+- Definire la soglia IOB, da cui **AAPS** viene reso significativamente più cauto (Automazione #3, sopra). Nota che questo **IOB** può essere superato dall'ultimo **SMB** prima che entrasse in vigore; e poi ulteriormente dalle TBR se il loop vede che l'assorbimento dei CHO insulinReq fornira un contro-movimento verso un IOB più basso.
 - The iob threshold could be differentiated according to meals: By cloning the automations, you could easily differentiate for breakfast, lunch, and dinner time slots (or even for geo-locations, like company cafeteria, or at mother-in-law etc) > You could differentiate within these time slots even further by setting different TTs for low carb vs.
-> > > > > > > > > > > fast carb, etc., and thus be able to “code for” different meal classes that may occur at this time of day, and call them up with **Automations** specially tuned for them. This is probably not necessary, unless your diet habits do vary a lot.
+> > > > > > > > > > > fast carb, etc., and thus be able to “code for” different meal classes that may occur at this time of day, and call them up with **Automations** specially tuned for them. Probabilmente non è necessario, a meno che le tue abitudini alimentari non varino molto.
 
 Prima di una sfida di pasto speciale, puoi aumentare la tua soglia **IOB**, o apportare un'altra modifica in qualsiasi tua Automazione entro meno di 5 secondi, direttamente dalla tua schermata principale AAPS (hamburger in alto a sinistra; o scheda **Automazioni**, a seconda di come hai configurato il tuo **AAPS**).
 
