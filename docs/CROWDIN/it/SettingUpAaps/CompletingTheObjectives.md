@@ -192,7 +192,7 @@ Come parte di questo **obiettivo**, rivisiterai le prestazioni del tuo **Profilo
 
 Tempo minimo per completare questo obiettivo: **7 giorni**. Questo è un tempo di attesa obbligatorio. Non è possibile procedere al prossimo **Obiettivo** fino a quando questo periodo di tempo non è scaduto.
 
-Abilita [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) per un periodo di 7 giorni e osserva la [linea bianca del grafico **Panoramica**](#AapsScreens-section-g-additional-graphs) che mostra la tua sensibilità insulinica aumentare o diminuire a causa dell'esercizio fisico o degli ormoni ecc. Tieni d'occhio la scheda del report OpenAPS che mostra **AAPS** che regola la sensibilità, le basali e i target di conseguenza. Keep an eye on the OpenAPS report tab which shows **AAPS** adjusting the sensitivity, basals and targets accordingly.
+Abilita [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) per un periodo di 7 giorni e osserva la [linea bianca del grafico **Panoramica**](#AapsScreens-section-g-additional-graphs) che mostra la tua sensibilità insulinica aumentare o diminuire a causa dell'esercizio fisico o degli ormoni ecc. Tieni d'occhio la scheda del report OpenAPS che mostra **AAPS** che regola la sensibilità, le basali e i target di conseguenza. Tieni d'occhio la scheda report OpenAPS che mostra **AAPS** che regola di conseguenza la sensibilità, le basali e i target.
 
 Questo è un buon momento per rivedere le impostazioni per il [Rilevamento Sensibilità](#Config-Builder-sensitivity-detection). Puoi visualizzare la tua sensibilità nella schermata principale in un [grafico aggiuntivo](#AapsScreens-section-g-additional-graphs).
 
@@ -237,7 +237,7 @@ Puoi poi sperimentare configurando un'**Automazione** più utile. La pagina di d
 Ad esempio, se mangi la stessa cosa a colazione alla stessa ora ogni mattina prima di scuola/lavoro, puoi creare un'**Automazione** come "target-pre-colazione" per impostare un **Obiettivo Temporaneo** leggermente più basso 30 minuti prima di fare colazione. In tal caso, la tua condizione includerà probabilmente "orario ricorrente" che consiste nel selezionare giorni specifici della settimana (lunedì, martedì, mercoledì, giovedì, venerdì) e un orario specifico (06:30). L'azione consisterà in "Avvia obiettivo temporaneo" con un valore target più basso del solito e una durata di 30 minuti.
 
 (CompletingTheObjectives-go-back-in-objectives)=
-## Go back in objectives
+## Torna agli obiettivi
 
 Se vuoi tornare indietro negli **Obiettivi** per qualsiasi motivo puoi farlo cliccando su "cancella completato".
 
