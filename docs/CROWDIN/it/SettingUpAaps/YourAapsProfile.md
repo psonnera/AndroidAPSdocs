@@ -219,7 +219,7 @@ Se il tuo **ICR** è più debole (valore più alto), ad esempio 1:20, avresti bi
 
 Un **ICR più alto / più debole** = più cibo per unità, cioè si riceve meno insulina per una quantità fissa di carboidrati. Può anche essere chiamato 'meno aggressivo'. Se il tuo IC è troppo debole, stai ricevendo meno insulina di quanto necessario, questo può portare a **glicemie** alte.
 
-Un **ISF più basso / più forte** (es. 40 invece di 50) significa che l'insulina abbassa la tua **glicemia** meno per unità. Questo porta a una correzione più aggressiva / più forte dal loop con **più insulina**. Can also be called ‘less aggressive’. If your IC is too weak, you are getting less insulin than you need, this can lead to high **BGs**.
+Un **ISF più basso / più forte** (es. 40 invece di 50) significa che l'insulina abbassa la tua **glicemia** meno per unità. Questo porta a una correzione più aggressiva / più forte dal loop con **più insulina**. Può anche essere chiamato 'meno aggressivo'. Se il tuo IC è troppo debole, ricevi meno insulina del necessario; questo può portare a **glicemie** elevate.
 
 ### Come impostarlo
 
