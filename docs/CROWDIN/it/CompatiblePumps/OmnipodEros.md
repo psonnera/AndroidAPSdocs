@@ -313,7 +313,7 @@ Nel caso in cui il pulsante **AGGIORNA** non ripristini la connessione al dispos
 
    > ![Reset_RileyLink_Bluetooth_1](../images/omnipod/RileyLink_Bluetooth_Reset_1.png) ![Reset_RileyLink_Bluetooth_2](../images/omnipod/RileyLink_Bluetooth_Reset_2.png)
 
-2. Nella schermata **Impostazioni RileyLink (1)**, nella sezione **RileyLink (2)**, è possibile confermare lo stato della connessione Bluetooth nei campi **Stato connessione ed errore: (3)**. A *Bluetooth Error* and *RileyLink unreachable* status should be shown. Avviare la riconnessione Bluetooth manuale premendo il pulsante **aggiorna (4)** in basso a destra.
+2. Nella schermata **Impostazioni RileyLink (1)**, nella sezione **RileyLink (2)**, è possibile confermare lo stato della connessione Bluetooth nei campi **Stato connessione ed errore: (3)**. Uno stato *Bluetooth Error* e *RileyLink non raggiungibile* dovrebbe essere visibile. Avviare la riconnessione Bluetooth manuale premendo il pulsante **aggiorna (4)** in basso a destra.
 
    > ![Reset_RileyLink_Bluetooth_3](../images/omnipod/RileyLink_Bluetooth_Reset_3.png)
    > 
@@ -363,7 +363,7 @@ Questa schermata fornisce informazioni, stato e configurazione delle impostazion
 (omnipod-eros-rileylink-and-active-pod-history)=
 #### Cronologia RileyLink e pod attivo
 
-This screen provides information in reverse chronological order of each state or action that either the RileyLink or currently connected pod is in or has taken. The entire history is only available for the currently active pod, after a pod change this history will be erased and only events from the newly activated pod will be recorded and shown.
+Questa schermata fornisce le informazioni in ordine cronologico inverso di ogni stato o azione che il RileyLink o il pod attualmente connesso è stato o ha effettuato. L'intera cronologia è disponibile solo per il pod attualmente attivo, dopo un cambio di pod questa cronologia verrà cancellata e verranno registrati e visualizzati solo gli eventi dal pod appena attivato.
 
 1. Andare alla scheda **Omnipod (POD)**, cliccare sul pulsante **GEST. POD (1)**, nella schermata **Gestione pod** cliccare sul pulsante **Disattiva pod (2)**.
 
@@ -629,7 +629,7 @@ Fornisce impostazioni avanzate per assistere nel debugging.
 - **Mostra pulsante Statistiche RileyLink nel menu Gestione pod:** Nascondi o visualizza il pulsante Statistiche RileyLink nel menu **Gestione pod**.
 - **\*Rilevamento DST/fuso orario abilitato:** consente di rilevare automaticamente le modifiche del fuso orario se il telefono viene utilizzato in un'area in cui è in vigore l'ora legale.
 
-### Switching or Removing an Active Pod Communication Device (RileyLink)
+### Scambiare o rimuovere un dispositivo di comunicazione Pod (RileyLink)
 
 Con molti modelli alternativi al RileyLink originale disponibili (come OrangeLink o EmaLink) o la necessità di avere versioni multiple/di backup dello stesso dispositivo di comunicazione con il pod (RileyLink), diventa necessario cambiare o rimuovere il dispositivo di comunicazione con il pod (RileyLink) selezionato dalla configurazione delle impostazioni Omnipod.
 
@@ -710,7 +710,7 @@ La segnalazione del livello di batteria è un'impostazione che può essere abili
 
 ## Risoluzione dei problemi
 
-### Pod Failures
+### Fallimenti Pod
 
 I pod si guastano occasionalmente a causa di vari problemi, inclusi problemi hardware del pod stesso. Si sconsiglia di segnalarlo a Insulet poiché AAPS non è un caso d'uso approvato. Un elenco dei codici di guasto si trova [qui](https://github.com/openaps/openomni/wiki/Fault-event-codes) per aiutare a determinare la causa.
 
@@ -718,7 +718,7 @@ I pod si guastano occasionalmente a causa di vari problemi, inclusi problemi har
 
 Questo guasto è correlato a uno stato errato del pod per un comando o un errore durante un comando di erogazione di insulina. Si raccomanda agli utenti di passare al client Nightscout in modalità *solo caricamento (Disabilita sincronizzazione)* in **Generatore di configurazione**➜**Generale**➜**NSClient**➜**ingranaggio**➜**Impostazioni avanzate** per prevenire possibili guasti.
 
-### Pump Unreachable Alerts
+### Avvisi Micro Non Raggiungibile
 
 Si raccomanda di configurare gli avvisi di microinfusore irraggiungibile a **120 minuti** andando nel menu a tre punti in alto a destra, selezionando **Preferenze**➜**Avvisi locali**➜**Soglia microinfusore irraggiungibile [min]** e impostando questo valore a **120**.
 
