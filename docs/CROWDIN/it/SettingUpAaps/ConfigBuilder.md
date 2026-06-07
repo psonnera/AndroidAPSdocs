@@ -12,7 +12,7 @@ Quando nel modulo sono disponibili impostazioni aggiuntive, puoi cliccare sull'i
 
 
 (Config-Builder-tab-or-hamburger-menu)=
-## Tab or hamburger menu
+## Scheda o menu hamburger
 
 Con la casella di controllo sotto il simbolo dell'occhio puoi decidere come aprire la sezione del programma corrispondente.
 
