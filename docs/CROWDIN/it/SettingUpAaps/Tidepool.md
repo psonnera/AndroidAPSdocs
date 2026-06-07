@@ -1,6 +1,6 @@
 # Tidepool
 
-Tidepool is a third party tool that collects data regarding BG, insulin and carbs and can be used to analyze and share this data with your clinical team. It can also be used in combination with Nightscout as an alternative reporting platform that integrates well with clinical settings. This may be the desired option for children using AAPS who want to have the remote monitoring and control capabilities of Nightscout, but want a reporting platform that their clinical team are more comfortable with. Since AAPS version 3.2 it can be used as an alternative to Nightscout for satisfying part of Objective 1.
+Tidepool è uno strumento di terze parti che raccoglie dati su glicemia, insulina e carboidrati e può essere utilizzato per analizzare e condividere questi dati con il tuo team clinico. It can also be used in combination with Nightscout as an alternative reporting platform that integrates well with clinical settings. This may be the desired option for children using AAPS who want to have the remote monitoring and control capabilities of Nightscout, but want a reporting platform that their clinical team are more comfortable with. Since AAPS version 3.2 it can be used as an alternative to Nightscout for satisfying part of Objective 1.
 
 È importante capire che Tidepool è solo per la reportistica. NON è un'app di monitoraggio in tempo reale. Se hai bisogno di follower oltre al telefono principale con AAPS, devi configurare anche Nightscout.
 
