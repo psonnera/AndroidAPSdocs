@@ -4,7 +4,7 @@ Il patch richiede l'uso di insulina ad azione rapida di tipo U-100, come NovoRap
 
 La dose minima iniettabile di insulina quando si utilizza il patch è 0,05 U. La BAS del Profilo dovrebbe quindi essere impostata a un valore minimo di 0,05 U/h o più e con un intervallo di 0,05 U/h, altrimenti potrebbe esserci un errore tra la quantità totale di infusione stimata nel Profilo e la quantità effettiva di infusione nel patch. Allo stesso modo, anche il bolo deve essere impostato e infuso con un volume minimo di infusione di 0,05 U.
 
-## Pump Setup
+## Configurazione Micro
 1. Nella schermata principale di AAPS, fare clic sul menu hamburger nell'angolo in alto a sinistra e andare al Costruttore di configurazione.
 1. Selezionare 'EOPatch2' nella sezione Microinfusore.
 1. Premere il tasto Indietro per tornare alla schermata principale.
@@ -19,7 +19,7 @@ Selezionare il menu Preferenze EOPatch2 facendo clic sui tre punti nell'angolo i
 
 Il menu Preferenze EOPatch2 offre un menu per impostare 3 tipi di notifiche.
 
-### Low reservoir Alerts
+### Avvisi livello serbatoio basso
 Appare un avviso quando la quantità di insulina rimanente nel serbatoio raggiunge il valore impostato o meno durante l'utilizzo del patch. Può essere impostato da 10 a 50U con incrementi di 5U.
 
 ### Promemoria scadenza patch
@@ -148,7 +148,7 @@ I diversi tipi di avvisi sono spiegati di seguito.
 | Avvisi                       | Spiegazione                                                                                                                                                             |
 | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Fine sospensione insulina    | Si verifica quando è trascorso il tempo impostato dall'utente dopo il completamento della sospensione dell'infusione di insulina.                                       |
-| Low reservoir                | Si verifica quando la quantità rimanente di insulina nel patch è inferiore alla quantità impostata.                                                                     |
+| Livello serbatoio basso      | Si verifica quando la quantità rimanente di insulina nel patch è inferiore alla quantità impostata.                                                                     |
 | Vita operativa patch scaduta | Si verifica quando il periodo di utilizzo del patch è terminato.                                                                                                        |
 | Il patch scadrà presto       | Si verifica 1 ora prima che il patch debba essere scartato.                                                                                                             |
 | Attivazione patch incompleta | Si verifica quando sono trascorsi più di 3 minuti a causa di un'interruzione durante l'applicazione del patch nella fase successiva al completamento dell'associazione. |
