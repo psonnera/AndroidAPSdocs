@@ -500,7 +500,7 @@ Per problemi noti con le connessioni Bluetooth, disconnessioni di microinfusori/
      - Se **AAPS** non riesce a riprendere l'erogazione da solo (questo accade se il pod non è raggiungibile, il suono è disattivato ecc.), il pod inizierà a emettere 4 segnali acustici ogni minuto per 3 minuti, poi ripetuti ogni 15 minuti se l'erogazione è ancora sospesa per più di 20 minuti.
   - Per i comandi non confermati, "aggiorna stato pod" dovrebbe confermarli/negarli.
 
-**************************************************************NOTE:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, ***so you need to check !***************************************************************
+*****************************************************************NOTE:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, ***so you need to check !******************************************************************
 
 ---
 ### Fallimenti Pod
