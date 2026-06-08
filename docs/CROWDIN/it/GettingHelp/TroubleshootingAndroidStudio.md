@@ -47,10 +47,10 @@ Se ricevi un messaggio di errore come questo:
 ![Gradle Uncommitted Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
 ```
-Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
+File di build 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' riga: 243
 
-There are uncommitted changes.
-Clone sources again as described in wiki and do not allow gradle update
+Ci sono modifiche non salvate.
+Clona nuovamente i sorgenti come descritto nel wiki e non consentire l'aggiornamento di gradle
 ```
 
 #### Passo 1 - Controlla l'installazione di Git
@@ -139,14 +139,14 @@ Il tuo nome deve essere scritto tra virgolette.
 ![Incompatible Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png)
 
 ```
-Your build is currently configured to use incompatible Java 21.0.3 and Gradle 8.2.
-Cannot sync the project.
+La build è attualmente configurata per usare Java 21.0.3 e Gradle 8.2 incompatibili.
+Impossibile sincronizzare il progetto.
 
-We recommend upgrading to Gradle version 8.9.
+Si consiglia di aggiornare alla versione 8.9 di Gradle.
 
-The minimum compatible Gradle version is 8.5.
+La versione minima compatibile di Gradle è 8.5.
 
-The maximum compatible Gradle JVM version is 19.
+La versione massima compatibile di JVM per Gradle è 19.
 ```
 
 Oppure:
@@ -180,9 +180,9 @@ Se vedi il messaggio di errore sopra, devi scaricare la versione corretta di JVM
 
   Se vedi questo messaggio di errore
 
-`The project is using an incompatible version (AGP x.x.x) of the Android Gradle plugin. Latest supported version is AGP x.x.x`
+`Il progetto utilizza una versione incompatibile (AGP x.x.x) del plugin Android Gradle. L'ultima versione supportata è AGP x.x.x`
 
-  ![Incompatible version of Android Gradle plugin](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
+  ![Versione incompatibile del plugin Android Gradle](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
 
   Stai usando una versione obsoleta di Android Studio. Nel menu, vai a Help > Check for updates e installa gli aggiornamenti di Android Studio e di tutti i plugin che vengono trovati.
 
@@ -275,7 +275,7 @@ Se nessuno dei suggerimenti sopra ti ha aiutato, considera ricostruire l'apk da 
 
 1. [Esporta le impostazioni](../Maintenance/ExportImportSettings.md) (nella versione AAPS già installata sul tuo telefono)
 
-2. Have your key password and key store password ready.
+2. Tieni pronte la password della chiave e la password del keystore.
 
     Oppure usa una nuova chiave (nuovo keystore).
 

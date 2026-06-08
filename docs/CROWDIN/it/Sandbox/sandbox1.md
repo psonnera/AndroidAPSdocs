@@ -22,9 +22,9 @@ This is an internal sandbox file for the documentation team to test
     1. CROWDIN translation and
     2. Read The Docs deployment.
 
-You can directly jump from here to the second label in this file - ["Jump"](#this-is-another-test) or [tag jump](#sandbox1-this-is-another-test).
+Puoi passare direttamente da qui alla seconda etichetta in questo file - ["Salta"](#this-is-another-test) o [salta con tag](#sandbox1-this-is-another-test).
 
-And you can jump to the first label too - ["Jump"](#this-is-a-test) or [tag jump](#sandbox1-this-is-a-test).
+E puoi saltare anche alla prima etichetta - ["Salta"](#this-is-a-test) o [salta con tag](#sandbox1-this-is-a-test).
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
@@ -50,12 +50,12 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Label in the middle of [nowhere](#sandbox1-in-the-middle-of-nowhere) This instead is the label to [](#sandbox1-this-is-another-test) and it should display its name
 
-Links with anchor :
+Link con ancora:
 - [how long will it take?](#preparing-how-long-will-it-take)
-- [NSClient settings in Preferences](#Preferences-nsclient).
-- [prediction lines in AAPS OVERVIEW](#aaps-screens-prediction-lines) to header level 4
+- [Impostazioni NSClient nelle Preferenze](#Preferences-nsclient).
+- [linee di previsione nella PANORAMICA AAPS](#aaps-screens-prediction-lines) all'intestazione livello 4
 - [Screenshots](../DailyLifeWithAaps/AapsScreens.md)
-- [Screenshot main graph](#aaps-screens-main-graph) to header level 3
+- [Screenshot grafico principale](#aaps-screens-main-graph) all'intestazione livello 3
 - [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)
 - [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)
 - [SMB section in this documentation](#Open-APS-features-super-micro-bolus-smb)

@@ -25,7 +25,7 @@ Le seguenti combinazioni di modello e firmware sono compatibili:
 Un grafico comparativo per i vari dispositivi compatibili con Rileylink è disponibile su [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
 
 (MedtronicPump-configuration-of-the-pump)=
-## Configuration of the pump
+## Configurazione del micro
 Le seguenti impostazioni devono essere configurate sul microinfusore affinché AAPS possa inviare comandi da remoto.  I passaggi necessari per apportare ogni modifica su un Medtronic 715 sono mostrati tra parentesi per ogni impostazione.  I passaggi esatti possono variare in base al tipo di microinfusore e/o alla versione del firmware.
 
 - **Abilitare la modalità remota sul microinfusore** (Sul microinfusore premere Act e andare a Utilità -> Opzioni remote, selezionare On, e nella schermata successiva fare Aggiungi ID e aggiungere qualsiasi ID casuale come ad esempio 111111). Almeno un ID deve essere nell'elenco degli ID remoti affinché il microinfusore si aspetti comunicazioni remote.
@@ -88,7 +88,7 @@ In fondo allo schermo ci sono tre pulsanti:
 - **Statistiche RL**: Mostra le statistiche RL (vedere [sotto](#MedtronicPump-rl-status-rileylink-status))
 
 (MedtronicPump-pump-history)=
-## Pump History
+## Cronologia Micro
 ![Pump History Dialog](../images/Medtronic03.png)
 
 La cronologia del microinfusore viene recuperata ogni 5 minuti e memorizzata localmente. Vengono memorizzate solo le ultime 24 ore di cronologia.  Ciò consente un modo conveniente per vedere il comportamento del microinfusore se necessario.  Vengono memorizzati solo gli elementi rilevanti per AAPS e non includerà una funzione di configurazione che non ha rilevanza.
@@ -116,13 +116,13 @@ AAPS utilizza il numero seriale per la sincronizzazione e il numero seriale è e
 ### Utenti OpenAPS
 Gli utenti OpenAPS devono notare che AAPS con Medtronic utilizza un approccio completamente diverso da OpenAPS.  Usando AAPS, il metodo principale di interazione con il microinfusore avviene tramite il telefono.  Nei casi d'uso normali è probabile che l'unica volta che sia necessario usare il menu del microinfusore sia quando si cambiano i serbatoi.  Questo è molto diverso dall'utilizzo di OpenAPS dove almeno parte di un bolo viene solitamente erogata tramite i pulsanti di bolo rapido.  Nel caso in cui il microinfusore venga utilizzato per erogare manualmente un bolo, possono verificarsi problemi se AAPS tenta di erogarne uno contemporaneamente.  Ci sono controlli per cercare di prevenire problemi in tali casi, ma questo dovrebbe comunque essere evitato quando possibile.
 
-### Logging
-Nel caso in cui sia necessario risolvere i problemi del microinfusore Medtronic, selezionare l'icona del menu nell'angolo in alto a sinistra dello schermo, selezionare Manutenzione e Impostazioni di registrazione. Per la risoluzione dei problemi Medtronic, è necessario selezionare Microinfusore, PumpComm, PumpBTComm. For troubleshooting any Medtronic issues Pump, PumpComm, PumpBTComm should be checked.
+### Registro eventi
+Nel caso in cui sia necessario risolvere i problemi del microinfusore Medtronic, selezionare l'icona del menu nell'angolo in alto a sinistra dello schermo, selezionare Manutenzione e Impostazioni di registrazione. Per la risoluzione dei problemi Medtronic, è necessario selezionare Microinfusore, PumpComm, PumpBTComm. Per la risoluzione dei problemi Medtronic, è necessario selezionare Microinfusore, PumpComm, PumpBTComm.
 
-### Medtronic CGM
+### Sensori Medtronic
 Il CGM Medtronic NON è attualmente supportato.
 
-### Manual use of pump
+### Uso manuale del micro
 Evitare di effettuare boli manualmente o di impostare TBR sul microinfusore. Tutti questi comandi devono essere inviati tramite AAPS.  Nel caso vengano utilizzati comandi manuali, deve esserci un ritardo di almeno 3 minuti tra di essi per ridurre il rischio di problemi.
 
 ### Cambiamenti di fuso orario e ora legale (DST) o viaggi con microinfusore Medtronic e AAPS
@@ -140,7 +140,7 @@ Il codice GNARL supporta completamente tutte le funzioni utilizzate dal driver M
 **Nota dell'autore:** Si noti che il software GNARL è ancora sperimentale e poco testato, e non dovrebbe essere considerato sicuro da usare come un RileyLink.
 
 (MedtronicPump-faq)=
-## FAQ
+## Domande frequenti
 
 (MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
 ### Cosa fare se si perde la connessione a RileyLink e/o al microinfusore?

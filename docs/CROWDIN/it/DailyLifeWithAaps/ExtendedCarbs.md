@@ -11,7 +11,7 @@ Gli eCarbs sono carboidrati suddivisi su più ore. Per i pasti standard con più
 
 **Nota:** gli eCarbs non si limitano ai pasti ricchi di grassi/proteine: possono essere usati anche per gestire qualsiasi situazione in cui vi siano influenze che aumentano la glicemia, ad esempio altri farmaci come i corticosteroidi.
 
-## Mechanics of using eCarbs
+## Modalità di utilizzo degli eCarbs
 
 Per inserire gli eCarbs, impostare una durata nella finestra di dialogo *Carboidrati* nella scheda panoramica, il totale dei carboidrati e, facoltativamente, uno sfasamento temporale (*i numeri sottostanti sono solo esempi; sarà necessario provare i propri valori per ottenere una risposta glicemica soddisfacente per i propri casi d'uso*):
 

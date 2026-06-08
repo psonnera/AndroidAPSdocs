@@ -111,7 +111,7 @@ Tocca rapidamente "versione software" fino a quando appare una notifica che l'or
 
 Torna in cima al menu impostazioni, scorri verso il basso e vedi "opzioni sviluppatore" sotto "informazioni sull'orologio".
 
-In “developer options”, turn on “ADB debugging” and “wireless debugging”. The latter option then reveals the IP address of the watch, the final two digits of which changes each time the watch is paired with a new phone. Note that the last two digits (here, “20”) of this address will change every time you change to a new phone handset for AAPS. It will be something like: **192.168.1.214**.5555 (ignore the last 4 digits).
+In "opzioni sviluppatore", attiva "Debug ADB" e "Debug wireless". Quest'ultima opzione rivela l'indirizzo IP dell'orologio, le ultime due cifre del quale cambiano ogni volta che l'orologio viene abbinato a un nuovo telefono. Note that the last two digits (here, “20”) of this address will change every time you change to a new phone handset for AAPS. It will be something like: **192.168.1.214**.5555 (ignore the last 4 digits).
 
 ![image](../images/wearos/easyfire04.png)
 
@@ -149,7 +149,7 @@ Sull'orologio:
 Vedrai apparire un codice di abbinamento Wi-Fi, indirizzo IP e porta: ![image](../images/wearos/ADB03.png)
 
 - In the terminal: `adb pair ipaddress:port` E.g. `adb pair 10.10.1.125:36299` In the terminal: `adb pair ipaddress:port` E.g. `adb pair 10.10.1.125:36299` `adb pair 10.10.1.125:36299` `adb pair 10.10.1.125:36299` `adb pair 10.10.1.125:36299` `adb pair 10.10.1.125:36299`
-- You will be asked for the pairing code. Enter it.
+- Ti verrà chiesto il codice di abbinamento. Enter it.
 - You will see a response:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
 - - In the terminal type: <br>`adb devices`.<br> You should see something like:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
 

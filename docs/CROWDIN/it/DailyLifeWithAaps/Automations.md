@@ -1,4 +1,4 @@
-# Automation
+# Automazioni
 
 ## Cos'è un'Automazione?
 

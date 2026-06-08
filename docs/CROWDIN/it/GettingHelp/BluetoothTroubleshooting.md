@@ -57,7 +57,7 @@ Contatta @XiTatiON sul canale Discord #omnipod-dash per discutere le app da aggi
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
 ### **Come revocare i permessi "Dispositivi nelle vicinanze" per altre app:**
-Se hai problemi ad attivare un nuovo Pod e stai usando la versione corretta e supportata di **AAPS** per la tua versione di Android, potrebbe essere necessario revocare il permesso ad altre app durante l'attivazione di un nuovo Pod. It may be necessary to revoked the permission for other apps while activating a new Pod.
+Se hai problemi ad attivare un nuovo Pod e stai usando la versione corretta e supportata di **AAPS** per la tua versione di Android, potrebbe essere necessario revocare il permesso ad altre app durante l'attivazione di un nuovo Pod. Potrebbe essere necessario revocare il permesso ad altre app durante l'attivazione di un nuovo Pod.
 
 Segui questa procedura per revocare il permesso "Dispositivi nelle vicinanze" per tutte le app tranne **AAPS**:
 
@@ -130,7 +130,7 @@ Se un'app è stata revocata, dovrai scorrere verso il basso finché non vedi l'e
 
 ## Android 15 - Frequenti problemi di connessione Bluetooth
 
-Dopo aver aggiornato Android o aver cambiato telefono, **AAPS** perde frequentemente la connessione Bluetooth con il microinfusore. Il problema scompare temporaneamente riavviando il telefono. If the phone runs Android 15. Se il telefono usa Android 15, abilitare l'impostazione **Collega dispositivo BT su Android 15+** nelle impostazioni di **AAPS** potrebbe aiutare a migliorare la stabilità delle connessioni Bluetooth; segui la guida di seguito per abilitarla:
+Dopo aver aggiornato Android o aver cambiato telefono, **AAPS** perde frequentemente la connessione Bluetooth con il microinfusore. Il problema scompare temporaneamente riavviando il telefono. Se il telefono esegue Android 15. Se il telefono usa Android 15, abilitare l'impostazione **Collega dispositivo BT su Android 15+** nelle impostazioni di **AAPS** potrebbe aiutare a migliorare la stabilità delle connessioni Bluetooth; segui la guida di seguito per abilitarla:
 
 ```{admonition} Android 16
 :class: warning
@@ -146,6 +146,6 @@ Abilita l'opzione **Collega dispositivo BT su Android 15+** solo su Android 15 e
    ![BondBT](../images/troubleshooting/BondBT.png)
 
 
-3. If the pump asks for a pairing request, accept it.
+3. Se il microinfusore chiede una richiesta di abbinamento, accettala.
 
 4. Riavvia il telefono.

@@ -83,7 +83,7 @@ Se si usa un CGM/FGM diverso da Dexcom G5 o G6 in modalità nativa xDrip, si ric
 
 ### Pump
 
-#### Where to place the pump?
+#### Dove posizionare il microinfusore?
 Ci sono innumerevoli possibilità di posizionare il microinfusore. Non importa se si fa loop o no.
 
 #### Batterie

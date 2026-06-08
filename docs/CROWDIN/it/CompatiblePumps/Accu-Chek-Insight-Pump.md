@@ -80,7 +80,7 @@ Nelle impostazioni Insight in AAPS è possibile abilitare le seguenti opzioni:
 
 * "Ritardo disconnessione": Definisce per quanto tempo (in secondi) AAPS attenderà prima di disconnettersi dal microinfusore al termine di un'operazione. Il valore predefinito è 5 secondi.
 
-For periods when pump was stopped AAPS will log a temp. di 0%.
+Per i periodi in cui il microinfusore era fermo, AAPS registrerà una basale temporanea. di 0%.
 
 In AAPS, la scheda Accu-Chek Insight mostra lo stato attuale del microinfusore e ha due pulsanti:
 * "Aggiorna": Aggiorna lo stato del microinfusore

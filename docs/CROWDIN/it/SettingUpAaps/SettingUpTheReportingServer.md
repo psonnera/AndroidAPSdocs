@@ -20,7 +20,7 @@ Ulteriori informazioni sono disponibili sul [sito web del progetto Nightscout](h
 
 ### Opzione 1 - Configura il tuo server Nightscout da solo
 
-La creazione del server di reportistica Nightscout può richiedere una o più applicazioni web-based che richiedono manutenzione. In order to have a completely free service, you may need to migrate your Nightscout site and data, if and when providers remove the free tier.
+La creazione del server di reportistica Nightscout può richiedere una o più applicazioni web-based che richiedono manutenzione. Per avere un servizio completamente gratuito, potrebbe essere necessario migrare il sito e i dati Nightscout, nel caso in cui i provider rimuovano il livello gratuito.
 
 Una descrizione di come puoi configurare Nightscout con i vantaggi e gli svantaggi delle varie opzioni operative, inclusa una stima dei costi, può essere trovata [qui](https://nightscout.github.io/nightscout/new_user/#free-diy).
 

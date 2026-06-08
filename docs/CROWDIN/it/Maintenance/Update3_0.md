@@ -52,7 +52,7 @@ A partire da Android 3.0, potresti ricevere un segnale di avviso sotto il numero
 Per i dettagli vedi la [pagina schermate AAPS](#aaps-screens-bg-warning-sign).
 
 (update30-failure-message-data-from-different-pump)=
-## Failure message: Data from different pump
+## Messaggio di errore: Dati da un microinfusore diverso
 
    ![Failure message: Data from different pump](../images/Screen_DifferentPump.png)
 
