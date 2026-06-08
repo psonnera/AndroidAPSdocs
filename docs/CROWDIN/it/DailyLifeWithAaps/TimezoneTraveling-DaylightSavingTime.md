@@ -154,7 +154,7 @@ Questa sezione è valida solo per il vecchio driver basato su Ruffy. Il nuovo dr
 4. Controllare la scheda Trattamenti... Se si vedono trattamenti duplicati:
 
    * NON premere "elimina trattamenti futuri"
-   * Premere "rimuovi" su tutti i trattamenti futuri e quelli duplicati. Questo dovrebbe invalidare i trattamenti anziché rimuoverli, quindi non verranno più considerati per il calcolo dell'IOB.
+   * Premi "rimuovi" su tutti i trattamenti futuri e i duplicati. Questo dovrebbe invalidare i trattamenti anziché eliminarli, così non verranno più considerati per il calcolo dell'IOB.
 
 5. Se non è chiaro quanta IOB/COB sia presente, per sicurezza disabilitare il loop per almeno un DIA e il Tempo massimo dei carboidrati, quello maggiore.*
 
@@ -167,7 +167,7 @@ Un buon momento per effettuare questo passaggio sarebbe con un **IOB** basso. E.
 4. Poi vai alla schermata Trattamenti e cerca eventuali eventi nel futuro. Non dovrebbero essere molti.
 
    * NON premere "elimina trattamenti futuri"
-   * Premi "rimuovi" su tutti i trattamenti futuri e i duplicati. Questo dovrebbe invalidare i trattamenti anziché eliminarli, così non verranno più considerati per il calcolo dell'IOB.
+   * Premere "rimuovi" su tutti i trattamenti futuri e quelli duplicati. Questo dovrebbe invalidare i trattamenti anziché rimuoverli, quindi non verranno più considerati per il calcolo dell'IOB.
 
 5. Se la situazione riguardo a IOB/COB non è chiara - per sicurezza disabilita il loop per almeno un DIA e Max-Carb-Time - qualunque sia il maggiore.*
 6. Continuare normalmente.
