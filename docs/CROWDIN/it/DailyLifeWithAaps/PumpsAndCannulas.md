@@ -1,7 +1,7 @@
 # Vita Quotidiana - Micro
 ## Cambio dei set di infusione: serbatoi di insulina e cannule
 
-La procedura descritta di seguito è solo per micro con catetere e non si applica alle patch pump come Omnipod, Medtrum Nano, Accu-Chek Solo ecc. La procedura descritta di seguito è applicabile solo ai microinfusori con tubo e non si applica ai microinfusori patch come Omnipod, Medtrum Nano, Accu-Chek Solo, ecc. Questa procedura viene talvolta chiamata "cambio del set", dove un cambio "completo" include il serbatoio di insulina e la cannula, e un cambio "parziale" si riferisce solo alla sostituzione della cannula.
+La procedura descritta di seguito è solo per micro con catetere e non si applica alle patch pump come Omnipod, Medtrum Nano, Accu-Chek Solo ecc. La procedura descritta di seguito è applicabile solo ai microinfusori con tubo e non si applica ai microinfusori patch come Omnipod, Medtrum Nano, Accu-Chek Solo, ecc. Questa procedura viene talvolta chiamata "cambio del set", dove un cambio "completo" include il serbatoio di insulina e la cannula, e un cambio "parziale" si riferisce solo alla sostituzione della cannula. La procedura descritta di seguito è applicabile solo ai microinfusori con tubo e non si applica ai microinfusori patch come Omnipod, Medtrum Nano, Accu-Chek Solo, ecc. Questa procedura viene talvolta chiamata "cambio del set", dove un cambio "completo" include il serbatoio di insulina e la cannula, e un cambio "parziale" si riferisce solo alla sostituzione della cannula.
 
 Le sostituzioni fisiche della cartuccia/serbatoio non possono essere eseguite tramite **AAPS** e devono essere effettuate direttamente sul microinfusore. È necessario registrarle manualmente in **AAPS** una volta completate.
 
