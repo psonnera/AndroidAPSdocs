@@ -141,7 +141,7 @@ https://github.com/nightscout/aaps-ci-preparation/releases/latest
  - Se anche il link esterno non è disponibile, puoi utilizzare questo file di backup per il download.
 ````
 <<<<<<< Updated upstream AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS): - If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
-- - - - - - - - - - Se vuoi utilizzare il tuo JKS (quello usato per una precedente compilazione di AAPS da computer in Android Studio), conosci la password e l'alias (key0), scegli [AAPS-CI Opzione 2 – Carica JKS esistente](#aaps-ci-option2).
+- - - - - - - - - - - - - - If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
 </br>
 
 ```{warning}
@@ -156,7 +156,7 @@ Sarà necessario:
 7. Ripristinare i dati da Nightscout.
 ```
 
-- - - - - - - - - - - - - - If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
+- - - - - - - - - - - Se vuoi utilizzare il tuo JKS (quello usato per una precedente compilazione di AAPS da computer in Android Studio), conosci la password e l'alias (key0), scegli [AAPS-CI Opzione 2 – Carica JKS esistente](#aaps-ci-option2).
 
 </br>
 
