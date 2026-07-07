@@ -19,8 +19,8 @@ Queste sono le specifiche dell' **Omnipod DASH** ('DASH') e ciò che lo differen
 ## Limitazioni/problemi noti di AAPS con Omnipod DASH
 - Android 16 richiede **AAPS** versione 3.3.2.1 o successiva.
 - Il consiglio generale è di usare **AAPS** su Android 14 o 16. Android 15 ha molti [problemi](https://github.com/nightscout/AndroidAPS/issues/3471) segnalati dalla comunità. Tuttavia, se si utilizza Android 15 sarà probabilmente necessario abilitare il Bluetooth Bonding per attivare e usare i Pod con successo, vedere [Risoluzione generale dei problemi](../GettingHelp/GeneralTroubleshooting.md) per maggiori informazioni sulle impostazioni di Bonding.
-- Aggiornamenti basali troppo frequenti possono causare [problemi](https://github.com/nightscout/AndroidAPS/issues/4158) di erogazione dell'insulina basale con Omnipod Dash. Quando si usa **SMB**, limitare l'intervallo a un minimo di 5 minuti per evitare questo problema.
-- Dash supporta solo la velocità basale in step di 0,05 U/h. Se si tenta di impostare la basale con step di 0,01 nel **profilo AAPS**, AAPS non darà un avviso anche se il pod arrotonderà la velocità a step di 0,05. Se si visualizza GESTIONE POD/Cronologia pod, mostrerà che è stata impostata una basale di 0,05. Ciò significa anche che la velocità basale minima consentita dal DASH in **AAPS** è 0,05 U/h.
+- Temporary Basal rate changes (which occur frequently when the loop is active, especially overnight) result in under-delivery of insulin. This is effectively a hardware limitation of the Omnipod DASH. The issue has been addressed in AAPS 3.4.2.3, but the functionality is currently opt-in. Follow the [Basal Drift Fix Instructions ](#omnipod-dash-Basal-drift-fix) instructions to enable it. For more information regarding the fix see [Github Issue - 4783](https://github.com/nightscout/AndroidAPS/issues/4783) for more info.
+- Dash supporta solo la velocità basale in step di 0,05 U/h. If you try to set Basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. Se si visualizza GESTIONE POD/Cronologia pod, mostrerà che è stata impostata una basale di 0,05. Ciò significa anche che la velocità basale minima consentita dal DASH in **AAPS** è 0,05 U/h.
 - Lo stato di attivazione di un Pod viene memorizzato nel file delle impostazioni. Se si esporta un file di impostazioni con un pod attivo, poi si passa a un nuovo pod e si ripristinano le impostazioni dall'esportazione precedente, si avrà ripristinato l'attivazione del vecchio pod e rimosso quella del nuovo. Per questo motivo si consiglia di esportare le impostazioni dopo ogni attivazione del pod per consentire il ripristino dello stato di attivazione del pod in caso di problemi.
 - Quando si imposta un nuovo profilo basale, DASH sospenderà l'erogazione prima di impostare il nuovo **Profilo** basale. Se c'è un'interruzione della comunicazione o un errore, il profilo basale non ripartirà automaticamente. Vedere la sezione [Ripresa dell'erogazione di insulina](#omnipod-dash-resuming-insulin-delivery) per i dettagli.
 - Se gli avvisi sono configurati e il pod sta per scadere, il pod continuerà a emettere segnali acustici finché gli avvisi non vengono silenziati; vedere [Silenziamento avvisi pod](#omnipod-dash-silencing-pod-alerts) per i dettagli.
@@ -67,7 +67,8 @@ Assicurarsi di aver letto e compreso questa intera guida, di aver letto e compre
 Le velocità basali predefinite sono programmate sul pod all'attivazione come definite nel [**Profilo**](../SettingUpAaps/YourAapsProfile.md) attivo corrente. Finché **AAPS** è operativo, invierà comandi di regolazione della velocità basale che durano al massimo 120 minuti. Quando per qualche motivo il pod non riceve nuovi comandi (ad esempio perché la comunicazione è stata persa a causa della distanza Pod ➜ telefono), il pod tornerà automaticamente alle velocità basali predefinite definite nel tuo [**Profilo**](../SettingUpAaps/YourAapsProfile.md).
 
 ### **I Profili AAPS non supportano intervalli di tempo basali di 30 minuti**
-Se sei nuovo ad **AAPS** e stai configurando il tuo [**Profilo**](../SettingUpAaps/YourAapsProfile.md) di velocità basale per la prima volta, tieni presente che le velocità basali che iniziano a mezz'ora non sono supportate. Ad esempio, se sul tuo PDM Omnipod hai una velocità basale di 1,1 unità che inizia alle 09:30 e ha una durata di 2 ore fino alle 11:30, non è possibile replicare questo esatto **Profilo** basale in **AAPS**. Dovrai cambiare questa velocità basale di 1,1 unità in un intervallo di tempo di 9:00-11:00 o 10:00-12:00. Anche se l'hardware DASH stesso supporta gli incrementi di 30 minuti del **Profilo** di velocità basale, **AAPS** NON supporta questa funzione.
+Se sei nuovo ad **AAPS** e stai configurando il tuo [**Profilo**](../SettingUpAaps/YourAapsProfile.md) di velocità basale per la prima volta, tieni presente che le velocità basali che iniziano a mezz'ora non sono supportate. For example, on your Omnipod PDM, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, it is not possible replicate this exact Basal **Profile** in **AAPS**.  
+You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Anche se l'hardware DASH stesso supporta gli incrementi di 30 minuti del **Profilo** di velocità basale, **AAPS** NON supporta questa funzione.
 
 ### **Le velocità basali del Profilo a 0 U/h NON sono supportate in AAPS**
 Sebbene il DASH supporti una velocità basale zero, **AAPS** usa multipli della velocità basale del **Profilo** dell'utente per determinare il trattamento automatico; non può funzionare con una velocità basale zero. In alternativa, una velocità basale temporanea zero può essere ottenuta tramite la funzione "Disconnetti microinfusore", o tramite una combinazione di Disabilita Loop/Basale Temporanea o Sospendi Loop/Basale Temporanea. **NOTA:** La velocità basale minima consentita dal DASH in **AAPS** è 0,05 U/h.
@@ -471,11 +472,46 @@ Nota aggiuntiva:
   * **SMS** - Restituisce il valore o 50+ U per le risposte SMS
   * **Nightscout** - Carica il valore di 50 quando supera le 50 unità su Nightscout (versione 14.07 e precedenti).  Le versioni più recenti segnaleranno un valore di 50+ quando supera le 50 unità.
 
-(omnipod-dash-troubleshooting)=
+(omnipod-dash-known-issues-workarounds)=
+
+## Known Issues Workarounds
+
+This section covers common workarounds and settings that need to be changed to enable a feature to work around a community reported issue that has a fix. E.g. the Basal drift enable process is documented here.
+
+(#omnipod-dash-Basal-drift-fix)=
+
+### Basal Drift Fix Instructions
+
+The Omnipod Dash pump has a limitation that can cause it to deliver less basal insulin than **AAPS** expects, see [Issue #4783](https://github.com/nightscout/AndroidAPS/issues/4783) for more technical details.
+
+The Dash uses an internal timer to determine when a basal pulse of 0.05 U is delivered. Once the timer interval elapses, the pulse is delivered. However, this timer is restarted whenever a basal rate change occurs e.g when **AAPS** sends a new Basal rate.
+
+When used in combination with looping, this leads to under-delivery of basal insulin, as the algorithm updates the basal rate on the pump frequently.
+
+The issue is most apparent during the night. During daytime operation, SMBs often result in a basal rate of 0, which masks the effect. In observed usage, this results in approximately 10% of the expected Total Daily Dose (TDD) not being delivered over a 24-hour period. Additionally, glucose targets are often not reached overnight, particularly after meals with prolonged glucose impact (e.g. pasta).
+
+***NOTE:** This issue is especially important to understand for people on very small dosages of insulin, Children for example.*
+
+#### Enable Basal Drift Fix in AAPS
+
+You must be running AAPS Version 3.4.2.3 or later for this feature.
+
+The Basal Drift Fix is not enabled by default on AAPS.
+
+**To enable it:**
+
+1. Create an empty file named `omnipod_drift_compensation` (2) in the `extra` (1) subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
+
+   ![dash_drift_enable_file](../images/DASH_images/DASH_Drift/dash_drift_enable_file.png)
+
+   ***NOTE:** Ensure you check in the AAPS settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.*
+
+2. Restart **AAPS**. This must be done for it to recognise the file is present and enable the drift compensation feature.
+3. Please visit this [Github issue #4783](https://github.com/nightscout/AndroidAPS/issues/4783) and thumbs up the first post indicating you are using this feature, we need this data to help demonstrate the feature is widely used. Once there is significant community adoption the removal of the enable file will be possible, we appreciate your support here.
 
 ## Risoluzione dei problemi
 
-(omnipod-dash-delivery-suspended)=
+(omnipod-dash-troubleshooting)=
 
 Questa sezione copre i problemi noti comuni e le soluzioni per l'uso di Omnipod DASH con AAPS. È disponibile anche la sezione [Risoluzione generale dei problemi](../GettingHelp/GeneralTroubleshooting.md) nella documentazione che dovrebbe essere consultata poiché copre argomenti rilevanti anche per alcuni problemi del Pod.
 
@@ -488,6 +524,9 @@ Questa sezione copre i problemi noti comuni e le soluzioni per l'uso di Omnipod 
 Per problemi noti con le connessioni Bluetooth, disconnessioni di microinfusori/pod, o problemi di attivazione e connessione vedere [Risoluzione problemi Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
+
+(omnipod-dash-delivery-suspended)=
+
 ### Erogazione sospesa
 
   - Non c'è più un pulsante di sospensione. Se si vuole "sospendere" il pod, è possibile impostare una **TBR** zero per x minuti.
@@ -500,7 +539,7 @@ Per problemi noti con le connessioni Bluetooth, disconnessioni di microinfusori/
      - Se **AAPS** non riesce a riprendere l'erogazione da solo (questo accade se il pod non è raggiungibile, il suono è disattivato ecc.), il pod inizierà a emettere 4 segnali acustici ogni minuto per 3 minuti, poi ripetuti ogni 15 minuti se l'erogazione è ancora sospesa per più di 20 minuti.
   - Per i comandi non confermati, "aggiorna stato pod" dovrebbe confermarli/negarli.
 
-********************************************************************NOTE:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, ***so you need to check !*********************************************************************
+***********************************************************************NOTE:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, ***so you need to check !************************************************************************
 
 ---
 ### Fallimenti Pod
