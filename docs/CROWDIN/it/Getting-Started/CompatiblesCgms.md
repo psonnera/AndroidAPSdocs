@@ -12,7 +12,8 @@ Questa sezione fornisce una breve panoramica di tutti i **sensori CGMs/FGMs** co
 | CGM                                                                         | Sorgenti BG [disponibili](#Config-Builder-bg-source)                                                            |
 | --------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | [Dexcom G7](../CompatibleCgms/DexcomG7.md)                                  | BYODA, [xDrip+](../CompatibleCgms/xDrip.md) o [Juggluco](../CompatibleCgms/Juggluco.md)                         |
-| [Dexcom ONE+ and Stelo](../CompatibleCgms/DexcomG7.md)                      | [xDrip+](../CompatibleCgms/xDrip.md)                                                                            |
+| [Dexcom ONE+](../CompatibleCgms/DexcomG7.md)                                | [xDrip+](../CompatibleCgms/xDrip.md) or [Juggluco](../CompatibleCgms/Juggluco.md)                               |
+| [Dexcom Stelo](../CompatibleCgms/DexcomG7.md)                               | [xDrip+](../CompatibleCgms/xDrip.md)                                                                            |
 | [Dexcom G6](../CompatibleCgms/DexcomG6.md)                                  | BYODA o [xDrip+](../CompatibleCgms/xDrip.md)                                                                    |
 | [Dexcom ONE](../CompatibleCgms/DexcomG6.md)                                 | [xDrip+](../CompatibleCgms/xDrip.md)                                                                            |
 | [Libre 3/3+](../CompatibleCgms/Libre3.md)                                   | [Juggluco](../CompatibleCgms/Juggluco.md) (con o senza xDrip+)                                                  |
@@ -27,7 +28,7 @@ Questa sezione fornisce una breve panoramica di tutti i **sensori CGMs/FGMs** co
 | [Syai](../CompatibleCgms/SyaiTagX1.md)                                      | Syai Tag App                                                                                                    |
 | Sibionics CGM                                                               | [Juggluco](../CompatibleCgms/Juggluco.md) o App SI patchata                                                     |
 | Sinocare                                                                    | Patched Sino App                                                                                                |
-| [Caresens](../CompatibleCgms/Caresens.md), Simplera, iCan, LinX, SmartGuide | xDrip+ Companion App                                                                                            |
+| [Caresens](../CompatibleCgms/Caresens.md), Simplera, iCan, LinX, SmartGuide | xDrip+ Companion App or [Juggluco](../CompatibleCgms/Juggluco.md)                                               |
 
 (GettingStarted-TrustedBGSource)=
 
@@ -39,13 +40,14 @@ Affinché **AAPS** possa identificarli correttamente, l'app che invia le letture
 
 Le sorgenti dati affidabili consentono sempre l'erogazione di **SMB**.
 
-| Sensore               |                                                         App CGM                                                         |
-| --------------------- |:-----------------------------------------------------------------------------------------------------------------------:|
-| Dexcom G6             |                                           BYODA, xDrip+ (**Direct, Native**)                                            |
-| Dexcom G7             |                 BYODA, xDrip+ (**Direct, Native**), </br>Juggluco (**xDrip broadcast** without xDrip+)                  |
-| Dexcom ONE/ONE+/Stelo |                                               xDrip+ (**Direct, Native**)                                               |
-| Libre 2/2+ (EU)       | xDrip+ (OOP2 **senza calibrazione**), </br>Juggluco (**xDrip broadcast** senza xDrip+, o **Libre patchato** con xDrip+) |
-| Libre 2/2+/3/3+       |                      Juggluco (**xDrip broadcast** senza xDrip+, o **Libre patchato** con xDrip+)                       |
-| Syai                  |                                                        Syai App                                                         |
+| Sensore          |                                                         App CGM                                                         |
+| ---------------- |:-----------------------------------------------------------------------------------------------------------------------:|
+| Dexcom G6        |                                           BYODA, xDrip+ (**Direct, Native**)                                            |
+| Dexcom G7        |                 BYODA, xDrip+ (**Direct, Native**), </br>Juggluco (**xDrip broadcast** without xDrip+)                  |
+| Dexcom ONE+      |                     xDrip+ (**Direct, Native**), </br>Juggluco (**xDrip broadcast** without xDrip+)                     |
+| Dexcom ONE/Stelo |                                               xDrip+ (**Direct, Native**)                                               |
+| Libre 2/2+ (EU)  | xDrip+ (OOP2 **senza calibrazione**), </br>Juggluco (**xDrip broadcast** senza xDrip+, o **Libre patchato** con xDrip+) |
+| Libre 2/2+/3/3+  |                      Juggluco (**xDrip broadcast** senza xDrip+, o **Libre patchato** con xDrip+)                       |
+| Syai             |                                                        Syai App                                                         |
 
 **Nota: le app companion di xDrip+ e le modalità follower (incluso 640G/Eversense) non sono sorgenti di dati affidabili.**
