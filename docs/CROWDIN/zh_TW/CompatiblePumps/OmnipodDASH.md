@@ -19,8 +19,8 @@
 ## Omnipod DASH 已知的 AAPS 限制／問題
 - Android 16 需要 AAPS 版本 3.3.2.1 或更新版本。
 - 一般建議在 Android 14 或 16 上執行 AAPS。 Android 15 有許多社群回報的 [問題](https://github.com/nightscout/AndroidAPS/issues/3471)。 不過，若你在 Android 15 上執行，可能需要啟用藍牙配對（Bonding）才能成功註冊並使用 Pod；關於配對設定的更多資訊，請參閱 [一般疑難排解](../GettingHelp/GeneralTroubleshooting.md)。
-- 過於頻繁的基礎率更新，可能在 Omnipod Dash 上導致基礎胰島素輸注的問題。 使用微量注射時，請將間隔至少設為 5 分鐘以避免此問題。
-- Dash 僅支援以 0.05 U/h 步階設定的基礎率。 如果你在 AAPS 設定檔中嘗試以 0.01 的步階設定基礎率，即使 Pod 會將速率進位到 0.05 的步階，AAPS 也不會發出警示。 若你查看 POD MGMT/Pod History，會顯示已設定 0.05 的基礎率。 這也表示在 AAPS 中，DASH 允許的最低基礎率為 0.05 U/h。
+- 臨時基礎率變更（在循環啟動時很常發生，特別是夜間）會導致胰島素輸注不足。 這實際上是 Omnipod DASH 的硬體限制。 此問題已在 AAPS 3.4.2.3 中處理，但目前此功能需自行啟用。 請依照 [基礎率漂移修正 說明](#omnipod-dash-Basal-drift-fix) 的指示來啟用它。 如需更多關於此修正的資訊，請參閱 [Github 議題 - 4783](https://github.com/nightscout/AndroidAPS/issues/4783) 以取得更多資訊。
+- Dash 僅支援以 0.05 U/h 步階設定的基礎率。 如果你嘗試在 **AAPS 設定檔** 中以 0.01 的步階設定基礎率，AAPS 不會提出警告，儘管 Pod 會將該速率進位到 0.05 的步階。 若你查看 POD MGMT/Pod History，會顯示已設定 0.05 的基礎率。 這也表示在 AAPS 中，DASH 允許的最低基礎率為 0.05 U/h。
 - Pod 的註冊狀態會儲存在設定檔案中，如果你在 Pod 已註冊的狀態下匯出設定檔案。 接著更換為新的 Pod，然後再從先前匯出的設定還原，這會還原舊 Pod 的註冊狀態，並移除新 Pod 的註冊狀態。 因此建議每次註冊 Pod 後都匯出設定，以便在你的裝置出狀況時，能還原該 Pod 的註冊狀態。
 - 當設定新的基礎率設定檔時，DASH 會先暫停輸注，然後再設定新的基礎率設定檔。 若通訊中斷或發生錯誤，基礎率設定檔不會自動重新開始。 詳細內容請參閱 [恢復胰島素輸注](#omnipod-dash-resuming-insulin-delivery) 章節。
 - 如果已設定警示，且 Pod 即將到期，Pod 會持續發出嗶聲，直到將警示靜音為止；詳情請參閱 [靜音 Pod 警示](#omnipod-dash-silencing-pod-alerts)。
@@ -70,8 +70,8 @@
 若因任何原因 Pod 未收到新指令（例如 Pod 與 手機 距離過遠導致通訊中斷），Pod 會自動回復到您[**設定檔**](../SettingUpAaps/YourAapsProfile.md)中定義的預設基礎率。
 
 ### **AAPS 的設定檔不支援 30 分鐘為單位的基礎率時間區段**
-若您是 AAPS 新手並首次建立基礎率[**設定檔**](../SettingUpAaps/YourAapsProfile.md)，請注意：不支援以半小時為起點的基礎率。 例如：在您的 Omnipod PDM 上，若您有 1.1 單位、於 09:30 開始並持續 2 小時至 11:30 結束的基礎率，則無法在 **AAPS** 中完全複製相同的基礎**設定檔**。  
-您需要將這個 1.1 單位的基礎率調整為 9:00–11:00 或 10:00–12:00 的時間範圍。 即使 DASH 硬體本身支援 30 分鐘增量的基礎率**設定檔**，**AAPS** 仍不支援此功能。
+若您是 AAPS 新手並首次建立基礎率[**設定檔**](../SettingUpAaps/YourAapsProfile.md)，請注意：不支援以半小時為起點的基礎率。 例如，在你的 Omnipod PDM 上，若你有一個基礎率為 1.1 單位、於 09:30 開始、持續 2 小時並於 11:30 結束，則無法在 **AAPS** 中重現這個完全相同的基礎率 **設定檔**。  
+你需要將這個 1.1 單位的基礎率改成 9:00-11:00 或 10:00-12:00 的時間範圍。 即使 DASH 硬體本身支援 30 分鐘增量的基礎率**設定檔**，**AAPS** 仍不支援此功能。
 
 ### **AAPS 不支援 0 U/h 的設定檔基礎率**
 雖然 DASH 支援零基礎率，**AAPS** 會以使用者**設定檔**的基礎率倍數來決定自動治療；因此無法在零基礎率下運作。  
@@ -480,11 +480,46 @@ DASH 概覽標籤將顯示如下所述：
   * **SMS** - 短訊回報數值為 50+ 單位。
   * **Nightscout** - 當超過 50 單位時，向 Nightscout 上傳數值為 50（版本 14.07 及更早版本）。  更新版本將在超過 50 單位時報告數值為 50+。
 
-(omnipod-dash-troubleshooting)=
+(omnipod-dash-known-issues-workarounds)=
+
+## 已知問題與替代作法
+
+本節涵蓋針對社群回報且已有修正的問題之常見替代作法，以及為使功能運作所需調整的設定。 例如： 啟用基礎率漂移的流程記載於此。
+
+(#omnipod-dash-Basal-drift-fix)=
+
+### 基礎率漂移修正 說明
+
+Omnipod Dash 幫浦有一項限制，可能導致實際輸注的基礎胰島素少於 **AAPS** 預期，技術細節請參閱 [Issue #4783](https://github.com/nightscout/AndroidAPS/issues/4783)。
+
+Dash 透過內部計時器決定何時送出 0.05 U 的基礎脈衝。 計時區間一到，就會送出該脈衝。 但只要發生基礎率變更（例如 **AAPS** 傳送新的基礎率）時，這個計時器就會重新啟動。
+
+與循環搭配使用時，因演算法會頻繁在幫浦上更新基礎率，這會導致基礎胰島素輸注不足。
+
+此問題在夜間最為明顯。 白天運作時，微量注射常使基礎率為 0，因此掩蓋了此效應。 依觀察使用情況，24 小時內大約有 10% 的預期每日總劑量（TDD）未被輸注。 此外，夜間經常無法達成血糖目標，特別是在食用對血糖影響較長的餐點（例如義大利麵）之後。
+
+***注意：**對於使用胰島素劑量非常小的人（例如兒童），理解此問題尤其重要。*
+
+#### 在 AAPS 中啟用基礎率漂移修正
+
+你必須執行 AAPS 版本 3.4.2.3 或更新版本，才能使用此功能。
+
+基礎率漂移修正在 AAPS 中並非預設啟用。
+
+**啟用方式：**
+
+1. 在你手機的 [AAPS 目錄](#preferences-maintenance-settings) 中的 `extra` (1) 子資料夾內，建立一個名為 `omnipod_drift_compensation` (2) 的空白檔案。
+
+   ![dash_drift_enable_file](../images/DASH_images/DASH_Drift/dash_drift_enable_file.png)
+
+   ***注意：**請先在 AAPS 設定中確認你的 AAPS 目錄位置，並確保你把檔案放在正確的目錄。已有不少人因把檔案放到錯誤的資料夾而受影響。*
+
+2. 重新啟動 **AAPS**。 必須執行此步驟，AAPS 才能偵測到該檔案並啟用漂移補償功能。
+3. 請造訪此 [Github 議題 #4783](https://github.com/nightscout/AndroidAPS/issues/4783)，並替第一則貼文按讚以表示你正在使用此功能；我們需要這些資料來協助證明此功能被廣泛使用。 一旦社群的採用程度足夠高，就可以移除這個啟用檔案；感謝你的支持。
 
 ## 問題排除
 
-(omnipod-dash-delivery-suspended)=
+(omnipod-dash-troubleshooting)=
 
 本節涵蓋使用 **AAPS** 搭配 Omnipod DASH 的常見已知問題與解決方案。 文件中也有 [一般疑難排解](../GettingHelp/GeneralTroubleshooting.md) 章節，請參閱，因為其中的相關主題也適用於部分 Pod 問題。
 
@@ -497,6 +532,9 @@ DASH 概覽標籤將顯示如下所述：
 若遇到藍牙連線、幫浦 / Pods 中斷，或註冊與連線等已知問題，請參閱 [藍牙疑難排解](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
+
+(omnipod-dash-delivery-suspended)=
+
 ### 暫停輸送
 
   - 現在已無暫停按鈕。 如果你想要「暫停」藥量，你可以將臨時基礎率設置為零，持續 x 分鐘。
