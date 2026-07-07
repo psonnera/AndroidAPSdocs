@@ -25,7 +25,7 @@ Dexcom BYODA è ora una versione molto vecchia dell'app e non può essere aggior
 
 -   [Costruisci la tua app Dexcom](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supporta la trasmissione locale su AAPS e/o xDrip+
 
-!\[BYODA broadcast options\](C:\Data\50 - My Projects\AAPS\OpenAPS\AndroidAPSdocs\docs\EN\images\BYODA.png)
+![BYODA broadcast options](../images/BYODA.png)
 
 -   Questa app ti permette di utilizzare il tuo Dexcom G7 con qualsiasi smartphone Android.
 -   Disinstalla l'app Dexcom originale
